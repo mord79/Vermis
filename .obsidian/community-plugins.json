@@ -1,5 +1,10 @@
 [
   "dataview",
   "table-extended",
-  "obsidian-git"
+  "obsidian-git",
+  "obsidian-sort-and-permute-lines",
+  "settings-search",
+  "recent-files-obsidian",
+  "tag-wrangler",
+  "omnisearch"
 ]

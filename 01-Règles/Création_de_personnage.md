@@ -79,12 +79,12 @@ Le dé sert deux fois : il détermine d'abord le résultat de sa propre table, p
 
 | Archétype | Kit personnalisé* | Occupation D3 |
 |---|---|---|
-| Guerrier | • *Hache à deux mains | 1. Esclave en fuite — Chaîne / 2. Berger des steppes — Fronde et billes / 3. Montagnard — Crampons d'escalade / 4. Cavalier nomade — Arc composite / 5. Fou de guerre — Champirage (3) / 6. Chef de tribu — Collier de dents |
-| Mercenaire | • *Lance / • Grand bouclier | 1. Boucher — Hachoir / 2. Charpentier — Scie / 3. Forgeron — Marteau / 4. Fossoyeur — Pelle / 5. Tailleur de pierre — Ciseau à pierre / 6. Maréchal-ferrant — Pinces |
-| Chevalier | • *Épée longue / • Bouclier | 1. Vengeur masqué — Masque de fer / 2. Garde du corps — Heaume / 3. Instructeur d'armes — Épée de bois / 4. Duelliste — Gants de cuir / 5. Écuyer — &&& / 6. Officier — Longue-vue |
-| Rôdeur | • *Arc long / • Boussole | *(à compléter)* |
-| Roublard | • Arbalète de poing / • *Kit de crochetage | *(à compléter)* |
-| Barde | • Fronde / • *Kit de déguisement (?) | *(à compléter)* |
+| Guerrier | • *Hache à deux mains | 1. Esclave en fuite — Chaîne<br>2. Berger des steppes — Fronde et billes<br>3. Montagnard — Crampons d'escalade<br>4. Cavalier nomade — Arc composite<br>5. Fou de guerre — Champirage (3)<br>6. Chef de tribu — Collier de dents |
+| Mercenaire | • *Lance<br>• Grand bouclier | 1. Boucher — Hachoir<br>2. Charpentier — Scie<br>3. Forgeron — Marteau<br>4. Fossoyeur — Pelle<br>5. Tailleur de pierre — Ciseau à pierre<br>6. Maréchal-ferrant — Pinces |
+| Chevalier | • *Épée longue<br>• Bouclier | 1. Vengeur masqué — Masque de fer<br>2. Garde du corps — Heaume<br>3. Instructeur d'armes — Épée de bois<br>4. Duelliste — Gants de cuir<br>5. Écuyer — &&&<br>6. Officier — Longue-vue |
+| Rôdeur | • *Arc long<br>• Boussole | *(à compléter)* |
+| Roublard | • Arbalète de poing<br>• *Kit de crochetage | *(à compléter)* |
+| Barde | • Fronde<br>• *Kit de déguisement (?) | *(à compléter)* |
 | Ermite | • Grimoire 6 slots max — 2 ch (Détection Arcanique / Vue Nocturne / Cantrip au hasard) | *(à compléter)* |
 | Savant | • Grimoire 6 slots max — 2 ch (Détection Arcanique / Baume / Cantrip au hasard) | *(à compléter)* |
 | Magistère | • Grimoire 6 slots max — 2 ch (Détection Arcanique / Trait Arcanique / Cantrip au hasard) | *(à compléter)* |

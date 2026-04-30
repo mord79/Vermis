@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CLAUDE.md",
+                "file": "01-Règles/Création_de_personnage.md",
                 "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "CLAUDE"
+              "title": "Création_de_personnage"
             }
           },
           {
@@ -170,13 +170,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CLAUDE.md",
+                "file": "01-Règles/Création_de_personnage.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Plan de CLAUDE"
+              "title": "Plan de Création_de_personnage"
             }
           }
         ],
@@ -201,6 +201,7 @@
   },
   "active": "b5456b38989d62f4",
   "lastOpenFiles": [
+    "CLAUDE.md",
     "01-Règles/Création_de_personnage.md",
     "Temp Test import_Magie Arcanique.md",
     "01-Règles/Cheat_Sheet.md",
@@ -226,7 +227,6 @@
     "02-Banque/ref-hexframes.md",
     "02-Banque/ref-gifts-of-food-shelter.md",
     "02-Banque/ref-encounter-ram.md",
-    "02-Banque/ref-declare-actions.md",
     "02-Banque/idée-stationery-maps.md.tmp.38820.1777505057402"
   ]
 }

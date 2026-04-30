@@ -4,6 +4,9 @@ source: 02-Banque (ref-tell-test-twist, ref-rooms-in-pairs, ref-types-of-player-
 tags: [wiki, design, donjon, exploration]
 date: 2026-04-30
 màj: 2026-04-30
+révisions:
+  - 2026-04-30 - création
+  - 2026-04-30 - ajout Tour d'événements aléatoires (Markov 7 états, 2d6)
 ---
 
 # Design de donjon
@@ -37,6 +40,10 @@ màj: 2026-04-30
 ### Markov Stocking
 
 [[ref-markov-stocking]] — matrice de transitions pour piloter la séquence des salles. Couplable avec TTT (Tell → Test → Twist comme transitions contraintes) et avec Rooms in Pairs.
+
+### Tour d'événements aléatoires (Markov 7 états, 2d6)
+
+[[idée-evenements-aleatoires-markov]] — adaptation interne au **tour d'exploration** : chaîne de Markov à 7 états (*Rien A/B*, *Spéciale*, *Signe de Monstre*, *Monstre*, *Fatigue*, *Torche*) sur 2d6, avec sous-tables R/N par dé coloré et événements exceptionnels sur doubles. Distribution stationnaire calibrée OSR (Torche ≈ 1/6 tours). Statut `en-développement`. Page de travail : `01-Règles/Événements_Aléatoires.md`. Couplage probable avec [[concept-tension]] (la matrice est candidate à incarner mécaniquement la Tension).
 
 ### Cartes et navigation
 

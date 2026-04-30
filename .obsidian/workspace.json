@@ -11,10 +11,14 @@
             "id": "b5456b38989d62f4",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Vue graphique"
+              "type": "markdown",
+              "state": {
+                "file": "01-Règles/Création_de_personnage.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Création_de_personnage"
             }
           }
         ]
@@ -162,17 +166,17 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "03-Références/Tell, Test, Twist.md",
+                "file": "01-Règles/Création_de_personnage.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Plan de Tell, Test, Twist"
+              "title": "Plan de Création_de_personnage"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -192,16 +196,20 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "b36bbe4918ab2b98",
+  "active": "b5456b38989d62f4",
   "lastOpenFiles": [
+    "01-Règles/Vermis_Rules.md",
+    "06-Wiki/design-donjon.md",
+    "06-Wiki/design-points-ouverts.md",
+    "01-Règles/Événements_Aléatoires.md",
+    "Temp Test import_Création de personnage.md",
+    "03-Références/Tell, Test, Twist.md",
+    "02-Banque/idée-evenements-aleatoires-markov.md",
     "03-Références/markov_events_2 1.html",
     "03-Références/markov_events_2.html",
     "03-Références/Dungeon Stocking with Markov Processes.md",
     "03-Références/Non confirmé 442429.crdownload",
-    "06-Wiki/design-donjon.md",
     "02-Banque/ref-tell-test-twist.md",
-    "06-Wiki/design-points-ouverts.md",
-    "03-Références/Tell, Test, Twist.md",
     "Clippings",
     "06-Wiki/concept-tension.md",
     "06-Wiki/règles-santé.md",
@@ -218,12 +226,9 @@
     "CLAUDE.md",
     "Temp Test import_Magie Arcanique.md",
     "01-Règles/Cheat_Sheet.md",
-    "Temp Test import_Création de personnage.md",
     "04-Todo/Vermis_Todo.md",
     "00-MOC/Todo_Vue.md",
     "README.md",
-    "00-MOC/Banque_Vue.md",
-    "04-Todo/Vermis_Migration_Todo.md",
     "02-Banque/idée-stationery-maps.md.tmp.38820.1777505057402"
   ]
 }

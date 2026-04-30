@@ -4,6 +4,9 @@ source: Vermis_Rules (occurrences), Vermis_Todo VM-1
 tags: [wiki, concept, tension, wip, critique]
 date: 2026-04-30
 màj: 2026-04-30
+révisions:
+  - 2026-04-30 - création
+  - 2026-04-30 - ajout piste prototype Markov 7 états (idée-evenements-aleatoires-markov)
 ---
 
 # Concept — Tension
@@ -54,6 +57,8 @@ Analogies dans d'autres systèmes OSR :
 
 > [!tip] Piste Banque
 > [[ref-encounter-ram]] (banque) traite des Encounter Tables as RAM — pertinent pour ce que la Tension pourrait déclencher. [[ref-markov-stocking]] pourrait informer la table d'événements (VM-60).
+>
+> **2026-04-30 — Prototype concret** : [[idée-evenements-aleatoires-markov]] propose une chaîne de Markov à 7 états sur 2d6 directement applicable à VM-60. La même mécanique est candidate à mécaniser la Tension elle-même : soit la matrice **est** la Tension (cadence brute), soit la Tension **module** la matrice (avantage/désavantage par paliers). Page de travail : `01-Règles/Événements_Aléatoires.md`.
 
 ---
 

@@ -23,12 +23,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "06-Wiki/design-points-ouverts.md",
-                "mode": "preview",
+                "file": "Clippings/Tell, Test, Twist.md",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "design-points-ouverts"
+              "title": "Tell, Test, Twist"
             }
           }
         ],
@@ -177,13 +177,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "06-Wiki/design-points-ouverts.md",
+                "file": "Clippings/Tell, Test, Twist.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Plan de design-points-ouverts"
+              "title": "Plan de Tell, Test, Twist"
             }
           }
         ],
@@ -209,6 +209,9 @@
   },
   "active": "e69a04470bc5ca82",
   "lastOpenFiles": [
+    "06-Wiki/design-points-ouverts.md",
+    "Clippings/Tell, Test, Twist.md",
+    "Clippings",
     "06-Wiki/concept-tension.md",
     "06-Wiki/règles-santé.md",
     "01-Règles/Magie_Arcanique.md",
@@ -219,7 +222,6 @@
     "06-Wiki/index.md",
     "06-Wiki/règles-combat.md",
     "06-Wiki/log.md",
-    "06-Wiki/design-points-ouverts.md",
     "06-Wiki",
     "01-Règles/Création_de_personnage.md",
     "CLAUDE.md",
@@ -235,7 +237,6 @@
     "02-Banque/_README.md",
     "02-Banque/ref-earthmote.md",
     "01-Règles/Tables de Loot & Disponibilité.md",
-    "01-Règles/Caractéristiques_et_Expertise.md",
     "02-Banque/idée-stationery-maps.md.tmp.38820.1777505057402"
   ]
 }

@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "01-Règles/Création_de_personnage.md",
+                "file": "CLAUDE.md",
                 "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Création_de_personnage"
+              "title": "CLAUDE"
             }
           },
           {
@@ -170,13 +170,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "01-Règles/Création_de_personnage.md",
+                "file": "CLAUDE.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Plan de Création_de_personnage"
+              "title": "Plan de CLAUDE"
             }
           }
         ],
@@ -201,8 +201,8 @@
   },
   "active": "b5456b38989d62f4",
   "lastOpenFiles": [
-    "Temp Test import_Magie Arcanique.md",
     "01-Règles/Création_de_personnage.md",
+    "Temp Test import_Magie Arcanique.md",
     "01-Règles/Cheat_Sheet.md",
     "Temp Test import_Création de personnage.md",
     "04-Todo/Vermis_Todo.md",

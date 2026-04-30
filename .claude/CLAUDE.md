@@ -22,23 +22,39 @@ Auteur : Dominique Morin.
 Vermis/
 ├── 00-MOC/
 │   ├── Index.md
-│   └── Banque_Vue.md
+│   ├── Banque_Vue.md
+│   └── Todo_Vue.md
 ├── 01-Règles/
-│   ├── Vermis_Rules.md
+│   ├── Vermis_Rules.md          ← SOURCE DE VÉRITÉ (ne pas modifier sans confirmation)
 │   ├── Cheat_Sheet.md
 │   └── Résolutions.md
 ├── 02-Banque/
 │   ├── _README.md
 │   └── [fiches idées et références]
-├── 03-Références/
-│   └── [sources externes]
+├── 03-Références/               ← Sources brutes externes (immutables)
+│   └── [articles, livres convertis en .md]
 ├── 04-Todo/
 │   └── Vermis_Todo.md
 ├── 05-Archives/
 │   └── Idées_rejetées.md
+├── 06-Wiki/                     ← Wiki LLM-maintenu (dérivé, jamais source)
+│   ├── index.md
+│   ├── log.md
+│   └── [pages thématiques]
 └── .claude/
     └── CLAUDE.md
 ```
+
+**Flux de connaissance :**
+```
+03-Références/ ──→──┐
+                     │
+01-Règles/     ──→──┤──→  06-Wiki/  ──→  design actif  ──→  01-Règles/
+                     │
+02-Banque/     ──→──┘
+```
+
+**Règle absolue du wiki :** les pages `06-Wiki/` sont des *dérivés en lecture*. En cas de conflit entre une page wiki et `Vermis_Rules.md`, c'est toujours la règle qui a raison — mettre à jour le wiki, pas la règle.
 
 ---
 
@@ -94,6 +110,36 @@ Sections de contenu obligatoires (dans cet ordre) :
 - Proposer la banquification, ne pas l'automatiser : *« Veux-tu que j'ajoute ça à la banque ? »*
 - Consulter `02-Banque/` avant de proposer une nouvelle mécanique sur un domaine déjà couvert
 - Maintenir les queries Dataview dans `00-MOC/Banque_Vue.md` à jour si la structure YAML change
+
+---
+
+## Wiki — Workflows
+
+### Ingest (nouvelle source dans 03-Références/)
+
+1. Lire la source complète
+2. Discuter les points clés avec l'auteur
+3. Créer une fiche `ref-` dans `02-Banque/` (format obligatoire banque)
+4. Créer ou mettre à jour la/les page(s) wiki concernées dans `06-Wiki/`
+5. Mettre à jour `06-Wiki/index.md` si nouvelle page créée
+6. Ajouter une entrée dans `06-Wiki/log.md` : `## [date] ingest | Titre de la source`
+
+### Query (question sur le design ou les règles)
+
+1. Lire `06-Wiki/index.md` pour identifier les pages pertinentes
+2. Lire les pages wiki concernées
+3. Consulter `01-Règles/Vermis_Rules.md` si besoin de précision
+4. Répondre avec citations des sources
+5. Si la réponse est une synthèse utile → proposer de la filer dans le wiki comme nouvelle page
+
+### Lint (vérification périodique)
+
+Lancer à la demande. Vérifier :
+- Pages wiki orphelines (non liées depuis index ou d'autres pages)
+- Contradictions entre pages wiki et Vermis_Rules
+- Points ouverts dans les règles non reflétés dans wiki
+- Pages `06-Wiki/` dont le frontmatter `màj` est antérieur à une modification récente de Vermis_Rules
+- Fiches `02-Banque/` non encore intégrées dans les pages wiki pertinentes
 
 ---
 

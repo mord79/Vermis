@@ -1,0 +1,16 @@
+/* Vermis — tables */
+
+/* Assure le retour à la ligne dans toutes les cellules
+   (nécessaire pour que les <br> s'affichent correctement) */
+.markdown-preview-view table td,
+.markdown-preview-view table th {
+  white-space: normal;
+  word-break: normal;
+  vertical-align: top;
+}
+
+/* Largeur maximale de la table = largeur de la note */
+.markdown-preview-view table {
+  width: 100%;
+  table-layout: auto;
+}

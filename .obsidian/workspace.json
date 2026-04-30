@@ -11,14 +11,10 @@
             "id": "b5456b38989d62f4",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "01-Règles/Création_de_personnage.md",
-                "mode": "preview",
-                "source": true
-              },
-              "icon": "lucide-file",
-              "title": "Création_de_personnage"
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Vue graphique"
             }
           },
           {
@@ -170,17 +166,16 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "01-Règles/Création_de_personnage.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Plan de Création_de_personnage"
+              "title": "Plan"
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
@@ -201,8 +196,19 @@
   },
   "active": "b5456b38989d62f4",
   "lastOpenFiles": [
-    "CLAUDE.md",
+    "06-Wiki/concept-tension.md",
+    "06-Wiki/règles-résolution.md",
+    "06-Wiki/règles-équipement.md",
+    "06-Wiki/règles-santé.md",
+    "06-Wiki/règles-personnage.md",
+    "06-Wiki/règles-magie.md",
+    "06-Wiki/index.md",
+    "06-Wiki/règles-combat.md",
+    "06-Wiki/log.md",
+    "06-Wiki/design-points-ouverts.md",
+    "06-Wiki",
     "01-Règles/Création_de_personnage.md",
+    "CLAUDE.md",
     "Temp Test import_Magie Arcanique.md",
     "01-Règles/Cheat_Sheet.md",
     "Temp Test import_Création de personnage.md",
@@ -217,16 +223,6 @@
     "02-Banque/ref-earthmote.md",
     "01-Règles/Tables de Loot & Disponibilité.md",
     "01-Règles/Caractéristiques_et_Expertise.md",
-    "01-Règles/Création de personnage.md",
-    "01-Règles/Création de personnage 34f179522a6d80d7a796e023becfa1d2.md",
-    "01-Règles/Résolutions.md",
-    "02-Banque/ref-types-of-player-skill.md",
-    "02-Banque/ref-subtley-is-dead.md",
-    "02-Banque/ref-rooms-in-pairs.md",
-    "02-Banque/ref-markov-stocking.md",
-    "02-Banque/ref-hexframes.md",
-    "02-Banque/ref-gifts-of-food-shelter.md",
-    "02-Banque/ref-encounter-ram.md",
     "02-Banque/idée-stationery-maps.md.tmp.38820.1777505057402"
   ]
 }

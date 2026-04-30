@@ -34,6 +34,7 @@ màj: 2026-04-30
 | Page | Résumé |
 |---|---|
 | [[design-points-ouverts]] | Tous les arbitrages ouverts, par priorité |
+| [[design-donjon]] | Principes et outils de prep de donjon (TTT, Pairs, Markov…) |
 
 ---
 

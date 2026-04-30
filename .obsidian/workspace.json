@@ -170,13 +170,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Temp Test import_Magie Arcanique.md",
+                "file": "01-Règles/Création_de_personnage.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Plan de Temp Test import_Magie Arcanique"
+              "title": "Plan de Création_de_personnage"
             }
           }
         ],
@@ -199,11 +199,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "b36bbe4918ab2b98",
+  "active": "b5456b38989d62f4",
   "lastOpenFiles": [
+    "Temp Test import_Magie Arcanique.md",
     "01-Règles/Création_de_personnage.md",
     "01-Règles/Cheat_Sheet.md",
-    "Temp Test import_Magie Arcanique.md",
     "Temp Test import_Création de personnage.md",
     "04-Todo/Vermis_Todo.md",
     "00-MOC/Todo_Vue.md",

@@ -69,12 +69,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "04-Todo/Vermis_Todo.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "Vermis_Todo"
             }
           }
         ],
@@ -213,13 +213,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md",
+                "file": "04-Todo/Vermis_Todo.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Plan de README"
+              "title": "Plan de Vermis_Todo"
             }
           }
         ],
@@ -242,8 +242,8 @@
   },
   "active": "676fd61363606799",
   "lastOpenFiles": [
-    "01-Règles/Magie_Arcanique.md",
     "README.md",
+    "01-Règles/Magie_Arcanique.md",
     "04-Todo/Vermis_Todo.md",
     "00-MOC/Banque_Vue.md",
     "04-Todo/Vermis_Migration_Todo.md",

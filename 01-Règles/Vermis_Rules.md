@@ -278,7 +278,7 @@ Pour les actions longues sans pression immédiate. Trois composantes : **Ampleur
 | Exceptionnel (Adepte, chef-d'œuvre) | d10 |
 | Magique légendaire | d12 |
 
-**Procédure** :
+#### Procédure :
 
 1. **Mise en place** : MJ pose N tokens, annonce la Complexité et le temps narratif d'un tour.
 2. **Choix du joueur** : à chaque tour, lance **K dés** avec son Outil.

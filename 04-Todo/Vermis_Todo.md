@@ -55,7 +55,7 @@
 
 - [ ] **VM-23 — Liste de sorts** *(Magie)* — Étendre au-delà des 20 actuels (Annexe B / vermis_sorts_d20). #later #bloc/magie #statut/a-faire
 - [ ] **VM-24 — Handicaps — finalisation mécanique** *(Personnage)* — Liste existe (~19 entrées) mais à valider une par une. #later #bloc/personnage #statut/a-faire
-- [ ] **VM-63 — Variantes coopération pool-de-tokens** *(Système)* — Préservées dans la fiche banque [[idée-pool-tokens-tache]] : poursuite/fuite, action de groupe spécialisée, pool parallèle. À sortir quand un sous-système les justifie (chase, downtime collectif, fouille parallèle). #later #bloc/systeme #statut/a-faire
+- [x] **VM-63 — Variantes coopération pool-de-tokens** *(Système)* — Préservées dans la fiche banque [[idée-pool-tokens-tache]] : poursuite/fuite, action de groupe spécialisée, pool parallèle. À sortir quand un sous-système les justifie (chase, downtime collectif, fouille parallèle). #later #bloc/systeme #statut/a-faire
 
 ## 🟢 Outil MJ
 

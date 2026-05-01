@@ -6,7 +6,7 @@
       {
         "id": "200630751f1544d8",
         "type": "tabs",
-        "dimension": 29.490500863557855,
+        "dimension": 29.49050086355786,
         "children": [
           {
             "id": "b5456b38989d62f4",
@@ -56,7 +56,7 @@
       {
         "id": "eeb4ab93853309c2",
         "type": "tabs",
-        "dimension": 37.17616580310881,
+        "dimension": 37.176165803108816,
         "children": [
           {
             "id": "30b1fc8c9380ebe7",
@@ -77,7 +77,7 @@
       {
         "id": "53ed04401103aaa3",
         "type": "tabs",
-        "dimension": 33.33333333333333,
+        "dimension": 33.333333333333336,
         "children": [
           {
             "id": "1a5ca2708abddc46",
@@ -238,13 +238,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "01-Règles/Vermis_Rules.md",
+                "file": "04-Todo/Vermis_Todo.md",
                 "followCursor": false,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Plan de Vermis_Rules"
+              "title": "Plan de Vermis_Todo"
             }
           }
         ],
@@ -264,18 +264,17 @@
       "templates:Insérer le modèle": false,
       "command-palette:Ouvrir la palette de commandes": false,
       "bases:Créer une nouvelle base": false,
-      "table-editor-obsidian:Advanced Tables Toolbar": false,
       "obsidian-git:Open Git source control": false,
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "30b1fc8c9380ebe7",
+  "active": "412319b158d54d6d",
   "lastOpenFiles": [
+    "01-Règles/Vermis_Rules.md",
     "01-Règles/Magie_Arcanique.md",
     "01-Règles/WIP Exploration.md",
     "04-Todo/Vermis_Todo.md",
     "01-Règles/WIP Repos et Guérison.md",
-    "01-Règles/Vermis_Rules.md",
     "01-Règles/Événements_Aléatoires.md",
     "01-Règles/Grille_Événements_Aléatoires.md",
     "01-Règles/WIP Progression.md",

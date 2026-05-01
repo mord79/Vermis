@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "Vermis_Todo",
+      "path": "04-Todo/Vermis_Todo.md"
+    },
+    {
       "basename": "Vermis_Rules",
       "path": "01-Règles/Vermis_Rules.md"
     },
@@ -11,10 +15,6 @@
     {
       "basename": "WIP Exploration",
       "path": "01-Règles/WIP Exploration.md"
-    },
-    {
-      "basename": "Vermis_Todo",
-      "path": "04-Todo/Vermis_Todo.md"
     },
     {
       "basename": "WIP Repos et Guérison",

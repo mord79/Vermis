@@ -1,24 +1,16 @@
 {
   "recentFiles": [
     {
-      "basename": "Vermis_Todo",
-      "path": "04-Todo/Vermis_Todo.md"
+      "basename": "WIP Résolution v2",
+      "path": "01-Règles/011-WIP/WIP Résolution v2.md"
     },
     {
-      "basename": "Vermis_Rules",
-      "path": "01-Règles/Vermis_Rules.md"
+      "basename": "Résolutions",
+      "path": "01-Règles/012-Intégré/Résolutions.md"
     },
     {
-      "basename": "Magie_Arcanique",
-      "path": "01-Règles/Magie_Arcanique.md"
-    },
-    {
-      "basename": "WIP Exploration",
-      "path": "01-Règles/WIP Exploration.md"
-    },
-    {
-      "basename": "WIP Repos et Guérison",
-      "path": "01-Règles/WIP Repos et Guérison.md"
+      "basename": "Création_de_personnage",
+      "path": "01-Règles/Création_de_personnage.md"
     },
     {
       "basename": "Événements_Aléatoires",
@@ -29,36 +21,52 @@
       "path": "01-Règles/Grille_Événements_Aléatoires.md"
     },
     {
-      "basename": "WIP Progression",
-      "path": "01-Règles/WIP Progression.md"
-    },
-    {
-      "basename": "WIP Tension",
-      "path": "01-Règles/WIP Tension.md"
-    },
-    {
-      "basename": "WIP Henchman Tool",
-      "path": "01-Règles/WIP Henchman Tool.md"
-    },
-    {
       "basename": "Caractéristiques_et_Expertise",
       "path": "01-Règles/Caractéristiques_et_Expertise.md"
     },
     {
-      "basename": "WIP Outils et kit",
-      "path": "01-Règles/WIP Outils et kit.md"
-    },
-    {
       "basename": "Tables de Loot & Disponibilité",
-      "path": "01-Règles/Tables de Loot & Disponibilité.md"
+      "path": "01-Règles/012-Intégré/Tables de Loot & Disponibilité.md"
     },
     {
-      "basename": "Création_de_personnage",
-      "path": "01-Règles/Création_de_personnage.md"
+      "basename": "Magie_Arcanique",
+      "path": "01-Règles/012-Intégré/Magie_Arcanique.md"
+    },
+    {
+      "basename": "WIP Tension",
+      "path": "01-Règles/011-WIP/WIP Tension.md"
     },
     {
       "basename": "Hechmen Are Tools",
       "path": "03-Références/Hechmen Are Tools.md"
+    },
+    {
+      "basename": "Vermis_Todo",
+      "path": "04-Todo/Vermis_Todo.md"
+    },
+    {
+      "basename": "Vermis_Rules",
+      "path": "01-Règles/Vermis_Rules.md"
+    },
+    {
+      "basename": "WIP Exploration",
+      "path": "01-Règles/011-WIP/WIP Exploration.md"
+    },
+    {
+      "basename": "WIP Repos et Guérison",
+      "path": "01-Règles/011-WIP/WIP Repos et Guérison.md"
+    },
+    {
+      "basename": "WIP Progression",
+      "path": "01-Règles/011-WIP/WIP Progression.md"
+    },
+    {
+      "basename": "WIP Henchman Tool",
+      "path": "01-Règles/011-WIP/WIP Henchman Tool.md"
+    },
+    {
+      "basename": "WIP Outils et kit",
+      "path": "01-Règles/011-WIP/WIP Outils et kit.md"
     },
     {
       "basename": "Vermis_Migration_Todo",

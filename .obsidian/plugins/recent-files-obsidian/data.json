@@ -1,6 +1,26 @@
 {
   "recentFiles": [
     {
+      "basename": "Vermis_Migration_Todo",
+      "path": "04-Todo/Vermis_Migration_Todo.md"
+    },
+    {
+      "basename": "Vermis_Todo",
+      "path": "04-Todo/Vermis_Todo.md"
+    },
+    {
+      "basename": "Événements_Aléatoires",
+      "path": "01-Règles/Événements_Aléatoires.md"
+    },
+    {
+      "basename": "idée-entities-are-people",
+      "path": "02-Banque/idée-entities-are-people.md"
+    },
+    {
+      "basename": "Vermis_Rules",
+      "path": "01-Règles/Vermis_Rules.md"
+    },
+    {
       "basename": "idée-evenements-aleatoires-markov",
       "path": "02-Banque/idée-evenements-aleatoires-markov.md"
     },
@@ -19,10 +39,6 @@
     {
       "basename": "Création_de_personnage",
       "path": "01-Règles/Création_de_personnage.md"
-    },
-    {
-      "basename": "Vermis_Rules",
-      "path": "01-Règles/Vermis_Rules.md"
     },
     {
       "basename": "design-points-ouverts",

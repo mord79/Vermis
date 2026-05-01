@@ -22,7 +22,7 @@
 ## ⚪ Later
 
 - [x] Activer la synchro multi-appareil (vault déplacé dans `C:\Users\mord7\Dropbox\Obsidian\Vermis_vault` le 2026-04-30 — Dropbox sync à la place d'Obsidian Sync + Git) #later
-- [ ] Vérifier que le plugin Dataview est activé dans Obsidian (sinon `00-MOC/Banque_Vue.md` ne rend pas) #later
+- [x] Vérifier que le plugin Dataview est activé dans Obsidian (sinon `00-MOC/Banque_Vue.md` ne rend pas) #later
 - [ ] Une fois la banque peuplée, premier audit anti-cimetière : repérer les idées banquées sans condition de réactivation atteignable #later
 
 ---

@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "01-Règles/011-WIP/WIP Résolution v2.md",
+                "file": "01-Règles/011-WIP/WIP Exploration.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "WIP Résolution v2"
+              "title": "WIP Exploration"
             }
           }
         ],
@@ -216,13 +216,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "01-Règles/011-WIP/WIP Résolution v2.md",
+                "file": "01-Règles/011-WIP/WIP Exploration.md",
                 "followCursor": false,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Plan de WIP Résolution v2"
+              "title": "Plan de WIP Exploration"
             }
           }
         ],
@@ -245,10 +245,10 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "44561d9b5456885f",
+  "active": "d7398bd06ba9c430",
   "lastOpenFiles": [
-    "01-Règles/Vermis_Rules.md",
     "01-Règles/011-WIP/WIP Résolution v2.md",
+    "01-Règles/Vermis_Rules.md",
     "01-Règles/Événements_Aléatoires.md",
     "01-Règles/Grille_Événements_Aléatoires.md",
     "01-Règles/012-Intégré/Magie_Arcanique.md",

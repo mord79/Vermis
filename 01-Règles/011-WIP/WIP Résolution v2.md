@@ -32,7 +32,18 @@ Les **Actions Progressive** sont des tests d'Attribut suivit d'un dé qui repré
 #### Tâches 
 Le reste est identique à la procédure dans [[Vermis_Rules]]
 
-### Combat
+#### Combat
 - Test de VIG ou FIN puis lancer le dé de dégât en fonction du Tier de Succès.
-- Les Effets sur les Maximum de dé n'ont pas besoin de test d'Attribut, mais dépende du type de dégâts et de l'Attribut testé
-- 
+- **Maximum sur un dé** : 1 points de dégâts restant (après la RD) est appliqué comme **dégât directe**.  
+- **Ouverture** : tous les effets sont transférés ici et n'ont pas besoin de test d'Attribut, mais dépende du type de dégâts et de l'Attribut testé. Le choix des effets dépendent aussi du nombre de dé pareil
+	- Double : 
+		- *Perçante* (FIN) : contourner l'armure pour cette attaque.
+		- *Contondante* (VIG) : briser l'armure (−1 RD), ou (VIG+FIN) briser l'arme (−1 rang).
+		- *Coupante* (VIG/FIN) : coup circulaire, attaque sur cible adjacente, dégrade dé d'un rang.
+		- (VIG/FIN) : manœuvre supplémentaire.
+		- Feinte : pas de dégâts, mais bonus narratif *(à préciser)*.
+	- Triple :
+		- (VIG+FIN) Désarmer : la cible lâche une arme.
+
+#### Magie
+Similaire, mais faire un test d'ESP en plus des dé de MD. Le Tier de Succès rajoute des dé Avantagé ou Désavantagé, mais ne rajoute pas de dé au total de MD investi.

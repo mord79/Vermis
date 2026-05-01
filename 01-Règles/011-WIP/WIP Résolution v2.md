@@ -33,4 +33,4 @@ Les **Actions Progressive** sont des tests d'Attribut suivit d'un dé qui repré
 Le MJ détermine l'**Ampleur** représenté par des tokens et le **Seuil** de complexité 
 Lancer le ou les dés de progression, d6 par défaut ou dé d'outil et rajouter les dés Avantagés ou Désavantagés au jet selon le Tier de succès du test d'attribut. 
 
-Les dés ayant roulé plus haut que le seuil compte pour une progression et un T
+Les dés ayant roulé plus haut que le seuil compte pour une progression et 1 Token est retiré du pool de l'Ampleur. 

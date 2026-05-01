@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "Vermis_Rules",
+      "path": "01-Règles/Vermis_Rules.md"
+    },
+    {
+      "basename": "Événements_Aléatoires",
+      "path": "01-Règles/Événements_Aléatoires.md"
+    },
+    {
       "basename": "WIP Progression",
       "path": "01-Règles/WIP Progression.md"
     },
@@ -21,10 +29,6 @@
       "path": "01-Règles/WIP Henchman Tool.md"
     },
     {
-      "basename": "Événements_Aléatoires",
-      "path": "01-Règles/Événements_Aléatoires.md"
-    },
-    {
       "basename": "WIP Repos et Guérison",
       "path": "01-Règles/WIP Repos et Guérison.md"
     },
@@ -35,10 +39,6 @@
     {
       "basename": "WIP Outils et kit",
       "path": "01-Règles/WIP Outils et kit.md"
-    },
-    {
-      "basename": "Vermis_Rules",
-      "path": "01-Règles/Vermis_Rules.md"
     },
     {
       "basename": "Tables de Loot & Disponibilité",

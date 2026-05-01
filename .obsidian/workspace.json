@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "01-Règles/WIP Progression.md",
+                "file": "04-Todo/Vermis_Todo.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "WIP Progression"
+              "title": "Vermis_Todo"
             }
           },
           {
@@ -215,13 +215,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "01-Règles/WIP Progression.md",
+                "file": "04-Todo/Vermis_Todo.md",
                 "followCursor": false,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Plan de WIP Progression"
+              "title": "Plan de Vermis_Todo"
             }
           }
         ],
@@ -247,9 +247,9 @@
   },
   "active": "412319b158d54d6d",
   "lastOpenFiles": [
+    "01-Règles/WIP Progression.md",
     "01-Règles/Vermis_Rules.md",
     "01-Règles/Événements_Aléatoires.md",
-    "01-Règles/WIP Progression.md",
     "01-Règles/WIP Tension.md",
     "04-Todo/Vermis_Todo.md",
     "01-Règles/WIP Exploration.md",

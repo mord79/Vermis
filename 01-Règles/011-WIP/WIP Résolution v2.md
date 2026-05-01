@@ -31,4 +31,4 @@ Les **Actions Progressive** sont des tests d'Attribut suivit d'un dé qui repré
 > Test FIN. La FIN est des 13. Lancer D20, résultat 12 -> Succès Critique Tier 3. Lancer 1d6 de progression [+3d].
 #### Tâches 
 Le MJ détermine l'**Ampleur** représenté par des tokens et le **Seuil** de complexité 
-Lancer le ou les dés de progression, d6 par défaut ou dé d'outil et rajouter [+/-Td] au jet
+Lancer le ou les dés de progression, d6 par défaut ou dé d'outil et rajouter les dés Avantagés ou Désavantagés au jet selon le Tier de succès du test d'attribut. 

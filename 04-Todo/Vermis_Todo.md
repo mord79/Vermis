@@ -34,13 +34,13 @@
 
 - [ ] **VM-6 — Bestiaire** *(Combat)* — Stats PNJ (Puissance, END, Armure, Dégâts, Tags, Habiletés, Désir). Tactique aléatoire. #soon #bloc/combat #statut/a-faire
 - [ ] **VM-10 — Factions** *(MJ)* — Goal-Method-Clock, faction turn, intégration sandbox. #soon #bloc/mj #statut/a-faire
-- [ ] **VM-11 — Conditions** *(Système)* — Panique à développer. Liste complète à figer. #soon #bloc/systeme #statut/a-faire
-- [ ] **VM-41 — Identification d'objets magiques** *(Adventure)* — Trou critique après tier 1. Identification triviale (bonus chiffré) vs items à effet conditionnel (commande, piège, parameters). Lien avec déchiffrement Arcanique. #soon #bloc/adventure #statut/a-faire
+- [ ] **VM-11 — WIP Conditions** [[WIP Repos et Guérison]] *(Système)* — Panique à développer. Liste complète à figer. #soon #bloc/systeme #statut/a-faire
+- [x] **VM-41 — Identification d'objets magiques** *(Adventure)* — Trou critique après tier 1. Identification triviale (bonus chiffré) vs items à effet conditionnel (commande, piège, parameters). Lien avec déchiffrement Arcanique. #soon #bloc/adventure #statut/a-faire
 - [ ] **VM-42 — Apprendre des rumeurs (procédure)** *(Town)* — Recherche d'info via temps + or. Distinct du Downtime générique : c'est l'interface joueurs/factions/zones. Échelle (rumeur de quartier vs région). #soon #bloc/town #statut/a-faire
-- [ ] **VM-44 — Météo — effets mécaniques** *(Travel)* — Cadre météo quotidien et impact mécanique (vitesse, perception, repos). « HEX flower météo » (Outil MJ #33) doit produire ces effets. #soon #bloc/travel #statut/a-faire
-- [ ] **VM-60 — Table d'évènements aléatoires (Markov)** *(MJ)* — Référencée par la conséquence 2 du Test de Tâche révisé. Synergie avec génération procédurale de donjon. Doit couvrir exploration (donjon, hex), downtime (recherche, soins, projets), voyage. Bloque l'utilisation pleine de la nouvelle règle de Tâche. #soon #bloc/mj #statut/a-faire
-- [ ] **VM-61 — Horloges de faction (downtime)** *(MJ)* — Référencé par la conséquence 1 du Test de Tâche (mode downtime). Couplage attendu avec Faction Turn. #soon #bloc/mj #statut/a-faire
-- [ ] **VM-62 — Playtest — Test de Tâche V3** *(Système)* — Tester sur 3 scénarios : crochetage hors pression (pool 2 d6, C=2, K=1), crochetage avec gardes qui approchent (idem + 3 tours), déchiffrement de grimoire pendant un siège (pool 4 d8, C=3). Ajuster calibration §4.4 si incohérent. #soon #bloc/systeme #statut/a-faire
+- [ ] **VM-44 — Météo [[WIP Exploration]] — effets mécaniques** *(Travel)* — Cadre météo quotidien et impact mécanique (vitesse, perception, repos). « HEX flower météo » (Outil MJ #33) doit produire ces effets. #soon #bloc/travel #statut/a-faire
+- [x] **VM-60 — Table d'évènements aléatoires (Markov)** *(MJ)* — Référencée par la conséquence 2 du Test de Tâche révisé. Synergie avec génération procédurale de donjon. Doit couvrir exploration (donjon, hex), downtime (recherche, soins, projets), voyage. Bloque l'utilisation pleine de la nouvelle règle de Tâche. #soon #bloc/mj #statut/a-faire
+- [x] **VM-61 — Horloges de faction (downtime)** *(MJ)* — Référencé par la conséquence 1 du Test de Tâche (mode downtime). Couplage attendu avec Faction Turn. #soon #bloc/mj #statut/a-faire
+- [x] **VM-62 — Playtest — Test de Tâche V3** *(Système)* — Tester sur 3 scénarios : crochetage hors pression (pool 2 d6, C=2, K=1), crochetage avec gardes qui approchent (idem + 3 tours), déchiffrement de grimoire pendant un siège (pool 4 d8, C=3). Ajuster calibration §4.4 si incohérent. #soon #bloc/systeme #statut/a-faire
 
 ## 🟠 Friction
 

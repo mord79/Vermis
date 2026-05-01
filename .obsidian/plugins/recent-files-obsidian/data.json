@@ -1,6 +1,18 @@
 {
   "recentFiles": [
     {
+      "basename": "Vermis_Rules",
+      "path": "01-Règles/Vermis_Rules.md"
+    },
+    {
+      "basename": "Magie_Arcanique",
+      "path": "01-Règles/Magie_Arcanique.md"
+    },
+    {
+      "basename": "WIP Exploration",
+      "path": "01-Règles/WIP Exploration.md"
+    },
+    {
       "basename": "Vermis_Todo",
       "path": "04-Todo/Vermis_Todo.md"
     },
@@ -9,24 +21,20 @@
       "path": "01-Règles/WIP Repos et Guérison.md"
     },
     {
-      "basename": "WIP Progression",
-      "path": "01-Règles/WIP Progression.md"
-    },
-    {
-      "basename": "Vermis_Rules",
-      "path": "01-Règles/Vermis_Rules.md"
-    },
-    {
       "basename": "Événements_Aléatoires",
       "path": "01-Règles/Événements_Aléatoires.md"
     },
     {
-      "basename": "WIP Tension",
-      "path": "01-Règles/WIP Tension.md"
+      "basename": "Grille_Événements_Aléatoires",
+      "path": "01-Règles/Grille_Événements_Aléatoires.md"
     },
     {
-      "basename": "WIP Exploration",
-      "path": "01-Règles/WIP Exploration.md"
+      "basename": "WIP Progression",
+      "path": "01-Règles/WIP Progression.md"
+    },
+    {
+      "basename": "WIP Tension",
+      "path": "01-Règles/WIP Tension.md"
     },
     {
       "basename": "WIP Henchman Tool",

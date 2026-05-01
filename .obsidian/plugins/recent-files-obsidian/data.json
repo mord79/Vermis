@@ -5,6 +5,10 @@
       "path": "01-Règles/011-WIP/WIP Résolution v2.md"
     },
     {
+      "basename": "Vermis_Rules",
+      "path": "01-Règles/Vermis_Rules.md"
+    },
+    {
       "basename": "Résolutions",
       "path": "01-Règles/012-Intégré/Résolutions.md"
     },
@@ -43,10 +47,6 @@
     {
       "basename": "Vermis_Todo",
       "path": "04-Todo/Vermis_Todo.md"
-    },
-    {
-      "basename": "Vermis_Rules",
-      "path": "01-Règles/Vermis_Rules.md"
     },
     {
       "basename": "WIP Exploration",

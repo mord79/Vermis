@@ -199,3 +199,7 @@ Tous les ⚠ ci-dessus, regroupés pour la rédaction Vermis_Rules :
 - [[concept-tension]] — VM-1 critique
 - [[design-donjon]] — index des outils de prep de donjon
 - `Vermis_Rules.md` Annexe E.10, VM-60 dans Vermis_Todo
+
+# Todo
+- Évènement en Voyage extérieur
+	- Inclure météo

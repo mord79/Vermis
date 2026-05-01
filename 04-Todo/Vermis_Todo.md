@@ -24,10 +24,10 @@
 
 ## 🔴 Critique
 
-- [ ] **VM-1 — Tension** *(Système)* — Concept central. Référencé partout : test d'Action (échec Impasse), test de Tâche (conséquence 1 sur double), downtime, exploration. Défini nulle part. Bloque la lisibilité de l'ensemble. Priorité renforcée par la révision Tâche V3 (2026-04-27). #urgent #bloc/systeme #statut/a-faire
-- [ ] **VM-3 — Progression (XP, level up, attribut up)** *(Personnage)* — Notes éparpillées dans Main (HP via 0-pile, Crit étoile sur attribut, milestone). Aucune procédure consolidée. #urgent #bloc/personnage #statut/a-faire
-- [ ] **VM-5 — Stabilisation d'un Mourant** *(Combat)* — Mentionnée, jamais détaillée. Question urgente vu la létalité du système. #urgent #bloc/combat #statut/a-faire
-- [ ] **VM-38 — Prix et appraisal d'objets courants** *(Town)* — Tables de prix générales pour items courants. Lien avec Compétence Artisanat pour appraisal. Distinct de Trésors (loot magique). #urgent #bloc/town #statut/a-faire
+- [ ] **VM-1 — WIP Tension** *(Système)* — [[WIP Tension]] Concept central. Référencé partout : test d'Action (échec Impasse), test de Tâche (conséquence 1 sur double), downtime, exploration. Défini nulle part. Bloque la lisibilité de l'ensemble. Priorité renforcée par la révision Tâche V3 (2026-04-27). #urgent #bloc/systeme #statut/a-faire
+- [ ] **VM-3 — WIP Progression [[ WIP Progression]] (XP, level up, attribut up)** *(Personnage)* — Notes éparpillées dans Main (HP via 0-pile, Crit étoile sur attribut, milestone). Aucune procédure consolidée. #urgent #bloc/personnage #statut/a-faire
+- [ ] **VM-5 —  WIP Stabilisation d'un Mourant** [[WIP Repos et Guérison]] *(Combat)* — Mentionnée, jamais détaillée. Question urgente vu la létalité du système. #urgent #bloc/combat #statut/a-faire
+- [x] **VM-38 — Prix et appraisal d'objets courants** *(Town)* — Tables de prix générales pour items courants. Lien avec Compétence Artisanat pour appraisal. Distinct de Trésors (loot magique). #urgent #bloc/town #statut/a-faire
 - [-] **VM-64 — Création de personnage** *(Personnage)* — Premier jet existe (3d6 RVB pour Approche/Origine/Motivation, chaque dé indexant aussi un Handicap/Malchance/Don). À finaliser : tables Handicap (D-Rouge), Malchance (D-Vert), Dons (D-Bleu) actuellement vides ; lignes 5 et 6 d'Origine ont la même valeur D6 (erreur) ; Archetype/Kit/Occupation partiel ; articulation lignées (4e dé ? choix ? origine étendue ?) ; Arts Initié à la création ; or et équipement complémentaire ; HP/END de départ (4/2/1) à valider ; calibration probabiliste. #urgent #bloc/personnage #statut/en-cours
 
 ## 🟡 Important

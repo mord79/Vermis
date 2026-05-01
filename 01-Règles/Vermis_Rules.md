@@ -822,11 +822,11 @@ Procédure :
 
 ### A.4 Archétype et Expertise (matrice D1 × D2)
 
-| D1 / D2 | Reclus | Civilisé | Décadent |
-|---|---|---|---|
-| Combattant | **Guerrier** — Athlétisme/Dressage | **Mercenaire** — Forge/Ingénierie | **Chevalier** — Cavalerie/Commande |
-| Filou | **Rôdeur** — Navigation/Chasse | **Roublard** — Infiltration/Poison | **Barde** — Mascarade/Performance |
-| Érudit | **Ermite** — Herboristerie/Esprit | **Savant** — Médecine/Alchimie | **Magistère** — Diplomatie/Histoire |
+| D1 / D2    | Reclus<br>Nomade/Paysan            | Civilisé<br>Artisan/Bourgeois      | Décadent<br>Roturier/Noble           |
+| ---------- | ---------------------------------- | ---------------------------------- | ------------------------------------ |
+| Combattant | **Guerrier** — Athlétisme/Dressage | **Mercenaire** — Forge/Ingénierie  | **Chevalier** — Cavalerie/Leadership |
+| Filou      | **Rôdeur** — Navigation/Chasse     | **Roublard** — Infiltration/Poison | **Barde** — Mascarade/Performance    |
+| Érudit     | **Ermite** — Herboristerie/Esprit  | **Savant** — Médecine/Alchimie     | **Magistère** — Diplomatie/Histoire  |
 
 ---
 
@@ -842,7 +842,6 @@ Procédure :
 | Guerrier   | • \*Hache à deux mains        | 1\. Esclave en fuite — Chaîne<br>2\. Berger des steppes — Fronde et billes<br>3\. Montagnard — Crampons d'escalade<br>4\. Cavalier nomade — Arc composite<br>5\. Fou de guerre — Champirage (3)<br>6\. Chef de tribu — Collier de dents |
 | Mercenaire | • \*Lance<br>• Grand bouclier | 1\. Boucher — Hachoir<br>2\. Charpentier — Scie<br>3\. Forgeron — Marteau<br>4\. Fossoyeur — Pelle<br>5\. Tailleur de pierre — Ciseau à pierre<br>6\. Maréchal-ferrant — Pinces                                                         |
 | Chevalier  | • \*Épée longue<br>• Bouclier | 1\. Vengeur masqué — Masque de fer<br>2\. Garde du corps — Heaume<br>3\. Instructeur d'armes — Épée de bois<br>4\. Duelliste — Gants de cuir<br>5\. Écuyer — &&&<br>6\. Officier — Longue-vue                                           |
-
 #### Filous
 
 | Archétype | Kit personnalisé\* | Occupation (D-Bleu) |

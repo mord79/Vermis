@@ -9,14 +9,6 @@
       "path": "01-Règles/Vermis_Rules.md"
     },
     {
-      "basename": "Résolutions",
-      "path": "01-Règles/012-Intégré/Résolutions.md"
-    },
-    {
-      "basename": "Création_de_personnage",
-      "path": "01-Règles/Création_de_personnage.md"
-    },
-    {
       "basename": "Événements_Aléatoires",
       "path": "01-Règles/Événements_Aléatoires.md"
     },
@@ -25,16 +17,28 @@
       "path": "01-Règles/Grille_Événements_Aléatoires.md"
     },
     {
+      "basename": "Magie_Arcanique",
+      "path": "01-Règles/012-Intégré/Magie_Arcanique.md"
+    },
+    {
       "basename": "Caractéristiques_et_Expertise",
       "path": "01-Règles/Caractéristiques_et_Expertise.md"
     },
     {
-      "basename": "Tables de Loot & Disponibilité",
-      "path": "01-Règles/012-Intégré/Tables de Loot & Disponibilité.md"
+      "basename": "Cheat_Sheet",
+      "path": "01-Règles/Cheat_Sheet.md"
     },
     {
-      "basename": "Magie_Arcanique",
-      "path": "01-Règles/012-Intégré/Magie_Arcanique.md"
+      "basename": "Résolutions",
+      "path": "01-Règles/012-Intégré/Résolutions.md"
+    },
+    {
+      "basename": "Création_de_personnage",
+      "path": "01-Règles/Création_de_personnage.md"
+    },
+    {
+      "basename": "Tables de Loot & Disponibilité",
+      "path": "01-Règles/012-Intégré/Tables de Loot & Disponibilité.md"
     },
     {
       "basename": "WIP Tension",

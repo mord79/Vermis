@@ -352,13 +352,13 @@ Aucune mécanique. Arbitrage MJ-joueur :
 
 ### 4.6 Modificateurs
 
-| Notation        | Nom                        | Effet                                                  |
-| --------------- | -------------------------- | ------------------------------------------------------ |
-| `[+1d] / [-1d]` | **Avantagé / Désavantagé** | Ajouter le même dé, prendre meilleur / pire            |
-| `[+2d]`         | (cumul)                    | Ajouter plusieurs fois le même dé                      |
-| `[+>] / [<-]`   | **Amélioré / Entravé**     | Augmenter / diminuer le dé principal d'un rang         |
-| `[++>]`         | (cumul)                    | Augmenter de deux rangs                                |
-| `[+d8] / [-d4]` | **Bonus / Malus**          | Ajouter le dé marqué, prendre meilleur (+) ou pire (−) |
+| Notation        | Nom                        | Effet                                                                                                                                                                                                                              |
+| --------------- | -------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `[+1d] / [-1d]` | **Avantagé / Dés Ajouter le même dé. <br>Pour les jet Avantagés, le joueur décide quel dé remplacer.<br>Pour les jet Désavantagés, les dé les plus bas remplace les dé les plus haut, dans cet ordre (si plusieurs dé principaux sont lancé)  s  s  s  s  s  s  |
+| `[+2d]`         | (cumul)                    | Ajouter plusieu                                                                                                                                                                                                                    |
+| `[+>] / [<-]`   | **Amélioré / Entravé**     | Augmenter / diminuer l                                                                                                                                                                                                             |
+| `[++>]`         | (cumul)                                                                                                                                                                                                                                                         |
+| `[+d8] / [-d4]` | **Bonus / Malus**          | Ajouter le dé marq                                                                                                                                                                                                                 |
 
 ### 4.7 Tests spécifiques
 

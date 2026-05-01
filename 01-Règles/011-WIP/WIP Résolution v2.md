@@ -23,12 +23,12 @@ Le résultat est lu sur le **spectre de succès gradué** :
 > Il y avait une erreur dans la base
 
 ### Action instantanée
-D'autres effet peuvent être ajouter ou substitué selon le contexte, au choix du MJ.
+D'autres effet peuvent être ajouté ou substitué selon le contexte, au choix du MJ.
 ### Action progressive
+Les **Actions Progressive** sont des tests d'Attribut suivit d'un dé qui représente la progression vers un but quelconque (Combat, Magie, Crochetage, etc.). Le de progression est modifié selon le niveau de succès du test d'attribut. Pour les [+d], je joueur choisi les dés qu'il veut substitué aux dés principaux. Pour les [-d] les dé les plus bas sont toujours sélectionnés pour remplacé les dés principaux les plus élevés.
 
 > [!NOTE]  Exemple
 > Test FIN. La FIN est des 13. Lancer D20, résultat 12 -> Succès Critique Tier 3. Lancer 1d6 de progression [+3d].
-
 #### Tâches 
 Le MJ détermine l'**Ampleur** représenté par des tokens et le **Seuil** de complexité 
 Lancer le ou les dés de progression, d6 par défaut ou dé d'outil et rajouter [+/-Td] au jet

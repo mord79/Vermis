@@ -40,17 +40,17 @@ Le choix entre les trois est **narratif**, pas mécanique. Un dialogue MJ-joueur
 
 Le résultat est lu sur le **spectre de succès gradué** :
 
-| Résultat sur le dé | Tier | Effet |
-|---|---|---|
-| 0–5 sous l'attribut | **T1 — Normal** | Résultat escompté |
-| 6–10 sous | **T2 — Marqué** | 1 effet au choix (bonus, bénéfice) |
-| 11–15 sous | **T3 — Critique** | 2 effets au choix |
-| 16–20 sous | **T4 — Total** | Les 3 effets s'appliquent |
-| Égal à l'attribut, ou ≤ blessures | **T0 — Impasse** | Payer 1d6 END pour T1, sinon T-1 |
-| 1–5 au-dessus | **T-1** | Échec léger |
-| 6–10 au-dessus | **T-2** | Échec marqué (complication mineure) |
-| 11–15 au-dessus | **T-3** | Échec critique (complication majeure) |
-| 16–20 au-dessus | **T-4** | Échec total (catastrophe) |
+| Résultat sur le dé                | Tier              | Effet                                 |
+| --------------------------------- | ----------------- | ------------------------------------- |
+| 0–5 sous l'attribut               | **T1 — Normal**   | Résultat escompté                     |
+| 6–10 sous                         | **T2 — Marqué**   | 1 effet au choix (bonus, bénéfice)    |
+| 11–15 sous                        | **T3 — Critique** | 2 effets au choix                     |
+| 16–20 sous                        | **T4 — Total**    | Les 3 effets s'appliquent             |
+| Égal à l'attribut, ou ≤ blessures | **T0 — Impasse**  | Payer 1d6 END pour T1, sinon T-1      |
+| 1–5 au-dessus                     | **T-1**           | Échec léger                           |
+| 6–10 au-dessus                    | **T-2**           | Échec marqué (complication mineure)   |
+| 11–15 au-dessus                   | **T-3**           | Échec critique (complication majeure) |
+| 16–20 au-dessus                   | **T-4**           | Échec total (catastrophe)             |
 
 ### Usage typique
 

@@ -23,3 +23,20 @@ Le résultat est lu sur le **spectre de succès gradué** :
 > Il y avait une erreur dans la base
 
 ### Action instantanée
+
+| Succès             | Effet cumulatif                  |
+| ------------------ | -------------------------------- |
+| **T4 — Total**     | -1 Tenssion                      |
+| **T3 — Critique**  | -1 Tenssion                      |
+| **T2 — Marqué**    | -1 Tenssion                      |
+| **T1 — Normal**    | Résultat escompté                |
+| **T0 — Impasse**   | Payer 1d6 END pour T1, sinon T-1 |
+| **T-1 — Normal**   | Rien de se passe                 |
+| **T-2 — Marqué**   | +1 Tenssion                      |
+| **T-3 — Critique** | +1 Tenssion                      |
+| **T-4 — Total**    | +1 Tenssion                      |
+### Action progressive
+
+#### Tâches 
+Le MJ détermine l'ampleur
+Lancer le dé de progression, d6 par défaut ou dé d'outil

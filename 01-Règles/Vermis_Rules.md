@@ -301,7 +301,7 @@ K minimum = 1. À K = 1, aucun risque de double, aucun coût.
 - **Si une expertise n'est pas nécessaire mais peut aider** : [+1d] (AV).
 - **Si une expertise est demandée mais le PJ ne l'a pas** : [-1d] (DAV).
 
-**Conséquences (d6)** :
+#### Conséquences (d6) :
 
 | 1d6 | Conséquence                                                                                              |
 | --- | -------------------------------------------------------------------------------------------------------- |

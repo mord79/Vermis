@@ -133,7 +133,8 @@
               "title": "Recent Files"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
@@ -215,22 +216,21 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "04-Todo/Vermis_Todo.md",
+                "file": "01-Règles/Vermis_Rules.md",
                 "followCursor": false,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Plan de Vermis_Todo"
+              "title": "Plan de Vermis_Rules"
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
-    "width": 400.5,
-    "collapsed": true
+    "width": 400.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -245,7 +245,7 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "33b118b86aee4eea",
+  "active": "d7398bd06ba9c430",
   "lastOpenFiles": [
     "01-Règles/011-WIP/WIP Résolution v2.md",
     "01-Règles/Vermis_Rules.md",

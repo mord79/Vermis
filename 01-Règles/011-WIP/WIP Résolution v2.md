@@ -7,7 +7,7 @@ tous les tests proactif des PJ fonctionne comme dans [[Résolutions]]
 
 **D20 roll-under Attribut pertinent** (VIG / FIN / ESP selon la nature de l'action).
 
-Le résultat est lu sur le **spectre de succès gradué** :
+### Spectre de succès gradué
 
 | Résultat sur le dé                | Tier               | Effet sur test instantané        | Effet sur tes de progresion |
 | --------------------------------- | ------------------ | -------------------------------- | --------------------------- |

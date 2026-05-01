@@ -1,6 +1,22 @@
 {
   "recentFiles": [
     {
+      "basename": "Création_de_personnage",
+      "path": "01-Règles/Création_de_personnage.md"
+    },
+    {
+      "basename": "Vermis_Rules",
+      "path": "01-Règles/Vermis_Rules.md"
+    },
+    {
+      "basename": "WIP Henchman Tool",
+      "path": "01-Règles/WIP Henchman Tool.md"
+    },
+    {
+      "basename": "Hechmen Are Tools",
+      "path": "03-Références/Hechmen Are Tools.md"
+    },
+    {
       "basename": "Vermis_Migration_Todo",
       "path": "04-Todo/Vermis_Migration_Todo.md"
     },
@@ -17,10 +33,6 @@
       "path": "02-Banque/idée-entities-are-people.md"
     },
     {
-      "basename": "Vermis_Rules",
-      "path": "01-Règles/Vermis_Rules.md"
-    },
-    {
       "basename": "idée-evenements-aleatoires-markov",
       "path": "02-Banque/idée-evenements-aleatoires-markov.md"
     },
@@ -35,10 +47,6 @@
     {
       "basename": "Dungeon Stocking with Markov Processes",
       "path": "03-Références/Dungeon Stocking with Markov Processes.md"
-    },
-    {
-      "basename": "Création_de_personnage",
-      "path": "01-Règles/Création_de_personnage.md"
     },
     {
       "basename": "design-points-ouverts",

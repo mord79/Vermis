@@ -3,4 +3,7 @@
 2. Utilisation de ED pour guérision
 3. modulation de la [[WIP Tension]]
 4. Actions possibles lors de [[WIP Exploration]]
-5. 
+5. Conditions
+	1. Fatigue
+	2. Panique
+	3. Vulnérable

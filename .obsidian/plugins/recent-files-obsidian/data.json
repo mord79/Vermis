@@ -5,6 +5,10 @@
       "path": "04-Todo/Vermis_Todo.md"
     },
     {
+      "basename": "WIP Repos et Guérison",
+      "path": "01-Règles/WIP Repos et Guérison.md"
+    },
+    {
       "basename": "WIP Progression",
       "path": "01-Règles/WIP Progression.md"
     },
@@ -27,10 +31,6 @@
     {
       "basename": "WIP Henchman Tool",
       "path": "01-Règles/WIP Henchman Tool.md"
-    },
-    {
-      "basename": "WIP Repos et Guérison",
-      "path": "01-Règles/WIP Repos et Guérison.md"
     },
     {
       "basename": "Caractéristiques_et_Expertise",

@@ -114,5 +114,5 @@ ATTRIBUT  →  fondation chiffrée 3–18, tests génériques
 
 - [[règles-résolution]] — comment les Compétences et Arts modifient les tests
 - [[règles-santé]] — Attributs VIG/FIN/ESP et types de dégâts
-- [[Création_de_personnage]] — tables de génération, archétypes, kits
+- [[WIP Création_de_personnage]] — tables de génération, archétypes, kits
 - [[design-points-ouverts]] — §1 à §7 (Initié/Adepte, Dons, Surpasser…)

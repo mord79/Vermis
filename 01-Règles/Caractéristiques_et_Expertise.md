@@ -257,5 +257,5 @@ Une Séquelle est une conséquence permanente d'une blessure grave subie en jeu.
 
 - [[Vermis_Rules]] §3 — version compacte intégrée à la consolidation.
 - [[Vermis_Rules]] Annexes C/D/E — Handicaps, Séquelles, Points de design (versions condensées).
-- [[Création_de_personnage]] — tables 3d6 RVB qui distribuent les Dons, Compétences, Arts à la création.
+- [[WIP Création_de_personnage]] — tables 3d6 RVB qui distribuent les Dons, Compétences, Arts à la création.
 - [[Vermis_Todo]] — items VM-16 (Nombre de Dons), VM-17 (Surpasser), VM-18 (Dons à clarifier), VM-24 (Handicaps).

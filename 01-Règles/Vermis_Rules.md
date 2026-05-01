@@ -466,7 +466,7 @@ Lors d'une attaque, lancer le dé de dégâts de l'arme. Si plusieurs personnage
 **Lecture du dé** :
 
 - **1 sur le dé principal** — attaque ratée, aucun dégât.
-- **Maximum sur un dé** — selon le type d'arme, le PJ peut choisir un effet (test d'attribut requis) :
+- **Maximum sur un dé** — selon le type d'arme, le PJ peut choisir un effet (selon l'Attribut Testé) :
   - *Perçante* (FIN) : contourner l'armure pour cette attaque.
   - *Contondante* (VIG) : briser l'armure (−1 RD), ou (VIG+FIN) briser l'arme (−1 rang).
   - *Coupante* (VIG/FIN) : coup circulaire, attaque sur cible adjacente, dégrade dé d'un rang.

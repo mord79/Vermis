@@ -216,17 +216,17 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "01-Règles/Vermis_Rules.md",
+                "file": "01-Règles/011-WIP/WIP Résolution v2.md",
                 "followCursor": false,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Plan de Vermis_Rules"
+              "title": "Plan de WIP Résolution v2"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -245,10 +245,10 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "d7398bd06ba9c430",
+  "active": "44561d9b5456885f",
   "lastOpenFiles": [
-    "01-Règles/011-WIP/WIP Résolution v2.md",
     "01-Règles/Vermis_Rules.md",
+    "01-Règles/011-WIP/WIP Résolution v2.md",
     "01-Règles/Événements_Aléatoires.md",
     "01-Règles/Grille_Événements_Aléatoires.md",
     "01-Règles/012-Intégré/Magie_Arcanique.md",

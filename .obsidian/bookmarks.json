@@ -7,25 +7,39 @@
       "title": "Main"
     },
     {
-      "type": "file",
-      "ctime": 1777653733694,
-      "path": "01-Règles/Vermis_Rules.md",
-      "subpath": "#Conséquences (d6)",
-      "title": "Tables Importantes"
+      "type": "group",
+      "ctime": 1777653908283,
+      "items": [
+        {
+          "type": "file",
+          "ctime": 1777653733694,
+          "path": "01-Règles/Vermis_Rules.md",
+          "subpath": "#Conséquences (d6)",
+          "title": "Conséquence Test de Tâches"
+        },
+        {
+          "type": "file",
+          "ctime": 1777653837204,
+          "path": "01-Règles/011-WIP/WIP Résolution v2.md",
+          "subpath": "#Spectre de succès gradué",
+          "title": "Spectre de Succès Graduté"
+        }
+      ],
+      "title": "Tables"
     },
     {
-      "type": "file",
-      "ctime": 1777653764909,
-      "path": "01-Règles/Vermis_Rules.md",
-      "subpath": "#Procédure",
-      "title": "Procédure Importante"
-    },
-    {
-      "type": "file",
-      "ctime": 1777653837204,
-      "path": "01-Règles/011-WIP/WIP Résolution v2.md",
-      "subpath": "#Spectre de succès gradué",
-      "title": "Table Importantes"
+      "type": "group",
+      "ctime": 1777653951387,
+      "items": [
+        {
+          "type": "file",
+          "ctime": 1777653764909,
+          "path": "01-Règles/Vermis_Rules.md",
+          "subpath": "#Procédure",
+          "title": "Teste de Tâches"
+        }
+      ],
+      "title": "Procédures"
     }
   ]
 }

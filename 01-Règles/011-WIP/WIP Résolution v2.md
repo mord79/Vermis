@@ -32,3 +32,7 @@ Les **Actions Progressive** sont des tests d'Attribut suivit d'un dé qui repré
 #### Tâches 
 Le reste est identique à la procédure dans [[Vermis_Rules]]
 
+### Combat
+- Test de VIG ou FIN puis lancer le dé de dégât en fonction du Tier de Succès.
+- Les Effets sur les Maximum de dé n'ont pas besoin de test d'Attribut, mais dépende du type de dégâts et de l'Attribut testé
+- 

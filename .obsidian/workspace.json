@@ -133,8 +133,7 @@
               "title": "Recent Files"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "horizontal",
@@ -245,7 +244,7 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "d7398bd06ba9c430",
+  "active": "b36bbe4918ab2b98",
   "lastOpenFiles": [
     "01-Règles/011-WIP/WIP Résolution v2.md",
     "01-Règles/Vermis_Rules.md",

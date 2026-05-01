@@ -303,14 +303,14 @@ K minimum = 1. À K = 1, aucun risque de double, aucun coût.
 
 **Conséquences (d6)** :
 
-| 1d6 | Conséquence |
-|---|---|
-| 1 | **Tension +1** (en exploration) ou **avancement d'horloge de faction** (en downtime) |
-| 2 | **Évènement** lancé (table d'évènement de la zone) |
-| 3 | **Complexité +1** pour le reste de la Tâche |
-| 4 | **Ampleur +1d2** tokens (rajoutés au pool). Si l'Ampleur dépasse sa valeur initiale, **Échec définitif** |
-| 5 | **Usure −1** sur l'outil utilisé. Si pas d'usure applicable, **−1d6 END** au PJ |
-| 6 | **Usure −1** sur l'outil utilisé. Si pas d'usure applicable, **−1d6 END** au PJ |
+| 1d6 | Conséquence                                                                                              |
+| --- | -------------------------------------------------------------------------------------------------------- |
+| 1   | **Tension +1** (en exploration) ou **avancement d'horloge de faction** (en downtime)                     |
+| 2   | **Évènement** lancé (table d'évènement de la zone)                                                       |
+| 3   | **Complexité +1** pour le reste de la Tâche                                                              |
+| 4   | **Ampleur +1d2** tokens (rajoutés au pool). Si l'Ampleur dépasse sa valeur initiale, **Échec définitif** |
+| 5   | **Usure −1** sur l'outil utilisé. Si pas d'usure applicable, **−1d6 END** au PJ                          |
+| 6   | **Usure −1** sur l'outil utilisé. Si pas d'usure applicable, **−1d6 END** au PJ                          |
 
 **Coopération multi-PJ — Pool partagé** : plusieurs PJ peuvent travailler sur la même Tâche, chacun avec son propre Outil et sa propre expertise. Un seul pool de tokens. À chaque tour, chaque PJ participant lance ses propres dés selon son Outil et son K maximum. Tous les hits retirent des tokens du pool commun. Les doubles se vérifient **par PJ**, pas dans le pool global.
 

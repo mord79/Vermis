@@ -50,7 +50,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       },
       {
         "id": "53ed04401103aaa3",
@@ -215,13 +215,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "01-Règles/Vermis_Rules.md",
+                "file": "01-Règles/WIP Progression.md",
                 "followCursor": false,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Plan de Vermis_Rules"
+              "title": "Plan de WIP Progression"
             }
           }
         ],
@@ -245,10 +245,10 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "1a5ca2708abddc46",
+  "active": "412319b158d54d6d",
   "lastOpenFiles": [
-    "01-Règles/Événements_Aléatoires.md",
     "01-Règles/Vermis_Rules.md",
+    "01-Règles/Événements_Aléatoires.md",
     "01-Règles/WIP Progression.md",
     "01-Règles/WIP Tension.md",
     "04-Todo/Vermis_Todo.md",

@@ -828,25 +828,50 @@ Procédure :
 | Filou | **Rôdeur** — Navigation/Chasse | **Roublard** — Infiltration/Poison | **Barde** — Mascarade/Performance |
 | Érudit | **Ermite** — Herboristerie/Esprit | **Savant** — Médecine/Alchimie | **Magistère** — Diplomatie/Histoire |
 
-### A.5 Archétype, kit et occupation
+---
 
-| Archétype  | Kit personnalisé*                                                                         | Occupation D3                                                                                                                                                                                                                |
-| ---------- | ----------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Guerrier   | • *Hache à deux mains                                                                     | 1. Esclave en fuite — Chaîne / 2. Berger des steppes — Fronde et billes / 3. Montagnard — Crampons d'escalade / 4. Cavalier nomade — Arc composite / 5. Fou de guerre — Champirage (3) / 6. Chef de tribu — Collier de dents |
-| Mercenaire | • *Lance / • Grand bouclier                                                               | 1. Boucher — Hachoir / 2. Charpentier — Scie / 3. Forgeron — Marteau / 4. Fossoyeur — Pelle / 5. Tailleur de pierre — Ciseau à pierre / 6. Maréchal-ferrant — Pinces                                                         |
-| Chevalier  | • *Épée longue / • Bouclier                                                               | 1. Vengeur masqué — Masque de fer / 2. Garde du corps — Heaume / 3. Instructeur d'armes — Épée de bois / 4. Duelliste — Gants de cuir / 5. Écuyer — &&& / 6. Officier — Longue-vue                                           |
-| Rôdeur     | • *Arc long / • Boussole                                                                  | *(à compléter)*                                                                                                                                                                                                              |
-| Roublard   | • Arbalète de poing / • *Kit de crochetage                                                | *(à compléter)*                                                                                                                                                                                                              |
-| Barde      | • Fronde / • *Kit de déguisement (?)                                                      | *(à compléter)*                                                                                                                                                                                                              |
-| Ermite     | • Grimoire 6 slots max — 2 ch (Détection Arcanique / Vue Nocturne / Cantrip au hasard)    | *(à compléter)*                                                                                                                                                                                                              |
-| Savant     | • Grimoire 6 slots max — 2 ch (Détection Arcanique / Baume / Cantrip au hasard)           | *(à compléter)*                                                                                                                                                                                                              |
-| Magistère  | • Grimoire 6 slots max — 2 ch (Détection Arcanique / Trait Arcanique / Cantrip au hasard) | *(à compléter)*                                                                                                                                                                                                              |
+### A.5 Archétype, kit personnalisé et occupation
 
-***Personnalisé** : donne [+1d] lors de son utilisation, mais [-1d] par une autre personne, -1 charge (min 0).
+> [!info] Kit personnalisé\*
+> Donne **[+1d]** lors de son utilisation, mais **[-1d]** pour toute autre personne. −1 charge (min 0).
 
-### A.6 Lignée (option classique)
+#### Combattants
 
-Sur un triple de dés identiques, le personnage est d'une lignée fantastique. Appliquer les caractéristiques, relancer 1 dé sur trois au hasard et recombiner la séquence pour déterminer l'archétype. Utiliser le dé relancé pour l'occupation. Utiliser l'expertise de la lignée à la place de celle de l'origine.
+| Archétype  | Kit personnalisé\*            | Occupation (D-Bleu)                                                                                                                                                                                                                     |
+| ---------- | ----------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Guerrier   | • \*Hache à deux mains        | 1\. Esclave en fuite — Chaîne<br>2\. Berger des steppes — Fronde et billes<br>3\. Montagnard — Crampons d'escalade<br>4\. Cavalier nomade — Arc composite<br>5\. Fou de guerre — Champirage (3)<br>6\. Chef de tribu — Collier de dents |
+| Mercenaire | • \*Lance<br>• Grand bouclier | 1\. Boucher — Hachoir<br>2\. Charpentier — Scie<br>3\. Forgeron — Marteau<br>4\. Fossoyeur — Pelle<br>5\. Tailleur de pierre — Ciseau à pierre<br>6\. Maréchal-ferrant — Pinces                                                         |
+| Chevalier  | • \*Épée longue<br>• Bouclier | 1\. Vengeur masqué — Masque de fer<br>2\. Garde du corps — Heaume<br>3\. Instructeur d'armes — Épée de bois<br>4\. Duelliste — Gants de cuir<br>5\. Écuyer — &&&<br>6\. Officier — Longue-vue                                           |
+
+#### Filous
+
+| Archétype | Kit personnalisé\* | Occupation (D-Bleu) |
+|---|---|---|
+| Rôdeur | • \*Arc long<br>• Boussole | *(à compléter)* |
+| Roublard | • Arbalète de poing<br>• \*Kit de crochetage | *(à compléter)* |
+| Barde | • Fronde<br>• \*Kit de déguisement (?) | *(à compléter)* |
+
+#### Érudits
+
+| Archétype | Kit personnalisé\* | Occupation (D-Bleu) |
+|---|---|---|
+| Ermite | • \*Grimoire (6 slots)<br>• Sorts : Détection Arc. / Vue Nocturne / Cantrip×1 | *(à compléter)* |
+| Savant | • \*Grimoire (6 slots)<br>• Sorts : Détection Arc. / Baume / Cantrip×1 | *(à compléter)* |
+| Magistère | • \*Grimoire (6 slots)<br>• Sorts : Détection Arc. / Trait Arc. / Cantrip×1 | *(à compléter)* |
+
+---
+
+## A.6 Lignée
+
+Sur un **triple de dés identiques**, le personnage est d'une lignée fantastique. Procédure :
+
+1. Appliquer les caractéristiques de la lignée.
+2. Relancer 1 dé sur trois au hasard.
+3. Recombiner la séquence de 3 dés pour déterminer l'archétype.
+4. Utiliser le dé relancé pour déterminer l'occupation.
+5. Utiliser l'expertise de la lignée à la place de celle de l'origine.
+
+#### Option classique
 
 1. Nain des Collines
 2. Nain des Montagnes
@@ -854,6 +879,8 @@ Sur un triple de dés identiques, le personnage est d'une lignée fantastique. A
 4. Halfelin Pied-Léger
 5. Elfe Lunaire
 6. Elfe Solaire
+
+#### Détail des lignées
 
 **Nain** — +1 VIG, -1 FIN, +1 END max
 - **Robuste** : lancer les HD avec [+1d].
@@ -878,6 +905,18 @@ Sur un triple de dés identiques, le personnage est d'une lignée fantastique. A
 - **Elfe Sylvestre** (S) : Vision nocturne (voit comme le jour mais en noir et blanc sous étoiles ou lune) ; maîtrise le Sylvarin (parler aux plantes pour 1 END).
 
 \*Un Combattant elfique débute avec une armure de cuir au lieu d'une cotte de mailles, et une dague en mythril à la place de ses armes de mêlée normalement attribuées.
+
+#### Lignée — Tableau récapitulatif
+
+| Lignée | Occupation | Expertise d'origine |
+|---|---|---|
+| Nain des Collines | *(à compléter)* | *(à compléter)* |
+| Nain des Montagnes | *(à compléter)* | *(à compléter)* |
+| Halfelin Pied-Velu | *(à compléter)* | *(à compléter)* |
+| Halfelin Pied-Léger | *(à compléter)* | *(à compléter)* |
+| Elfe Lunaire | *(à compléter)* | *(à compléter)* |
+| Elfe Solaire | *(à compléter)* | *(à compléter)* |
+
 
 ---
 

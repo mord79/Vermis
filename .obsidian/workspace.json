@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "01-Règles/Création_de_personnage.md",
+                "file": "01-Règles/Vermis_Rules.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Création_de_personnage"
+              "title": "Vermis_Rules"
             }
           }
         ],
@@ -181,13 +181,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "01-Règles/Création_de_personnage.md",
+                "file": "01-Règles/Vermis_Rules.md",
                 "followCursor": false,
-                "showSearch": false,
+                "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Plan de Création_de_personnage"
+              "title": "Plan de Vermis_Rules"
             }
           }
         ],
@@ -211,10 +211,13 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "412319b158d54d6d",
+  "active": "b36bbe4918ab2b98",
   "lastOpenFiles": [
-    "01-Règles/Vermis_Rules.md",
+    "Sans titre.canvas",
     "01-Règles/WIP Henchman Tool.md",
+    "01-Règles/Tables de Loot & Disponibilité.md",
+    "01-Règles/Vermis_Rules.md",
+    "01-Règles/Création_de_personnage.md",
     "03-Références/Hechmen Are Tools.md",
     "04-Todo/Vermis_Migration_Todo.md",
     "04-Todo/Vermis_Todo.md",
@@ -225,7 +228,6 @@
     "02-Banque/ref-markov-stocking.md",
     "06-Wiki/design-donjon.md",
     "03-Références/Dungeon Stocking with Markov Processes.md",
-    "01-Règles/Création_de_personnage.md",
     "06-Wiki/design-points-ouverts.md",
     "Temp Test import_Création de personnage.md",
     "03-Références/Tell, Test, Twist.md",
@@ -241,8 +243,6 @@
     "06-Wiki/règles-équipement.md",
     "06-Wiki/règles-personnage.md",
     "06-Wiki/règles-magie.md",
-    "06-Wiki/index.md",
-    "06-Wiki/règles-combat.md",
     "06-Wiki",
     "02-Banque/idée-stationery-maps.md.tmp.38820.1777505057402"
   ]

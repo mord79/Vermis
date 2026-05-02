@@ -21,7 +21,7 @@ màj: 2026-04-30
 | VM-3 | **Progression** — XP, level up, attribut up | — | Notes éparpillées, aucune procédure |
 | VM-5 | **Stabilisation d'un Mourant** | [[règles-santé]] | Mentionné, jamais détaillé |
 | VM-38 | **Prix et appraisal objets courants** | [[règles-équipement]] | Tables de prix générales manquantes |
-| VM-64 | **Création de personnage** — tables incomplètes | [[Création_de_personnage]] | En cours |
+| VM-64 | **Création de personnage** — tables incomplètes | [[WIP Création_de_personnage]] | En cours |
 
 ---
 

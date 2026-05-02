@@ -23,12 +23,12 @@ Le dé sert deux fois : il détermine d'abord le résultat de sa propre table, p
 
 | D6  | Approche   | Attribut                     | Expertise                               | Item                                                           | Handicap (D-Rouge) |
 | --- | ---------- | ---------------------------- | --------------------------------------- | -------------------------------------------------------------- | ------------------ |
-| 1   | Combattant | 11 VIG, 9 FIN, 8 ESP / 4 END | Art de la guerre / Arme spécialisée (?) | - Cotte de mailles 2 RD<br>-hachette d6                        |                    |
-| 2   | Combattant | 11 VIG, 8 FIN, 9 ESP / 4 END | Art de la guerre / Arme spécialisée (?) | - Cotte de mailles 2 RD<br>-hachette d6                        |                    |
-| 3   | Filou      | 9 VIG, 11 FIN, 8 ESP / 2 END | Discrétion, premier soins               | - Armure de cuir 1 RD <br>- Épée courte d6 <br> - kit de soins |                    |
-| 4   | Filou      | 8 VIG, 11 FIN, 9 ESP / 2 END | Discrétion, premier soins               | Armure de cuir 1 RD <br>- Épée courte d6 <br> - kit de soins   |                    |
-| 5   | Érudit     | 8 VIG, 9 FIN, 11 ESP / 1 END | Sciences naturelles, médecine Arcanisme | Robe pochette +1 eq / Bâton 1d4                                |                    |
-| 6   | Érudit     | 9 VIG, 8 FIN, 11 ESP / 1 END | Sciences naturelles, médecine Arcanisme | Robe pochette +1 eq / Bâton 1d4                                |                    |
+| 1   | Combattant | 10 VIG, 9 FIN, 8 ESP / 4 END | Art de la guerre / Arme spécialisée (?) | - Cotte de mailles 2 RD<br>-hachette d6                        |                    |
+| 2   | Combattant | 10 VIG, 8 FIN, 9 ESP / 4 END | Art de la guerre / Arme spécialisée (?) | - Cotte de mailles 2 RD<br>-hachette d6                        |                    |
+| 3   | Filou      | 9 VIG, 10 FIN, 8 ESP / 2 END | Discrétion, premier soins               | - Armure de cuir 1 RD <br>- Épée courte d6 <br> - kit de soins |                    |
+| 4   | Filou      | 8 VIG, 10 FIN, 9 ESP / 2 END | Discrétion, premier soins               | Armure de cuir 1 RD <br>- Épée courte d6 <br> - kit de soins   |                    |
+| 5   | Érudit     | 8 VIG, 9 FIN, 10 ESP / 1 END | Sciences naturelles, médecine Arcanisme | Robe pochette +1 eq / Bâton 1d4                                |                    |
+| 6   | Érudit     | 9 VIG, 8 FIN, 10 ESP / 1 END | Sciences naturelles, médecine Arcanisme | Robe pochette +1 eq / Bâton 1d4                                |                    |
  
 
 > ⚠️ Table **Handicap (D-Rouge)** : **vide** dans la source. À compléter — voir [[Vermis_Todo]] item VM-64 et Annexe C de [[Vermis_Rules]] pour la liste de Handicaps disponibles.
@@ -37,14 +37,14 @@ Le dé sert deux fois : il détermine d'abord le résultat de sa propre table, p
 
 ## D2 — Origine
 
-| D6  | Origine          | Attributs             | Expertise              | Malchance (D-Vert) |
-| --- | ---------------- | --------------------- | ---------------------- | ------------------ |
-| 1   | Reclus-Nomade    | +1 VIG, +3 END, 1 Or  | Survie, Vigilance      |                    |
-| 2   | Reclus-Paysans   | +1 VIG, +3 END, 5 Or  | Survie, Dressage       |                    |
-| 3   | Citadin-Artisan  | +1 FIN, +2 END, 10 Or | Bricolage, Commerce    |                    |
-| 4   | Citadin-Criminel | +1 FIN, +2 END, 15 Or | Bricolage, Argot       |                    |
-| 5   | Décadent-Artiste | +1 ESP, +1 END, 20 Or | +1 Langue, performance |                    |
-| 6   | Décadent-Noble   | +1 ESP, +1 END, 25 Or | +1 Langue, Humanité    |                    |
+| D6  | Origine             | Attributs                    | Expertise              | Malchance (D-Vert) |
+| --- | ------------------- | ---------------------------- | ---------------------- | ------------------ |
+| 1   | Reclus-Nomade       | +2 VIG +1 FIN +3 END, 1 Or   | Survie, Navigation     |                    |
+| 2   | Reclus-Paysans      | +2 VIG +1 ESP +3 END, 5 Or   | Survie, Dressage       |                    |
+| 3   | Citadin-Criminel    | +2 FIN +1 VIG, +2 END, 10 Or | Bricolage, Argot       |                    |
+| 2   | Citadin-<br>Artisan | +2 FIN +1 ESP, +2 END, 15 Or | Bricolage, Commerce    |                    |
+| 5   | Décadent-Artiste    | +2 ESP +1FIN, +1 END, 20 Or  | +1 Langue, performance |                    |
+| 6   | Décadent-Noble      | +1 ESP +1 VIG, +1 END, 25 Or | +1 Langue, Histoire    |                    |
 
 > ⚠️ Doublon source : les lignes 5 et 6 ont la même valeur D6 (« 5 ») dans la source Notion. Corrigé en `5/6` ici. À valider.
 > ⚠️ Table **Malchance (D-Vert)** : **vide** dans la source. À compléter.
@@ -97,7 +97,7 @@ Le dé sert deux fois : il détermine d'abord le résultat de sa propre table, p
 | Archétype                  | Kit personnalisé\*                           | Occupation (D-Bleu) |
 | -------------------------- | -------------------------------------------- | ------------------- |
 | Nomade / Rôdeur            | • \*Arc long<br>• Boussole                   | *(à compléter)*     |
-| Paysan / Scoute            |                                              |                     |
+| Paysan / Scout             |                                              |                     |
 | Artisan / Pilleur de tombe | • Arbalète de poing<br>• \*Kit de crochetage | *(à compléter)*     |
 | Criminel / Voleur          |                                              |                     |
 | Artiste / Barde            | • Fronde<br>• \*Kit de déguisement (?)       | *(à compléter)*     |

@@ -352,13 +352,13 @@ Aucune mécanique. Arbitrage MJ-joueur :
 
 ### 4.6 Modificateurs
 
-| Notation        | Nom                        | Effet                                                                                                                                                                                                                              |
-| --------------- | -------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `[+1d] / [-1d]` | **Avantagé / Dés Ajouter le même dé. <br>Pour les jet Avantagés, le joueur décide quel dé remplacer.<br>Pour les jet Désavantagés, les dé les plus bas remplace les dé les plus haut, dans cet ordre (si plusieurs dé principaux sont lancé)  s  s  s  s  s  s  |
-| `[+2d]`         | (cumul)                    | Ajouter plusieu                                                                                                                                                                                                                    |
-| `[+>] / [<-]`   | **Amélioré / Entravé**     | Augmenter / diminuer l                                                                                                                                                                                                             |
-| `[++>]`         | (cumul)                                                                                                                                                                                                                                                         |
-| `[+d8] / [-d4]` | **Bonus / Malus**          | Ajouter le dé marq                                                                                                                                                                                                                 |
+| Notation        | Nom                                                                                                                                                                                                                                                                                | Effet                  |
+| --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------- |
+| `[+1d] / [-1d]` | **Avantagé / Désavantagé**<br>Ajouter le même dé. <br>Pour les jet Avantagés, les dés les plus haut remplace les plus bas, dans cet ordre.<br>Pour les jet Désavantagés, les dé les plus bas remplace les dé les plus haut, dans cet ordre (si plusieurs dé principaux sont lancé) |                        |
+| `[+2d]`         | (cumul)                                                                                                                                                                                                                                                                            | Ajouter plusieu        |
+| `[+>] / [<-]`   | **Amélioré / Entravé**                                                                                                                                                                                                                                                             | Augmenter / diminuer l |
+| `[++>]`         | (cumul)                                                                                                                                                                                                                                                                            |                        |
+| `[+d8] / [-d4]` | **Bonus / Malus**                                                                                                                                                                                                                                                                  | Ajouter le dé marq     |
 
 ### 4.7 Tests spécifiques
 
@@ -577,7 +577,7 @@ Chaque matin, après long repos, le mage médite 1 heure sur son grimoire et fai
 
 MD obtenus au-dessus du max via T3/T4 matinal. **Volatiles et dangereux** :
 
-- Se dépensent en priorité (au choix du mage, mais malin de les brûler d'abord).
+- Se dépensent au choix du mage.
 - **Chaque MD surchargé utilisé inflige 1 point d'usure au grimoire** (voir §7.11).
 - **Tous les MD surchargés non utilisés s'évaporent** en fin de journée.
 - Suivent toutes les autres règles (épuisement sur 6, Brûlures, etc.).
@@ -593,24 +593,20 @@ Variables de l'effet : [dice] = MD investis ; [sum] = somme des valeurs roulées
 
 ### 7.7 Événements de dés
 
-**Chaque 6 — Épuisement, −1 ESP, option Push**
+**Chaque 6 — Épuisement**
 
-- Coûts auto : ce MD **épuisé** jusqu'au matin, **−1 ESP** (dégât direct).
-- **Push** *(option joueur)* : lancer un **d6 d'impulsion** (pas un MD du pool). Ajouté à [sum]. Peut créer des doubles/triples rétroactifs avec les autres dés.
-- **Cascade** : si le d6 d'impulsion sort un 6, nouveau choix de push. Sans limite.
-- *Note* : les d6 d'impulsion n'épuisent rien, ne causent pas −1 ESP. Leur seul coût est le risque de Brûlure rétroactive.
+- Coûts auto : ce MD **épuisé** jusqu'au matin.
 
 **Brûlure majeure — Deux dés identiques (sauf triple)**
 
 - **Boost** : effet bonus du sort (générique pour Mineurs, signature pour Majeurs/Légendaires).
 - **Coût** : dégâts ESP directs égaux à la valeur du double (pas d'armure).
-  - Ex. double de 6 → −6 ESP + −1 ESP × 2 (règle des 6) = **−8 ESP**, deux MD épuisés.
+  - Ex. double de 6 → −6 ESP.
 
 **Brûlure catastrophique / Doom — Trois dés identiques**
 
 - **Boost** : forme extrême du sort (effet doublé, toutes cibles, permanent, manifestation majeure ; choix MJ).
 - **Coût** : valeur du triple en **dégâts directs dans VIG, FIN ET ESP**.
-- **Tous les MD du grimoire sont épuisés** jusqu'au matin.
 - **Le grimoire prend 1 point d'usure**.
 - **Test d'attributs pour rester debout** (voir §6.7).
 

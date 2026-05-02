@@ -16,21 +16,20 @@ Utiliser le dé d’outils (d6 par défaut). Le MJ détermine le seuil selon la 
 | Personnalisée | D8  | Complexe        | 6     | Adepte            |
 | Supérieur     | D10 | Extrême         | 8     |                   |
 | Magique       | D12 | Hors compétence | 10    | Incompétent       |
-Le PJ peut investir de l’effort pour augmenter ses chances. Ils peut investir autant d’effort qu’il lui reste de ED[^1]. Chaque effort investit ajoute `[+1d]`au test et augmente ainsi ses chances, mais avec un certain risque.
+Le PJ peut investir de **l’effort** pour augmenter ses chances. Ils peut investir autant d’effort qu’il lui reste de ED[^1]. Chaque effort investit ajoute `[+1d]`au test et augmente ainsi ses chances, mais avec un certain risque.
 
-Une action peut avoir une ampleur considérable, demandant plusieurs succès pour terminer la tâche. De même, un PJ peut décider de « découper » son action en plusieurs pour diminuer la difficulté en augmentant l’ampleur. Un maximum de 2 pt de difficulté peut être diminué pour autant d’ampleur augmenté 
+Une action peut avoir une ampleur considérable, demandant plusieurs succès pour terminer la tâche. Si possible, plusieurs personnages peuvent participer à diminuer l’ampleur, chacun avec son dé et son seuil en fonction de son outil et son expertise 
+De même, un PJ peut décider de « découper » son action en plusieurs pour diminuer la difficulté en augmentant l’ampleur. Un maximum de 2 pt de difficulté peut être diminué pour autant d’ampleur augmenté 
 
 Les résultats des dé peuvent avoir certains effets
-- **1 sur un dé** : faire un test de réaction de l’attribut en lien avec l’action pour éviter l’usure de l’outils. Un outils improvisé brise en un coup (1 seul point d’usure). Si aucun outils est utilisé, perdre 1d6 END ou 1 ED (à valider)
-- **Max sur un dé** : tension -1 ou autres effets positifs 
-- **Double, triple** : chaque dé d’une série de dé identique ont le même effets qu’un 1 sur un dé (cumulatif si ces dé sont eux-mêmes des 1)
+- **Max sur un dé** : tension -1 ou autres effets positifs mais faire un test de réaction de l’attribut en lien avec l’action pour éviter l’usure de l’outils. Un outils improvisé brise en un coup (1 seul point d’usure). Si aucun outils est utilisé, perdre 1d6 END ou 1 ED (à valider)
+- **Double, triple** : chaque dé d’une série de dé identique ont le même effets qu’un MAX sur un dé (cumulatif si ces dé sont eux-mêmes des MAX)
 ## combat 
- Même système. Le personnage peut investir de l’effort aussi. Les effets sont sur les max avec tests d’attribut pour les activer 
+ Même système. Le personnage peut investir de **l’effort** aussi. Les effets sont sur les max avec tests d’attribut pour les activer 
  
  **Lecture du dé** :
-
-- **1 sur le dé principal** — comme les test d’action 
-- **Maximum sur un dé** — **Ouverture** selon le type d'arme, le PJ peut choisir un effet (selon l'Attribut Testé) :
+ 
+- **Maximum sur un dé** — **Ouverture** selon le type d'arme, le PJ peut choisir un effet, mais -1 usure ou -1d6 END si rate le test d’attribut associé.
     - _Perçante_ (FIN) : contourner l'armure pour cette attaque.
     - _Contondante_ (VIG) : briser l'armure (−1 RD), ou (VIG+FIN) briser l'arme (−1 rang).
     - _Coupante_ (VIG/FIN) : coup circulaire, attaque sur cible adjacente, dégrade dé d'un rang.

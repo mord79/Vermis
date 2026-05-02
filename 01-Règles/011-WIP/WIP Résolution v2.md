@@ -34,6 +34,7 @@ Le reste est identique à la procédure dans [[Vermis_Rules]]
 
 #### Combat
 - Test de VIG ou FIN puis lancer le dé de dégât en fonction du Tier de Succès.
+- possibilité de lancer plus d’un dé de dégât, mais comme pour les tâches, les double risque l’usure ou les blessures
 - **Maximum sur un dé** : 1 points de dégâts restant (après la RD) est appliqué comme **dégât directe**.  
 - **Ouverture** : tous les effets sont transférés ici et n'ont pas besoin de test d'Attribut, mais dépende du type de dégâts et de l'Attribut testé. Le choix des effets dépendent aussi du nombre de dé pareil
 	- Double : 

@@ -18,14 +18,14 @@ Le dé sert deux fois : il détermine d'abord le résultat de sa propre table, p
 
 ## D1 — Approche
 
-| D6  | Approche   | Attribut                     | Expertise                               | Item                                                           | Handicap (D-Rouge) |
-| --- | ---------- | ---------------------------- | --------------------------------------- | -------------------------------------------------------------- | ------------------ |
-| 1   | Combattant | 10 VIG, 9 FIN, 8 ESP / 4 END | Art de la guerre / Athlétisme           | - Cotte de mailles 2 RD<br>-hachette d6                        |                    |
-| 2   | Combattant | 10 VIG, 8 FIN, 9 ESP / 4 END | Art de la guerre / Stabilisation        | - Cotte de mailles 2 RD<br>-hachette d6                        |                    |
-| 3   | Filou      | 9 VIG, 10 FIN, 8 ESP / 2 END | Discrétion, premier soins               | - Armure de cuir 1 RD <br>- Épée courte d6 <br> - kit de soins |                    |
-| 4   | Filou      | 8 VIG, 10 FIN, 9 ESP / 2 END | Discrétion, premier soins               | Armure de cuir 1 RD <br>- Épée courte d6 <br> - kit de soins   |                    |
-| 5   | Érudit     | 8 VIG, 9 FIN, 10 ESP / 1 END | Sciences naturelles, médecine Arcanisme | Robe pochette +1 eq / Bâton 1d4                                |                    |
-| 6   | Érudit     | 9 VIG, 8 FIN, 10 ESP / 1 END | Sciences naturelles, médecine Arcanisme | Robe pochette +1 eq / Bâton 1d4                                |                    |
+| D6  | Approche   | Attribut                     | Expertise                        | Item                                                           | Handicap (D-Rouge) |
+| --- | ---------- | ---------------------------- | -------------------------------- | -------------------------------------------------------------- | ------------------ |
+| 1   | Combattant | 10 VIG, 9 ADR, 8 ESP / 4 END | Art de la guerre / Athlétisme    | - Cotte de mailles 2 RD<br>-hachette d6                        |                    |
+| 2   | Combattant | 10 VIG, 8 ADR, 9 ESP / 4 END | Art de la guerre / Stabilisation | - Cotte de mailles 2 RD<br>-hachette d6                        |                    |
+| 3   | Filou      | 9 VIG, 10 ADR, 8 ESP / 2 END | Discrétion, Poison               | - Armure de cuir 1 RD <br>- Épée courte d6 <br> - kit de soins |                    |
+| 4   | Filou      | 8 VIG, 10 ADR, 9 ESP / 2 END | Discrétion, premier soins        | Armure de cuir 1 RD <br>- Épée courte d6 <br> - kit de soins   |                    |
+| 5   | Érudit     | 8 VIG, 9 ADR, 10 ESP / 1 END | Sciences, Arcanisme, Médecine,   | Robe pochette +1 eq / Bâton 1d4                                |                    |
+| 6   | Érudit     | 9 VIG, 8 ADR, 10 ESP / 1 END | Sciences, Arcanisme,             | Robe pochette +1 eq / Bâton 1d4                                |                    |
  
 
 > ⚠️ Table **Handicap (D-Rouge)** : **vide** dans la source. À compléter — voir [[Vermis_Todo]] item VM-64 et Annexe C de [[Vermis_Rules]] pour la liste de Handicaps disponibles.
@@ -36,11 +36,11 @@ Le dé sert deux fois : il détermine d'abord le résultat de sa propre table, p
 
 | D6  | Origine             | Attributs                    | Expertise              | Malchance (D-Vert) |
 | --- | ------------------- | ---------------------------- | ---------------------- | ------------------ |
-| 1   | Reclus-Nomade       | +2 VIG +1 FIN +3 END, 1 Or   | Survie, Navigation     |                    |
+| 1   | Reclus-Nomade       | +2 VIG +1 ADR+3 END, 1 Or   | Survie, Navigation     |                    |
 | 2   | Reclus-Paysans      | +2 VIG +1 ESP +3 END, 5 Or   | Survie, Dressage       |                    |
-| 3   | Citadin-Criminel    | +2 FIN +1 VIG, +2 END, 10 Or | Bricolage, Argot       |                    |
-| 2   | Citadin-<br>Artisan | +2 FIN +1 ESP, +2 END, 15 Or | Bricolage, Commerce    |                    |
-| 5   | Décadent-Artiste    | +2 ESP +1FIN, +1 END, 20 Or  | +1 Langue, performance |                    |
+| 3   | Citadin-Criminel    | +2 ADR+1 VIG, +2 END, 10 Or | Bricolage, Argot       |                    |
+| 2   | Citadin-<br>Artisan | +2 ADR+1 ESP, +2 END, 15 Or | Bricolage, Commerce    |                    |
+| 5   | Décadent-Artiste    | +2 ESP +1ADR, +1 END, 20 Or  | +1 Langue, performance |                    |
 | 6   | Décadent-Noble      | +1 ESP +1 VIG, +1 END, 25 Or | +1 Langue, Histoire    |                    |
 
 > ⚠️ Doublon source : les lignes 5 et 6 ont la même valeur D6 (« 5 ») dans la source Notion. Corrigé en `5/6` ici. À valider.
@@ -54,8 +54,8 @@ Le dé sert deux fois : il détermine d'abord le résultat de sa propre table, p
 |---|---|---|---|
 | 1 | Liberté | +1 VIG | *(à compléter)* |
 | 2 | Justice | +1 VIG | *(à compléter)* |
-| 3 | Équilibre | +1 FIN | *(à compléter)* |
-| 4 | Perfection | +1 FIN | *(à compléter)* |
+| 3 | Équilibre | +1 ADR| *(à compléter)* |
+| 4 | Perfection | +1 ADR| *(à compléter)* |
 | 5 | Pouvoir | +1 ESP | *(à compléter)* |
 | 6 | Gloire | +1 ESP | *(à compléter)* |
 
@@ -134,14 +134,14 @@ Sur un **triple de dés identiques**, le personnage est d'une lignée fantastiqu
 
 ### Détail des lignées
 
-**Nain** — +1 VIG, -1 FIN, +1 END max
+**Nain** — +1 VIG, -1 ADR, +1 END max
 - **Robuste** : lancer les HD avec [+1d].
 - **Observation** : détecte automatiquement une anomalie architecturale ou structurelle dissimulée ou complexe en prenant 1 tour.
 - Maîtrise le Nain (détection des métaux précieux en faisant résonner la pierre).
 - **Nain des Collines** (C) : Résistant [+1d] aux poisons et maladies.
 - **Nain des Montagnes** (M) : Vision thermique de près, faible de loin (forme imprécise).
 
-**Halfelin** — -1 VIG, +2 FIN
+**Halfelin** — -1 VIG, +2 ADR
 - **Évasif** : une impasse devient une T1 sur les tests de discrétion.
 - **Ouïe fine** : entend automatiquement les bruits discrets ou lointains en prenant 1 tour.
 - Initié au Halfelin (parler aux petits animaux pour 1 END si Maîtrisé).
@@ -149,7 +149,7 @@ Sur un **triple de dés identiques**, le personnage est d'une lignée fantastiqu
 - **Pied-Léger** (L) : [+1d] aux tests de Surprise.
 - **Pied-Velu** (V) : [+1d] pour résister à la Panique.
 
-**Elfe** — +1 FIN, +1 ESP
+**Elfe** — +1 ADR, +1 ESP
 - **Intolérance au fer** : Vulnérable si armure de fer\* ; habiletés elfiques inactives ; attaques avec arme de fer restreintes ; [+1d] sur les tests de Choc suite à attaque par arme en fer.
 - **Âme spectrale** : [+1d] Résistance Magique.
 - **Regard perçant** : détecte automatiquement portes cachées, pièges ou éléments dissimulés en prenant 1 tour.

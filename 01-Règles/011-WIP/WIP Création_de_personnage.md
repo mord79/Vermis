@@ -27,8 +27,8 @@ Le dé sert deux fois : il détermine d'abord le résultat de sa propre table, p
 | 2   | Combattant | 10 VIG, 8 FIN, 9 ESP / 4 END | Art de la guerre / Arme spécialisée (?) | - Cotte de mailles 2 RD<br>-hachette d6                        |                    |
 | 3   | Filou      | 9 VIG, 10 FIN, 8 ESP / 2 END | Discrétion, premier soins               | - Armure de cuir 1 RD <br>- Épée courte d6 <br> - kit de soins |                    |
 | 4   | Filou      | 8 VIG, 10 FIN, 9 ESP / 2 END | Discrétion, premier soins               | Armure de cuir 1 RD <br>- Épée courte d6 <br> - kit de soins   |                    |
-| 5   | Érudit     | 8 VIG, 9 FIN, 10 ESP / 1 END | Sciences naturelles, médecine Arcanisme | Robe pochette +1 eq / Bâton 1d4                                |                    |
-| 6   | Érudit     | 9 VIG, 8 FIN, 10 ESP / 1 END | Sciences naturelles, médecine Arcanisme | Robe pochette +1 eq / Bâton 1d4                                |                    |
+| 5   | Érudit     | 8 VIG, 9 FIN, 10 ESP / 1 END | Sciences, médecine, Arcanisme           | Robe pochette +1 eq / Bâton 1d4                                |                    |
+| 6   | Érudit     | 9 VIG, 8 FIN, 10 ESP / 1 END | Science, médecine, Arcanisme            | Robe pochette +1 eq / Bâton 1d4                                |                    |
  
 
 > ⚠️ Table **Handicap (D-Rouge)** : **vide** dans la source. À compléter — voir [[Vermis_Todo]] item VM-64 et Annexe C de [[Vermis_Rules]] pour la liste de Handicaps disponibles.

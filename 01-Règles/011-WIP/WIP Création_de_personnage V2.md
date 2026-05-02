@@ -1,6 +1,6 @@
 # Vermis — Création de personnage
 
-> Doit renommer l’a
+> Doit renommer l’attribut FIN pour ADResse (adresses)
 ---
 
 ## Procédure
@@ -20,8 +20,8 @@ Le dé sert deux fois : il détermine d'abord le résultat de sa propre table, p
 
 | D6  | Approche   | Attribut                     | Expertise                               | Item                                                           | Handicap (D-Rouge) |
 | --- | ---------- | ---------------------------- | --------------------------------------- | -------------------------------------------------------------- | ------------------ |
-| 1   | Combattant | 10 VIG, 9 FIN, 8 ESP / 4 END | Art de la guerre / Arme spécialisée (?) | - Cotte de mailles 2 RD<br>-hachette d6                        |                    |
-| 2   | Combattant | 10 VIG, 8 FIN, 9 ESP / 4 END | Art de la guerre / Arme spécialisée (?) | - Cotte de mailles 2 RD<br>-hachette d6                        |                    |
+| 1   | Combattant | 10 VIG, 9 FIN, 8 ESP / 4 END | Art de la guerre / Athlétisme           | - Cotte de mailles 2 RD<br>-hachette d6                        |                    |
+| 2   | Combattant | 10 VIG, 8 FIN, 9 ESP / 4 END | Art de la guerre / Stabilisation        | - Cotte de mailles 2 RD<br>-hachette d6                        |                    |
 | 3   | Filou      | 9 VIG, 10 FIN, 8 ESP / 2 END | Discrétion, premier soins               | - Armure de cuir 1 RD <br>- Épée courte d6 <br> - kit de soins |                    |
 | 4   | Filou      | 8 VIG, 10 FIN, 9 ESP / 2 END | Discrétion, premier soins               | Armure de cuir 1 RD <br>- Épée courte d6 <br> - kit de soins   |                    |
 | 5   | Érudit     | 8 VIG, 9 FIN, 10 ESP / 1 END | Sciences naturelles, médecine Arcanisme | Robe pochette +1 eq / Bâton 1d4                                |                    |

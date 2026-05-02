@@ -48,19 +48,20 @@
 
 ## Liste des Compétences
 
-| Compétence | Description |
-|---|---|
-| **Athlétisme** | Courir, sauter, nager, escalader en terrain praticable, soulever et pousser des charges. Efforts physiques soutenus. |
-| **Artisanat** | Fabrication, réparation et entretien d'objets d'usage courant. Connaissance des pratiques marchandes, des guildes, des routes commerciales. Évalue valeur et authenticité, repère les vices cachés. |
-| **Camouflage** | Dissimuler une personne, un objet ou un passage à la détection visuelle, sonore ou olfactive en utilisant l'environnement. |
-| **Diplomatie** | Négocier, convaincre par l'argument et la rhétorique, agir en médiateur. Comprendre les structures de pouvoir et les faiblesses des factions. |
-| **Infiltration** | Se faufiler, grimper, passer incognito, se défaire de liens, parcourir un lieu sans être vu. |
-| **Inspiration** | Remonter le moral, rallier une foule, résister à la panique et aider les alliés à y résister. |
-| **Instinct animal** | Identifier les créatures animales, interagir avec elles, les intimider ou les calmer. *(Le dressage durable relève de l'Art de Dressage.)* |
-| **Leadership** | Embaucher et diriger des retainers, obtenir de meilleurs prix, protéger les hirelings de la peur, commander une action. |
-| **Masquarade** | Imiter une personne ou un type social, imiter des sons (ventriloquie), se déguiser sommairement. Interpréter ou créer une œuvre artistique (type défini à la création, d'autres selon ESP). Divertir, distraire, émouvoir. En campement, prémunit contre certaines menaces nocturnes. |
-| **Survie** | Trouver de l'eau, faire un feu, bâtir un abri, cueillir de la subsistance, chasser du petit gibier, cuisiner. |
-| **Vigilance** | Détecter, interpréter et identifier les signes de son environnement. Remarquer ce qui cloche, anticiper le danger. Trouver son chemin, suivre et identifier une piste, s'orienter en terrain connu ou inconnu. |
+| Compétence          | Description                                                                                                                                                                                                                                                                           |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Athlétisme**      | Courir, sauter, nager, escalader en terrain praticable, soulever et pousser des charges. Efforts physiques soutenus.                                                                                                                                                                  |
+| **Artisanat**       | Fabrication, réparation et entretien d'objets d'usage courant. Connaissance des pratiques marchandes, des guildes, des routes commerciales. Évalue valeur et authenticité, repère les vices cachés.                                                                                   |
+| **Diplomatie**      | Négocier, convaincre par l'argument et la rhétorique, agir en médiateur. Comprendre les structures de pouvoir et les faiblesses des factions.                                                                                                                                         |
+| **Infiltration**    | Se faufiler, grimper, passer incognito, se défaire de liens, parcourir un lieu sans être vu.                                                                                                                                                                                          |
+| **Inspiration**     | Remonter le moral, rallier une foule, résister à la panique et aider les alliés à y résister.                                                                                                                                                                                         |
+| **Instinct animal** | Identifier les créatures animales, interagir avec elles, les intimider ou les calmer. *(Le dressage durable relève de l'Art de Dressage.)*                                                                                                                                            |
+| **Leadership**      | Embaucher et diriger des retainers, obtenir de meilleurs prix, protéger les hirelings de la peur, commander une action.                                                                                                                                                               |
+| **Performance**     | Imiter une personne ou un type social, imiter des sons (ventriloquie), se déguiser sommairement. Interpréter ou créer une œuvre artistique (type défini à la création, d'autres selon ESP). Divertir, distraire, émouvoir. En campement, prémunit contre certaines menaces nocturnes. |
+| Premier soins       | Stabiliser une créature.                                                                                                                                                                                                                                                              |
+| **Survie**          | Trouver de l'eau, faire un feu, bâtir un abri, cueillir de la subsistance, chasser du petit gibier, cuisiner.                                                                                                                                                                         |
+| **Vigilance**       | Détecter, interpréter et identifier les signes de son environnement. Remarquer ce qui cloche, anticiper le danger. Trouver son chemin, suivre et identifier une piste, s'orienter en terrain connu ou inconnu.                                                                        |
+| **Camouflage**      | Dissimuler une personne, un objet ou un passage à la détection visuelle, sonore ou olfactive en utilisant l'environnement.                                                                                                                                                            |
 
 ---
 

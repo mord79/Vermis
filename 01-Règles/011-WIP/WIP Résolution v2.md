@@ -27,14 +27,13 @@ D'autres effet peuvent être ajouté ou substitué selon le contexte, au choix d
 ### Action progressive
 Les **Actions Progressive** sont des tests d'Attribut suivit d'un dé qui représente la progression vers un but quelconque (Combat, Magie, Crochetage, etc.). Le de progression est modifié selon le niveau de succès du test d'attribut. Pour les [+d], je joueur choisi les dés qu'il veut substitué aux dés principaux. Pour les [-d] les dé les plus bas sont toujours sélectionnés pour remplacé les dés principaux les plus élevés.
 
-> [!NOTE]  Exemple
+> [!info]  Exemple
 > Test FIN. La FIN est des 13. Lancer D20, résultat 12 -> Succès Critique Tier 3. Lancer 1d6 de progression [+3d].
 #### Tâches 
 Le reste est identique à la procédure dans [[Vermis_Rules]]
 
 #### Combat
 - Test de VIG ou FIN puis lancer le dé de dégât en fonction du Tier de Succès.
-- possibilité de lancer plus d’un dé de dégât, mais comme pour les tâches, les double risque l’usure ou les blessures
 - **Maximum sur un dé** : 1 points de dégâts restant (après la RD) est appliqué comme **dégât directe**.  
 - **Ouverture** : tous les effets sont transférés ici et n'ont pas besoin de test d'Attribut, mais dépende du type de dégâts et de l'Attribut testé. Le choix des effets dépendent aussi du nombre de dé pareil
 	- Double : 

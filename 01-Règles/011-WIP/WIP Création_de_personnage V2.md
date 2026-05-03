@@ -38,8 +38,8 @@ Le dé sert deux fois : il détermine d'abord le résultat de sa propre table, p
 | --- | ------------------- | ---------------------------- | --------------------- | ------------------ |
 | 1   | Reclus-Nomade       | +2 VIG +1 ADR+3 END, 1 Or    | Survie, Navigation    |                    |
 | 2   | Reclus-Paysans      | +2 VIG +1 ESP +3 END, 5 Or   | Survie, Dressage      |                    |
-| 3   | Citadin-Criminel    | +2 ADR+1 VIG, +2 END, 10 Or  | Finesse, Argot        |                    |
-| 2   | Citadin-<br>Artisan | +2 ADR+1 ESP, +2 END, 15 Or  | Finesse, Commerce     |                    |
+| 3   | Citadin-Criminel    | +2 ADR+1 VIG, +2 END, 10 Or  | Artifex, Argot        |                    |
+| 2   | Citadin-<br>Artisan | +2 ADR+1 ESP, +2 END, 15 Or  | Artifex, Commerce     |                    |
 | 5   | Décadent-Artiste    | +2 ESP +1ADR, +1 END, 20 Or  | +1 Langue, Mascarade  |                    |
 | 6   | Décadent-Noble      | +1 ESP +1 VIG, +1 END, 25 Or | +1 Langue, Leadership |                    |
 

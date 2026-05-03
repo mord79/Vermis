@@ -24,7 +24,7 @@ Le dé sert deux fois : il détermine d'abord le résultat de sa propre table, p
 | 2   | Combattant | 10 VIG, 8 ADR, 9 ESP / 4 END | Pratique du Combat,<br>Premier soins | - Cotte de mailles 2 RD<br>-hachette d6                        |                    |
 | 3   | Filou      | 9 VIG, 10 ADR, 8 ESP / 2 END | Furtivité, Poison                    | - Armure de cuir 1 RD <br>- Épée courte d6 <br> - kit de soins |                    |
 | 4   | Filou      | 8 VIG, 10 ADR, 9 ESP / 2 END | Furtivité, Chirurgie de fortune      | Armure de cuir 1 RD <br>- Épée courte d6 <br> - kit de soins   |                    |
-| 5   | Érudit     | 8 VIG, 9 ADR, 10 ESP / 1 END | Ars Arcanum,<br>Art,                 | Robe pochette +1 eq / Bâton 1d4                                |                    |
+| 5   | Érudit     | 8 VIG, 9 ADR, 10 ESP / 1 END | Ars Arcanum,<br>Praxis Vetita,       | Robe pochette +1 eq / Bâton 1d4                                |                    |
 | 6   | Érudit     | 9 VIG, 8 ADR, 10 ESP / 1 END | Ars Arcanum,<br>Ars Medica,          | Robe pochette +1 eq / Bâton 1d4                                |                    |
  
 
@@ -63,16 +63,6 @@ Le dé sert deux fois : il détermine d'abord le résultat de sa propre table, p
 > ⚠️ Table **Don (D-Bleu)** : **vide** dans la source. À indexer sur la liste de Dons existante (voir [[Vermis_Rules]] §3.7 ou [[Caractéristiques_et_Expertise]]).
 
 ---
-> possiblement à retirer 
-## Archétype et Expertise (matrice D1 × D2)
-
-| D1 / D2    | Reclus                             | Civilisé                           | Décadent                            |
-| ---------- | ---------------------------------- | ---------------------------------- | ----------------------------------- |
-| Combattant | **Guerrier** — Athlétisme/Dressage | **Mercenaire** — Forge/Ingénierie  | **Chevalier** — Cavalerie/Commande  |
-| Filou      | **Rôdeur** — Navigation/Chasse     | **Roublard** — Infiltration/Poison | **Barde** — Mascarade/Performance   |
-| Érudit     | **Ermite** — Herboristerie/Esprit  | **Savant** — Médecine/Alchimie     | **Magistère** — Diplomatie/Histoire |
-
----
 
 ## Archétype, kit personnalisé et occupation
 
@@ -103,14 +93,14 @@ Le dé sert deux fois : il détermine d'abord le résultat de sa propre table, p
 
 ### Érudits
 
-| Archétype              | Kit personnalisé\*                                                            | Occupation (D-Bleu) |
-| ---------------------- | ----------------------------------------------------------------------------- | ------------------- |
-| Nomade / Ermite        | • \*Grimoire (6 slots)<br>• Sorts : Détection Arc. / Vue Nocturne / Cantrip×1 | *(à compléter)*     |
-| Paysan / Moine         |                                                                               |                     |
-| Artisan / Alchimiste   | • \*Grimoire (6 slots)<br>• Sorts : Détection Arc. / Baume / Cantrip×1        | *(à compléter)*     |
-| Criminel / Necroman    |                                                                               |                     |
-| Artiste / Illusioniste |                                                                               |                     |
-| Noble / Magistère      | • \*Grimoire (6 slots)<br>• Sorts : Détection Arc. / Trait Arc. / Cantrip×1   | *(à compléter)*     |
+| Archétype              | Kit personnalisé\*                                                                                                    | Occupation (D-Bleu) |
+| ---------------------- | --------------------------------------------------------------------------------------------------------------------- | ------------------- |
+| Nomade / Ermite        | • \*Grimoire (6 slots)<br>• Sorts : Détection Arcanique<br>               Vue Nocturne<br>               Cantrip×1    | *(à compléter)*     |
+| Paysan / Moine         | • \*Grimoire (6 slots)<br>• Sorts : Détection Arcanique<br>               Baume<br>               Cantrip×1           |                     |
+| Artisan / Alchimiste   |                                                                                                                       | *(à compléter)*     |
+| Criminel / Anatomiste  |                                                                                                                       |                     |
+| Artiste / Illusioniste |                                                                                                                       |                     |
+| Noble / Magistère      | • \*Grimoire (6 slots)<br>• Sorts : Détection Arcanique<br>               Trait Arcanique<br>               Cantrip×1 | *(à compléter)*     |
 
 ---
 
@@ -171,8 +161,12 @@ Sur un **triple de dés identiques**, le personnage est d'une lignée fantastiqu
 | Elfe Solaire | *(à compléter)* | *(à compléter)* |
 
 ### Option animale
-
-*(à concevoir — section vide dans la source)*
+1. Auroch 
+2. Bouc
+3. Souris
+4. Rat
+5. Grenouille
+6. Crapaud 
 
 ---
 

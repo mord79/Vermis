@@ -16,11 +16,11 @@ Rouler d66 pour chacune des catégories: Personnel, Origine, Équipement, Allié
 Un personnage peut posséder un grand nombre de tags, mais ne peu seulement en équiper un nombre limité par catégorie, 10 au total ( voir [[#Cartes et Fiches]]). Il peut changer ses tags entre les aventures.
 - Personnel : aptitude, dons, 
 - Origine : passé, expérience, provenance 
-- Équipement : outils, item porté sur soi
+- Équipement : outils, item spécial/personnalisé porté sur soi
 - Allié : familier, porteur, spécialiste
 - Handicap : borgne, impatient, etc
 - Condition : 
-	- ne compte pas dans le maximum de tag équipable.
+	- ne compte pas dans le maximum de tag équipable et son reçu durant l’aventure.
 	- Positive : peuvent être activée 1 fois puis sont retiré, 1 seul à la fois : motivé, inspiré, enragé 
 	- Négative : persiste jusqu’au traitement, ne s’additionne. Ex. Fatigue, blessure, gelé, inconscient, paniqué, etc.
 		- **Fatigue**: La plus commune, se rajoute dans le deck et ne peut être utilisé lorsque pigé, mais se défausse automatique à la fin du tour. Le PJ peut en retiré 1 après un repos court ou toutes les retirer après un Repos long. Recevoir une fatigue lorsqu’une fatigue est en mains force le PJ un jet de sauvegarde pour éviter de chuter au sol. 
@@ -30,7 +30,9 @@ Un personnage peut posséder un grand nombre de tags, mais ne peu seulement en �
 			- Échec critique, la blessure devient un handicap. 
 			- Succès critique, ne reçoit pas de blessure
 		- **Inconscient** : dure à 1h ou jusqu’à ce que un allié le réveil. À chaque tour, faire un jet de sauvegarde. Se réveille de lui-même sur un succès critique.
-		- **Mourant** : les cartes restantes de sa main, puis active, puis son deck et enfin sa défausse sont transférer dans le cimetière une par tour. Si le PJ n’est pas stabilisé entre temps, le PJ meurt. À chaque tour, faire un jet de sauvegarde. Se réveille de lui-même sur un succès critique.
+		- **Mourant** : les cartes restantes de sa main, puis active, puis son deck et enfin sa défausse sont transférées dans le cimetière une par tour. Si le PJ n’est pas stabilisé entre temps, le PJ meurt. À chaque tour, faire un jet de sauvegarde. Se réveille de lui-même sur un succès critique.
+- **Super Tag** : un super tag est un tag présent plus d’une fois dans la liste et / ou dans le deck. Cela veut dire qu’il peut donner plus {+} s’ils sont présents en même temps, il est possible de les utiliser plus souvent. Le maximum pour un Super Tag est de 3.
+- **Tag Général vs Spécifique** : un tag de type général peuvent s’appliquer à plusieurs situation en offrant un {+}. Les Tag spécifiques ont moins d’application, mais rendent généralement l’action un succès automatiqu ou permettent un test là où un un tag général ne le permettait pas. 
 ### 2.3.2 Domaine
 Les tags appartiennent à des domaines généraux qui indique dans quelles circonstances on peut les utiliser et les sacrifier. 
 - Vitale 
@@ -56,9 +58,9 @@ Doit être mis dans le deck et dans la pioche. Lorsque pigé, le joueur peut l�
 - Les joueurs choisissent 3 cartes actives qu’ils placent devant eux. Ils peuvent invoquer les tags de ces cartes à tout moment. 
 - Le reste des carte est dans la pioche. 
 - Quand le MJ décrit une scène où les joueur peuvent / doivent / veulent agir, ceux-ci pige 2 cartes pour leur main et choisissent leurs actions. Ils peuvent activer autant de carte nécessaire pour invoquer leurs tag, puis passe à la Résolution
-- À la fin de leur tour, les cartes non utilisées doivent être défaussées. 
+- À la fin de leur tour, les cartes non utilisées doivent être défaussées, sauf les 3 cartes actives.
 - Quand la pioche est vides, mélanger la défausse pour en faire une nouvelle pioche.
-- Certaines actions peuvent retiré complètement une carte du deck, elles sont **brulées**. Les mettre dans le cimetière. Ils peuvent être reprise lors de certaines actions ou repos
+- Certaines actions peuvent retirer complètement une carte du deck, elles sont **brulées**. Les mettre dans le cimetière. Ils peuvent être reprise lors de certaines actions ou repos
 # 3 Résolution Test et Jet de Sauvegarde 
 La résolution fonctionne avec 2d6. Une fois lancé sur la table, le dé le plus à gauche est considéré comme le **dé principal**. Lancer 8 et + pour résoudre des actions ou réaction incertaines et risquées. Appliquer AV ou DEAV si tags pertinent ou nuisible.
 ## 3.1 Échelle de succès 
@@ -201,16 +203,20 @@ Majeur (10 pt)
 - Retirer un handicap 
 - Savoir, expertise technique poussée 
 - Alliences, amitié 
-# 5 Annexe A : probabilité des dés
+
+# 5 Troupe
+La troupe s’aventurier à des caractéristiques propres. La troupe à ses propre tag et et possède un deck qui est une pioche commune. Les PJ de la troupe peuvent piocher dedans au lieu de la leur.
+Les Tags représentes généralement des forces d’unicité, mais aussi des avoirs commun et des alliés / hierling commun.
+# 6 Annexe A : probabilité des dés
 | Seuil (≥) | Normal | +1 dé | Gain | +2 dés | Gain | +3 dés | Gain | +4 dés | Gain | +5 dés | Gain |
-|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| 4  | 92% | 98% | +6  | 99% | +8  | 100% | +8  | 100% | +8  | 100% | +8  |
-| 5  | 83% | 94% | +10 | 97% | +14 | 99%  | +15 | 100% | +16 | 100% | +16 |
-| 6  | 72% | 86% | +14 | 92% | +20 | 95%  | +23 | 97%  | +24 | 98%  | +25 |
-| 7  | 58% | 75% | +16 | 83% | +24 | 87%  | +29 | 90%  | +31 | 92%  | +33 |
-| 8  | 42% | 58% | +16 | 66% | +24 | 71%  | +29 | 75%  | +33 | 79%  | +37 |
-| 9  | 28% | 42% | +14 | 49% | +22 | 54%  | +26 | 58%  | +30 | 61%  | +33 |
-| 10 | 17% | 27% | +10 | 33% | +17 | 38%  | +21 | 42%  | +25 | 46%  | +29 |
+| --------- | -----: | ----: | ---: | -----: | ---: | -----: | ---: | -----: | ---: | -----: | ---: |
+| 4         |    92% |   98% |   +6 |    99% |   +8 |   100% |   +8 |   100% |   +8 |   100% |   +8 |
+| 5         |    83% |   94% |  +10 |    97% |  +14 |    99% |  +15 |   100% |  +16 |   100% |  +16 |
+| 6         |    72% |   86% |  +14 |    92% |  +20 |    95% |  +23 |    97% |  +24 |    98% |  +25 |
+| 7         |    58% |   75% |  +16 |    83% |  +24 |    87% |  +29 |    90% |  +31 |    92% |  +33 |
+| 8         |    42% |   58% |  +16 |    66% |  +24 |    71% |  +29 |    75% |  +33 |    79% |  +37 |
+| 9         |    28% |   42% |  +14 |    49% |  +22 |    54% |  +26 |    58% |  +30 |    61% |  +33 |
+| 10        |    17% |   27% |  +10 |    33% |  +17 |    38% |  +21 |    42% |  +25 |    46% |  +29 |
 
 | Avantage | Succès + Rouge haut | Succès + Rouge bas | Succès + Égalité | Échec + Rouge haut | Échec + Rouge bas | Échec + Égalité |
 |---|---:|---:|---:|---:|---:|---:|
@@ -220,4 +226,4 @@ Majeur (10 pt)
 | +3 dés | 44.01% | 11.11% | 15.63% | 26.74% | 1.48% | 1.04% |
 | +4 dés | 48.88% | 8.82% | 16.15% | 24.97% | 0.66% | 0.52% |
 | +5 dés | 52.58% | 7.02% | 16.41% | 23.43% | 0.31% | 0.26% |
-# 6 Annexe B : liste de Tags
+# 7 Annexe B : liste de Tags

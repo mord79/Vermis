@@ -1,37 +1,44 @@
-# Idea Dump
+# 1 Idea Dump
 
 - effet si dé principale est plus haut ou plus bas selon succès ou échec et {+} et {-}. 
 - Économie. Utiliser l’économie classique OSR
 - Inventaire. Utiliser l’équipement classique OSR faire des cartes équipement avec plusieurs items dessus ou une carte inventaire générale qui renvoie à une liste sur le personnage (10 max). Avoir ma carte Équipement en main permet de ne pas prendre d’action pour utiliser l’objet. 
-# Personages
+# 2 Personages
 Défini par des tags avec un nombre maximum « d’équipé ».
-### Fiche 
+## 2.1 Fiche 
 - Recto Description et tag (10 actif max)
-- Verseau Possession et Inventaire (10 actif max)
-### Création 
+- Verso Possession et Inventaire (10 equipé max)
+## 2.2 Création 
 Rouler d66 pour chacune des catégories: Personnel, Origine, Équipement, Allié, Handicape
 > Faire comme vermis : Approche (personnel), Origine, Etc. Le 1er d6 est la catégorie (combatant, filou, etc) et le deuxième est le Tag.
-## Tags
-### catégorie 
-Un personnage peut posséder un grand nombre de tags, mais ne peu seulement en équiper un nombre limité (1 Majeur et 3 Mineurs) à la fois par catégorie. Il peut changer ses tags entre les aventures.
+## 2.3 Tags
+### 2.3.1 catégorie 
+Un personnage peut posséder un grand nombre de tags, mais ne peu seulement en équiper un nombre limité par catégorie, 10 au total ( voir [[#Cartes et Fiches]]). Il peut changer ses tags entre les aventures.
 - Personnel : aptitude, dons, 
 - Origine : passé, expérience, provenance 
 - Équipement : outils, item porté sur soi
 - Allié : familier, porteur, spécialiste
 - Handicap : borgne, impatient, etc
 - Condition : 
+	- ne compte pas dans le maximum de tag équipable.
 	- Positive : peuvent être activée 1 fois puis sont retiré, 1 seul à la fois : motivé, inspiré, enragé 
-	- Négative : persiste jusqu’au traitement, ne s’additionne pas, si une deuxième condition similaire survient, la première s’empire (traitement plus difficile): épuisé, blessé, gelé, inconscient, paniqué, 
-		- **Fatigue**: La plus commune, se rajoute dans le deck et ne peut être utilisé lorsque pigé. Retiré 1 après un repos court ou toutes après un Repos long.
-		- **Blessure**: se rajoute dans le deck et ne peut être utilisé. Retiré 1 après un repos long si des traitement convenable sont appliqués. Subir une blessure alors qu’une carte blessure est en main met le PJ KO et mourrant. Doit être stabiliser pour revenir sur pied (voir guérison)
-### Domaine
+	- Négative : persiste jusqu’au traitement, ne s’additionne. Ex. Fatigue, blessure, gelé, inconscient, paniqué, etc.
+		- **Fatigue**: La plus commune, se rajoute dans le deck et ne peut être utilisé lorsque pigé, mais se défausse automatique à la fin du tour. Le PJ peut en retiré 1 après un repos court ou toutes les retirer après un Repos long. Recevoir une fatigue lorsqu’une fatigue est en mains force le PJ un jet de sauvegarde pour éviter de chuter au sol. 
+			- Échec critique : tombe inconscient pour 1h ou jusqu’à se qu’il soit réveillé par un allié.
+			- Succès critique : ne reçoit pas la fatigue. 
+		- **Blessure**: se rajoute dans le deck et doit être utilisé avec un {-} pour être défaussée, sinon elle reste en main et limite le nombre de carte à piger au début d’un tour. Retiré 1 après un repos long si des traitement convenable sont appliqués. Subir une blessure alors qu’une carte blessure est en main force le PJ un jet de sauvegarde pour éviter de tomber **inconscient** et **mourant**. Doit être stabilisé pour revenir sur pied (voir [[#Combat et Vie]]).
+			- Échec critique, la blessure devient un handicap. 
+			- Succès critique, ne reçoit pas de blessure
+		- **Inconscient** : dure à 1h ou jusqu’à ce que un allié le réveil. À chaque tour, faire un jet de sauvegarde. Se réveille de lui-même sur un succès critique.
+		- **Mourant** : les cartes restantes de sa main, puis active, puis son deck et enfin sa défausse sont transférer dans le cimetière une par tour. Si le PJ n’est pas stabilisé entre temps, le PJ meurt. À chaque tour, faire un jet de sauvegarde. Se réveille de lui-même sur un succès critique.
+### 2.3.2 Domaine
 Les tags appartiennent à des domaines généraux qui indique dans quelles circonstances on peut les utiliser et les sacrifier. 
 - Vitale 
 - Martial
 - Technique
 - Magique 
 - Divin
-## Échelle 
+## 2.4 Échelle 
 Pour distinguer la puissance de certains tags, il est possible de leur attribuer un échelle. Seul les actions incorporant des tags d’échelle similaire doivent lancer des dé de résolution. Sur des échelle différente, la résolution est évidente
 - Mineur
 - Normal 
@@ -40,9 +47,9 @@ Pour distinguer la puissance de certains tags, il est possible de leur attribuer
 - Titanesque 
 - Planétaire
 - Etc…
-## Handicape
-Doit être mis dans le deck et dans la pioche. Lorsque pigé, le joueur peut l’invoquer pour se donner un Désavantage. Si l’action réussi malgré tout, il gagne un pt de Progression.
-## Cartes et Fiches
+## 2.5 Handicape
+Doit être mis dans le deck et dans la pioche. Lorsque pigé, le joueur peut l’invoquer pour se donner un {-}. Si l’action réussi malgré tout, il gagne un pt de Progression.
+## 2.6 Cartes et Fiches
 - Les Tags sont listés sur la fiche de description du personnage avec leur descriptif.
 - Le joueur décide de 10 tag à transformer en cartes pour créer son deck d’aventure. Il peut changer ces cartes durant les Interludes.
 - Les deck est composé d’un maximum de 4 Tags majeur dont maximum 2 d’une même catégorie. 
@@ -52,9 +59,9 @@ Doit être mis dans le deck et dans la pioche. Lorsque pigé, le joueur peut l�
 - À la fin de leur tour, les cartes non utilisées doivent être défaussées. 
 - Quand la pioche est vides, mélanger la défausse pour en faire une nouvelle pioche.
 - Certaines actions peuvent retiré complètement une carte du deck, elles sont **brulées**. Les mettre dans le cimetière. Ils peuvent être reprise lors de certaines actions ou repos
-## Résolution 
+# 3 Résolution Test et Jet de Sauvegarde 
 La résolution fonctionne avec 2d6. Une fois lancé sur la table, le dé le plus à gauche est considéré comme le **dé principal**. Lancer 8 et + pour résoudre des actions ou réaction incertaines et risquées. Appliquer AV ou DEAV si tags pertinent ou nuisible.
-### Échelle de succès 
+## 3.1 Échelle de succès 
 - 2 : Échec critique, brûler 1 tag utilisé ou gagner 1 Fatigue
 - 12 : Succès critique. Regagner 1 tag  brulée ou ou retirer 1 Fatigue 
 - Double : échec ou succès inversé : 
@@ -63,12 +70,22 @@ La résolution fonctionne avec 2d6. Une fois lancé sur la table, le dé le plus
 > Le joueur peut Miser sur une des deux possibilités et gagner qqc si réussi
 > - Succès avec le dé principal le plus élevé :
 > - Succès avec le dé principal le plus bas : 
-## Combat et Vie
+## 3.2 Jet de sauvegarde 
+Les jet de sauvegarde permettre au PJ de réagir sans l’action du joueur. Ce sont des réflexes. Lors de ces jets, seul les cartes de tags actives sur la table peuvent être utilisées (si pertinente).
+
+## 3.3 Test collectif et Aide
+Un PJ peut en aider un autre pour un test. Cette aide peut être soit une **Directe** ou **Indirecte**
+- **Aide Indirecte** : le premier PJ qui veut offrir son aide indirecte fait son test. Si le test est réussi, le PJ aidé aura un {+} à son test. Si le premier PJ rate son test, le deuxième ne profite pas d’un {+}.
+- **Aide Directe** : le premier PJ offre une aide qui **permettra** deuxième PJ de faire son test. Si le premier PJ rate son test, le deuxième ne peut faire son action (elle est perdu), ou au mieux se fait avec un {-} selon le jugement du MJ.
+## 3.4 Tache 
+Un pour plusieurs PJ doivent exécuter une tâche qui prend plus d’un tour. La tâche est représentée en un nombre de points de succès à réussir selon son ampleur.
+
+## 3.5 Combat et Vie
 Pas de points de vie. Si une action vise à éliminer ou contraindre un personnage, que l’action est probable et que celle-ci réussi, le personnage peut sacrifier un Tag de son choix pour éviter la conséquence si c’est logique. Possibilité de viser un tag spécifique. 
 Sinon dans le doute si des dégâts survient: 
 - Épuisement -> blessure -> inconscient + handicap -> mort
 Les tags des NPC sont connus ou sont des inconnus connus.
-# Tours et Scène 
+# 4 Tours et Scène 
 Une scène est une série de tour du même type qui se termine après une interruption (changement de type de tour)
 Type de tour, durée approximative et distance d’une manœuvre (possibilité de 2x par tour)
 
@@ -81,7 +98,7 @@ Type de tour, durée approximative et distance d’une manœuvre (possibilité d
 | Interlude    | 1 semaine | 60 km (1 jour de repos)                                                  | Temps entre les aventures |
 | Retrait      | 1 ans     | Pèlerinage 1500 km                                                       | Temps entres les quêtes   |
 
-## Procédure 
+## 4.1 Procédure 
 - Le MJ lance les dé d’événements pour déterminer comment la situation évolue.
 - Le MJ décrit la situation, les action des PNJ et des conséquences si rien n’est fait pour les interrompre
 - Les Joueurs décident de leur plan et de leurs actions
@@ -89,7 +106,7 @@ Type de tour, durée approximative et distance d’une manœuvre (possibilité d
 - les actions sont résolu dans l’ordre logique et les dés sont lancé lorsque nécessaire. 
 - Les conséquences sont appliquées 
 - Prochain tour
-## Actions et manœuvres Lors des Tours d’Actions 
+## 4.2 Actions et manœuvres Lors des Tours d’Actions 
 **1 Action + 1 Manœuvre**, **2 manœuvres**, ou **1 Action complète**. Une manœuvre est toujours plus rapide qu'une action.
 
 **Actions :**
@@ -122,14 +139,14 @@ Type de tour, durée approximative et distance d’une manœuvre (possibilité d
 
 **Actions gratuites** : parler entre alliés, prendre un objet équipé (ceinture).
 
-### Cas particuliers
+### 4.2.1 Cas particuliers
 
 - **Attaques mutuelles mortelles** — deux combattants s'entretuent simultanément ; les deux coups s'appliquent. Le risque a été pris en déclarant l'attaque.
 - **Mitigation d'une menace** — quand une action de PJ invalide la menace ennemie annoncée (fuir hors de portée, fermer une porte, briser l'arme), l'ennemi ne change pas de cible. Action perdue, nouvelle menace au round suivant. *Exception* : provocation explicite peut rediriger l'attaque.
 - **L'attaque n'annule pas toujours la menace.** Frapper sans tuer ne stoppe pas l'ennemi. Si la menace est *« le gobelin te plante sa flèche »*, attaquer sans tuer = la flèche part quand même. Les Manœuvres qui changent la situation (trébucher, désarmer, pousser) sont souvent plus utiles qu'une attaque.
-### Poursuite.
+### 4.2.2 Poursuite.
 >À définir 
-## Actions lors des tours d’infiltration 
+## 4.3 Actions lors des tours d’infiltration 
 - Inspecter
 - Manipuler
 - Se déplacer 
@@ -137,7 +154,7 @@ Type de tour, durée approximative et distance d’une manœuvre (possibilité d
 - Activer / désactiver 
 - Écouter / observer / surveiller
 - Se reposer
-## Actions lors des tours d’exploration
+## 4.4 Actions lors des tours d’exploration
 - Déplacer
 - Traquer
 - Construire un abris
@@ -146,12 +163,12 @@ Type de tour, durée approximative et distance d’une manœuvre (possibilité d
 - Traiter des conditions simples
 - Guetter
 
-## Action lors des tours de voyage 
+## 4.5 Action lors des tours de voyage 
 - Naviguer / déplacer 
 - Cueillir 
 - Repos
 - Monter la garde 
-## Action lors des tours d’interlude 
+## 4.6 Action lors des tours d’interlude 
 - Repos
 - Marchander / Négocier
 - Rechercher (simples)
@@ -160,7 +177,7 @@ Type de tour, durée approximative et distance d’une manœuvre (possibilité d
 - S’informer
 - Explorer (les environs)
 - Progression mineure 
-## Action lors des tours de retrait 
+## 4.7 Action lors des tours de retrait 
 - Pèlerinage 
 - Voyager
 - Régner 
@@ -168,7 +185,7 @@ Type de tour, durée approximative et distance d’une manœuvre (possibilité d
 - Étudier 
 - Recherches 
 - Progression Majeure 
-## Progression 
+## 4.8 Progression 
 C’est Lors des interludes et des retraits que les PJ peuvent progresser. Il peut utiliser 1 pt de progression pour l’échanger contre un tag mineur ou 10 pts de progression contre un tag Majeur
 >Voir pour les coûts
 
@@ -184,7 +201,7 @@ Majeur (10 pt)
 - Retirer un handicap 
 - Savoir, expertise technique poussée 
 - Alliences, amitié 
-# Annexe A : probabilité des dés
+# 5 Annexe A : probabilité des dés
 | Seuil (≥) | Normal | +1 dé | Gain | +2 dés | Gain | +3 dés | Gain | +4 dés | Gain | +5 dés | Gain |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
 | 4  | 92% | 98% | +6  | 99% | +8  | 100% | +8  | 100% | +8  | 100% | +8  |
@@ -203,4 +220,4 @@ Majeur (10 pt)
 | +3 dés | 44.01% | 11.11% | 15.63% | 26.74% | 1.48% | 1.04% |
 | +4 dés | 48.88% | 8.82% | 16.15% | 24.97% | 0.66% | 0.52% |
 | +5 dés | 52.58% | 7.02% | 16.41% | 23.43% | 0.31% | 0.26% |
-# Annexe B : liste de Tags
+# 6 Annexe B : liste de Tags

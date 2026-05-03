@@ -20,8 +20,8 @@ Le dé sert deux fois : il détermine d'abord le résultat de sa propre table, p
 
 | D6  | Approche   | Attribut                     | Expertise                          | Item                                                           | Handicap (D-Rouge) |
 | --- | ---------- | ---------------------------- | ---------------------------------- | -------------------------------------------------------------- | ------------------ |
-| 1   | Combattant | 10 VIG, 9 ADR, 8 ESP / 4 END | Art de la guerre,<br>Athlétisme    | - Cotte de mailles 2 RD<br>-hachette d6                        |                    |
-| 2   | Combattant | 10 VIG, 8 ADR, 9 ESP / 4 END | Art de la guerre,<br>Stabilisation | - Cotte de mailles 2 RD<br>-hachette d6                        |                    |
+| 1   | Combattant | 10 VIG, 9 ADR, 8 ESP / 4 END | Maniement des armes,<br>Athlétisme | - Cotte de mailles 2 RD<br>-hachette d6                        |                    |
+| 2   | Combattant | 10 VIG, 8 ADR, 9 ESP / 4 END | Combat r,<br>Stabilisation         | - Cotte de mailles 2 RD<br>-hachette d6                        |                    |
 | 3   | Filou      | 9 VIG, 10 ADR, 8 ESP / 2 END | Discrétion, Poison                 | - Armure de cuir 1 RD <br>- Épée courte d6 <br> - kit de soins |                    |
 | 4   | Filou      | 8 VIG, 10 ADR, 9 ESP / 2 END | Discrétion, Chirurgie de fortune   | Armure de cuir 1 RD <br>- Épée courte d6 <br> - kit de soins   |                    |
 | 5   | Érudit     | 8 VIG, 9 ADR, 10 ESP / 1 END | Ars Arcanum,<br>Artes Humanitatis  | Robe pochette +1 eq / Bâton 1d4                                |                    |

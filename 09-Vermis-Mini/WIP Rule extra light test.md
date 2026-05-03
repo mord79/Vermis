@@ -1,5 +1,13 @@
+# Idea Dump
+
+- effet si dé principale est plus haut ou plus bas selon succès ou échec et {+} et {-}. 
+- Économie. Utiliser l’économie classique OSR
+- Inventaire. Utiliser l’équipement classique OSR faire des cartes équipement avec plusieurs items dessus ou une carte inventaire générale qui renvoie à une liste sur le personnage (10 max). Avoir ma carte Équipement en main permet de ne pas prendre d’action pour utiliser l’objet. 
 # Personages
 Défini par des tags avec un nombre maximum « d’équipé ».
+### Fiche 
+- Recto Description et tag (10 actif max)
+- Verseau Possession et Inventaire (10 actif max)
 ### Création 
 Rouler d66 pour chacune des catégories: Personnel, Origine, Équipement, Allié, Handicape
 > Faire comme vermis : Approche (personnel), Origine, Etc. Le 1er d6 est la catégorie (combatant, filou, etc) et le deuxième est le Tag.
@@ -14,6 +22,8 @@ Un personnage peut posséder un grand nombre de tags, mais ne peu seulement en �
 - Condition : 
 	- Positive : peuvent être activée 1 fois puis sont retiré, 1 seul à la fois : motivé, inspiré, enragé 
 	- Négative : persiste jusqu’au traitement, ne s’additionne pas, si une deuxième condition similaire survient, la première s’empire (traitement plus difficile): épuisé, blessé, gelé, inconscient, paniqué, 
+		- **Fatigue**: La plus commune, se rajoute dans le deck et ne peut être utilisé lorsque pigé. Retiré 1 après un repos court ou toutes après un Repos long.
+		- **Blessure**: se rajoute dans le deck et ne peut être utilisé. Retiré 1 après un repos long si des traitement convenable sont appliqués. Subir une blessure alors qu’une carte blessure est en main met le PJ KO et mourrant. Doit être stabiliser pour revenir sur pied (voir guérison)
 ### Domaine
 Les tags appartiennent à des domaines généraux qui indique dans quelles circonstances on peut les utiliser et les sacrifier. 
 - Vitale 
@@ -30,15 +40,29 @@ Pour distinguer la puissance de certains tags, il est possible de leur attribuer
 - Titanesque 
 - Planétaire
 - Etc…
+## Handicape
+Doit être mis dans le deck et dans la pioche. Lorsque pigé, le joueur peut l’invoquer pour se donner un Désavantage. Si l’action réussi malgré tout, il gagne un pt de Progression.
+## Cartes et Fiches
+- Les Tags sont listés sur la fiche de description du personnage avec leur descriptif.
+- Le joueur décide de 10 tag à transformer en cartes pour créer son deck d’aventure. Il peut changer ces cartes durant les Interludes.
+- Les deck est composé d’un maximum de 4 Tags majeur dont maximum 2 d’une même catégorie. 
+- Les joueurs choisissent 3 cartes actives qu’ils placent devant eux. Ils peuvent invoquer les tags de ces cartes à tout moment. 
+- Le reste des carte est dans la pioche. 
+- Quand le MJ décrit une scène où les joueur peuvent / doivent / veulent agir, ceux-ci pige 2 cartes pour leur main et choisissent leurs actions. Ils peuvent activer autant de carte nécessaire pour invoquer leurs tag, puis passe à la Résolution
+- À la fin de leur tour, les cartes non utilisées doivent être défaussées. 
+- Quand la pioche est vides, mélanger la défausse pour en faire une nouvelle pioche.
+- Certaines actions peuvent retiré complètement une carte du deck, elles sont **brulées**. Les mettre dans le cimetière. Ils peuvent être reprise lors de certaines actions ou repos
 ## Résolution 
-2d6. Lancer 9 et + pour résoudre des actions ou réaction incertaines et risquer. Appliquer AV ou DEAV si tags pertinent ou nuisible.
+La résolution fonctionne avec 2d6. Une fois lancé sur la table, le dé le plus à gauche est considéré comme le **dé principal**. Lancer 8 et + pour résoudre des actions ou réaction incertaines et risquées. Appliquer AV ou DEAV si tags pertinent ou nuisible.
 ### Échelle de succès 
-- 2 : Échec critique, perdre 1 tag
-- 12 : Succès critique. Regagner 1 tag ou faire perdre 2 tag
-- 9 (10%): Impasse : le joueur décident entre 
-	- Réussir l’action de manière éclatante 
-	- Échoué l’action de manière éclatante et gagner un pt de progression 
-- Double : échec ou succès marqué : gagner un tag (positif ou négatif) pour la scène.
+- 2 : Échec critique, brûler 1 tag utilisé ou gagner 1 Fatigue
+- 12 : Succès critique. Regagner 1 tag  brulée ou ou retirer 1 Fatigue 
+- Double : échec ou succès inversé : 
+	- Échec : Réussir malgré tout l’action mais gagner 1 fatigue
+	- Succès : Échoué malgré tout l’action de mais gagner un pt de progression 
+> Le joueur peut Miser sur une des deux possibilités et gagner qqc si réussi
+> - Succès avec le dé principal le plus élevé :
+> - Succès avec le dé principal le plus bas : 
 ## Combat et Vie
 Pas de points de vie. Si une action vise à éliminer ou contraindre un personnage, que l’action est probable et que celle-ci réussi, le personnage peut sacrifier un Tag de son choix pour éviter la conséquence si c’est logique. Possibilité de viser un tag spécifique. 
 Sinon dans le doute si des dégâts survient: 
@@ -149,7 +173,7 @@ C’est Lors des interludes et des retraits que les PJ peuvent progresser. Il pe
 >Voir pour les coûts
 
 Mineur (1 pt)
-- Outils spécialisés ou de qualité supérieur
+- Outils spécialisés ou Personalisé
 - Expertise ciblé (ex. Points faible d’un monstre ou type de monstre)
 - Technique spécial et ciblé basé sur des expertise existantes (ou qui n’en nécessite pas)
 - Savoir anecdotiques ou situationnel (rumeur, info, etc)
@@ -160,3 +184,23 @@ Majeur (10 pt)
 - Retirer un handicap 
 - Savoir, expertise technique poussée 
 - Alliences, amitié 
+# Annexe A : probabilité des dés
+| Seuil (≥) | Normal | +1 dé | Gain | +2 dés | Gain | +3 dés | Gain | +4 dés | Gain | +5 dés | Gain |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| 4  | 92% | 98% | +6  | 99% | +8  | 100% | +8  | 100% | +8  | 100% | +8  |
+| 5  | 83% | 94% | +10 | 97% | +14 | 99%  | +15 | 100% | +16 | 100% | +16 |
+| 6  | 72% | 86% | +14 | 92% | +20 | 95%  | +23 | 97%  | +24 | 98%  | +25 |
+| 7  | 58% | 75% | +16 | 83% | +24 | 87%  | +29 | 90%  | +31 | 92%  | +33 |
+| 8  | 42% | 58% | +16 | 66% | +24 | 71%  | +29 | 75%  | +33 | 79%  | +37 |
+| 9  | 28% | 42% | +14 | 49% | +22 | 54%  | +26 | 58%  | +30 | 61%  | +33 |
+| 10 | 17% | 27% | +10 | 33% | +17 | 38%  | +21 | 42%  | +25 | 46%  | +29 |
+
+| Avantage | Succès + Rouge haut | Succès + Rouge bas | Succès + Égalité | Échec + Rouge haut | Échec + Rouge bas | Échec + Égalité |
+|---|---:|---:|---:|---:|---:|---:|
+| Normal | 16.67% | 16.67% | 8.33% | 25.00% | 25.00% | 8.33% |
+| +1 dé | 28.70% | 16.67% | 12.50% | 29.17% | 8.80% | 4.17% |
+| +2 dés | 37.50% | 13.89% | 14.58% | 28.47% | 3.47% | 2.08% |
+| +3 dés | 44.01% | 11.11% | 15.63% | 26.74% | 1.48% | 1.04% |
+| +4 dés | 48.88% | 8.82% | 16.15% | 24.97% | 0.66% | 0.52% |
+| +5 dés | 52.58% | 7.02% | 16.41% | 23.43% | 0.31% | 0.26% |
+# Annexe B : liste de Tags

@@ -21,10 +21,10 @@ Le dé sert deux fois : il détermine d'abord le résultat de sa propre table, p
 | D6  | Approche   | Attribut                     | Expertise                            | Item                                                           | Handicap (D-Rouge) |
 | --- | ---------- | ---------------------------- | ------------------------------------ | -------------------------------------------------------------- | ------------------ |
 | 1   | Combattant | 10 VIG, 9 ADR, 8 ESP / 4 END | Pratique du Combat,<br>Athlétisme    | - Cotte de mailles 2 RD<br>-hachette d6                        |                    |
-| 2   | Combattant | 10 VIG, 8 ADR, 9 ESP / 4 END | Pratique du Combat,<br>Stabilisation | - Cotte de mailles 2 RD<br>-hachette d6                        |                    |
+| 2   | Combattant | 10 VIG, 8 ADR, 9 ESP / 4 END | Pratique du Combat,<br>Premier soins | - Cotte de mailles 2 RD<br>-hachette d6                        |                    |
 | 3   | Filou      | 9 VIG, 10 ADR, 8 ESP / 2 END | Furtivité, Poison                    | - Armure de cuir 1 RD <br>- Épée courte d6 <br> - kit de soins |                    |
 | 4   | Filou      | 8 VIG, 10 ADR, 9 ESP / 2 END | Furtivité, Chirurgie de fortune      | Armure de cuir 1 RD <br>- Épée courte d6 <br> - kit de soins   |                    |
-| 5   | Érudit     | 8 VIG, 9 ADR, 10 ESP / 1 END | Ars Arcanum,<br>Artes Humanitatis    | Robe pochette +1 eq / Bâton 1d4                                |                    |
+| 5   | Érudit     | 8 VIG, 9 ADR, 10 ESP / 1 END | Ars Arcanum,<br>Art,                 | Robe pochette +1 eq / Bâton 1d4                                |                    |
 | 6   | Érudit     | 9 VIG, 8 ADR, 10 ESP / 1 END | Ars Arcanum,<br>Ars Medica,          | Robe pochette +1 eq / Bâton 1d4                                |                    |
  
 
@@ -34,14 +34,15 @@ Le dé sert deux fois : il détermine d'abord le résultat de sa propre table, p
 
 ## D2 — Origine
 
-| D6  | Origine             | Attributs                    | Expertise             | Malchance (D-Vert) |
-| --- | ------------------- | ---------------------------- | --------------------- | ------------------ |
-| 1   | Reclus-Nomade       | +2 VIG +1 ADR+3 END, 1 Or    | Survie, Navigation    |                    |
-| 2   | Reclus-Paysans      | +2 VIG +1 ESP +3 END, 5 Or   | Survie, Dressage      |                    |
-| 3   | Citadin-Criminel    | +2 ADR+1 VIG, +2 END, 10 Or  | Artifex, Argot        |                    |
-| 2   | Citadin-<br>Artisan | +2 ADR+1 ESP, +2 END, 15 Or  | Artifex, Commerce     |                    |
-| 5   | Décadent-Artiste    | +2 ESP +1ADR, +1 END, 20 Or  | +1 Langue, Mascarade  |                    |
-| 6   | Décadent-Noble      | +1 ESP +1 VIG, +1 END, 25 Or | +1 Langue, Leadership |                    |
+| D6  | Origine             | Attributs                    | Expertise            | Malchance (D-Vert) |
+| --- | ------------------- | ---------------------------- | -------------------- | ------------------ |
+| 1   | Reclus-Nomade       | +2 VIG +1 ADR+3 END, 1 Or    | Survie, Navigation   |                    |
+| 2   | Reclus-Paysans      | +2 VIG +1 ESP +3 END, 5 Or   | Survie, Dressage     |                    |
+| 3   | Citadin-Criminel    | +2 ADR+1 VIG, +2 END, 10 Or  | Artifex, Argot       |                    |
+| 2   | Citadin-<br>Artisan | +2 ADR+1 ESP, +2 END, 15 Or  | Artifex, Commerce    |                    |
+| 5   | Décadent-Artiste    | +2 ESP +1ADR, +1 END, 20 Or  | Humanité, Mascarade  |                    |
+| 6   | Décadent-Noble      | +1 ESP +1 VIG, +1 END, 25 Or | Humanité, Leadership |                    |
+|     |                     |                              |                      |                    |
 
 > ⚠️ Doublon source : les lignes 5 et 6 ont la même valeur D6 (« 5 ») dans la source Notion. Corrigé en `5/6` ici. À valider.
 > ⚠️ Table **Malchance (D-Vert)** : **vide** dans la source. À compléter.

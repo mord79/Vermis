@@ -210,27 +210,21 @@ Majeur (10 pt)
 La troupe s’aventurier à des caractéristiques propres. La troupe à ses propre tag et et possède un deck qui est une pioche commune. Les PJ de la troupe peuvent piocher dedans au lieu de la leur.
 Les Tags représentes généralement des forces d’unicité, mais aussi des avoirs commun et des alliés / hierling commun.
 # 6 Annexe A : probabilité des dés
-
-> 3d6, rouler 4+ pour marquer un Gain. 
-> - -1 gain = échec critique
-> - 0 gain = échec 
-> - 1 gain = succès partiel (payer 1 fatigue ou +1 Tension pour gagner 1 gain)
-> - 2 gain = succès 
-> - Max gain = succès total (enlever 1 fatigue ou diminuer la Tension de 1)
-> Utiliser un dé rouge dans le pool. Le dé rouge est toujours compté. Les Avantages donné des dés supplémentaires. Prendre le meilleure résultat des autres dés. 
-
-| Dés lancés | 0 gain (échec) | 1 gain (succès partiel) | 2 gains (succès) | Gain succès total |
-| ---------- | -------------: | ----------------------: | ---------------: | ----------------: |
-| 2d6        |         25.00% |                  50.00% |           25.00% |                 — |
-| 3d6        |         12.50% |                  37.50% |           50.00% |            +25.00 |
-| 4d6        |          6.25% |                  25.00% |           68.75% |            +18.75 |
-| 5d6        |          3.12% |                  15.62% |           81.25% |            +12.50 |
-| 6d6        |          1.56% |                   9.38% |           89.06% |             +7.81 |
-| 7d6        |          0.78% |                   5.47% |           93.75% |             +4.69 |
-| 8d6        |          0.39% |                   3.13% |           96.48% |             +2.73 |
-| 9d6        |          0.20% |                   1.76% |           98.05% |             +1.56 |
-| 10d6       |          0.10% |                   0.98% |           98.93% |             +0.88 |
-### 6.1.1 OLD système d+d > +8
+### 6.1.1 Dé rouge obligatoire  
+(Le dé rouge doit faire partie des 2 dés gardés)  
+  
+| Dés lancés | 2 meilleurs dés |   Gain | 2 pires dés |   Gain |     |
+| ---------- | --------------: | -----: | ----------: | -----: | --- |
+| 2d6        |          50.00% |      — |      25.00% |      — |     |
+| 3d6        |          62.50% | +12.50 |      12.50% | -12.50 |     |
+| 4d6        |          75.00% | +12.50 |       6.25% |  -6.25 |     |
+| 5d6        |          84.38% |  +9.38 |       3.12% |  -3.13 |     |
+| 6d6        |          90.62% |  +6.24 |       1.56% |  -1.56 |     |
+| 7d6        |          94.53% |  +3.91 |       0.78% |  -0.78 |     |
+| 8d6        |          96.88% |  +2.35 |       0.39% |  -0.39 |     |
+| 9d6        |          98.24% |  +1.36 |       0.20% |  -0.19 |     |
+| 10d6       |          99.02% |  +0.78 |       0.10% |  -0.10 |     |
+### 6.1.2 OLD système d+d > +8
 | Seuil (≥) |  Normal |   +1 dé |    Gain |  +2 dés |    Gain |  +3 dés |    Gain |  +4 dés |    Gain |  +5 dés |    Gain |
 | --------- | ------: | ------: | ------: | ------: | ------: | ------: | ------: | ------: | ------: | ------: | ------: |
 | *4*       |   *92%* |   *98%* |    *+6* |   *99%* |    *+8* |  *100%* |    *+8* |  *100%* |    *+8* |  *100%* |    *+8* |

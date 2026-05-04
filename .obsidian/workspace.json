@@ -129,8 +129,8 @@
             "state": {
               "type": "recent-files",
               "state": {},
-              "icon": "clock",
-              "title": "Recent Files"
+              "icon": "lucide-ghost",
+              "title": "recent-files"
             }
           }
         ]
@@ -246,6 +246,16 @@
   },
   "active": "b36bbe4918ab2b98",
   "lastOpenFiles": [
+    "09-Vermis-Mini/WIP Rule extra light test.md",
+    "09-Vermis-Mini",
+    "08-Setting/081-Idées/Language ancien.md",
+    "08-Setting/081-Idées",
+    "08-Setting",
+    "07-Banque de mots/Mots pour Voleur.md",
+    "07-Banque de mots",
+    "01-Règles/011-WIP/WIP Résolution v3.md",
+    "01-Règles/011-WIP/WIP Création_de_personnage.md",
+    "01-Règles/011-WIP/WIP Création_de_personnage V2.md",
     "01-Règles/011-WIP/WIP Résolution v2.md",
     "01-Règles/Vermis_Rules.md",
     "01-Règles/Événements_Aléatoires.md",
@@ -269,17 +279,9 @@
     "Sans titre.canvas",
     "04-Todo/Vermis_Migration_Todo.md",
     "02-Banque/idée-entities-are-people.md",
-    "02-Banque/idée-evenements-aleatoires-markov.md",
-    "02-Banque/ref-markov-stocking.md",
-    "06-Wiki/design-donjon.md",
-    "03-Références/Dungeon Stocking with Markov Processes.md",
-    "06-Wiki/design-points-ouverts.md",
-    "Temp Test import_Création de personnage.md",
     "03-Références/markov_events_2 1.html",
     "03-Références/markov_events_2.html",
     "03-Références/Non confirmé 442429.crdownload",
-    "Clippings",
-    "06-Wiki",
-    "02-Banque/idée-stationery-maps.md.tmp.38820.1777505057402"
+    "Clippings"
   ]
 }

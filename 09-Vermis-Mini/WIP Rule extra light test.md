@@ -219,18 +219,21 @@ Les Tags représentes généralement des forces d’unicité, mais aussi des avo
 > - Max gain = succès total (enlever 1 fatigue ou diminuer la Tension de 1)
 > Utiliser un dé rouge dans le pool. Le dé rouge est toujours compté. Les Avantages donné des dés supplémentaires. Prendre le meilleure résultat des autres dés. 
 
-| Dés lancés | 0 gain (échec) | 1 gain (succès partiel) | 2 gains (succès) | Gain succès total |
-| ---------- | -------------: | ----------------------: | ---------------: | ----------------: |
-| 2d6        |         25.00% |                  50.00% |           25.00% |                 — |
-| 3d6        |         12.50% |                  37.50% |           50.00% |            +25.00 |
-| 4d6        |          6.25% |                  25.00% |           68.75% |            +18.75 |
-| 5d6        |          3.12% |                  15.62% |           81.25% |            +12.50 |
-| 6d6        |          1.56% |                   9.38% |           89.06% |             +7.81 |
-| 7d6        |          0.78% |                   5.47% |           93.75% |             +4.69 |
-| 8d6        |          0.39% |                   3.13% |           96.48% |             +2.73 |
-| 9d6        |          0.20% |                   1.76% |           98.05% |             +1.56 |
-| 10d6       |          0.10% |                   0.98% |           98.93% |             +0.88 |
-### 6.1.1 OLD système d+d > +8
+### 6.1.1 Dé rouge optionnel
+(Le dé rouge doit absolument réussir )
+
+| Dés lancés | 2 meilleurs dés | Gain | 2 pires dés | Gain |
+|---|---:|---:|---:|---:|
+| 2d6  | 50.00% | —      | 25.00% | —       |
+| 3d6  | 68.75% | +18.75 | 12.50% | -12.50  |
+| 4d6  | 81.25% | +12.50 | 6.25%  | -6.25   |
+| 5d6  | 89.06% | +7.81  | 3.12%  | -3.13   |
+| 6d6  | 93.75% | +4.69  | 1.56%  | -1.56   |
+| 7d6  | 96.48% | +2.73  | 0.78%  | -0.78   |
+| 8d6  | 98.05% | +1.56  | 0.39%  | -0.39   |
+| 9d6  | 98.93% | +0.88  | 0.20%  | -0.19   |
+| 10d6 | 99.41% | +0.49  | 0.10%  | -0.10   |
+### 6.1.2 OLD système d+d > +8
 | Seuil (≥) |  Normal |   +1 dé |    Gain |  +2 dés |    Gain |  +3 dés |    Gain |  +4 dés |    Gain |  +5 dés |    Gain |
 | --------- | ------: | ------: | ------: | ------: | ------: | ------: | ------: | ------: | ------: | ------: | ------: |
 | *4*       |   *92%* |   *98%* |    *+6* |   *99%* |    *+8* |  *100%* |    *+8* |  *100%* |    *+8* |  *100%* |    *+8* |

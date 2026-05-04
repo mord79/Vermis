@@ -217,7 +217,7 @@ Les Tags représentes généralement des forces d’unicité, mais aussi des avo
 > - 1 gain = succès partiel (payer 1 fatigue ou +1 Tension pour gagner 1 gain)
 > - 2 gain = succès 
 > - Max gain = succès total (enlever 1 fatigue ou diminuer la Tension de 1)
-> Utiliser un dé rouge dans le pool. 
+> Utiliser un dé rouge dans le pool. Le dé rouge est toujours compté. Les Avantages donné des dés supplémentaires. Prendre le meilleure résultat des autres dés. 
 
 ### 6.1.1 Dé rouge optionnel
 (Le dé rouge doit absolument réussir )

@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "01-Règles/011-WIP/WIP Exploration.md",
+                "file": "09-Vermis-Mini/WIP Rule extra light test.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "WIP Exploration"
+              "title": "WIP Rule extra light test"
             }
           }
         ],
@@ -215,13 +215,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "01-Règles/011-WIP/WIP Exploration.md",
+                "file": "09-Vermis-Mini/WIP Rule extra light test.md",
                 "followCursor": false,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Plan de WIP Exploration"
+              "title": "Plan de WIP Rule extra light test"
             }
           }
         ],
@@ -229,7 +229,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 400.5
+    "width": 400.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -244,8 +245,10 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "b36bbe4918ab2b98",
+  "active": "44561d9b5456885f",
   "lastOpenFiles": [
+    "02-Banque/idée-entities-are-people.md.tmp.29172.1777907100343",
+    "01-Règles/011-WIP/WIP Exploration.md",
     "09-Vermis-Mini/WIP Rule extra light test.md",
     "09-Vermis-Mini",
     "08-Setting/081-Idées/Language ancien.md",
@@ -271,14 +274,12 @@
     "01-Règles/011-WIP",
     "03-Références/Hechmen Are Tools.md",
     "04-Todo/Vermis_Todo.md",
-    "01-Règles/011-WIP/WIP Exploration.md",
     "01-Règles/011-WIP/WIP Repos et Guérison.md",
     "01-Règles/011-WIP/WIP Progression.md",
     "01-Règles/011-WIP/WIP Henchman Tool.md",
     "01-Règles/011-WIP/WIP Outils et kit.md",
     "Sans titre.canvas",
     "04-Todo/Vermis_Migration_Todo.md",
-    "02-Banque/idée-entities-are-people.md",
     "03-Références/markov_events_2 1.html",
     "03-Références/markov_events_2.html",
     "03-Références/Non confirmé 442429.crdownload",

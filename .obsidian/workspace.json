@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "06-Wiki/index.md",
+                "file": "09-Vermis-Mini/WIP Rule extra light test.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "index"
+              "title": "WIP Rule extra light test"
             }
           }
         ],
@@ -119,7 +119,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "06-Wiki/index.md",
+                "file": "09-Vermis-Mini/WIP Rule extra light test.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -129,7 +129,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Rétrolien pour index"
+              "title": "Rétrolien pour WIP Rule extra light test"
             }
           },
           {
@@ -138,12 +138,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "06-Wiki/index.md",
+                "file": "09-Vermis-Mini/WIP Rule extra light test.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Liens sortants de index"
+              "title": "Liens sortants de WIP Rule extra light test"
             }
           },
           {
@@ -181,21 +181,22 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "06-Wiki/index.md",
+                "file": "09-Vermis-Mini/WIP Rule extra light test.md",
                 "followCursor": false,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Plan de index"
+              "title": "Plan de WIP Rule extra light test"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 400.5
+    "width": 400.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -212,6 +213,7 @@
   },
   "active": "f6fcf82303a26c7e",
   "lastOpenFiles": [
+    "06-Wiki/index.md",
     "01-Règles/Caractéristiques_et_Expertise.md",
     "Sans titre.canvas",
     "02-Banque/idée-evenements-aleatoires-markov.md",

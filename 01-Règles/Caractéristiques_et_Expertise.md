@@ -1,4 +1,4 @@
-# Vermis — Caractéristiques et Expertise
+# 1 Vermis — Caractéristiques et Expertise
 
 *Document de référence consolidé. Engin ECHO, projet Vermis. Migré depuis Notion le 2026-04-29.*
 
@@ -6,7 +6,7 @@
 
 ---
 
-## Hiérarchie
+## 1.1 Hiérarchie
 
 - **ATTRIBUT** → fondation chiffrée, D66, tests génériques
 - **DON** → propriété innée, non apprise
@@ -14,7 +14,7 @@
 - **ART** → savoir-faire procédural verrouillé
 - **SAVOIR** → connaissance ou langue verrouillée
 
-## Tableau des termes
+## 1.2 Tableau des termes
 
 | Terme | Nature | Acquisition | Se teste ? | Exemples |
 |---|---|---|---|---|
@@ -24,7 +24,7 @@
 | **Art** | Savoir-faire procédural verrouillé. **Sans l'Art, l'action est impossible.** | Par maître, livre technique, apprentissage. Coûte temps et/ou or. | Oui — débloque l'action, puis test normal. | *Crochetage*, *Alchimie*, *Médecine*, *Forge* |
 | **Savoir** | Connaissance déclarative ou langue verrouillée. Sans le Savoir, l'information est inaccessible. | Par études, initiation, immersion culturelle. | Rarement actif — prérequis ou info automatique. | *Humanités*, *Arcanique*, *Étiquette* |
 
-## Rangs (Arts et Savoirs)
+## 1.3 Rangs (Arts et Savoirs)
 
 | Rang | Art | Savoir |
 |---|---|---|
@@ -34,7 +34,7 @@
 
 **Note sur les capacités Adepte :** elles ne sont pas des effets mécaniques calibrés mais des **domaines de permission narrative** que le MJ arbitre selon la situation. Fidèle au principe *« Arbitrages, pas règles »*.
 
-## Règles de distinction *(pour arbitrage)*
+## 1.4 Règles de distinction *(pour arbitrage)*
 
 **Compétence vs Art :**
 
@@ -46,7 +46,7 @@
 
 ---
 
-## Liste des Compétences
+## 1.5 Liste des Compétences
 
 | Compétence          | Description                                                                                                                                                                                                                                                                           |
 | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -65,7 +65,7 @@
 
 ---
 
-## Liste des Arts
+## 1.6 Liste des Arts
 
 | Art | Initié | Adepte |
 |---|---|---|
@@ -81,9 +81,9 @@
 
 ---
 
-## Liste des Savoirs
+## 1.7 Liste des Savoirs
 
-### Savoirs généraux
+### 1.7.1 Savoirs généraux
 
 | Savoir | Initié | Adepte |
 |---|---|---|
@@ -91,7 +91,7 @@
 | **Humanités** | Connaissances en histoire, politique, géographie, peuples, mythologie et religion. Identifie iconographies, écrits et artefacts courants. | Place un artefact obscur dans son contexte, reconnaît un mensonge historique. |
 | **Sciences naturelles** | Connaissance du monde physique, des phénomènes, des règnes minéral, végétal et animal. | Peut déduire des propriétés nouvelles, reconnaître un phénomène anormal. |
 
-### Langues rituelles et codes
+### 1.7.2 Langues rituelles et codes
 
 | Langue | Initié | Adepte |
 |---|---|---|
@@ -101,7 +101,7 @@
 | **Soupir** *(parlée uniquement)* | Transmise de bouche à oreille. Permet de reconnaître et identifier les manifestations d'esprits. | Peut dialoguer avec un esprit qui daigne répondre, identifier la nature précise d'une manifestation. |
 | **Théurgique** | Langue ancienne du Prophète, langue de la prière. Permet l'usage et l'identification des reliques saintes. | Peut prononcer les formulations exactes d'un rituel, activer certaines reliques dormantes. |
 
-### Langues de lignées
+### 1.7.3 Langues de lignées
 
 | Langue | Initié | Adepte |
 |---|---|---|
@@ -112,18 +112,18 @@
 
 ---
 
-## Liste des Dons
+## 1.8 Liste des Dons
 
 Les Dons sont des propriétés innées. Ils se distribuent à la création selon l'Origine et la lignée. La liste ci-dessous est organisée en six groupes de référence (deux par Attribut), correspondant aux anciennes stats OSR dont les Attributs d'ECHO sont issus : VIG = Force + Constitution, FIN = Dextérité + Sagesse, ESP = Intelligence + Charisme. Ces catégories servent uniquement à équilibrer la distribution et ne sont pas visibles dans le jeu.
 
-### Dons liés à VIG (Force)
+### 1.8.1 Dons liés à VIG (Force)
 
 | Don | Description |
 |---|---|
 | **Force brute** | Surpasser les tests pour soulever, pousser, lutter. Dégâts à mains nues améliorés [+]. |
 | **Apollon** | Peut utiliser VIG pour intimider ou séduire. |
 
-### Dons liés à VIG (Constitution)
+### 1.8.2 Dons liés à VIG (Constitution)
 
 | Don | Description |
 |---|---|
@@ -131,7 +131,7 @@ Les Dons sont des propriétés innées. Ils se distribuent à la création selon
 | **Dur à cuire** | Surpasser les tests de Choc. |
 | **Petit dormeur** | Peut dormir une seule veille par nuit. |
 
-### Dons liés à FIN (Dextérité)
+### 1.8.3 Dons liés à FIN (Dextérité)
 
 | Don | Description |
 |---|---|
@@ -139,14 +139,14 @@ Les Dons sont des propriétés innées. Ils se distribuent à la création selon
 | **Réflexes** | Surpasser les tests d'esquive, pour attraper un objet en vol ou se mettre à couvert. |
 | **Félin** | Surpasser les tests pour se défaire de liens, se faufiler dans un endroit étroit, ou garder son équilibre. |
 
-### Dons liés à FIN (Sagesse)
+### 1.8.4 Dons liés à FIN (Sagesse)
 
 | Don | Description |
 |---|---|
 | **Empathie animale** | Les animaux sauvages ne sont pas craintifs ou agressifs si le personnage ne l'est pas envers eux. Les animaux domestiques sont naturellement dociles. |
 | **Boussole interne** | Sait toujours où est le nord et l'heure approximative, même sous terre. |
 
-### Dons liés à ESP (Charisme)
+### 1.8.5 Dons liés à ESP (Charisme)
 
 | Don | Description |
 |---|---|
@@ -154,7 +154,7 @@ Les Dons sont des propriétés innées. Ils se distribuent à la création selon
 | **Voix dorée** | Surpasser pour charmer, projeter sa voix, chanter. |
 | **Courage inspirant** | Fait son test de Panique en premier. Si réussi, tous les alliés qui l'ont vu ou entendu font leur test avec AV. |
 
-### Dons liés à ESP (Intelligence)
+### 1.8.6 Dons liés à ESP (Intelligence)
 
 | Don | Description |
 |---|---|
@@ -162,7 +162,7 @@ Les Dons sont des propriétés innées. Ils se distribuent à la création selon
 | **Polyglotte** | Pour 1 stress, peut comprendre le sens d'une discussion en langue étrangère et y répondre adéquatement. |
 | **Organisé** | Lance son d12 pour fouiller dans son sac avec AV. Peut équiper un item de plus. |
 
-### Dons à clarifier
+### 1.8.7 Dons à clarifier
 
 | Don | Note |
 |---|---|
@@ -173,7 +173,7 @@ Les Dons sont des propriétés innées. Ils se distribuent à la création selon
 
 ---
 
-## Liste des Handicaps
+## 1.9 Liste des Handicaps
 
 Un Handicap est un désavantage inné ou acquis. Un personnage peut en débuter avec un (tiré au hasard) ou en acquérir en jeu. Les Handicaps ne sont pas couplés aux Dons — un joueur ne reçoit pas automatiquement le Handicap opposé à son Don.
 
@@ -201,7 +201,7 @@ Un Handicap est un désavantage inné ou acquis. Un personnage peut en débuter 
 
 ---
 
-## Liste des Séquelles
+## 1.10 Liste des Séquelles
 
 Une Séquelle est une conséquence permanente d'une blessure grave subie en jeu. Elle s'inscrit sur la fiche comme marque durable.
 
@@ -227,7 +227,7 @@ Une Séquelle est une conséquence permanente d'une blessure grave subie en jeu.
 
 ---
 
-## Points de design ouverts
+## 1.11 Points de design ouverts
 
 À trancher plus tard, dans l'ordre de priorité :
 
@@ -243,7 +243,7 @@ Une Séquelle est une conséquence permanente d'une blessure grave subie en jeu.
 
 ---
 
-## Termes en réserve
+## 1.12 Termes en réserve
 
 - **Vertu** — disponible pour un usage futur (réputation grimdark, système de rédemption, alignement cosmique…).
 - **Aptitude** — disponible pour désigner des sous-catégories de Dons ou une mécanique de potentiel brut.
@@ -254,7 +254,7 @@ Une Séquelle est une conséquence permanente d'une blessure grave subie en jeu.
 
 ---
 
-## Voir aussi
+## 1.13 Voir aussi
 
 - [[Vermis_Rules]] §3 — version compacte intégrée à la consolidation.
 - [[Vermis_Rules]] Annexes C/D/E — Handicaps, Séquelles, Points de design (versions condensées).

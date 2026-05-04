@@ -1,6 +1,18 @@
 {
   "recentFiles": [
     {
+      "basename": "index",
+      "path": "06-Wiki/index.md"
+    },
+    {
+      "basename": "Caractéristiques_et_Expertise",
+      "path": "01-Règles/Caractéristiques_et_Expertise.md"
+    },
+    {
+      "basename": "Sans titre",
+      "path": "Sans titre.canvas"
+    },
+    {
       "basename": "idée-evenements-aleatoires-markov",
       "path": "02-Banque/idée-evenements-aleatoires-markov.md"
     },
@@ -35,10 +47,6 @@
     {
       "basename": "Magie_Arcanique",
       "path": "01-Règles/012-Intégré/Magie_Arcanique.md"
-    },
-    {
-      "basename": "Caractéristiques_et_Expertise",
-      "path": "01-Règles/Caractéristiques_et_Expertise.md"
     },
     {
       "basename": "Cheat_Sheet",

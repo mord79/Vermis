@@ -14,7 +14,7 @@ Pour chaque salle stockée, créer une salle jumelle qui lui est connectée conc
 
 ## Pourquoi intéressant pour Vermis
 
-Outil de keying rapide pour le mégadonjon. Crée connectivité organique et narrative archéologique (« qu'est-ce qui s'est passé ici ? »). Couplable avec Landmark-Hidden-Secret (la jumelle = couche Hidden) et avec [[ref-markov-stocking]] (jumelle contrainte par la matrice).
+Outil de keying rapide pour le [[design-donjon|mégadonjon]]. Crée connectivité organique et narrative archéologique (« qu'est-ce qui s'est passé ici ? »). Couplable avec [[ref-earthmote|Landmark-Hidden-Secret]] (la jumelle = couche Hidden) et avec [[ref-markov-stocking]] (jumelle contrainte par la matrice).
 
 ## Pourquoi pas adopté maintenant
 
@@ -23,5 +23,14 @@ Outil de keying rapide pour le mégadonjon. Crée connectivité organique et nar
 
 ## Conditions de réactivation
 
-- Lors de la rédaction du chapitre Mégadonjon, comme heuristique de keying.
+- Lors de la rédaction du chapitre [[design-donjon|Mégadonjon]], comme heuristique de keying.
 - Si la prep de donjon manque de connectivité narrative.
+
+---
+
+## Voir aussi
+
+- [[design-donjon]] — page d'agrégation
+- [[ref-markov-stocking]] — couplage
+- [[ref-tell-test-twist]] — pédagogie mécanique × connectivité narrative
+- [[ref-earthmote]] — Landmark-Hidden-Secret

@@ -24,13 +24,13 @@ Pattern de level design en trois temps emprunté au jeu vidéo : **Tell** (étab
 
 ## Pourquoi pas adopté maintenant
 
-- Ce n'est pas une mécanique — c'est un outil de prep MJ, pas une règle. Rien à inscrire dans `Vermis_Rules.md`.
+- Ce n'est pas une mécanique — c'est un outil de prep MJ, pas une règle. Rien à inscrire dans [[Vermis_Rules]].
 - Risque d'érosion grimdark si appliqué systématiquement : un donjon trop bien TTT-é devient un cours de logique prévisible. À utiliser comme heuristique parmi d'autres, pas comme grille obligatoire.
 - Concept simple — Chapman lui-même reconnaît qu'il flotte déjà dans la littérature OSR. Valeur surtout pédagogique pour les conseils MJ.
 
 ## Conditions de réactivation
 
-- Lors de la rédaction du chapitre **Mégadonjon** ou **Conseils MJ** de la Bible.
+- Lors de la rédaction du chapitre **[[design-donjon|Mégadonjon]]** ou **Conseils MJ** de [[Vermis_Rules|la Bible]].
 - Comme grille d'analyse pour relire un donjon prep avant playtest (« où est le Tell ? le Test ? le Twist ? puis-je contourner ? »).
 - Si un retour de table indique que l'attention environnementale n'est pas récompensée — TTT donne une checklist concrète.
 
@@ -39,3 +39,10 @@ Pattern de level design en trois temps emprunté au jeu vidéo : **Tell** (étab
 - **Tell them again** — multiplier les Tells via différentes routes (variante explicite de Chapman pour absorber le Jaquaying).
 - **Layer TTT** — empiler plusieurs structures TTT en parallèle dans un même secteur (multi-routes = multi-Tells).
 - **Multi-use Tell** — un même indice débloque plusieurs Tests/Twists différents (économie d'éléments, lit l'agentivité).
+
+---
+
+## Voir aussi
+
+- [[design-donjon]] — page d'agrégation
+- [[ref-rooms-in-pairs]] · [[ref-types-of-player-skill]] · [[ref-markov-stocking]] — couplages

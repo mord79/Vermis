@@ -14,15 +14,15 @@ Système de progression party-wide distinct des PJs, sur trois axes : (1) **Fave
 
 ## Pourquoi intéressant pour Vermis
 
-Réduit la douleur du troupe play en haute létalité. Boons exprimés en termes Vermis : réduction de Tension, bonus de tier, réduction d'ampleur. Compatible avec Faction Turn déjà prévu.
+Réduit la douleur du troupe play en [[règles-combat|haute létalité]]. Boons exprimés en termes Vermis : réduction de [[concept-tension|Tension]], bonus de [[règles-résolution|tier]], réduction d'[[règles-résolution|ampleur]]. Compatible avec [[ref-earthmote|Faction Turn]] déjà prévu.
 
 ## Statut interne
 
-**En développement.** Cadre adopté en principe pour Vermis. Adaptation aux mécaniques Vermis (Tension, Tiers, Ampleur) en cours.
+**En développement.** Cadre adopté en principe pour Vermis. Adaptation aux mécaniques Vermis ([[concept-tension|Tension]], [[règles-résolution|Tiers]], [[règles-résolution|Ampleur]]) en cours.
 
 ## Défis d'intégration
 
-- Article original basé sur DC fixes — Vermis utilise attributs et Tension, conversion à faire.
+- Article original basé sur DC fixes — Vermis utilise attributs et [[concept-tension|Tension]], conversion à faire.
 - Feuille de groupe à concevoir (réputation, faveurs actives, état du bastion, hirelings, ressources partagées).
 - Liste de dieux Vermis avec domaines mécaniques à définir.
 - Risque de bookkeeping si toutes les améliorations bastion deviennent chiffrées.
@@ -31,4 +31,13 @@ Réduit la douleur du troupe play en haute létalité. Boons exprimés en termes
 
 - Quand la liste des dieux Vermis (au moins une douzaine, avec domaines mécaniques) est arrêtée.
 - Quand la feuille de groupe (format papier) est prototypée.
-- Quand le format Faction Turn entre sessions est figé.
+- Quand le format [[ref-earthmote|Faction Turn]] entre sessions est figé.
+
+---
+
+## Voir aussi
+
+- [[concept-tension]] — boons exprimés en réduction de Tension
+- [[règles-résolution]] — adaptation aux Tiers et à l'Ampleur Vermis
+- [[ref-earthmote]] — Faction Turn
+- [[Vermis_Todo]] — feuille de groupe à concevoir

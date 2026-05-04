@@ -20,7 +20,7 @@ L'angle : dans un cadre low fantasy/grimdark, les pièces d'or abstraites font m
 
 ## Pourquoi intéressant pour Vermis
 
-Axe **Base Building / Réputation** : ce modèle d'économie est un candidat structurel pour Vermis. Il s'articule avec plusieurs items du Vermis_Todo :
+Axe **Base Building / Réputation** : ce modèle d'économie est un candidat structurel pour Vermis. Il s'articule avec plusieurs items du [[Vermis_Todo]] :
 
 - **Downtime** — la fabrication, l'entraînement, le carousing peuvent être réglés en dons/réception de subsistance plutôt qu'en pièces. Aligne le downtime avec le ton low fantasy.
 - **Génération sandbox** (1 base, 2 locations majeures, 5-6 POI, 3 factions, rumeurs) — la base devient un nœud d'économie de dons. La réputation locale = trace mesurable de dons reçus/donnés. Les factions peuvent avoir des « dettes de subsistance » entre elles.
@@ -43,3 +43,10 @@ Pas de mécanique adoptée — l'idée demande un module économique complet pou
 - À considérer : la réputation comme **horloge / pool partagé par la base**, alimentée par les dons reçus et donnés.
 - Question ouverte : quelle granularité pour le tracking ? Une jauge unique par base, ou par faction ?
 - Frottement potentiel : si la réputation est trop trackée, on retombe dans le bookkeeping. Garder une mesure narrative + une horloge simple.
+
+---
+
+## Voir aussi
+
+- [[ref-be-of-good-cheer]] — duo cohérent pour Base Building
+- [[Vermis_Todo]] — chapitre Town / Downtime

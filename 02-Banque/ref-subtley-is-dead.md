@@ -14,17 +14,26 @@ La subtilité ne fonctionne pas en TTRPG : le MJ possède toute l'info, le médi
 
 ## Pourquoi intéressant pour Vermis
 
-- Recoupe directement deux principes MJ non négociables de Vermis : *Télégraphier le danger* et *Ne pas verrouiller l'information derrière un jet*.
-- Fournit une **méthode concrète de description** — pièges, monstres, salles — utilisable comme guide MJ. Candidat solide pour un addendum à la Bible §10 ou un encart de la Cheat Sheet MJ (« Comment décrire »).
+- Recoupe directement deux principes MJ non négociables de Vermis : *Télégraphier le danger* et *Ne pas verrouiller l'information derrière un jet* ([[Vermis_Rules]] §10).
+- Fournit une **méthode concrète de description** — pièges, monstres, salles — utilisable comme guide MJ. Candidat solide pour un addendum à [[Vermis_Rules|la Bible]] §10 ou un encart de la [[Cheat_Sheet|Cheat Sheet MJ]] (« Comment décrire »).
 - Synergie avec [[ref-declare-actions]] : l'un télégraphie l'environnement statique (pièges, lay-out), l'autre les menaces actives (intentions PNJ). Ensemble → information publique avant tout jet, choix en connaissance de cause.
 - Synergie avec [[ref-encounter-ram]] : les checkboxes peuvent encoder des pas de spoor cumulatif (1ʳᵉ indice, 2ᵉ indice, contact).
-- Cross-réf Vermis_Todo : zones *MJ* (outils de table, génération) et *Adventure* (donjon, fouille, perception).
+- Cross-réf [[Vermis_Todo]] : zones *MJ* (outils de table, génération) et *Adventure* (donjon, fouille, perception).
 
 ## Pourquoi pas adopté maintenant
 
-Méthode descriptive, pas mécanique : à intégrer comme conseil MJ plutôt que règle. Attendre la rédaction du chapitre MJ ou de la Cheat Sheet MJ pour formaliser.
+Méthode descriptive, pas mécanique : à intégrer comme conseil MJ plutôt que règle. Attendre la rédaction du chapitre MJ ou de la [[Cheat_Sheet|Cheat Sheet MJ]] pour formaliser.
 
 ## Conditions de réactivation
 
-- Lors de la rédaction d'un encart « Comment décrire » dans la Bible §10 ou la Cheat Sheet.
-- Quand le chapitre Mégadonjon formalise la signalétique des pièges et menaces.
+- Lors de la rédaction d'un encart « Comment décrire » dans [[Vermis_Rules|la Bible]] §10 ou la [[Cheat_Sheet]].
+- Quand le chapitre [[design-donjon|Mégadonjon]] formalise la signalétique des pièges et menaces.
+
+---
+
+## Voir aussi
+
+- [[ref-declare-actions]] — télégraphage actif (intentions PNJ)
+- [[ref-encounter-ram]] — checkboxes de spoor cumulatif
+- [[Vermis_Rules]] §10 — principes MJ canoniques
+- [[design-donjon]] — signalétique des pièges et menaces

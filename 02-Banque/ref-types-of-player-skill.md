@@ -34,14 +34,23 @@ Filiation directe avec le pilier **Player Skill > Character Skill** (project_ins
 
 ## Pourquoi pas adopté maintenant
 
-Outil conceptuel, pas mécanique — pas d'adoption directe possible. Devrait être intégré comme section courte de la Bible (philosophie / piliers) plutôt que comme règle.
+Outil conceptuel, pas mécanique — pas d'adoption directe possible. Devrait être intégré comme section courte de [[Vermis_Rules|la Bible]] (philosophie / piliers) plutôt que comme règle.
 
 ## Conditions de réactivation
 
-- Lors de la rédaction de la section *Philosophie* ou *Piliers* de la Bible.
+- Lors de la rédaction de la section *Philosophie* ou *Piliers* de [[Vermis_Rules|la Bible]].
 - Quand un design Vermis frotte avec le pilier Player Skill — utiliser la taxonomie comme grille de check.
-- Suggestion d'ajout au Vermis_Todo : item *« Articulation du pilier Player Skill »* — produire un document court qui nomme cible (*In-World Problem Solving*, accents *Acting/Immersion*) et rejet (*Anticipating the GM*, *Optimization*).
+- Suggestion d'ajout au [[Vermis_Todo]] : item *« Articulation du pilier Player Skill »* — produire un document court qui nomme cible (*In-World Problem Solving*, accents *Acting/Immersion*) et rejet (*Anticipating the GM*, *Optimization*).
 
 ## Frictions/notes
 
-- *Anticipating the GM* est rare mais sournois — il peut s'inviter via des tables de rumeurs/encounters mal conçues qui pointent vers une seule « bonne piste ». Pour Vermis : vérifier que les outils MJ (sandbox, rumeurs, encounter RAM) ne pillent pas accidentellement vers ce type de skill.
+- *Anticipating the GM* est rare mais sournois — il peut s'inviter via des tables de rumeurs/encounters mal conçues qui pointent vers une seule « bonne piste ». Pour Vermis : vérifier que les outils MJ (sandbox, rumeurs, [[ref-encounter-ram|encounter RAM]]) ne pillent pas accidentellement vers ce type de skill.
+
+---
+
+## Voir aussi
+
+- [[ref-tell-test-twist]] — outil concret produisant le type 1
+- [[ref-earthmote]] — sandbox aligné sur In-World Problem Solving
+- [[ref-encounter-ram]] — vigilance anti-Anticipating-the-GM
+- [[Vermis_Todo]] — item suggéré sur articulation du pilier

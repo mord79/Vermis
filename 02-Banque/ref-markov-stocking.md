@@ -25,10 +25,18 @@ Outil de prep MJ (lancer en keying, pas en play). Compatible avec stocking proc�
 
 ## Conditions de réactivation
 
-- Lors de la rédaction du chapitre Mégadonjon, comme outil de procédural keying.
+- Lors de la rédaction du chapitre [[design-donjon|Mégadonjon]], comme outil de procédural keying.
 - Si Vermis ajoute un système de génération aléatoire de donjon en cours de session.
 - Pour encoder la signature écologique d'une zone faction.
 
 ## Suite
 
 - **2026-04-30** — prototype interne dérivé : [[idée-evenements-aleatoires-markov]]. La même mécanique a été adaptée au **tour d'exploration** (7 états, 2d6, sous-tables R/N, doubles). Statut `en-développement`. Voir aussi `01-Règles/Événements_Aléatoires.md` (page de travail).
+
+---
+
+## Voir aussi
+
+- [[design-donjon]] — Markov dans le contexte global de prep
+- [[idée-evenements-aleatoires-markov]] — adaptation Vermis (suite)
+- [[ref-tell-test-twist]] · [[ref-rooms-in-pairs]] — couplages

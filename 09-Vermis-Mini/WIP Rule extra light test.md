@@ -3,6 +3,7 @@
 - effet si dé principale est plus haut ou plus bas selon succès ou échec et {+} et {-}. 
 - Économie. Utiliser l’économie classique OSR
 - Inventaire. Utiliser l’équipement classique OSR faire des cartes équipement avec plusieurs items dessus ou une carte inventaire générale qui renvoie à une liste sur le personnage (10 max). Avoir ma carte Équipement en main permet de ne pas prendre d’action pour utiliser l’objet. 
+- Résolution alternative simple. Lancer 2d6 et obtenir au moins 1d avec 5-6 (55%). Les tags donne des dés de plus : 1/3(70%) 1/4(80%) 1/5(85%) etc. Et les tag - annule les + puis devient 2/5 (54%), 2/4 (41%), 2/3 (25%) et 2/2 (11%).
 # 2 Personages
 Défini par des tags avec un nombre maximum « d’équipé ».
 ## 2.1 Fiche 

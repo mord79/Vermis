@@ -16,11 +16,11 @@ date: 2026-04-26
 
 Renforce « télégraphier le danger » avec procédure concrète. Renforce « ne pas verrouiller l'info derrière un jet » — menaces publiques avant le jet. Crée de l'agence : choix en connaissance de cause.
 
-L'initiative déclarative de Vermis (Combat §6.2) est déjà alignée sur cette philosophie : étape 2 « MJ annonce les menaces ennemies » est exactement la déclaration que cet article propose.
+L'[[règles-combat|initiative déclarative de Vermis]] (Combat §6.2) est déjà alignée sur cette philosophie : étape 2 « MJ annonce les menaces ennemies » est exactement la déclaration que cet article propose.
 
 ## Pourquoi pas adopté maintenant
 
-Déjà adopté de fait dans la procédure de combat Vermis (§6.2). Cette fiche sert de validation externe et de référence pour les rulings edge cases.
+Déjà adopté de fait dans la [[règles-combat|procédure de combat Vermis]] (§6.2). Cette fiche sert de validation externe et de référence pour les rulings edge cases.
 
 ## Conditions de réactivation
 
@@ -30,3 +30,10 @@ Déjà adopté de fait dans la procédure de combat Vermis (§6.2). Cette fiche 
 ## Défis d'intégration
 
 - Symétrie à trancher : si le MJ déclare, les joueurs déclarent aussi (et deviennent ciblables en priorité comme un MU OSE) ? Vermis a tranché « non » par défaut.
+
+---
+
+## Voir aussi
+
+- [[règles-combat]] — procédure d'initiative déclarative (§6.2)
+- [[ref-subtley-is-dead]] — synergie : télégraphage statique × actif

@@ -17,15 +17,23 @@ Thèse implicite : transformer les *unknown-unknowns* en *known-unknowns*. Un bo
 ## Pourquoi intéressant pour Vermis
 
 - **Aligné directement sur le principe Vermis « Arbitrages, pas règles »** : la checklist sert exactement à identifier où Vermis doit *arbitrer explicitement* (formaliser ou décliner formellement).
-- **25 items déjà intégrés dans Vermis_Todo** (avril 2026) à partir de cette source. Plusieurs blocs touchés : Town, Travel, Adventure, Combat.
-- **Discipline anti-trou** : items non couverts par Vermis doivent générer soit une procédure légère, soit une mention explicite dans la Bible §10 (« Vermis ne formalise pas X »).
+- **25 items déjà intégrés dans [[Vermis_Todo]]** (avril 2026) à partir de cette source. Plusieurs blocs touchés : Town, Travel, Adventure, [[règles-combat|Combat]].
+- **Discipline anti-trou** : items non couverts par Vermis doivent générer soit une procédure légère, soit une mention explicite dans [[Vermis_Rules]] §10 (« Vermis ne formalise pas X »).
 - **Cible spectre OSR pur** — vigilance NSR : adopter la procédure ne veut pas dire adopter la granularité OSR classique. Filtrer par le critère d'arrondi-en-faveur-du-joueur et de bookkeeping minimal.
 
 ## Statut interne
 
-Intégrée dans Vermis_Todo depuis avril 2026. Cette fiche sert de point d'ancrage source pour traçabilité ; les arbitrages individuels vivent dans les items du Todo, pas ici.
+Intégrée dans [[Vermis_Todo]] depuis avril 2026. Cette fiche sert de point d'ancrage source pour traçabilité ; les arbitrages individuels vivent dans les items du Todo, pas ici.
 
 ## Conditions de réactivation
 
-- Quand une question Todo est tranchée — ramener la décision et la justification dans la Bible.
+- Quand une question Todo est tranchée — ramener la décision et la justification dans [[Vermis_Rules|la Bible]].
 - Si la philosophie « Arbitrages » est challengée — cette source est la défense écrite.
+
+---
+
+## Voir aussi
+
+- [[Vermis_Todo]] — items dérivés de cette source
+- [[design-points-ouverts]] — vue d'ensemble des arbitrages
+- [[Vermis_Rules]] §10 — principes MJ

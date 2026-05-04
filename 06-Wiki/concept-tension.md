@@ -9,14 +9,14 @@ révisions:
   - 2026-04-30 - ajout piste prototype Markov 7 états (idée-evenements-aleatoires-markov)
 ---
 
-# Concept — Tension
+# 1 Concept — Tension
 
 > [!danger] WIP Critique
 > La Tension est référencée partout dans les règles mais **définie nulle part**. C'est le VM-1 du [[Vermis_Todo]], priorité #urgent. Cette page recense ce qu'on sait et les pistes de design.
 
 ---
 
-## Ce qu'on sait — Occurrences dans les règles
+## 1.1 Ce qu'on sait — Occurrences dans les règles
 
 La Tension est mentionnée dans au moins 3 contextes mécaniques distincts :
 
@@ -42,7 +42,7 @@ La Tension est probablement l'outil mécanique de ce principe.
 
 ---
 
-## Hypothèse de design
+## 1.2 Hypothèse de design
 
 La Tension ressemble à un **compteur de pression narratif** qui :
 - Monte quand les PJ prennent du temps / échouent / font du bruit
@@ -62,7 +62,7 @@ Analogies dans d'autres systèmes OSR :
 
 ---
 
-## Ce que le Todo dit
+## 1.3 Ce que le Todo dit
 
 **VM-1 (🔴 Critique)** :
 > "Concept central. Référencé partout : test d'Action (échec Impasse), test de Tâche (conséquence 1 sur double), downtime, exploration. Défini nulle part. Bloque la lisibilité de l'ensemble."
@@ -75,7 +75,7 @@ Analogies dans d'autres systèmes OSR :
 
 ---
 
-## Questions ouvertes
+## 1.4 Questions ouvertes
 
 - Tension est-elle une jauge globale (par donjon) ou par salle ?
 - À quel seuil déclenche-t-elle un événement ? À chaque point ? À 3 ? À 6 ?
@@ -85,7 +85,7 @@ Analogies dans d'autres systèmes OSR :
 
 ---
 
-## Voir aussi
+## 1.5 Voir aussi
 
 - [[règles-résolution]] — Test de Tâche et ses conséquences
 - [[Vermis_Todo]] VM-1, VM-60, VM-61

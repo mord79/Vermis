@@ -17,11 +17,11 @@ Le groupe partage une ressource collective appelée **Spirit** (confiance, bonne
 
 ## Pourquoi intéressant pour Vermis
 
-Résonne avec la vision d'un **pool collectif symétrique à la Tension** (côté joueurs vs côté MJ). Soutient l'idée d'un barde ou d'un conteur qui renforce la résilience du groupe lors des repos. Les vecteurs diégétiques (nourriture, abri, récit, liens PNJ) s'articulent naturellement avec le sandbox, le downtime et la game loop base/donjon. Nourrit les motivations **Social** et **Narrative** des joueurs.
+Résonne avec la vision d'un **pool collectif symétrique à la [[concept-tension|Tension]]** (côté joueurs vs côté MJ). Soutient l'idée d'un barde ou d'un conteur qui renforce la résilience du groupe lors des repos. Les vecteurs diégétiques (nourriture, abri, récit, liens PNJ) s'articulent naturellement avec le sandbox, le downtime et la game loop base/donjon. Nourrit les motivations **Social** et **Narrative** des joueurs.
 
 ## Pourquoi pas adopté maintenant
 
-Vermis possède déjà les DE (Dés d'Endurance) et la Tension. Ajouter un troisième buffer risque de diluer la lisibilité et la létalité. La mécanique de dépense d'Arnold (1d4 par Spirit + double 4 = bonus D20) introduit un calcul post-jet contraire à la philosophie Vermis. Pas la priorité avant que repos, soins et caractéristiques de groupe soient formalisés.
+Vermis possède déjà les [[règles-santé|DE (Dés d'Endurance)]] et la [[concept-tension|Tension]]. Ajouter un troisième buffer risque de diluer la lisibilité et la létalité. La mécanique de dépense d'Arnold (1d4 par Spirit + double 4 = bonus D20) introduit un calcul post-jet contraire à la philosophie Vermis. Pas la priorité avant que repos, soins et caractéristiques de groupe soient formalisés.
 
 ## Conditions de réactivation
 
@@ -33,11 +33,19 @@ Vermis possède déjà les DE (Dés d'Endurance) et la Tension. Ajouter un trois
 
 ## Défis d'intégration
 
-- Ne pas créer un troisième pool parallèle aux DE et à l'END — risque de redondance et de bookkeeping.
+- Ne pas créer un troisième pool parallèle aux [[règles-santé|DE]] et à l'[[règles-santé|END]] — risque de redondance et de bookkeeping.
 - La mécanique de dépense doit rester lisible en un coup d'œil (pas de calcul post-jet).
-- Doit s'articuler avec la Tension sans la court-circuiter (le pool joueur ne doit pas annuler la pression MJ).
+- Doit s'articuler avec la [[concept-tension|Tension]] sans la court-circuiter (le pool joueur ne doit pas annuler la pression MJ).
 - Le barde comme vecteur principal ne doit pas rendre la mécanique optionnelle pour les groupes sans barde.
 
 ## Variantes & dérivés
 
-*2026-04-27 — Conversation avec Dominique :* Idée d'un pool d'Esprit collectif où le barde (et le partage d'histoires) joue un rôle central lors des repos, couplé à la nourriture et à l'abri. Le pool ferait miroir avec la Tension côté MJ — asymétrie mécanique lisible. Les joueurs pigeraient dedans pour éviter certaines conséquences (pas nécessairement des dégâts bruts). Vecteurs envisagés : récit autour du feu, qualité du repas, sécurité du campement.
+*2026-04-27 — Conversation avec Dominique :* Idée d'un pool d'Esprit collectif où le barde (et le partage d'histoires) joue un rôle central lors des repos, couplé à la nourriture et à l'abri. Le pool ferait miroir avec la [[concept-tension|Tension]] côté MJ — asymétrie mécanique lisible. Les joueurs pigeraient dedans pour éviter certaines conséquences (pas nécessairement des dégâts bruts). Vecteurs envisagés : récit autour du feu, qualité du repas, sécurité du campement.
+
+---
+
+## Voir aussi
+
+- [[concept-tension]] — pool collectif symétrique côté joueurs
+- [[règles-santé]] — END et DE existants
+- [[ref-gifts-of-food-shelter]] — duo cohérent pour le design Base Building

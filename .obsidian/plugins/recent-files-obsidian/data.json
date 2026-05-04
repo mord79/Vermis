@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "idée-evenements-aleatoires-markov",
+      "path": "02-Banque/idée-evenements-aleatoires-markov.md"
+    },
+    {
+      "basename": "concept-tension",
+      "path": "06-Wiki/concept-tension.md"
+    },
+    {
       "basename": "WIP Rule extra light test",
       "path": "09-Vermis-Mini/WIP Rule extra light test.md"
     },
@@ -81,10 +89,6 @@
       "path": "02-Banque/idée-entities-are-people.md"
     },
     {
-      "basename": "idée-evenements-aleatoires-markov",
-      "path": "02-Banque/idée-evenements-aleatoires-markov.md"
-    },
-    {
       "basename": "ref-markov-stocking",
       "path": "02-Banque/ref-markov-stocking.md"
     },
@@ -103,10 +107,6 @@
     {
       "basename": "Tell, Test, Twist",
       "path": "03-Références/Tell, Test, Twist.md"
-    },
-    {
-      "basename": "concept-tension",
-      "path": "06-Wiki/concept-tension.md"
     }
   ],
   "omittedPaths": [],

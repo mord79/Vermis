@@ -14,7 +14,7 @@ Intégrer des cases à cocher dans la table de rencontres. Trois types : événe
 
 ## Pourquoi intéressant pour Vermis
 
-Dynamisme intra-donjon entre les Faction Turns (campagne). Couplable avec la Tension : case cochée = +1 Tension. Tout sur une feuille, lisible d'un coup d'œil — respecte « monde vivant sans bookkeeping excessif ». Idéal pour mégadonjons (une RAM par niveau).
+Dynamisme intra-donjon entre les [[ref-earthmote|Faction Turns]] (campagne). Couplable avec la [[concept-tension|Tension]] : case cochée = +1 Tension. Tout sur une feuille, lisible d'un coup d'œil — respecte « monde vivant sans bookkeeping excessif ». Idéal pour mégadonjons (une RAM par niveau).
 
 ## Pourquoi pas adopté maintenant
 
@@ -24,4 +24,12 @@ Dynamisme intra-donjon entre les Faction Turns (campagne). Couplable avec la Ten
 ## Conditions de réactivation
 
 - Quand le chapitre Mégadonjon est rédigé : la RAM devient un format de feuille MJ standard.
-- Si le couplage Tension ↔ Encounter cherche un vecteur concret de progression intra-session.
+- Si le couplage [[concept-tension|Tension]] ↔ Encounter cherche un vecteur concret de progression intra-session.
+
+---
+
+## Voir aussi
+
+- [[concept-tension]] — couplage case cochée → +1 Tension
+- [[ref-earthmote]] — Faction Turns au niveau campagne
+- [[design-donjon]] — RAM comme outil intra-donjon

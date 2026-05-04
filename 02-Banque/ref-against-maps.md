@@ -15,10 +15,10 @@ Une carte ne sert que si elle alimente la décision. Quatre modes à distinguer 
 ## Pourquoi intéressant pour Vermis
 
 - Argumentaire pour adopter des **player-facing maps** dans le sandbox MVP — aligné avec *« ne pas verrouiller l'info derrière un jet »* et avec l'agence joueur.
-- La dichotomie *carte = options / procédure = coût et risque* clarifie ce qui doit être figé dans Vermis_Rules (la procédure de voyage et d'exploration) versus ce qui peut rester émergent (la carte elle-même).
+- La dichotomie *carte = options / procédure = coût et risque* clarifie ce qui doit être figé dans [[Vermis_Rules]] (la procédure de voyage et d'exploration) versus ce qui peut rester émergent (la carte elle-même).
 - Cross-réf [[ref-earthmote]] (sandbox map hex 6 miles + Landmark-Hidden-Secret) et [[ref-hexframes]] : les trois fiches forment un trio cohérent sur la prep et l'usage de la carte d'hexcrawl.
 - Pour le mégadonjon : la référence aux partial dungeon maps de Rise Up Comus est un angle à explorer — donner aux joueurs une copie partielle de la carte améliore le game loop d'extraction (savoir où on est allé, où on n'est pas allé) sans dispenser de l'exploration des contenus.
-- Pour le combat : valide l'absence d'un système de battlemap rigide dans Vermis (croquis + théâtre de l'esprit, cohérent avec la philosophie crayon-papier).
+- Pour le [[règles-combat|combat]] : valide l'absence d'un système de battlemap rigide dans Vermis (croquis + théâtre de l'esprit, cohérent avec la philosophie crayon-papier).
 
 ## Pourquoi pas adopté maintenant
 
@@ -29,3 +29,11 @@ Pas une mécanique mais un cadre conceptuel — à mobiliser au moment de rédig
 - Lors de la rédaction de la procédure de voyage / hexcrawl.
 - Lors de la rédaction du chapitre mégadonjon, en particulier sur la question « les joueurs ont-ils accès à une carte ? ».
 - Si un débat émerge sur la pertinence des battlemaps en combat Vermis.
+
+---
+
+## Voir aussi
+
+- [[ref-earthmote]] · [[ref-hexframes]] — trio cohérent sur la carte d'hexcrawl
+- [[design-donjon]] — partial dungeon maps
+- [[règles-combat]] — absence de battlemap rigide

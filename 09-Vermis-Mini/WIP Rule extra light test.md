@@ -253,4 +253,26 @@ Les Tags représentes généralement des forces d’unicité, mais aussi des avo
 | 8d6  | 99.61% | 96.48% | 10.94% |
 | 9d6  | 99.80% | 98.05% | 7.03%  |
 | 10d6 | 99.90% | 98.93% | 4.39%  |
+> 3d6, rouler 4+ pour marquer un Gain. 
+> - -1 gain = échec critique
+> - 0 gain = échec 
+> - 1 gain = succès partiel (payer 1 fatigue ou +1 Tension pour gagner 1 gain)
+> - 2 gain = succès 
+> - Max gain = succès total (enlever 1 fatigue ou diminuer la Tension de 1)
+> Utiliser un dé rouge dans le pool. Ce dé vaut le double de gain, mais aussi le double d’échec (retirant un gain). Si le total final est négatif, c’est un échec critique. 
+
+Table succès avec dé rouge
+
+| Dés lancés* | ≥2 réussites effectives | Succès négatif (0 réussite) |
+|---|---:|---:|
+| 1d6  | 50.00% | 50.00% |
+| 2d6  | 50.00% | 25.00% |
+| 3d6  | 50.00% | 12.50% |
+| 4d6  | 56.25% | 6.25%  |
+| 5d6  | 65.62% | 3.12%  |
+| 6d6  | 75.00% | 1.56%  |
+| 7d6  | 82.81% | 0.78%  |
+| 8d6  | 88.67% | 0.39%  |
+| 9d6  | 92.77% | 0.20%  |
+| 10d6 | 95.51% | 0.10%  |
 # 7 Annexe B : liste de Tags

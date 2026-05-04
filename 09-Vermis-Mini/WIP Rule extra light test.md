@@ -2,6 +2,7 @@
 
 - effet si dé principale est plus haut ou plus bas selon succès ou échec et {+} et {-}. 
 - Économie. Utiliser l’économie classique OSR
+
 - Inventaire. Utiliser l’équipement classique OSR faire des cartes équipement avec plusieurs items dessus ou une carte inventaire générale qui renvoie à une liste sur le personnage (10 max). Avoir ma carte Équipement en main permet de ne pas prendre d’action pour utiliser l’objet. 
 - Résolution alternative simple. Lancer 2d6 et obtenir au moins 1d avec 5-6 (55%). Les tags donne des dés de plus : 1/3(70%) 1/4(80%) 1/5(85%) etc. Et les tag - annule les + puis devient 2/5 (54%), 2/4 (41%), 2/3 (25%) et 2/2 (11%).
 # 2 Personages
@@ -287,4 +288,49 @@ Désavantage (garder les 3 plus bas)
 | 8d6  | 3.52%  | 85.16% |
 | 9d6  | 1.95%  | 90.04% |
 | 10d6 | 1.07%  | 93.07% |
-# 7 Annexe B : liste de Tags
+
+| Dés lancés | 2 meilleurs dés réussissent |   Gain | 2 pires dés réussissent |   Gain |
+| ---------- | --------------------------: | -----: | ----------------------: | -----: |
+| 2d6        |                      25.00% |      — |                  25.00% |      — |
+| 3d6        |                      50.00% | +25.00 |                  12.50% | -12.50 |
+| 4d6        |                      68.75% | +18.75 |                   6.25% |  -6.25 |
+| 5d6        |                      81.25% | +12.50 |                   3.12% |  -3.13 |
+| 6d6        |                      89.06% |  +7.81 |                   1.56% |  -1.56 |
+| 7d6        |                      93.75% |  +4.69 |                   0.78% |  -0.78 |
+| 8d6        |                      96.48% |  +2.73 |                   0.39% |  -0.39 |
+| 9d6        |                      98.05% |  +1.56 |                   0.20% |  -0.19 |
+| 10d6       |                      98.93% |  +0.88 |                   0.10% |  -0.10 |
+
+# 7 Dé rouge optionnel
+(Le dé rouge peut être ignoré si non gardé)
+
+| Dés lancés | 2 meilleurs dés | Gain | 2 pires dés | Gain |
+|---|---:|---:|---:|---:|
+| 2d6  | 50.00% | —      | 25.00% | —       |
+| 3d6  | 68.75% | +18.75 | 12.50% | -12.50  |
+| 4d6  | 81.25% | +12.50 | 6.25%  | -6.25   |
+| 5d6  | 89.06% | +7.81  | 3.12%  | -3.13   |
+| 6d6  | 93.75% | +4.69  | 1.56%  | -1.56   |
+| 7d6  | 96.48% | +2.73  | 0.78%  | -0.78   |
+| 8d6  | 98.05% | +1.56  | 0.39%  | -0.39   |
+| 9d6  | 98.93% | +0.88  | 0.20%  | -0.19   |
+| 10d6 | 99.41% | +0.49  | 0.10%  | -0.10   |
+
+---
+
+# 8 Dé rouge obligatoire
+(Le dé rouge doit faire partie des 2 dés gardés)
+
+| Dés lancés | 2 meilleurs dés |   Gain | 2 pires dés |   Gain |
+| ---------- | --------------: | -----: | ----------: | -----: |
+| 2d6        |          50.00% |      — |      25.00% |      — |
+| 3d6        |          62.50% | +12.50 |      12.50% | -12.50 |
+| 4d6        |          75.00% | +12.50 |       6.25% |  -6.25 |
+| 5d6        |          84.38% |  +9.38 |       3.12% |  -3.13 |
+| 6d6        |          90.62% |  +6.24 |       1.56% |  -1.56 |
+| 7d6        |          94.53% |  +3.91 |       0.78% |  -0.78 |
+| 8d6        |          96.88% |  +2.35 |       0.39% |  -0.39 |
+| 9d6        |          98.24% |  +1.36 |       0.20% |  -0.19 |
+| 10d6       |          99.02% |  +0.78 |       0.10% |  -0.10 |
+
+# 9 Annexe B : liste de Tags

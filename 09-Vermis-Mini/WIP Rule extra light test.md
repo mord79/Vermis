@@ -275,4 +275,16 @@ Table succès avec dé rouge
 | 8d6  | 88.67% | 0.39%  |
 | 9d6  | 92.77% | 0.20%  |
 | 10d6 | 95.51% | 0.10%  |
+Désavantage (garder les 3 plus bas)
+
+| Dés lancés | ≥2 réussites effectives (3 plus bas gardés) | Succès négatif (3 plus bas gardés) |
+|---|---:|---:|
+| 3d6  | 50.00% | 12.50% |
+| 4d6  | 31.25% | 31.25% |
+| 5d6  | 18.75% | 50.00% |
+| 6d6  | 10.94% | 65.62% |
+| 7d6  | 6.25%  | 77.34% |
+| 8d6  | 3.52%  | 85.16% |
+| 9d6  | 1.95%  | 90.04% |
+| 10d6 | 1.07%  | 93.07% |
 # 7 Annexe B : liste de Tags

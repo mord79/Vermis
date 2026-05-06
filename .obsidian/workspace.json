@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "09-Vermis-Mini/WIP Rule extra light test.md",
+                "file": "02-Banque/ref-mythic-bastionland-notes.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "WIP Rule extra light test"
+              "title": "ref-mythic-bastionland-notes"
             }
           }
         ],
@@ -181,13 +181,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "09-Vermis-Mini/WIP Rule extra light test.md",
+                "file": "02-Banque/ref-mythic-bastionland-notes.md",
                 "followCursor": false,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Plan de WIP Rule extra light test"
+              "title": "Plan de ref-mythic-bastionland-notes"
             }
           }
         ],
@@ -212,12 +212,16 @@
   },
   "active": "f6fcf82303a26c7e",
   "lastOpenFiles": [
+    "02-Banque/ref-want-have-sacrifice.md",
+    "02-Banque/ref-swimming-rules-hmtw.md",
+    "02-Banque/ref-cinco-conversation-rules.md",
+    "02-Banque/ref-empty-rooms-earthmote.md",
+    "09-Vermis-Mini/WIP Rule extra light test.md",
     "06-Wiki/index.md",
     "01-Règles/Caractéristiques_et_Expertise.md",
     "Sans titre.canvas",
     "02-Banque/idée-evenements-aleatoires-markov.md",
     "06-Wiki/concept-tension.md",
-    "09-Vermis-Mini/WIP Rule extra light test.md",
     "02-Banque/idée-entities-are-people.md.tmp.29172.1777907100343",
     "01-Règles/011-WIP/WIP Exploration.md",
     "09-Vermis-Mini",
@@ -242,10 +246,6 @@
     "01-Règles/012-Intégré",
     "01-Règles/011-WIP",
     "03-Références/Hechmen Are Tools.md",
-    "04-Todo/Vermis_Todo.md",
-    "01-Règles/011-WIP/WIP Repos et Guérison.md",
-    "01-Règles/011-WIP/WIP Progression.md",
-    "01-Règles/011-WIP/WIP Henchman Tool.md",
     "03-Références/markov_events_2 1.html",
     "03-Références/markov_events_2.html",
     "03-Références/Non confirmé 442429.crdownload"

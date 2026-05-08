@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "02-Banque/ref-mythic-bastionland-notes.md",
+                "file": "09-Vermis-Mini/WIP SmallFolk.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "ref-mythic-bastionland-notes"
+              "title": "WIP SmallFolk"
             }
           }
         ],
@@ -181,17 +181,27 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "02-Banque/ref-mythic-bastionland-notes.md",
+                "file": "09-Vermis-Mini/WIP SmallFolk.md",
                 "followCursor": false,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Plan de ref-mythic-bastionland-notes"
+              "title": "Plan de WIP SmallFolk"
+            }
+          },
+          {
+            "id": "5f2d8f276f8620fa",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
@@ -212,11 +222,14 @@
   },
   "active": "f6fcf82303a26c7e",
   "lastOpenFiles": [
+    "09-Vermis-Mini/WIP Rule extra light test.md",
+    "09-Vermis-Mini/WIP SmallFolk.md",
+    "09-Vermis-Mini/Setting SmallFolk.md",
+    "02-Banque/ref-mythic-bastionland-notes.md",
     "02-Banque/ref-want-have-sacrifice.md",
     "02-Banque/ref-swimming-rules-hmtw.md",
     "02-Banque/ref-cinco-conversation-rules.md",
     "02-Banque/ref-empty-rooms-earthmote.md",
-    "09-Vermis-Mini/WIP Rule extra light test.md",
     "06-Wiki/index.md",
     "01-Règles/Caractéristiques_et_Expertise.md",
     "Sans titre.canvas",
@@ -241,11 +254,8 @@
     "01-Règles/Cheat_Sheet.md",
     "01-Règles/012-Intégré/Résolutions.md",
     "01-Règles/Création_de_personnage.md",
-    "01-Règles/012-Intégré/Tables de Loot & Disponibilité.md",
-    "01-Règles/011-WIP/WIP Tension.md",
     "01-Règles/012-Intégré",
     "01-Règles/011-WIP",
-    "03-Références/Hechmen Are Tools.md",
     "03-Références/markov_events_2 1.html",
     "03-Références/markov_events_2.html",
     "03-Références/Non confirmé 442429.crdownload"

@@ -1,6 +1,22 @@
 {
   "recentFiles": [
     {
+      "basename": "regles_v07",
+      "path": "09-Vermis-Mini/Intégré/regles_v07.md"
+    },
+    {
+      "basename": "plan_de_match",
+      "path": "09-Vermis-Mini/Intégré/plan_de_match.md"
+    },
+    {
+      "basename": "ref-common-osr-questions-rancourt",
+      "path": "02-Banque/ref-common-osr-questions-rancourt.md"
+    },
+    {
+      "basename": "Vermis_Todo",
+      "path": "04-Todo/Vermis_Todo.md"
+    },
+    {
       "basename": "WIP SmallFolk",
       "path": "09-Vermis-Mini/WIP SmallFolk.md"
     },
@@ -87,10 +103,6 @@
     {
       "basename": "Hechmen Are Tools",
       "path": "03-Références/Hechmen Are Tools.md"
-    },
-    {
-      "basename": "Vermis_Todo",
-      "path": "04-Todo/Vermis_Todo.md"
     },
     {
       "basename": "WIP Repos et Guérison",

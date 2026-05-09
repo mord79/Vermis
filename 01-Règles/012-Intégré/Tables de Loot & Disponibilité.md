@@ -1,4 +1,4 @@
- ## Système de disponibilité & quantité
+## 0.1 Système de disponibilité & quantité
 
 Chaque item a une **valeur de disponibilité (1–9)**. La taille du lieu détermine le **dé lancé**.
 
@@ -33,9 +33,9 @@ _Pour les items non-quantifiables (cheval de guerre, armure de plates) : le rés
 
 ---
 
-## Marchandage & Évaluation
+## 0.2 Marchandage & Évaluation
 
-### Évaluer un objet inconnu
+### 0.2.1 Évaluer un objet inconnu
 
 Test d'Action sur l'attribut ou compétence le plus pertinent :
 
@@ -49,7 +49,7 @@ Test d'Action sur l'attribut ou compétence le plus pertinent :
 
 Le MJ fixe la Tension selon l'obscurité de l'objet. Le résultat révèle : T1 = valeur approximative, T2 = valeur précise + 1 propriété, T3 = valeur + toutes propriétés + origine probable, T4 = tout + anecdote ou secret lié à l'objet.
 
-### Marchander le prix
+### 0.2.2 Marchander le prix
 
 Un PJ peut tenter de négocier après avoir obtenu un prix. Test d'Action ESP (Diplomatie ou Sophiste si applicable).
 
@@ -67,7 +67,7 @@ Un PJ peut tenter de négocier après avoir obtenu un prix. Test d'Action ESP (D
 
 ---
 
-## Table Maître — Catégorie de loot (2d10)
+## 0.3 Table Maître — Catégorie de loot (2d10)
 
 _Premier jet : catégorie. Second jet : item dans la sous-table indiquée._
 
@@ -84,7 +84,7 @@ _Premier jet : catégorie. Second jet : item dans la sous-table indiquée._
 | 18–19 | Monnaie                  | voir table Monnaie         |
 | 20    | Colifichets              | d100                       |
 
-### Sous-table Équipement d'aventure (d8)
+### 0.3.1 Sous-table Équipement d'aventure (d8)
 
 |d8|Sous-catégorie|Sous-table|
 |---|---|---|
@@ -98,7 +98,7 @@ _Premier jet : catégorie. Second jet : item dans la sous-table indiquée._
 
 ---
 
-## Tags d'objets (d100)
+## 0.4 Tags d'objets (d100)
 
 _Tirer un tag lors d'un loot pour qualifier l'état ou la nature d'un objet trouvé. Certains tags se combinent — MJ tranche si contradictoires._
 
@@ -128,7 +128,7 @@ _Tirer un tag lors d'un loot pour qualifier l'état ou la nature d'un objet trou
 
 ---
 
-## Lumière & Combustion (d6)
+## 0.5 Lumière & Combustion (d6)
 
 |d6|Item|Verbes d'action|Disp.|Prix|[C]|
 |---|---|---|---|---|---|
@@ -141,7 +141,7 @@ _Tirer un tag lors d'un loot pour qualifier l'état ou la nature d'un objet trou
 
 ---
 
-## Escalade, Forçage & Accès (d8)
+## 0.6 Escalade, Forçage & Accès (d8)
 
 |d8|Item|Verbes d'action|Disp.|Prix|[C]|
 |---|---|---|---|---|---|
@@ -156,7 +156,7 @@ _Tirer un tag lors d'un loot pour qualifier l'état ou la nature d'un objet trou
 
 ---
 
-## Outils, Mesure & Détection (d8)
+## 0.7 Outils, Mesure & Détection (d8)
 
 |d8|Item|Verbes d'action|Disp.|Prix|[C]|
 |---|---|---|---|---|---|
@@ -171,7 +171,7 @@ _Tirer un tag lors d'un loot pour qualifier l'état ou la nature d'un objet trou
 
 ---
 
-## Substances & Produits Chimiques (d8)
+## 0.8 Substances & Produits Chimiques (d8)
 
 _Préparation et identification avancée : Art d'Herboristerie ou d'Alchimie requis._
 
@@ -188,7 +188,7 @@ _Préparation et identification avancée : Art d'Herboristerie ou d'Alchimie req
 
 ---
 
-## Camouflage, Signal & Déception (d8)
+## 0.9 Camouflage, Signal & Déception (d8)
 
 |d8|Item|Verbes d'action|Disp.|Prix|[C]|
 |---|---|---|---|---|---|
@@ -203,7 +203,7 @@ _Préparation et identification avancée : Art d'Herboristerie ou d'Alchimie req
 
 ---
 
-## Médical & Survie (d8)
+## 0.10 Médical & Survie (d8)
 
 _Utilisation avancée débloquée par l'Art de Médecine ou d'Herboristerie._
 
@@ -220,7 +220,7 @@ _Utilisation avancée débloquée par l'Art de Médecine ou d'Herboristerie._
 
 ---
 
-## Armes (d12)
+## 0.11 Armes (d12)
 
 _Dégâts : d4 → d6 → d8 → d10 → d12. Tag **lent** = agit en dernier dans son rang._
 
@@ -241,7 +241,7 @@ _Dégâts : d4 → d6 → d8 → d10 → d12. Tag **lent** = agit en dernier dan
 
 ---
 
-## Armures & Protection (d8)
+## 0.12 Armures & Protection (d8)
 
 |d8|Item|Verbes d'action|Disp.|Prix|RD|[C] éq.|
 |---|---|---|---|---|---|---|
@@ -258,7 +258,7 @@ _RD active (boucliers) : lancer le dé, prendre le meilleur entre RD passive et 
 
 ---
 
-## Magie & Savoir (d8)
+## 0.13 Magie & Savoir (d8)
 
 _Art d'Arcanisme requis pour déchiffrer et lancer._
 
@@ -275,7 +275,7 @@ _Art d'Arcanisme requis pour déchiffrer et lancer._
 
 ---
 
-## Alimentation & Auberge (d6)
+## 0.14 Alimentation & Auberge (d6)
 
 |d6|Item|Verbes d'action|Disp.|Prix|[C]|
 |---|---|---|---|---|---|
@@ -288,7 +288,7 @@ _Art d'Arcanisme requis pour déchiffrer et lancer._
 
 ---
 
-## Transport & Animaux (d8)
+## 0.15 Transport & Animaux (d8)
 
 |d8|Item|Verbes d'action|Disp.|Prix|Notes|
 |---|---|---|---|---|---|
@@ -303,11 +303,11 @@ _Art d'Arcanisme requis pour déchiffrer et lancer._
 
 ---
 
-## Herboristerie & Alchimie (d20)
+## 0.16 Herboristerie & Alchimie (d20)
 
 _Art d'Herboristerie ou d'Alchimie requis pour les usages avancés. La colonne "Où trouver" indique les environnements de récolte sauvage — indépendamment de la disponibilité en ville._
 
-### Plantes & Champignons (1–12)
+### 0.16.1 Plantes & Champignons (1–12)
 
 |d20|Item|Verbes d'action|Disp.|Prix|Où trouver|
 |---|---|---|---|---|---|
@@ -324,7 +324,7 @@ _Art d'Herboristerie ou d'Alchimie requis pour les usages avancés. La colonne "
 |11|**Mousse de lune**|stabiliser une blessure ; briller sous la lune ; ingrédient rituel (Shamanique)|5|4 PO|Clairières isolées, nuits de pleine lune|
 |12|**Racine de sommeil noir**|plonger dans le coma (VIG) ; anesthésier ; tuer par surdose|7|8 PO|Profondeurs souterraines|
 
-### Organes & Substances de Créatures (13–20)
+### 0.16.2 Organes & Substances de Créatures (13–20)
 
 _Chaque entrée indique un type d'organe et le type de créature source — plusieurs espèces peuvent convenir._
 
@@ -341,7 +341,7 @@ _Chaque entrée indique un type d'organe et le type de créature source — plus
 
 ---
 
-## Pierres Précieuses (d10)
+## 0.17 Pierres Précieuses (d10)
 
 _Valeur indicative. Un lapidaire (bourg+) peut évaluer précisément. Pierres non taillées : 20–50 % de la valeur. Un lapidaire Adepte double la valeur d'une pierre brute._
 
@@ -360,7 +360,7 @@ _Valeur indicative. Un lapidaire (bourg+) peut évaluer précisément. Pierres n
 
 ---
 
-## Objets de Luxe (d12)
+## 0.18 Objets de Luxe (d12)
 
 _Utilisables comme monnaie, cadeaux diplomatiques ou preuves de statut._
 
@@ -381,7 +381,7 @@ _Utilisables comme monnaie, cadeaux diplomatiques ou preuves de statut._
 
 ---
 
-## Services (non lootable)
+## 0.19 Services (non lootable)
 
 |Service|Ce qu'il fait|Disp.|Tarif|
 |---|---|---|---|
@@ -398,7 +398,7 @@ _Utilisables comme monnaie, cadeaux diplomatiques ou preuves de statut._
 
 ---
 
-## Hirelings — Recrues & Spécialistes (non lootable)
+## 0.20 Hirelings — Recrues & Spécialistes (non lootable)
 
 _Recrutement : Compétence Leadership ou jet ESP. Loyauté testée sous pression (arbitrage MJ). Nourriture, logement et équipement de base à la charge du groupe. Prime de danger : ×1,5 en zone active._
 
@@ -418,7 +418,7 @@ _Recrutement : Compétence Leadership ou jet ESP. Loyauté testée sous pression
 
 ---
 
-## Downtime — Services Prolongés (non lootable)
+## 0.21 Downtime — Services Prolongés (non lootable)
 
 |Service|Détail|Disp.|Coût approximatif|
 |---|---|---|---|
@@ -435,7 +435,7 @@ _Recrutement : Compétence Leadership ou jet ESP. Loyauté testée sous pression
 
 ---
 
-## Monnaie trouvée (table maître résultat 18–19)
+## 0.22 Monnaie trouvée (table maître résultat 18–19)
 
 |d6|Contenu|
 |---|---|
@@ -448,7 +448,7 @@ _Modificateur selon contexte : bandit de grand chemin → ×PA, marchand → ×P
 
 ---
 
-## Récapitulatif — Valeurs de disponibilité
+## 0.23 Récapitulatif — Valeurs de disponibilité
 
 |Valeur|Disponible à partir de|Exemples|
 |---|---|---|
@@ -457,7 +457,7 @@ _Modificateur selon contexte : bandit de grand chemin → ×PA, marchand → ×P
 |5–6|Bourg (d8 ≥ valeur)|Épée longue, grimoire, mandragore, saphir brut, mage itinérant|
 |7–8|Cité (d10 ≥ valeur)|Armure de plates, cheval de guerre, humeur pétrifiante, bijou ouvragé|
 |9|Métropole (d12 ≥ valeur)|Sang draconique, diamant, relique majeure|
-## Colifichets (d100)
+## 0.24 Colifichets (d100)
 
 _Petits objets sans usage évident. 0 charge. Portent une histoire._
 

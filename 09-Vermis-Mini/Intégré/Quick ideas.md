@@ -4,6 +4,28 @@ Rajouter une colonne vêtements
 - Justice : vêtement propre, bien entretenu
 - Etc…
 
+Simplification: 
+- Les specialisation sont des Reroll, 1 par dé seulement 
+- Enlever fatigue et faire perdre de l’endurance à la place 
+- Les blessure va faire ce que la fatigue faisait 
+- Possibilité pour la magie d’avoir une stats Volonté qui est ESP x 2. Lancer un D12 sous volonté pour caster et réduire la volonté de 1
+- Pourrait utiliser le d12 pour d’autre chose similaire selon les autres stats, comme des pool d’énergie
+	- Ex chaque stats à son pool. Quand tu tests, tu testes toujours le pool en même temps. 
+- Pour la création de perso
+	- Enlever les skill à redondant avec la stats
+		- Combattant : Milice (?)
+		- Combattant : Stabilisation 
+		- Filou : Poison
+		- Filou : chirurgie de terrain
+		- Érudit : Savoirs interdis 
+		- Érudit : Arts Médical 
+	- Le reste est donné par la stats
+
+
+
+
+
+
 Les 50% sont ->
 Attribut 4
 1d6 dif 0, 3d6 dif 1, 5d6 dif 2, 7d6 dif 3 et 9d6 dif 4

@@ -95,13 +95,13 @@ Plusieurs personnages contribuent leurs gains nets au même total. La mécanique
 
 ### 1.3.1 Armes
 
-| Arme | Dés |
-|---|---|
-| Mains nues / improvisé | −1d (2d6) |
-| Petite (dague, couteau) | +1d (4d6) |
-| Moyenne (épée courte, hache) | +2d (5d6) |
-| Longue (épée longue — standard combattant) | +3d (6d6) |
-| Lourde (deux mains) | +3d (6d6) + 2 places inventaire |
+| Arme                                       | Dés                             |
+| ------------------------------------------ | ------------------------------- |
+| Mains nues / improvisé                     | (3d6)                           |
+| Petite (dague, couteau)                    | +1d (4d6)                       |
+| Moyenne (épée courte, hache)               | +2d (5d6)                       |
+| Longue (épée longue — standard combattant) | +3d (6d6)                       |
+| Lourde (deux mains)                        | +4d (7d6) + 2 places inventaire |
 
 **Tag [pierce-X]** : chaque dé ≤ X produit 1 gain net direct, ignorant le seuil. Remplace la lecture normale pour ce dé. Tag optionnel sur certaines armes spécifiques.
 

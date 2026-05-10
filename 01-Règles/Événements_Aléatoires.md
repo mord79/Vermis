@@ -7,7 +7,7 @@ date: 2026-04-30
 màj: 2026-04-30
 ---
 
-# Événements Aléatoires en Exploration — Procédure de Tour
+# 1 Événements Aléatoires en Exploration — Procédure de Tour
 
 > [!warning] Page de travail — pas une règle canonique
 > Cette page **n'est pas dans `Vermis_Rules.md`**. Elle est un brouillon résumant l'utilisation du prototype `markov_events_2.html` pour servir de pad de rédaction. Les règles canoniques restent celles de `Vermis_Rules.md`. Les arbitrages encore ouverts sont signalés ⚠.
@@ -16,7 +16,7 @@ màj: 2026-04-30
 
 ---
 
-## 1. Quand lancer
+## 1.1 Quand lancer
 
 À chaque **tour d'exploration** (≈ 10 minutes de fiction) en donjon, ou après chaque **action significative** selon la cadence souhaitée par le MJ. Lancer une seule fois par tour.
 
@@ -24,7 +24,7 @@ màj: 2026-04-30
 
 ---
 
-## 2. Le matériel
+## 1.2 Le matériel
 
 - **2d6 distinguables** (un *Rouge*, un *Noir*).
 - La **matrice de transition** (§4) accessible au MJ.
@@ -34,7 +34,7 @@ La somme des deux dés détermine le **prochain état**. Lus séparément, le ro
 
 ---
 
-## 3. Les sept états
+## 1.3 Les sept états
 
 | État | Symbole | Description |
 |---|---|---|
@@ -52,7 +52,7 @@ La somme des deux dés détermine le **prochain état**. Lus séparément, le ro
 
 ---
 
-## 4. Matrice de transition (somme 2d6)
+## 1.4 Matrice de transition (somme 2d6)
 
 Lire : depuis l'état en **ligne**, la somme 2d6 donne l'état en **colonne**. Les états négatifs sont systématiquement sur les hauts résultats (10–12).
 
@@ -66,7 +66,7 @@ Lire : depuis l'état en **ligne**, la somme 2d6 donne l'état en **colonne**. L
 | ☠ **Fatigue** | 2–4 (16.7%) | 5–9 (61.1%) | 10 (8.3%) | — | 11 (5.6%) | *interdit* | 12 (2.8%) |
 | ☠ **Torche** | 2–4 (16.7%) | 5–9 (61.1%) | 10–11 (11.1%) | — | 12 (2.8%) | — | *interdit* |
 
-### Distribution stationnaire (long terme)
+### 1.4.1 Distribution stationnaire (long terme)
 
 | État | Fréquence |
 |---|---|
@@ -82,11 +82,11 @@ Lire : depuis l'état en **ligne**, la somme 2d6 donne l'état en **colonne**. L
 
 ---
 
-## 5. Sous-tables R/N par état
+## 1.5 Sous-tables R/N par état
 
 Une fois l'état déterminé par la somme, lire le **dé rouge** (intensité / détail primaire) et le **dé noir** (nature / contexte) séparément. Les états *Rien A* et *Rien B* n'ont pas de sous-table — la couleur peut servir d'inspiration de description ambiante au MJ.
 
-### Monstre
+### 1.5.1 Monstre
 
 | Rouge — Réaction | Noir — Activité |
 |---|---|
@@ -97,7 +97,7 @@ Une fois l'état déterminé par la somme, lire le **dé rouge** (intensité / d
 | 5 — Agressif, charge au contact | 5 — Revient de chasse, alerte |
 | 6 — Enragé, attaque sans avertissement | 6 — Accompagné (1d3 congénères) |
 
-### Signe de Monstre
+### 1.5.2 Signe de Monstre
 
 | Rouge — Fraîcheur | Noir — Type |
 |---|---|
@@ -108,7 +108,7 @@ Une fois l'état déterminé par la somme, lire le **dé rouge** (intensité / d
 | | 5 — Son lointain — grognement, cliquetis |
 | | 6 — Odeur forte et caractéristique |
 
-### Spéciale
+### 1.5.3 Spéciale
 
 | Rouge — Ampleur | Noir — Nature |
 |---|---|
@@ -119,7 +119,7 @@ Une fois l'état déterminé par la somme, lire le **dé rouge** (intensité / d
 | | 5 — Phénomène magique ou runique |
 | | 6 — Trésor ou cache de valeur |
 
-### Fatigue
+### 1.5.4 Fatigue
 
 | Rouge — Sévérité ⚠ | Noir — Qui est touché ? |
 |---|---|
@@ -132,7 +132,7 @@ Une fois l'état déterminé par la somme, lire le **dé rouge** (intensité / d
 - Sévérité Légère/Modérée : modificateur sur Tier (T-1) ou autre forme ?
 - Sévérité Sévère : perte d'END, ou dégâts directs sur attribut (VIG ?), ou simple obligation de pause ?
 
-### Torche
+### 1.5.5 Torche
 
 | Rouge — Mode d'extinction | Noir — Conséquence |
 |---|---|
@@ -148,7 +148,7 @@ Une fois l'état déterminé par la somme, lire le **dé rouge** (intensité / d
 
 ---
 
-## 6. Événements exceptionnels — Les doubles
+## 1.6 Événements exceptionnels — Les doubles
 
 Lorsque les deux dés affichent le même chiffre, **l'état normal est déclenché ET un événement exceptionnel s'y superpose**.
 
@@ -165,7 +165,7 @@ Lorsque les deux dés affichent le même chiffre, **l'état normal est déclench
 
 ---
 
-## 7. Avantage & Désavantage MJ
+## 1.7 Avantage & Désavantage MJ
 
 Comme les états négatifs sont sur les hauts résultats (10–12), avantage et désavantage côté MJ sont symétriques et lisibles.
 
@@ -178,7 +178,7 @@ Comme les états négatifs sont sur les hauts résultats (10–12), avantage et 
 
 ---
 
-## 8. Arbitrages ouverts (récapitulatif)
+## 1.8 Arbitrages ouverts (récapitulatif)
 
 Tous les ⚠ ci-dessus, regroupés pour la rédaction Vermis_Rules :
 
@@ -192,7 +192,7 @@ Tous les ⚠ ci-dessus, regroupés pour la rédaction Vermis_Rules :
 
 ---
 
-## Voir aussi
+## 1.9 Voir aussi
 
 - [[idée-evenements-aleatoires-markov]] — fiche idée banque (statut `en-développement`)
 - [[ref-markov-stocking]] — mécanique-mère (stocking de salles)
@@ -200,6 +200,6 @@ Tous les ⚠ ci-dessus, regroupés pour la rédaction Vermis_Rules :
 - [[design-donjon]] — index des outils de prep de donjon
 - `Vermis_Rules.md` Annexe E.10, VM-60 dans Vermis_Todo
 
-# Todo
+# 2 Todo
 - Évènement en Voyage extérieur
 	- Inclure météo

@@ -1,9 +1,9 @@
-# Vermis — Création de personnage
+# 1 Vermis — Création de personnage
 
 > Doit renommer l’attribut FIN pour ADResse (adresses)
 ---
 
-## Procédure
+## 1.1 Procédure
 
 - Prendre 3d6 de couleur rouge, vert et bleu.
 - Lancer les 3 dés et noter leur valeur et leur couleur dans l'ordre, de gauche à droite (ex. 3R-5B-2V).
@@ -16,7 +16,7 @@ Le dé sert deux fois : il détermine d'abord le résultat de sa propre table, p
 
 ---
 
-## D1 — Approche
+## 1.2 D1 — Approche
 
 | D6  | Approche   | Attribut                     | Expertise                            | Item                                                           | Handicap (D-Rouge) |
 | --- | ---------- | ---------------------------- | ------------------------------------ | -------------------------------------------------------------- | ------------------ |
@@ -32,7 +32,7 @@ Le dé sert deux fois : il détermine d'abord le résultat de sa propre table, p
 
 ---
 
-## D2 — Origine
+## 1.3 D2 — Origine
 
 | D6  | Origine             | Attributs                    | Expertise            | Malchance (D-Vert) |
 | --- | ------------------- | ---------------------------- | -------------------- | ------------------ |
@@ -49,27 +49,18 @@ Le dé sert deux fois : il détermine d'abord le résultat de sa propre table, p
 
 ---
 
-## D3 — Motivation
-
-| D6 | Motivation | Attribut | Don (D-Bleu) |
-|---|---|---|---|
-| 1 | Liberté | +1 VIG | *(à compléter)* |
-| 2 | Justice | +1 VIG | *(à compléter)* |
-| 3 | Équilibre | +1 ADR| *(à compléter)* |
-| 4 | Perfection | +1 ADR| *(à compléter)* |
-| 5 | Pouvoir | +1 ESP | *(à compléter)* |
-| 6 | Gloire | +1 ESP | *(à compléter)* |
+## 1.4 D3 — Motivation
 
 > ⚠️ Table **Don (D-Bleu)** : **vide** dans la source. À indexer sur la liste de Dons existante (voir [[Vermis_Rules]] §3.7 ou [[Caractéristiques_et_Expertise]]).
 
 ---
 
-## Archétype, kit personnalisé et occupation
+## 1.5 Archétype, kit personnalisé et occupation
 
 > [!info] Kit personnalisé\*
 > Donne **[+1d]** lors de son utilisation, mais **[-1d]** pour toute autre personne. −1 charge (min 0).
 
-### Combattants
+### 1.5.1 Combattants
 
 | Archétype                    | Kit personnalisé\*                 | Occupation (D-Bleu)                                                                                                                                                                                                                     |
 | ---------------------------- | ---------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -80,7 +71,7 @@ Le dé sert deux fois : il détermine d'abord le résultat de sa propre table, p
 | Artiste / Dueliste           | - *Rapière<br>- Main-gauche        | 1\. Vengeur masqué — Masque de fer<br>2\. Garde du corps — Heaume<br>3\. Instructeur d'armes — Épée de bois<br>4\. Duelliste — Gants de cuir<br>5\. Écuyer — &&&<br>6\. Officier — Longue-vue                                           |
 | Noble / Chevalier            | • \*Épée longue<br>• Bouclier      |                                                                                                                                                                                                                                         |
 
-### Filous
+### 1.5.2 Filous
 
 | Archétype                  | Kit personnalisé\*                           | Occupation (D-Bleu) |
 | -------------------------- | -------------------------------------------- | ------------------- |
@@ -91,7 +82,7 @@ Le dé sert deux fois : il détermine d'abord le résultat de sa propre table, p
 | Artiste / Barde            | • Fronde<br>• \*Kit de déguisement (?)       | *(à compléter)*     |
 | Noble /                    |                                              |                     |
 
-### Érudits
+### 1.5.3 Érudits
 
 | Archétype              | Kit personnalisé\*                                                                                                    | Occupation (D-Bleu) |
 | ---------------------- | --------------------------------------------------------------------------------------------------------------------- | ------------------- |
@@ -104,7 +95,7 @@ Le dé sert deux fois : il détermine d'abord le résultat de sa propre table, p
 
 ---
 
-## Lignée
+## 1.6 Lignée
 
 Sur un **triple de dés identiques**, le personnage est d'une lignée fantastique. Procédure :
 
@@ -114,7 +105,7 @@ Sur un **triple de dés identiques**, le personnage est d'une lignée fantastiqu
 4. Utiliser le dé relancé pour déterminer l'occupation.
 5. Utiliser l'expertise de la lignée à la place de celle de l'origine.
 
-### Option classique
+### 1.6.1 Option classique
 
 1. Nain des Collines
 2. Nain des Montagnes
@@ -123,7 +114,7 @@ Sur un **triple de dés identiques**, le personnage est d'une lignée fantastiqu
 5. Elfe Lunaire
 6. Elfe Solaire
 
-### Détail des lignées
+### 1.6.2 Détail des lignées
 
 **Nain** — +1 VIG, -1 ADR, +1 END max
 - **Robuste** : lancer les HD avec [+1d].
@@ -149,7 +140,7 @@ Sur un **triple de dés identiques**, le personnage est d'une lignée fantastiqu
 
 \*Un Combattant elfique débute avec une armure de cuir au lieu d'une cotte de mailles, et une dague en mythril à la place de ses armes de mêlée normalement attribuées.
 
-### Lignée — Tableau récapitulatif
+### 1.6.3 Lignée — Tableau récapitulatif
 
 | Lignée | Occupation | Expertise d'origine |
 |---|---|---|
@@ -160,7 +151,7 @@ Sur un **triple de dés identiques**, le personnage est d'une lignée fantastiqu
 | Elfe Lunaire | *(à compléter)* | *(à compléter)* |
 | Elfe Solaire | *(à compléter)* | *(à compléter)* |
 
-### Option animale
+### 1.6.4 Option animale
 1. Auroch 
 2. Bouc
 3. Souris
@@ -170,7 +161,7 @@ Sur un **triple de dés identiques**, le personnage est d'une lignée fantastiqu
 
 ---
 
-## Statut du document
+## 1.7 Statut du document
 
 - **Premier jet existant**, plusieurs trous (tables vides Handicap/Malchance/Don, doublon D6 5/6 dans Origine, Occupations partielles).
 - Item Vermis_Todo : **VM-64 — Création de personnage** (🔴 Critique, En cours).

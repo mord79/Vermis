@@ -1,12 +1,40 @@
 {
   "recentFiles": [
     {
-      "basename": "regles_v07",
-      "path": "09-Vermis-Mini/Intégré/regles_v07.md"
+      "basename": "regles_v08",
+      "path": "09-Vermis-Mini/Intégré/regles_v08.md"
     },
     {
       "basename": "plan_de_match",
       "path": "09-Vermis-Mini/Intégré/plan_de_match.md"
+    },
+    {
+      "basename": "Plan d'importation par point",
+      "path": "09-Vermis-Mini/Intégré/Plan d'importation par point.md"
+    },
+    {
+      "basename": "import_depuis_vermis",
+      "path": "09-Vermis-Mini/Intégré/import_depuis_vermis.md"
+    },
+    {
+      "basename": "WIP Création_de_personnage V2",
+      "path": "01-Règles/011-WIP/WIP Création_de_personnage V2.md"
+    },
+    {
+      "basename": "WIP Création_de_personnage",
+      "path": "01-Règles/011-WIP/WIP Création_de_personnage.md"
+    },
+    {
+      "basename": "regles_v07",
+      "path": "09-Vermis-Mini/OLD/regles_v07.md"
+    },
+    {
+      "basename": "Vermis_Rules",
+      "path": "01-Règles/Vermis_Rules.md"
+    },
+    {
+      "basename": "Événements_Aléatoires",
+      "path": "01-Règles/Événements_Aléatoires.md"
     },
     {
       "basename": "ref-common-osr-questions-rancourt",
@@ -67,14 +95,6 @@
     {
       "basename": "WIP Résolution v2",
       "path": "01-Règles/011-WIP/WIP Résolution v2.md"
-    },
-    {
-      "basename": "Vermis_Rules",
-      "path": "01-Règles/Vermis_Rules.md"
-    },
-    {
-      "basename": "Événements_Aléatoires",
-      "path": "01-Règles/Événements_Aléatoires.md"
     },
     {
       "basename": "Grille_Événements_Aléatoires",

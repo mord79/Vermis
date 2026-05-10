@@ -21,16 +21,18 @@
 ## 1.2 Phase 1 — Playtest minimal viable
 *Objectif : pouvoir jouer une session de donjon complète*
 
-| Élément | Priorité | Notes |
-|---|---|---|
-| **Manœuvres** (pousser, désarmer, plaquer, escalader) | 🔴 Critique | Niche principale du Rogue (FIN). Sans elles, pas de contre-jeu à la plaque. |
-| **Moral des ennemis** | 🔴 Critique | Fondamental OSR. Sans ça, tout combat va jusqu'à la mort. |
-| **Fuite et poursuite** | 🔴 Critique | Procédure explicite, pas juste un jet. |
-| **Pénalités d'armure** | 🔴 Critique | Légère/Moyenne/Lourde — FIN, vitesse, natation. |
-| **Portes secrètes et fouille** | 🟠 Important | Procédure, que sait le joueur en cas d'échec. |
-| **Sons et portée** | 🟠 Important | Combat audible à combien de salles ? Discrétion ? |
-| **Dons** (structure) | 🟠 Important | 1 par PJ, +1d situationnel. Liste à designer. |
-| **Création de personnage** | 🟠 Important | Attributs, Don, équipement de départ. |
+| Élément                                                 | Priorité     | Notes                                                                       |
+| ------------------------------------------------------- | ------------ | --------------------------------------------------------------------------- |
+| **Manœuvres** (pousser, désarmer, plaquer, escalader)   | 🔴 Critique  | Niche principale du Rogue (FIN). Sans elles, pas de contre-jeu à la plaque. |
+| **Moral des ennemis**                                   | 🔴 Critique  | Fondamental OSR. Sans ça, tout combat va jusqu'à la mort.                   |
+| **Fuite et poursuite**                                  | 🔴 Critique  | Procédure explicite, pas juste un jet.                                      |
+| **Pénalités d'armure**                                  | 🔴 Critique  | Légère/Moyenne/Lourde — FIN, vitesse, natation.                             |
+| **Portes secrètes et fouille**                          | 🟠 Important | Procédure, que sait le joueur en cas d'échec. Va dans Exploration           |
+| **Sons et portée**                                      | 🟠 Important | Combat audible à combien de salles ? Discrétion ? Va dans Exploration       |
+| **Dons** (structure)                                    | 🟠 Important | 1 par PJ, +1d situationnel. Liste à designer.                               |
+| **Création de personnage**                              | 🟠 Important | Attributs, Don, équipement de départ.                                       |
+| Faire un autre stressTest à la fin                      | 🟠 Important |                                                                             |
+| Faire un Simulateur de combat pour valider les chiffres | 🟠 Important |                                                                             |
 
 ---
 

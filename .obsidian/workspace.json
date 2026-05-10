@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "01-Règles/Événements_Aléatoires.md",
+                "file": "09-Vermis-Mini/Intégré/regles_v08.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Événements_Aléatoires"
+              "title": "regles_v08"
             }
           },
           {
@@ -27,16 +27,49 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "09-Vermis-Mini/Intégré/regles_v07.md",
+                "file": "09-Vermis-Mini/Intégré/import_depuis_vermis.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "regles_v07"
+              "title": "import_depuis_vermis"
+            }
+          },
+          {
+            "id": "fa5b38f35121121b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "01-Règles/011-WIP/WIP Création_de_personnage V2.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "WIP Création_de_personnage V2"
             }
           }
-        ],
-        "currentTab": 1
+        ]
+      },
+      {
+        "id": "ebf87629875e7b41",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e667f6e46f7d2579",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "09-Vermis-Mini/Intégré/plan_de_match.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "plan_de_match"
+            }
+          }
+        ]
       }
     ],
     "direction": "vertical"
@@ -181,13 +214,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "09-Vermis-Mini/Intégré/regles_v07.md",
+                "file": "09-Vermis-Mini/Intégré/regles_v08.md",
                 "followCursor": false,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Plan de regles_v07"
+              "title": "Plan de regles_v08"
             }
           },
           {
@@ -201,7 +234,7 @@
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -220,12 +253,20 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "b36bbe4918ab2b98",
+  "active": "c0f08cb56206d2b5",
   "lastOpenFiles": [
     "09-Vermis-Mini/Intégré/plan_de_match.md",
+    "09-Vermis-Mini/Intégré/regles_v08.md",
+    "09-Vermis-Mini/OLD",
+    "09-Vermis-Mini/Intégré/Plan d'importation par point.md",
+    "09-Vermis-Mini/Intégré/import_depuis_vermis.md",
+    "01-Règles/011-WIP/WIP Création_de_personnage V2.md",
+    "01-Règles/011-WIP/WIP Création_de_personnage.md",
+    "09-Vermis-Mini/OLD/regles_v07.md",
+    "01-Règles/Vermis_Rules.md",
+    "01-Règles/Événements_Aléatoires.md",
     "02-Banque/ref-common-osr-questions-rancourt.md",
     "09-Vermis-Mini/Intégré/stress_test.md",
-    "09-Vermis-Mini/Intégré/regles_v07.md",
     "09-Vermis-Mini/Intégré",
     "09-Vermis-Mini/WIP",
     "04-Todo/Vermis_Todo.md",
@@ -245,19 +286,10 @@
     "02-Banque/idée-entities-are-people.md.tmp.29172.1777907100343",
     "01-Règles/011-WIP/WIP Exploration.md",
     "09-Vermis-Mini",
-    "08-Setting/081-Idées/Language ancien.md",
     "08-Setting/081-Idées",
     "08-Setting",
-    "07-Banque de mots/Mots pour Voleur.md",
     "07-Banque de mots",
-    "01-Règles/011-WIP/WIP Résolution v3.md",
-    "01-Règles/011-WIP/WIP Création_de_personnage.md",
-    "01-Règles/011-WIP/WIP Création_de_personnage V2.md",
-    "01-Règles/011-WIP/WIP Résolution v2.md",
-    "01-Règles/Vermis_Rules.md",
-    "01-Règles/Événements_Aléatoires.md",
     "01-Règles/012-Intégré",
-    "01-Règles/011-WIP",
-    "03-Références/markov_events_2 1.html"
+    "01-Règles/011-WIP"
   ]
 }

@@ -4,6 +4,15 @@
 
 *Changements depuis v0.7 : import niveau A depuis Vermis principal — armes (équivalence d-X / pool), boucliers + Bloquer, définition canonique de l'usure, Prix à payer, catalogue Actions/Manœuvres/Lentes/Complètes/Gratuites, Cas particuliers de combat, Magie Cairn-like, Principes du MJ, Handicaps, Séquelles.*
 
+*Mise à jour mécanique v0.8 — refonte de la résolution :*
+- *Pool de base désormais déterminé par l'outil/arme (1d–4d), plus de 3d6 fixe.*
+- *Difficulté = pool de dés du MJ (chaque dé < threshold annule 1 gain). Threshold standard : <4.*
+- *Blessure = dé noir ajouté au pool du joueur (lancé avec, ≥ attribut annule 1 gain).*
+- *Spécialisation = reroll après jet (Spécialisé : 1d, Maître : 2d).*
+- *Push = 1 END → +1 gain net (Fatigue retirée, END seule ressource principale, Usure conservée comme alternative).*
+- *Mort : VIG×2 Blessures = Mourant.*
+- *Impasse retirée : Succès ou Échec, push toujours possible si END > 0.*
+
 ---
 
 ## 1.1 Personnage
@@ -22,11 +31,11 @@ Trois attributs, valeurs **2–6** en jeu normal (1 = état critique, 6 = élite
 
 ### 1.1.2 Endurance (END)
 
-Réserve de combat représentant l'élan, l'esquive, la résistance aux chocs.
+Réserve de combat représentant l'élan, l'esquive, la résistance aux chocs. **Sert aussi de ressource de push** (cf. §1.4.3).
 
 - **Valeur de départ** : VIG
 - Quand END = 0 : chaque coup reçu inflige une **Blessure**
-- **Mort** : Blessures = VIG
+- **Mourant** : Blessures = VIG × 2 *(cf. §1.4.5)*
 
 ### 1.1.3 Dons
 
@@ -44,56 +53,103 @@ Chaque personnage possède **1 Don** à la création. Un Don est un tag situatio
 
 ### 1.2.1 Pool de dés
 
-**Pool de base : 3d6.** L'attribut détermine la probabilité de gain par dé.
+Le pool est déterminé par l'**outil ou l'arme** utilisée. L'attribut détermine la probabilité de gain par dé.
 
-**d6 < attribut = 1 gain. Égal ou au-dessus = 0.**
+**d6 < attribut = 1 gain brut. ≥ attribut = 0.**
 
-Les modificateurs (armes, outils, conditions) ajoutent ou retirent des dés au pool.
-
-### 1.2.2 Difficulté
-
-La difficulté est un seuil. Les gains bruts doivent le **dépasser strictement** pour compter.
-
-**Gains nets = gains bruts − difficulté (si gains bruts > difficulté, sinon 0)**
-
-| Difficulté | Tâche | Armure |
-|---|---|---|
-| 0 | Normal | Aucune |
-| 1 | Ardu | Légère (cuir) |
-| 2 | Exigeant | Moyenne (maille) |
-| 3 | Extrême | Lourde (plaque) |
-| 4 | Quasi-impossible | Armure complète |
-
-### 1.2.3 Tableau de résultat
-
-| Gains nets | Résultat |
+| Situation | Pool |
 |---|---|
-| > 0 | **Succès** — gains nets = magnitude de l'effet |
-| 0 (mais gains bruts > 0) | **Impasse** — push possible |
-| 0 gains bruts | **Échec** |
+| Test nu — aucun outil | 1d |
+| Outil basique / arme petite | 2d |
+| Outil de qualité / arme moyenne | 3d |
+| Arme longue (ou outil exceptionnel) | 4d |
+
+*Maximum recommandé : 4d avant Don ou spécialisation.*
+
+Les modificateurs (Don, conditions, situation) peuvent ajouter ou retirer des dés (cf. §1.3).
+
+### 1.2.2 Spécialisation
+
+La spécialisation **ne change pas la taille du pool** — elle donne le droit de relancer des dés défavorables après avoir vu le résultat.
+
+| Niveau | Reroll | Notes |
+|---|---|---|
+| Aucun | 0 | Pool standard |
+| Spécialisé | 1 dé | Blanc ou noir, au choix |
+| Maître | 2 dés différents | Blanc et/ou noir |
+
+**Timing** : après le jet initial, avant le comptage des gains. Le joueur voit tous les dés et choisit lesquels relancer.
+
+**Restriction** : la spécialisation agit uniquement sur le pool du PJ. Les dés de difficulté du MJ ne sont jamais rerollés.
+
+**Utilités :**
+- Reroll d'un blanc en échec → tenter d'obtenir un gain supplémentaire.
+- Reroll d'un noir réussi (≥ attr) → tenter d'éviter une annulation.
+- Maître : les deux simultanément.
+
+### 1.2.3 Difficulté
+
+La difficulté est un **pool de dés lancé par le MJ**. Chaque dé MJ **< threshold** annule 1 gain brut du PJ. **Threshold standard : <4** (50% par dé).
+
+| Pool MJ | Armure / Situation                   | Annulations moyennes |
+| ------- | ------------------------------------ | -------------------- |
+| 0d      | Aucune résistance                    | 0                    |
+| 1d      | Légère (cuir)                        | 0,5                  |
+| 2d      | Moyenne (maille)                     | 1,0                  |
+| 3d      | Lourde (plaque)                      | 1,5                  |
+| 4d      | Armure complète / résistance extrême | 2,0                  |
+
+**Threshold variable (variantes optionnelles)** :
+
+| Threshold | % annulation par dé | Contexte |
+|---|---|---|
+| <3 | 33% | Armure endommagée, cible vulnérable |
+| <4 | 50% | Standard |
+| <5 | 67% | Couverture, position défavorable, résistance magique |
+
+Le MJ annonce le pool MJ et le threshold avant le jet du PJ — c'est une information tactique, pas un secret.
+
+### 1.2.4 Push (END)
+
+Sur n'importe quel résultat (succès à amplifier ou échec à sauver), le joueur peut **dépenser de l'END pour ajouter des gains**.
+
+- **1 END → +1 gain**
+- **Maximum : VIG push par jet**
+- Alternative : **1 Usure d'équipement → +1 gain (cf. §1.3.2)
+
+### 1.2.5 Tableau de résultat
+
+| Gains nets | Résultat                                       |
+| ---------- | ---------------------------------------------- |
+| > 0        | **Succès** — gains nets = magnitude de l'effet |
+| 0          | **Échec**                                      |
 
 *En combat : gains nets = END perdus par la cible.*
 
-### 1.2.4 Séquence complète
+### 1.2.6 Séquence complète
 
-1. **Pool effectif** = dés normaux − dés Blessure (min 1) + dés Fatigue
-2. **Lancer** le pool
-3. **Gains bruts** : compter les dés normaux < attribut
-4. **Fatigue annule** : chaque dé Fatigue ≥ attribut retire 1 gain brut — *avant* toute comparaison au seuil
-5. **Gains nets** : gains bruts restants − seuil (si > seuil, sinon 0)
-6. **Résultat**
+1. **Pool** = dés blancs (selon outil/arme + Don) + dés noirs (Blessures, cf. §1.4.2)
+2. **Lancer** tout le pool
+3. **Spécialisation** : si applicable, reroll 1 dé (Spécialisé) ou 2 dés (Maître). Blanc ou noir, au choix.
+4. **Gains bruts** : compter les dés blancs < attribut.
+5. **Blessure annule** : chaque dé noir ≥ attribut retire 1 gain brut (min 0).
+6. **Difficulté annule** : le MJ lance son pool — chaque dé MJ < threshold retire 1 gain brut (min 0).
+7. **Push** : le joueur peut dépenser END (ou Usure) pour ajouter des gains nets, max VIG par jet.
+8. **Résultat** : gains nets > 0 = Succès, gains nets = 0 = Échec.
 
-### 1.2.5 Tâches longues
+### 1.2.7 Tâches longues
 
 Les gains nets s'accumulent tour après tour vers un **total cible** fixé par le MJ. La mécanique de base est identique. Le temps qui passe est le coût principal.
 
-### 1.2.6 Tests collectifs
+### 1.2.8 Tests collectifs
 
 Plusieurs personnages contribuent leurs gains nets au même total. La mécanique de base est identique.
-### 1.2.7 Tests VS
 
-Lorsque deux personnages s'affronte dans un test, les deux personnage font leur test. Celui qui a le plus de gain l'emporte
-### 1.2.8 Prix à payer
+### 1.2.9 Tests VS
+
+Lorsque deux personnages s'affrontent dans un test, les deux font leur test. Celui qui a le plus de gains nets l'emporte. En cas d'égalité, statu quo (ou arbitrage MJ selon la fiction).
+
+### 1.2.10 Prix à payer
 
 Aucune mécanique. Arbitrage MJ-joueur :
 
@@ -112,16 +168,18 @@ Aucune mécanique. Arbitrage MJ-joueur :
 
 ### 1.3.1 Armes
 
-**Équivalence dé d'arme ↔ pool** :
+**Équivalence arme ↔ pool** :
 
-| Dé      | Arme                                       | Pool                            |
-| ------- | ------------------------------------------ | ------------------------------- |
-| **d2**  | Mains nues / improvisé                     | 3d6 (base)                      |
-| **d4**  | Petite (dague, couteau)                    | +1d (4d6)                       |
-| **d6**  | Moyenne (épée courte, hache)               | +2d (5d6)                       |
-| **d8**  | Longue (épée longue — standard combattant) | +3d (6d6)                       |
-| **d10** | Lourde (deux mains)                        | +4d (7d6) + 2 places inventaire |
-| **d12** | Magique/Légendaire                         | +5d (8d6)                       |
+| Arme | Pool | Notes |
+|---|---|---|
+| Mains nues / improvisé | **1d** | — |
+| Petite (dague, couteau) | **2d** | — |
+| Moyenne (épée courte, hache) | **3d** | — |
+| Longue (épée longue — standard combattant) | **4d** | — |
+| Lourde (deux mains) | **4d** | 2 places inventaire, tag {lente} |
+| Magique / Légendaire | **4d + spécial** | Effet au-delà du pool : tag, reroll, dégâts spéciaux |
+
+*Au-delà de 4d, la progression passe par la spécialisation (reroll, cf. §1.2.2), le Don (+1d, cf. §1.1.3) ou des armes magiques (effets uniques).*
 
 **Tags d'arme — types de dégâts :**
 
@@ -136,29 +194,36 @@ Aucune mécanique. Arbitrage MJ-joueur :
 
 ### 1.3.2 Outils et compétences
 
-| Outil | Dés |
-|---|---|
-| Aucun outil / handicap | −2d |
-| Outil de qualité / compétence | +1d |
-| Outil exceptionnel / maîtrise | +2d |
+Les outils déterminent le pool de base hors combat. Le tableau de §1.2.1 s'applique :
 
-**Usure** : chaque événement d'usure dégrade l'outil (ou l'arme) **d'un dé** (cf. §1.4.3 Push). À **0d** restant, l'outil ne fonctionne plus mais peut être réparé.
+| Situation | Pool |
+|---|---|
+| Aucun outil / handicap | 1d |
+| Outil basique | 2d |
+| Outil de qualité | 3d |
+| Outil exceptionnel | 4d |
+
+La **compétence** (spécialisation, cf. §1.2.2) ajoute des rerolls par-dessus, sans changer le pool.
+
+**Usure** : chaque événement d'usure dégrade l'outil (ou l'arme) **d'un dé** dans son pool (un outil de qualité 3d → 2d → 1d → cassé). À **0d**, l'outil ne fonctionne plus mais peut être réparé.
 
 **Événements d'usure** :
 
-- Push avec usure (1 Usure → +1 gain net, cf. §1.4.3).
+- Push avec usure (1 Usure → +1 gain net, cf. §1.2.4 et §1.4.3).
 - Échec avec conséquence sur un test impliquant l'outil (arbitrage MJ).
 - Hazards environnementaux (arbitrage MJ).
 
 ### 1.3.3 Armures
 
-Trois catégories. L'armure impose sa difficulté à quiconque attaque au contact. Elle impose aussi des pénalités sur certaines actions physiques.
+Trois catégories. L'armure se traduit en **dés de difficulté MJ** lancés contre toute attaque au contact (cf. §1.2.3). Elle impose aussi des pénalités sur certaines actions physiques.
 
-| Catégorie | Exemple | Places inventaire | Difficulté imposée | Pénalités                                                                     | Vitesse | dé de Fatigue                      |
-| --------- | ------- | ----------------- | ------------------ | ----------------------------------------------------------------------------- | ------- | ---------------------------------- |
-| Légère    | Cuir    | 1                 | diff 1             | aucune                                                                        | Normal  | impose un échec aussi sur un 1     |
-| Moyenne   | Maille  | 2                 | diff 2             | -1d discrétion, nage, escalade                                                | Normal  | impose un échec aussi sur un 1-2   |
-| Lourde    | Plaque  | 3                 | diff 3             | -2d discrétrion, excalade, esquive, détection avec un casque. Nage impossible | Lent    | impose un échec aussi sur un 1-2-3 |
+| Catégorie | Exemple | Places inv. | Pool MJ | Pénalités | Vitesse |
+| --- | --- | --- | --- | --- | --- |
+| Légère | Cuir | 1 | **1d** | aucune | Normal |
+| Moyenne | Maille | 2 | **2d** | -1d discrétion, nage, escalade | Normal |
+| Lourde | Plaque | 3 | **3d** | -2d discrétion, escalade, esquive, détection avec casque. Nage impossible | Lent |
+
+**Threshold standard** : <4 (50% par dé). Une armure endommagée ou un point faible peut faire passer le threshold à <3 (33%) à l'arbitrage du MJ.
 
 *Pénalités complètes (FIN, vitesse, natation, discrétion) : à développer — Phase 1.*
 
@@ -166,17 +231,16 @@ Trois catégories. L'armure impose sa difficulté à quiconque attaque au contac
 
 Le bouclier est utilisé conjointement avec l'**Action Bloquer** (cf. §1.6.3).
 
-| Bouclier       | Dé  | Places inventaire |
-| -------------- | --- | ----------------- |
-| Buckler        | +1d | 1                 |
-| Bouclier rond  | +2d | 1                 |
-| Grand bouclier | +3d | 2                 |
+| Bouclier | Dés MJ ajoutés | Places inventaire |
+| --- | --- | --- |
+| Buckler | +1d | 1 |
+| Bouclier rond | +2d | 1 |
+| Grand bouclier | +3d | 2 |
 
 **Mécanique** — quand un PJ utilise l'Action Bloquer pour parer une attaque annoncée :
 
-1. Lancer le dé du bouclier.
-2. **Le résultat est ajouté à la difficulté** de l'attaque entrante (en plus de la difficulté d'armure).
-3. L'attaquant doit dépasser cette difficulté combinée pour infliger des gains nets.
+1. Le bouclier ajoute ses dés au **pool de difficulté du MJ** de l'attaque entrante (en plus du pool d'armure).
+2. Le MJ lance ce pool combiné — chaque dé < threshold annule 1 gain brut de l'attaquant.
 
 Bouclier ou couverture obligatoire pour bloquer un projectile.
 
@@ -184,53 +248,54 @@ Bouclier ou couverture obligatoire pour bloquer un projectile.
 
 ## 1.4 Conditions
 
-### 1.4.1 Fatigue
-
-**Source** : push, effort soutenu, privation, magie, stress.
-
-**Effet** : ajoute 1 dé de couleur différente (noir ou bleu) au pool. Chaque dé Fatigue ≥ attribut annule 1 gain brut — avant la comparaison au seuil. Efficace même à difficulté 0.
-### 1.4.2 Blessure
+### 1.4.1 Blessure
 
 **Source** : coups reçus au combat (END = 0), pièges, chutes, maladies graves.
 
-**Effet** : retire 1 dé normal du pool (min 1 dé). Réduction certaine, visible physiquement sur la table.
+**Effet** : ajoute 1 **dé noir** au pool du joueur. Le dé est lancé avec les dés blancs ; chaque dé noir **≥ attribut** annule 1 gain brut (cf. séquence §1.2.6, étape 5). Visible physiquement sur la table par sa couleur distincte.
 
-### 1.4.3 Push
+*La Blessure pénalise donc tous les jets impliquant l'attribut concerné, mais avec un effet probabiliste (≥ attr, soit ~50% à attr 4) — pas une réduction certaine.*
 
-Sur une **Impasse** (ou pour amplifier un succès) :
+### 1.4.2 Push
 
-- **1 Fatigue → +1 gain net**
-- **1 Usure (équipement) → +1 gain net**
+Le joueur peut amplifier ses gains nets en payant une ressource :
 
-**Maximum = VIG push par jet.**
+- **1 END → +1 gain net**
+- **1 Usure (équipement) → +1 gain net** *(alternative, cf. §1.3.2)*
 
-L'Usure dégrade l'équipement d'un dé. Un objet à 0d est brisé (cf. §1.3.3, §1.3.5).
+**Maximum : VIG push par jet** (toutes ressources confondues).
 
-### 1.4.4 Équiper une condition
+Le push s'applique sur tout jet, succès comme échec — c'est un dernier souffle pour transformer l'effort.
 
-Le joueur peut **équiper** un dé de Fatigue ou de Blessure comme action.
+### 1.4.3 Équiper une condition
 
-- Le dé est retiré du pool — ni effet positif ni négatif
-- Coût : **1 place d'inventaire**
-- **Irrévocable sans soins** — la place reste occupée jusqu'à guérison
+Le joueur peut **équiper** une Blessure comme action.
 
-### 1.4.5 Limites
-limite de fatigue ou blessure, quelles soient équipées ou non.
+- Le dé noir est retiré du pool — ni effet positif ni négatif sur les jets.
+- Coût : **1 place d'inventaire**.
+- **Irrévocable sans soins** — la place reste occupée jusqu'à guérison.
 
-| Condition | Limite  | État        |
-| --------- | ------- | ----------- |
-| Fatigue   | VIG × 2 | Inconscient |
-| Blessure  | VIG × 2 | Mourant     |
+### 1.4.4 Limites
 
-### 1.4.6 Récupération
-Le PJ possède VIG points de récupération (PR). Il peut les utiliser pour se soigner
+| Condition | Limite | État |
+| --- | --- | --- |
+| END = 0 | — | Chaque coup reçu = 1 Blessure |
+| Blessure | VIG × 2 | Mourant |
 
-| Méthode              | Durée                       | Effet                                                                                                                                                                                                |
-| -------------------- | --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Deuxième souffle** | Action complète (en combat) | 1 PR → récupérer 1d6 END                                                                                                                                                                             |
-| **Repos court**      | 1 tour                      | 1 PR pour enlerver 1 Fatigue OU récupérer tous les END                                                                                                                                               |
-| **Repos long**       | 1 nuit + repas              | 1 PR pour Retirer toute la Fatigue + regagner tous les END ou Retirer 1 Blessure *si Fatigue = 0*<br>Les PR sont récupéré au matin après le repos complet, nuit de sommeil et repas complet le soir. |
-| **Repos complet**    | 1 semaine en lieu sûr       | Tout est guéri                                                                                                                                                                                       |
+Les Blessures sont comptées qu'elles soient équipées ou non.
+
+### 1.4.5 Récupération
+
+Le PJ possède **VIG points de récupération (PR)**. Il les dépense pour se soigner.
+
+| Méthode | Durée | Effet |
+| --- | --- | --- |
+| **Deuxième souffle** | Action complète (en combat) | 1 PR → récupérer 1d6 END |
+| **Repos court** | 1 tour | 1 PR → récupérer tout l'END |
+| **Repos long** | 1 nuit + repas | 1 PR → tout l'END + retirer 1 Blessure |
+| **Repos complet** | 1 semaine en lieu sûr | Tout guéri (END, Blessures, PR) |
+
+Les PR sont **récupérés au matin** après une nuit de sommeil complète et un repas chaud le soir.
 
 ---
 ## 1.5 Inventaire
@@ -259,11 +324,19 @@ Chaque objet = 1 place. Exceptions :
 
 ### 1.6.2 Attaquer
 
-Pool = 3d6 + dés arme + spécialisation. Attribut = seuil. Armure cible = difficulté (+ dé de bouclier si Bloquer actif). **Gains nets = END perdus.**
+**Pool joueur** = dés d'arme (1d à 4d, cf. §1.3.1) + Don si applicable + dés noirs Blessure.
+**Attribut** = VIG ou FIN selon l'arme (mêlée vs distance, cf. §1.1.1) — sert de seuil pour les dés blancs.
+**Pool MJ** = dés d'armure (cf. §1.3.3) + dés de bouclier si Bloquer actif (cf. §1.3.4) + dés situationnels éventuels.
+**Threshold MJ** = <4 standard.
+**Spécialisation** = reroll après le jet (cf. §1.2.2).
+
+**Résolution** : suivre la séquence §1.2.6.
+
+**Gains nets = END perdus par la cible.**
 ### 1.6.3 Actions
 
 - **Attaquer** — résolution selon §1.6.2. À dé d'arme égal, les armes {rapide} agissent en premier, les {lente} en dernier.
-- **Bloquer** — annule ou réduit les dégâts d'une attaque annoncée. Arme égale ou plus grande, ou bouclier/couverture. Avec bouclier : dé du bouclier ajouté à la difficulté de l'attaque entrante (cf. §1.3.5). Bouclier ou couverture obligatoire pour projectiles.
+- **Bloquer** — annule ou réduit les dégâts d'une attaque annoncée. Arme égale ou plus grande, ou bouclier/couverture. Avec bouclier : dés du bouclier ajoutés au pool de difficulté MJ de l'attaque entrante (cf. §1.3.4). Bouclier ou couverture obligatoire pour projectiles.
 - **Esquiver** — annule une attaque en se déplaçant hors de portée. Espace libre nécessaire.
 - **Lancer un objet** — projeter, jeter.
 - **Activer un objet** — potion, parchemin, mécanisme, relique à charge.
@@ -293,7 +366,7 @@ Sans test si trivial. Au contact d'un ennemi actif → **test opposé** VIG ou F
 - **Recharger** — arbalète, fronde, arme complexe.
 - **Invoquer un sort** — peut être tagué *lent* (cf. §1.7).
 - **Fouiller** — sortir un objet précis du sac, vider une poche, fouiller un corps.
-- **Reprendre son souffle** — Deuxième souffle (cf. §1.4.6).
+- **Reprendre son souffle** — Deuxième souffle (cf. §1.4.5).
 
 **Actions gratuites** — parler, prendre un objet équipé (ceinture).
 
@@ -342,16 +415,16 @@ Système simple, inspiré de [Cairn](https://cairnrpg.com/resources/more-spellbo
 - **1 sort par grimoire**.
 - **1 grimoire = 1 place d'inventaire**.
 - Sans grimoire en main, le sort ne peut pas être lancé.
-- Lancer un sort coûte **1 Fatigue** (toujours).
+- Lancer un sort coûte **1 END** (toujours).
 - En **stress ou combat** : faire un **Test ESP** au lancement.
-- **Difficulté = 1** par défaut (modulable selon contexte).
-- Connaître l'**Arcanique** *(Savoir)* donne **+1d** au test.
+- **Pool magie de base** : 2d. **Pool MJ** : 1d (threshold <4) par défaut, modulable selon contexte.
+- Connaître l'**Arcanique** *(Savoir)* donne **+1d** au pool magie.
 
 ### 1.7.2 Procédure de lancer
 
 1. **Déclarer** le sort et la cible.
-2. **Prendre 1 Fatigue**.
-3. **Si stress / combat** : Test ESP (pool 3d6 + dés Fatigue, dif. 1, +1d si Arcanique connue).
+2. **Dépenser 1 END**.
+3. **Si stress / combat** : Test ESP (pool 2d + dés noirs Blessure éventuels, +1d si Arcanique connue ; pool MJ 1d threshold <4).
 4. **Hors stress** : pas de test, sort lancé automatiquement.
 5. **Résoudre** l'effet selon le sort.
 
@@ -359,9 +432,8 @@ Système simple, inspiré de [Cairn](https://cairnrpg.com/resources/more-spellbo
 
 | Résultat | Effet |
 |---|---|
-| **Succès** | Sort lancé normalement. |
-| **Impasse** | Sort affaibli ou imprécis (interprétation MJ). Push possible. |
-| **Échec** | Sort raté. Fatigue consommée. Conséquence narrative possible. |
+| **Succès (gains nets > 0)** | Sort lancé normalement. Magnitude = gains nets. |
+| **Échec (gains nets = 0)** | Sort raté. END consommée. Conséquence narrative possible. Push possible (1 END → +1 gain) si END > 0. |
 
 ### 1.7.4 Catalogue de sorts
 
@@ -457,64 +529,147 @@ Comment évoluent les attributs, spécialisations et dons. Probablement lié à 
 
 ## 1.13 Appendice A — Tables de probabilité
 
-*S% / I% / É% — d6 < attribut = gain, gains > seuil = succès*
+*Probabilité de succès strict (gains nets > 0). Sans push, sans spécialisation, sans Blessure. Threshold MJ standard : <4. **Gras** = ligne attribut 4 (référence).*
 
-### 1.13.1 Difficulté 0
+### 1.13.1 Pool MJ 0d — Aucune armure
 
-| | 3d | 4d | 5d | 6d | 7d | 8d | 9d | 10d |
-|---|---|---|---|---|---|---|---|---|
-| Attr 2 | 42/0/58% | 52/0/48% | 60/0/40% | 67/0/33% | 72/0/28% | 77/0/23% | 81/0/19% | 84/0/16% |
-| Attr 3 | 70/0/30% | 80/0/20% | 87/0/13% | 91/0/9% | 94/0/6% | 96/0/4% | 97/0/3% | 98/0/2% |
-| **Attr 4** | **88/0/12%** | **94/0/6%** | **97/0/3%** | **98/0/2%** | **99/0/1%** | **100/0/0%** | **100/0/0%** | **100/0/0%** |
-| Attr 5 | 96/0/4% | 99/0/1% | 100/0/0% | 100/0/0% | 100/0/0% | 100/0/0% | 100/0/0% | 100/0/0% |
-| Attr 6 | 100/0/0% | 100/0/0% | 100/0/0% | 100/0/0% | 100/0/0% | 100/0/0% | 100/0/0% | 100/0/0% |
+|  | Pool 1d | Pool 2d | Pool 3d | Pool 4d |
+|---|---|---|---|---|
+| Attr 2 | 17% | 31% | 42% | 52% |
+| Attr 3 | 33% | 56% | 70% | 80% |
+| **Attr 4** | **50%** | **75%** | **88%** | **94%** |
+| Attr 5 | 67% | 89% | 96% | 99% |
+| Attr 6 | 83% | 97% | 100% | 100% |
 
-### 1.13.2 Difficulté 1 — Cuir
+### 1.13.2 Pool MJ 1d — Cuir
 
-| | 3d | 4d | 5d | 6d | 7d | 8d | 9d | 10d |
-|---|---|---|---|---|---|---|---|---|
-| Attr 2 | 7/35/58% | 13/39/48% | 20/40/40% | 26/40/33% | 33/39/28% | 40/37/23% | 46/35/19% | 52/32/16% |
-| Attr 3 | 26/44/30% | 41/40/20% | 54/33/13% | 65/26/9% | 74/20/6% | 80/16/4% | 86/12/3% | 90/9/2% |
-| **Attr 4** | **50/38/12%** | **69/25/6%** | **81/16/3%** | **89/9/2%** | **94/5/1%** | **96/3/0%** | **98/2/0%** | **99/1/0%** |
-| Attr 5 | 74/22/4% | 89/10/1% | 95/4/0% | 98/2/0% | 99/1/0% | 100/0/0% | 100/0/0% | 100/0/0% |
-| Attr 6 | 93/7/0% | 98/2/0% | 100/0/0% | 100/0/0% | 100/0/0% | 100/0/0% | 100/0/0% | 100/0/0% |
+|  | Pool 1d | Pool 2d | Pool 3d | Pool 4d |
+|---|---|---|---|---|
+| Attr 2 | 8% | 17% | 25% | 32% |
+| Attr 3 | 17% | 33% | 48% | 60% |
+| **Attr 4** | **25%** | **50%** | **69%** | **81%** |
+| Attr 5 | 33% | 67% | 85% | 94% |
+| Attr 6 | 42% | 83% | 96% | 99% |
 
-### 1.13.3 Difficulté 2 — Maille
+### 1.13.3 Pool MJ 2d — Maille
 
-| | 3d | 4d | 5d | 6d | 7d | 8d | 9d | 10d |
-|---|---|---|---|---|---|---|---|---|
-| Attr 2 | 0/42/58% | 2/50/48% | 4/56/40% | 6/60/33% | 10/63/28% | 13/63/23% | 18/63/19% | 23/61/16% |
-| Attr 3 | 4/67/30% | 11/69/20% | 21/66/13% | 32/59/9% | 43/51/6% | 53/43/4% | 62/35/3% | 70/28/2% |
-| **Attr 4** | **12/75/12%** | **31/62/6%** | **50/47/3%** | **66/33/2%** | **77/22/1%** | **86/14/0%** | **91/9/0%** | **94/5/0%** |
-| Attr 5 | 30/67/4% | 59/40/1% | 79/21/0% | 90/10/0% | 95/4/0% | 98/2/0% | 99/1/0% | 100/0/0% |
-| Attr 6 | 58/42/0% | 87/13/0% | 96/4/0% | 99/1/0% | 100/0/0% | 100/0/0% | 100/0/0% | 100/0/0% |
+|  | Pool 1d | Pool 2d | Pool 3d | Pool 4d |
+|---|---|---|---|---|
+| Attr 2 | 4% | 9% | 14% | 20% |
+| Attr 3 | 8% | 19% | 31% | 43% |
+| **Attr 4** | **12%** | **31%** | **50%** | **66%** |
+| Attr 5 | 17% | 44% | 69% | 84% |
+| Attr 6 | 21% | 59% | 86% | 96% |
 
-### 1.13.4 Difficulté 3 — Plaque
+### 1.13.4 Pool MJ 3d — Plaque
 
-| | 3d | 4d | 5d | 6d | 7d | 8d | 9d | 10d |
-|---|---|---|---|---|---|---|---|---|
-| Attr 2 | 0/42/58% | 0/52/48% | 0/59/40% | 1/66/33% | 2/70/28% | 3/74/23% | 5/76/19% | 7/77/16% |
-| Attr 3 | 0/70/30% | 1/79/20% | 5/82/13% | 10/81/9% | 17/77/6% | 26/70/4% | 35/62/3% | 44/54/2% |
-| **Attr 4** | **0/88/12%** | **6/88/6%** | **19/78/3%** | **34/64/2%** | **50/49/1%** | **64/36/0%** | **75/25/0%** | **83/17/0%** |
-| Attr 5 | 0/96/4% | 20/79/1% | 46/53/0% | 68/32/0% | 83/17/0% | 91/9/0% | 96/4/0% | 98/2/0% |
-| Attr 6 | 0/100/0% | 48/52/0% | 80/20/0% | 94/6/0% | 98/2/0% | 100/0/0% | 100/0/0% | 100/0/0% |
+|  | Pool 1d | Pool 2d | Pool 3d | Pool 4d |
+|---|---|---|---|---|
+| Attr 2 | 2% | 5% | 8% | 12% |
+| Attr 3 | 4% | 11% | 20% | 30% |
+| **Attr 4** | **6%** | **19%** | **34%** | **50%** |
+| Attr 5 | 8% | 28% | 51% | 70% |
+| Attr 6 | 10% | 38% | 69% | 88% |
+
+### 1.13.5 Pool MJ 4d — Armure complète / résistance extrême
+
+|  | Pool 1d | Pool 2d | Pool 3d | Pool 4d |
+|---|---|---|---|---|
+| Attr 2 | 1% | 3% | 5% | 7% |
+| Attr 3 | 2% | 6% | 12% | 20% |
+| **Attr 4** | **3%** | **11%** | **23%** | **36%** |
+| Attr 5 | 4% | 17% | 36% | 56% |
+| Attr 6 | 5% | 23% | 51% | 75% |
+
+### 1.13.6 Vérification de la diagonale ~50%
+
+À attribut 4, threshold <4 — un pool joueur de N+1 dés contre un pool MJ de N dés donne pile **50%** de succès strict. C'est la calibration centrale du système.
+
+| Confrontation | Pool joueur | Pool MJ | Succès |
+|---|---|---|---|
+| Mains nues vs Sans armure | 1d | 0d | **50%** |
+| Petite arme vs Cuir | 2d | 1d | **50%** |
+| Arme moyenne vs Maille | 3d | 2d | **50%** |
+| Arme longue vs Plaque | 4d | 3d | **50%** |
+
+La spécialisation (reroll) déplace ce seuil sans changer le pool — un Spécialisé attr 4 sur 2d/1d passe d'environ 50% à ~67% par exemple.
+
+### 1.13.7 Gains nets moyens (E[net])
+
+*Utile pour estimer END perdus en combat ou magnitude des effets. Mêmes hypothèses qu'en 1.13.1–1.13.5.*
+
+#### 1.13.7.1 Pool MJ 0d
+
+|  | 1d | 2d | 3d | 4d |
+|---|---|---|---|---|
+| **Attr 4** | **0,50** | **1,00** | **1,50** | **2,00** |
+| Attr 5 | 0,67 | 1,33 | 2,00 | 2,67 |
+| Attr 6 | 0,83 | 1,67 | 2,50 | 3,33 |
+
+#### 1.13.7.2 Pool MJ 1d
+
+|  | 1d | 2d | 3d | 4d |
+|---|---|---|---|---|
+| **Attr 4** | **0,25** | **0,62** | **1,06** | **1,53** |
+| Attr 5 | 0,33 | 0,89 | 1,52 | 2,17 |
+| Attr 6 | 0,42 | 1,18 | 2,00 | 2,83 |
+
+#### 1.13.7.3 Pool MJ 2d
+
+|  | 1d | 2d | 3d | 4d |
+|---|---|---|---|---|
+| **Attr 4** | **0,12** | **0,38** | **0,72** | **1,12** |
+| Attr 5 | 0,17 | 0,56 | 1,09 | 1,70 |
+| Attr 6 | 0,21 | 0,76 | 1,52 | 2,34 |
+
+#### 1.13.7.4 Pool MJ 3d
+
+|  | 1d | 2d | 3d | 4d |
+|---|---|---|---|---|
+| **Attr 4** | **0,06** | **0,22** | **0,47** | **0,80** |
+| Attr 5 | 0,08 | 0,33 | 0,75 | 1,28 |
+| Attr 6 | 0,10 | 0,47 | 1,09 | 1,86 |
+
+#### 1.13.7.5 Pool MJ 4d
+
+|  | 1d | 2d | 3d | 4d |
+|---|---|---|---|---|
+| **Attr 4** | **0,03** | **0,12** | **0,30** | **0,55** |
+| Attr 5 | 0,04 | 0,19 | 0,50 | 0,93 |
+| Attr 6 | 0,05 | 0,28 | 0,75 | 1,42 |
 
 ---
 
 ## 1.14 Appendice B — Tableau de progression tactique
 
-*Succès% sans push. **Gras** = ~50%. -- = <15%*
+*Succès% sans push, sans spécialisation, sans Blessure. Threshold MJ <4. **Gras** = ~50%. -- = <15%.*
 
-| Ennemi | END | Mage 3d/A3 | Rogue 4d/A4 | Rogue 5d/A4 | Rogue 5d/A5 | Comb 6d/A4 | Comb 6d/A5 | Comb 7d/A4 | Comb 7d/A5 |
+Profils types :
+- **Mage** : 2d (dague) / Attr 3 (ESP pour magie ; mais ESP rarement en attaque physique)
+- **Rogue** : 2d (dague) ou 3d (épée courte) / Attr 4 (FIN)
+- **Combattant** : 3d (moyenne) ou 4d (longue) / Attr 4–5 (VIG)
+- **Vétéran** : 4d (longue) / Attr 5 (VIG)
+- **Élite** : 4d + spécialisation / Attr 5–6
+
+| Ennemi (Pool MJ) | END typique | Mage 2d/A3 | Rogue 2d/A4 | Rogue 3d/A4 | Comb 3d/A4 | Comb 4d/A4 | Comb 4d/A5 | Vét 4d/A5 | Élite 4d/A6 |
 |---|---|---|---|---|---|---|---|---|---|
-| Vermine / Ø armure | 2-3 | 70% | 94% | 97% | 100% | 98% | 100% | 99% | 100% |
-| Vermine / Cuir | 2-3 | 26% | 69% | 81% | 95% | 89% | 98% | 94% | 99% |
-| Soldat / Cuir | 4-5 | 26% | 69% | 81% | 95% | 89% | 98% | 94% | 99% |
-| Soldat / Maille | 4-6 | --4%-- | 31% | **50%** | 79% | 66% | 90% | 77% | 95% |
-| Vétéran / Maille | 6-8 | --4%-- | 31% | **50%** | 79% | 66% | 90% | 77% | 95% |
-| Vétéran / Plaque | 6-8 | --0%-- | --6%-- | 19% | **46%** | 34% | 68% | **50%** | 83% |
-| Élite / Plaque | 8-10 | --0%-- | --6%-- | 19% | **46%** | 34% | 68% | **50%** | 83% |
-| Boss / Plaque | 10+ | --0%-- | --6%-- | 19% | **46%** | 34% | 68% | **50%** | 83% |
+| Vermine / Ø armure (0d) | 2–3 | 56% | 75% | 88% | 88% | 94% | 99% | 99% | 100% |
+| Vermine / Cuir (1d) | 2–3 | 33% | **50%** | 69% | 69% | 81% | 94% | 94% | 99% |
+| Soldat / Cuir (1d) | 4–5 | 33% | **50%** | 69% | 69% | 81% | 94% | 94% | 99% |
+| Soldat / Maille (2d) | 4–6 | 19% | 31% | **50%** | **50%** | 66% | 84% | 84% | 96% |
+| Vétéran / Maille (2d) | 6–8 | 19% | 31% | **50%** | **50%** | 66% | 84% | 84% | 96% |
+| Vétéran / Plaque (3d) | 6–8 | --11%-- | 19% | 34% | 34% | **50%** | 70% | 70% | 88% |
+| Élite / Plaque (3d) | 8–10 | --11%-- | 19% | 34% | 34% | **50%** | 70% | 70% | 88% |
+| Boss / Plaque + bouclier (4d) | 10+ | --6%-- | --11%-- | 23% | 23% | 36% | 56% | 56% | 75% |
+
+**Lecture :**
+- Le combattant standard (4d/A4) atteint la diagonale 50% jusqu'à la plaque.
+- Le mage avec une dague est sous le seuil dès la maille — il doit privilégier sa magie ou la fuite.
+- Au-delà de la plaque (boss + bouclier 4d MJ), **seule la spécialisation, le push, ou un Don change la donne.**
+
+**Avec push (1 END = +1 gain net, max VIG par jet) :**
+- Le push transforme un échec frôlé en succès. Sur 4d/A4 vs 3d MJ, les jets qui produisent ≥1 gain brut mais 0 gain net (≈14% des cas) deviennent récupérables.
+- À VIG 4 et END 4, un combattant peut soutenir 4 push sur l'ensemble d'un combat (réparti comme il le souhaite).
 
 ---
 
@@ -547,7 +702,7 @@ Comment évoluent les attributs, spécialisations et dons. Probablement lié à 
 
 | Handicap | Note |
 |---|---|
-| **Faible** | *À développer* — référence Stress (à transposer vers Fatigue ou autre). |
+| **Faible** | *À développer* — référence Stress (à transposer vers END / Blessure ou autre). |
 | **Asthme** | *À développer* — référence Stress. |
 | **Pessimisme contagieux** | *À développer* — référence Panique et DAV. |
 | **Irritable** | *À développer* — référence Stress. |

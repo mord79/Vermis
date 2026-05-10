@@ -1,11 +1,19 @@
+Simplification 2 
+- Main 1d, improv 2D, petit 3D, moyen 4d, long 5d, lourd 6d
+- +1 gain sur succes double (même chiffre),+2 si triple 
+- Armure / difficulté fix
+- Pas de dé de specialisation 
+- Blessure = -1 attribut 
+- 
 
-Simplification: 
-- Les specialisation sont des Reroll, 1 par dé seulement 
-- Enlever fatigue et faire perdre de l’endurance à la place 
-- Les blessure va faire ce que la fatigue faisait 
-- Possibilité pour la magie d’avoir une stats Volonté qui est ESP x 2. Lancer un D12 sous volonté pour caster et réduire la volonté de 1
-- Pourrait utiliser le d12 pour d’autre chose similaire selon les autres stats, comme des pool d’énergie
-	- Ex chaque stats à son pool. Quand tu tests, tu testes toujours le pool en même temps. 
+
+~~Simplification:~~ 
+- ~~Les specialisation sont des Reroll, 1 par dé seulement~~ 
+- ~~Enlever fatigue et faire perdre de l’endurance à la place~~ 
+- ~~Les blessure va faire ce que la fatigue faisait~~ 
+- ~~Possibilité pour la magie d’avoir une stats Volonté qui est ESP x 2. Lancer un D12 sous volonté pour caster et réduire la volonté de 1~~
+- ~~Pourrait utiliser le d12 pour d’autre chose similaire selon les autres stats, comme des pool d’énergie~~
+	- ~~Ex chaque stats à son pool. Quand tu tests, tu testes toujours le pool en même temps.~~ 
 - Pour la création de perso
 	- Enlever les skill à redondant avec la stats
 		- Combattant : Milice (?)

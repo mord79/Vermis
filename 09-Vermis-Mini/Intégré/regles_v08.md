@@ -1,17 +1,18 @@
 # 1 [Nom du système] — Règles
 
-*Version 0.8 — document de référence*
+*Version 0.8.1 — document de référence*
 
 *Changements depuis v0.7 : import niveau A depuis Vermis principal — armes (équivalence d-X / pool), boucliers + Bloquer, définition canonique de l'usure, Prix à payer, catalogue Actions/Manœuvres/Lentes/Complètes/Gratuites, Cas particuliers de combat, Magie Cairn-like, Principes du MJ, Handicaps, Séquelles.*
 
-*Mise à jour mécanique v0.8 — refonte de la résolution :*
-- *Pool de base désormais déterminé par l'outil/arme (1d–4d), plus de 3d6 fixe.*
-- *Difficulté = pool de dés du MJ (chaque dé < threshold annule 1 gain). Threshold standard : <4.*
-- *Blessure = dé noir ajouté au pool du joueur (lancé avec, ≥ attribut annule 1 gain).*
-- *Spécialisation = reroll après jet (Spécialisé : 1d, Maître : 2d).*
-- *Push = 1 END → +1 gain net (Fatigue retirée, END seule ressource principale, Usure conservée comme alternative).*
+*Mise à jour v0.8.1 — simplification de la procédure de test :*
+- *Pool de base par outil/arme (1d–4d). Plafond effectif **6d**.*
+- *Difficulté = **soustraction de dés** au pool joueur (plus de jet MJ, plus de threshold variable).*
+- *Blessure = **−1d** au pool (plus de dé noir, plus de tri couleur).*
+- *Spécialisation = **+1d au pool** (Spécialisé : +1d, Maître : +2d). Plus de reroll post-jet.*
+- *Push **pré-déclaré** : 1 END = +1d au pool, max VIG par jet (sous plafond 6d). END payée d'avance, pari assumé.*
 - *Mort : VIG×2 Blessures = Mourant.*
-- *Impasse retirée : Succès ou Échec, push toujours possible si END > 0.*
+- *Impasse retirée : Succès ou Échec.*
+- *Séquence ramenée à 4 étapes : construire pool → lancer → compter → résultat.*
 
 ---
 
@@ -417,7 +418,6 @@ Système simple, inspiré de [Cairn](https://cairnrpg.com/resources/more-spellbo
 - Sans grimoire en main, le sort ne peut pas être lancé.
 - Lancer un sort coûte **1 END** (toujours).
 - En **stress ou combat** : faire un **Test ESP** au lancement.
-- **Pool magie de base** : 2d. **Pool MJ** : 1d (threshold <4) par défaut, modulable selon contexte.
 - Connaître l'**Arcanique** *(Savoir)* donne **+1d** au pool magie.
 
 ### 1.7.2 Procédure de lancer
@@ -594,49 +594,6 @@ Comment évoluent les attributs, spécialisations et dons. Probablement lié à 
 
 La spécialisation (reroll) déplace ce seuil sans changer le pool — un Spécialisé attr 4 sur 2d/1d passe d'environ 50% à ~67% par exemple.
 
-### 1.13.7 Gains nets moyens (E[net])
-
-*Utile pour estimer END perdus en combat ou magnitude des effets. Mêmes hypothèses qu'en 1.13.1–1.13.5.*
-
-#### 1.13.7.1 Pool MJ 0d
-
-|  | 1d | 2d | 3d | 4d |
-|---|---|---|---|---|
-| **Attr 4** | **0,50** | **1,00** | **1,50** | **2,00** |
-| Attr 5 | 0,67 | 1,33 | 2,00 | 2,67 |
-| Attr 6 | 0,83 | 1,67 | 2,50 | 3,33 |
-
-#### 1.13.7.2 Pool MJ 1d
-
-|  | 1d | 2d | 3d | 4d |
-|---|---|---|---|---|
-| **Attr 4** | **0,25** | **0,62** | **1,06** | **1,53** |
-| Attr 5 | 0,33 | 0,89 | 1,52 | 2,17 |
-| Attr 6 | 0,42 | 1,18 | 2,00 | 2,83 |
-
-#### 1.13.7.3 Pool MJ 2d
-
-|  | 1d | 2d | 3d | 4d |
-|---|---|---|---|---|
-| **Attr 4** | **0,12** | **0,38** | **0,72** | **1,12** |
-| Attr 5 | 0,17 | 0,56 | 1,09 | 1,70 |
-| Attr 6 | 0,21 | 0,76 | 1,52 | 2,34 |
-
-#### 1.13.7.4 Pool MJ 3d
-
-|  | 1d | 2d | 3d | 4d |
-|---|---|---|---|---|
-| **Attr 4** | **0,06** | **0,22** | **0,47** | **0,80** |
-| Attr 5 | 0,08 | 0,33 | 0,75 | 1,28 |
-| Attr 6 | 0,10 | 0,47 | 1,09 | 1,86 |
-
-#### 1.13.7.5 Pool MJ 4d
-
-|  | 1d | 2d | 3d | 4d |
-|---|---|---|---|---|
-| **Attr 4** | **0,03** | **0,12** | **0,30** | **0,55** |
-| Attr 5 | 0,04 | 0,19 | 0,50 | 0,93 |
-| Attr 6 | 0,05 | 0,28 | 0,75 | 1,42 |
 
 ---
 
@@ -645,11 +602,11 @@ La spécialisation (reroll) déplace ce seuil sans changer le pool — un Spéci
 *Succès% sans push, sans spécialisation, sans Blessure. Threshold MJ <4. **Gras** = ~50%. -- = <15%.*
 
 Profils types :
-- **Mage** : 2d (dague) / Attr 3 (ESP pour magie ; mais ESP rarement en attaque physique)
+- **Mage** : 2d (dague) / Attr 3 VIG
 - **Rogue** : 2d (dague) ou 3d (épée courte) / Attr 4 (FIN)
 - **Combattant** : 3d (moyenne) ou 4d (longue) / Attr 4–5 (VIG)
 - **Vétéran** : 4d (longue) / Attr 5 (VIG)
-- **Élite** : 4d + spécialisation / Attr 5–6
+- **Élite** : 4d + spécialisation / Attr 5-6
 
 | Ennemi (Pool MJ) | END typique | Mage 2d/A3 | Rogue 2d/A4 | Rogue 3d/A4 | Comb 3d/A4 | Comb 4d/A4 | Comb 4d/A5 | Vét 4d/A5 | Élite 4d/A6 |
 |---|---|---|---|---|---|---|---|---|---|

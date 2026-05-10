@@ -1,16 +1,24 @@
 {
   "recentFiles": [
     {
+      "basename": "regles_v08",
+      "path": "09-Vermis-Mini/OLD/regles_v08.md"
+    },
+    {
+      "basename": "regles_v09",
+      "path": "09-Vermis-Mini/Intégré/regles_v09.md"
+    },
+    {
+      "basename": "plan_de_match",
+      "path": "09-Vermis-Mini/Intégré/plan_de_match.md"
+    },
+    {
       "basename": "ref-earthmote",
       "path": "02-Banque/ref-earthmote.md"
     },
     {
       "basename": "Plan d'importation par point",
       "path": "09-Vermis-Mini/Intégré/Plan d'importation par point.md"
-    },
-    {
-      "basename": "regles_v08",
-      "path": "09-Vermis-Mini/Intégré/regles_v08.md"
     },
     {
       "basename": "import_depuis_vermis",
@@ -27,10 +35,6 @@
     {
       "basename": "regles_v07",
       "path": "09-Vermis-Mini/OLD/regles_v07.md"
-    },
-    {
-      "basename": "plan_de_match",
-      "path": "09-Vermis-Mini/Intégré/plan_de_match.md"
     },
     {
       "basename": "WIP Création_de_personnage",

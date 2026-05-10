@@ -1,18 +1,28 @@
 # 1 [Nom du système] — Règles
 
-*Version 0.8.1 — document de référence*
+*Version 0.9 (en cours d'intégration) — document de référence*
 
 *Changements depuis v0.7 : import niveau A depuis Vermis principal — armes (équivalence d-X / pool), boucliers + Bloquer, définition canonique de l'usure, Prix à payer, catalogue Actions/Manœuvres/Lentes/Complètes/Gratuites, Cas particuliers de combat, Magie Cairn-like, Principes du MJ, Handicaps, Séquelles.*
 
-*Mise à jour v0.8.1 — simplification de la procédure de test :*
-- *Pool de base par outil/arme (1d–4d). Plafond effectif **6d**.*
-- *Difficulté = **soustraction de dés** au pool joueur (plus de jet MJ, plus de threshold variable).*
-- *Blessure = **−1d** au pool (plus de dé noir, plus de tri couleur).*
-- *Spécialisation = **+1d au pool** (Spécialisé : +1d, Maître : +2d). Plus de reroll post-jet.*
-- *Push **pré-déclaré** : 1 END = +1d au pool, max VIG par jet (sous plafond 6d). END payée d'avance, pari assumé.*
-- *Mort : VIG×2 Blessures = Mourant.*
-- *Impasse retirée : Succès ou Échec.*
-- *Séquence ramenée à 4 étapes : construire pool → lancer → compter → résultat.*
+*Mise à jour v0.9 — Bloc A : Blessures :*
+- *Blessure = **−1 à l'attribut affecté** par le type de dégât (Physique/maladie/feu/poison → VIG · Froid/électricité/poison paralysant → FIN · Psychique/fantomatique/illusion/peur → ESP).*
+- *Attribut à 1 = **état critique** : le personnage ne peut plus agir avec cet attribut.*
+- *Attribut à 0 = **VIG → Mort · FIN → Paralysé · ESP → Catatonique**.*
+- *Retiré : dé noir au pool, Mourant à VIG×2 Blessures, Équiper une condition.*
+
+*Mise à jour v0.9 — Bloc B : Pool et résolution :*
+- *Pool étendu à **1d–6d** selon l'outil/arme.*
+- *Difficulté = **seuil fixe** (0 à 4). Plus de pool MJ. Plus de threshold variable.*
+- *Bonus introduits : **1 sur dé = +1 gain**, **double de succès = +1**, **triple = +2** (extensions linéaires au-delà).*
+- *Impasse réintroduite : Succès / Impasse / Échec.*
+- *Spécialisation retirée — couverte par Don et Expertise (Bloc D).*
+
+*Mise à jour v0.9 — Bloc C : Endurance et récupération :*
+- *END départ : **VIG**. **PR = VIG max** (valeur de départ, non réduite par les Blessures à VIG).*
+- *Repos court : **1 PR → tout l'END**.*
+- *Repos long : 1 PR → tout l'END + **soin d'1 Blessure au choix du joueur**.*
+
+*Blocs D–F en attente d'intégration.*
 
 ---
 
@@ -24,7 +34,7 @@ Trois attributs, valeurs **2–6** en jeu normal (1 = état critique, 6 = élite
 
 | Attribut | Couvre | Rôle mécanique |
 |---|---|---|
-| **VIG** Vigueur | Force, endurance, résistance | END, inventaire (10+VIG), limite conditions (VIG×2), push max par jet |
+| **VIG** Vigueur | Force, endurance, résistance | END, inventaire (10+VIG), PR (récupération), push max par jet |
 | **FIN** Finesse | Réflexe, précision, perception | Jets de discrétion, tir, manœuvres, esquive |
 | **ESP** Esprit | Volonté, influence, mémoire | Jets sociaux, magie, moral |
 
@@ -32,11 +42,11 @@ Trois attributs, valeurs **2–6** en jeu normal (1 = état critique, 6 = élite
 
 ### 1.1.2 Endurance (END)
 
-Réserve de combat représentant l'élan, l'esquive, la résistance aux chocs. **Sert aussi de ressource de push** (cf. §1.4.3).
+Réserve de combat représentant l'élan, l'esquive, la résistance aux chocs. **Sert aussi de ressource de push** (cf. §1.2.4).
 
-- **Valeur de départ** : VIG
-- Quand END = 0 : chaque coup reçu inflige une **Blessure**
-- **Mourant** : Blessures = VIG × 2 *(cf. §1.4.5)*
+- **Valeur de départ** : VIG (au moment de la création — n'évolue pas avec les Blessures à VIG)
+- Quand END = 0 : chaque coup reçu inflige une **Blessure** (cf. §1.4.1)
+- Mort/Paralysie/Catatonie déclenchées par chute d'attribut à 0 (cf. §1.4.3)
 
 ### 1.1.3 Dons
 
@@ -54,89 +64,82 @@ Chaque personnage possède **1 Don** à la création. Un Don est un tag situatio
 
 ### 1.2.1 Pool de dés
 
-Le pool est déterminé par l'**outil ou l'arme** utilisée. L'attribut détermine la probabilité de gain par dé.
+Le pool dépend de l'**outil ou l'arme** utilisé. L'attribut détermine la probabilité de gain par dé.
 
-**d6 < attribut = 1 gain brut. ≥ attribut = 0.**
+**d6 < attribut courant = 1 gain. ≥ attribut = 0.** *(L'attribut courant peut être réduit par les Blessures, cf. §1.4.1.)*
 
 | Situation | Pool |
 |---|---|
 | Test nu — aucun outil | 1d |
-| Outil basique / arme petite | 2d |
-| Outil de qualité / arme moyenne | 3d |
-| Arme longue (ou outil exceptionnel) | 4d |
+| Outil basique / arme improvisée | 2d |
+| Outil de qualité / petite arme | 3d |
+| Outil exceptionnel / arme moyenne | 4d |
+| Arme longue | 5d |
+| Arme lourde (deux mains) | 6d |
 
-*Maximum recommandé : 4d avant Don ou spécialisation.*
+Don et Expertise applicables ajoutent **+1d** chacun *(cf. §1.1.3, §1.1.4)*. Modificateurs situationnels arbitraires : ±1d à l'arbitrage du MJ.
 
-Les modificateurs (Don, conditions, situation) peuvent ajouter ou retirer des dés (cf. §1.3).
+### 1.2.2 Bonus sur les dés
 
-### 1.2.2 Spécialisation
+Trois sources de gains supplémentaires, **cumulables**, lues sur le résultat brut :
 
-La spécialisation **ne change pas la taille du pool** — elle donne le droit de relancer des dés défavorables après avoir vu le résultat.
+- **1 sur un dé** → **+1 gain bonus** (en plus du gain normal puisque 1 < attribut)
+- **Double de succès** (deux dés identiques, tous deux < attribut) → **+1 gain bonus par paire**
+- **Triple de succès** (trois dés identiques, tous < attribut) → **+2 gains bonus**
 
-| Niveau | Reroll | Notes |
-|---|---|---|
-| Aucun | 0 | Pool standard |
-| Spécialisé | 1 dé | Blanc ou noir, au choix |
-| Maître | 2 dés différents | Blanc et/ou noir |
+*Extensions* : quadruple = +3, quintuple = +4, etc. (linéaire : +1 par dé identique additionnel au-delà du premier).
 
-**Timing** : après le jet initial, avant le comptage des gains. Le joueur voit tous les dés et choisit lesquels relancer.
+*Cas particuliers :*
+- Plusieurs paires distinctes (ex. 2-2-3-3) = chacune compte (+1 par paire).
+- Un triple ne compte pas comme un double additionnel — c'est l'un OU l'autre selon le groupement le plus avantageux.
 
-**Restriction** : la spécialisation agit uniquement sur le pool du PJ. Les dés de difficulté du MJ ne sont jamais rerollés.
-
-**Utilités :**
-- Reroll d'un blanc en échec → tenter d'obtenir un gain supplémentaire.
-- Reroll d'un noir réussi (≥ attr) → tenter d'éviter une annulation.
-- Maître : les deux simultanément.
+Les bonus s'appliquent sur les **gains bruts**, avant la difficulté.
 
 ### 1.2.3 Difficulté
 
-La difficulté est un **pool de dés lancé par le MJ**. Chaque dé MJ **< threshold** annule 1 gain brut du PJ. **Threshold standard : <4** (50% par dé).
+La difficulté est un **seuil fixe** que les gains bruts doivent **dépasser strictement**.
 
-| Pool MJ | Armure / Situation                   | Annulations moyennes |
-| ------- | ------------------------------------ | -------------------- |
-| 0d      | Aucune résistance                    | 0                    |
-| 1d      | Légère (cuir)                        | 0,5                  |
-| 2d      | Moyenne (maille)                     | 1,0                  |
-| 3d      | Lourde (plaque)                      | 1,5                  |
-| 4d      | Armure complète / résistance extrême | 2,0                  |
+**Gains nets = gains bruts − difficulté (si gains bruts > difficulté, sinon 0).**
 
-**Threshold variable (variantes optionnelles)** :
-
-| Threshold | % annulation par dé | Contexte |
+| Difficulté | Tâche | Armure |
 |---|---|---|
-| <3 | 33% | Armure endommagée, cible vulnérable |
-| <4 | 50% | Standard |
-| <5 | 67% | Couverture, position défavorable, résistance magique |
+| 0 | Normal | Aucune |
+| 1 | Ardu | Légère (cuir) |
+| 2 | Exigeant | Moyenne (maille) |
+| 3 | Extrême | Lourde (plaque) |
+| 4 | Quasi-impossible | Complète (full plate) |
 
-Le MJ annonce le pool MJ et le threshold avant le jet du PJ — c'est une information tactique, pas un secret.
+Bouclier sur Bloquer : +1 à la difficulté de l'attaque entrante (cf. §1.3.4).
 
-### 1.2.4 Push (END)
+### 1.2.4 Tableau de résultat
 
-Sur n'importe quel résultat (succès à amplifier ou échec à sauver), le joueur peut **dépenser de l'END pour ajouter des gains**.
-
-- **1 END → +1 gain**
-- **Maximum : VIG push par jet**
-- Alternative : **1 Usure d'équipement → +1 gain (cf. §1.3.2)
-
-### 1.2.5 Tableau de résultat
-
-| Gains nets | Résultat                                       |
-| ---------- | ---------------------------------------------- |
-| > 0        | **Succès** — gains nets = magnitude de l'effet |
-| 0          | **Échec**                                      |
+| Gains nets | Résultat |
+|---|---|
+| > 0 | **Succès** — magnitude = gains nets |
+| 0 (mais gains bruts > 0) | **Impasse** — push possible pour transformer en Succès |
+| 0 gains bruts | **Échec** total — push impossible (rien à pousser) |
 
 *En combat : gains nets = END perdus par la cible.*
 
+### 1.2.5 Push (END)
+
+Sur **Impasse** (ou pour amplifier un Succès), le joueur peut dépenser de l'END pour ajouter des gains nets.
+
+- **1 END → +1 gain net**
+- **Maximum : VIG push par jet**
+- Alternative : **1 Usure d'équipement → +1 gain net** *(cf. §1.3.2)*
+
+Le push n'est pas possible sur Échec total (gains bruts = 0) — il faut au moins un gain brut à amplifier.
+
 ### 1.2.6 Séquence complète
 
-1. **Pool** = dés blancs (selon outil/arme + Don) + dés noirs (Blessures, cf. §1.4.2)
-2. **Lancer** tout le pool
-3. **Spécialisation** : si applicable, reroll 1 dé (Spécialisé) ou 2 dés (Maître). Blanc ou noir, au choix.
-4. **Gains bruts** : compter les dés blancs < attribut.
-5. **Blessure annule** : chaque dé noir ≥ attribut retire 1 gain brut (min 0).
-6. **Difficulté annule** : le MJ lance son pool — chaque dé MJ < threshold retire 1 gain brut (min 0).
-7. **Push** : le joueur peut dépenser END (ou Usure) pour ajouter des gains nets, max VIG par jet.
-8. **Résultat** : gains nets > 0 = Succès, gains nets = 0 = Échec.
+1. **Construire le pool** : dés selon outil/arme + Don/Expertise + modificateurs situationnels.
+2. **Lancer** tout le pool.
+3. **Gains bruts** : compter les dés < attribut courant.
+4. **Bonus** : +1 par 1 roulé, +1 par double de succès, +2 par triple, etc.
+5. **Gains nets** : gains bruts (avec bonus) − difficulté (min 0).
+6. **Push éventuel** : si Impasse ou pour amplifier, dépenser END (ou Usure) pour +1 gain net par dépense (max VIG par jet).
+7. **Résultat** : Succès / Impasse / Échec.
 
 ### 1.2.7 Tâches longues
 
@@ -173,14 +176,15 @@ Aucune mécanique. Arbitrage MJ-joueur :
 
 | Arme | Pool | Notes |
 |---|---|---|
-| Mains nues / improvisé | **1d** | — |
-| Petite (dague, couteau) | **2d** | — |
-| Moyenne (épée courte, hache) | **3d** | — |
-| Longue (épée longue — standard combattant) | **4d** | — |
-| Lourde (deux mains) | **4d** | 2 places inventaire, tag {lente} |
-| Magique / Légendaire | **4d + spécial** | Effet au-delà du pool : tag, reroll, dégâts spéciaux |
+| Mains nues | **1d** | — |
+| Improvisée | **2d** | Objet détourné, arme brisée |
+| Petite (dague, couteau, matraque) | **3d** | — |
+| Moyenne (épée courte, hache, masse) | **4d** | — |
+| Longue (épée longue, lance, hallebarde) | **5d** | — |
+| Lourde (deux mains) | **6d** | 2 places inventaire, tag {lente} |
+| Magique / Légendaire | **+ effet spécial** | Tag, dégâts spéciaux ou bonus en plus du pool de base |
 
-*Au-delà de 4d, la progression passe par la spécialisation (reroll, cf. §1.2.2), le Don (+1d, cf. §1.1.3) ou des armes magiques (effets uniques).*
+*La progression au-delà se fait via Don/Expertise (+1d situationnel) ou armes magiques (effets uniques).*
 
 **Tags d'arme — types de dégâts :**
 
@@ -193,55 +197,54 @@ Aucune mécanique. Arbitrage MJ-joueur :
 - **{rapide}** — agit en premier dans son rang lors de la résolution simultanée.
 - **{lente}** — agit en dernier dans son rang.
 
-### 1.3.2 Outils et compétences
+### 1.3.2 Outils
 
 Les outils déterminent le pool de base hors combat. Le tableau de §1.2.1 s'applique :
 
 | Situation | Pool |
 |---|---|
 | Aucun outil / handicap | 1d |
-| Outil basique | 2d |
+| Outil basique / improvisé | 2d |
 | Outil de qualité | 3d |
 | Outil exceptionnel | 4d |
+| Outil légendaire ou multi-fonctions | 5d–6d (rare) |
 
-La **compétence** (spécialisation, cf. §1.2.2) ajoute des rerolls par-dessus, sans changer le pool.
+La **compétence** est portée par les Dons et Expertises (+1d situationnel, cf. §1.1.3, §1.1.4).
 
 **Usure** : chaque événement d'usure dégrade l'outil (ou l'arme) **d'un dé** dans son pool (un outil de qualité 3d → 2d → 1d → cassé). À **0d**, l'outil ne fonctionne plus mais peut être réparé.
 
 **Événements d'usure** :
 
-- Push avec usure (1 Usure → +1 gain net, cf. §1.2.4 et §1.4.3).
+- Push avec usure (1 Usure → +1 gain net, cf. §1.2.5).
 - Échec avec conséquence sur un test impliquant l'outil (arbitrage MJ).
 - Hazards environnementaux (arbitrage MJ).
 
 ### 1.3.3 Armures
 
-Trois catégories. L'armure se traduit en **dés de difficulté MJ** lancés contre toute attaque au contact (cf. §1.2.3). Elle impose aussi des pénalités sur certaines actions physiques.
+L'armure impose une **difficulté seuil** à toute attaque au contact (cf. §1.2.3).
 
-| Catégorie | Exemple | Places inv. | Pool MJ | Pénalités | Vitesse |
+| Catégorie | Exemple | Difficulté imposée | Places inv. | Pénalités | Vitesse |
 | --- | --- | --- | --- | --- | --- |
-| Légère | Cuir | 1 | **1d** | aucune | Normal |
-| Moyenne | Maille | 2 | **2d** | -1d discrétion, nage, escalade | Normal |
-| Lourde | Plaque | 3 | **3d** | -2d discrétion, escalade, esquive, détection avec casque. Nage impossible | Lent |
+| Légère | Cuir | **1** | 1 | aucune | Normal |
+| Moyenne | Maille | **2** | 2 | −1d discrétion, nage, escalade | Normal |
+| Lourde | Plaque | **3** | 3 | −2d discrétion, escalade, esquive, détection avec casque. Nage impossible | Lent |
+| Complète | Full plate | **4** | 4 | comme Plaque + −1d en plus | Lent |
 
-**Threshold standard** : <4 (50% par dé). Une armure endommagée ou un point faible peut faire passer le threshold à <3 (33%) à l'arbitrage du MJ.
+Une armure endommagée peut imposer 1 difficulté en moins (cuir abîmé → diff 0, plaque perforée → diff 2) à l'arbitrage du MJ.
 
 *Pénalités complètes (FIN, vitesse, natation, discrétion) : à développer — Phase 1.*
 
 ### 1.3.4 Boucliers
 
-Le bouclier est utilisé conjointement avec l'**Action Bloquer** (cf. §1.6.3).
+Le bouclier est utilisé conjointement avec l'**Action Bloquer** (cf. §1.6.3). Quand actif, il **augmente la difficulté** de l'attaque entrante.
 
-| Bouclier | Dés MJ ajoutés | Places inventaire |
+| Bouclier | Difficulté ajoutée | Places inventaire |
 | --- | --- | --- |
-| Buckler | +1d | 1 |
-| Bouclier rond | +2d | 1 |
-| Grand bouclier | +3d | 2 |
+| Buckler | +1 | 1 |
+| Bouclier rond | +2 | 1 |
+| Grand bouclier | +3 | 2 |
 
-**Mécanique** — quand un PJ utilise l'Action Bloquer pour parer une attaque annoncée :
-
-1. Le bouclier ajoute ses dés au **pool de difficulté du MJ** de l'attaque entrante (en plus du pool d'armure).
-2. Le MJ lance ce pool combiné — chaque dé < threshold annule 1 gain brut de l'attaquant.
+**Mécanique** — quand un PJ utilise l'Action Bloquer pour parer une attaque annoncée, la difficulté du bouclier s'ajoute à celle de l'armure. Exemple : bouclier rond (+2) + maille (diff 2) = **diff 4** pour l'attaque entrante.
 
 Bouclier ou couverture obligatoire pour bloquer un projectile.
 
@@ -251,11 +254,19 @@ Bouclier ou couverture obligatoire pour bloquer un projectile.
 
 ### 1.4.1 Blessure
 
-**Source** : coups reçus au combat (END = 0), pièges, chutes, maladies graves.
+**Source** : coups reçus au combat (END = 0), pièges, chutes, maladies graves, attaques magiques, chocs psychiques.
 
-**Effet** : ajoute 1 **dé noir** au pool du joueur. Le dé est lancé avec les dés blancs ; chaque dé noir **≥ attribut** annule 1 gain brut (cf. séquence §1.2.6, étape 5). Visible physiquement sur la table par sa couleur distincte.
+**Effet** : chaque Blessure réduit de **−1 l'attribut affecté** par le type de dégât.
 
-*La Blessure pénalise donc tous les jets impliquant l'attribut concerné, mais avec un effet probabiliste (≥ attr, soit ~50% à attr 4) — pas une réduction certaine.*
+| Type de dégât | Attribut affecté |
+|---|---|
+| Physique, maladie, feu, poison | **VIG** |
+| Froid, électricité, poison paralysant | **FIN** |
+| Psychique, fantomatique, illusion, peur | **ESP** |
+
+*Effet immédiat sur tous les jets utilisant l'attribut touché : un coup d'épée fait perdre du VIG, donc l'attaque physique, la résistance aux chocs et l'inventaire diminuent. Une vision d'horreur fait perdre de l'ESP, donc la magie, la volonté et les jets sociaux diminuent.*
+
+L'arbitrage du type de dégât revient au MJ. En cas d'ambiguïté, choisir le typage le plus narrativement satisfaisant.
 
 ### 1.4.2 Push
 
@@ -268,47 +279,45 @@ Le joueur peut amplifier ses gains nets en payant une ressource :
 
 Le push s'applique sur tout jet, succès comme échec — c'est un dernier souffle pour transformer l'effort.
 
-### 1.4.3 Équiper une condition
+### 1.4.3 États critiques et mort
 
-Le joueur peut **équiper** une Blessure comme action.
+| Attribut | À 1 (état critique) | À 0 |
+|---|---|---|
+| **VIG** | Ne peut plus agir avec VIG (effort, lutte, résistance) | **Mort** |
+| **FIN** | Ne peut plus agir avec FIN (réflexe, précision, esquive) | **Paralysé** |
+| **ESP** | Ne peut plus agir avec ESP (volonté, magie, social) | **Catatonique** |
 
-- Le dé noir est retiré du pool — ni effet positif ni négatif sur les jets.
-- Coût : **1 place d'inventaire**.
-- **Irrévocable sans soins** — la place reste occupée jusqu'à guérison.
+L'état critique signifie que tous les jets impliquant cet attribut **échouent automatiquement** — le personnage est trop diminué pour tenter l'action.
 
-### 1.4.4 Limites
+À 0, l'état est durable mais **pas nécessairement irréversible** (sauf VIG = Mort) — un personnage Paralysé ou Catatonique peut éventuellement être soigné, à l'arbitrage du MJ et des soins disponibles.
 
-| Condition | Limite | État |
-| --- | --- | --- |
-| END = 0 | — | Chaque coup reçu = 1 Blessure |
-| Blessure | VIG × 2 | Mourant |
+*Les Blessures sur des attributs différents s'accumulent indépendamment. Un personnage peut avoir VIG 2 et ESP 1 sans être mort, mais il ne peut plus rien faire qui implique ESP.*
 
-Les Blessures sont comptées qu'elles soient équipées ou non.
+### 1.4.4 Récupération
 
-### 1.4.5 Récupération
+Le PJ possède **VIG points de récupération (PR)** *(calculés sur la VIG max — valeur de départ — pas affectés par les Blessures à VIG)*. Les PR servent au combat et à la guérison.
 
-Le PJ possède **VIG points de récupération (PR)**. Il les dépense pour se soigner.
-
-| Méthode | Durée | Effet |
-| --- | --- | --- |
-| **Deuxième souffle** | Action complète (en combat) | 1 PR → récupérer 1d6 END |
-| **Repos court** | 1 tour | 1 PR → récupérer tout l'END |
-| **Repos long** | 1 nuit + repas | 1 PR → tout l'END + retirer 1 Blessure |
-| **Repos complet** | 1 semaine en lieu sûr | Tout guéri (END, Blessures, PR) |
+| Méthode | Durée | Coût | Effet |
+| --- | --- | --- | --- |
+| **Deuxième souffle** | Action complète (en combat) | 1 PR | Récupérer 1d6 END |
+| **Repos court** | ~10 minutes | 1 PR | Récupérer tout l'END |
+| **Repos long** | 1 nuit + repas | 1 PR | Tout l'END + **+1 à un attribut au choix** (soigner 1 Blessure) |
+| **Repos complet** | 1 semaine en lieu sûr | — | Tout guéri (END, attributs aux valeurs de départ, PR) |
 
 Les PR sont **récupérés au matin** après une nuit de sommeil complète et un repas chaud le soir.
+
+*Le repos court restaure tout l'END mais ne soigne pas de Blessure. Le repos long permet de soigner une Blessure par jour (au choix du joueur — VIG, FIN ou ESP). Plusieurs repos longs successifs pour soigner plusieurs Blessures.*
 
 ---
 ## 1.5 Inventaire
 
-**Capacité = 10 + VIG**
+**Capacité = 10 + VIG max** *(valeur de départ, non réduite par les Blessures à VIG)*
 
 Chaque objet = 1 place. Exceptions :
 - Armes lourdes (deux mains) : 2 places
 - Armures : 1 place par catégorie (légère = 1, moyenne = 2, lourde = 3)
 - Boucliers : 1 place (grand bouclier = 2)
 - Grimoire : 1 place
-- Conditions équipées : 1 place chacune
 
 ---
 
@@ -325,15 +334,11 @@ Chaque objet = 1 place. Exceptions :
 
 ### 1.6.2 Attaquer
 
-**Pool joueur** = dés d'arme (1d à 4d, cf. §1.3.1) + Don si applicable + dés noirs Blessure.
-**Attribut** = VIG ou FIN selon l'arme (mêlée vs distance, cf. §1.1.1) — sert de seuil pour les dés blancs.
-**Pool MJ** = dés d'armure (cf. §1.3.3) + dés de bouclier si Bloquer actif (cf. §1.3.4) + dés situationnels éventuels.
-**Threshold MJ** = <4 standard.
-**Spécialisation** = reroll après le jet (cf. §1.2.2).
+**Pool** = dés d'arme (1d à 6d, cf. §1.3.1) + Don/Expertise applicable.
+**Attribut** = VIG (mêlée) ou FIN (distance) — valeur **courante** (réduite par les Blessures, cf. §1.4.1).
+**Difficulté** = armure cible (cf. §1.3.3) + bouclier si Bloquer actif (cf. §1.3.4) + modificateurs situationnels.
 
-**Résolution** : suivre la séquence §1.2.6.
-
-**Gains nets = END perdus par la cible.**
+**Résolution** : suivre la séquence §1.2.6 (Bonus 1s/doubles/triples appliqués). **Gains nets = END perdus par la cible.**
 ### 1.6.3 Actions
 
 - **Attaquer** — résolution selon §1.6.2. À dé d'arme égal, les armes {rapide} agissent en premier, les {lente} en dernier.
@@ -418,13 +423,13 @@ Système simple, inspiré de [Cairn](https://cairnrpg.com/resources/more-spellbo
 - Sans grimoire en main, le sort ne peut pas être lancé.
 - Lancer un sort coûte **1 END** (toujours).
 - En **stress ou combat** : faire un **Test ESP** au lancement.
-- Connaître l'**Arcanique** *(Savoir)* donne **+1d** au pool magie.
+- Connaître l'**Arcanique** *(Savoir/Expertise)* donne **+1d** au pool magie.
 
 ### 1.7.2 Procédure de lancer
 
 1. **Déclarer** le sort et la cible.
 2. **Dépenser 1 END**.
-3. **Si stress / combat** : Test ESP (pool 2d + dés noirs Blessure éventuels, +1d si Arcanique connue ; pool MJ 1d threshold <4).
+3. **Si stress / combat** : Test ESP — pool 2d (+1d si Arcanique connue), difficulté **1** (modulable selon contexte). ESP courante (réduite par les Blessures à ESP).
 4. **Hors stress** : pas de test, sort lancé automatiquement.
 5. **Résoudre** l'effet selon le sort.
 
@@ -432,8 +437,9 @@ Système simple, inspiré de [Cairn](https://cairnrpg.com/resources/more-spellbo
 
 | Résultat | Effet |
 |---|---|
-| **Succès (gains nets > 0)** | Sort lancé normalement. Magnitude = gains nets. |
-| **Échec (gains nets = 0)** | Sort raté. END consommée. Conséquence narrative possible. Push possible (1 END → +1 gain) si END > 0. |
+| **Succès** | Sort lancé normalement. Magnitude = gains nets. |
+| **Impasse** | Sort affaibli ou imprécis (interprétation MJ). Push possible. |
+| **Échec** | Sort raté. END consommée. Conséquence narrative possible. |
 
 ### 1.7.4 Catalogue de sorts
 
@@ -502,7 +508,7 @@ Jet FIN individuel ou collectif. Interaction avec les pénalités d'armure.
 
 *À développer — Phase 3.*
 
-Comment évoluent les attributs, spécialisations et dons. Probablement lié à l'or dépensé ou aux objectifs accomplis.
+Comment évoluent les attributs, dons et expertises. Probablement lié à l'or dépensé ou aux objectifs accomplis.
 
 ---
 
@@ -528,6 +534,8 @@ Comment évoluent les attributs, spécialisations et dons. Probablement lié à 
 ---
 
 ## 1.13 Appendice A — Tables de probabilité
+
+> **⚠ CADUQUES — à recalculer (Bloc F).** Tables construites pour le pool MJ + threshold. Avec la refonte v0.9 (seuil fixe + bonus 1s/doubles/triples), les valeurs ne sont plus valides. Les tables ci-dessous sont conservées comme référence historique en attendant le recalcul.
 
 *Probabilité de succès strict (gains nets > 0). Sans push, sans spécialisation, sans Blessure. Threshold MJ standard : <4. **Gras** = ligne attribut 4 (référence).*
 
@@ -599,6 +607,8 @@ La spécialisation (reroll) déplace ce seuil sans changer le pool — un Spéci
 
 ## 1.14 Appendice B — Tableau de progression tactique
 
+> **⚠ CADUC — à recalculer (Bloc F).** Construit pour le pool MJ + threshold + reroll spec. Avec la refonte v0.9, les valeurs et profils types ne sont plus valides.
+
 *Succès% sans push, sans spécialisation, sans Blessure. Threshold MJ <4. **Gras** = ~50%. -- = <15%.*
 
 Profils types :
@@ -640,7 +650,7 @@ Profils types :
 |---|---|
 | **Risible** | Généralement la première cible (réactions, attaques, moqueries). |
 | **Maladif** | 2-6 chances qu'une dose de poison ou d'infection double son effet ou sa durée. |
-| **Épaules fuyantes** | Deux places d'inventaire ne peuvent pas prendre d'objet — seulement des conditions équipées. |
+| **Épaules fuyantes** | Deux places d'inventaire inutilisables (sangle qui glisse, sac mal foutu, posture fragile). |
 | **Gros dormeur** | Doit dormir 3 veilles. Sinon, test VIG **−1d** pour se réveiller si danger pendant la nuit, ou test VIG pour ne pas s'endormir en ronde. |
 | **Myope** | Voit mal de loin. **−1d** sur armes à distance. Lunettes existent mais extrêmement chères et fragiles. |
 | **Maladroit** | Test FIN pour attraper un objet. 1/6 chance de créer une réaction en chaîne bruyante quand on tente d'être discret. |

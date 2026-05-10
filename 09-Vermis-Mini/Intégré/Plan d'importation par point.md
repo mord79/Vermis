@@ -80,6 +80,40 @@ importer, mais avec cette grille d'attribut
 | 4   | Perfection | Don type Perception   |
 | 5   | Pouvoir    | Don type Intelligence |
 | 6   | Gloire     | Don type Charisme     |
+#### 1.2.6.1 Combattants
+Item personnalisé* : +1D
+
+| Archétype                    | Item personnalisé\*                | Occupation (D-Bleu)                                                                                                                                                                                                                     |
+| ---------------------------- | ---------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Nomade / Guerrier            | • \*Hache à deux mains             | 1\. Esclave en fuite — Chaîne<br>2\. Berger des steppes — Fronde et billes<br>3\. Montagnard — Crampons d'escalade<br>4\. Cavalier nomade — Arc composite<br>5\. Fou de guerre — Champirage (3)<br>6\. Chef de tribu — Collier de dents |
+| Paysan / Mercenaire          | • Lance<br>• *Grand bouclier       | *(à compléter)*                                                                                                                                                                                                                         |
+| Artisan / Armurier           | - *Marteau de guerre<br>- Bouclier | 1\. Boucher — Hachoir<br>2\. Charpentier — Scie<br>3\. Forgeron — Marteau<br>4\. Fossoyeur — Pelle<br>5\. Tailleur de pierre — Ciseau à pierre<br>6\. Maréchal-ferrant — Pinces                                                         |
+| Criminel / Chasseur de prime | - épée bâtarde<br>- *Arbalète      | *(à compléter)*                                                                                                                                                                                                                         |
+| Artiste / Dueliste           | - *Rapière<br>- Main-gauche        | 1\. Vengeur masqué — Masque de fer<br>2\. Garde du corps — Heaume<br>3\. Instructeur d'armes — Épée de bois<br>4\. Duelliste — Gants de cuir<br>5\. Écuyer — &&&<br>6\. Officier — Longue-vue                                           |
+| Noble / Chevalier            | • \*Épée longue<br>• Bouclier      | *(à compléter)*                                                                                                                                                                                                                         |
+
+#### 1.2.6.2 Filous
+
+| Archétype                  | Item personnalisé\*                          | Occupation (D-Bleu) |
+| -------------------------- | -------------------------------------------- | ------------------- |
+| Nomade / Rôdeur            | • \*Arc long<br>• Boussole                   | *(à compléter)*     |
+| Paysan / Scout             |                                              | *(à compléter)*     |
+| Artisan / Pilleur de tombe | • Arbalète de poing<br>• \*Kit de crochetage | *(à compléter)*     |
+| Criminel / Voleur          |                                              | *(à compléter)*     |
+| Artiste / Barde            | • Fronde<br>• \*Kit de déguisement (?)       | *(à compléter)*     |
+| Noble / Excentrique        |                                              | *(à compléter)*     |
+
+#### 1.2.6.3 Érudits
+
+| Archétype              | Item personnalisé\*                                                                                                   | Occupation (D-Bleu) |
+| ---------------------- | --------------------------------------------------------------------------------------------------------------------- | ------------------- |
+| Nomade / Ermite        | • \*Grimoire (6 slots)<br>• Sorts : Détection Arcanique<br>               Vue Nocturne<br>               Cantrip×1    | *(à compléter)*     |
+| Paysan / Moine         | • \*Grimoire (6 slots)<br>• Sorts : Détection Arcanique<br>               Baume<br>               Cantrip×1           | *(à compléter)*     |
+| Artisan / Alchimiste   |                                                                                                                       | *(à compléter)*     |
+| Criminel / Anatomiste  |                                                                                                                       | *(à compléter)*     |
+| Artiste / Illusioniste |                                                                                                                       | *(à compléter)*     |
+| Noble / Magistère      | • \*Grimoire (6 slots)<br>• Sorts : Détection Arcanique<br>               Trait Arcanique<br>               Cantrip×1 | *(à compléter)*     |
+
 
 ### 1.2.7 Test de Réaction
 Remplacé par test Passif, test secret du MJ pour perception passive et autres tests du même type

@@ -1,8 +1,3 @@
-Création de personnages/ motivation
-Rajouter une colonne vêtements
-- Liberté : vêtement simple, pratique 
-- Justice : vêtement propre, bien entretenu
-- Etc…
 
 Simplification: 
 - Les specialisation sont des Reroll, 1 par dé seulement 
@@ -20,10 +15,6 @@ Simplification:
 		- Érudit : Savoirs interdis 
 		- Érudit : Arts Médical 
 	- Le reste est donné par la stats
-
-
-
-
 
 
 Les 50% sont ->
@@ -57,3 +48,11 @@ Donc :
 Si pas de couleur, les plus à gauche = expertise, les plus à droite = fatigue 
 
 D4 = dé spécial d’équipe. Espoirs, pool limité à partager 
+
+
+# 1 Rejeté
+Création de personnages/ motivation
+Rajouter une colonne vêtements
+- Liberté : vêtement simple, pratique 
+- Justice : vêtement propre, bien entretenu
+- Etc…

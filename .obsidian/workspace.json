@@ -76,12 +76,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "09-Vermis-Mini/Intégré/Plan d'importation par point.md",
+                "file": "02-Banque/ref-earthmote.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Plan d'importation par point"
+              "title": "ref-earthmote"
             }
           }
         ],
@@ -230,13 +230,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "09-Vermis-Mini/Intégré/Plan d'importation par point.md",
+                "file": "02-Banque/ref-earthmote.md",
                 "followCursor": false,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Plan de Plan d'importation par point"
+              "title": "Plan de ref-earthmote"
             }
           },
           {
@@ -271,9 +271,9 @@
   },
   "active": "8ec613bf5961da4b",
   "lastOpenFiles": [
+    "09-Vermis-Mini/Intégré/Plan d'importation par point.md",
     "09-Vermis-Mini/Intégré/regles_v08.md",
     "09-Vermis-Mini/Intégré/import_depuis_vermis.md",
-    "09-Vermis-Mini/Intégré/Plan d'importation par point.md",
     "01-Règles/011-WIP/WIP Création_de_personnage V2.md",
     "09-Vermis-Mini/Intégré/Quick ideas.md",
     "09-Vermis-Mini/OLD/regles_v07.md",

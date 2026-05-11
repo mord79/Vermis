@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "Plan d'importation par point",
+      "path": "09-Vermis-Mini/Intégré/Plan d'importation par point.md"
+    },
+    {
+      "basename": "regles_v10",
+      "path": "09-Vermis-Mini/Intégré/regles_v10.md"
+    },
+    {
       "basename": "Grille_Événements_Aléatoires",
       "path": "01-Règles/Grille_Événements_Aléatoires.md"
     },
@@ -53,10 +61,6 @@
       "path": "01-Règles/012-Intégré/Tables de Loot & Disponibilité.md"
     },
     {
-      "basename": "regles_v10",
-      "path": "09-Vermis-Mini/Intégré/regles_v10.md"
-    },
-    {
       "basename": "regles_v08",
       "path": "09-Vermis-Mini/OLD/regles_v08.md"
     },
@@ -67,10 +71,6 @@
     {
       "basename": "ref-earthmote",
       "path": "02-Banque/ref-earthmote.md"
-    },
-    {
-      "basename": "Plan d'importation par point",
-      "path": "09-Vermis-Mini/Intégré/Plan d'importation par point.md"
     },
     {
       "basename": "import_depuis_vermis",

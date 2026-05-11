@@ -40,6 +40,15 @@
 - *Appendice B : diagonale arme/armure recalculée avec profils types.*
 - *Calibration : à attr 4, diagonale donne 50-60% de Succès strict + 25-45% d'Impasse selon le tier — combats de haut niveau moins binaires, plus de marge pour le push.*
 
+*Révision v0.10 — Bloc G : Push en Bet + bonus simplifié :*
+- *Push devient un **Bet pré-déclaré** : avant le jet, le joueur dépense X END/Usure → +X dés au pool. END payée d'avance, même en cas d'échec. Risk/reward assumé.*
+- *Push max par jet = **ESP** (volonté), plus VIG.*
+- *Bonus simplifié : **seul le +1 par 1 reste automatique**. Doubles et triples ne donnent plus de gains.*
+- *Doubles/triples deviennent des **déclencheurs d'effets spéciaux** (Ouverture, Manœuvre opportune, Pierce-à-redéfinir).*
+- *Impasse retirée : **2 résultats** seulement (Succès / Échec).*
+- *Pierce-X (§1.3.1) marqué "à redéfinir Phase 2".*
+- *Appendices A et B recalculés en conséquence (bonus simplifié, sans Impasse).*
+
 ---
 
 ## 1.1 Personnage
@@ -50,9 +59,9 @@ Trois attributs, valeurs **2–6** en jeu normal (1 = état critique, 6 = élite
 
 | Attribut | Couvre | Rôle mécanique |
 |---|---|---|
-| **VIG** Vigueur | Force, endurance, résistance | END, inventaire (10+VIG), PR (récupération), push max par jet |
+| **VIG** Vigueur | Force, endurance, résistance | END, inventaire (10+VIG), PR (récupération) |
 | **FIN** Finesse | Réflexe, précision, perception | Jets de discrétion, tir, manœuvres, esquive |
-| **ESP** Esprit | Volonté, influence, mémoire | Jets sociaux, magie, moral |
+| **ESP** Esprit | Volonté, influence, mémoire | Jets sociaux, magie, moral, **push max par jet** |
 
 **PNJ — Puissance** : stat unique (2–6) qui remplace VIG/FIN/ESP pour tous leurs jets offensifs. Ne détermine pas la résistance aux coups.
 
@@ -116,23 +125,34 @@ Le pool dépend de l'**outil ou l'arme** utilisé. L'attribut détermine la prob
 **Expertise** applicable : **+1d**, **−1 difficulté**, ou modification de la nature du test *(au choix, cf. §1.1.4)*.
 Modificateurs situationnels arbitraires : ±1d à l'arbitrage du MJ.
 
-### 1.2.2 Bonus sur les dés
+### 1.2.2 Bonus standard : +1 par 1
 
-Trois sources de gains supplémentaires, **cumulables**, lues sur le résultat brut :
+Chaque dé montrant **1** (toujours en succès puisque attribut ≥ 2) donne **+1 gain bonus** en plus de son gain normal.
 
-- **1 sur un dé** → **+1 gain bonus** (en plus du gain normal puisque 1 < attribut)
-- **Double de succès** (deux dés identiques, tous deux < attribut) → **+1 gain bonus par paire**
-- **Triple de succès** (trois dés identiques, tous < attribut) → **+2 gains bonus**
-
-*Extensions* : quadruple = +3, quintuple = +4, etc. (linéaire : +1 par dé identique additionnel au-delà du premier).
-
-*Cas particuliers :*
-- Plusieurs paires distinctes (ex. 2-2-3-3) = chacune compte (+1 par paire).
-- Un triple ne compte pas comme un double additionnel — c'est l'un OU l'autre selon le groupement le plus avantageux.
+*Effet : un 1 vaut 2 gains. Probabilité ≈ 17% par dé.*
 
 Les bonus s'appliquent sur les **gains bruts**, avant la difficulté.
 
-### 1.2.3 Difficulté
+### 1.2.3 Effets spéciaux — doubles et triples
+
+Un **double** (deux dés identiques, tous deux < attribut) ou un **triple** (trois identiques en succès) **ne donne pas de gain automatique**. Il agit comme un **déclencheur d'effet spécial**, à activer si le contexte le permet.
+
+| Déclencheur | Quoi |
+|---|---|
+| **Double** | 1 effet spécial au choix parmi les options disponibles |
+| **Triple** | 1 effet spécial fort, ou 2 effets distincts au choix |
+
+**Effets spéciaux disponibles** :
+
+- **Ouverture** *(combat)* — un allié gagne +1d sur son prochain test contre la même cible.
+- **Manœuvre opportune** *(combat)* — déclencher une manœuvre (Pousser, Trébucher, Désarmer, cf. §1.6.4) sans action additionnelle.
+- **Pierce** *(à redéfinir Phase 2)* — ignorer partiellement la difficulté d'armure.
+
+*Hors combat, le MJ peut accorder des bénéfices narratifs équivalents : ouverture sociale, raccourci sur une tâche longue, indice obtenu en plus, etc.*
+
+Les effets spéciaux **ne s'activent pas automatiquement** — le joueur doit déclarer lequel utiliser parmi les options du contexte. Sans contexte applicable, le double/triple n'a pas d'effet mécanique.
+
+### 1.2.4 Difficulté
 
 La difficulté est un **seuil fixe** que les gains bruts doivent **dépasser strictement**.
 
@@ -148,49 +168,50 @@ La difficulté est un **seuil fixe** que les gains bruts doivent **dépasser str
 
 Bouclier sur Bloquer : +1 à la difficulté de l'attaque entrante (cf. §1.3.4).
 
-### 1.2.4 Tableau de résultat
+### 1.2.5 Tableau de résultat
 
 | Gains nets | Résultat |
 |---|---|
 | > 0 | **Succès** — magnitude = gains nets |
-| 0 (mais gains bruts > 0) | **Impasse** — push possible pour transformer en Succès |
-| 0 gains bruts | **Échec** total — push impossible (rien à pousser) |
+| 0 | **Échec** |
 
 *En combat : gains nets = END perdus par la cible.*
 
-### 1.2.5 Push (END)
+### 1.2.6 Push — Bet pré-déclaré
 
-Sur **Impasse** (ou pour amplifier un Succès), le joueur peut dépenser de l'END pour ajouter des gains nets.
+**Avant** de lancer, le joueur peut dépenser des ressources pour ajouter des dés au pool. C'est un **pari** : la dépense est payée d'avance, **même en cas d'échec**.
 
-- **1 END → +1 gain net**
-- **Maximum : ESP push par jet**
-- Alternative : **1 Usure d'équipement → +1 gain net** *(cf. §1.3.2)*
+- **1 END dépensée → +1d au pool**
+- **1 Usure d'équipement → +1d au pool** *(cf. §1.3.2)*
+- **Maximum par jet : ESP** *(volonté — capacité à se forcer)*
 
-Le push n'est pas possible sur Échec total (gains bruts = 0) — il faut au moins un gain brut à amplifier.
+Le push se déclare **avant** de lancer. Une fois les dés en l'air, le résultat est définitif — pas de second souffle pour sauver un échec.
 
-### 1.2.6 Séquence complète
+*Risk/reward : tu paies pour des **chances** supplémentaires (50% de gain par dé à attr 4), pas pour des gains garantis. Le pari peut tomber à l'eau — ou exploser positivement.*
 
-1. **Construire le pool** : dés selon outil/arme + Don/Expertise + modificateurs situationnels.
-2. **Lancer** tout le pool.
-3. **Gains bruts** : compter les dés < attribut courant.
-4. **Bonus** : +1 par 1 roulé, +1 par double de succès, +2 par triple, etc.
-5. **Gains nets** : gains bruts (avec bonus) − difficulté (min 0).
-6. **Push éventuel** : si Impasse ou pour amplifier, dépenser END (ou Usure) pour +1 gain net par dépense (max VIG par jet).
-7. **Résultat** : Succès / Impasse / Échec.
+### 1.2.7 Séquence complète
 
-### 1.2.7 Tâches longues
+1. **Push éventuel (Bet)** : déclarer X END/Usure → +X dés au pool (max ESP par jet).
+2. **Construire le pool** : dés selon outil/arme + Don/Expertise + push + modificateurs situationnels.
+3. **Lancer** tout le pool.
+4. **Gains bruts** : compter les dés < attribut courant + 1 bonus par 1 roulé.
+5. **Effets spéciaux** *(optionnel)* : si double ou triple dans les succès, activer un effet (cf. §1.2.3).
+6. **Gains nets** : gains bruts − difficulté (min 0).
+7. **Résultat** : > 0 = Succès, 0 = Échec.
+
+### 1.2.8 Tâches longues
 
 Les gains nets s'accumulent tour après tour vers un **total cible** fixé par le MJ. La mécanique de base est identique. Le temps qui passe est le coût principal.
 
-### 1.2.8 Tests collectifs
+### 1.2.9 Tests collectifs
 
 Plusieurs personnages contribuent leurs gains nets au même total. La mécanique de base est identique.
 
-### 1.2.9 Tests VS
+### 1.2.10 Tests VS
 
 Lorsque deux personnages s'affrontent dans un test, les deux font leur test. Celui qui a le plus de gains nets l'emporte. En cas d'égalité, statu quo (ou arbitrage MJ selon la fiction).
 
-### 1.2.10 Prix à payer
+### 1.2.11 Prix à payer
 
 Aucune mécanique. Arbitrage MJ-joueur :
 
@@ -226,7 +247,7 @@ Aucune mécanique. Arbitrage MJ-joueur :
 > [!À REVOIR]
 > **Tags d'arme — types de dégâts :**
 > 
-> - **{pierce-X}** — chaque dé ≤ X produit 1 gain net direct, ignorant le seuil. Remplace la lecture normale pour ce dé.
+> - **{pierce-X}** — *à redéfinir Phase 2.* Concept : déclencher un effet spécial "Pierce" via double/triple (cf. §1.2.3) pour ignorer partiellement la difficulté d'armure. Mécanique exacte à finaliser au playtest.
 > - **{bash-X}** — *mécanique à définir.*
 > - **{slash-X}** — *mécanique à définir.*
 
@@ -306,16 +327,16 @@ Bouclier ou couverture obligatoire pour bloquer un projectile.
 
 L'arbitrage du type de dégât revient au MJ. En cas d'ambiguïté, choisir le typage le plus narrativement satisfaisant.
 
-### 1.4.2 Push
+### 1.4.2 Push (Bet pré-déclaré)
 
-Le joueur peut amplifier ses gains nets en payant une ressource :
+**Avant le jet**, le joueur peut dépenser des ressources pour ajouter des dés au pool. C'est un **pari** — la dépense est payée d'avance, même en cas d'échec.
 
-- **1 END → +1 gain net**
-- **1 Usure (équipement) → +1 gain net** *(alternative, cf. §1.3.2)*
+- **1 END → +1d au pool**
+- **1 Usure (équipement) → +1d au pool** *(alternative, cf. §1.3.2)*
 
-**Maximum : VIG push par jet** (toutes ressources confondues).
+**Maximum : ESP push par jet** *(volonté — capacité à se forcer)*. Toutes ressources confondues.
 
-Le push s'applique sur tout jet, succès comme échec — c'est un dernier souffle pour transformer l'effort.
+Voir §1.2.6 pour le détail mécanique.
 
 ### 1.4.3 États critiques et mort
 
@@ -478,8 +499,7 @@ Système simple, inspiré de [Cairn](https://cairnrpg.com/resources/more-spellbo
 | Résultat | Effet |
 |---|---|
 | **Succès** | Sort lancé normalement. Magnitude = gains nets. |
-| **Impasse** | Sort affaibli ou imprécis (interprétation MJ). Push possible. |
-| **Échec** | Sort raté. END consommée. Conséquence narrative possible. |
+| **Échec** | Sort raté. END (et push éventuel) consommée. Conséquence narrative possible. |
 
 ### 1.7.4 Catalogue de sorts
 
@@ -575,59 +595,57 @@ Comment évoluent les attributs, dons et expertises. Probablement lié à l'or d
 
 ## 1.13 Appendice A — Tables de probabilité
 
-*Format : **Succès% / Impasse% / Échec%**. Sans push, sans Blessure. Bonus 1s/doubles/triples inclus (cf. §1.2.2). **Gras** = ligne attribut 4 (référence).*
+*Format : **Succès% / Échec%**. Sans push, sans Blessure. Bonus = **+1 par 1 roulé** uniquement (cf. §1.2.2). **Gras** = ligne attribut 4 (référence).*
 
 ### 1.13.1 Difficulté 0 — Aucune armure / tâche normale
 
 |  | 1d | 2d | 3d | 4d | 5d | 6d |
 |---|---|---|---|---|---|---|
-| Attr 2 | 17/0/83% | 31/0/69% | 42/0/58% | 52/0/48% | 60/0/40% | 67/0/33% |
-| Attr 3 | 33/0/67% | 56/0/44% | 70/0/30% | 80/0/20% | 87/0/13% | 91/0/9% |
-| **Attr 4** | **50/0/50%** | **75/0/25%** | **88/0/12%** | **94/0/6%** | **97/0/3%** | **98/0/2%** |
-| Attr 5 | 67/0/33% | 89/0/11% | 96/0/4% | 99/0/1% | 100/0/0% | 100/0/0% |
-| Attr 6 | 83/0/17% | 97/0/3% | 100/0/0% | 100/0/0% | 100/0/0% | 100/0/0% |
-
-*À difficulté 0, jamais d'Impasse : tout gain brut compte.*
+| Attr 2 | 17/83% | 31/69% | 42/58% | 52/48% | 60/40% | 67/33% |
+| Attr 3 | 33/67% | 56/44% | 70/30% | 80/20% | 87/13% | 91/9% |
+| **Attr 4** | **50/50%** | **75/25%** | **88/12%** | **94/6%** | **97/3%** | **98/2%** |
+| Attr 5 | 67/33% | 89/11% | 96/4% | 99/1% | 100/0% | 100/0% |
+| Attr 6 | 83/17% | 97/3% | 100/0% | 100/0% | 100/0% | 100/0% |
 
 ### 1.13.2 Difficulté 1 — Cuir / Ardu
 
 |  | 1d | 2d | 3d | 4d | 5d | 6d |
 |---|---|---|---|---|---|---|
-| Attr 2 | 17/0/83% | 31/0/69% | 42/0/58% | 52/0/48% | 60/0/40% | 67/0/33% |
-| Attr 3 | 17/17/67% | 33/22/44% | 48/22/30% | 60/20/20% | 70/16/13% | 78/13/9% |
-| **Attr 4** | **17/33/50%** | **42/33/25%** | **62/25/12%** | **77/17/6%** | **86/10/3%** | **92/6/2%** |
-| Attr 5 | 17/50/33% | 56/33/11% | 80/17/4% | 91/7/1% | 97/3/0% | 99/1/0% |
-| Attr 6 | 17/67/17% | 75/22/3% | 94/6/0% | 99/1/0% | 100/0/0% | 100/0/0% |
+| Attr 2 | 17/83% | 31/69% | 42/58% | 52/48% | 60/40% | 67/33% |
+| Attr 3 | 17/83% | 33/67% | 48/52% | 60/40% | 70/30% | 78/22% |
+| **Attr 4** | **17/83%** | **42/58%** | **62/38%** | **77/23%** | **86/14%** | **92/8%** |
+| Attr 5 | 17/83% | 56/44% | 80/20% | 91/9% | 97/3% | 99/1% |
+| Attr 6 | 17/83% | 75/25% | 94/6% | 99/1% | 100/0% | 100/0% |
 
 ### 1.13.3 Difficulté 2 — Maille / Exigeant
 
 |  | 1d | 2d | 3d | 4d | 5d | 6d |
 |---|---|---|---|---|---|---|
-| Attr 2 | 0/17/83% | 3/28/69% | 7/35/58% | 13/39/48% | 20/40/40% | 26/40/33% |
-| Attr 3 | 0/33/67% | 11/44/44% | 26/44/30% | 41/40/20% | 54/33/13% | 65/26/9% |
-| **Attr 4** | **0/50/50%** | **19/56/25%** | **42/46/12%** | **60/33/6%** | **74/23/3%** | **84/15/2%** |
-| Attr 5 | 0/67/33% | 28/61/11% | 57/39/4% | 78/21/1% | 89/10/0% | 95/5/0% |
-| Attr 6 | 0/83/17% | 36/61/3% | 76/24/0% | 93/7/0% | 98/2/0% | 100/0/0% |
+| Attr 2 | 0/100% | 3/97% | 7/93% | 13/87% | 20/80% | 26/74% |
+| Attr 3 | 0/100% | 8/92% | 20/80% | 33/67% | 46/54% | 57/43% |
+| **Attr 4** | **0/100%** | **14/86%** | **33/67%** | **52/48%** | **67/33%** | **79/21%** |
+| Attr 5 | 0/100% | 19/81% | 49/51% | 72/28% | 86/14% | 94/6% |
+| Attr 6 | 0/100% | 25/75% | 70/30% | 91/9% | 98/2% | 99/1% |
 
 ### 1.13.4 Difficulté 3 — Plaque / Extrême
 
 |  | 1d | 2d | 3d | 4d | 5d | 6d |
 |---|---|---|---|---|---|---|
-| Attr 2 | 0/17/83% | 3/28/69% | 7/35/58% | 13/39/48% | 20/40/40% | 26/40/33% |
-| Attr 3 | 0/33/67% | 3/53/44% | 9/61/30% | 19/62/20% | 29/58/13% | 40/51/9% |
-| **Attr 4** | **0/50/50%** | **3/72/25%** | **17/71/12%** | **35/58/6%** | **53/43/3%** | **68/30/2%** |
-| Attr 5 | 0/67/33% | 3/86/11% | 30/67/4% | 57/41/1% | 77/23/0% | 88/11/0% |
-| Attr 6 | 0/83/17% | 3/94/3% | 48/51/0% | 80/20/0% | 93/6/0% | 98/2/0% |
+| Attr 2 | 0/100% | 3/97% | 7/93% | 13/87% | 20/80% | 26/74% |
+| Attr 3 | 0/100% | 3/97% | 9/91% | 17/83% | 27/73% | 37/63% |
+| **Attr 4** | **0/100%** | **3/97%** | **13/87%** | **28/72%** | **44/56%** | **59/41%** |
+| Attr 5 | 0/100% | 3/97% | 20/80% | 44/56% | 66/34% | 81/19% |
+| Attr 6 | 0/100% | 3/97% | 30/70% | 68/32% | 88/12% | 96/4% |
 
 ### 1.13.5 Difficulté 4 — Full plate / Quasi-impossible
 
 |  | 1d | 2d | 3d | 4d | 5d | 6d |
 |---|---|---|---|---|---|---|
-| Attr 2 | 0/17/83% | 3/28/69% | 7/35/58% | 13/39/48% | 20/40/40% | 26/40/33% |
-| Attr 3 | 0/33/67% | 3/53/44% | 9/61/30% | 19/62/20% | 29/58/13% | 40/51/9% |
-| **Attr 4** | **0/50/50%** | **3/72/25%** | **11/76/12%** | **24/69/6%** | **40/57/3%** | **54/44/2%** |
-| Attr 5 | 0/67/33% | 3/86/11% | 13/83/4% | 35/64/1% | 58/41/0% | 76/24/0% |
-| Attr 6 | 0/83/17% | 3/94/3% | 15/85/0% | 56/44/0% | 83/17/0% | 94/6/0% |
+| Attr 2 | 0/100% | 0/100% | 0/100% | 2/98% | 4/96% | 6/94% |
+| Attr 3 | 0/100% | 0/100% | 2/98% | 6/94% | 12/88% | 20/80% |
+| **Attr 4** | **0/100%** | **0/100%** | **3/97%** | **11/89%** | **24/76%** | **38/62%** |
+| Attr 5 | 0/100% | 0/100% | 5/95% | 20/80% | 41/59% | 61/39% |
+| Attr 6 | 0/100% | 0/100% | 6/94% | 32/68% | 66/34% | 86/14% |
 
 ### 1.13.6 Gains nets moyens E[net]
 
@@ -637,64 +655,82 @@ Comment évoluent les attributs, dons et expertises. Probablement lié à l'or d
 
 |  | 1d | 2d | 3d | 4d | 5d | 6d |
 |---|---|---|---|---|---|---|
-| **Attr 4** | **0,67** | **1,42** | **2,24** | **3,11** | **4,04** | **5,00** |
-| Attr 5 | 0,83 | 1,78 | 2,81 | 3,93 | 5,11 | 6,34 |
-| Attr 6 | 1,00 | 2,14 | 3,39 | 4,74 | 6,18 | 7,67 |
+| Attr 3 | 0,50 | 1,00 | 1,50 | 2,00 | 2,50 | 3,00 |
+| **Attr 4** | **0,67** | **1,33** | **2,00** | **2,67** | **3,33** | **4,00** |
+| Attr 5 | 0,83 | 1,67 | 2,50 | 3,33 | 4,17 | 5,00 |
+| Attr 6 | 1,00 | 2,00 | 3,00 | 4,00 | 5,00 | 6,00 |
 
 #### 1.13.6.2 Difficulté 1 (Cuir)
 
 |  | 1d | 2d | 3d | 4d | 5d | 6d |
 |---|---|---|---|---|---|---|
-| **Attr 4** | **0,17** | **0,67** | **1,36** | **2,18** | **3,07** | **4,02** |
-| Attr 5 | 0,17 | 0,89 | 1,85 | 2,94 | 4,11 | 5,34 |
-| Attr 6 | 0,17 | 1,17 | 2,40 | 3,75 | 5,18 | 6,67 |
+| Attr 3 | 0,17 | 0,44 | 0,80 | 1,20 | 1,63 | 2,09 |
+| **Attr 4** | **0,17** | **0,58** | **1,12** | **1,73** | **2,36** | **3,02** |
+| Attr 5 | 0,17 | 0,78 | 1,54 | 2,35 | 3,17 | 4,00 |
+| Attr 6 | 0,17 | 1,03 | 2,00 | 3,00 | 4,00 | 5,00 |
 
 #### 1.13.6.3 Difficulté 2 (Maille)
 
 |  | 1d | 2d | 3d | 4d | 5d | 6d |
 |---|---|---|---|---|---|---|
-| **Attr 4** | **0,00** | **0,25** | **0,74** | **1,41** | **2,21** | **3,10** |
-| Attr 5 | 0,00 | 0,33 | 1,06 | 2,03 | 3,15 | 4,35 |
-| Attr 6 | 0,00 | 0,42 | 1,46 | 2,76 | 4,18 | 5,68 |
+| Attr 3 | 0,00 | 0,11 | 0,31 | 0,59 | 0,93 | 1,31 |
+| **Attr 4** | **0,00** | **0,17** | **0,50** | **0,96** | **1,50** | **2,09** |
+| Attr 5 | 0,00 | 0,22 | 0,74 | 1,43 | 2,21 | 3,02 |
+| Attr 6 | 0,00 | 0,28 | 1,06 | 2,01 | 3,00 | 4,00 |
 
 #### 1.13.6.4 Difficulté 3 (Plaque)
 
 |  | 1d | 2d | 3d | 4d | 5d | 6d |
 |---|---|---|---|---|---|---|
-| **Attr 4** | **0,00** | **0,06** | **0,32** | **0,80** | **1,46** | **2,26** |
-| Attr 5 | 0,00 | 0,06 | 0,48 | 1,25 | 2,25 | 3,40 |
-| Attr 6 | 0,00 | 0,06 | 0,70 | 1,83 | 3,20 | 4,68 |
+| Attr 3 | 0,00 | 0,03 | 0,11 | 0,26 | 0,47 | 0,74 |
+| **Attr 4** | **0,00** | **0,03** | **0,17** | **0,44** | **0,83** | **1,31** |
+| Attr 5 | 0,00 | 0,03 | 0,25 | 0,71 | 1,34 | 2,08 |
+| Attr 6 | 0,00 | 0,03 | 0,36 | 1,10 | 2,03 | 3,01 |
 
 #### 1.13.6.5 Difficulté 4 (Full plate)
 
 |  | 1d | 2d | 3d | 4d | 5d | 6d |
 |---|---|---|---|---|---|---|
-| **Attr 4** | **0,00** | **0,03** | **0,15** | **0,45** | **0,93** | **1,58** |
-| Attr 5 | 0,00 | 0,03 | 0,19 | 0,68 | 1,48 | 2,52 |
-| Attr 6 | 0,00 | 0,03 | 0,22 | 1,03 | 2,26 | 3,70 |
+| Attr 3 | 0,00 | 0,00 | 0,02 | 0,09 | 0,20 | 0,37 |
+| **Attr 4** | **0,00** | **0,00** | **0,04** | **0,16** | **0,38** | **0,72** |
+| Attr 5 | 0,00 | 0,00 | 0,05 | 0,27 | 0,68 | 1,27 |
+| Attr 6 | 0,00 | 0,00 | 0,06 | 0,43 | 1,14 | 2,04 |
+
+### 1.13.7 Probabilité d'effets spéciaux (double / triple)
+
+*Probabilité d'avoir au moins un double (D) ou triple (T) parmi les dés en succès — déclencheur d'effet spécial (cf. §1.2.3).*
+
+|  | 2d | 3d | 4d | 5d | 6d |
+|---|---|---|---|---|---|
+| Attr 3 | D:6% T:0% | D:15% T:1% | D:26% T:3% | D:37% T:7% | D:48% T:12% |
+| **Attr 4** | **D:8% T:0%** | **D:22% T:1%** | **D:38% T:5%** | **D:53% T:11%** | **D:66% T:19%** |
+| Attr 5 | D:11% T:0% | D:30% T:2% | D:50% T:6% | D:68% T:14% | D:81% T:25% |
+| Attr 6 | D:14% T:0% | D:37% T:2% | D:61% T:8% | D:80% T:18% | D:91% T:31% |
+
+*À attr 4 sur un combat type (4d), 38% des jets déclenchent un effet spécial activable. Sur 6d, 66%. Fréquence appropriée pour un effet "opportun" plutôt que "systématique".*
 
 
 ---
 
 ## 1.14 Appendice B — Diagonale arme/armure
 
-*Calibration : pool joueur N+2 vs difficulté N (sauf 1d et 2d sans armure).*
+*Calibration : pool joueur N+2 vs difficulté N (sauf 1d et 2d sans armure). Sans push, sans Blessure, sans effet spécial activé.*
 
-| Arme | Armure miroir | Attr 3 (S/I/É) | Attr 4 (S/I/É) | Attr 5 (S/I/É) |
-|---|---|---|---|---|
-| Mains nues 1d | Ø | 33/0/67% | **50/0/50%** | 67/0/33% |
-| Improvisée 2d | Ø | 56/0/44% | **75/0/25%** | 89/0/11% |
-| Petite 3d | Cuir (1) | 48/22/30% | **62/25/12%** | 80/17/4% |
-| Moyenne 4d | Maille (2) | 41/40/20% | **60/33/6%** | 78/21/1% |
-| Longue 5d | Plaque (3) | 29/58/13% | **53/43/3%** | 77/23/0% |
-| Lourde 6d | Full plate (4) | 40/51/9% | **54/44/2%** | 76/24/0% |
+| Arme | Armure miroir | Attr 3 (S/É) | Attr 4 (S/É) | Attr 5 (S/É) | E[net] A4 |
+|---|---|---|---|---|---|
+| Mains nues 1d | Ø | 33/67% | **50/50%** | 67/33% | 0,67 |
+| Improvisée 2d | Ø | 56/44% | **75/25%** | 89/11% | 1,33 |
+| Petite 3d | Cuir (1) | 48/52% | **62/38%** | 80/20% | 1,12 |
+| Moyenne 4d | Maille (2) | 33/67% | **52/48%** | 72/28% | 0,96 |
+| Martiale 5d | Plaque (3) | 27/73% | **44/56%** | 66/34% | 0,83 |
+| Lourde 6d | Full plate (4) | 20/80% | **38/62%** | 61/39% | 0,72 |
 
 **Lecture :**
-- À attribut 4, la diagonale donne **50–60% de Succès strict**, **25–45% d'Impasse** sur les armes lourdes vs armures lourdes — beaucoup de marge pour le push.
-- Plus l'arme et l'armure montent, plus l'Impasse s'élargit (53/43/3% pour 5d/Plaque vs 60/33/6% pour 4d/Maille). Les combats de haut niveau sont **moins binaires**.
-- Attribut 3 (mage avec dague vs cuir) reste sous 50% — un mage en mêlée doit privilégier la magie ou la fuite.
+- Sur la diagonale stricte (pool N+2 vs diff N), à attr 4, le Succès chute de 75% (improvisée) à 38% (lourde vs full plate). Le combat haut tier est **dur sans push ni effet spécial**.
+- E[net] à attr 4 sur la diagonale tourne autour de 0,7-1,3 → en combat, environ **1 END perdu par attaque réussie**. Un combattant à END 4 résiste ~4 attaques avant Blessure.
+- Le **push (Bet)** ajoute des chances : 1 END pré-déclarée → +1d → ~50% de gain de plus par dé. Combiné aux 1s bonus, ça compense les armures lourdes.
 
-**Profils types** (combattants standards) :
+**Profils types** :
 
 | Profil | Pool | Attribut | Notes |
 |---|---|---|---|
@@ -704,10 +740,11 @@ Comment évoluent les attributs, dons et expertises. Probablement lié à l'or d
 | Élite | 6d | 5 ou 6 | Champion, bras droit |
 | Boss | 6d | 6 | + Don/Expertise toujours actif |
 
-**Push et Impasse :**
-- À VIG 4, le joueur peut pousser jusqu'à 4 fois par jet (max VIG).
-- Sur 4d/A4 vs Maille (Impasse 33%), un push de 1 END convertit l'Impasse en Succès → P(progression) passe de 60% à 93%.
-- Le push consomme 1 END par +1 gain net. À END 4 (= VIG), un combattant tient ~4 jets boostés par combat (avant Deuxième souffle).
+**Push en Bet — exemples :**
+- *4d/A4 vs Maille (52% sans push) :* +1d push (5d) → **67%**. +2d push → **79%**. Coût 2 END pour 27 points de % en plus.
+- *5d/A4 vs Plaque (44% sans push) :* +1d push (6d) → **59%**. +2d → **71%**.
+- *6d/A4 vs Full plate (38% sans push) :* +1d push (7d, hors plafond mais permis) → ~50%. +2d → ~60%.
+- Max push par jet = ESP. Un mage ESP 5 peut pousser jusqu'à 5d même avec une arme petite.
 
 ---
 

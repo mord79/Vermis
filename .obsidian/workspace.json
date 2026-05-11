@@ -110,7 +110,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 393.5
+    "width": 200
   },
   "right": {
     "id": "79b55457e154c67a",
@@ -208,12 +208,11 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
-    "width": 400.5,
-    "collapsed": true
+    "width": 400.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -228,7 +227,7 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "676a3109a08e8bd4",
+  "active": "5f2d8f276f8620fa",
   "lastOpenFiles": [
     "00-MOC/Todo_Vue.md",
     "00-MOC/Index.md",

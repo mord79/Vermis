@@ -54,14 +54,14 @@ importer juste les nom et leur description narrative, pas de mécanique pour l'i
 ### 1.2.6 Création de personnage en matrice 3d6
 importer, mais avec cette grille d'attribut
 
-| d6  | type       | Attribut            | Expertise                                |                                                                | Dé rouge Handicape |
-| --- | ---------- | ------------------- | ---------------------------------------- | -------------------------------------------------------------- | ------------------ |
-| 1   | combattant | VIG 5, FIN 3, ESP 4 | - Premier soins<br>- Pratique Milicienne | - Cotte de mailles 2 RD<br>- Hachette +2d                      |                    |
-| 2   | combattant | VIG 5, FIN 4, ESP 3 | -<br>- Pratique Milicienne               | - Cotte de mailles 2 RD<br>- Épée courte +2d                   |                    |
-| 3   | Filou      | VIG 4, FIN 5, ESP 3 | - Poison                                 | - Armure de cuir 1 RD <br>- Épée courte +2d <br>- kit de soins |                    |
-| 4   | Filou      | VIG 3, FIN 5, ESP 4 | - Chirurgie de fortune                   | - Armure de cuir 1 RD <br>- Épée courte +2d <br>- kit de soins |                    |
-| 5   | Erudit     | VIG 3, FIN 4, ESP 5 | - Praxis Vetita<br>- Sciences Naturelles | -  Bâton 1d4<br>- Grimoire                                     |                    |
-| 6   | Erudit     | VIG 4, FIN 3, ESP 5 | - Ars Medica<br>- Sciences Naturelles    | - Grimoire<br>- Bâton 1d4                                      |                    |
+| d6  | type       | Attribut            | Expertise                        |                                                                | Dé rouge Handicape |
+| --- | ---------- | ------------------- | -------------------------------- | -------------------------------------------------------------- | ------------------ |
+| 1   | combattant | VIG 5, FIN 3, ESP 4 | - Premier soins<br>              | - Cotte de mailles 2 RD<br>- Hachette +2d                      |                    |
+| 2   | combattant | VIG 5, FIN 4, ESP 3 | - Pratique Milicienne            | - Cotte de mailles 2 RD<br>- Épée courte +2d                   |                    |
+| 3   | Filou      | VIG 4, FIN 5, ESP 3 | - Poison                         | - Armure de cuir 1 RD <br>- Épée courte +2d <br>- kit de soins |                    |
+| 4   | Filou      | VIG 3, FIN 5, ESP 4 | - Chirurgie de fortune           | - Armure de cuir 1 RD <br>- Épée courte +2d <br>- kit de soins |                    |
+| 5   | Erudit     | VIG 3, FIN 4, ESP 5 | - Sciences Interdites            | -  Bâton 1d4<br>- Grimoire                                     |                    |
+| 6   | Erudit     | VIG 4, FIN 3, ESP 5 | - Sciences Naturelles et Médical | - Grimoire<br>- Bâton 1d4                                      |                    |
 
 | D6  | Origine          | Expertise                  | Malchance (D-Vert) |
 | --- | ---------------- | -------------------------- | ------------------ |

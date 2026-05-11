@@ -1,12 +1,16 @@
 {
   "recentFiles": [
     {
-      "basename": "Plan d'importation par point",
-      "path": "09-Vermis-Mini/Intégré/Plan d'importation par point.md"
+      "basename": "Vermis_d6_v10",
+      "path": "09-Vermis-Mini/Intégré/Vermis_d6_v10.md"
     },
     {
-      "basename": "regles_v10",
-      "path": "09-Vermis-Mini/Intégré/regles_v10.md"
+      "basename": "WIP Création_de_personnage",
+      "path": "01-Règles/011-WIP/WIP Création_de_personnage.md"
+    },
+    {
+      "basename": "Plan d'importation par point",
+      "path": "09-Vermis-Mini/Intégré/Plan d'importation par point.md"
     },
     {
       "basename": "Grille_Événements_Aléatoires",
@@ -19,10 +23,6 @@
     {
       "basename": "WIP Création_de_personnage V2",
       "path": "01-Règles/011-WIP/WIP Création_de_personnage V2.md"
-    },
-    {
-      "basename": "WIP Création_de_personnage",
-      "path": "01-Règles/011-WIP/WIP Création_de_personnage.md"
     },
     {
       "basename": "WIP Tension",
@@ -98,11 +98,11 @@
     },
     {
       "basename": "WIP SmallFolk",
-      "path": "09-Vermis-Mini/WIP SmallFolk.md"
+      "path": "09-Vermis-Mini/WIP/WIP SmallFolk.md"
     },
     {
       "basename": "WIP Rule extra light test",
-      "path": "09-Vermis-Mini/WIP Rule extra light test.md"
+      "path": "09-Vermis-Mini/WIP/WIP Rule extra light test.md"
     },
     {
       "basename": "ref-mythic-bastionland-notes",

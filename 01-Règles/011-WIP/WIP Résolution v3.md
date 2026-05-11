@@ -5,7 +5,7 @@ Deux catégories:
 - Tests d’Action : utilises des dés varié 
 - Test de Réaction : utilisé d20 rollunder
 
-# Tests d'Action
+# 1 Tests d'Action
 Utilisé pour voir si une action complexe ou risqué est réussi dans les temps.
 Utiliser le dé d’outils (d6 par défaut). Le MJ détermine le seuil selon la difficulté (2 à 5+). Lancer plus haut que le seuil pour réussir l’action. La difficulté est relative au compétence du personnage qui fait l’action, en fonction de son expertise et ses connaissances relative. Le dé est en fonction de l’outil utilisée.
 
@@ -24,7 +24,7 @@ De même, un PJ peut décider de « découper » son action en plusieurs pour 
 Les résultats des dé peuvent avoir certains effets
 - **Max sur un dé** : tension -1 ou autres effets positifs mais faire un test de réaction de l’attribut en lien avec l’action pour éviter l’usure de l’outils. Un outils improvisé brise en un coup (1 seul point d’usure). Si aucun outils est utilisé, perdre 1d6 END ou 1 ED (à valider)
 - **Double, triple** : chaque dé d’une série de dé identique ont le même effets qu’un MAX sur un dé (cumulatif si ces dé sont eux-mêmes des MAX)
-## combat 
+## 1.1 combat 
  Même système. Le personnage peut investir de **l’effort** aussi. Les effets sont sur les max avec tests d’attribut pour les activer 
  
  **Lecture du dé** :
@@ -41,7 +41,7 @@ Les résultats des dé peuvent avoir certains effets
 
 [^1]: ED: Endurence Dice : débute avec VIG/4.
 
-# Test de Réaction 
+# 2 Test de Réaction 
 
 Test pour réagir rapidement et instantanément à une situation. Utilisé aussi pour les tests VS. Spectre de succès gradué. Possibilité de / et + et 
 

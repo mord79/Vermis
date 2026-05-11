@@ -6,7 +6,6 @@
       {
         "id": "72e57114696bb76d",
         "type": "tabs",
-        "dimension": 22.988505747126435,
         "children": [
           {
             "id": "c0f08cb56206d2b5",
@@ -14,33 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "09-Vermis-Mini/Intégré/Quick ideas.md",
+                "file": "01-Règles/Grille_Événements_Aléatoires.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Quick ideas"
-            }
-          }
-        ]
-      },
-      {
-        "id": "ebf87629875e7b41",
-        "type": "tabs",
-        "dimension": 77.01149425287356,
-        "children": [
-          {
-            "id": "e667f6e46f7d2579",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "06-Wiki/règles-combat.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "règles-combat"
+              "title": "Grille_Événements_Aléatoires"
             }
           }
         ]
@@ -75,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "`Événements_Aléatoires.md`",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -106,7 +84,8 @@
               "title": "recent-files"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -188,13 +167,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "06-Wiki/règles-combat.md",
+                "file": "01-Règles/Grille_Événements_Aléatoires.md",
                 "followCursor": false,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Plan de règles-combat"
+              "title": "Plan de Grille_Événements_Aléatoires"
             }
           },
           {
@@ -227,8 +206,17 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "e667f6e46f7d2579",
+  "active": "73353add5eb7fa43",
   "lastOpenFiles": [
+    "01-Règles/011-WIP/WIP Exploration.md",
+    "01-Règles/011-WIP/WIP Création_de_personnage V2.md",
+    "01-Règles/011-WIP/WIP Création_de_personnage.md",
+    "01-Règles/011-WIP/WIP Tension.md",
+    "01-Règles/011-WIP/WIP Résolution v3.md",
+    "01-Règles/011-WIP/WIP Résolution v2.md",
+    "01-Règles/011-WIP/WIP Repos et Guérison.md",
+    "09-Vermis-Mini/Intégré/Quick ideas.md",
+    "06-Wiki/règles-combat.md",
     "02-Banque/ref-declare-actions.md",
     "02-Banque/ref-markov-stocking.md",
     "01-Règles/012-Intégré/Tables de Loot & Disponibilité.md",
@@ -241,11 +229,8 @@
     "02-Banque/ref-earthmote.md",
     "09-Vermis-Mini/Intégré/Plan d'importation par point.md",
     "09-Vermis-Mini/Intégré/import_depuis_vermis.md",
-    "01-Règles/011-WIP/WIP Création_de_personnage V2.md",
-    "09-Vermis-Mini/Intégré/Quick ideas.md",
     "09-Vermis-Mini/OLD/regles_v07.md",
     "09-Vermis-Mini/OLD",
-    "01-Règles/011-WIP/WIP Création_de_personnage.md",
     "01-Règles/Vermis_Rules.md",
     "01-Règles/Événements_Aléatoires.md",
     "02-Banque/ref-common-osr-questions-rancourt.md",
@@ -253,12 +238,6 @@
     "09-Vermis-Mini/Intégré",
     "09-Vermis-Mini/WIP",
     "04-Todo/Vermis_Todo.md",
-    "09-Vermis-Mini/WIP SmallFolk.md",
-    "09-Vermis-Mini/WIP Rule extra light test.md",
-    "09-Vermis-Mini/Setting SmallFolk.md",
-    "02-Banque/ref-mythic-bastionland-notes.md",
-    "02-Banque/ref-want-have-sacrifice.md",
-    "02-Banque/ref-swimming-rules-hmtw.md",
     "Sans titre.canvas",
     "02-Banque/idée-entities-are-people.md.tmp.29172.1777907100343",
     "09-Vermis-Mini",

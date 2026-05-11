@@ -7,7 +7,7 @@ date: 2026-04-30
 màj: 2026-04-30
 ---
 
-# Grille — Événements Aléatoires (Markov 7 états · 2d6)
+# 1 Grille — Événements Aléatoires (Markov 7 états · 2d6)
 
 > Référence à la table. Procédure complète et arbitrages : `Événements_Aléatoires.md`.
 >
@@ -15,7 +15,7 @@ màj: 2026-04-30
 
 ---
 
-## Matrice de transition
+## 1.1 Matrice de transition
 
 | Depuis ↓ / Vers → | Rien A | Rien B | Spéciale | Signe M. | Monstre ☠ | Fatigue ☠ | Torche ☠ |
 |---|---|---|---|---|---|---|---|
@@ -31,9 +31,9 @@ màj: 2026-04-30
 
 ---
 
-## Sous-tables — Dé Rouge (intensité) & Dé Noir (nature)
+## 1.2 Sous-tables — Dé Rouge (intensité) & Dé Noir (nature)
 
-### Monstre
+### 1.2.1 Monstre
 
 | 🔴 Rouge — Réaction | ⚫ Noir — Activité |
 |---|---|
@@ -44,7 +44,7 @@ màj: 2026-04-30
 | 5 — Agressif, charge au contact | 5 — Revient de chasse, alerte |
 | 6 — Enragé, attaque sans avertissement | 6 — Accompagné (1d3 congénères) |
 
-### Signe de Monstre
+### 1.2.2 Signe de Monstre
 
 | 🔴 Rouge — Fraîcheur | ⚫ Noir — Type |
 |---|---|
@@ -55,7 +55,7 @@ màj: 2026-04-30
 | | 5 — Son lointain — grognement, cliquetis |
 | | 6 — Odeur forte et caractéristique |
 
-### Spéciale
+### 1.2.3 Spéciale
 
 | 🔴 Rouge — Ampleur | ⚫ Noir — Nature |
 |---|---|
@@ -66,7 +66,7 @@ màj: 2026-04-30
 | | 5 — Phénomène magique ou runique |
 | | 6 — Trésor ou cache de valeur |
 
-### Fatigue
+### 1.2.4 Fatigue
 
 | 🔴 Rouge — Sévérité | ⚫ Noir — Qui est touché ? |
 |---|---|
@@ -75,7 +75,7 @@ màj: 2026-04-30
 | 5–6 — Sévère | 5 — Deux personnages au choix du MJ |
 | | 6 — Tout le groupe |
 
-### Torche
+### 1.2.5 Torche
 
 | 🔴 Rouge — Mode d'extinction | ⚫ Noir — Conséquence |
 |---|---|
@@ -85,13 +85,13 @@ màj: 2026-04-30
 | 6 — Tombe et risque d'incendie | 5 — Objet fragile brisé dans la panique |
 | | 6 — Rencontre de monstre déclenchée |
 
-### Rien A · Rien B
+### 1.2.6 Rien A · Rien B
 
 *Pas de sous-table.* La couleur des dés peut servir d'inspiration de description ambiante au MJ.
 
 ---
 
-## Doubles — Événement exceptionnel superposé
+## 1.3 Doubles — Événement exceptionnel superposé
 
 | Double | Total | Événement |
 |---|---|---|
@@ -104,7 +104,7 @@ màj: 2026-04-30
 
 ---
 
-## Avantage / Désavantage MJ
+## 1.4 Avantage / Désavantage MJ
 
 - **Avantage** *(scènes apaisées)* — lancer 2 fois, garder la **somme la plus basse**.
 - **Désavantage** *(scènes tendues)* — lancer 2 fois, garder la **somme la plus haute**.

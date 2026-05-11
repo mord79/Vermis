@@ -1,6 +1,42 @@
 {
   "recentFiles": [
     {
+      "basename": "Grille_Événements_Aléatoires",
+      "path": "01-Règles/Grille_Événements_Aléatoires.md"
+    },
+    {
+      "basename": "WIP Exploration",
+      "path": "01-Règles/011-WIP/WIP Exploration.md"
+    },
+    {
+      "basename": "WIP Création_de_personnage V2",
+      "path": "01-Règles/011-WIP/WIP Création_de_personnage V2.md"
+    },
+    {
+      "basename": "WIP Création_de_personnage",
+      "path": "01-Règles/011-WIP/WIP Création_de_personnage.md"
+    },
+    {
+      "basename": "WIP Tension",
+      "path": "01-Règles/011-WIP/WIP Tension.md"
+    },
+    {
+      "basename": "WIP Résolution v3",
+      "path": "01-Règles/011-WIP/WIP Résolution v3.md"
+    },
+    {
+      "basename": "WIP Résolution v2",
+      "path": "01-Règles/011-WIP/WIP Résolution v2.md"
+    },
+    {
+      "basename": "WIP Repos et Guérison",
+      "path": "01-Règles/011-WIP/WIP Repos et Guérison.md"
+    },
+    {
+      "basename": "Quick ideas",
+      "path": "09-Vermis-Mini/Intégré/Quick ideas.md"
+    },
+    {
       "basename": "règles-combat",
       "path": "06-Wiki/règles-combat.md"
     },
@@ -41,20 +77,8 @@
       "path": "09-Vermis-Mini/Intégré/import_depuis_vermis.md"
     },
     {
-      "basename": "WIP Création_de_personnage V2",
-      "path": "01-Règles/011-WIP/WIP Création_de_personnage V2.md"
-    },
-    {
-      "basename": "Quick ideas",
-      "path": "09-Vermis-Mini/Intégré/Quick ideas.md"
-    },
-    {
       "basename": "regles_v07",
       "path": "09-Vermis-Mini/OLD/regles_v07.md"
-    },
-    {
-      "basename": "WIP Création_de_personnage",
-      "path": "01-Règles/011-WIP/WIP Création_de_personnage.md"
     },
     {
       "basename": "Vermis_Rules",
@@ -117,18 +141,6 @@
       "path": "06-Wiki/concept-tension.md"
     },
     {
-      "basename": "WIP Exploration",
-      "path": "01-Règles/011-WIP/WIP Exploration.md"
-    },
-    {
-      "basename": "WIP Résolution v2",
-      "path": "01-Règles/011-WIP/WIP Résolution v2.md"
-    },
-    {
-      "basename": "Grille_Événements_Aléatoires",
-      "path": "01-Règles/Grille_Événements_Aléatoires.md"
-    },
-    {
       "basename": "Magie_Arcanique",
       "path": "01-Règles/012-Intégré/Magie_Arcanique.md"
     },
@@ -141,16 +153,8 @@
       "path": "01-Règles/012-Intégré/Résolutions.md"
     },
     {
-      "basename": "WIP Tension",
-      "path": "01-Règles/011-WIP/WIP Tension.md"
-    },
-    {
       "basename": "Hechmen Are Tools",
       "path": "03-Références/Hechmen Are Tools.md"
-    },
-    {
-      "basename": "WIP Repos et Guérison",
-      "path": "01-Règles/011-WIP/WIP Repos et Guérison.md"
     },
     {
       "basename": "WIP Progression",

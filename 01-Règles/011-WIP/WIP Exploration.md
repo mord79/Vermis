@@ -1,6 +1,6 @@
-## Site
-### Procédure
-### Actions
+## 0.1 Site
+### 0.1.1 Procédure
+### 0.1.2 Actions
 - Recherche
 - [[WIP Repos et Guérison]]
 - Déplacement
@@ -12,7 +12,7 @@
 - Actions de groupes
 	- Soulever
 	- Creuser
-### Dangers
+### 0.1.3 Dangers
 - Chutes
 - Souffle, manque d'air
 - Feu/Acide/Froid
@@ -22,14 +22,14 @@
 - Pièges
 - Porte
 
-### Évènements de donjon
+### 0.1.4 Évènements de donjon
 [[Événements_Aléatoires]]
-## Nature
+## 0.2 Nature
 - Dans un Hex d'un Lieue
 - Météo
 
-## Voyage
+## 0.3 Voyage
 
-## Downtime
+## 0.4 Downtime
 
-### Tours de Faction
+### 0.4.1 Tours de Faction

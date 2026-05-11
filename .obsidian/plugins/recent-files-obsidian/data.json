@@ -1,6 +1,18 @@
 {
   "recentFiles": [
     {
+      "basename": "règles-combat",
+      "path": "06-Wiki/règles-combat.md"
+    },
+    {
+      "basename": "ref-declare-actions",
+      "path": "02-Banque/ref-declare-actions.md"
+    },
+    {
+      "basename": "ref-markov-stocking",
+      "path": "02-Banque/ref-markov-stocking.md"
+    },
+    {
       "basename": "Tables de Loot & Disponibilité",
       "path": "01-Règles/012-Intégré/Tables de Loot & Disponibilité.md"
     },
@@ -159,10 +171,6 @@
     {
       "basename": "idée-entities-are-people",
       "path": "02-Banque/idée-entities-are-people.md"
-    },
-    {
-      "basename": "ref-markov-stocking",
-      "path": "02-Banque/ref-markov-stocking.md"
     },
     {
       "basename": "design-donjon",

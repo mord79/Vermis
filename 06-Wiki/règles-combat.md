@@ -6,7 +6,7 @@ date: 2026-04-30
 màj: 2026-04-30
 ---
 
-# Combat
+# 1 Combat
 
 *Dérivé de [[Vermis_Rules]] §6. En cas de conflit, la règle prime.*
 
@@ -14,13 +14,13 @@ màj: 2026-04-30
 
 ---
 
-## Principe — Un seul jet
+## 1.1 Principe — Un seul jet
 
 Lancer le **dé de dégâts de l'arme**. Résultat direct : dégâts bruts. Pas de roll-to-hit séparé. Lire le dé pour les effets spéciaux.
 
 ---
 
-## Initiative et surprise
+## 1.2 Initiative et surprise
 
 | Cas | Procédure |
 |---|---|
@@ -30,7 +30,7 @@ Lancer le **dé de dégâts de l'arme**. Résultat direct : dégâts bruts. Pas 
 
 ---
 
-## Procédure du round
+## 1.3 Procédure du round
 
 1. Déclaration des **actions lentes** (visibles, interruptibles)
 2. MJ annonce **menaces ennemies** (qui cible qui, zones, renforts)
@@ -41,11 +41,11 @@ Lancer le **dé de dégâts de l'arme**. Résultat direct : dégâts bruts. Pas 
 
 ---
 
-## Actions disponibles
+## 1.4 Actions disponibles
 
 **Budget par round : 1 Action + 1 Manœuvre, OU 1 Action complète.**
 
-### Actions
+### 1.4.1 Actions
 - **Attaquer** — dé de dégâts (d4 plus rapide que d6 etc.)
 - **Bloquer** — annule les dégâts d'une attaque annoncée (arme ≥ taille ou bouclier/couverture ; couverture obligatoire pour projectiles)
 - **Esquiver** — annule en se déplaçant hors de portée (espace libre requis)
@@ -55,22 +55,22 @@ Lancer le **dé de dégâts de l'arme**. Résultat direct : dégâts bruts. Pas 
 - **Améliorer** — bonus à l'action d'un allié (si rate, allié sans bonus)
 - **Activer** — rend possible l'action d'un allié
 
-### Manœuvres *(test VS VIG ou FIN si contact sur ennemi actif)*
+### 1.4.2 Manœuvres *(test VS VIG ou FIN si contact sur ennemi actif)*
 - **Déplacer** — vitesse de base
 - **Pousser** — déplace la cible d'1 case
 - **Trébucher/Renverser** — cible à terre, DAV jusqu'à se relever
 - **Saisir/Agripper** — initie une lutte (variantes : Projeter, Immobiliser, Étrangler, Clé)
 - **Désengager** — vitesse ½, l'ennemi ne peut pas suivre
 
-### Actions complètes *(tout le round)*
+### 1.4.3 Actions complètes *(tout le round)*
 - Recharger · Invoquer un sort (peut être *lent*) · Fouiller · Reprendre son souffle
 
-### Actions gratuites
+### 1.4.4 Actions gratuites
 - Parler · Prendre un objet équipé (ceinture)
 
 ---
 
-## Attaque et dégâts
+## 1.5 Attaque et dégâts
 
 **Lecture du dé :**
 
@@ -90,7 +90,7 @@ Lancer le **dé de dégâts de l'arme**. Résultat direct : dégâts bruts. Pas 
 
 ---
 
-## Défense et armure
+## 1.6 Défense et armure
 
 - **RD** réduit les dégâts avant l'END
 - **Bloquer** (bouclier) : lancer dé de bouclier, prendre le **meilleur** entre RD passive et active
@@ -98,7 +98,7 @@ Lancer le **dé de dégâts de l'arme**. Résultat direct : dégâts bruts. Pas 
 
 ---
 
-## Dégâts directs et états
+## 1.7 Dégâts directs et états
 
 *Quand END = 0, l'excédent attaque l'attribut selon le type de dégâts (voir [[règles-santé]]).*
 
@@ -114,7 +114,7 @@ Lancer le **dé de dégâts de l'arme**. Résultat direct : dégâts bruts. Pas 
 
 ---
 
-## Cas particuliers
+## 1.8 Cas particuliers
 
 - **Attaques mutuelles mortelles** — les deux coups s'appliquent simultanément
 - **Mitigation d'une menace** — invalider la menace ne change pas la cible ; nouvelle menace au round suivant
@@ -125,7 +125,7 @@ Lancer le **dé de dégâts de l'arme**. Résultat direct : dégâts bruts. Pas 
 
 ---
 
-## Voir aussi
+## 1.9 Voir aussi
 
 - [[règles-résolution]] — spectre T-4/T+4 applicable aux actions de combat
 - [[règles-santé]] — END, attributs, conditions complètes

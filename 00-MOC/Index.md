@@ -1,10 +1,10 @@
-# Vermis — Index
+# 1 Vermis — Index
 
 *Carte du vault. Mise à jour à chaque ajout de document majeur.*
 
 ---
 
-## Règles
+## 1.1 Règles
 
 | Document | Rôle |
 |---|---|
@@ -14,7 +14,7 @@
 
 ---
 
-## Banque d'idées
+## 1.2 Banque d'idées
 
 → [[Banque_Vue]] — vues Dataview par statut
 
@@ -27,7 +27,7 @@
 
 ---
 
-## Références externes
+## 1.3 Références externes
 
 | Document | Source |
 |---|---|
@@ -39,7 +39,7 @@
 
 ---
 
-## Gestion
+## 1.4 Gestion
 
 | Document | Rôle |
 |---|---|
@@ -48,7 +48,7 @@
 
 ---
 
-## Décisions figées — à ne pas réintroduire
+## 1.5 Décisions figées — à ne pas réintroduire
 
 - Système D6 / D66
 - Bonus d'attribut en +1/+2

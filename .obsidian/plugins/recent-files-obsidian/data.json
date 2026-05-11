@@ -5,6 +5,18 @@
       "path": "09-Vermis-Mini/Intégré/Vermis_d6_v10.md"
     },
     {
+      "basename": "Todo_Vue",
+      "path": "00-MOC/Todo_Vue.md"
+    },
+    {
+      "basename": "Index",
+      "path": "00-MOC/Index.md"
+    },
+    {
+      "basename": "Banque_Vue",
+      "path": "00-MOC/Banque_Vue.md"
+    },
+    {
       "basename": "WIP Création_de_personnage",
       "path": "01-Règles/011-WIP/WIP Création_de_personnage.md"
     },
@@ -187,10 +199,6 @@
     {
       "basename": "design-points-ouverts",
       "path": "06-Wiki/design-points-ouverts.md"
-    },
-    {
-      "basename": "Tell, Test, Twist",
-      "path": "03-Références/Tell, Test, Twist.md"
     }
   ],
   "omittedPaths": [],

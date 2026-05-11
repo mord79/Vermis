@@ -6,6 +6,7 @@
       {
         "id": "72e57114696bb76d",
         "type": "tabs",
+        "dimension": 27.756833176248826,
         "children": [
           {
             "id": "c0f08cb56206d2b5",
@@ -26,6 +27,7 @@
       {
         "id": "40567eb4057cdfe6",
         "type": "tabs",
+        "dimension": 72.24316682375118,
         "children": [
           {
             "id": "676a3109a08e8bd4",
@@ -108,8 +110,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 393.5,
-    "collapsed": true
+    "width": 393.5
   },
   "right": {
     "id": "79b55457e154c67a",
@@ -229,8 +230,12 @@
   },
   "active": "676a3109a08e8bd4",
   "lastOpenFiles": [
-    "01-Règles/011-WIP/WIP Création_de_personnage.md",
+    "00-MOC/Todo_Vue.md",
+    "00-MOC/Index.md",
+    "00-MOC/Banque_Vue.md",
     "09-Vermis-Mini/Intégré/Vermis_d6_v10.md",
+    "vermis-rpg-design.skill",
+    "01-Règles/011-WIP/WIP Création_de_personnage.md",
     "09-Vermis-Mini/Intégré/Plan d'importation par point.md",
     "01-Règles/Grille_Événements_Aléatoires.md",
     "01-Règles/011-WIP/WIP Exploration.md",
@@ -254,9 +259,6 @@
     "09-Vermis-Mini/OLD/regles_v07.md",
     "09-Vermis-Mini/OLD",
     "01-Règles/Vermis_Rules.md",
-    "01-Règles/Événements_Aléatoires.md",
-    "02-Banque/ref-common-osr-questions-rancourt.md",
-    "09-Vermis-Mini/Intégré/stress_test.md",
     "09-Vermis-Mini/Intégré",
     "09-Vermis-Mini/WIP",
     "Sans titre.canvas",
@@ -264,7 +266,6 @@
     "09-Vermis-Mini",
     "08-Setting/081-Idées",
     "08-Setting",
-    "07-Banque de mots",
-    "01-Règles/012-Intégré"
+    "07-Banque de mots"
   ]
 }

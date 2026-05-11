@@ -1,3 +1,13 @@
+Background
+- Guerrier paysans 
+- Illusionniste : metteur en scène (scénographe )
+		- ~~Ventriloque~~ poète 
+- Barde : ~~poète~~ : ventriloque 
+- Moine : ~~mycologue~~: apiculteur
+- Alchimiste : ~~verrier~~ : ingénieur ou invente
+
+
+
 Simplification 2 
 - Main 1d, improv 2D, petit 3D, moyen 4d, long 5d, lourd 6d
 - +1 gain sur succes double (même chiffre),+2 si triple 

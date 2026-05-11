@@ -2,10 +2,11 @@ Background
 - Guerrier paysans 
 - Illusionniste : metteur en scène (scénographe )
 		- ~~Ventriloque~~ poète 
-- Barde : ~~poète~~ : ventriloque 
+- Barde : ~~poète~~ : ventriloque , enquêteur , espion 
 - Moine : ~~mycologue~~: apiculteur
-- Alchimiste : ~~verrier~~ : ingénieur ou invente
-
+- Alchimiste : ~~verrier~~ : ingénieur ou inventeur
+- Historien, 
+Expertise : bestiaire, tactique de combat, vie militaire, 
 
 
 Simplification 2 

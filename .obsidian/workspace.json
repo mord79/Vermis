@@ -191,7 +191,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 313.5
+    "width": 313.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -206,7 +207,7 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "b26d04a5b47f40af",
+  "active": "676a3109a08e8bd4",
   "lastOpenFiles": [
     "00-MOC/Todo_Vue.md",
     "00-MOC/Index.md",

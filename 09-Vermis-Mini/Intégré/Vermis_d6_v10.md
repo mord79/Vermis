@@ -63,11 +63,11 @@
 
 Trois attributs, valeurs **2–6** en jeu normal (1 = état critique, 6 = élite).
 
-| Attribut | Couvre | Rôle mécanique |
-|---|---|---|
-| **VIG** Vigueur | Force, endurance, résistance | END, inventaire (10+VIG), PR (récupération) |
-| **FIN** Finesse | Réflexe, précision, perception | Jets de discrétion, tir, manœuvres, esquive |
-| **ESP** Esprit | Volonté, influence, mémoire | Jets sociaux, magie, moral, **push max par jet** |
+| Attribut        | Couvre                         | Rôle mécanique                                   | Type de dégâts                                       |
+| --------------- | ------------------------------ | ------------------------------------------------ | ---------------------------------------------------- |
+| **VIG** Vigueur | Force, endurance, résistance   | END, inventaire (10+VIG), PR (récupération)      | Physique, maladie, poison, brûlure, magie nécrotique |
+| **FIN** Finesse | Réflexe, précision, perception | Jets de discrétion, tir, manœuvres, esquive      | Froid, électricité, poison paralysant                |
+| **ESP** Esprit  | Volonté, influence, mémoire    | Jets sociaux, magie, moral, **push max par jet** | Magique, psychique, peur, fantomatique               |
 
 **PNJ — Puissance** : stat unique (2–6) qui remplace VIG/FIN/ESP pour tous leurs jets offensifs. Ne détermine pas la résistance aux coups.
 
@@ -103,9 +103,37 @@ L'arbitrage de l'applicabilité revient au MJ : l'Expertise doit avoir un lien p
 *Exemples* : Médecine, Survie en forêt, Crochetage, Lecture, Étiquette des cours, Fabrication, Théologie obscure, Pistage, Chevauchée, Cuisine, Marché noir.
 
 **Acquisition en jeu** : par voie **narrative** uniquement — apprentissage auprès d'un mentor, étude prolongée d'un grimoire, événement marquant qui transforme le perso. Pas de progression mécanique automatique. *(Discipline OSR : la progression du perso passe par le récit.)*
+## 2.4 Inventaire
 
-## 2.4 Création de personnage
-### 2.4.1 Procédure
+**Capacité = 10 + VIG max** *(valeur de départ, non réduite par les Blessures à VIG)*
+
+Chaque objet = 1 place. Exceptions :
+- Armes lourdes (deux mains) : 2 places
+- Armures : 1 place par catégorie (légère = 1, moyenne = 2, lourde = 3)
+- Boucliers : 1 place (grand bouclier = 2)
+- Grimoire : 1 place
+
+Il y a 3 niveaux de chargements: Léger, Chargé et Surchargé
+
+| État      | Charges   | Vitesse  | Effets                                                                                                               |
+| --------- | --------- | -------- | -------------------------------------------------------------------------------------------------------------------- |
+| Libre     | 5         | 8 Rapide | +1D sur discrétion, grimpe, esquive                                                                                  |
+| Chargé    | 6-10      | 6 Moyen  | −1D sur nage                                                                                                         |
+| Surchargé | 11-VIG+10 | 4 Lent   | Nage impossible. −1D sur tests FIN/VIG de mouvement avec force ou précision. **Vulnérable** : dégâts reçus améliorés |
+
+
+- **Léger** : 5 place occupées ou moins
+	- **Déplacement** : Rapide (8)
+- **Chargé** : de 6 à 10 places occupées
+	- **Déplacement** : Moyen (6)
+- **Surchargé** : 11 places et plus, maximum 10+VIG
+	- **Déplacement** : Lent (4)
+
+---
+## 2.5 Déplacement et vitesse
+*(à compléter, voir Vermis)*
+## 2.6 Création de personnage
+### 2.6.1 Procédure
 
 - Prendre 3d6 de couleur rouge, vert et bleu.
 - Lancer les 3 dés et noter leur valeur et leur couleur dans l'ordre, de gauche à droite (ex. 3R-5B-2V).
@@ -116,29 +144,29 @@ L'arbitrage de l'applicabilité revient au MJ : l'Expertise doit avoir un lien p
 
 Le dé sert deux fois : il détermine d'abord le résultat de sa propre table, puis il indexe une table secondaire (Handicap pour le rouge, Malchance pour le vert, Don pour le bleu).
 
-**Or de départ** : D3 + D_Bleu)
+**Or de départ** : (D3 + D_Bleu)x10
 **Âge de départ** : 2x(D1+D_Rouge) + 15 
-### 2.4.2 Apprchoche D1
+### 2.6.2 Apprchoche D1
 
 | d6  | type       | Attribut            | Expertise                        |                                                                 | Handicape (Dé rouge)                                                                                                                                                 |
 | --- | ---------- | ------------------- | -------------------------------- | --------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1   | combattant | VIG 5, FIN 3, ESP 4 | - Premier soins<br>              | - Cotte de mailles 2 RD<br>- Hachette 4d<br>- Bandage           | 1. Baiguément<br>2. SPT<br>3. Accent incompréhensible<br>4. Laid<br>5. Agressif<br>6. Haine animal                                                                   |
+| 1   | combattant | VIG 5, FIN 3, ESP 4 | - Premier soins<br>              | - Cotte de mailles 2 RD<br>- Hachette 4d<br>- Bandage           | 1. Baiguément<br>2. SPT<br>3. Accent incompréhensible<br>4. Laid<br>5. Agressif<br>6. Haï des animaux                                                                |
 | 2   | combattant | VIG 5, FIN 4, ESP 3 | - Cuisine de campagne            | - Cotte de mailles 2 RD<br>- Épée courte 4d<br>- Badge milicien | 1. Vertige<br>2. Distrait<br>3. Daltonien<br>4. Désorganisé<br>5. Pessimisme contagieux<br>6. Dure de la feuille                                                     |
 | 3   | Filou      | VIG 4, FIN 5, ESP 3 | - Poison                         | - Armure de cuir 1 RD <br>- Épée courte 4d <br>- kit de poison  | 1. Tremblements nerveux<br>2. Paranoïa aiguë<br>3. Teint maladif <br>4. Haleine chimique, <br>5. Insomnie, <br>6. Naturellement Suspect                              |
 | 4   | Filou      | VIG 3, FIN 5, ESP 4 | - Chirurgie de fortune           | - Armure de cuir 1 RD <br>- Épée courte 4d <br>- kit de soins   | 1. Main raide, <br>2. Phobie du sang<br>3. Boiterie marquée, <br>4. Saignements de nez fréquents, <br>5. Myopie sévère, <br>6. Cicatrices d'auto-expérimentation     |
 | 5   | Erudit     | VIG 3, FIN 4, ESP 5 | - Sciences Interdites            | - Bâton 3d<br>- Sac Accès facile                                | 1. Hallucinations, <br>2. Peau translucide, <br>3. Migraines<br>4. Ombre décalée, <br>5. Narcolepsie, <br>6. Obsession pour un objet inutile                         |
 | 6   | Erudit     | VIG 4, FIN 3, ESP 5 | - Sciences Naturelles et Médical | - Dague 3d<br>- Kit de pharmacopé                               | 1. Asthme, <br>2. Fragilité osseuse<br>3. Manie de la propreté (TOC), <br>4. Cynisme toxique<br>5. Allergies alimentaires graves<br>6. Main de fer (prothèse lourde) |
-### 2.4.3 Origine D2
+### 2.6.3 Origine D2
 
 | D6  | Origine          | Expertise                  | Malchance (D-Vert)                                  |
 | --- | ---------------- | -------------------------- | --------------------------------------------------- |
 | 1   | Reclus-Nomade    | - Survie<br>- Navigation   | 1-2. Exilé<br>3-4. Oublié<br>5-6. Remplacé          |
 | 2   | Reclus-Paysans   | - Survie<br>- Dressage     | 1-2. Perdu<br>3-4. Empoisonné<br>5-6. Affamé        |
-| 3   | Citadin-Criminel | - Artifex<br>- Argot       | 1-2. Appauvri<br>3-4. Dépendence<br>5-6. Condamné   |
-| 2   | Citadin-Artisan  | - Artifex<br>- Commerce    | 1-2. Hanté<br>3-4. Désabusé<br>5-6. Fraudé          |
+| 3   | Citadin-Criminel | - Bricolage<br>- Argot     | 1-2. Appauvri<br>3-4. Dépendence<br>5-6. Condamné   |
+| 2   | Citadin-Artisan  | - Bricolage<br>- Commerce  | 1-2. Hanté<br>3-4. Désabusé<br>5-6. Fraudé          |
 | 5   | Décadent-Artiste | - Humanité<br>- Mascarade  | 1-2. Chantage<br>3-4. Humilié<br>5-6. Déprimé       |
 | 6   | Décadent-Noble   | - Humanité<br>- Leadership | 1-2. Rétrogradé<br>3-4. Déshonoré<br>5-6. Déshérité |
-### 2.4.4 Motivation D3
+### 2.6.4 Motivation D3
 
 | D6  | Motivation               | Don (D-Bleu)                                                 | Trait distinctif (Choisir entre D2+D-Vert)                                                                                         |
 | --- | ------------------------ | ------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------- |
@@ -148,9 +176,9 @@ Le dé sert deux fois : il détermine d'abord le résultat de sa propre table, p
 | 4   | Pragmatique : Perfection | 1-2. Réflexe<br>3-4. Précis<br>5-6. Félin                    | 2-4. Tatoué  <br>5-6. Chignons<br>7. Dreads<br>8-9. Imberbe<br>10-12. Poilue                                                       |
 | 5   | Ambitieux : Gloire       | 1-2. Polyglotte<br>3-4. Cultivé<br>5-6. Ingénieux            | 2-4. Moustache  <br>5-6. Cheveux très long<br>7. Tache de rousseur <br>8-9. Cheveux tressés<br>10-12. Yeux verrons                 |
 | 6   | Ambiteux : Pouvoir       | 1-2. Inspirant<br>3-4. Séduisant<br>5-6. Crédible            | 2-4. Nez aquilin  <br>5-6. Chauve ou rasé<br>7. Cheveux frisés <br>8-9. Albinos<br>10-12. Marque de flagellation<br>1. Peau foncée |
-### 2.4.5 Archétype (Approche/Origine)
-Item personnalisé* : +1D
-#### 2.4.5.1 Combattants
+### 2.6.5 Archétype (Approche/Origine)
+Item personnalisé* : +1D et -1 place d'inventaire (min 0)
+#### 2.6.5.1 Combattants
 
 | Archétype             | Item personnalisé\*                | Occupation - Item (Motivation)                                                                                                                                                                                                               |
 | --------------------- | ---------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -160,7 +188,7 @@ Item personnalisé* : +1D
 | Criminel / Mercenaire | - épée bâtarde<br>- *Arbalète      | 1.Homme de main — Chaîne <br>2. Pillard — &&&<br>3. Tueur à gages — Fiole de poison rapide<br>4. Geôlier — Menottes<br>5. Bandit — &&&<br>6. Nettoyeur — Sac de chaux vive                                                                   |
 | Artiste / Bretteur    | - *Rapière<br>- Main-gauche        | 1\. Vengeur masqué — Masque de fer<br>2\. &&& — <br>3\. Instructeur d'armes — Épée de bois<br>4\. Escrimeur — Gants de cuir<br>5\. Écuyer — Étendard<br>6\. Officier — Longue-vue                                                            |
 | Noble / Chevalier     | • \*Épée longue<br>• Bouclier      | 1. Templier — Relique brisée<br>2. Chevalier errant — Sceau de cire héraldique<br>3. Garde d'élite — Cape de cérémonie<br>4. Maître d'armes — Pierre à aiguiser fine<br>5. Noble exilé — Bague à cachet (or)<br>6. Capitaine — Cor de guerre |
-#### 2.4.5.2 Filous
+#### 2.6.5.2 Filous
 
 | Archétype                     | Item personnalisé\*                          | Occupation (Motivation)                                                                                                                                                                                                                     |
 | ----------------------------- | -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -170,14 +198,14 @@ Item personnalisé* : +1D
 | Criminel / Voleur             | • Dague double<br>• \*Kit de crochetage      | 1. Cambrioleur — &&&<br>2. Monte-en-l'air — Grappin miniature<br>3. Pickpocket — Doigtier de cuir<br>4. Faussaire — Plume et encres diverses<br>5. Receleur — Petite balance de précision<br>6. &&& — &&&                                   |
 | Artiste / Barde               | • Rapière<br>• \*Kit de déguisement (?)      | 1. Troubadour — Luth<br>2. Cracheur de feu — Fiole d'huile inflammable<br>3. Marionnettiste — Pantin grotesque<br>4. Peintre — Carnet de croquis<br>5. Saltimbanque — Balles de jonglerie<br>6. Espion - &&&                                |
 | Noble / Excentrique           | • * Canne-épée<br>• Pistolet de duel (rare)  | 1. Collectionneur — Bocal de spécimen<br>2. Dandy décadent — Flacon de parfum<br>3. Gambler — Jeu de cartes marqué<br>4. Amateur d'occulte — Encens apaisant<br>5. Naturaliste amateur — Filet à papillons <br>6. Esthète — Miroir d'argent |
-#### 2.4.5.3 Érudits
+#### 2.6.5.3 Érudits
 
 | Archétype              | Item personnalisé\*                                                                                | Occupation (Motivation))                                                                                                                                                                                                                    |
 | ---------------------- | -------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Nomade / Ermite        | • \*Grimoire (6 slots)<br>• Sorts : <br>  - Détection Arc.<br>  -  Vue Nocturne<br>  -  Cantrip×1  | 1. Oracle — Bourse d'ossements divinatoires<br>2. Shaman — Grand bâton de marche sculpté<br>3. Exilé de l'académie — Sac de livres poussiéreux<br>4. Druide apprenti — Coquillage de résonance<br>5. &&&<br>6. Sorcière initié — Flûte d'os |
 | Paysan / Moine         | • \*Grimoire (6 slots)<br>• Sorts : <br>  - Détection Arc.<br>  - Baume<br>  - Cantrip×1           | 1. Herboriste — Sachet d'herbes <br>2. Frère itinérant — Bol à aumône en bois<br>3. Pèlerin <br>4. Frère Naturaliste - <br>5. Moine Apiculteur — Pot de miel<br>6. Brasseur d'abbaye — Gourde de bière                                      |
-| Artisan / Alchimiste   | • \*Grimoire (6 slots)<br>• Sorts : <br>  - Détection Arc.<br>  - Solvant<br>  - Cantrip×1         | 1. Apothicaire — Pipettes de verre<br>2. Artificier — Sac de soufre et salpêtre<br>3. Architecte — Compas<br>4. Opticien - Kit de lentilles <br>5. Inventeur — kit de Lentilles<br>6. Physicien — Sédatif                                   |
-| Criminel / Hérétique   | • \*Grimoire (6 slots)<br>• Sorts : <br>  - Détection Ar.<br>  - Faiblesse<br>  - Cantrip×1        | 1. Nécromencien — <br>2. Occultiste — <br>3. Anatomiste <br>4. Kabbaliste<br>5. Exégète<br>6. Démonologiste                                                                                                                                 |
+| Artisan / Artifex      | • \*Grimoire (6 slots)<br>• Sorts : <br>  - Détection Arc.<br>  - Solvant<br>  - Cantrip×1         | 1. Apothicaire — Pipettes de verre<br>2. Artificier — Sac de soufre et salpêtre<br>3. Alchimiste — fiole<br>4. Opticien - Kit de lentilles <br>5. Inventeur — kit de Lentilles<br>6. Physicien — Sédatif                                    |
+| Criminel / Hérétique   | • \*Grimoire (6 slots)<br>• Sorts : <br>  - Détection Ar.<br>  - Faiblesse<br>  - Cantrip×1        | 1. Nécromencien — Crâne déformé<br>2. Occultiste — Miroire Noir<br>3. Anatomiste - Scie et scalpel<br>4. Kabbaliste - Cube avec des symboles kabaliste<br>5. Exégète - Livre interdit<br>6. Démonologiste - Cloche d'argent                 |
 | Artiste / Illusioniste | • \*Grimoire (6 slots)<br>• Sorts : <br>  - Détection Arcanique<br>  - Illusion<br>  - Cantrip×1   | 1. Prestidigitateur — Jeu de miroirs portables<br>2. Hypnotiseur — Pendule d'argent<br>3. Metteur en scène — &&&<br>4. Poète satirique — Carnet de rimes acides <br>5. Charlatan — Élixir "miracle"<br>6. Mystificateur - Relique truquée   |
 | Noble / Magistère      | • \*Grimoire (6 slots)<br>• Sorts : <br>  - Détection Arc.<br>  - Trait Arcanique<br>  - Cantrip×1 | 1. Archiviste royal — Gants de soie<br>2. Astronome — Astrolabe <br>3. Inquisiteur — Code de lois<br>4. Précepteur — Baguette<br>5. Diplomate — Sceau de cire<br>6. Mathématicien — &&&                                                     |
 
@@ -392,6 +420,11 @@ Le bouclier est utilisé conjointement avec l'**Action Bloquer** (cf. §1.6.3). 
 
 Bouclier ou couverture obligatoire pour bloquer un projectile.
 
+
+> [!NOTE] Idée à tester
+> Les bouclier ont des point d'usure assez élevé. Lorsque le joueur décide de bloquer, les dégats sont absorbé et soustrait de l'usure. Le bouclier casse une fois les points écoulé
+
+
 ---
 
 # 5 Conditions
@@ -441,33 +474,28 @@ L'état critique signifie que tous les jets impliquant cet attribut **échouent 
 
 Le PJ possède **VIG points de récupération (PR)** *(calculés sur la VIG max — valeur de départ — pas affectés par les Blessures à VIG)*. Les PR servent au combat et à la guérison.
 
-| Méthode | Durée | Coût | Effet |
-| --- | --- | --- | --- |
-| **Deuxième souffle** | Action complète (en combat) | 1 PR | Récupérer 1d6 END |
-| **Repos court** | ~10 minutes | 1 PR | Récupérer tout l'END |
-| **Repos long** | 1 nuit + repas | 1 PR | Tout l'END + **+1 à un attribut au choix** (soigner 1 Blessure) |
-| **Repos complet** | 1 semaine en lieu sûr | — | Tout guéri (END, attributs aux valeurs de départ, PR) |
+| Méthode              | Durée                       | Coût | Effet                                                           |
+| -------------------- | --------------------------- | ---- | --------------------------------------------------------------- |
+| **Deuxième souffle** | Action complète (en combat) | 1 PR | Récupérer 1d6 END                                               |
+| **Repos court**      | ~10 minutes                 | 1 PR | Récupérer tout l'END                                            |
+| **Repos long**       | 1 nuit + repas              | 1 PR | Tout l'END + **+1 à un attribut au choix** (soigner 1 Blessure) |
+| **Repos complet**    | 1 semaine en lieu sûr       | —    | Tout guéri (END, attributs aux valeurs de départ, PR)           |
+|                      |                             |      |                                                                 |
 
 Les PR sont **récupérés au matin** après une nuit de sommeil complète et un repas chaud le soir.
 
 *Le repos court restaure tout l'END mais ne soigne pas de Blessure. Le repos long permet de soigner une Blessure par jour (au choix du joueur — VIG, FIN ou ESP). Plusieurs repos longs successifs pour soigner plusieurs Blessures.*
-
+## 5.5 Autres Condition
+- **Vulnérable** : +1D aux dégâts reçus
+- Au sol : 
+- KO
+- Mourant
+- Paniqué
+- Exténué
 ---
-# 6 Inventaire
+# 6 Combat
 
-**Capacité = 10 + VIG max** *(valeur de départ, non réduite par les Blessures à VIG)*
-
-Chaque objet = 1 place. Exceptions :
-- Armes lourdes (deux mains) : 2 places
-- Armures : 1 place par catégorie (légère = 1, moyenne = 2, lourde = 3)
-- Boucliers : 1 place (grand bouclier = 2)
-- Grimoire : 1 place
-
----
-
-# 7 Combat
-
-## 7.1 Structure du round
+## 6.1 Structure du round
 
 **1 Action + 1 Manœuvre** par tour, ou 1 Action complète.
 
@@ -476,14 +504,14 @@ Chaque objet = 1 place. Exceptions :
 2. Les joueurs déclarent leurs actions ensemble
 3. Résolution simultanée
 
-## 7.2 Attaquer
+## 6.2 Attaquer
 
 **Pool** = dés d'arme (1d à 6d, cf. §1.3.1) + Don/Expertise applicable.
 **Attribut** = VIG (mêlée) ou FIN (distance) — valeur **courante** (réduite par les Blessures, cf. §1.4.1).
 **Difficulté** = armure cible (cf. §1.3.3) + bouclier si Bloquer actif (cf. §1.3.4) + modificateurs situationnels.
 
 **Résolution** : suivre la séquence §1.2.7 (dé rouge + bonus sur 1, effets spéciaux sur doubles/triples). **Gains nets = END perdus par la cible.**
-## 7.3 Actions
+## 6.3 Actions
 
 - **Attaquer** — résolution selon §1.6.2. À dé d'arme égal, les armes {rapide} agissent en premier, les {lente} en dernier.
 - **Bloquer** — annule ou réduit les dégâts d'une attaque annoncée. Arme égale ou plus grande, ou bouclier/couverture. Avec bouclier : difficulté de l'attaque entrante augmentée (cf. §1.3.4). Bouclier ou couverture obligatoire pour projectiles.
@@ -494,7 +522,7 @@ Chaque objet = 1 place. Exceptions :
 - **Améliorer** — donne un bonus à l'action d'un allié (distraire, tenir en joue, éclairer). Si l'amélioration rate, l'action améliorée se résout sans bonus.
 - **Activer** — rend possible l'action d'un allié. Le PJ dépendant choisit : tenter maintenant (action perdue si ratée), ou attendre (autre chose ce round, action au round suivant si réussite).
 
-## 7.4 Manœuvres
+## 6.4 Manœuvres
 
 Sans test si trivial. Au contact d'un ennemi actif → **test opposé** VIG ou FIN selon la nature de la manœuvre.
 
@@ -507,7 +535,7 @@ Sans test si trivial. Au contact d'un ennemi actif → **test opposé** VIG ou F
 
 > *Action vs Manœuvre — interaction avec objet* : manipulation = Action ; manœuvre engage tout le corps. MJ tranche les ambiguïtés.
 
-## 7.5 Actions lentes, complètes, gratuites
+## 6.5 Actions lentes, complètes, gratuites
 
 **Actions lentes** *(tag)* — déclarées en premier, visibles, **interruptibles**. Une attaque réussie sur le lanceur brise l'invocation. Résolues à la fin du round, sauf interruption.
 
@@ -520,24 +548,24 @@ Sans test si trivial. Au contact d'un ennemi actif → **test opposé** VIG ou F
 
 **Actions gratuites** — parler, prendre un objet équipé (ceinture).
 
-## 7.6 Cas particuliers de combat
+## 6.6 Cas particuliers de combat
 
 - **Attaques mutuelles mortelles** — deux combattants s'entretuent simultanément ; les deux coups s'appliquent. Le risque a été pris en déclarant l'attaque.
 - **Mitigation d'une menace** — quand une action de PJ invalide la menace ennemie annoncée (fuir hors de portée, fermer une porte, briser l'arme), l'ennemi ne change pas de cible. Action perdue, nouvelle menace au round suivant. *Exception* : provocation explicite peut rediriger l'attaque.
 - **L'attaque n'annule pas toujours la menace.** Frapper sans tuer ne stoppe pas l'ennemi. Si la menace est *« le gobelin te plante sa flèche »*, attaquer sans tuer = la flèche part quand même. Les Manœuvres qui changent la situation (trébucher, désarmer, pousser) sont souvent plus utiles qu'une attaque.
 
-## 7.7 Moral des ennemis
+## 6.7 Moral des ennemis
 
 *À développer — Phase 1.*
 
 Les ennemis ne combattent pas jusqu'à la mort. Un test de moral déclenche une retraite ou une reddition.
 
-## 7.8 Fuite et poursuite
+## 6.8 Fuite et poursuite
 
 *À développer — Phase 1.*
 
 Fuir est toujours une option. La procédure doit être rapide et lisible.
-### 7.8.1 PNJ — Puissance
+### 6.8.1 PNJ — Puissance
 
 | Puissance | Tier | Exemples |
 |---|---|---|
@@ -549,7 +577,7 @@ Fuir est toujours une option. La procédure doit être rapide et lisible.
 
 ±1 Puissance selon le contexte (blessé, avantage, encerclé).
 
-## 7.9 Warbands
+## 6.9 Warbands
 
 ~10 combattants traités comme une entité unique. **Puissance unique** (cf. §1.6.9), pool d'arme et END communs. Une Blessure = perte d'un combattant (narration), **sans typage** (le Bloc A ne s'applique pas — un Warband n'a pas de VIG/FIN/ESP séparés).
 
@@ -557,11 +585,11 @@ Dispersion à X Blessures *(à calibrer au playtest)*.
 
 ---
 
-# 8 Magie
+# 7 Magie
 
 Système simple, inspiré de [Cairn](https://cairnrpg.com/resources/more-spellbooks/) et [Glog](https://cairnrpg.com/hacks/glog-magic/).
 
-## 8.1 Principes
+## 7.1 Principes
 
 - **1 sort par grimoire**.
 - **1 grimoire = 1 place d'inventaire**.
@@ -570,7 +598,7 @@ Système simple, inspiré de [Cairn](https://cairnrpg.com/resources/more-spellbo
 - En **stress ou combat** : faire un **Test ESP** au lancement.
 - Connaître l'**Arcanique** *(Savoir/Expertise)* donne **+1d** au pool magie.
 
-## 8.2 Procédure de lancer
+## 7.2 Procédure de lancer
 
 1. **Déclarer** le sort et la cible.
 2. **Dépenser 1 END**.
@@ -583,20 +611,20 @@ Système simple, inspiré de [Cairn](https://cairnrpg.com/resources/more-spellbo
 4. **Hors stress** : pas de test, sort lancé automatiquement.
 5. **Résoudre** l'effet selon le sort.
 
-## 8.3 Lecture du résultat
+## 7.3 Lecture du résultat
 
 | Résultat | Effet |
 |---|---|
 | **Succès** | Sort lancé normalement. Magnitude = gains nets. |
 | **Échec** | Sort raté. END (et push éventuel) consommée. Conséquence narrative possible. |
 
-## 8.4 Catalogue de sorts
+## 7.4 Catalogue de sorts
 
 Liste de référence : [Cairn — More Spellbooks](https://cairnrpg.com/resources/more-spellbooks/).
 
 Tout sort issu de cette liste s'utilise tel quel avec la procédure ci-dessus. Le mage choisit son grimoire à la création (1 sort) et peut en acquérir d'autres en jeu (chaque nouveau grimoire = 1 nouvelle place d'inventaire).
 
-## 8.5 Trois traditions
+## 7.5 Trois traditions
 
 *Distinction narrative — mécanique identique pour les trois.*
 
@@ -608,21 +636,21 @@ Tout sort issu de cette liste s'utilise tel quel avec la procédure ci-dessus. L
 
 ---
 
-# 9 Exploration
+# 8 Exploration
 
-## 9.1 Portes secrètes et fouille
+## 8.1 Portes secrètes et fouille
 
 *À développer — Phase 1.*
 
 Procédure diceless privilégiée (description de l'action → résultat). Jet seulement si incertitude réelle.
 
-## 9.2 Sons et portée
+## 8.2 Sons et portée
 
 *À développer — Phase 1.*
 
 À quelle distance entend-on un combat ? Une porte enfoncée ? Un groupe en déplacement ?
 
-## 9.3 Discrétion
+## 8.3 Discrétion
 
 *À développer — Phase 1.*
 
@@ -630,7 +658,7 @@ Jet FIN individuel ou collectif. Interaction avec les pénalités d'armure.
 
 ---
 
-# 10 Voyage
+# 9 Voyage
 
 *À développer — Phase 2.*
 
@@ -642,7 +670,7 @@ Jet FIN individuel ou collectif. Interaction avec les pénalités d'armure.
 
 ---
 
-# 11 Économie et ville
+# 10 Économie et ville
 
 *À développer — Phase 2.*
 
@@ -653,7 +681,7 @@ Jet FIN individuel ou collectif. Interaction avec les pénalités d'armure.
 
 ---
 
-# 12 Progression
+# 11 Progression
 
 *À développer — Phase 3.*
 
@@ -661,7 +689,7 @@ Comment évoluent les attributs, dons et expertises. Probablement lié à l'or d
 
 ---
 
-# 13 Principes du MJ
+# 12 Principes du MJ
 
 - Préparer des **situations**, pas des intrigues.
 - Présenter des choix intéressants.
@@ -682,11 +710,11 @@ Comment évoluent les attributs, dons et expertises. Probablement lié à l'or d
 
 ---
 
-# 14 Appendice A — Tables de probabilité
+# 13 Appendice A — Tables de probabilité
 
 *Format : **Succès% / Échec%**. Sans push, sans Blessure. Bonus : **dé rouge en succès = +1 gain**, **+1 par 1 roulé** (cumulable). **Gras** = ligne attribut 4 (référence).*
 
-## 14.1 Difficulté 0 — Aucune armure / tâche normale
+## 13.1 Difficulté 0 — Aucune armure / tâche normale
 
 |  | 1d | 2d | 3d | 4d | 5d | 6d |
 |---|---|---|---|---|---|---|
@@ -696,7 +724,7 @@ Comment évoluent les attributs, dons et expertises. Probablement lié à l'or d
 | Attr 5 | 67/33% | 89/11% | 96/4% | 99/1% | 100/0% | 100/0% |
 | Attr 6 | 83/17% | 97/3% | 100/0% | 100/0% | 100/0% | 100/0% |
 
-## 14.2 Difficulté 1 — Cuir / Ardu
+## 13.2 Difficulté 1 — Cuir / Ardu
 
 |  | 1d | 2d | 3d | 4d | 5d | 6d |
 |---|---|---|---|---|---|---|
@@ -706,7 +734,7 @@ Comment évoluent les attributs, dons et expertises. Probablement lié à l'or d
 | Attr 5 | 67/33% | 72/28% | 85/15% | 93/7% | 97/3% | 99/1% |
 | Attr 6 | 83/17% | 86/14% | 96/4% | 99/1% | 100/0% | 100/0% |
 
-## 14.3 Difficulté 2 — Maille / Exigeant
+## 13.3 Difficulté 2 — Maille / Exigeant
 
 |  | 1d | 2d | 3d | 4d | 5d | 6d |
 |---|---|---|---|---|---|---|
@@ -716,7 +744,7 @@ Comment évoluent les attributs, dons et expertises. Probablement lié à l'or d
 | Attr 5 | 17/83% | 50/50% | 68/32% | 81/19% | 90/10% | 95/5% |
 | Attr 6 | 17/83% | 72/28% | 86/14% | 95/5% | 98/2% | 100/0% |
 
-## 14.4 Difficulté 3 — Plaque / Extrême
+## 13.4 Difficulté 3 — Plaque / Extrême
 
 |  | 1d | 2d | 3d | 4d | 5d | 6d |
 |---|---|---|---|---|---|---|
@@ -726,7 +754,7 @@ Comment évoluent les attributs, dons et expertises. Probablement lié à l'or d
 | Attr 5 | 0/100% | 19/81% | 44/56% | 62/38% | 77/23% | 87/13% |
 | Attr 6 | 0/100% | 25/75% | 67/33% | 84/16% | 94/6% | 98/2% |
 
-## 14.5 Difficulté 4 — Full plate / Quasi-impossible
+## 13.5 Difficulté 4 — Full plate / Quasi-impossible
 
 |  | 1d | 2d | 3d | 4d | 5d | 6d |
 |---|---|---|---|---|---|---|
@@ -736,11 +764,11 @@ Comment évoluent les attributs, dons et expertises. Probablement lié à l'or d
 | Attr 5 | 0/100% | 3/97% | 19/81% | 39/61% | 58/42% | 73/27% |
 | Attr 6 | 0/100% | 3/97% | 29/71% | 64/36% | 83/17% | 93/7% |
 
-## 14.6 Gains nets moyens E[net]
+## 13.6 Gains nets moyens E[net]
 
 *Utile pour estimer END perdus par attaque ou magnitude des sorts.*
 
-### 14.6.1 Difficulté 0
+### 13.6.1 Difficulté 0
 
 |  | 1d | 2d | 3d | 4d | 5d | 6d |
 |---|---|---|---|---|---|---|
@@ -749,7 +777,7 @@ Comment évoluent les attributs, dons et expertises. Probablement lié à l'or d
 | Attr 5 | 1,50 | 2,33 | 3,17 | 4,00 | 4,83 | 5,67 |
 | Attr 6 | 1,83 | 2,83 | 3,83 | 4,83 | 5,83 | 6,83 |
 
-### 14.6.2 Difficulté 1 (Cuir)
+### 13.6.2 Difficulté 1 (Cuir)
 
 |  | 1d | 2d | 3d | 4d | 5d | 6d |
 |---|---|---|---|---|---|---|
@@ -758,7 +786,7 @@ Comment évoluent les attributs, dons et expertises. Probablement lié à l'or d
 | Attr 5 | 0,83 | 1,44 | 2,20 | 3,01 | 3,84 | 4,67 |
 | Attr 6 | 1,00 | 1,86 | 2,84 | 3,83 | 4,83 | 5,83 |
 
-### 14.6.3 Difficulté 2 (Maille)
+### 13.6.3 Difficulté 2 (Maille)
 
 |  | 1d | 2d | 3d | 4d | 5d | 6d |
 |---|---|---|---|---|---|---|
@@ -767,7 +795,7 @@ Comment évoluent les attributs, dons et expertises. Probablement lié à l'or d
 | Attr 5 | 0,17 | 0,72 | 1,35 | 2,08 | 2,87 | 3,68 |
 | Attr 6 | 0,17 | 1,00 | 1,88 | 2,84 | 3,84 | 4,83 |
 
-### 14.6.4 Difficulté 3 (Plaque)
+### 13.6.4 Difficulté 3 (Plaque)
 
 |  | 1d | 2d | 3d | 4d | 5d | 6d |
 |---|---|---|---|---|---|---|
@@ -776,7 +804,7 @@ Comment évoluent les attributs, dons et expertises. Probablement lié à l'or d
 | Attr 5 | 0,00 | 0,22 | 0,68 | 1,27 | 1,97 | 2,73 |
 | Attr 6 | 0,00 | 0,28 | 1,02 | 1,90 | 2,85 | 3,84 |
 
-### 14.6.5 Difficulté 4 (Full plate)
+### 13.6.5 Difficulté 4 (Full plate)
 
 |  | 1d | 2d | 3d | 4d | 5d | 6d |
 |---|---|---|---|---|---|---|
@@ -785,7 +813,7 @@ Comment évoluent les attributs, dons et expertises. Probablement lié à l'or d
 | Attr 5 | 0,00 | 0,03 | 0,24 | 0,64 | 1,20 | 1,86 |
 | Attr 6 | 0,00 | 0,03 | 0,36 | 1,05 | 1,91 | 2,86 |
 
-## 14.7 Probabilité d'effets spéciaux (double / triple)
+## 13.7 Probabilité d'effets spéciaux (double / triple)
 
 *Probabilité d'avoir au moins un double (D) ou triple (T) parmi les dés en succès — déclencheur d'effet spécial (cf. §1.2.3).*
 
@@ -801,7 +829,7 @@ Comment évoluent les attributs, dons et expertises. Probablement lié à l'or d
 
 ---
 
-# 15 Appendice B — Diagonale arme/armure
+# 14 Appendice B — Diagonale arme/armure
 
 *Calibration : pool joueur N+2 vs difficulté N (sauf 1d et 2d sans armure). Sans push, sans Blessure, sans effet spécial activé. Avec dé rouge + bonus sur 1.*
 
@@ -838,10 +866,10 @@ Max push par jet = ESP. Un mage ESP 5 peut pousser jusqu'à 5d même avec une ar
 
 ---
 
-# 16 Appendice C — Handicaps
+# 15 Appendice C — Handicaps
 
 *Désavantages innés ou acquis. Tirables au hasard à la création ou acquis en jeu.*
-## 16.1 Importés tels quels
+## 15.1 Importés tels quels
 
 | Handicap | Description |
 |---|---|
@@ -853,14 +881,14 @@ Max push par jet = ESP. Un mage ESP 5 peut pousser jusqu'à 5d même avec une ar
 | **Maladroit** | Test FIN pour attraper un objet. 1/6 chance de créer une réaction en chaîne bruyante quand on tente d'être discret. |
 | **Vertige** | Être en hauteur peut créer une panique. |
 | **Distrait** | Doit réussir un test FIN ET ESP pour ne pas être surpris. |
-| **Haine animale** | Animaux accueillent avec grognements et méfiance. 2-6 chances que les montures préfèrent suivre le groupe. |
+| **Haï des animaux** | Animaux accueillent avec grognements et méfiance. 2-6 chances que les montures préfèrent suivre le groupe. |
 | **Daltonien** | Voit en noir et blanc. |
 | **Suspect** | Souvent pointé du doigt pour tous les crimes et méfaits, impliqué ou non. |
 | **Laid** | 1/6 chance que les gens rencontrés soient répugnés par sa simple présence. |
 | **Monomanie** | Une passion unique et étrange. Connaît trop sur ce sujet, n'en parle qu'à ce sujet, le reste l'ennuie. |
 | **Accent incompréhensible** | Seuls les compagnons comprennent ses paroles. Communication laborieuse avec les étrangers. |
 
-## 16.2 À développer
+## 15.2 À développer
 
 *Notes mises à jour selon les Blocs A-D (v0.9). Stress et Panique de Vermis principal peuvent se transposer en Blessures ESP (psychique/peur) avec Bloc A.*
 
@@ -874,18 +902,18 @@ Max push par jet = ESP. Un mage ESP 5 peut pousser jusqu'à 5d même avec une ar
 
 ---
 
-# 17 Appendice D — Séquelles
+# 16 Appendice D — Séquelles
 
 *Conséquences permanentes d'une blessure grave subie en jeu. Marque durable sur la fiche.*
 
-## 17.1 Importées telles quelles
+## 16.1 Importées telles quelles
 
 | Séquelle | Description |
 |---|---|
 | **Main morte** | Plus d'arme à deux mains. |
 | **Trous de mémoire** | Le sort d'un grimoire devient illisible pour X temps (arbitrage MJ). |
 
-## 17.2 À développer
+## 16.2 À développer
 
 | Séquelle | Note |
 |---|---|

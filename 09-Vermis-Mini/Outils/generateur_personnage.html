@@ -1,0 +1,1232 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vermis-Mini — Générateur de personnage</title>
+<style>
+  :root {
+    --bg: #14110f;
+    --bg-card: #1f1a16;
+    --bg-card-2: #2a231d;
+    --ink: #d6c8a8;
+    --ink-dim: #8a7e68;
+    --ink-bright: #f0e4c4;
+    --accent: #8b1a1a;
+    --accent-dim: #5a1010;
+    --border: #3a2d22;
+    --red: #c1392b;
+    --green: #4a7a3a;
+    --blue: #3a5a8a;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, 'Times New Roman', serif;
+    line-height: 1.5;
+    min-height: 100vh;
+  }
+
+  body {
+    background-image:
+      radial-gradient(circle at 20% 10%, rgba(139, 26, 26, 0.06), transparent 40%),
+      radial-gradient(circle at 80% 90%, rgba(58, 90, 138, 0.05), transparent 40%);
+  }
+
+  header {
+    text-align: center;
+    padding: 28px 16px 8px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  header h1 {
+    font-family: 'Trajan Pro', 'Cinzel', Georgia, serif;
+    margin: 0;
+    font-size: 2.2rem;
+    letter-spacing: 0.08em;
+    color: var(--ink-bright);
+    text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+  }
+
+  header .subtitle {
+    margin-top: 4px;
+    color: var(--ink-dim);
+    font-style: italic;
+    font-size: 0.95rem;
+  }
+
+  main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px 16px 60px;
+  }
+
+  .controls {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 18px 0 26px;
+  }
+
+  button {
+    background: var(--accent-dim);
+    color: var(--ink-bright);
+    border: 1px solid var(--accent);
+    padding: 10px 22px;
+    font-family: inherit;
+    font-size: 1rem;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    transition: background 0.15s, transform 0.1s;
+    border-radius: 2px;
+  }
+
+  button:hover {
+    background: var(--accent);
+  }
+
+  button:active {
+    transform: translateY(1px);
+  }
+
+  button.secondary {
+    background: transparent;
+    border-color: var(--border);
+    color: var(--ink);
+  }
+
+  button.secondary:hover {
+    background: var(--bg-card);
+    border-color: var(--ink-dim);
+  }
+
+  .dice-row {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    margin-bottom: 22px;
+    flex-wrap: wrap;
+  }
+
+  .die {
+    width: 90px;
+    height: 90px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Trajan Pro', Georgia, serif;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.1);
+    border: 2px solid rgba(0,0,0,0.4);
+    position: relative;
+  }
+
+  .die .pos {
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    opacity: 0.85;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+  }
+
+  .die .val {
+    font-size: 2.6rem;
+    line-height: 1;
+    font-weight: bold;
+  }
+
+  .die .label {
+    font-size: 0.65rem;
+    margin-top: 4px;
+    opacity: 0.85;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+
+  .die.red { background: linear-gradient(145deg, #d04a3c, #8b1f17); color: #fff5e6; }
+  .die.green { background: linear-gradient(145deg, #5a8a48, #2d4a25); color: #f0f5e0; }
+  .die.blue { background: linear-gradient(145deg, #4a7ab0, #1a3a6a); color: #e8f0fa; }
+
+  .character {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+    gap: 16px;
+  }
+
+  .card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 16px 18px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  }
+
+  .card h2 {
+    margin: 0 0 10px;
+    font-size: 1.05rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 6px;
+    font-weight: normal;
+  }
+
+  .name-banner {
+    text-align: center;
+    padding: 14px 16px 18px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 4px;
+  }
+
+  .name-text {
+    font-family: 'Trajan Pro', 'Cinzel', Georgia, serif;
+    font-size: 2rem;
+    letter-spacing: 0.05em;
+    color: var(--ink-bright);
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    line-height: 1.1;
+  }
+
+  .name-arch {
+    color: #b88a4a;
+    font-size: 1.4rem;
+    font-style: italic;
+    letter-spacing: 0.04em;
+  }
+
+  .name-meta {
+    margin-top: 4px;
+    color: var(--ink-dim);
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .card.stats h2 { color: #d4a850; }
+  .card.descriptions h2 { color: var(--accent); }
+  .card.capacites h2 { color: #6a9aaa; }
+  .card.inventaire h2 { color: #8a8a4a; }
+
+  .stats-grid {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: stretch;
+  }
+  .stats-grid .attr {
+    flex: 1;
+    min-width: 100px;
+  }
+  .attr.armure {
+    border-color: #5a5a3a;
+    background: linear-gradient(180deg, var(--bg-card-2), #2a2a1c);
+  }
+  .attr.armure .num { color: #d4d488; }
+  .attr.or {
+    border-color: #6a5a2a;
+    background: linear-gradient(180deg, var(--bg-card-2), #2c2614);
+  }
+  .attr.or .num { color: #e8c860; }
+
+  /* Vitesse — teinte selon chargement */
+  .attr.vit-rapide {
+    border-color: #3a6a3a;
+    background: linear-gradient(180deg, var(--bg-card-2), #1c2c1c);
+  }
+  .attr.vit-rapide .num { color: #88d488; }
+  .attr.vit-moyen {
+    border-color: #6a5a2a;
+    background: linear-gradient(180deg, var(--bg-card-2), #2c2614);
+  }
+  .attr.vit-moyen .num { color: #d4c060; }
+  .attr.vit-lent {
+    border-color: #6a3a3a;
+    background: linear-gradient(180deg, var(--bg-card-2), #2c1414);
+  }
+  .attr.vit-lent .num { color: #d48888; }
+
+  .stat-block.charge-rapide { border-color: #3a6a3a; }
+  .stat-block.charge-moyen { border-color: #6a5a2a; }
+  .stat-block.charge-lent { border-color: #6a3a3a; }
+
+  .field {
+    margin-bottom: 8px;
+    display: flex;
+    gap: 8px;
+    align-items: baseline;
+  }
+
+  .field .lbl {
+    color: var(--ink-dim);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    min-width: 110px;
+    flex-shrink: 0;
+  }
+
+  .field .val {
+    color: var(--ink-bright);
+    font-weight: 500;
+  }
+
+  .attrs {
+    display: flex;
+    gap: 14px;
+    margin: 8px 0;
+  }
+
+  .attr {
+    flex: 1;
+    text-align: center;
+    background: var(--bg-card-2);
+    border: 1px solid var(--border);
+    padding: 8px 4px;
+    border-radius: 3px;
+  }
+
+  .attr .name {
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    color: var(--ink-dim);
+    text-transform: uppercase;
+  }
+
+  .attr .num {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: var(--ink-bright);
+    font-family: 'Trajan Pro', Georgia, serif;
+    line-height: 1.1;
+    margin-top: 2px;
+  }
+
+  ul.compact {
+    list-style: none;
+    padding: 0;
+    margin: 4px 0;
+  }
+
+  ul.compact li {
+    padding: 3px 0 3px 14px;
+    position: relative;
+    font-size: 0.95rem;
+  }
+
+  ul.compact li::before {
+    content: '◆';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-size: 0.6rem;
+    top: 8px;
+  }
+
+  ul.compact li.bonus::before {
+    content: '★';
+    color: #d4a850;
+  }
+
+  ul.compact li {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+  }
+
+  .slot-tag {
+    font-size: 0.75rem;
+    color: var(--ink-dim);
+    font-style: italic;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .slot-reduction {
+    color: #d4a850;
+    font-style: normal;
+    font-weight: bold;
+  }
+
+  .inv-stats {
+    display: flex;
+    gap: 14px;
+    margin-bottom: 12px;
+  }
+
+  .stat-block {
+    flex: 1;
+    background: var(--bg-card-2);
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    padding: 10px 12px;
+    text-align: center;
+  }
+
+  .stat-name {
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-dim);
+  }
+
+  .stat-val {
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: var(--ink-bright);
+    font-family: 'Trajan Pro', Georgia, serif;
+    margin-top: 4px;
+    line-height: 1;
+  }
+
+  .stat-unit {
+    font-size: 0.85rem;
+    color: var(--ink-dim);
+    font-weight: normal;
+    margin-left: 2px;
+  }
+
+  .stat-formula {
+    font-size: 0.7rem;
+    color: var(--ink-dim);
+    font-style: italic;
+    margin-top: 3px;
+  }
+
+  .attr.end {
+    border-color: #6a4a3a;
+    background: linear-gradient(180deg, var(--bg-card-2), #2c1f18);
+  }
+  .attr.end .num { color: #e8b884; }
+
+  .pill {
+    display: inline-block;
+    background: var(--bg-card-2);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 2px 10px;
+    font-size: 0.8rem;
+    margin-right: 4px;
+    color: var(--ink);
+  }
+
+  .formula {
+    color: var(--ink-dim);
+    font-size: 0.78rem;
+    font-style: italic;
+    margin-left: 4px;
+  }
+
+  .empty-state {
+    text-align: center;
+    color: var(--ink-dim);
+    font-style: italic;
+    padding: 60px 20px;
+  }
+
+  .footnote {
+    text-align: center;
+    margin-top: 30px;
+    color: var(--ink-dim);
+    font-size: 0.78rem;
+    font-style: italic;
+  }
+
+  .placeholder { color: var(--ink-dim); font-style: italic; font-size: 0.85rem; }
+
+  .copy-confirm {
+    color: #4a8a4a;
+    font-size: 0.9rem;
+    align-self: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .copy-confirm.show { opacity: 1; }
+
+  /* Print */
+  @media print {
+    body { background: white; color: black; }
+    button, .controls { display: none; }
+    .card { border: 1px solid #999; box-shadow: none; }
+    .die { box-shadow: none; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Vermis-Mini</h1>
+  <div class="subtitle">Générateur de personnage — 3d6 colorés</div>
+</header>
+
+<main>
+  <div class="controls">
+    <button id="btn-roll">⚀ Lancer 3d6</button>
+    <button id="btn-copy" class="secondary">Copier en Markdown</button>
+    <button id="btn-print" class="secondary">Imprimer</button>
+    <span id="copy-confirm" class="copy-confirm">Copié !</span>
+  </div>
+
+  <section id="dice" class="dice-row"></section>
+
+  <section id="character" class="character">
+    <div class="empty-state">Lance les dés pour générer un personnage.</div>
+  </section>
+
+  <p class="footnote">
+    Réf. § 2.4 — Vermis_d6_v10. Note : la table Origine du source contient une coquille
+    (deux lignes « D6=2 ») ; la 2<sup>e</sup> est traitée comme « D6=4 » (Citadin-Artisan).
+  </p>
+</main>
+
+<script>
+/* =====================================================================
+   DONNÉES — tables de création de personnage Vermis-Mini
+   Référence : 09-Vermis-Mini/Intégré/Vermis_d6_v10.md § 2.4
+   ===================================================================== */
+
+const APPROCHE = [
+  null, // index 0 vide pour aligner sur 1-6
+  {
+    type: 'Combattant',
+    attrs: { VIG: 5, FIN: 3, ESP: 4 },
+    expertise: ['Premiers soins'],
+    items: ['Cotte de mailles (2 RD)', 'Hachette (4d)', 'Bandage'],
+    handicap: ['Bégaiement', 'SPT', 'Accent incompréhensible', 'Laid', 'Agressif', 'Haï des animaux']
+  },
+  {
+    type: 'Combattant',
+    attrs: { VIG: 5, FIN: 4, ESP: 3 },
+    expertise: ['Cuisine de campagne'],
+    items: ['Cotte de mailles (2 RD)', 'Épée courte (4d)', 'Badge milicien'],
+    handicap: ['Vertige', 'Distrait', 'Daltonien', 'Désorganisé', 'Pessimisme contagieux', 'Dur de la feuille']
+  },
+  {
+    type: 'Filou',
+    attrs: { VIG: 4, FIN: 5, ESP: 3 },
+    expertise: ['Poison'],
+    items: ['Armure de cuir (1 RD)', 'Épée courte (4d)', 'Kit de poison'],
+    handicap: ['Tremblements nerveux', 'Paranoïa aiguë', 'Teint maladif', 'Haleine chimique', 'Insomnie', 'Naturellement suspect']
+  },
+  {
+    type: 'Filou',
+    attrs: { VIG: 3, FIN: 5, ESP: 4 },
+    expertise: ['Chirurgie de fortune'],
+    items: ['Armure de cuir (1 RD)', 'Épée courte (4d)', 'Kit de soins'],
+    handicap: ['Main raide', 'Phobie du sang', 'Boiterie marquée', 'Saignements de nez fréquents', 'Myopie sévère', 'Cicatrices d\'auto-expérimentation']
+  },
+  {
+    type: 'Érudit',
+    attrs: { VIG: 3, FIN: 4, ESP: 5 },
+    expertise: ['Sciences interdites'],
+    items: ['Bâton (3d)', 'Sac à accès facile'],
+    handicap: ['Hallucinations', 'Peau translucide', 'Migraines', 'Ombre décalée', 'Narcolepsie', 'Obsession pour un objet inutile']
+  },
+  {
+    type: 'Érudit',
+    attrs: { VIG: 4, FIN: 3, ESP: 5 },
+    expertise: ['Sciences naturelles et médicales'],
+    items: ['Dague (3d)', 'Kit de pharmacopée'],
+    handicap: ['Asthme', 'Fragilité osseuse', 'Manie de la propreté (TOC)', 'Cynisme toxique', 'Allergies alimentaires graves', 'Main de fer (prothèse lourde)']
+  }
+];
+
+const ORIGINE = [
+  null,
+  {
+    nom: 'Reclus-Nomade',
+    expertise: ['Survie', 'Navigation'],
+    malchance: { '1-2': 'Exilé', '3-4': 'Oublié', '5-6': 'Remplacé' }
+  },
+  {
+    nom: 'Reclus-Paysan',
+    expertise: ['Survie', 'Dressage'],
+    malchance: { '1-2': 'Perdu', '3-4': 'Empoisonné', '5-6': 'Affamé' }
+  },
+  {
+    nom: 'Citadin-Criminel',
+    expertise: ['Artifex', 'Argot'],
+    malchance: { '1-2': 'Appauvri', '3-4': 'Dépendance', '5-6': 'Condamné' }
+  },
+  {
+    nom: 'Citadin-Artisan',
+    expertise: ['Artifex', 'Commerce'],
+    malchance: { '1-2': 'Hanté', '3-4': 'Désabusé', '5-6': 'Fraudé' }
+  },
+  {
+    nom: 'Décadent-Artiste',
+    expertise: ['Humanité', 'Mascarade'],
+    malchance: { '1-2': 'Chantage', '3-4': 'Humilié', '5-6': 'Déprimé' }
+  },
+  {
+    nom: 'Décadent-Noble',
+    expertise: ['Humanité', 'Leadership'],
+    malchance: { '1-2': 'Rétrogradé', '3-4': 'Déshonoré', '5-6': 'Déshérité' }
+  }
+];
+
+const MOTIVATION = [
+  null,
+  {
+    nom: 'Idéaliste : Liberté',
+    don: { '1-2': 'Force brute', '3-4': 'Athlétisme', '5-6': 'Apollon' },
+    trait: { '2-4': 'Cheveux blancs', '5-6': 'Costaud', '7': 'Brûlure au visage', '8-9': 'Marqué au fer', '10-12': '9 doigts' }
+  },
+  {
+    nom: 'Idéaliste : Justice',
+    don: { '1-2': 'Dur à cuire', '3-4': 'Petit dormeur', '5-6': 'Santé de fer' },
+    trait: { '2-4': 'Mâchoire carrée', '5-6': 'Très grand', '7': 'Oreille manquante', '8-9': 'Cicatrice de combat', '10-12': 'Nez cassé' }
+  },
+  {
+    nom: 'Pragmatique : Équilibre',
+    don: { '1-2': 'Boussole interne', '3-4': 'Alerte', '5-6': 'Empathie animale' },
+    trait: { '2-4': 'Maigre', '5-6': 'Vitiligo', '7': 'Piercing', '8-9': 'Cicatrice ritualisée', '10-12': 'Oreilles décollées' }
+  },
+  {
+    nom: 'Pragmatique : Perfection',
+    don: { '1-2': 'Réflexe', '3-4': 'Précis', '5-6': 'Félin' },
+    trait: { '2-4': 'Tatoué', '5-6': 'Chignons', '7': 'Dreads', '8-9': 'Imberbe', '10-12': 'Poilu' }
+  },
+  {
+    nom: 'Ambitieux : Gloire',
+    don: { '1-2': 'Polyglotte', '3-4': 'Cultivé', '5-6': 'Ingénieux' },
+    trait: { '2-4': 'Moustache', '5-6': 'Cheveux très longs', '7': 'Taches de rousseur', '8-9': 'Cheveux tressés', '10-12': 'Yeux vairons' }
+  },
+  {
+    nom: 'Ambitieux : Pouvoir',
+    don: { '1-2': 'Inspirant', '3-4': 'Séduisant', '5-6': 'Crédible' },
+    trait: { '2-4': 'Nez aquilin', '5-6': 'Chauve ou rasé', '7': 'Cheveux frisés', '8-9': 'Albinos', '10-12': 'Marque de flagellation' }
+  }
+];
+
+/* Archétypes : Type (combattant/filou/erudit) × Origine (1-6) */
+const ARCHETYPE = {
+  Combattant: {
+    1: {
+      nom: 'Nomade / Guerrier',
+      itemPerso: ['*Hache à deux mains'],
+      occupations: [
+        { nom: 'Esclave en fuite', item: 'Chaîne' },
+        { nom: 'Garde de caravane', item: 'Lanterne à huile' },
+        { nom: 'Montagnard', item: 'Crampons d\'escalade' },
+        { nom: 'Cavalier nomade', item: 'Arc composite' },
+        { nom: 'Fou de guerre', item: 'Champirage (3)' },
+        { nom: 'Chef de tribu', item: 'Collier de dents' }
+      ]
+    },
+    2: {
+      nom: 'Paysan / Soldat',
+      itemPerso: ['Lance', '*Grand bouclier'],
+      occupations: [
+        { nom: 'Cultivateur', item: 'Fourche' },
+        { nom: 'Déserteur', item: 'Cape tachée de sang' },
+        { nom: 'Berger', item: 'Gourde de vin' },
+        { nom: 'Fossoyeur', item: 'Pelle' },
+        { nom: 'Mineur', item: 'Pioche' },
+        { nom: 'Bûcheron', item: 'Hache à fendre' }
+      ]
+    },
+    3: {
+      nom: 'Criminel / Mercenaire',
+      itemPerso: ['Épée bâtarde', '*Arbalète'],
+      occupations: [
+        { nom: 'Homme de main', item: 'Chaîne' },
+        { nom: 'Pillard', item: '—' },
+        { nom: 'Tueur à gages', item: 'Fiole de poison rapide' },
+        { nom: 'Geôlier', item: 'Menottes' },
+        { nom: 'Bandit', item: '—' },
+        { nom: 'Nettoyeur', item: 'Sac de chaux vive' }
+      ]
+    },
+    4: {
+      nom: 'Artisan / Armurier',
+      itemPerso: ['*Marteau de guerre', 'Bouclier'],
+      occupations: [
+        { nom: 'Boucher', item: 'Hachoir' },
+        { nom: 'Charpentier', item: 'Scie' },
+        { nom: 'Forgeron', item: 'Marteau' },
+        { nom: 'Fossoyeur', item: 'Pelle' },
+        { nom: 'Tailleur de pierre', item: 'Ciseau à pierre' },
+        { nom: 'Maréchal-ferrant', item: 'Pinces' }
+      ]
+    },
+    5: {
+      nom: 'Artiste / Bretteur',
+      itemPerso: ['*Rapière', 'Main-gauche'],
+      occupations: [
+        { nom: 'Vengeur masqué', item: 'Masque de fer' },
+        { nom: 'Duelliste', item: '—' },
+        { nom: 'Instructeur d\'armes', item: 'Épée de bois' },
+        { nom: 'Escrimeur', item: 'Gants de cuir' },
+        { nom: 'Écuyer', item: 'Étendard' },
+        { nom: 'Officier', item: 'Longue-vue' }
+      ]
+    },
+    6: {
+      nom: 'Noble / Chevalier',
+      itemPerso: ['*Épée longue', 'Bouclier'],
+      occupations: [
+        { nom: 'Templier', item: 'Relique brisée' },
+        { nom: 'Chevalier errant', item: 'Sceau de cire héraldique' },
+        { nom: 'Garde d\'élite', item: 'Cape de cérémonie' },
+        { nom: 'Maître d\'armes', item: 'Pierre à aiguiser fine' },
+        { nom: 'Noble exilé', item: 'Bague à cachet (or)' },
+        { nom: 'Capitaine', item: 'Cor de guerre' }
+      ]
+    }
+  },
+  Filou: {
+    1: {
+      nom: 'Nomade / Rôdeur',
+      itemPerso: ['*Arc long', 'Boussole'],
+      occupations: [
+        { nom: 'Éclaireur', item: '—' },
+        { nom: 'Cartographe', item: 'Rouleau de parchemin et fusain' },
+        { nom: 'Pisteur', item: '—' },
+        { nom: 'Contrebandier', item: 'Peau de bête traitée' },
+        { nom: 'Messager', item: 'Sacoche étanche' },
+        { nom: 'Chasseur', item: '—' }
+      ]
+    },
+    2: {
+      nom: 'Paysan / Scout',
+      itemPerso: ['*Fronde', 'Corde & Grappin'],
+      occupations: [
+        { nom: 'Trappeur', item: 'Appâts olfactifs' },
+        { nom: 'Garde-chasse', item: '—' },
+        { nom: 'Guet', item: 'Cloche de détresse' },
+        { nom: 'Cueilleur', item: 'Panier de récolte' },
+        { nom: 'Braconnier', item: 'Cape de camouflage' },
+        { nom: 'Pêcheur', item: 'Filet plombé' }
+      ]
+    },
+    3: {
+      nom: 'Criminel / Voleur',
+      itemPerso: ['Dague double', '*Kit de crochetage'],
+      occupations: [
+        { nom: 'Cambrioleur', item: '—' },
+        { nom: 'Monte-en-l\'air', item: 'Grappin miniature' },
+        { nom: 'Pickpocket', item: 'Doigtier de cuir' },
+        { nom: 'Faussaire', item: 'Plume et encres diverses' },
+        { nom: 'Receleur', item: 'Petite balance de précision' },
+        { nom: 'Tire-laine', item: '—' }
+      ]
+    },
+    4: {
+      nom: 'Artisan / Chasseur de Trésors',
+      itemPerso: ['Arbalète de poing', '*Kit de crochetage'],
+      occupations: [
+        { nom: 'Horloger', item: 'Pinces de précision' },
+        { nom: 'Serrurier', item: 'Limes diverses' },
+        { nom: 'Orfèvre', item: 'Petits forets' },
+        { nom: 'Couturier', item: 'Aiguilles et fils' },
+        { nom: 'Verrier', item: 'Cisailles' },
+        { nom: 'Graveur', item: 'Petits étaux' }
+      ]
+    },
+    5: {
+      nom: 'Artiste / Barde',
+      itemPerso: ['Rapière', '*Kit de déguisement'],
+      occupations: [
+        { nom: 'Troubadour', item: 'Luth' },
+        { nom: 'Cracheur de feu', item: 'Fiole d\'huile inflammable' },
+        { nom: 'Marionnettiste', item: 'Pantin grotesque' },
+        { nom: 'Peintre', item: 'Carnet de croquis' },
+        { nom: 'Saltimbanque', item: 'Balles de jonglerie' },
+        { nom: 'Espion', item: '—' }
+      ]
+    },
+    6: {
+      nom: 'Noble / Excentrique',
+      itemPerso: ['*Canne-épée', 'Pistolet de duel (rare)'],
+      occupations: [
+        { nom: 'Collectionneur', item: 'Bocal de spécimen' },
+        { nom: 'Dandy décadent', item: 'Flacon de parfum' },
+        { nom: 'Gambler', item: 'Jeu de cartes marqué' },
+        { nom: 'Amateur d\'occulte', item: 'Encens apaisant' },
+        { nom: 'Naturaliste amateur', item: 'Filet à papillons' },
+        { nom: 'Esthète', item: 'Miroir d\'argent' }
+      ]
+    }
+  },
+  'Érudit': {
+    1: {
+      nom: 'Nomade / Ermite',
+      itemPerso: ['*Grimoire (6 slots)'],
+      sorts: ['Détection Arcanique', 'Vue Nocturne', 'Cantrip ×1'],
+      occupations: [
+        { nom: 'Oracle', item: 'Bourse d\'ossements divinatoires' },
+        { nom: 'Shaman', item: 'Grand bâton de marche sculpté' },
+        { nom: 'Exilé de l\'académie', item: 'Sac de livres poussiéreux' },
+        { nom: 'Druide apprenti', item: 'Coquillage de résonance' },
+        { nom: 'Devin', item: '—' },
+        { nom: 'Sorcière initiée', item: 'Flûte d\'os' }
+      ]
+    },
+    2: {
+      nom: 'Paysan / Moine',
+      itemPerso: ['*Grimoire (6 slots)'],
+      sorts: ['Détection Arcanique', 'Baume', 'Cantrip ×1'],
+      occupations: [
+        { nom: 'Herboriste', item: 'Sachet d\'herbes' },
+        { nom: 'Frère itinérant', item: 'Bol à aumône en bois' },
+        { nom: 'Pèlerin', item: '—' },
+        { nom: 'Frère Naturaliste', item: '—' },
+        { nom: 'Moine Apiculteur', item: 'Pot de miel' },
+        { nom: 'Brasseur d\'abbaye', item: 'Gourde de bière' }
+      ]
+    },
+    3: {
+      nom: 'Criminel / Hérétique',
+      itemPerso: ['*Grimoire (6 slots)'],
+      sorts: ['Détection Arcanique', 'Faiblesse', 'Cantrip ×1'],
+      occupations: [
+        { nom: 'Nécromancien', item: 'Crâne déformé' },
+        { nom: 'Occultiste', item: 'Miroir noir' },
+        { nom: 'Anatomiste', item: 'Scie et scalpel' },
+        { nom: 'Kabbaliste', item: 'Cube aux symboles kabbalistiques' },
+        { nom: 'Exégète', item: 'Livre interdit' },
+        { nom: 'Démonologiste', item: 'Cloche d\'argent' }
+      ]
+    },
+    4: {
+      nom: 'Artisan / Alchimiste',
+      itemPerso: ['*Grimoire (6 slots)'],
+      sorts: ['Détection Arcanique', 'Solvant', 'Cantrip ×1'],
+      occupations: [
+        { nom: 'Apothicaire', item: 'Pipettes de verre' },
+        { nom: 'Artificier', item: 'Sac de soufre et salpêtre' },
+        { nom: 'Architecte', item: 'Compas' },
+        { nom: 'Opticien', item: 'Kit de lentilles' },
+        { nom: 'Inventeur', item: 'Kit de lentilles' },
+        { nom: 'Physicien', item: 'Sédatif' }
+      ]
+    },
+    5: {
+      nom: 'Artiste / Illusionniste',
+      itemPerso: ['*Grimoire (6 slots)'],
+      sorts: ['Détection Arcanique', 'Illusion', 'Cantrip ×1'],
+      occupations: [
+        { nom: 'Prestidigitateur', item: 'Jeu de miroirs portables' },
+        { nom: 'Hypnotiseur', item: 'Pendule d\'argent' },
+        { nom: 'Metteur en scène', item: '—' },
+        { nom: 'Poète satirique', item: 'Carnet de rimes acides' },
+        { nom: 'Charlatan', item: 'Élixir « miracle »' },
+        { nom: 'Mystificateur', item: 'Relique truquée' }
+      ]
+    },
+    6: {
+      nom: 'Noble / Magistère',
+      itemPerso: ['*Grimoire (6 slots)'],
+      sorts: ['Détection Arcanique', 'Trait Arcanique', 'Cantrip ×1'],
+      occupations: [
+        { nom: 'Archiviste royal', item: 'Gants de soie' },
+        { nom: 'Astronome', item: 'Astrolabe' },
+        { nom: 'Inquisiteur', item: 'Code de lois' },
+        { nom: 'Précepteur', item: 'Baguette' },
+        { nom: 'Diplomate', item: 'Sceau de cire' },
+        { nom: 'Mathématicien', item: '—' }
+      ]
+    }
+  }
+};
+
+/* =====================================================================
+   NOMS — 4 listes de 100 (Liste de noms.md)
+   ===================================================================== */
+
+const PRENOMS_M = [
+  'Alaric','Aldous','Alton','Archibald','Arne','Arthur','Balthazar','Bard','Bartholomew','Bartlett',
+  'Basil','Baxton','Benedict','Bennett','Beorn','Bertram','Burchard','Cadman','Caspian','Chadwick',
+  'Clovis','Conrad','Corbett','Crispin','Cyprian','Cyrus','Daegal','Denis','Destrian','Drogo',
+  'Eldon','Ellis','Elric','Emil','Erasmus','Faustus','Felix','Finn','Finnian','Fitzhugh',
+  'Florian','Fox','Galileo','Giles','Godfrey','Godwin','Grimwald','Hamlin','Hannibal','Hildebrand',
+  'Jasper','Jeremiah','Johan','Jules','Kenric','Leif','Leopold','Leoric','Lothar','Lucian',
+  'Merrick','Milo','Mordred','Mortimer','Neville','Odel','Ogden','Orion','Orvyn','Osric',
+  'Oswald','Paschal','Percival','Peregrine','Piers','Quentin','Randolf','Redmaine','Reinhold','Rex',
+  'Ricard','Roland','Rufus','Silas','Stilton','Stratford','Sylvio','Tenpiece','Thaddeus','Torsten',
+  'Tristan','Urban','Valentin','Valerian','Virgil','Warrick','Waverly','Webster','Wilkin','Wymond'
+];
+
+const PRENOMS_F = [
+  'Adelaide','Agnes','Alma','Anastasia','Anika','Annora','Astrid','Barsaba','Beatrix','Bethel',
+  'Bianca','Blanche','Bodil','Bridget','Brunhilde','Calypso','Catalina','Cecilia','Celeste','Charlotte',
+  'Cleopha','Clotilde','Clover','Colette','Constance','Damaris','Daphne','Demona','Desirae','Ella',
+  'Elsbeth','Esme','Eulalia','Euphemia','Eydis','Fern','Fiora','Fleur','Florence','Francesca',
+  'Gertrude','Giselle','Godiva','Guinevere','Heloise','Henrietta','Hester','Hippolyta','Honora','Imogene',
+  'Ingrid','Ione','Iris','Isabetta','Isolde','Jacquette','Jeanne','Jessamine','Jilly','Lavinia',
+  'Lisbet','Madelena','Margot','Marian','Marigold','Matilda','Melisande','Millicent','Minerva','Morgan',
+  'Nerissa','Odette','Olga','Olivia','Orchid','Pepper','Petra','Philomena','Phoebe','Piety',
+  'Poppy','Portia','Rosalind','Rose','Sabina','Sif','Sigourney','Sigrid','Silence','Sybil',
+  'Tabitha','Trillby','Ulfhild','Ursula','Vivian','Wendy','Willow','Winifred','Yvette','Zora'
+];
+
+const SURNAME_1 = [
+  'Adder','Apple','Ash','Bab','Bag','Bar','Barrow','Basker','Beau','Beetle',
+  'Berry','Bird','Brandy','Bright','Brindle','Bull','Bux','Caven','Chelten','Chester',
+  'Chuff','Chum','Clod','Cobble','Cotten','Cress','Crom','Cumber','Dela','Dig',
+  'Draw','Dreg','Drol','Dun','Even','Ever','Fair','Fallow','Farthing','Feather',
+  'Ferns','Fox','Gam','Gird','Gos','Grey','Grim','Half','Hard','Harrow',
+  'Hart','Haver','Hedge','Hither','Holly','Honey','Horn','Kettle','Kings','Little',
+  'Long','Love','Middle','Mug','Nether','Never','Obling','Pember','Penning','Pens',
+  'Pinker','Porten','Quill','Rath','Sack','Sallow','Salt','Scor','Sedge','Silver',
+  'Slither','Smit','Snod','Souther','Stew','Stir','Swine','Tar','Temple','Tide',
+  'Tread','Under','Vander','Weather','Wester','Wex','Whit','Wither','Withing','Wy'
+];
+
+const SURNAME_2 = [
+  'bald','barrow','batch','beck','blood','bold','bone','bottle','bottom','bridge',
+  'buck','burn','bury','by','caster','castle','chester','child','church','cliff',
+  'cloth','coat','combe','cott','dale','dish','ditch','down','fax','feld',
+  'fent','fer','field','foot','force','fort','fry','gale','grass','grave',
+  'green','grove','ham','hill','hope','lack','lain','land','less','lin',
+  'ling','lish','lock','long','low','ly','man','march','mark','marl',
+  'marsh','mass','meer','mond','mont','mor','morn','nick','ny','port',
+  'ridge','row','sea','set','shot','sop','spoon','staff','stoke','stone',
+  'ten','thorn','thorpe','throp','ton','tooth','top','vane','ville','wald',
+  'wark','watch','water','well','whistle','wick','wood','worm','worth','worthy'
+];
+
+function pick(arr) { return arr[Math.floor(Math.random() * arr.length)]; }
+
+function generateName() {
+  const isFemale = Math.random() < 0.5;
+  const prenom = pick(isFemale ? PRENOMS_F : PRENOMS_M);
+  const nom = pick(SURNAME_1) + pick(SURNAME_2);
+  return { prenom, nom, genre: isFemale ? 'F' : 'M', complet: `${prenom} ${nom}` };
+}
+
+/* =====================================================================
+   LOGIQUE
+   ===================================================================== */
+
+function rollD6() { return Math.floor(Math.random() * 6) + 1; }
+
+function shuffle(arr) {
+  const a = arr.slice();
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+/* Détermine combien de places d'inventaire un item occupe (heuristique sur le nom) */
+function itemSlots(name) {
+  const n = name.toLowerCase();
+  // Armures (3 catégories : légère=1, moyenne=2, lourde=3)
+  if (n.includes('full plate') || n.includes('armure complète')
+      || n.includes('plaque')) return 3;
+  if (n.includes('cotte de mailles') || n.includes('maille')) return 2;
+  if (n.includes('armure de cuir') || n.includes('cuir')) return 1;
+  // Boucliers
+  if (n.includes('grand bouclier')) return 2;
+  // Armes lourdes / 2 mains explicites
+  if (n.includes('deux mains') || n.includes('2 mains')
+      || n.includes('sweihander') || n.includes('zweihander')
+      || n.includes('hallebarde') || n.includes('halebarde')) return 2;
+  // Grimoire : explicite à 1 place (malgré le "(6 slots)" de capacité magique)
+  if (n.includes('grimoire')) return 1;
+  return 1;
+}
+
+/* Niveau de chargement et vitesse de déplacement */
+function chargement(slots) {
+  if (slots <= 5) return { niveau: 'Léger', vitesse: 'Rapide', valeur: 8 };
+  if (slots <= 10) return { niveau: 'Chargé', vitesse: 'Moyen', valeur: 6 };
+  return { niveau: 'Surchargé', vitesse: 'Lent', valeur: 4 };
+}
+
+/* Extrait les PA d'un item style "Cotte de mailles (2 RD)" */
+function itemPA(name) {
+  const m = name.match(/(\d+)\s*RD/i);
+  return m ? parseInt(m[1], 10) : 0;
+}
+
+function lookupRange(table, value) {
+  for (const key of Object.keys(table)) {
+    if (key.includes('-')) {
+      const [lo, hi] = key.split('-').map(Number);
+      if (value >= lo && value <= hi) return table[key];
+    } else {
+      if (Number(key) === value) return table[key];
+    }
+  }
+  return '—';
+}
+
+let currentChar = null;
+
+function generate() {
+  // 1. Lance les 3 dés colorés
+  const dieValues = { red: rollD6(), green: rollD6(), blue: rollD6() };
+
+  // 2. Place-les dans un ordre aléatoire (D1, D2, D3 = position de gauche à droite)
+  const positions = shuffle(['red', 'green', 'blue']);
+  const dice = positions.map((color, i) => ({
+    pos: i + 1,
+    color,
+    value: dieValues[color]
+  }));
+
+  const D1 = dice[0].value;
+  const D2 = dice[1].value;
+  const D3 = dice[2].value;
+  const DR = dieValues.red;
+  const DV = dieValues.green;
+  const DB = dieValues.blue;
+
+  // 3. Lookups primaires
+  const approche = APPROCHE[D1];
+  const origine = ORIGINE[D2];
+  const motivation = MOTIVATION[D3];
+
+  // 4. Lookups secondaires (couleur)
+  const handicap = approche.handicap[DR - 1];
+  const malchance = lookupRange(origine.malchance, DV);
+  const don = lookupRange(motivation.don, DB);
+  const traitDistinctif = lookupRange(motivation.trait, D2 + DV);
+
+  // 5. Archétype (Type × Origine)
+  const archetypeData = ARCHETYPE[approche.type][D2];
+  const occupation = archetypeData.occupations[D3 - 1];
+
+  // 6. Ressources
+  const or = (D3 + DB) * 10;
+  const age = 2 * (D1 + DR) + 15;
+  const end = approche.attrs.VIG; // END = VIG
+  const invMax = 10 + approche.attrs.VIG;
+
+  // 7. Nom
+  const name = generateName();
+
+  currentChar = {
+    name,
+    dice, D1, D2, D3, DR, DV, DB,
+    approche, origine, motivation,
+    handicap, malchance, don, traitDistinctif,
+    archetype: archetypeData, occupation,
+    or, age, end, invMax
+  };
+
+  render(currentChar);
+}
+
+function render(c) {
+  // Dés
+  const diceEl = document.getElementById('dice');
+  diceEl.innerHTML = c.dice.map(d => {
+    const labels = { red: 'Rouge', green: 'Vert', blue: 'Bleu' };
+    return `
+      <div class="die ${d.color}">
+        <div class="pos">D${d.pos}</div>
+        <div class="val">${d.value}</div>
+        <div class="label">${labels[d.color]}</div>
+      </div>`;
+  }).join('');
+
+  // Personnage
+  const charEl = document.getElementById('character');
+  const a = c.approche;
+  const o = c.origine;
+  const m = c.motivation;
+  const arch = c.archetype;
+
+  const sorts = arch.sorts ? `
+    <div class="field">
+      <span class="lbl">Sorts</span>
+      <span class="val">${arch.sorts.join(', ')}</span>
+    </div>` : '';
+
+  // Items combinés (Approche + Item perso archétype + Item occupation)
+  const allItems = [
+    ...a.items.map(i => ({ txt: i, bonus: false })),
+    ...arch.itemPerso.map(i => ({
+      txt: i.startsWith('*') ? i.slice(1).trim() + ' (+1d, item personnalisé)' : i,
+      bonus: i.startsWith('*')
+    })),
+    { txt: `${c.occupation.nom} — ${c.occupation.item}`, bonus: false }
+  ];
+
+  // Calcul des slots et des PA pour chaque item
+  // Item personnalisé (bonus) : -1 emplacement, min 0
+  allItems.forEach(it => {
+    const baseSlots = itemSlots(it.txt);
+    it.slots = it.bonus ? Math.max(0, baseSlots - 1) : baseSlots;
+    it.baseSlots = baseSlots;
+    it.pa = itemPA(it.txt);
+  });
+  const slotsUsed = allItems.reduce((s, i) => s + i.slots, 0);
+  const totalPA = allItems.reduce((s, i) => s + i.pa, 0);
+  const slotColor = slotsUsed > c.invMax ? 'var(--accent)' : 'var(--ink-bright)';
+  const charge = chargement(slotsUsed);
+
+  // Expertises combinées : Approche (1) + Origine (2)
+  const allExpertises = [...a.expertise, ...o.expertise];
+
+  charEl.innerHTML = `
+    <!-- NOM (haut, pleine largeur) -->
+    <div class="name-banner" style="grid-column: 1 / -1;">
+      <div class="name-text">
+        ${c.name.complet}<span class="name-arch"> · ${arch.nom.split('/').pop().trim()}</span>
+      </div>
+      <div class="name-meta">${c.name.genre === 'F' ? '♀ Femme' : '♂ Homme'}</div>
+    </div>
+
+    <!-- BANDEAU STATS (haut, pleine largeur) -->
+    <div class="card stats" style="grid-column: 1 / -1;">
+      <h2>Stats</h2>
+      <div class="stats-grid">
+        <div class="attr"><div class="name">VIG</div><div class="num">${a.attrs.VIG}</div></div>
+        <div class="attr"><div class="name">FIN</div><div class="num">${a.attrs.FIN}</div></div>
+        <div class="attr"><div class="name">ESP</div><div class="num">${a.attrs.ESP}</div></div>
+        <div class="attr end"><div class="name">END</div><div class="num">${c.end}</div></div>
+        <div class="attr armure"><div class="name">Armure</div><div class="num">${totalPA}<span class="stat-unit"> RD</span></div></div>
+        <div class="attr vitesse vit-${charge.vitesse.toLowerCase()}">
+          <div class="name">Vitesse</div>
+          <div class="num">${charge.valeur}<span class="stat-unit"> ${charge.vitesse}</span></div>
+        </div>
+        <div class="attr or"><div class="name">Or</div><div class="num">${c.or}<span class="stat-unit"> po</span></div></div>
+      </div>
+    </div>
+
+    <!-- DESCRIPTIONS (gauche) -->
+    <div class="card descriptions">
+      <h2>Description</h2>
+      <div class="field"><span class="lbl">Approche</span><span class="val">${a.type} <span class="formula">(D1=${c.D1})</span></span></div>
+      <div class="field"><span class="lbl">Origine</span><span class="val">${o.nom} <span class="formula">(D2=${c.D2})</span></span></div>
+      <div class="field"><span class="lbl">Motivation</span><span class="val">${m.nom} <span class="formula">(D3=${c.D3})</span></span></div>
+      <div class="field"><span class="lbl">Archétype</span><span class="val">${arch.nom}</span></div>
+      <div class="field"><span class="lbl">Occupation</span><span class="val">${c.occupation.nom}</span></div>
+      <div class="field"><span class="lbl">Trait</span><span class="val">${c.traitDistinctif} <span class="formula">(D2+D-Vert=${c.D2 + c.DV})</span></span></div>
+      <div class="field"><span class="lbl">Malchance</span><span class="val">${c.malchance} <span class="formula">(D-Vert=${c.DV})</span></span></div>
+      <div class="field"><span class="lbl">Âge</span><span class="val">${c.age} ans <span class="formula">(2×(D1+D-Rouge)+15)</span></span></div>
+    </div>
+
+    <!-- CAPACITÉS (droite) -->
+    <div class="card capacites">
+      <h2>Capacités</h2>
+      <div class="field"><span class="lbl">Expertises</span><span class="val">${allExpertises.join(', ')}</span></div>
+      <div class="field"><span class="lbl">Don</span><span class="val">${c.don} <span class="formula">(D-Bleu=${c.DB})</span></span></div>
+      <div class="field"><span class="lbl">Handicap</span><span class="val">${c.handicap} <span class="formula">(D-Rouge=${c.DR})</span></span></div>
+      ${arch.sorts ? `<div class="field"><span class="lbl">Sorts</span><span class="val">${arch.sorts.join(', ')}</span></div>` : ''}
+    </div>
+
+    <!-- INVENTAIRE (bas, pleine largeur) -->
+    <div class="card inventaire" style="grid-column: 1 / -1;">
+      <h2>Inventaire</h2>
+      <div class="inv-stats">
+        <div class="stat-block">
+          <div class="stat-name">Emplacements</div>
+          <div class="stat-val" style="color: ${slotColor}">${slotsUsed}<span class="stat-unit">/${c.invMax}</span></div>
+          <div class="stat-formula">max = 10 + VIG</div>
+        </div>
+        <div class="stat-block charge-${charge.vitesse.toLowerCase()}">
+          <div class="stat-name">Chargement</div>
+          <div class="stat-val">${charge.niveau}</div>
+          <div class="stat-formula">Déplacement ${charge.vitesse} (${charge.valeur})</div>
+        </div>
+      </div>
+      <ul class="compact">
+        ${allItems.map(i => `
+          <li class="${i.bonus ? 'bonus' : ''}">
+            <span>${i.txt}</span>
+            <span class="slot-tag">${i.slots} empl.${i.bonus && i.baseSlots > 0 ? ' <span class="slot-reduction">(−1)</span>' : ''}</span>
+          </li>`).join('')}
+      </ul>
+      <p style="font-size: 0.8rem; color: var(--ink-dim); margin-top: 8px; font-style: italic;">
+        ★ = item personnalisé de l'archétype : +1d sur son pool, −1 emplacement (min 0).
+      </p>
+    </div>
+  `;
+}
+
+function toMarkdown(c) {
+  const a = c.approche, o = c.origine, m = c.motivation, arch = c.archetype;
+  const rawItems = [
+    ...a.items.map(i => ({ txt: i, bonus: false })),
+    ...arch.itemPerso.map(i => ({
+      txt: i.startsWith('*') ? i.slice(1).trim() + ' (+1d)' : i,
+      bonus: i.startsWith('*')
+    })),
+    { txt: `${c.occupation.nom} — ${c.occupation.item}`, bonus: false }
+  ];
+  const items = rawItems.map(i => {
+    const base = itemSlots(i.txt);
+    return {
+      txt: i.txt,
+      bonus: i.bonus,
+      slots: i.bonus ? Math.max(0, base - 1) : base,
+      pa: itemPA(i.txt)
+    };
+  });
+  const slotsUsed = items.reduce((s, i) => s + i.slots, 0);
+  const totalPA = items.reduce((s, i) => s + i.pa, 0);
+  const charge = chargement(slotsUsed);
+
+  return `# ${c.name.complet}
+
+*${c.name.genre === 'F' ? 'Femme' : 'Homme'} — ${a.type}, ${o.nom}*
+
+**Jet** : D1=${c.D1} (${c.dice[0].color}) · D2=${c.D2} (${c.dice[1].color}) · D3=${c.D3} (${c.dice[2].color})
+**Couleurs** : Rouge=${c.DR} · Vert=${c.DV} · Bleu=${c.DB}
+
+## Stats
+- **VIG** ${a.attrs.VIG} · **FIN** ${a.attrs.FIN} · **ESP** ${a.attrs.ESP} · **END** ${c.end}
+- **Armure** : ${totalPA} RD
+- **Vitesse** : ${charge.vitesse} (${charge.valeur}) — Chargement ${charge.niveau}
+- **Or** : ${c.or} po
+
+## Description
+- **Approche** : ${a.type}
+- **Origine** : ${o.nom}
+- **Motivation** : ${m.nom}
+- **Archétype** : ${arch.nom}
+- **Occupation** : ${c.occupation.nom}
+- **Trait distinctif** : ${c.traitDistinctif}
+- **Malchance** : ${c.malchance}
+- **Âge** : ${c.age} ans
+
+## Capacités
+- **Expertises** : ${[...a.expertise, ...o.expertise].join(', ')}
+- **Don** : ${c.don}
+- **Handicap** : ${c.handicap}
+${arch.sorts ? `- **Sorts** : ${arch.sorts.join(', ')}\n` : ''}
+
+## Inventaire (${slotsUsed}/${c.invMax} — ${charge.niveau})
+${items.map(i => `- ${i.txt} *(${i.slots} empl.)*`).join('\n')}
+`;
+}
+
+document.getElementById('btn-roll').addEventListener('click', generate);
+
+document.getElementById('btn-copy').addEventListener('click', () => {
+  if (!currentChar) return;
+  const md = toMarkdown(currentChar);
+  navigator.clipboard.writeText(md).then(() => {
+    const c = document.getElementById('copy-confirm');
+    c.classList.add('show');
+    setTimeout(() => c.classList.remove('show'), 1800);
+  });
+});
+
+document.getElementById('btn-print').addEventListener('click', () => {
+  if (!currentChar) return;
+  window.print();
+});
+
+// Premier perso au chargement
+generate();
+</script>
+
+</body>
+</html>

@@ -5,6 +5,14 @@
       "path": "09-Vermis-Mini/Intégré/Vermis_d6_v10.md"
     },
     {
+      "basename": "Liste de noms",
+      "path": "09-Vermis-Mini/Outils/Liste de noms.md"
+    },
+    {
+      "basename": "Vermis_Rules",
+      "path": "01-Règles/Vermis_Rules.md"
+    },
+    {
       "basename": "Quick ideas",
       "path": "09-Vermis-Mini/Intégré/Quick ideas.md"
     },
@@ -91,10 +99,6 @@
     {
       "basename": "regles_v07",
       "path": "09-Vermis-Mini/OLD/regles_v07.md"
-    },
-    {
-      "basename": "Vermis_Rules",
-      "path": "01-Règles/Vermis_Rules.md"
     },
     {
       "basename": "Événements_Aléatoires",
@@ -195,10 +199,6 @@
     {
       "basename": "Dungeon Stocking with Markov Processes",
       "path": "03-Références/Dungeon Stocking with Markov Processes.md"
-    },
-    {
-      "basename": "design-points-ouverts",
-      "path": "06-Wiki/design-points-ouverts.md"
     }
   ],
   "omittedPaths": [],

@@ -116,7 +116,7 @@ L'arbitrage de l'applicabilité revient au MJ : l'Expertise doit avoir un lien p
 
 Le dé sert deux fois : il détermine d'abord le résultat de sa propre table, puis il indexe une table secondaire (Handicap pour le rouge, Malchance pour le vert, Don pour le bleu).
 
-**Or de départ** : D2 + D3
+**Or de départ** : D3 + D_Bleu)
 **Âge de départ** : 2x(D1+D_Rouge) + 15 
 ### 2.4.2 Apprchoche D1
 
@@ -140,7 +140,7 @@ Le dé sert deux fois : il détermine d'abord le résultat de sa propre table, p
 | 6   | Décadent-Noble   | - Humanité<br>- Leadership | 1-2. Rétrogradé<br>3-4. Déshonoré<br>5-6. Déshérité |
 ### 2.4.4 Motivation D3
 
-| D6  | Motivation               | Don (D-Bleu)                                                 | Trait distinctif (Choisir entre D1 ou D-Rouge)                                                                               |
+| D6  | Motivation               | Don (D-Bleu)                                                 | Trait distinctif (Choisir entre D2+D-Vert)                                                                                   |
 | --- | ------------------------ | ------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------- |
 | 1   | Idéaliste : Liberté      | 1-2. Force brute<br>3-4. Athlétisme<br>5-6. Apolon           | 1. Marque de variolle<br>2. Caustaud<br>3. Brulure au visage<br>4. Marquée au Fer<br>5. 9 doigts<br>6. Cheveux blanc         |
 | 2   | Idéaliste : Justice      | 1-2. Dure à cuire<br>3-4. Petit dormeur<br>5-6. Santé de fer | 1. Nez cassé<br>2. Mâchoire carrée <br>3. Très grand<br>4. Fine musculature<br>5. Cicatrice de combat<br>6. Oreille manquant |

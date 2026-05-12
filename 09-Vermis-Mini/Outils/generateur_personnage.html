@@ -769,7 +769,7 @@ const ARCHETYPE = {
         { nom: 'Exilé de l\'académie', item: 'Sac de livres poussiéreux' },
         { nom: 'Druide apprenti', item: 'Coquillage de résonance' },
         { nom: 'Devin', item: '—' },
-        { nom: 'Sorcière initiée', item: 'Flûte d\'os' }
+        { nom: 'Sorcier initié', item: 'Flûte d\'os' }
       ]
     },
     2: {
@@ -903,6 +903,137 @@ function generateName() {
   const prenom = pick(isFemale ? PRENOMS_F : PRENOMS_M);
   const nom = pick(SURNAME_1) + pick(SURNAME_2);
   return { prenom, nom, genre: isFemale ? 'F' : 'M', complet: `${prenom} ${nom}` };
+}
+
+/* =====================================================================
+   FÉMINISATION — appliquée si genre = F
+   ===================================================================== */
+
+const FEM_MAP = {
+  // Multi-mots (longueur > simple, traités en priorité)
+  'Homme de main': 'Femme de main',
+  'Maréchal-ferrant': 'Maréchale-ferrante',
+
+  // Types d'approche
+  'Combattant': 'Combattante',
+  'Érudit': 'Érudite',
+
+  // Adjectifs/noms d'origine composée
+  'Reclus': 'Recluse',
+  'Citadin': 'Citadine',
+  'Décadent': 'Décadente',
+  'Paysan': 'Paysanne',
+  'Criminel': 'Criminelle',
+  'Artisan': 'Artisane',
+
+  // Archétypes (2e partie)
+  'Guerrier': 'Guerrière',
+  'Soldat': 'Soldate',
+  'Armurier': 'Armurière',
+  'Bretteur': 'Bretteuse',
+  'Chevalier': 'Chevaleresse',
+  'Rôdeur': 'Rôdeuse',
+  'Voleur': 'Voleuse',
+  'Chasseur': 'Chasseuse',
+  'Moine': 'Moniale',
+
+  // Occupations — noms
+  'Montagnard': 'Montagnarde',
+  'Cavalier': 'Cavalière',
+  'Fou': 'Folle',
+  'Cultivateur': 'Cultivatrice',
+  'Déserteur': 'Déserteuse',
+  'Berger': 'Bergère',
+  'Fossoyeur': 'Fossoyeuse',
+  'Mineur': 'Mineuse',
+  'Bûcheron': 'Bûcheronne',
+  'Pillard': 'Pillarde',
+  'Tueur': 'Tueuse',
+  'Geôlier': 'Geôlière',
+  'Nettoyeur': 'Nettoyeuse',
+  'Boucher': 'Bouchère',
+  'Charpentier': 'Charpentière',
+  'Forgeron': 'Forgeronne',
+  'Tailleur': 'Tailleuse',
+  'Vengeur': 'Vengeresse',
+  'Instructeur': 'Instructrice',
+  'Escrimeur': 'Escrimeuse',
+  'Écuyer': 'Écuyère',
+  'Officier': 'Officière',
+  'Templier': 'Templière',
+  'Maître': 'Maîtresse',
+  'Éclaireur': 'Éclaireuse',
+  'Pisteur': 'Pisteuse',
+  'Contrebandier': 'Contrebandière',
+  'Messager': 'Messagère',
+  'Trappeur': 'Trappeuse',
+  'Cueilleur': 'Cueilleuse',
+  'Braconnier': 'Braconnière',
+  'Pêcheur': 'Pêcheuse',
+  'Cambrioleur': 'Cambrioleuse',
+  'Receleur': 'Receleuse',
+  'Horloger': 'Horlogère',
+  'Serrurier': 'Serrurière',
+  'Couturier': 'Couturière',
+  'Verrier': 'Verrière',
+  'Graveur': 'Graveuse',
+  'Cracheur': 'Cracheuse',
+  'Espion': 'Espionne',
+  'Collectionneur': 'Collectionneuse',
+  'Amateur': 'Amatrice',
+  'Shaman': 'Shamane',
+  'Druide': 'Druidesse',
+  'Devin': 'Devineresse',
+  'Sorcier': 'Sorcière',
+  'Frère': 'Sœur',
+  'Pèlerin': 'Pèlerine',
+  'Brasseur': 'Brasseuse',
+  'Apiculteur': 'Apicultrice',
+  'Nécromancien': 'Nécromancienne',
+  'Artificier': 'Artificière',
+  'Opticien': 'Opticienne',
+  'Inventeur': 'Inventrice',
+  'Physicien': 'Physicienne',
+  'Prestidigitateur': 'Prestidigitatrice',
+  'Hypnotiseur': 'Hypnotiseuse',
+  'Metteur': 'Metteuse',
+  'Poète': 'Poétesse',
+  'Charlatan': 'Charlatane',
+  'Mystificateur': 'Mystificatrice',
+  'Inquisiteur': 'Inquisitrice',
+  'Précepteur': 'Préceptrice',
+  'Mathématicien': 'Mathématicienne',
+  'Exilé': 'Exilée',
+  'Esclave': 'Esclave',
+
+  // Adjectifs
+  'itinérant': 'itinérante',
+  'apprenti': 'apprentie',
+  'royal': 'royale',
+  'errant': 'errante',
+  'masqué': 'masquée',
+  'initié': 'initiée'
+};
+
+function escapeRegex(s) {
+  return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+function feminize(text) {
+  if (!text) return text;
+  // Tri longueur desc pour matcher les multi-mots avant les simples
+  const keys = Object.keys(FEM_MAP).sort((a, b) => b.length - a.length);
+  let result = text;
+  for (const k of keys) {
+    // Bordure non-lettre Unicode des deux côtés (gère É, è, etc.)
+    const re = new RegExp('(?<!\\p{L})' + escapeRegex(k) + '(?!\\p{L})', 'gu');
+    result = result.replace(re, FEM_MAP[k]);
+  }
+  return result;
+}
+
+function fem(text, isFemale) {
+  return isFemale ? feminize(text) : text;
 }
 
 /* =====================================================================
@@ -1047,6 +1178,13 @@ function render(c) {
       <span class="val">${arch.sorts.join(', ')}</span>
     </div>` : '';
 
+  // Féminisation conditionnelle (utilisée dès la construction de l'inventaire)
+  const F = c.name.genre === 'F';
+  const archNom = fem(arch.nom, F);
+  const typeNom = fem(a.type, F);
+  const origNom = fem(o.nom, F);
+  const occupNom = fem(c.occupation.nom, F);
+
   // Items combinés (Approche + Item perso archétype + Item occupation)
   const allItems = [
     ...a.items.map(i => ({ txt: i, bonus: false })),
@@ -1054,7 +1192,7 @@ function render(c) {
       txt: i.startsWith('*') ? i.slice(1).trim() + ' (+1d, item personnalisé)' : i,
       bonus: i.startsWith('*')
     })),
-    { txt: `${c.occupation.nom} — ${c.occupation.item}`, bonus: false }
+    { txt: `${occupNom} — ${c.occupation.item}`, bonus: false }
   ];
 
   // Calcul des slots et des PA pour chaque item
@@ -1077,9 +1215,9 @@ function render(c) {
     <!-- NOM (haut, pleine largeur) -->
     <div class="name-banner" style="grid-column: 1 / -1;">
       <div class="name-text">
-        ${c.name.complet}<span class="name-arch"> · ${arch.nom.split('/').pop().trim()}</span>
+        ${c.name.complet}<span class="name-arch"> · ${archNom.split('/').pop().trim()}</span>
       </div>
-      <div class="name-meta">${c.name.genre === 'F' ? '♀ Femme' : '♂ Homme'}</div>
+      <div class="name-meta">${F ? '♀ Femme' : '♂ Homme'}</div>
     </div>
 
     <!-- BANDEAU STATS (haut, pleine largeur) -->
@@ -1102,11 +1240,11 @@ function render(c) {
     <!-- DESCRIPTIONS (gauche) -->
     <div class="card descriptions">
       <h2>Description</h2>
-      <div class="field"><span class="lbl">Approche</span><span class="val">${a.type} <span class="formula">(D1=${c.D1})</span></span></div>
-      <div class="field"><span class="lbl">Origine</span><span class="val">${o.nom} <span class="formula">(D2=${c.D2})</span></span></div>
+      <div class="field"><span class="lbl">Approche</span><span class="val">${typeNom} <span class="formula">(D1=${c.D1})</span></span></div>
+      <div class="field"><span class="lbl">Origine</span><span class="val">${origNom} <span class="formula">(D2=${c.D2})</span></span></div>
       <div class="field"><span class="lbl">Motivation</span><span class="val">${m.nom} <span class="formula">(D3=${c.D3})</span></span></div>
-      <div class="field"><span class="lbl">Archétype</span><span class="val">${arch.nom}</span></div>
-      <div class="field"><span class="lbl">Occupation</span><span class="val">${c.occupation.nom}</span></div>
+      <div class="field"><span class="lbl">Archétype</span><span class="val">${archNom}</span></div>
+      <div class="field"><span class="lbl">Occupation</span><span class="val">${occupNom}</span></div>
       <div class="field"><span class="lbl">Trait</span><span class="val">${c.traitDistinctif} <span class="formula">(D2+D-Vert=${c.D2 + c.DV})</span></span></div>
       <div class="field"><span class="lbl">Malchance</span><span class="val">${c.malchance} <span class="formula">(D-Vert=${c.DV})</span></span></div>
       <div class="field"><span class="lbl">Âge</span><span class="val">${c.age} ans <span class="formula">(2×(D1+D-Rouge)+15)</span></span></div>
@@ -1152,13 +1290,18 @@ function render(c) {
 
 function toMarkdown(c) {
   const a = c.approche, o = c.origine, m = c.motivation, arch = c.archetype;
+  const F = c.name.genre === 'F';
+  const archNom = fem(arch.nom, F);
+  const typeNom = fem(a.type, F);
+  const origNom = fem(o.nom, F);
+  const occupNom = fem(c.occupation.nom, F);
   const rawItems = [
     ...a.items.map(i => ({ txt: i, bonus: false })),
     ...arch.itemPerso.map(i => ({
       txt: i.startsWith('*') ? i.slice(1).trim() + ' (+1d)' : i,
       bonus: i.startsWith('*')
     })),
-    { txt: `${c.occupation.nom} — ${c.occupation.item}`, bonus: false }
+    { txt: `${occupNom} — ${c.occupation.item}`, bonus: false }
   ];
   const items = rawItems.map(i => {
     const base = itemSlots(i.txt);
@@ -1175,7 +1318,7 @@ function toMarkdown(c) {
 
   return `# ${c.name.complet}
 
-*${c.name.genre === 'F' ? 'Femme' : 'Homme'} — ${a.type}, ${o.nom}*
+*${F ? 'Femme' : 'Homme'} — ${typeNom}, ${origNom}*
 
 **Jet** : D1=${c.D1} (${c.dice[0].color}) · D2=${c.D2} (${c.dice[1].color}) · D3=${c.D3} (${c.dice[2].color})
 **Couleurs** : Rouge=${c.DR} · Vert=${c.DV} · Bleu=${c.DB}
@@ -1187,11 +1330,11 @@ function toMarkdown(c) {
 - **Or** : ${c.or} po
 
 ## Description
-- **Approche** : ${a.type}
-- **Origine** : ${o.nom}
+- **Approche** : ${typeNom}
+- **Origine** : ${origNom}
 - **Motivation** : ${m.nom}
-- **Archétype** : ${arch.nom}
-- **Occupation** : ${c.occupation.nom}
+- **Archétype** : ${archNom}
+- **Occupation** : ${occupNom}
 - **Trait distinctif** : ${c.traitDistinctif}
 - **Malchance** : ${c.malchance}
 - **Âge** : ${c.age} ans

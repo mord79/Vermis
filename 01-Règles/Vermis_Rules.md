@@ -731,23 +731,22 @@ Chaque relique possède un rituel de recharge. Ce rituel doit être exécuté po
 
 Certaines reliques ont aussi des tabous, des obligations ou interdictions que l’aventurier doit suivre sans quoi il perdra toutes les charges de sa relique. Ces tabous sont en lien avec la vie du saint auquel la relique a appartenu. Sur une première offence, les charges sont toutes perdues. Sur une deuxième offence, la relique brise son lien avec l’aventurier et n'est plus jamais utilisable à moins de faire une Quête de rédemption (au choix du MJ, la quête doit être risquée).
 
-#### 1.8.2.1 Tabous 2d12
-Créer un tabou en lançans 2d12 et en combinant l'ordre et le concept. Si le résultat est trop complexe, ridicule ou difficile à imposer dans le jeu, le MJ peut toujours le modifier.
+#### 1.8.2.1 Tabous 2d6
+Créer un tabou en lançans 2d6 et en combinant l'ordre et le concept. Si le résultat est trop complexe, ridicule ou difficile à imposer dans le jeu, le MJ peut toujours le modifier.
 
-| d12 | Ordre / Cadre rituel                    | Concept                              |
+| 2d6 | Ordre / Cadre rituel                    | Concept                              |
 | --- | --------------------------------------- | ------------------------------------ |
-| 1   | Ne jamais … après le coucher du soleil  | boire du sang                        |
-| 2   | Toujours … avant de dormir              | manger de la viande                  |
-| 3   | Interdire aux compagnons de …           | couper les cheveux ou la barbe       |
-| 4   | Exiger aux compagnons de … en silence   | toucher un cadavre                   |
-| 5   | Refuser de … devant un feu sacré        | franchir un seuil sans permission    |
-| 6   | Purifier quiconque a …                  | dormir sous un toit étranger         |
-| 7   | Accomplir … uniquement les jours saints | verser le sang                       |
-| 8   | Cacher le fait de … aux compagnons      | porter du fer forgé                  |
-| 9   | Offrir une prière après avoir …         | accepter un don sans contrepartie    |
-| 10  | Punir tout compagnon qui …              | prononcer son vrai nom               |
-| 11  | Accomplir … le visage couvert           | regarder son reflet                  |
-| 12  | Brûler tout objet ayant servi à …       | éteindre une flamme avec son souffle |
+| 2   | Cacher le fait de … aux compagnons      | boire du sang                        |
+| 3   | Accomplir … le visage couvert           | regarder son reflet                  |
+| 4   | Exiger aux compagnons de …              | éteindre une flamme avec son souffle |
+| 5   | Purifier quiconque a …                  | prononcer son vrai nom               |
+| 6   | Refuser de …                            | toucher un cadavre                   |
+| 7   | Offrir une prière après avoir …         | franchir un seuil sans permission    |
+| 8   | Toujours … avant de dormir              | accepter un don sans contrepartie    |
+| 9   | Interdire aux compagnons de …           | porter du fer forgé                  |
+| 10  | Punir tout compagnon qui …              | dormir sous un toit étranger         |
+| 11  | Accomplir … uniquement les jours saints | couper les cheveux ou la barbe       |
+| 12  | Ne jamais … après le coucher du soleil  | manger de la viande                  |
 
 ---
 

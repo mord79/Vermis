@@ -1,10 +1,10 @@
-# Vermis — Todo (Vues Dataview)
+# 1 Vermis — Todo (Vues Dataview)
 
 *Requiert le plugin Dataview activé dans Obsidian. Source : `04-Todo/Vermis_Todo.md`.*
 
 ---
 
-## ⏳ En cours
+## 1.1 ⏳ En cours
 
 ```dataview
 TASK
@@ -14,7 +14,7 @@ WHERE contains(tags, "#statut/en-cours")
 
 ---
 
-## 🔴 Urgentes — à faire
+## 1.2 🔴 Urgentes — à faire
 
 ```dataview
 TASK
@@ -24,7 +24,7 @@ WHERE !completed AND contains(tags, "#urgent") AND contains(tags, "#statut/a-fai
 
 ---
 
-## 🟡 Importantes — à faire
+## 1.3 🟡 Importantes — à faire
 
 ```dataview
 TASK
@@ -34,7 +34,7 @@ WHERE !completed AND contains(tags, "#soon") AND contains(tags, "#statut/a-faire
 
 ---
 
-## 🚧 Bloquées
+## 1.4 🚧 Bloquées
 
 ```dataview
 TASK
@@ -44,7 +44,7 @@ WHERE contains(tags, "#statut/bloque")
 
 ---
 
-## Par bloc
+## 1.5 Par bloc
 
 ```dataview
 TASK
@@ -55,7 +55,7 @@ GROUP BY filter(tags, (t) => startswith(t, "#bloc/"))[0]
 
 ---
 
-## Toutes — ouvertes
+## 1.6 Toutes — ouvertes
 
 ```dataview
 TASK
@@ -65,7 +65,7 @@ WHERE !completed
 
 ---
 
-## ✅ Résolues
+## 1.7 ✅ Résolues
 
 ```dataview
 TASK

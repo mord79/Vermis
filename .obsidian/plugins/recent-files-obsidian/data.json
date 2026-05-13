@@ -5,6 +5,14 @@
       "path": "09-Vermis-Mini/Intégré/Vermis_d6_v10.md"
     },
     {
+      "basename": "Plan d'importation par point",
+      "path": "09-Vermis-Mini/Intégré/Plan d'importation par point.md"
+    },
+    {
+      "basename": "Todo_Vue",
+      "path": "00-MOC/Todo_Vue.md"
+    },
+    {
       "basename": "Liste de noms",
       "path": "09-Vermis-Mini/Outils/Liste de noms.md"
     },
@@ -17,10 +25,6 @@
       "path": "09-Vermis-Mini/Intégré/Quick ideas.md"
     },
     {
-      "basename": "Todo_Vue",
-      "path": "00-MOC/Todo_Vue.md"
-    },
-    {
       "basename": "Index",
       "path": "00-MOC/Index.md"
     },
@@ -31,10 +35,6 @@
     {
       "basename": "WIP Création_de_personnage",
       "path": "01-Règles/011-WIP/WIP Création_de_personnage.md"
-    },
-    {
-      "basename": "Plan d'importation par point",
-      "path": "09-Vermis-Mini/Intégré/Plan d'importation par point.md"
     },
     {
       "basename": "Grille_Événements_Aléatoires",

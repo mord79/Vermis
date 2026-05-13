@@ -79,31 +79,31 @@ Réserve de combat représentant l'élan, l'esquive, la résistance aux chocs. *
 - Quand END = 0 : chaque coup reçu inflige une **Blessure** (cf. §1.4.1)
 - Mort/Paralysie/Catatonie déclenchées par chute d'attribut à 0 (cf. §1.4.3)
 
-##3.1.2 Don
+## 2.3 Don et Handicape
+
+Les PJ possèdent un banque d'utilisation pour leurs Dons égale leur FIN.
 
 Chaque personnage possède **1 Don** à la création. Le Don est un trait situationnel **unique et iconique**, lié à l'identité du perso. Quand le Don s'applique au test en cours, il ajoute **+1d au pool**.
 
-*Exemples* : Sang-froid, Œil de lynx, Mémoire eidétique, Costaud, Inflexible, Charme dangereux.
+Chaque personnage possède 1 **handicape** à la création. Comme le Don, il est situationnel et lié à l'identité du personnage.  Un joueur pour invoquer un handicape pour appliquer un **-1d au pool**. Si le test réussi, le PJ regagne 1pt d'utilisation de Don. C'est la seule manière de regagner les points.
 
-*Liste complète des Dons : à designer — Phase 1.*
+Les PJ peuvent gagner des nouveaux Dons à travers leurs aventures comme effet d'un évènement particulier ou récompense magique ou divine.
 
-## 2.3 Expertise
+Les PJ peuvent aussi gagner d'autres Handicapes lors d'évènements tragiques ou lorsque les combats tourne mal.
+## 2.4 Expertise
 
 Chaque personnage possède **2 à 3 Expertises** à la création, déterminées par son origine et son approche. Les Expertises sont des compétences narratives plus précises que le Don.
 
 Quand une Expertise s'applique au test, le MJ peut opter pour une des deux options suivantes :
 
-| Effet               | Description                                                                    |
-| ------------------- | ------------------------------------------------------------------------------ |
-| **+1d au pool**     | Effet par défaut. L'Expertise rend l'action plus efficace.                     |
-| **Nature modifiée** | Succès = effet bonus narratif, Échec = conséquence atténuée. À l'arbitrage MJ. |
-
-L'arbitrage de l'applicabilité revient au MJ : l'Expertise doit avoir un lien plausible avec l'action tentée.
-
-*Exemples* : Médecine, Survie en forêt, Crochetage, Lecture, Étiquette des cours, Fabrication, Théologie obscure, Pistage, Chevauchée, Cuisine, Marché noir.
+| Effet               | Description                                                                                                                     |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| **Action Possible** | Une action qui demande une connaissance technique spécifique est possible seulement si le personnage possède cette connaissance |
+| **+1d au pool**     | Effet par défaut. L'Expertise rend l'action plus efficace.                                                                      |
+| **Nature modifiée** | Succès = effet bonus narratif, Échec = conséquence atténuée. À l'arbitrage MJ.                                                  |
 
 **Acquisition en jeu** : par voie **narrative** uniquement — apprentissage auprès d'un mentor, étude prolongée d'un grimoire, événement marquant qui transforme le perso. Pas de progression mécanique automatique. *(Discipline OSR : la progression du perso passe par le récit.)*
-## 2.4 Inventaire
+## 2.5 Inventaire
 
 **Capacité = 10 + VIG max** *(valeur de départ, non réduite par les Blessures à VIG)*
 
@@ -115,25 +115,17 @@ Chaque objet = 1 place. Exceptions :
 
 Il y a 3 niveaux de chargements: Léger, Chargé et Surchargé
 
-| État      | Charges   | Vitesse  | Effets                                                                                                               |
-| --------- | --------- | -------- | -------------------------------------------------------------------------------------------------------------------- |
-| Libre     | 5         | 8 Rapide | +1D sur discrétion, grimpe, esquive                                                                                  |
-| Chargé    | 6-10      | 6 Moyen  | −1D sur nage                                                                                                         |
-| Surchargé | 11-VIG+10 | 4 Lent   | Nage impossible. −1D sur tests FIN/VIG de mouvement avec force ou précision. **Vulnérable** : dégâts reçus améliorés |
-
-
-- **Léger** : 5 place occupées ou moins
-	- **Déplacement** : Rapide (8)
-- **Chargé** : de 6 à 10 places occupées
-	- **Déplacement** : Moyen (6)
-- **Surchargé** : 11 places et plus, maximum 10+VIG
-	- **Déplacement** : Lent (4)
+| État          | Charges   | Vitesse  | Effets                                                                                                               |
+| ------------- | --------- | -------- | -------------------------------------------------------------------------------------------------------------------- |
+| **Libre**     | 5         | 8 Rapide | +1D sur discrétion, grimpe, esquive                                                                                  |
+| **Chargé**    | 6-10      | 6 Moyen  | −1D sur nage                                                                                                         |
+| **Surchargé** | 11-VIG+10 | 4 Lent   | Nage impossible. −1D sur tests FIN/VIG de mouvement avec force ou précision. **Vulnérable** : dégâts reçus améliorés |
 
 ---
-## 2.5 Déplacement et vitesse
+## 2.6 Déplacement et vitesse
 *(à compléter, voir Vermis)*
-## 2.6 Création de personnage
-### 2.6.1 Procédure
+## 2.7 Création de personnage
+### 2.7.1 Procédure
 
 - Prendre 3d6 de couleur rouge, vert et bleu.
 - Lancer les 3 dés et noter leur valeur et leur couleur dans l'ordre, de gauche à droite (ex. 3R-5B-2V).
@@ -146,17 +138,17 @@ Le dé sert deux fois : il détermine d'abord le résultat de sa propre table, p
 
 **Or de départ** : (D3 + D_Bleu)x10
 **Âge de départ** : 2x(D1+D_Rouge) + 15 
-### 2.6.2 Apprchoche D1
+### 2.7.2 Apprchoche D1
 
-| d6  | type       | Attribut            | Expertise                        |                                                                 | Handicape (Dé rouge)                                                                                                                                                 |
-| --- | ---------- | ------------------- | -------------------------------- | --------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1   | combattant | VIG 5, FIN 3, ESP 4 | - Premier soins<br>              | - Cotte de mailles 2 RD<br>- Hachette 4d<br>- Bandage           | 1. Baiguément<br>2. SPT<br>3. Accent incompréhensible<br>4. Laid<br>5. Agressif<br>6. Haï des animaux                                                                |
-| 2   | combattant | VIG 5, FIN 4, ESP 3 | - Cuisine de campagne            | - Cotte de mailles 2 RD<br>- Épée courte 4d<br>- Badge milicien | 1. Vertige<br>2. Distrait<br>3. Daltonien<br>4. Désorganisé<br>5. Pessimisme contagieux<br>6. Dure de la feuille                                                     |
-| 3   | Filou      | VIG 4, FIN 5, ESP 3 | - Poison                         | - Armure de cuir 1 RD <br>- Épée courte 4d <br>- kit de poison  | 1. Tremblements nerveux<br>2. Paranoïa aiguë<br>3. Teint maladif <br>4. Haleine chimique, <br>5. Insomnie, <br>6. Naturellement Suspect                              |
-| 4   | Filou      | VIG 3, FIN 5, ESP 4 | - Chirurgie de fortune           | - Armure de cuir 1 RD <br>- Épée courte 4d <br>- kit de soins   | 1. Main raide, <br>2. Phobie du sang<br>3. Boiterie marquée, <br>4. Saignements de nez fréquents, <br>5. Myopie sévère, <br>6. Cicatrices d'auto-expérimentation     |
-| 5   | Erudit     | VIG 3, FIN 4, ESP 5 | - Sciences Interdites            | - Bâton 3d<br>- Sac Accès facile                                | 1. Hallucinations, <br>2. Peau translucide, <br>3. Migraines<br>4. Ombre décalée, <br>5. Narcolepsie, <br>6. Obsession pour un objet inutile                         |
-| 6   | Erudit     | VIG 4, FIN 3, ESP 5 | - Sciences Naturelles et Médical | - Dague 3d<br>- Kit de pharmacopé                               | 1. Asthme, <br>2. Fragilité osseuse<br>3. Manie de la propreté (TOC), <br>4. Cynisme toxique<br>5. Allergies alimentaires graves<br>6. Main de fer (prothèse lourde) |
-### 2.6.3 Origine D2
+| d6  | type       | Attribut            | Expertise              |                                                                 | Handicape (Dé rouge)                                                                                              |
+| --- | ---------- | ------------------- | ---------------------- | --------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| 1   | combattant | VIG 5, FIN 3, ESP 4 | - Premier soins<br>    | - Cotte de mailles 2 RD<br>- Hachette 4d<br>- Bandage           | 1. Borgne<br>2. Distrait<br>3. Vertige<br>4. Daltonien<br>5. Dure de la feuille<br>6. Haï des animaux             |
+| 2   | combattant | VIG 5, FIN 4, ESP 3 | - Cuisine de campagne  | - Cotte de mailles 2 RD<br>- Épée courte 4d<br>- Badge milicien | 1. Sommeil Lourd<br>2. SPT<br>3. Baiguément<br>4. Désorganisé<br>5. Pessimisme contagieux<br>6. Agressif          |
+| 3   | Filou      | VIG 4, FIN 5, ESP 3 | - Poison               | - Armure de cuir 1 RD <br>- Épée courte 4d <br>- kit de poison  | 1. Nerveux<br>2. Paranoïaque<br>3. Obsession<br>4. Illettré <br>5. Laid<br>6. Suspect                             |
+| 4   | Filou      | VIG 3, FIN 5, ESP 4 | - Chirurgie de fortune | - Armure de cuir 1 RD <br>- Épée courte 4d <br>- kit de soins   | 1. Rachitisme<br>2. Toux chronique<br>3. Maladif<br>4. Allergie aux Animaux<br>5. Insomnie,<br>6. Asthme,         |
+| 5   | Erudit     | VIG 3, FIN 4, ESP 5 | - Sciences Interdites  | - Bâton 3d<br>- Sac Accès facile                                | 1. Hallucinations, <br>2. jambe de bois<br>3. Migraines<br>4. Frileux<br>5. Narcolepsie, <br>6. Fragilité osseuse |
+| 6   | Erudit     | VIG 4, FIN 3, ESP 5 | - Sciences Naturelles  | - Dague 3d<br>- Kit de pharmacopé                               | 1. Bossu<br>2. Maladroit<br>3. TOC<br>4. Daltonien<br>5. Myopie<br>6. Main prothèse                               |
+### 2.7.3 Origine D2
 
 | D6  | Origine          | Expertise                  | Malchance (D-Vert)                                  |
 | --- | ---------------- | -------------------------- | --------------------------------------------------- |
@@ -166,7 +158,7 @@ Le dé sert deux fois : il détermine d'abord le résultat de sa propre table, p
 | 2   | Citadin-Artisan  | - Bricolage<br>- Commerce  | 1-2. Hanté<br>3-4. Désabusé<br>5-6. Fraudé          |
 | 5   | Décadent-Artiste | - Humanité<br>- Mascarade  | 1-2. Chantage<br>3-4. Humilié<br>5-6. Déprimé       |
 | 6   | Décadent-Noble   | - Humanité<br>- Leadership | 1-2. Rétrogradé<br>3-4. Déshonoré<br>5-6. Déshérité |
-### 2.6.4 Motivation D3
+### 2.7.4 Motivation D3
 
 | D6  | Motivation               | Don (D-Bleu)                                                 | Trait distinctif (Choisir entre D2+D-Vert)                                                                                         |
 | --- | ------------------------ | ------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------- |
@@ -176,38 +168,38 @@ Le dé sert deux fois : il détermine d'abord le résultat de sa propre table, p
 | 4   | Pragmatique : Perfection | 1-2. Réflexe<br>3-4. Précis<br>5-6. Félin                    | 2-4. Tatoué  <br>5-6. Chignons<br>7. Dreads<br>8-9. Imberbe<br>10-12. Poilue                                                       |
 | 5   | Ambitieux : Gloire       | 1-2. Polyglotte<br>3-4. Cultivé<br>5-6. Ingénieux            | 2-4. Moustache  <br>5-6. Cheveux très long<br>7. Tache de rousseur <br>8-9. Cheveux tressés<br>10-12. Yeux verrons                 |
 | 6   | Ambiteux : Pouvoir       | 1-2. Inspirant<br>3-4. Séduisant<br>5-6. Crédible            | 2-4. Nez aquilin  <br>5-6. Chauve ou rasé<br>7. Cheveux frisés <br>8-9. Albinos<br>10-12. Marque de flagellation<br>1. Peau foncée |
-### 2.6.5 Archétype (Approche/Origine)
+### 2.7.5 Archétype (Approche/Origine)
 Item personnalisé* : +1D et -1 place d'inventaire (min 0)
-#### 2.6.5.1 Combattants
+#### 2.7.5.1 Combattants
 
-| Archétype             | Item personnalisé\*                | Occupation - Item (Motivation)                                                                                                                                                                                                               |
-| --------------------- | ---------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Nomade / Guerrier     | • \*Hache à deux mains             | 1\. Esclave en fuite — Chaîne<br>2\. Garde de caravane — Lanterne à huile<br>3\. Montagnard — Crampons d'escalade<br>4\. Cavalier nomade — Arc composite<br>5\. Fou de guerre — Champirage (3)<br>6\. Chef de tribu — Collier de dents       |
-| Paysan / Soldat       | • Lance<br>• *Grand bouclier       | 1. Cultivateur - Fourche<br>2. Déserteur — Cape tachée de sang<br>3. Berger — gourde de vin<br>4. Fossoyeur — Pelle <br>5. Mineur — Pioche<br>6. Bûcheron — Hache à fendre                                                                   |
-| Artisan / Armurier    | - *Marteau de guerre<br>- Bouclier | 1\. Boucher — Hachoir<br>2\. Charpentier — Scie<br>3\. Forgeron — Marteau<br>4\. Fossoyeur — Pelle<br>5\. Tailleur de pierre — Ciseau à pierre<br>6\. Maréchal-ferrant — Pinces                                                              |
-| Criminel / Mercenaire | - * épée bâtarde<br>- Arbalète     | 1.Homme de main — Chaîne <br>2. Pillard — Pelisse de loup<br>3. Tueur à gages — Fiole de poison rapide<br>4. Geôlier — Menottes<br>5. Bandit — Foulard pour masquer le visage<br>6. Nettoyeur — Sac de chaux vive                            |
-| Artiste / Bretteur    | - *Rapière<br>- Main-gauche        | 1\. Vengeur masqué — Masque de fer<br>2\. Corsaire — Perroquet <br>3\. Instructeur d'armes — Épée de bois<br>4\. Escrimeur — Gants de cuir<br>5\. Écuyer — Étendard<br>6\. Officier — Longue-vue                                             |
-| Noble / Chevalier     | • \*Épée longue<br>• Bouclier      | 1. Templier — Relique brisée<br>2. Chevalier errant — Sceau de cire héraldique<br>3. Garde d'élite — Cape de cérémonie<br>4. Maître d'armes — Pierre à aiguiser fine<br>5. Noble exilé — Bague à cachet (or)<br>6. Capitaine — Cor de guerre |
-#### 2.6.5.2 Filous
+| Archétype             | Expertise  | Item personnalisé\*                                | Occupation - Item (Motivation)                                                                                                                                                                                                               |
+| --------------------- | ---------- | -------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Nomade / Guerrier     | Athlétisme | • \*Hache à deux mains                             | 1\. Esclave en fuite — Chaîne<br>2\. Garde de caravane — Lanterne à huile<br>3\. Montagnard — Crampons d'escalade<br>4\. Cavalier nomade — Arc composite<br>5\. Fou de guerre — Champirage (3)<br>6\. Chef de tribu — Collier de dents       |
+| Paysan / Soldat       | Athlétisme | • Lance<br>• *Grand bouclier                       | 1. Cultivateur - Fourche<br>2. Déserteur — Cape tachée de sang<br>3. Berger — gourde de vin<br>4. Fossoyeur — Pelle <br>5. Mineur — Pioche<br>6. Bûcheron — Hache à fendre                                                                   |
+| Artisan / Sapeur      | Armurier   | - * Marteau de guerre deux mains<br>- Explosif (3) | 1\. Boucher — Hachoir<br>2\. Charpentier — Scie<br>3\. Forgeron — Marteau<br>4\. Fossoyeur — Pelle<br>5\. Tailleur de pierre — Ciseau à pierre<br>6\. Maréchal-ferrant — Pinces                                                              |
+| Criminel / Mercenaire | Armurier   | - * épée bâtarde<br>- Bouclier                     | 1.Homme de main — Chaîne <br>2. Pillard — Pelisse de loup<br>3. Tueur à gages — Fiole de poison rapide<br>4. Geôlier — Menottes<br>5. Bandit — Foulard pour masquer le visage<br>6. Nettoyeur — Sac de chaux vive                            |
+| Artiste / Bretteur    | Leadership | - *Rapière<br>- Main-gauche                        | 1\. Vengeur masqué — Masque de fer<br>2\. Corsaire — Perroquet <br>3\. Instructeur d'armes — Épée de bois<br>4\. Escrimeur — Gants de cuir<br>5\. Écuyer — Étendard<br>6\. Officier — Longue-vue                                             |
+| Noble / Chevalier     | Leadership | • \*Épée longue<br>• Bouclier                      | 1. Templier — Relique brisée<br>2. Chevalier errant — Sceau de cire héraldique<br>3. Garde d'élite — Cape de cérémonie<br>4. Maître d'armes — Pierre à aiguiser fine<br>5. Noble exilé — Bague à cachet (or)<br>6. Capitaine — Cor de guerre |
+#### 2.7.5.2 Filous
 
-| Archétype                     | Item personnalisé\*                        | Occupation (Motivation)                                                                                                                                                                                                                     |
-| ----------------------------- | ------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Nomade / Explorateur          | • * Lance<br>• Corde & Grappin             | 1. Éclaireur — longue-vue pliable<br>2. Cartographe — Rouleau de parchemin<br>3. Prospecteur - Tamis<br>4. Contrebandier — Peau de bête traitée<br>5. Messager — Sacoche étanche<br>6. Guide - Sifflet de rappel                            |
-| Paysan / Chasseur             | • \* Arc long<br>• Corde & Grappin         | 1. Trappeur — Appâts olfactifs<br>2. Patrouilleur - Corne de signal<br>3. Guet — Cloche de détresse<br>4. Cueilleur — Panier de récolte<br>5. Braconnier  — Cape de camouflage <br>6. Pêcheur — Filet plombé                                |
-| Artisan / Chasseur de Trésors | • Arbalète légère<br>• \*Kit de crochetage | 1. Horloger — pinces de précision<br>2. Serrurier — Limes diverses<br>3. Orfèvre — Petits Forets <br>4. Couturier — Aiguilles et fils<br>5. Verrier — Cisailles <br>6. Graveur — Petits Étaux                                               |
-| Criminel / Voleur             | • Dague double<br>• \*Kit de crochetage    | 1. Cambrioleur — Scie à bareau<br>2. Monte-en-l'air — Grappin miniature<br>3. Pickpocket — Doigtier de cuir<br>4. Faussaire — Plume et encres diverses<br>5. Receleur — Petite balance de précision<br>6. Saboteur — Fiole d'acide (3)      |
-| Artiste / Barde               | • Rapière<br>• \*Kit de déguisement        | 1. Troubadour — Luth<br>2. Cracheur de feu — Fiole d'huile <br>3. Marionnettiste — Pantin grotesque<br>4. Peintre — Carnet de croquis<br>5. Saltimbanque — Balles de jonglerie<br>6. Espion - Encre invisible                               |
-| Noble / Excentrique           | • * Canne-épée<br>•\*Kit de déguisement    | 1. Collectionneur — Bocal de spécimen<br>2. Dandy décadent — Flacon de parfum<br>3. Gambler — Jeu de cartes marqué<br>4. Amateur d'occulte — Encens apaisant<br>5. Naturaliste amateur — Filet à papillons <br>6. Esthète — Miroir d'argent |
-#### 2.6.5.3 Érudits
+| Archétype                     | Expertise  | Item personnalisé\*                        | Occupation (Motivation)                                                                                                                                                                                                                     |
+| ----------------------------- | ---------- | ------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Nomade / Explorateur          | Vigilance  | • * Lance<br>• Corde & Grappin             | 1. Éclaireur — longue-vue pliable<br>2. Cartographe — Rouleau de parchemin<br>3. Prospecteur - Tamis<br>4. Contrebandier — Peau de bête traitée<br>5. Messager — Sacoche étanche<br>6. Guide - Sifflet de rappel                            |
+| Paysan / Chasseur             | Vigilance  | • \* Arc long<br>• Corde & Grappin         | 1. Trappeur — Appâts olfactifs<br>2. Patrouilleur - Corne de signal<br>3. Guet — Cloche de détresse<br>4. Cueilleur — Panier de récolte<br>5. Braconnier  — Cape de camouflage <br>6. Pêcheur — Filet plombé                                |
+| Artisan / Chasseur de Trésors | Crochetage | • Arbalète légère<br>• \*Kit de crochetage | 1. Horloger — pinces de précision<br>2. Serrurier — Limes diverses<br>3. Orfèvre — Petits Forets <br>4. Couturier — Aiguilles et fils<br>5. Verrier — Cisailles <br>6. Graveur — Petits Étaux                                               |
+| Criminel / Voleur             | Crochetage | • Dague double<br>• \*Kit de crochetage    | 1. Cambrioleur — Scie à bareau<br>2. Monte-en-l'air — Grappin miniature<br>3. Pickpocket — Doigtier de cuir<br>4. Faussaire — Plume et encres diverses<br>5. Receleur — Petite balance de précision<br>6. Saboteur — Fiole d'acide (3)      |
+| Artiste / Barde               | Mascarade  | • Rapière<br>• \*Kit de déguisement        | 1. Troubadour — Luth<br>2. Cracheur de feu — Fiole d'huile <br>3. Marionnettiste — Pantin grotesque<br>4. Peintre — Carnet de croquis<br>5. Saltimbanque — Balles de jonglerie<br>6. Espion - Encre invisible                               |
+| Noble / Excentrique           | Mascarade  | • * Canne-épée<br>•\*Kit de déguisement    | 1. Collectionneur — Bocal de spécimen<br>2. Dandy décadent — Flacon de parfum<br>3. Gambler — Jeu de cartes marqué<br>4. Amateur d'occulte — Encens apaisant<br>5. Naturaliste amateur — Filet à papillons <br>6. Esthète — Miroir d'argent |
+#### 2.7.5.3 Érudits
 
-| Archétype              | Item personnalisé\*                                                                                | Occupation (Motivation))                                                                                                                                                                                                                  |
-| ---------------------- | -------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Nomade / Ermite        | • \*Grimoire (6 slots)<br>• Sorts : <br>  - Détection Arc.<br>  -  Vue Nocturne<br>  -  Cantrip×1  | 1. Oracle — Bourse d'ossements divinatoires<br>2. Shaman —  masque d'écorse<br>3. Exilé de l'académie — **Livre scellé**<br>4. Druide apprenti — Faucille<br>5. Pèlerin - grelots<br>6. Sorcière initié — Flûte d'os                      |
-| Paysan / Moine         | • \*Grimoire (6 slots)<br>• Sorts : <br>  - Détection Arc.<br>  - Baume<br>  - Cantrip×1           | 1. Herboriste — Sachet d'herbes <br>2. Frère itinérant — Habit de bure  <br>3. Acète - Chaînes de fer<br>4. Pénitent - Petit fouet<br>5. Moine Apiculteur — Pot de miel<br>6. Brasseur d'abbaye — Gourde de bière                         |
-| Artisan / Artifex      | • \*Grimoire (6 slots)<br>• Sorts : <br>  - Détection Arc.<br>  - Solvant<br>  - Cantrip×1         | 1. Apothicaire — Pipettes de verre<br>2. Artificier — Sac de soufre et salpêtre<br>3. Alchimiste — fiole<br>4. Opticien - Kit de lentilles <br>5. Inventeur — kit de Lentilles<br>6. Physicien — Sédatif                                  |
-| Criminel / Hérétique   | • \*Grimoire (6 slots)<br>• Sorts : <br>  - Détection Ar.<br>  - Faiblesse<br>  - Cantrip×1        | 1. Nécromant — Crâne déformé<br>2. Occultiste — Miroire Noir<br>3. Anatomiste - Scie et scalpel<br>4. Kabbaliste - Cube avec des symboles<br>5. Exégète - Livre interdit<br>6. Démonologiste - Cloche d'argent                            |
-| Artiste / Illusioniste | • \*Grimoire (6 slots)<br>• Sorts : <br>  - Détection Arcanique<br>  - Illusion<br>  - Cantrip×1   | 1. Prestidigitateur — Jeu de miroirs portables<br>2. Hypnotiseur — Pendule d'argent<br>3. Metteur en scène — &&&<br>4. Poète satirique — Carnet de rimes acides <br>5. Charlatan — Élixir "miracle"<br>6. Mystificateur - Relique truquée |
-| Noble / Magistère      | • \*Grimoire (6 slots)<br>• Sorts : <br>  - Détection Arc.<br>  - Trait Arcanique<br>  - Cantrip×1 | 1. Archiviste royal — Gants de soie<br>2. Astronome — Astrolabe <br>3. Inquisiteur — Code de lois<br>4. Précepteur — Baguette<br>5. Diplomate — Sceau de cire<br>6. Mathématicien — Abaque                                                |
+| Archétype              | Expertise  | Item personnalisé\*                                                                                | Occupation (Motivation))                                                                                                                                                                                                                  |
+| ---------------------- | ---------- | -------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Nomade / Ermite        | Herborisme | • \*Grimoire (6 slots)<br>• Sorts : <br>  - Détection Arc.<br>  -  Vue Nocturne<br>  -  Cantrip×1  | 1. Oracle — Bourse d'ossements divinatoires<br>2. Shaman —  masque d'écorse<br>3. Exilé de l'académie — **Livre scellé**<br>4. Druide apprenti — Faucille<br>5. Pèlerin - grelots<br>6. Sorcière initié — Flûte d'os                      |
+| Paysan / Moine         | Herborisme | • \*Grimoire (6 slots)<br>• Sorts : <br>  - Détection Arc.<br>  - Baume<br>  - Cantrip×1           | 1. Natruraliste — Sachet d'herbes <br>2. Frère itinérant — Habit de bure  <br>3. Acète - Chaînes de fer<br>4. Pénitent - Petit fouet<br>5. Moine Apiculteur — Pot de miel<br>6. Brasseur d'abbaye — Barilet de bière                      |
+| Artisan / Artifex      | Médecine   | • \*Grimoire (6 slots)<br>• Sorts : <br>  - Détection Arc.<br>  - Solvant<br>  - Cantrip×1         | 1. Apothicaire — Pipettes de verre<br>2. Artificier — Sac de soufre et salpêtre<br>3. Alchimiste — fiole<br>4. Opticien - Kit de lentilles <br>5. Inventeur — kit de Lentilles<br>6. Physicien — Sédatif                                  |
+| Criminel / Hérétique   | Médecine   | • \*Grimoire (6 slots)<br>• Sorts : <br>  - Détection Ar.<br>  - Faiblesse<br>  - Cantrip×1        | 1. Nécromant — Crâne déformé<br>2. Occultiste — Miroire Noir<br>3. Anatomiste - Scie et scalpel<br>4. Kabbaliste - Cube avec des symboles<br>5. Exégète - Livre interdit<br>6. Démonologiste - Cloche d'argent                            |
+| Artiste / Illusioniste | Diplomatie | • \*Grimoire (6 slots)<br>• Sorts : <br>  - Détection Arcanique<br>  - Illusion<br>  - Cantrip×1   | 1. Prestidigitateur — Jeu de miroirs portables<br>2. Hypnotiseur — Pendule d'argent<br>3. Metteur en scène — &&&<br>4. Poète satirique — Carnet de rimes acides <br>5. Charlatan — Élixir "miracle"<br>6. Mystificateur - Relique truquée |
+| Noble / Magistère      | Diplomatie | • \*Grimoire (6 slots)<br>• Sorts : <br>  - Détection Arc.<br>  - Trait Arcanique<br>  - Cantrip×1 | 1. Archiviste royal — Gants de soie<br>2. Astronome — Astrolabe <br>3. Inquisiteur — Code de lois<br>4. Précepteur — Baguette<br>5. Diplomate — Sceau de cire<br>6. Mathématicien — &&&                                                   |
 
 ---
 

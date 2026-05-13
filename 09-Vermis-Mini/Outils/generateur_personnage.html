@@ -452,6 +452,68 @@
 
   .copy-confirm.show { opacity: 1; }
 
+  .modal-overlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 20px;
+  }
+
+  .modal-box {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 22px 24px;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.8);
+  }
+
+  .modal-box h3 {
+    margin: 0 0 10px;
+    color: var(--accent);
+    font-family: 'Trajan Pro', Georgia, serif;
+    letter-spacing: 0.08em;
+  }
+
+  .modal-box p {
+    margin: 0 0 12px;
+    color: var(--ink);
+    font-size: 0.95rem;
+  }
+
+  .modal-box kbd {
+    background: var(--bg-card-2);
+    border: 1px solid var(--border);
+    padding: 1px 6px;
+    border-radius: 3px;
+    font-family: monospace;
+    font-size: 0.85em;
+  }
+
+  .modal-box textarea {
+    width: 100%;
+    height: 320px;
+    background: var(--bg);
+    color: var(--ink-bright);
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    font-family: 'Consolas', 'Monaco', monospace;
+    font-size: 0.85rem;
+    padding: 10px;
+    resize: vertical;
+    margin-bottom: 12px;
+  }
+
+  .modal-box .modal-close {
+    display: block;
+    margin-left: auto;
+  }
+
   /* Print */
   @media print {
     body { background: white; color: black; }
@@ -499,44 +561,44 @@ const APPROCHE = [
   {
     type: 'Combattant',
     attrs: { VIG: 5, FIN: 3, ESP: 4 },
-    expertise: ['Premiers soins'],
+    expertise: ['Premiers soins', 'Maniement des armes'],
     items: ['Cotte de mailles (2 RD)', 'Hachette (4d)', 'Bandage'],
-    handicap: ['Bégaiement', 'SPT', 'Accent incompréhensible', 'Laid', 'Agressif', 'Haï des animaux']
+    handicap: ['Borgne', 'Distrait', 'Vertige', 'Daltonien', 'Dure de la feuille', 'Haï des animaux']
   },
   {
     type: 'Combattant',
     attrs: { VIG: 5, FIN: 4, ESP: 3 },
-    expertise: ['Cuisine de campagne'],
+    expertise: ['Cuisine de campagne', 'Maniement des armes'],
     items: ['Cotte de mailles (2 RD)', 'Épée courte (4d)', 'Badge milicien'],
-    handicap: ['Vertige', 'Distrait', 'Daltonien', 'Désorganisé', 'Pessimisme contagieux', 'Dur de la feuille']
+    handicap: ['Sommeil lourd', 'SPT', 'Bégaiement', 'Désorganisé', 'Pessimisme contagieux', 'Agressif']
   },
   {
     type: 'Filou',
     attrs: { VIG: 4, FIN: 5, ESP: 3 },
-    expertise: ['Poison'],
+    expertise: ['Poison', 'Discrétion'],
     items: ['Armure de cuir (1 RD)', 'Épée courte (4d)', 'Kit de poison'],
-    handicap: ['Tremblements nerveux', 'Paranoïa aiguë', 'Teint maladif', 'Haleine chimique', 'Insomnie', 'Naturellement suspect']
+    handicap: ['Nerveux', 'Paranoïaque', 'Obsession', 'Illettré', 'Laid', 'Suspect']
   },
   {
     type: 'Filou',
     attrs: { VIG: 3, FIN: 5, ESP: 4 },
-    expertise: ['Chirurgie de fortune'],
+    expertise: ['Chirurgie de fortune', 'Discrétion'],
     items: ['Armure de cuir (1 RD)', 'Épée courte (4d)', 'Kit de soins'],
-    handicap: ['Main raide', 'Phobie du sang', 'Boiterie marquée', 'Saignements de nez fréquents', 'Myopie sévère', 'Cicatrices d\'auto-expérimentation']
+    handicap: ['Rachitisme', 'Toux chronique', 'Maladif', 'Allergie aux animaux', 'Insomnie', 'Asthme']
   },
   {
     type: 'Érudit',
     attrs: { VIG: 3, FIN: 4, ESP: 5 },
-    expertise: ['Sciences interdites'],
+    expertise: ['Sciences interdites', 'Arcanisme'],
     items: ['Bâton (3d)', 'Sac à accès facile'],
-    handicap: ['Hallucinations', 'Peau translucide', 'Migraines', 'Ombre décalée', 'Narcolepsie', 'Obsession pour un objet inutile']
+    handicap: ['Hallucinations', 'Jambe de bois', 'Migraines', 'Frileux', 'Narcolepsie', 'Fragilité osseuse']
   },
   {
     type: 'Érudit',
     attrs: { VIG: 4, FIN: 3, ESP: 5 },
-    expertise: ['Sciences naturelles et médicales'],
+    expertise: ['Sciences naturelles', 'Arcanisme'],
     items: ['Dague (3d)', 'Kit de pharmacopée'],
-    handicap: ['Asthme', 'Fragilité osseuse', 'Manie de la propreté (TOC)', 'Cynisme toxique', 'Allergies alimentaires graves', 'Main de fer (prothèse lourde)']
+    handicap: ['Bossu', 'Maladroit', 'TOC', 'Daltonien', 'Myopie', 'Main prothèse']
   }
 ];
 
@@ -544,7 +606,7 @@ const ORIGINE = [
   null,
   {
     nom: 'Reclus-Nomade',
-    expertise: ['Survie', 'Navigation'],
+    expertise: ['Survie', 'Signes Nomades'],
     malchance: { '1-2': 'Exilé', '3-4': 'Oublié', '5-6': 'Remplacé' }
   },
   {
@@ -554,22 +616,22 @@ const ORIGINE = [
   },
   {
     nom: 'Citadin-Criminel',
-    expertise: ['Artifex', 'Argot'],
+    expertise: ['Bricolage', 'Argot'],
     malchance: { '1-2': 'Appauvri', '3-4': 'Dépendance', '5-6': 'Condamné' }
   },
   {
     nom: 'Citadin-Artisan',
-    expertise: ['Artifex', 'Commerce'],
+    expertise: ['Bricolage', 'Commerce'],
     malchance: { '1-2': 'Hanté', '3-4': 'Désabusé', '5-6': 'Fraudé' }
   },
   {
     nom: 'Décadent-Artiste',
-    expertise: ['Humanité', 'Mascarade'],
+    expertise: ['Humanité', 'Performance'],
     malchance: { '1-2': 'Chantage', '3-4': 'Humilié', '5-6': 'Déprimé' }
   },
   {
     nom: 'Décadent-Noble',
-    expertise: ['Humanité', 'Leadership'],
+    expertise: ['Humanité', 'Étiquette'],
     malchance: { '1-2': 'Rétrogradé', '3-4': 'Déshonoré', '5-6': 'Déshérité' }
   }
 ];
@@ -613,6 +675,7 @@ const ARCHETYPE = {
   Combattant: {
     1: {
       nom: 'Nomade / Guerrier',
+      expertise: 'Athlétisme',
       itemPerso: ['*Hache à deux mains'],
       occupations: [
         { nom: 'Esclave en fuite', item: 'Chaîne' },
@@ -625,6 +688,7 @@ const ARCHETYPE = {
     },
     2: {
       nom: 'Paysan / Soldat',
+      expertise: 'Athlétisme',
       itemPerso: ['Lance', '*Grand bouclier'],
       occupations: [
         { nom: 'Cultivateur', item: 'Fourche' },
@@ -637,19 +701,21 @@ const ARCHETYPE = {
     },
     3: {
       nom: 'Criminel / Mercenaire',
-      itemPerso: ['Épée bâtarde', '*Arbalète'],
+      expertise: 'Armurier',
+      itemPerso: ['*Épée bâtarde', 'Bouclier'],
       occupations: [
         { nom: 'Homme de main', item: 'Chaîne' },
-        { nom: 'Pillard', item: '—' },
+        { nom: 'Pillard', item: 'Pelisse de loup' },
         { nom: 'Tueur à gages', item: 'Fiole de poison rapide' },
         { nom: 'Geôlier', item: 'Menottes' },
-        { nom: 'Bandit', item: '—' },
+        { nom: 'Bandit', item: 'Foulard pour masquer le visage' },
         { nom: 'Nettoyeur', item: 'Sac de chaux vive' }
       ]
     },
     4: {
-      nom: 'Artisan / Armurier',
-      itemPerso: ['*Marteau de guerre', 'Bouclier'],
+      nom: 'Artisan / Sapeur',
+      expertise: 'Armurier',
+      itemPerso: ['*Marteau de guerre à deux mains', 'Explosif (3)'],
       occupations: [
         { nom: 'Boucher', item: 'Hachoir' },
         { nom: 'Charpentier', item: 'Scie' },
@@ -661,10 +727,11 @@ const ARCHETYPE = {
     },
     5: {
       nom: 'Artiste / Bretteur',
+      expertise: 'Leadership',
       itemPerso: ['*Rapière', 'Main-gauche'],
       occupations: [
         { nom: 'Vengeur masqué', item: 'Masque de fer' },
-        { nom: 'Duelliste', item: '—' },
+        { nom: 'Corsaire', item: 'Perroquet' },
         { nom: 'Instructeur d\'armes', item: 'Épée de bois' },
         { nom: 'Escrimeur', item: 'Gants de cuir' },
         { nom: 'Écuyer', item: 'Étendard' },
@@ -673,6 +740,7 @@ const ARCHETYPE = {
     },
     6: {
       nom: 'Noble / Chevalier',
+      expertise: 'Leadership',
       itemPerso: ['*Épée longue', 'Bouclier'],
       occupations: [
         { nom: 'Templier', item: 'Relique brisée' },
@@ -686,23 +754,25 @@ const ARCHETYPE = {
   },
   Filou: {
     1: {
-      nom: 'Nomade / Rôdeur',
-      itemPerso: ['*Arc long', 'Boussole'],
+      nom: 'Nomade / Explorateur',
+      expertise: 'Vigilance',
+      itemPerso: ['*Lance', 'Corde & Grappin'],
       occupations: [
-        { nom: 'Éclaireur', item: '—' },
-        { nom: 'Cartographe', item: 'Rouleau de parchemin et fusain' },
-        { nom: 'Pisteur', item: '—' },
+        { nom: 'Éclaireur', item: 'Longue-vue pliable' },
+        { nom: 'Cartographe', item: 'Rouleau de parchemin' },
+        { nom: 'Prospecteur', item: 'Tamis' },
         { nom: 'Contrebandier', item: 'Peau de bête traitée' },
         { nom: 'Messager', item: 'Sacoche étanche' },
-        { nom: 'Chasseur', item: '—' }
+        { nom: 'Guide', item: 'Sifflet de rappel' }
       ]
     },
     2: {
-      nom: 'Paysan / Scout',
-      itemPerso: ['*Fronde', 'Corde & Grappin'],
+      nom: 'Paysan / Chasseur',
+      expertise: 'Vigilance',
+      itemPerso: ['*Arc long', 'Corde & Grappin'],
       occupations: [
         { nom: 'Trappeur', item: 'Appâts olfactifs' },
-        { nom: 'Garde-chasse', item: '—' },
+        { nom: 'Patrouilleur', item: 'Corne de signal' },
         { nom: 'Guet', item: 'Cloche de détresse' },
         { nom: 'Cueilleur', item: 'Panier de récolte' },
         { nom: 'Braconnier', item: 'Cape de camouflage' },
@@ -711,19 +781,21 @@ const ARCHETYPE = {
     },
     3: {
       nom: 'Criminel / Voleur',
+      expertise: 'Crochetage',
       itemPerso: ['Dague double', '*Kit de crochetage'],
       occupations: [
-        { nom: 'Cambrioleur', item: '—' },
+        { nom: 'Cambrioleur', item: 'Scie à barreau' },
         { nom: 'Monte-en-l\'air', item: 'Grappin miniature' },
         { nom: 'Pickpocket', item: 'Doigtier de cuir' },
         { nom: 'Faussaire', item: 'Plume et encres diverses' },
         { nom: 'Receleur', item: 'Petite balance de précision' },
-        { nom: 'Tire-laine', item: '—' }
+        { nom: 'Saboteur', item: 'Fiole d\'acide (3)' }
       ]
     },
     4: {
       nom: 'Artisan / Chasseur de Trésors',
-      itemPerso: ['Arbalète de poing', '*Kit de crochetage'],
+      expertise: 'Crochetage',
+      itemPerso: ['Arbalète légère', '*Kit de crochetage'],
       occupations: [
         { nom: 'Horloger', item: 'Pinces de précision' },
         { nom: 'Serrurier', item: 'Limes diverses' },
@@ -735,19 +807,21 @@ const ARCHETYPE = {
     },
     5: {
       nom: 'Artiste / Barde',
+      expertise: 'Mascarade',
       itemPerso: ['Rapière', '*Kit de déguisement'],
       occupations: [
         { nom: 'Troubadour', item: 'Luth' },
-        { nom: 'Cracheur de feu', item: 'Fiole d\'huile inflammable' },
+        { nom: 'Cracheur de feu', item: 'Fiole d\'huile' },
         { nom: 'Marionnettiste', item: 'Pantin grotesque' },
         { nom: 'Peintre', item: 'Carnet de croquis' },
         { nom: 'Saltimbanque', item: 'Balles de jonglerie' },
-        { nom: 'Espion', item: '—' }
+        { nom: 'Espion', item: 'Encre invisible' }
       ]
     },
     6: {
       nom: 'Noble / Excentrique',
-      itemPerso: ['*Canne-épée', 'Pistolet de duel (rare)'],
+      expertise: 'Mascarade',
+      itemPerso: ['*Canne-épée', '*Kit de déguisement'],
       occupations: [
         { nom: 'Collectionneur', item: 'Bocal de spécimen' },
         { nom: 'Dandy décadent', item: 'Flacon de parfum' },
@@ -761,51 +835,55 @@ const ARCHETYPE = {
   'Érudit': {
     1: {
       nom: 'Nomade / Ermite',
+      expertise: 'Herborisme',
       itemPerso: ['*Grimoire (6 slots)'],
       sorts: ['Détection Arcanique', 'Vue Nocturne', 'Cantrip ×1'],
       occupations: [
         { nom: 'Oracle', item: 'Bourse d\'ossements divinatoires' },
-        { nom: 'Shaman', item: 'Grand bâton de marche sculpté' },
-        { nom: 'Exilé de l\'académie', item: 'Sac de livres poussiéreux' },
-        { nom: 'Druide apprenti', item: 'Coquillage de résonance' },
-        { nom: 'Devin', item: '—' },
+        { nom: 'Shaman', item: 'Masque d\'écorce' },
+        { nom: 'Exilé de l\'académie', item: 'Livre scellé' },
+        { nom: 'Druide apprenti', item: 'Faucille' },
+        { nom: 'Pèlerin', item: 'Grelots' },
         { nom: 'Sorcier initié', item: 'Flûte d\'os' }
       ]
     },
     2: {
       nom: 'Paysan / Moine',
+      expertise: 'Herborisme',
       itemPerso: ['*Grimoire (6 slots)'],
       sorts: ['Détection Arcanique', 'Baume', 'Cantrip ×1'],
       occupations: [
-        { nom: 'Herboriste', item: 'Sachet d\'herbes' },
-        { nom: 'Frère itinérant', item: 'Bol à aumône en bois' },
-        { nom: 'Pèlerin', item: '—' },
-        { nom: 'Frère Naturaliste', item: '—' },
-        { nom: 'Moine Apiculteur', item: 'Pot de miel' },
-        { nom: 'Brasseur d\'abbaye', item: 'Gourde de bière' }
+        { nom: 'Naturaliste', item: 'Sachet d\'herbes' },
+        { nom: 'Frère itinérant', item: 'Habit de bure' },
+        { nom: 'Ascète', item: 'Chaînes de fer' },
+        { nom: 'Pénitent', item: 'Petit fouet' },
+        { nom: 'Moine apiculteur', item: 'Pot de miel' },
+        { nom: 'Brasseur d\'abbaye', item: 'Barillet de bière' }
       ]
     },
     3: {
       nom: 'Criminel / Hérétique',
+      expertise: 'Médecine',
       itemPerso: ['*Grimoire (6 slots)'],
       sorts: ['Détection Arcanique', 'Faiblesse', 'Cantrip ×1'],
       occupations: [
-        { nom: 'Nécromancien', item: 'Crâne déformé' },
+        { nom: 'Nécromant', item: 'Crâne déformé' },
         { nom: 'Occultiste', item: 'Miroir noir' },
         { nom: 'Anatomiste', item: 'Scie et scalpel' },
-        { nom: 'Kabbaliste', item: 'Cube aux symboles kabbalistiques' },
+        { nom: 'Kabbaliste', item: 'Cube aux symboles' },
         { nom: 'Exégète', item: 'Livre interdit' },
         { nom: 'Démonologiste', item: 'Cloche d\'argent' }
       ]
     },
     4: {
-      nom: 'Artisan / Alchimiste',
+      nom: 'Artisan / Artifex',
+      expertise: 'Médecine',
       itemPerso: ['*Grimoire (6 slots)'],
       sorts: ['Détection Arcanique', 'Solvant', 'Cantrip ×1'],
       occupations: [
         { nom: 'Apothicaire', item: 'Pipettes de verre' },
         { nom: 'Artificier', item: 'Sac de soufre et salpêtre' },
-        { nom: 'Architecte', item: 'Compas' },
+        { nom: 'Alchimiste', item: 'Fiole' },
         { nom: 'Opticien', item: 'Kit de lentilles' },
         { nom: 'Inventeur', item: 'Kit de lentilles' },
         { nom: 'Physicien', item: 'Sédatif' }
@@ -813,6 +891,7 @@ const ARCHETYPE = {
     },
     5: {
       nom: 'Artiste / Illusionniste',
+      expertise: 'Diplomatie',
       itemPerso: ['*Grimoire (6 slots)'],
       sorts: ['Détection Arcanique', 'Illusion', 'Cantrip ×1'],
       occupations: [
@@ -826,6 +905,7 @@ const ARCHETYPE = {
     },
     6: {
       nom: 'Noble / Magistère',
+      expertise: 'Diplomatie',
       itemPerso: ['*Grimoire (6 slots)'],
       sorts: ['Détection Arcanique', 'Trait Arcanique', 'Cantrip ×1'],
       occupations: [
@@ -929,10 +1009,10 @@ const FEM_MAP = {
   // Archétypes (2e partie)
   'Guerrier': 'Guerrière',
   'Soldat': 'Soldate',
-  'Armurier': 'Armurière',
+  'Sapeur': 'Sapeuse',
   'Bretteur': 'Bretteuse',
   'Chevalier': 'Chevaleresse',
-  'Rôdeur': 'Rôdeuse',
+  'Explorateur': 'Exploratrice',
   'Voleur': 'Voleuse',
   'Chasseur': 'Chasseuse',
   'Moine': 'Moniale',
@@ -989,6 +1069,12 @@ const FEM_MAP = {
   'Pèlerin': 'Pèlerine',
   'Brasseur': 'Brasseuse',
   'Apiculteur': 'Apicultrice',
+  'Naturaliste': 'Naturaliste',
+  'Pénitent': 'Pénitente',
+  'Patrouilleur': 'Patrouilleuse',
+  'Prospecteur': 'Prospectrice',
+  'Saboteur': 'Saboteuse',
+  'Nécromant': 'Nécromante',
   'Nécromancien': 'Nécromancienne',
   'Artificier': 'Artificière',
   'Opticien': 'Opticienne',
@@ -1208,8 +1294,9 @@ function render(c) {
   const slotColor = slotsUsed > c.invMax ? 'var(--accent)' : 'var(--ink-bright)';
   const charge = chargement(slotsUsed);
 
-  // Expertises combinées : Approche (1) + Origine (2)
+  // Expertises combinées : Approche (1) + Origine (2) + Archétype (1) = 4 total
   const allExpertises = [...a.expertise, ...o.expertise];
+  if (arch.expertise) allExpertises.push(arch.expertise);
 
   charEl.innerHTML = `
     <!-- NOM (haut, pleine largeur) -->
@@ -1340,7 +1427,7 @@ function toMarkdown(c) {
 - **Âge** : ${c.age} ans
 
 ## Capacités
-- **Expertises** : ${[...a.expertise, ...o.expertise].join(', ')}
+- **Expertises** : ${[...a.expertise, ...o.expertise, ...(arch.expertise ? [arch.expertise] : [])].join(', ')}
 - **Don** : ${c.don}
 - **Handicap** : ${c.handicap}
 ${arch.sorts ? `- **Sorts** : ${arch.sorts.join(', ')}\n` : ''}
@@ -1352,14 +1439,67 @@ ${items.map(i => `- ${i.txt} *(${i.slots} empl.)*`).join('\n')}
 
 document.getElementById('btn-roll').addEventListener('click', generate);
 
-document.getElementById('btn-copy').addEventListener('click', () => {
+function flashCopyMsg(text, isError) {
+  const c = document.getElementById('copy-confirm');
+  c.textContent = text;
+  c.style.color = isError ? '#d48888' : '#4a8a4a';
+  c.classList.add('show');
+  setTimeout(() => c.classList.remove('show'), 2200);
+}
+
+async function copyToClipboard(text) {
+  // Tentative 1 : API clipboard moderne (HTTPS / localhost)
+  if (navigator.clipboard && window.isSecureContext) {
+    try { await navigator.clipboard.writeText(text); return 'api'; } catch (e) { /* fallback */ }
+  }
+  // Tentative 2 : textarea + execCommand (file://)
+  try {
+    const ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.left = '-9999px';
+    ta.style.top = '0';
+    document.body.appendChild(ta);
+    ta.focus();
+    ta.select();
+    ta.setSelectionRange(0, text.length);
+    const ok = document.execCommand('copy');
+    document.body.removeChild(ta);
+    if (ok) return 'exec';
+  } catch (e) { /* fallback final */ }
+  // Tentative 3 : modale manuelle (toujours fiable)
+  showCopyModal(text);
+  return 'modal';
+}
+
+function showCopyModal(text) {
+  // Crée la modale à la volée
+  const overlay = document.createElement('div');
+  overlay.className = 'modal-overlay';
+  overlay.innerHTML = `
+    <div class="modal-box">
+      <h3>Copie manuelle</h3>
+      <p>La copie automatique a échoué. Le texte est sélectionné ci-dessous — fais <kbd>Ctrl</kbd>+<kbd>C</kbd> puis ferme cette fenêtre.</p>
+      <textarea readonly></textarea>
+      <button class="modal-close">Fermer</button>
+    </div>
+  `;
+  document.body.appendChild(overlay);
+  const ta = overlay.querySelector('textarea');
+  ta.value = text;
+  setTimeout(() => { ta.focus(); ta.select(); }, 50);
+  overlay.querySelector('.modal-close').addEventListener('click', () => overlay.remove());
+  overlay.addEventListener('click', e => { if (e.target === overlay) overlay.remove(); });
+}
+
+document.getElementById('btn-copy').addEventListener('click', async () => {
   if (!currentChar) return;
   const md = toMarkdown(currentChar);
-  navigator.clipboard.writeText(md).then(() => {
-    const c = document.getElementById('copy-confirm');
-    c.classList.add('show');
-    setTimeout(() => c.classList.remove('show'), 1800);
-  });
+  const method = await copyToClipboard(md);
+  if (method === 'api' || method === 'exec') {
+    flashCopyMsg('Copié !', false);
+  }
+  // si 'modal', la modale gère le feedback elle-même
 });
 
 document.getElementById('btn-print').addEventListener('click', () => {

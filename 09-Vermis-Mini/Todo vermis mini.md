@@ -1,0 +1,5 @@
+- Réexporter générateur de personnage (perdu pour sinistré)
+- Liste de nom en fonction des origines
+- Traits avec pilosité (changer)
+- fou de guerre -> berserker
+- barde -> avoir un instrument de musique

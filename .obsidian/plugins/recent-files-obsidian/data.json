@@ -5,6 +5,10 @@
       "path": "09-Vermis-Mini/Intégré/Vermis_d6_v10.md"
     },
     {
+      "basename": "Todo vermis mini",
+      "path": "09-Vermis-Mini/Todo vermis mini.md"
+    },
+    {
       "basename": "Plan d'importation par point",
       "path": "09-Vermis-Mini/Intégré/Plan d'importation par point.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "design-donjon",
       "path": "06-Wiki/design-donjon.md"
-    },
-    {
-      "basename": "Dungeon Stocking with Markov Processes",
-      "path": "03-Références/Dungeon Stocking with Markov Processes.md"
     }
   ],
   "omittedPaths": [],

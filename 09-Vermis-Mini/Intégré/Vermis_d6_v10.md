@@ -79,13 +79,13 @@ Réserve de combat représentant l'élan, l'esquive, la résistance aux chocs. *
 - Quand END = 0 : chaque coup reçu inflige une **Blessure** (cf. §1.4.1)
 - Mort/Paralysie/Catatonie déclenchées par chute d'attribut à 0 (cf. §1.4.3)
 
-## 2.3 Don et Handicape
+## 2.3 Ardeur (ARD), Don et Handicape
 
-Les PJ possèdent un banque d'utilisation pour leurs Dons égale leur FIN.
+Les PJ possèdent un banque d'utilisation pour leurs Dons égale leur FIN nommée **Ardeur**.
 
 Chaque personnage possède **1 Don** à la création. Le Don est un trait situationnel **unique et iconique**, lié à l'identité du perso. Quand le Don s'applique au test en cours, il ajoute **+1d au pool**.
 
-Chaque personnage possède 1 **handicape** à la création. Comme le Don, il est situationnel et lié à l'identité du personnage.  Un joueur pour invoquer un handicape pour appliquer un **-1d au pool**. Si le test réussi, le PJ regagne 1pt d'utilisation de Don. C'est la seule manière de regagner les points.
+Chaque personnage possède 1 **handicape** à la création. Comme le Don, il est situationnel et lié à l'identité du personnage.  Un joueur pour invoquer un handicape pour appliquer un **-1d au pool**. Si le test réussi, le PJ regagne 1pt d'utilisation de Don. C'est la seule manière de regagner les points. Le MJ peut tenir une liste des handicapes des PJ pour inciter/forcer leur utilisation.
 
 Les PJ peuvent gagner des nouveaux Dons à travers leurs aventures comme effet d'un évènement particulier ou récompense magique ou divine.
 
@@ -138,26 +138,28 @@ Le dé sert deux fois : il détermine d'abord le résultat de sa propre table, p
 
 **Or de départ** : (D3 + D_Bleu)x10
 **Âge de départ** : 2x(D1+D_Rouge) + 15 
+
+Va
 ### 2.7.2 Apprchoche D1
 
-| d6  | type       | Attribut            | Expertise              |                                                                 | Handicape (Dé rouge)                                                                                              |
-| --- | ---------- | ------------------- | ---------------------- | --------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| 1   | combattant | VIG 5, FIN 3, ESP 4 | - Premier soins<br>    | - Cotte de mailles 2 RD<br>- Hachette 4d<br>- Bandage           | 1. Borgne<br>2. Distrait<br>3. Vertige<br>4. Daltonien<br>5. Dure de la feuille<br>6. Haï des animaux             |
-| 2   | combattant | VIG 5, FIN 4, ESP 3 | - Cuisine de campagne  | - Cotte de mailles 2 RD<br>- Épée courte 4d<br>- Badge milicien | 1. Sommeil Lourd<br>2. SPT<br>3. Baiguément<br>4. Désorganisé<br>5. Pessimisme contagieux<br>6. Agressif          |
-| 3   | Filou      | VIG 4, FIN 5, ESP 3 | - Poison               | - Armure de cuir 1 RD <br>- Épée courte 4d <br>- kit de poison  | 1. Nerveux<br>2. Paranoïaque<br>3. Obsession<br>4. Illettré <br>5. Laid<br>6. Suspect                             |
-| 4   | Filou      | VIG 3, FIN 5, ESP 4 | - Chirurgie de fortune | - Armure de cuir 1 RD <br>- Épée courte 4d <br>- kit de soins   | 1. Rachitisme<br>2. Toux chronique<br>3. Maladif<br>4. Allergie aux Animaux<br>5. Insomnie,<br>6. Asthme,         |
-| 5   | Erudit     | VIG 3, FIN 4, ESP 5 | - Sciences Interdites  | - Bâton 3d<br>- Sac Accès facile                                | 1. Hallucinations, <br>2. jambe de bois<br>3. Migraines<br>4. Frileux<br>5. Narcolepsie, <br>6. Fragilité osseuse |
-| 6   | Erudit     | VIG 4, FIN 3, ESP 5 | - Sciences Naturelles  | - Dague 3d<br>- Kit de pharmacopé                               | 1. Bossu<br>2. Maladroit<br>3. TOC<br>4. Daltonien<br>5. Myopie<br>6. Main prothèse                               |
+| d6  | type       | Attribut            | Expertise                                          |                                                                 | Handicape (Dé rouge)                                                                                              |
+| --- | ---------- | ------------------- | -------------------------------------------------- | --------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| 1   | combattant | VIG 5, FIN 3, ESP 4 | - Premier soins<br>- Maniement des armes<br>       | - Cotte de mailles 2 RD<br>- Hachette 4d<br>- Bandage           | 1. Borgne<br>2. Distrait<br>3. Vertige<br>4. Daltonien<br>5. Dure de la feuille<br>6. Haï des animaux             |
+| 2   | combattant | VIG 5, FIN 4, ESP 3 | - Cuisine de campagne<br>- Maniement des armes<br> | - Cotte de mailles 2 RD<br>- Épée courte 4d<br>- Badge milicien | 1. Sommeil Lourd<br>2. SPT<br>3. Baiguément<br>4. Désorganisé<br>5. Pessimisme contagieux<br>6. Agressif          |
+| 3   | Filou      | VIG 4, FIN 5, ESP 3 | - Poison<br>- Discrétion                           | - Armure de cuir 1 RD <br>- Épée courte 4d <br>- kit de poison  | 1. Nerveux<br>2. Paranoïaque<br>3. Obsession<br>4. Illettré <br>5. Laid<br>6. Suspect                             |
+| 4   | Filou      | VIG 3, FIN 5, ESP 4 | - Chirurgie de fortune<br>- Discrétion             | - Armure de cuir 1 RD <br>- Épée courte 4d <br>- kit de soins   | 1. Rachitisme<br>2. Toux chronique<br>3. Maladif<br>4. Allergie aux Animaux<br>5. Insomnie,<br>6. Asthme,         |
+| 5   | Erudit     | VIG 3, FIN 4, ESP 5 | - Sciences Interdites<br>- Arcanisme               | - Bâton 3d<br>- Sac Accès facile                                | 1. Hallucinations, <br>2. jambe de bois<br>3. Migraines<br>4. Frileux<br>5. Narcolepsie, <br>6. Fragilité osseuse |
+| 6   | Erudit     | VIG 4, FIN 3, ESP 5 | - Sciences Naturelles<br>- Arcanisme               | - Dague 3d<br>- Kit de pharmacopé                               | 1. Bossu<br>2. Maladroit<br>3. TOC<br>4. Daltonien<br>5. Myopie<br>6. Main prothèse                               |
 ### 2.7.3 Origine D2
 
-| D6  | Origine          | Expertise                  | Malchance (D-Vert)                                  |
-| --- | ---------------- | -------------------------- | --------------------------------------------------- |
-| 1   | Reclus-Nomade    | - Survie<br>- Navigation   | 1-2. Exilé<br>3-4. Oublié<br>5-6. Remplacé          |
-| 2   | Reclus-Paysans   | - Survie<br>- Dressage     | 1-2. Perdu<br>3-4. Empoisonné<br>5-6. Affamé        |
-| 3   | Citadin-Criminel | - Bricolage<br>- Argot     | 1-2. Appauvri<br>3-4. Dépendence<br>5-6. Condamné   |
-| 2   | Citadin-Artisan  | - Bricolage<br>- Commerce  | 1-2. Hanté<br>3-4. Désabusé<br>5-6. Fraudé          |
-| 5   | Décadent-Artiste | - Humanité<br>- Mascarade  | 1-2. Chantage<br>3-4. Humilié<br>5-6. Déprimé       |
-| 6   | Décadent-Noble   | - Humanité<br>- Leadership | 1-2. Rétrogradé<br>3-4. Déshonoré<br>5-6. Déshérité |
+| D6  | Origine          | Expertise                    | Malchance (D-Vert)                                  |
+| --- | ---------------- | ---------------------------- | --------------------------------------------------- |
+| 1   | Reclus-Nomade    | - Survie<br>- Signes Nomades | 1-2. Exilé<br>3-4. Oublié<br>5-6. Remplacé          |
+| 2   | Reclus-Paysans   | - Survie<br>- Dressage       | 1-2. Sinistré<br>3-4. Empoisonné<br>5-6. Affamé     |
+| 3   | Citadin-Criminel | - Bricolage<br>- Argot       | 1-2. Appauvri<br>3-4. Dépendence<br>5-6. Condamné   |
+| 2   | Citadin-Artisan  | - Bricolage<br>- Commerce    | 1-2. Hanté<br>3-4. Désabusé<br>5-6. Fraudé          |
+| 5   | Décadent-Artiste | - Humanité<br>- Performance  | 1-2. Chantage<br>3-4. Humilié<br>5-6. Déprimé       |
+| 6   | Décadent-Noble   | - Humanité<br>- Étiquette    | 1-2. Rétrogradé<br>3-4. Déshonoré<br>5-6. Déshérité |
 ### 2.7.4 Motivation D3
 
 | D6  | Motivation               | Don (D-Bleu)                                                 | Trait distinctif (Choisir entre D2+D-Vert)                                                                                         |
@@ -587,14 +589,14 @@ Système simple, inspiré de [Cairn](https://cairnrpg.com/resources/more-spellbo
 - **1 grimoire = 1 place d'inventaire**.
 - Sans grimoire en main, le sort ne peut pas être lancé.
 - Lancer un sort coûte **1 END** (toujours).
-- En **stress ou combat** : faire un **Test ESP** au lancement.
-- Connaître l'**Arcanique** *(Savoir/Expertise)* donne **+1d** au pool magie.
+- **Test ESP** au lancement.
+-%%  Connaître l'**Arcanique** *(Savoir/Expertise)* donne **+1d** au pool magie. %%
 
 ## 7.2 Procédure de lancer
 
 1. **Déclarer** le sort et la cible.
 2. **Dépenser 1 END**.
-3. **Si stress / combat** : Test ESP — pool selon la source du sort (+1d si Arcanique connue), difficulté **1**+ (modulable selon contexte, le type de sort et son origine).
+3. **Test ESP** — pool selon la source du sort (+1d si Arcanique connue), difficulté **1**+ (modulable selon contexte, le type de sort et son origine).
 	1. Parchemin : 1d
 	2. Grimoire étrangé : 2d
 	3. Grimoire personnel : 3d
@@ -702,11 +704,124 @@ Comment évoluent les attributs, dons et expertises. Probablement lié à l'or d
 
 ---
 
-# 13 Appendice A — Tables de probabilité
+# 13 Appendice A - Table des Expertises, Dons et Handicapes
+Rappel mécanique :
+
+- **Expertise** → +1d au pool quand applicable (au choix MJ : action possible, +1d, ou nature modifiée).
+- **Don** → +1d au pool quand applicable ; nombre d'utilisations = FIN.
+- **Handicap** → invocable par le joueur pour -1d ; si le test réussit malgré tout, regagne 1 pt d'utilisation de Don.
+
+---
+
+## 13.1 Expertises
+
+Sources : Approche (×2), Origine (×2), Archétype (×1).
+
+| Expertise                | Description                                                                                                                                                |
+| ------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Arcanisme**            | Reconnaître sorts, runes, glyphes ; lire un grimoire ; identifier une présence magique.                                                                    |
+| **Argot**                | Comprendre la langue des bas-fonds, lire les signes de gang, négocier sous le manteau.                                                                     |
+| **Armurier**             | Évaluer, réparer, entretenir armes et armures martiales.                                                                                                   |
+| **Athlétisme**           | Course, saut, nage, escalade, efforts physiques soutenus.                                                                                                  |
+| **Bricolage**            | Réparer, démonter, improviser un mécanisme simple (urbain/artisanal).                                                                                      |
+| **Chirurgie de fortune** | Opérer en urgence : suturer, amputer, extraire un projectile.                                                                                              |
+| **Commerce**             | Évaluer une marchandise, négocier, repérer une contrefaçon.                                                                                                |
+| **Crochetage**           | Forcer une serrure, désarmer un mécanisme, ouvrir sans clé.                                                                                                |
+| **Cuisine de campagne**  | Nourrir un groupe en autarcie, identifier le comestible sur le terrain.                                                                                    |
+| **Diplomatie**           | Désamorcer un conflit verbal, parlementer, médier entre factions.                                                                                          |
+| **Discrétion**           | Bouger sans bruit, se dissimuler, déjouer une garde.                                                                                                       |
+| **Dressage**             | Domestiquer, calmer, commander un animal.                                                                                                                  |
+| **Étiquette**            | Préséance, codes des cours, savoir-vivre noble, éviter l'impair.                                                                                           |
+| **Herborisme**           | Identifier plantes, préparer décoctions, baumes, poisons végétaux.                                                                                         |
+| **Humanité**             | Connaissances des savoirs humains. Littérature, histoire, politique, religions, mythes, etc.                                                               |
+| **Leadership**           | Rallier, donner un ordre clair sous pression, inspirer une troupe. engager des hirelings.                                                                  |
+| **Maniement des armes**  | Connaître types, qualités, particularités et entretien des armes martiales et leur utilisation.                                                            |
+| **Mascarade**            | Se déguiser, jouer un rôle, passer pour quelqu'un d'autre, mentir et manipuler.                                                                            |
+| **Médecine**             | Diagnostiquer une maladie, prescrire un traitement, identifier un poison.                                                                                  |
+| **Performance**          | Chant, mime, danse, jonglerie, captiver un public.                                                                                                         |
+| **Poison**               | Préparer, doser, reconnaître, contrer un poison.                                                                                                           |
+| **Premiers soins**       | Stabiliser une blessure récente, panser, arrêter une hémorragie.                                                                                           |
+| **Sciences interdites**  | Lore occulte, démonologie, rituels prohibés, livres scellés.                                                                                               |
+| **Sciences naturelles**  | Anatomie, géologie, taxonomie, comprendre le vivant et la matière.                                                                                         |
+| **Signes Nomades**       | Lire les marques de piste, suivre un sentier invisible, communiquer avec les clans, communiquer par des gestes (silencieux) et des sifflement (à distance) |
+| **Survie**               | Trouver eau, abri, feu, route en milieu sauvage, cueillette comestible.                                                                                    |
+| **Vigilance**            | Détecter une embuscade, une présence, un détail anormal, navigation et pistage.                                                                            |
+
+---
+
+## 13.2 Dons
+
+Source : table Motivation (D-Bleu). 18 dons, 1 par personnage à la création.
+
+|Don|Quand +1d s'applique|
+|---|---|
+|**Force brute**|Soulever, briser, défoncer, contraindre par la force pure.|
+|**Athlétisme**|Course, escalade, saut, esquive physique.|
+|**Apolon**|Beauté frappante : attire le regard, désarme par la présence.|
+|**Dure à cuire**|Encaisser la douleur, ignorer une blessure mineure, tenir bon.|
+|**Petit dormeur**|Peu de sommeil suffit ; reste alerte la nuit.|
+|**Santé de fer**|Résiste aux maladies, poisons, fatigue prolongée.|
+|**Boussole interne**|Ne perd jamais le nord, sens infaillible de l'orientation.|
+|**Alerte**|Anticipe l'embuscade, dort à demi-éveillé, réagit le premier.|
+|**Empathie Animal**|Comprend et calme les bêtes, lit leur intention.|
+|**Réflexe**|Réagit avant les autres, esquive instinctive.|
+|**Précis**|Tir, lancer, manipulation fine.|
+|**Félin**|Équilibre, agilité, tombe sur ses pieds.|
+|**Polyglotte**|Parle/comprend plusieurs langues, déchiffre les accents.|
+|**Cultivé**|Connaissances générales, histoire, légendes ; lit et écrit couramment.|
+|**Ingénieux**|Trouve une solution improvisée à un problème mécanique ou logistique.|
+|**Inspirant**|Motive un groupe, rallie les hésitants.|
+|**Séduisant**|Charme, drague, obtient des faveurs sociales.|
+|**Crédible**|Sa parole porte, son mensonge passe, on l'écoute.|
+
+---
+
+## 13.3 Handicaps
+
+Source : table Approche (D-Rouge). Un par personnage à la création.
+
+| Handicap                  | Quand le joueur peut l'invoquer (−1d, regagne 1 pt Don si succès)       |
+| ------------------------- | ----------------------------------------------------------------------- |
+| **Agressif**              | Tests sociaux apaisants, négociation, patience.                         |
+| **Allergie aux animaux**  | En présence d'animaux : éternuements, démangeaisons, larmoiement.       |
+| **Asthme**                | Effort prolongé, stress, air vicié _(cf. § 15.2)_.                      |
+| **Bégaiement**            | Communication claire sous pression.                                     |
+| **Borgne**                | Perception en profondeur, jets à distance, surveillance d'un flanc.     |
+| **Bossu**                 | Tests sociaux, déplacements furtifs prolongés.                          |
+| **Daltonien**             | Voit en gris ; codes-couleurs, fioles, drapeaux _(cf. § 15.1)_.         |
+| **Désorganisé**           | Retrouver un objet précis dans son sac sous pression _(cf. § 15.2)_.    |
+| **Distrait**              | Risque de surprise _(cf. § 15.1)_.                                      |
+| **Dure de la feuille**    | Entend mal : détails sonores, ordres chuchotés, alarmes lointaines.     |
+| **Fragilité osseuse**     | Chutes, chocs, contraintes physiques.                                   |
+| **Frileux**               | Climat froid, immersion, opérations nocturnes prolongées.               |
+| **Haï des animaux**       | Approcher, monter ou commander une bête _(cf. § 15.1)_.                 |
+| **Hallucinations**        | Distinguer le réel de l'illusion sous stress, fatigue, fumées.          |
+| **Illettré**              | Lire, écrire, comprendre une carte, déchiffrer un document.             |
+| **Insomnie**              | Vigilance après plusieurs jours sans sommeil profond.                   |
+| **Jambe de bois**         | Course, escalade, équilibre, terrain accidenté.                         |
+| **Laid**                  | Rejet à vue, tests de séduction et de premier abord _(cf. § 15.1)_.     |
+| **Main prothèse**         | Manipulation fine, écriture, dextérité à deux mains.                    |
+| **Maladif**               | Poisons et infections redoublent d'effet _(cf. § 15.1)_.                |
+| **Maladroit**             | Attraper un objet, discrétion en environnement encombré _(cf. § 15.1)_. |
+| **Migraines**             | Lumière vive, bruit, stress prolongé.                                   |
+| **Myopie**                | Vision floue de loin ; tir, repérage à distance _(cf. § 15.1)_.         |
+| **Narcolepsie**           | Garde nocturne, tâches monotones, repos forcé.                          |
+| **Nerveux**               | Tremblements ; tir de précision, geste fin, opération chirurgicale.     |
+| **Obsession**             | Une lubie qui détourne l'attention au mauvais moment.                   |
+| **Paranoïaque**           | Confiance, négociation, accepter une aide offerte.                      |
+| **Pessimisme contagieux** | Moral du groupe, ralliement, persuasion _(cf. § 15.2)_.                 |
+| **Rachitisme**            | Force, endurance, résistance physique.                                  |
+| **Sommeil lourd**         | Réveil en cas d'alerte nocturne.                                        |
+| **SPT**                   | Déclencheurs imprévus : bruit, odeur, scène ; risque de panique.        |
+| **Suspect**               | Premier doigt accusateur sur tout méfait _(cf. § 15.1)_.                |
+| **TOC**                   | Compulsion à vérifier, organiser, recommencer — ralentit l'urgence.     |
+| **Toux chronique**        | Discrétion sonore, embuscade, planque.                                  |
+| **Vertige**               | Hauteur, vide, surplomb _(cf. § 15.1)_.                                 |
+# 14 Appendice A — Tables de probabilité
 
 *Format : **Succès% / Échec%**. Sans push, sans Blessure. Bonus : **dé rouge en succès = +1 gain**, **+1 par 1 roulé** (cumulable). **Gras** = ligne attribut 4 (référence).*
 
-## 13.1 Difficulté 0 — Aucune armure / tâche normale
+## 14.1 Difficulté 0 — Aucune armure / tâche normale
 
 |  | 1d | 2d | 3d | 4d | 5d | 6d |
 |---|---|---|---|---|---|---|
@@ -716,7 +831,7 @@ Comment évoluent les attributs, dons et expertises. Probablement lié à l'or d
 | Attr 5 | 67/33% | 89/11% | 96/4% | 99/1% | 100/0% | 100/0% |
 | Attr 6 | 83/17% | 97/3% | 100/0% | 100/0% | 100/0% | 100/0% |
 
-## 13.2 Difficulté 1 — Cuir / Ardu
+## 14.2 Difficulté 1 — Cuir / Ardu
 
 |  | 1d | 2d | 3d | 4d | 5d | 6d |
 |---|---|---|---|---|---|---|
@@ -726,7 +841,7 @@ Comment évoluent les attributs, dons et expertises. Probablement lié à l'or d
 | Attr 5 | 67/33% | 72/28% | 85/15% | 93/7% | 97/3% | 99/1% |
 | Attr 6 | 83/17% | 86/14% | 96/4% | 99/1% | 100/0% | 100/0% |
 
-## 13.3 Difficulté 2 — Maille / Exigeant
+## 14.3 Difficulté 2 — Maille / Exigeant
 
 |  | 1d | 2d | 3d | 4d | 5d | 6d |
 |---|---|---|---|---|---|---|
@@ -736,7 +851,7 @@ Comment évoluent les attributs, dons et expertises. Probablement lié à l'or d
 | Attr 5 | 17/83% | 50/50% | 68/32% | 81/19% | 90/10% | 95/5% |
 | Attr 6 | 17/83% | 72/28% | 86/14% | 95/5% | 98/2% | 100/0% |
 
-## 13.4 Difficulté 3 — Plaque / Extrême
+## 14.4 Difficulté 3 — Plaque / Extrême
 
 |  | 1d | 2d | 3d | 4d | 5d | 6d |
 |---|---|---|---|---|---|---|
@@ -746,7 +861,7 @@ Comment évoluent les attributs, dons et expertises. Probablement lié à l'or d
 | Attr 5 | 0/100% | 19/81% | 44/56% | 62/38% | 77/23% | 87/13% |
 | Attr 6 | 0/100% | 25/75% | 67/33% | 84/16% | 94/6% | 98/2% |
 
-## 13.5 Difficulté 4 — Full plate / Quasi-impossible
+## 14.5 Difficulté 4 — Full plate / Quasi-impossible
 
 |  | 1d | 2d | 3d | 4d | 5d | 6d |
 |---|---|---|---|---|---|---|
@@ -756,11 +871,11 @@ Comment évoluent les attributs, dons et expertises. Probablement lié à l'or d
 | Attr 5 | 0/100% | 3/97% | 19/81% | 39/61% | 58/42% | 73/27% |
 | Attr 6 | 0/100% | 3/97% | 29/71% | 64/36% | 83/17% | 93/7% |
 
-## 13.6 Gains nets moyens E[net]
+## 14.6 Gains nets moyens E[net]
 
 *Utile pour estimer END perdus par attaque ou magnitude des sorts.*
 
-### 13.6.1 Difficulté 0
+### 14.6.1 Difficulté 0
 
 |  | 1d | 2d | 3d | 4d | 5d | 6d |
 |---|---|---|---|---|---|---|
@@ -769,7 +884,7 @@ Comment évoluent les attributs, dons et expertises. Probablement lié à l'or d
 | Attr 5 | 1,50 | 2,33 | 3,17 | 4,00 | 4,83 | 5,67 |
 | Attr 6 | 1,83 | 2,83 | 3,83 | 4,83 | 5,83 | 6,83 |
 
-### 13.6.2 Difficulté 1 (Cuir)
+### 14.6.2 Difficulté 1 (Cuir)
 
 |  | 1d | 2d | 3d | 4d | 5d | 6d |
 |---|---|---|---|---|---|---|
@@ -778,7 +893,7 @@ Comment évoluent les attributs, dons et expertises. Probablement lié à l'or d
 | Attr 5 | 0,83 | 1,44 | 2,20 | 3,01 | 3,84 | 4,67 |
 | Attr 6 | 1,00 | 1,86 | 2,84 | 3,83 | 4,83 | 5,83 |
 
-### 13.6.3 Difficulté 2 (Maille)
+### 14.6.3 Difficulté 2 (Maille)
 
 |  | 1d | 2d | 3d | 4d | 5d | 6d |
 |---|---|---|---|---|---|---|
@@ -787,7 +902,7 @@ Comment évoluent les attributs, dons et expertises. Probablement lié à l'or d
 | Attr 5 | 0,17 | 0,72 | 1,35 | 2,08 | 2,87 | 3,68 |
 | Attr 6 | 0,17 | 1,00 | 1,88 | 2,84 | 3,84 | 4,83 |
 
-### 13.6.4 Difficulté 3 (Plaque)
+### 14.6.4 Difficulté 3 (Plaque)
 
 |  | 1d | 2d | 3d | 4d | 5d | 6d |
 |---|---|---|---|---|---|---|
@@ -796,7 +911,7 @@ Comment évoluent les attributs, dons et expertises. Probablement lié à l'or d
 | Attr 5 | 0,00 | 0,22 | 0,68 | 1,27 | 1,97 | 2,73 |
 | Attr 6 | 0,00 | 0,28 | 1,02 | 1,90 | 2,85 | 3,84 |
 
-### 13.6.5 Difficulté 4 (Full plate)
+### 14.6.5 Difficulté 4 (Full plate)
 
 |  | 1d | 2d | 3d | 4d | 5d | 6d |
 |---|---|---|---|---|---|---|
@@ -805,7 +920,7 @@ Comment évoluent les attributs, dons et expertises. Probablement lié à l'or d
 | Attr 5 | 0,00 | 0,03 | 0,24 | 0,64 | 1,20 | 1,86 |
 | Attr 6 | 0,00 | 0,03 | 0,36 | 1,05 | 1,91 | 2,86 |
 
-## 13.7 Probabilité d'effets spéciaux (double / triple)
+## 14.7 Probabilité d'effets spéciaux (double / triple)
 
 *Probabilité d'avoir au moins un double (D) ou triple (T) parmi les dés en succès — déclencheur d'effet spécial (cf. §1.2.3).*
 
@@ -821,7 +936,7 @@ Comment évoluent les attributs, dons et expertises. Probablement lié à l'or d
 
 ---
 
-# 14 Appendice B — Diagonale arme/armure
+# 15 Appendice B — Diagonale arme/armure
 
 *Calibration : pool joueur N+2 vs difficulté N (sauf 1d et 2d sans armure). Sans push, sans Blessure, sans effet spécial activé. Avec dé rouge + bonus sur 1.*
 
@@ -857,71 +972,4 @@ Comment évoluent les attributs, dons et expertises. Probablement lié à l'or d
 Max push par jet = ESP. Un mage ESP 5 peut pousser jusqu'à 5d même avec une arme petite.
 
 ---
-
-# 15 Appendice C — Handicaps
-
-*Désavantages innés ou acquis. Tirables au hasard à la création ou acquis en jeu.*
-## 15.1 Importés tels quels
-
-| Handicap | Description |
-|---|---|
-| **Risible** | Généralement la première cible (réactions, attaques, moqueries). |
-| **Maladif** | 2-6 chances qu'une dose de poison ou d'infection double son effet ou sa durée. |
-| **Épaules fuyantes** | Deux places d'inventaire inutilisables (sangle qui glisse, sac mal foutu, posture fragile). |
-| **Gros dormeur** | Doit dormir 3 veilles. Sinon, test VIG **−1d** pour se réveiller si danger pendant la nuit, ou test VIG pour ne pas s'endormir en ronde. |
-| **Myope** | Voit mal de loin. **−1d** sur armes à distance. Lunettes existent mais extrêmement chères et fragiles. |
-| **Maladroit** | Test FIN pour attraper un objet. 1/6 chance de créer une réaction en chaîne bruyante quand on tente d'être discret. |
-| **Vertige** | Être en hauteur peut créer une panique. |
-| **Distrait** | Doit réussir un test FIN ET ESP pour ne pas être surpris. |
-| **Haï des animaux** | Animaux accueillent avec grognements et méfiance. 2-6 chances que les montures préfèrent suivre le groupe. |
-| **Daltonien** | Voit en noir et blanc. |
-| **Suspect** | Souvent pointé du doigt pour tous les crimes et méfaits, impliqué ou non. |
-| **Laid** | 1/6 chance que les gens rencontrés soient répugnés par sa simple présence. |
-| **Monomanie** | Une passion unique et étrange. Connaît trop sur ce sujet, n'en parle qu'à ce sujet, le reste l'ennuie. |
-| **Accent incompréhensible** | Seuls les compagnons comprennent ses paroles. Communication laborieuse avec les étrangers. |
-
-## 15.2 À développer
-
-*Notes mises à jour selon les Blocs A-D (v0.9). Stress et Panique de Vermis principal peuvent se transposer en Blessures ESP (psychique/peur) avec Bloc A.*
-
-| Handicap                  | Note                                                                                         |
-| ------------------------- | -------------------------------------------------------------------------------------------- |
-| **Faible**                | *À développer* — Stress → Blessure ESP, ou END max réduit, ou pénalité jets VIG.             |
-| **Asthme**                | *À développer* — Stress → END max réduit, ou jets VIG sous effort prolongé.                  |
-| **Pessimisme contagieux** | *À développer* — Panique → impact ESP du PJ et alliés.                                       |
-| **Irritable**             | *À développer* — Stress → Blessure ESP ou tests sociaux pénalisés.                           |
-| **Désorganisé**           | *À développer* — échec critique non défini ; possible règle de 1s "fumble" en plus du bonus. |
-
----
-
-# 16 Appendice D — Séquelles
-
-*Conséquences permanentes d'une blessure grave subie en jeu. Marque durable sur la fiche.*
-
-## 16.1 Importées telles quelles
-
-| Séquelle | Description |
-|---|---|
-| **Main morte** | Plus d'arme à deux mains. |
-| **Trous de mémoire** | Le sort d'un grimoire devient illisible pour X temps (arbitrage MJ). |
-
-## 16.2 À développer
-
-| Séquelle | Note |
-|---|---|
-| **Dos barré** | *À développer* — douleur chronique limitant l'effort soutenu. |
-| **Jambe en moins, claudiquant** | *À développer* — vitesse réduite, test VIG pour courir. |
-| **Infection récurrente** | *À développer* — risque périodique de rechute. |
-| **Douleur chronique** | *À développer* — pénalité permanente ou récurrente. |
-| **Souffle court** | *À développer* — référence Stress. |
-| **Étourdissement, perte d'équilibre** | *À développer*. |
-| **Mains tremblantes** | *À développer* — pénalité sur motricité fine. |
-| **Rigide** | *À développer* — peut maintenant être implémentée : Blessure FIN permanente non-soignable (au lieu de la limite stricte habituelle). |
-| **Dur de la feuille, acouphènes** | *À développer* — pénalité d'audition. |
-| **Nerfs à vif** | *À développer* — vulnérabilité au stress. |
-| **Borgne** | *À développer* — armes de jet ratent sur 1-2 (à transposer en pool). |
-| **Odeur de mort** | *À développer*. |
-| **Défiguré** | *À développer*. |
-| **Esprit brisé** | *À développer* — référence action Aider et AV (non-natifs). |
-| **Confusion** | *À développer*. |
 

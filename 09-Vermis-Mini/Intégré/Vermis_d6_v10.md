@@ -162,14 +162,14 @@ Va
 | 6   | Décadent-Noble   | - Humanité<br>- Étiquette    | 1-2. Rétrogradé<br>3-4. Déshonoré<br>5-6. Déshérité |
 ### 2.7.4 Motivation D3
 
-| D6  | Motivation               | Don (D-Bleu)                                                 | Trait distinctif (Choisir entre D2+D-Vert)                                                                                         |
-| --- | ------------------------ | ------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------- |
-| 1   | Idéaliste : Liberté      | 1-2. Force brute<br>3-4. Athlétisme<br>5-6. Apolon           | 2-4. Cheveux blanc<br>5-6. Caustaud<br>7. Brulure au visage<br>8-9. Marquée au Fer<br>10-12. 9 doigts                              |
-| 2   | Idéaliste : Justice      | 1-2. Dure à cuire<br>3-4. Petit dormeur<br>5-6. Santé de fer | 2-4. Mâchoire carrée<br>5-6. Très grand<br>7. Oreille manquant<br>8-9. Cicatrice de combat<br>10-12. Nez cassé                     |
-| 3   | Pragmatique : Équilibre  | 1-2. Boussole interne<br>3-4. Alerte<br>5-6. Empathie Animal | 2-4. Maigre <br>5-6. Vitiligo<br>7. Percing<br>8-9. Cicatrice Ritualisée<br>10-12. Oreilles décollées                              |
-| 4   | Pragmatique : Perfection | 1-2. Réflexe<br>3-4. Précis<br>5-6. Félin                    | 2-4. Tatoué  <br>5-6. Chignons<br>7. Dreads<br>8-9. Imberbe<br>10-12. Poilue                                                       |
-| 5   | Ambitieux : Gloire       | 1-2. Polyglotte<br>3-4. Cultivé<br>5-6. Ingénieux            | 2-4. Moustache  <br>5-6. Cheveux très long<br>7. Tache de rousseur <br>8-9. Cheveux tressés<br>10-12. Yeux verrons                 |
-| 6   | Ambiteux : Pouvoir       | 1-2. Inspirant<br>3-4. Séduisant<br>5-6. Crédible            | 2-4. Nez aquilin  <br>5-6. Chauve ou rasé<br>7. Cheveux frisés <br>8-9. Albinos<br>10-12. Marque de flagellation<br>1. Peau foncée |
+| D6  | Motivation               | Don (D-Bleu)                                                 | Trait distinctif (Choisir entre D2+D-Vert)                                                                        |
+| --- | ------------------------ | ------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------- |
+| 1   | Idéaliste : Liberté      | 1-2. Force brute<br>3-4. Athlétisme<br>5-6. Apolon           | 2-4. Cheveux blanc<br>5-6. Caustaud<br>7. Brulure au visage<br>8-9. Marquée au Fer<br>10-12. 9 doigts             |
+| 2   | Idéaliste : Justice      | 1-2. Dure à cuire<br>3-4. Petit dormeur<br>5-6. Santé de fer | 2-4. Mâchoire carrée<br>5-6. Très grand<br>7. Oreille manquant<br>8-9. Cicatrice de combat<br>10-12. Nez cassé    |
+| 3   | Pragmatique : Équilibre  | 1-2. Boussole interne<br>3-4. Alerte<br>5-6. Empathie Animal | 2-4. Maigre <br>5-6. Vitiligo<br>7. Percing<br>8-9. Cicatrice Ritualisée<br>10-12. Oreilles décollées             |
+| 4   | Pragmatique : Perfection | 1-2. Réflexe<br>3-4. Précis<br>5-6. Félin                    | 2-4. Tatoué  <br>5-6. Chignons<br>7. Ptosis<br>8-9. Imberbe<br>10-12. Dents croches                               |
+| 5   | Ambitieux : Gloire       | 1-2. Polyglotte<br>3-4. Cultivé<br>5-6. Ingénieux            | 2-4. Anisocorie<br>5-6. Cheveux très long<br>7. Tache de rousseur <br>8-9. Cheveux tressés<br>10-12. Yeux verrons |
+| 6   | Ambiteux : Pouvoir       | 1-2. Inspirant<br>3-4. Séduisant<br>5-6. Crédible            | 2-4. Nez aquilin  <br>5-6. Chauve ou rasé<br>7. Cheveux frisés <br>8-9. Albinos<br>10-12. Marque de flagellation  |
 ### 2.7.5 Archétype (Approche/Origine)
 Item personnalisé* : +1D et -1 place d'inventaire (min 0)
 #### 2.7.5.1 Combattants

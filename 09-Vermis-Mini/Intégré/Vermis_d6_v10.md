@@ -92,7 +92,7 @@ Les PJ peuvent gagner des nouveaux Dons à travers leurs aventures comme effet d
 Les PJ peuvent aussi gagner d'autres Handicapes lors d'évènements tragiques ou lorsque les combats tourne mal.
 ## 2.4 Expertise
 
-Chaque personnage possède **2 à 3 Expertises** à la création, déterminées par son origine et son approche. Les Expertises sont des compétences narratives plus précises que le Don.
+Chaque personnage possède **5 Expertises** à la création : 2 de son Approche, 2 de son Origine et 1 de son Archétype (voir tables § 2.7). Les Expertises sont des compétences narratives plus précises que le Don.
 
 Quand une Expertise s'applique au test, le MJ peut opter pour une des deux options suivantes :
 
@@ -605,27 +605,26 @@ Système simple, inspiré de [Cairn](https://cairnrpg.com/resources/more-spellbo
 - Sans grimoire en main, le sort ne peut pas être lancé.
 - Lancer un sort coûte **1 END** (toujours).
 - **Test ESP** au lancement.
--%%  Connaître l'**Arcanique** *(Savoir/Expertise)* donne **+1d** au pool magie. %%
+- Connaître l'**Arcanique** *(Expertise)* donne **+1d** au pool magie.
 
 ## 7.2 Procédure de lancer
 
 1. **Déclarer** le sort et la cible.
 2. **Dépenser 1 END**.
-3. **Test ESP** — pool selon la source du sort (+1d si Arcanique connue), difficulté **1**+ (modulable selon contexte, le type de sort et son origine).
+3. **Test ESP** — pool selon la source du sort (+1d si Arcanique connue), difficulté **1**+ (modulable selon contexte, le type de sort et son origine ou l'utilisation que le PJ veut en faire).
 	1. Parchemin : 1d
 	2. Grimoire étrangé : 2d
 	3. Grimoire personnel : 3d
 	4. Grimoire amélioré : 4d+
 	5. Utilisation d'un focus (baguette, bâton sertie de gems) : +1d+
-4. **Hors stress** : pas de test, sort lancé automatiquement.
-5. **Résoudre** l'effet selon le sort.
+4. **Résoudre** l'effet selon le sort.
 
 ## 7.3 Lecture du résultat
 
-| Résultat | Effet |
-|---|---|
-| **Succès** | Sort lancé normalement. Magnitude = gains nets. |
-| **Échec** | Sort raté. END (et push éventuel) consommée. Conséquence narrative possible. |
+| Résultat   | Effet                                                                        |
+| ---------- | ---------------------------------------------------------------------------- |
+| **Succès** | Sort lancé normalement. **Magnitude** = gains nets.                          |
+| **Échec**  | Sort raté. END (et push éventuel) consommée. Conséquence narrative possible. |
 
 ## 7.4 Catalogue de sorts
 
@@ -633,33 +632,71 @@ Liste de référence : [Cairn — More Spellbooks](https://cairnrpg.com/resource
 
 Tout sort issu de cette liste s'utilise tel quel avec la procédure ci-dessus. Le mage choisit son grimoire à la création (1 sort) et peut en acquérir d'autres en jeu (chaque nouveau grimoire = 1 nouvelle place d'inventaire).
 
-## 7.5 Trois traditions
+# 8 Relique Liturgique
 
-*Distinction narrative — mécanique identique pour les trois.*
+Un aventurier qui connait le Liturgique peut identifier et utiliser des reliques. Un aventurier peut être lié à un maximum ESP reliques en même temps. À chaque levé du jour, l’aventurier peut décider quel relique lui sera lié pour la journée.
 
-| Tradition | Pratiquée par | Focus |
-|---|---|---|
-| **Arcanique** | Humains, elfes | Grimoire écrit, sigils |
-| **Théurgique** | Humains, halfelins | Reliques saintes |
-| **Shamanique** | Humains, nains | Pactes, tatouages, fétiches |
+Une relique contient généralement trois charges d’un sort spécifique en lien avec le Saint auquel la relique est associée. 
+
+Pour lancer un sort liturgique, l’aventurier doit avoir la relique entre les mains, la relique doit avoir encore au moins 1 charge et le lanceur doit parler à haute voix. l’aventurier doit réussir un test de ESP dif 1+(modulable selon contexte, le type de sort et son origine ou l'utilisation que le PJ veut en faire). Ajouter +1d pour chaque charge restante au test. La **magnitude** du sort dépend du gain net.
+
+### 8.1.1 Recharger une relique
+
+Chaque relique possède un rituel de recharge. Ce rituel doit être exécuté pour réinitialiser toutes les charge d’une relique. Par défaut, les reliques peuvent-être rechargé avec ces rituels (lancé au hasard. Certaines plus puissante ont des rituels plus complexes).
+
+#### 8.1.1.1 Rituels (d12):
+
+1. Jeûne Sacré Jeûner pendant trois jours en ne consommant que du pain et de l'eau bénite. Vous être Exténué
+2. Vigile de Prière Passer une nuit entière en prière agenouillée dans un lieu saint sans dormir. Vous être Exténué 
+3. Aumône Généreuse Donner l'équivalent d'une semaine de salaire aux pauvres ou à un temple
+4. Pèlerinage Pénitent Marcher pieds nus jusqu'à un sanctuaire à au moins une journée de marche
+5. Vœu de Silence Observer un silence complet pendant trois jours, ne parlant que pour prier
+6. Offrande de Cire Faire fondre sept cierges en prière et façonner la cire en effigie du Saint patron
+7. Confession Publique Confesser vos péchés devant une assemblée de fidèles et accomplir la pénitence imposée
+8. Bain Purificateur Se baigner dans une rivière ou source sacrée à l'aube pendant trois matins consécutifs
+9. Service Humble Servir les malades, les pauvres ou les pèlerins pendant une semaine sans récompense
+10. Veillée aux Flambeaux Maintenir une flamme sacrée allumée jour et nuit pendant sept jours
+11. Procession Rituelle Parcourir le périmètre d'un temple ou village en portant la relique et en chantant des hymnes
+12. Sacrifice Matériel Brûler un objet de valeur personnelle sur l'autel en offrande au Saint patron
+
+### 8.1.2 Tabou
+
+Certaines reliques offre des effets passif plutôt que la possibilité de lancer des sort. Ceux-ci ont des tabous, des obligations ou interdictions que l’aventurier doit suivre sans quoi il perdra l'effet passif de sa relique. Ces tabous sont en lien avec la vie du saint auquel la relique a appartenu. Sur une première offense, l'effet est suspendu pour 1 jour, retournant au lever du soleil. Sur une deuxième offense, la relique brise son lien avec l’aventurier et n'est plus jamais utilisable à moins de faire une Quête de rédemption (au choix du MJ, la quête doit être risquée).
+
+#### 8.1.2.1 Tabous 2d6
+Créer un tabou en lançant 2d6 et en combinant l'ordre et le concept. Si le résultat est trop complexe, ridicule ou difficile à imposer dans le jeu, le MJ peut toujours le modifier.
+
+| 2d6 | Ordre / Cadre rituel                    | Concept                              |
+| --- | --------------------------------------- | ------------------------------------ |
+| 2   | Cacher le fait de … aux compagnons      | boire du sang                        |
+| 3   | Accomplir … le visage couvert           | regarder son reflet                  |
+| 4   | Exiger aux compagnons de …              | éteindre une flamme avec son souffle |
+| 5   | Purifier quiconque a …                  | prononcer son vrai nom               |
+| 6   | Refuser de …                            | toucher un cadavre                   |
+| 7   | Offrir une prière après avoir …         | franchir un seuil sans permission    |
+| 8   | Toujours … avant de dormir              | accepter un don sans contrepartie    |
+| 9   | Interdire aux compagnons de …           | porter du fer forgé                  |
+| 10  | Punir tout compagnon qui …              | dormir sous un toit étranger         |
+| 11  | Accomplir … uniquement les jours saints | couper les cheveux ou la barbe       |
+| 12  | Ne jamais … après le coucher du soleil  | manger de la viande                  |
 
 ---
 
-# 8 Exploration
+# 9 Exploration
 
-## 8.1 Portes secrètes et fouille
+## 9.1 Portes secrètes et fouille
 
 *À développer — Phase 1.*
 
 Procédure diceless privilégiée (description de l'action → résultat). Jet seulement si incertitude réelle.
 
-## 8.2 Sons et portée
+## 9.2 Sons et portée
 
 *À développer — Phase 1.*
 
 À quelle distance entend-on un combat ? Une porte enfoncée ? Un groupe en déplacement ?
 
-## 8.3 Discrétion
+## 9.3 Discrétion
 
 *À développer — Phase 1.*
 
@@ -667,7 +704,7 @@ Jet FIN individuel ou collectif. Interaction avec les pénalités d'armure.
 
 ---
 
-# 9 Voyage
+# 10 Voyage
 
 *À développer — Phase 2.*
 
@@ -679,7 +716,7 @@ Jet FIN individuel ou collectif. Interaction avec les pénalités d'armure.
 
 ---
 
-# 10 Économie et ville
+# 11 Économie et ville
 
 *À développer — Phase 2.*
 
@@ -690,7 +727,7 @@ Jet FIN individuel ou collectif. Interaction avec les pénalités d'armure.
 
 ---
 
-# 11 Progression
+# 12 Progression
 
 *À développer — Phase 3.*
 
@@ -698,7 +735,7 @@ Comment évoluent les attributs, dons et expertises. Probablement lié à l'or d
 
 ---
 
-# 12 Principes du MJ
+# 13 Principes du MJ
 
 - Préparer des **situations**, pas des intrigues.
 - Présenter des choix intéressants.
@@ -719,7 +756,7 @@ Comment évoluent les attributs, dons et expertises. Probablement lié à l'or d
 
 ---
 
-# 13 Appendice A - Table des Expertises, Dons et Handicapes
+# 14 Appendice A - Table des Expertises, Dons et Handicapes
 Rappel mécanique :
 
 - **Expertise** → +1d au pool quand applicable (au choix MJ : action possible, +1d, ou nature modifiée).
@@ -728,7 +765,7 @@ Rappel mécanique :
 
 ---
 
-## 13.1 Expertises
+## 14.1 Expertises
 
 Sources : Approche (×2), Origine (×2), Archétype (×1).
 
@@ -764,7 +801,7 @@ Sources : Approche (×2), Origine (×2), Archétype (×1).
 
 ---
 
-## 13.2 Dons
+## 14.2 Dons
 
 Source : table Motivation (D-Bleu). 18 dons, 1 par personnage à la création.
 
@@ -791,7 +828,7 @@ Source : table Motivation (D-Bleu). 18 dons, 1 par personnage à la création.
 
 ---
 
-## 13.3 Handicaps
+## 14.3 Handicaps
 
 Source : table Approche (D-Rouge). Un par personnage à la création.
 
@@ -832,11 +869,11 @@ Source : table Approche (D-Rouge). Un par personnage à la création.
 | **TOC**                   | Compulsion à vérifier, organiser, recommencer — ralentit l'urgence.     |
 | **Toux chronique**        | Discrétion sonore, embuscade, planque.                                  |
 | **Vertige**               | Hauteur, vide, surplomb _(cf. § 15.1)_.                                 |
-# 14 Appendice A — Tables de probabilité
+# 15 Appendice A — Tables de probabilité
 
 *Format : **Succès% / Échec%**. Sans push, sans Blessure. Bonus : **dé rouge en succès = +1 gain**, **+1 par 1 roulé** (cumulable). **Gras** = ligne attribut 4 (référence).*
 
-## 14.1 Difficulté 0 — Aucune armure / tâche normale
+## 15.1 Difficulté 0 — Aucune armure / tâche normale
 
 |  | 1d | 2d | 3d | 4d | 5d | 6d |
 |---|---|---|---|---|---|---|
@@ -846,7 +883,7 @@ Source : table Approche (D-Rouge). Un par personnage à la création.
 | Attr 5 | 67/33% | 89/11% | 96/4% | 99/1% | 100/0% | 100/0% |
 | Attr 6 | 83/17% | 97/3% | 100/0% | 100/0% | 100/0% | 100/0% |
 
-## 14.2 Difficulté 1 — Cuir / Ardu
+## 15.2 Difficulté 1 — Cuir / Ardu
 
 |  | 1d | 2d | 3d | 4d | 5d | 6d |
 |---|---|---|---|---|---|---|
@@ -856,7 +893,7 @@ Source : table Approche (D-Rouge). Un par personnage à la création.
 | Attr 5 | 67/33% | 72/28% | 85/15% | 93/7% | 97/3% | 99/1% |
 | Attr 6 | 83/17% | 86/14% | 96/4% | 99/1% | 100/0% | 100/0% |
 
-## 14.3 Difficulté 2 — Maille / Exigeant
+## 15.3 Difficulté 2 — Maille / Exigeant
 
 |  | 1d | 2d | 3d | 4d | 5d | 6d |
 |---|---|---|---|---|---|---|
@@ -866,7 +903,7 @@ Source : table Approche (D-Rouge). Un par personnage à la création.
 | Attr 5 | 17/83% | 50/50% | 68/32% | 81/19% | 90/10% | 95/5% |
 | Attr 6 | 17/83% | 72/28% | 86/14% | 95/5% | 98/2% | 100/0% |
 
-## 14.4 Difficulté 3 — Plaque / Extrême
+## 15.4 Difficulté 3 — Plaque / Extrême
 
 |  | 1d | 2d | 3d | 4d | 5d | 6d |
 |---|---|---|---|---|---|---|
@@ -876,7 +913,7 @@ Source : table Approche (D-Rouge). Un par personnage à la création.
 | Attr 5 | 0/100% | 19/81% | 44/56% | 62/38% | 77/23% | 87/13% |
 | Attr 6 | 0/100% | 25/75% | 67/33% | 84/16% | 94/6% | 98/2% |
 
-## 14.5 Difficulté 4 — Full plate / Quasi-impossible
+## 15.5 Difficulté 4 — Full plate / Quasi-impossible
 
 |  | 1d | 2d | 3d | 4d | 5d | 6d |
 |---|---|---|---|---|---|---|
@@ -886,11 +923,11 @@ Source : table Approche (D-Rouge). Un par personnage à la création.
 | Attr 5 | 0/100% | 3/97% | 19/81% | 39/61% | 58/42% | 73/27% |
 | Attr 6 | 0/100% | 3/97% | 29/71% | 64/36% | 83/17% | 93/7% |
 
-## 14.6 Gains nets moyens E[net]
+## 15.6 Gains nets moyens E[net]
 
 *Utile pour estimer END perdus par attaque ou magnitude des sorts.*
 
-### 14.6.1 Difficulté 0
+### 15.6.1 Difficulté 0
 
 |  | 1d | 2d | 3d | 4d | 5d | 6d |
 |---|---|---|---|---|---|---|
@@ -899,7 +936,7 @@ Source : table Approche (D-Rouge). Un par personnage à la création.
 | Attr 5 | 1,50 | 2,33 | 3,17 | 4,00 | 4,83 | 5,67 |
 | Attr 6 | 1,83 | 2,83 | 3,83 | 4,83 | 5,83 | 6,83 |
 
-### 14.6.2 Difficulté 1 (Cuir)
+### 15.6.2 Difficulté 1 (Cuir)
 
 |  | 1d | 2d | 3d | 4d | 5d | 6d |
 |---|---|---|---|---|---|---|
@@ -908,7 +945,7 @@ Source : table Approche (D-Rouge). Un par personnage à la création.
 | Attr 5 | 0,83 | 1,44 | 2,20 | 3,01 | 3,84 | 4,67 |
 | Attr 6 | 1,00 | 1,86 | 2,84 | 3,83 | 4,83 | 5,83 |
 
-### 14.6.3 Difficulté 2 (Maille)
+### 15.6.3 Difficulté 2 (Maille)
 
 |  | 1d | 2d | 3d | 4d | 5d | 6d |
 |---|---|---|---|---|---|---|
@@ -917,7 +954,7 @@ Source : table Approche (D-Rouge). Un par personnage à la création.
 | Attr 5 | 0,17 | 0,72 | 1,35 | 2,08 | 2,87 | 3,68 |
 | Attr 6 | 0,17 | 1,00 | 1,88 | 2,84 | 3,84 | 4,83 |
 
-### 14.6.4 Difficulté 3 (Plaque)
+### 15.6.4 Difficulté 3 (Plaque)
 
 |  | 1d | 2d | 3d | 4d | 5d | 6d |
 |---|---|---|---|---|---|---|
@@ -926,7 +963,7 @@ Source : table Approche (D-Rouge). Un par personnage à la création.
 | Attr 5 | 0,00 | 0,22 | 0,68 | 1,27 | 1,97 | 2,73 |
 | Attr 6 | 0,00 | 0,28 | 1,02 | 1,90 | 2,85 | 3,84 |
 
-### 14.6.5 Difficulté 4 (Full plate)
+### 15.6.5 Difficulté 4 (Full plate)
 
 |  | 1d | 2d | 3d | 4d | 5d | 6d |
 |---|---|---|---|---|---|---|
@@ -935,7 +972,7 @@ Source : table Approche (D-Rouge). Un par personnage à la création.
 | Attr 5 | 0,00 | 0,03 | 0,24 | 0,64 | 1,20 | 1,86 |
 | Attr 6 | 0,00 | 0,03 | 0,36 | 1,05 | 1,91 | 2,86 |
 
-## 14.7 Probabilité d'effets spéciaux (double / triple)
+## 15.7 Probabilité d'effets spéciaux (double / triple)
 
 *Probabilité d'avoir au moins un double (D) ou triple (T) parmi les dés en succès — déclencheur d'effet spécial (cf. §1.2.3).*
 
@@ -951,7 +988,7 @@ Source : table Approche (D-Rouge). Un par personnage à la création.
 
 ---
 
-# 15 Appendice B — Diagonale arme/armure
+# 16 Appendice B — Diagonale arme/armure
 
 *Calibration : pool joueur N+2 vs difficulté N (sauf 1d et 2d sans armure). Sans push, sans Blessure, sans effet spécial activé. Avec dé rouge + bonus sur 1.*
 

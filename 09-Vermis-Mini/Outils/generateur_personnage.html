@@ -407,6 +407,32 @@
   }
   .attr.end .num { color: #e8b884; }
 
+  .attr.ard {
+    border-color: #7a4a6a;
+    background: linear-gradient(180deg, var(--bg-card-2), #2c1a28);
+  }
+  .attr.ard .num { color: #d488c8; }
+
+  /* Tooltip — pour expertises, dons, handicaps */
+  .tip {
+    border-bottom: 1px dotted var(--ink-dim);
+    cursor: help;
+  }
+  .tip:hover {
+    color: var(--ink-bright);
+    border-bottom-color: var(--ink-bright);
+  }
+
+  /* Liste verticale d'expertises pour permettre les tooltips inline */
+  .expertise-list {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .expertise-list .item {
+    display: block;
+  }
+
   .pill {
     display: inline-block;
     background: var(--bg-card-2);
@@ -545,7 +571,8 @@
   </section>
 
   <p class="footnote">
-    Réf. § 2.4 — Vermis_d6_v10. Note : la table Origine du source contient une coquille
+    Réf. § 2.7 et Appendice A (§ 13) — Vermis_d6_v10. Survolez expertises, dons et handicaps
+    pour voir leur description. Note : la table Origine du source contient une coquille
     (deux lignes « D6=2 ») ; la 2<sup>e</sup> est traitée comme « D6=4 » (Citadin-Artisan).
   </p>
 </main>
@@ -569,7 +596,7 @@ const APPROCHE = [
     type: 'Combattant',
     attrs: { VIG: 5, FIN: 4, ESP: 3 },
     expertise: ['Cuisine de campagne', 'Maniement des armes'],
-    items: ['Cotte de mailles (2 RD)', 'Épée courte (4d)', 'Badge milicien'],
+    items: ['Cotte de mailles (2 RD)', 'Épée courte (4d)', 'Kit de cuisine'],
     handicap: ['Sommeil lourd', 'SPT', 'Bégaiement', 'Désorganisé', 'Pessimisme contagieux', 'Agressif']
   },
   {
@@ -607,31 +634,37 @@ const ORIGINE = [
   {
     nom: 'Reclus-Nomade',
     expertise: ['Survie', 'Signes Nomades'],
+    item: 'Kit de survie',
     malchance: { '1-2': 'Exilé', '3-4': 'Oublié', '5-6': 'Remplacé' }
   },
   {
     nom: 'Reclus-Paysan',
     expertise: ['Survie', 'Dressage'],
-    malchance: { '1-2': 'Perdu', '3-4': 'Empoisonné', '5-6': 'Affamé' }
+    item: 'Kit de survie',
+    malchance: { '1-2': 'Sinistré', '3-4': 'Empoisonné', '5-6': 'Affamé' }
   },
   {
     nom: 'Citadin-Criminel',
     expertise: ['Bricolage', 'Argot'],
+    item: 'Kit de réparation',
     malchance: { '1-2': 'Appauvri', '3-4': 'Dépendance', '5-6': 'Condamné' }
   },
   {
     nom: 'Citadin-Artisan',
     expertise: ['Bricolage', 'Commerce'],
+    item: 'Kit de réparation',
     malchance: { '1-2': 'Hanté', '3-4': 'Désabusé', '5-6': 'Fraudé' }
   },
   {
     nom: 'Décadent-Artiste',
     expertise: ['Humanité', 'Performance'],
+    item: 'Instrument de musique',
     malchance: { '1-2': 'Chantage', '3-4': 'Humilié', '5-6': 'Déprimé' }
   },
   {
     nom: 'Décadent-Noble',
     expertise: ['Humanité', 'Étiquette'],
+    item: 'Bague sigilaire',
     malchance: { '1-2': 'Rétrogradé', '3-4': 'Déshonoré', '5-6': 'Déshérité' }
   }
 ];
@@ -656,12 +689,12 @@ const MOTIVATION = [
   {
     nom: 'Pragmatique : Perfection',
     don: { '1-2': 'Réflexe', '3-4': 'Précis', '5-6': 'Félin' },
-    trait: { '2-4': 'Tatoué', '5-6': 'Chignons', '7': 'Dreads', '8-9': 'Imberbe', '10-12': 'Poilu' }
+    trait: { '2-4': 'Tatoué', '5-6': 'Chignons', '7': 'Ptosis', '8-9': 'Imberbe', '10-12': 'Dents croches' }
   },
   {
     nom: 'Ambitieux : Gloire',
     don: { '1-2': 'Polyglotte', '3-4': 'Cultivé', '5-6': 'Ingénieux' },
-    trait: { '2-4': 'Moustache', '5-6': 'Cheveux très longs', '7': 'Taches de rousseur', '8-9': 'Cheveux tressés', '10-12': 'Yeux vairons' }
+    trait: { '2-4': 'Anisocorie', '5-6': 'Cheveux très longs', '7': 'Taches de rousseur', '8-9': 'Cheveux tressés', '10-12': 'Yeux vairons' }
   },
   {
     nom: 'Ambitieux : Pouvoir',
@@ -919,6 +952,112 @@ const ARCHETYPE = {
     }
   }
 };
+
+/* =====================================================================
+   APPENDICE A — Descriptions des Expertises, Dons et Handicaps
+   Référence : 09-Vermis-Mini/Intégré/Vermis_d6_v10.md § 13
+   ===================================================================== */
+
+const EXPERTISE_DESC = {
+  'Arcanisme': 'Reconnaître sorts, runes, glyphes ; lire un grimoire ; identifier une présence magique.',
+  'Argot': 'Comprendre la langue des bas-fonds, lire les signes de gang, négocier sous le manteau.',
+  'Armurier': 'Évaluer, réparer, entretenir armes et armures martiales.',
+  'Athlétisme': 'Course, saut, nage, escalade, efforts physiques soutenus.',
+  'Bricolage': 'Réparer, démonter, improviser un mécanisme simple (urbain/artisanal).',
+  'Chirurgie de fortune': 'Opérer en urgence : suturer, amputer, extraire un projectile.',
+  'Commerce': 'Évaluer une marchandise, négocier, repérer une contrefaçon.',
+  'Crochetage': 'Forcer une serrure, désarmer un mécanisme, ouvrir sans clé.',
+  'Cuisine de campagne': 'Nourrir un groupe en autarcie, identifier le comestible sur le terrain.',
+  'Diplomatie': 'Désamorcer un conflit verbal, parlementer, médier entre factions.',
+  'Discrétion': 'Bouger sans bruit, se dissimuler, déjouer une garde.',
+  'Dressage': 'Domestiquer, calmer, commander un animal.',
+  'Étiquette': 'Préséance, codes des cours, savoir-vivre noble, éviter l’impair.',
+  'Herborisme': 'Identifier plantes, préparer décoctions, baumes, poisons végétaux.',
+  'Humanité': 'Connaissances des savoirs humains : littérature, histoire, politique, religions, mythes, etc.',
+  'Leadership': 'Rallier, donner un ordre clair sous pression, inspirer une troupe, engager des hirelings.',
+  'Maniement des armes': 'Connaître types, qualités, particularités et entretien des armes martiales et leur utilisation.',
+  'Mascarade': 'Se déguiser, jouer un rôle, passer pour quelqu’un d’autre, mentir et manipuler.',
+  'Médecine': 'Diagnostiquer une maladie, prescrire un traitement, identifier un poison.',
+  'Performance': 'Chant, mime, danse, jonglerie, captiver un public.',
+  'Poison': 'Préparer, doser, reconnaître, contrer un poison.',
+  'Premiers soins': 'Stabiliser une blessure récente, panser, arrêter une hémorragie.',
+  'Sciences interdites': 'Lore occulte, démonologie, rituels prohibés, livres scellés.',
+  'Sciences naturelles': 'Anatomie, géologie, taxonomie, comprendre le vivant et la matière.',
+  'Signes Nomades': 'Lire les marques de piste, suivre un sentier invisible, communiquer avec les clans, communiquer par gestes (silencieux) et sifflements (à distance).',
+  'Survie': 'Trouver eau, abri, feu, route en milieu sauvage, cueillette comestible.',
+  'Vigilance': 'Détecter une embuscade, une présence, un détail anormal ; navigation et pistage.'
+};
+
+const DON_DESC = {
+  'Force brute': 'Soulever, briser, défoncer, contraindre par la force pure.',
+  'Athlétisme': 'Course, escalade, saut, esquive physique.',
+  'Apollon': 'Beauté frappante : attire le regard, désarme par la présence.',
+  'Dur à cuire': 'Encaisser la douleur, ignorer une blessure mineure, tenir bon.',
+  'Petit dormeur': 'Peu de sommeil suffit ; reste alerte la nuit.',
+  'Santé de fer': 'Résiste aux maladies, poisons, fatigue prolongée.',
+  'Boussole interne': 'Ne perd jamais le nord, sens infaillible de l’orientation.',
+  'Alerte': 'Anticipe l’embuscade, dort à demi-éveillé, réagit le premier.',
+  'Empathie animale': 'Comprend et calme les bêtes, lit leur intention.',
+  'Réflexe': 'Réagit avant les autres, esquive instinctive.',
+  'Précis': 'Tir, lancer, manipulation fine.',
+  'Félin': 'Équilibre, agilité, tombe sur ses pieds.',
+  'Polyglotte': 'Parle / comprend plusieurs langues, déchiffre les accents.',
+  'Cultivé': 'Connaissances générales, histoire, légendes ; lit et écrit couramment.',
+  'Ingénieux': 'Trouve une solution improvisée à un problème mécanique ou logistique.',
+  'Inspirant': 'Motive un groupe, rallie les hésitants.',
+  'Séduisant': 'Charme, drague, obtient des faveurs sociales.',
+  'Crédible': 'Sa parole porte, son mensonge passe, on l’écoute.'
+};
+
+const HANDICAP_DESC = {
+  'Agressif': 'Tests sociaux apaisants, négociation, patience.',
+  'Allergie aux animaux': 'En présence d’animaux : éternuements, démangeaisons, larmoiement.',
+  'Asthme': 'Effort prolongé, stress, air vicié.',
+  'Bégaiement': 'Communication claire sous pression.',
+  'Borgne': 'Perception en profondeur, jets à distance, surveillance d’un flanc.',
+  'Bossu': 'Tests sociaux, déplacements furtifs prolongés.',
+  'Daltonien': 'Voit en gris ; codes-couleurs, fioles, drapeaux.',
+  'Désorganisé': 'Retrouver un objet précis dans son sac sous pression.',
+  'Distrait': 'Risque de surprise.',
+  'Dure de la feuille': 'Entend mal : détails sonores, ordres chuchotés, alarmes lointaines.',
+  'Fragilité osseuse': 'Chutes, chocs, contraintes physiques.',
+  'Frileux': 'Climat froid, immersion, opérations nocturnes prolongées.',
+  'Haï des animaux': 'Approcher, monter ou commander une bête.',
+  'Hallucinations': 'Distinguer le réel de l’illusion sous stress, fatigue, fumées.',
+  'Illettré': 'Lire, écrire, comprendre une carte, déchiffrer un document.',
+  'Insomnie': 'Vigilance après plusieurs jours sans sommeil profond.',
+  'Jambe de bois': 'Course, escalade, équilibre, terrain accidenté.',
+  'Laid': 'Rejet à vue, tests de séduction et de premier abord.',
+  'Main prothèse': 'Manipulation fine, écriture, dextérité à deux mains.',
+  'Maladif': 'Poisons et infections redoublent d’effet.',
+  'Maladroit': 'Attraper un objet, discrétion en environnement encombré.',
+  'Migraines': 'Lumière vive, bruit, stress prolongé.',
+  'Myopie': 'Vision floue de loin ; tir, repérage à distance.',
+  'Narcolepsie': 'Garde nocturne, tâches monotones, repos forcé.',
+  'Nerveux': 'Tremblements ; tir de précision, geste fin, opération chirurgicale.',
+  'Obsession': 'Une lubie qui détourne l’attention au mauvais moment.',
+  'Paranoïaque': 'Confiance, négociation, accepter une aide offerte.',
+  'Pessimisme contagieux': 'Moral du groupe, ralliement, persuasion.',
+  'Rachitisme': 'Force, endurance, résistance physique.',
+  'Sommeil lourd': 'Réveil en cas d’alerte nocturne.',
+  'SPT': 'Déclencheurs imprévus : bruit, odeur, scène ; risque de panique.',
+  'Suspect': 'Premier doigt accusateur sur tout méfait.',
+  'TOC': 'Compulsion à vérifier, organiser, recommencer — ralentit l’urgence.',
+  'Toux chronique': 'Discrétion sonore, embuscade, planque.',
+  'Vertige': 'Hauteur, vide, surplomb.'
+};
+
+/* Helper : récupère une description en tolérant variations de casse / accents légers */
+function descLookup(table, key) {
+  if (!key) return '';
+  if (table[key]) return table[key];
+  // Fallback insensible à la casse
+  const lc = key.toLowerCase();
+  for (const k of Object.keys(table)) {
+    if (k.toLowerCase() === lc) return table[k];
+  }
+  return '';
+}
 
 /* =====================================================================
    NOMS — 4 listes de 100 (Liste de noms.md)
@@ -1221,6 +1360,7 @@ function generate() {
   const or = (D3 + DB) * 10;
   const age = 2 * (D1 + DR) + 15;
   const end = approche.attrs.VIG; // END = VIG
+  const ard = approche.attrs.FIN; // ARD = FIN (banque d'utilisation du Don, §2.3)
   const invMax = 10 + approche.attrs.VIG;
 
   // 7. Nom
@@ -1232,7 +1372,7 @@ function generate() {
     approche, origine, motivation,
     handicap, malchance, don, traitDistinctif,
     archetype: archetypeData, occupation,
-    or, age, end, invMax
+    or, age, end, ard, invMax
   };
 
   render(currentChar);
@@ -1271,9 +1411,10 @@ function render(c) {
   const origNom = fem(o.nom, F);
   const occupNom = fem(c.occupation.nom, F);
 
-  // Items combinés (Approche + Item perso archétype + Item occupation)
+  // Items combinés (Approche + Origine + Item perso archétype + Item occupation)
   const allItems = [
     ...a.items.map(i => ({ txt: i, bonus: false })),
+    ...(o.item ? [{ txt: o.item, bonus: false }] : []),
     ...arch.itemPerso.map(i => ({
       txt: i.startsWith('*') ? i.slice(1).trim() + ' (+1d, item personnalisé)' : i,
       bonus: i.startsWith('*')
@@ -1294,9 +1435,20 @@ function render(c) {
   const slotColor = slotsUsed > c.invMax ? 'var(--accent)' : 'var(--ink-bright)';
   const charge = chargement(slotsUsed);
 
-  // Expertises combinées : Approche (1) + Origine (2) + Archétype (1) = 4 total
+  // Expertises combinées : Approche (2) + Origine (2) + Archétype (1) = 5 total
   const allExpertises = [...a.expertise, ...o.expertise];
   if (arch.expertise) allExpertises.push(arch.expertise);
+  // Dédoublonnage (un même mot d'expertise pourrait revenir entre Approche/Origine/Archétype)
+  const uniqExpertises = [...new Set(allExpertises)];
+
+  // Helpers tooltip
+  const escapeAttr = s => String(s).replace(/"/g, '&quot;');
+  const tipSpan = (label, desc) => desc
+    ? `<span class="tip" title="${escapeAttr(desc)}">${label}</span>`
+    : label;
+  const expertiseSpans = uniqExpertises.map(e => tipSpan(e, descLookup(EXPERTISE_DESC, e)));
+  const donSpan = tipSpan(c.don, descLookup(DON_DESC, c.don));
+  const handicapSpan = tipSpan(c.handicap, descLookup(HANDICAP_DESC, c.handicap));
 
   charEl.innerHTML = `
     <!-- NOM (haut, pleine largeur) -->
@@ -1315,6 +1467,7 @@ function render(c) {
         <div class="attr"><div class="name">FIN</div><div class="num">${a.attrs.FIN}</div></div>
         <div class="attr"><div class="name">ESP</div><div class="num">${a.attrs.ESP}</div></div>
         <div class="attr end"><div class="name">END</div><div class="num">${c.end}</div></div>
+        <div class="attr ard" title="Ardeur : banque d'utilisation du Don, égale à FIN. Recharge en invoquant son Handicap sur un test réussi."><div class="name">ARD</div><div class="num">${c.ard}</div></div>
         <div class="attr armure"><div class="name">Armure</div><div class="num">${totalPA}<span class="stat-unit"> RD</span></div></div>
         <div class="attr vitesse vit-${charge.vitesse.toLowerCase()}">
           <div class="name">Vitesse</div>
@@ -1340,9 +1493,9 @@ function render(c) {
     <!-- CAPACITÉS (droite) -->
     <div class="card capacites">
       <h2>Capacités</h2>
-      <div class="field"><span class="lbl">Expertises</span><span class="val">${allExpertises.join(', ')}</span></div>
-      <div class="field"><span class="lbl">Don</span><span class="val">${c.don} <span class="formula">(D-Bleu=${c.DB})</span></span></div>
-      <div class="field"><span class="lbl">Handicap</span><span class="val">${c.handicap} <span class="formula">(D-Rouge=${c.DR})</span></span></div>
+      <div class="field"><span class="lbl">Expertises</span><span class="val">${expertiseSpans.join(', ')}</span></div>
+      <div class="field"><span class="lbl">Don</span><span class="val">${donSpan} <span class="formula">(D-Bleu=${c.DB}, ARD ${c.ard})</span></span></div>
+      <div class="field"><span class="lbl">Handicap</span><span class="val">${handicapSpan} <span class="formula">(D-Rouge=${c.DR})</span></span></div>
       ${arch.sorts ? `<div class="field"><span class="lbl">Sorts</span><span class="val">${arch.sorts.join(', ')}</span></div>` : ''}
     </div>
 
@@ -1384,6 +1537,7 @@ function toMarkdown(c) {
   const occupNom = fem(c.occupation.nom, F);
   const rawItems = [
     ...a.items.map(i => ({ txt: i, bonus: false })),
+    ...(o.item ? [{ txt: o.item, bonus: false }] : []),
     ...arch.itemPerso.map(i => ({
       txt: i.startsWith('*') ? i.slice(1).trim() + ' (+1d)' : i,
       bonus: i.startsWith('*')
@@ -1411,7 +1565,7 @@ function toMarkdown(c) {
 **Couleurs** : Rouge=${c.DR} · Vert=${c.DV} · Bleu=${c.DB}
 
 ## Stats
-- **VIG** ${a.attrs.VIG} · **FIN** ${a.attrs.FIN} · **ESP** ${a.attrs.ESP} · **END** ${c.end}
+- **VIG** ${a.attrs.VIG} · **FIN** ${a.attrs.FIN} · **ESP** ${a.attrs.ESP} · **END** ${c.end} · **ARD** ${c.ard}
 - **Armure** : ${totalPA} RD
 - **Vitesse** : ${charge.vitesse} (${charge.valeur}) — Chargement ${charge.niveau}
 - **Or** : ${c.or} po
@@ -1427,13 +1581,20 @@ function toMarkdown(c) {
 - **Âge** : ${c.age} ans
 
 ## Capacités
-- **Expertises** : ${[...a.expertise, ...o.expertise, ...(arch.expertise ? [arch.expertise] : [])].join(', ')}
-- **Don** : ${c.don}
+- **Expertises** : ${[...new Set([...a.expertise, ...o.expertise, ...(arch.expertise ? [arch.expertise] : [])])].join(', ')}
+- **Don** : ${c.don} *(ARD ${c.ard})*
 - **Handicap** : ${c.handicap}
 ${arch.sorts ? `- **Sorts** : ${arch.sorts.join(', ')}\n` : ''}
 
 ## Inventaire (${slotsUsed}/${c.invMax} — ${charge.niveau})
 ${items.map(i => `- ${i.txt} *(${i.slots} empl.)*`).join('\n')}
+
+## Détails (Appendice A)
+${[...new Set([...a.expertise, ...o.expertise, ...(arch.expertise ? [arch.expertise] : [])])]
+  .map(e => `- **${e}** *(expertise)* : ${descLookup(EXPERTISE_DESC, e) || '—'}`)
+  .join('\n')}
+- **${c.don}** *(don)* : ${descLookup(DON_DESC, c.don) || '—'}
+- **${c.handicap}** *(handicap)* : ${descLookup(HANDICAP_DESC, c.handicap) || '—'}
 `;
 }
 

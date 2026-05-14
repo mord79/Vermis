@@ -5,28 +5,12 @@
       "path": "09-Vermis-Mini/Intégré/Vermis_d6_v10.md"
     },
     {
-      "basename": "Vermis_Rules",
-      "path": "01-Règles/Vermis_Rules.md"
-    },
-    {
-      "basename": "Todo vermis mini",
-      "path": "09-Vermis-Mini/Todo vermis mini.md"
-    },
-    {
-      "basename": "Plan d'importation par point",
-      "path": "09-Vermis-Mini/Intégré/Plan d'importation par point.md"
+      "basename": "Quick ideas",
+      "path": "09-Vermis-Mini/Intégré/Quick ideas.md"
     },
     {
       "basename": "Todo_Vue",
       "path": "00-MOC/Todo_Vue.md"
-    },
-    {
-      "basename": "Liste de noms",
-      "path": "09-Vermis-Mini/Outils/Liste de noms.md"
-    },
-    {
-      "basename": "Quick ideas",
-      "path": "09-Vermis-Mini/Intégré/Quick ideas.md"
     },
     {
       "basename": "Index",
@@ -39,6 +23,10 @@
     {
       "basename": "WIP Création_de_personnage",
       "path": "01-Règles/011-WIP/WIP Création_de_personnage.md"
+    },
+    {
+      "basename": "Plan d'importation par point",
+      "path": "09-Vermis-Mini/Intégré/Plan d'importation par point.md"
     },
     {
       "basename": "Grille_Événements_Aléatoires",
@@ -103,6 +91,10 @@
     {
       "basename": "regles_v07",
       "path": "09-Vermis-Mini/OLD/regles_v07.md"
+    },
+    {
+      "basename": "Vermis_Rules",
+      "path": "01-Règles/Vermis_Rules.md"
     },
     {
       "basename": "Événements_Aléatoires",
@@ -199,6 +191,14 @@
     {
       "basename": "design-donjon",
       "path": "06-Wiki/design-donjon.md"
+    },
+    {
+      "basename": "Dungeon Stocking with Markov Processes",
+      "path": "03-Références/Dungeon Stocking with Markov Processes.md"
+    },
+    {
+      "basename": "design-points-ouverts",
+      "path": "06-Wiki/design-points-ouverts.md"
     }
   ],
   "omittedPaths": [],

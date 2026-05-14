@@ -1,20 +1,25 @@
-Background
-- Guerrier paysans 
-- Illusionniste : metteur en scène (scénographe )
-		- ~~Ventriloque~~ poète 
-- Barde : ~~poète~~ : ventriloque , enquêteur , espion 
-- Moine : ~~mycologue~~: apiculteur
-- Alchimiste : ~~verrier~~ : ingénieur ou inventeur
-- Historien, 
-Expertise : bestiaire, tactique de combat, vie militaire, 
+Bloc
+- Choix tactique, absorbe X dégâts mais prend 1 usure, ou à des pts pour encaisser.
+	- Plus le Shields est gros, plus il peut encaissé
+- Parry, devier tous les dégât, mais test plus difficile. Plus le Shields est gros, plus c’est difficile de parry, possible avec une arme 
+
+~~Background~~
+- ~~Guerrier paysans~~ 
+- ~~Illusionniste : metteur en scène (scénographe )~~
+		~~- Ventriloque poète~~ 
+- ~~Barde : poète : ventriloque , enquêteur , espion~~ 
+- ~~Moine : mycologue: apiculteur~~
+- ~~Alchimiste : verrier : ingénieur ou inventeur~~
+- ~~Historien,~~ 
+~~Expertise : bestiaire, tactique de combat, vie militaire,~~ 
 
 
-Simplification 2 
-- Main 1d, improv 2D, petit 3D, moyen 4d, long 5d, lourd 6d
-- +1 gain sur succes double (même chiffre),+2 si triple 
-- Armure / difficulté fix
-- Pas de dé de specialisation 
-- Blessure = -1 attribut 
+~~Simplification 2~~ 
+- ~~Main 1d, improv 2D, petit 3D, moyen 4d, long 5d, lourd 6d~~
+- ~~+1 gain sur succes double (même chiffre),+2 si triple~~ 
+- ~~Armure / difficulté fix~~
+- ~~Pas de dé de specialisation~~ 
+- ~~Blessure = -1 attribut~~ 
 - 
 
 

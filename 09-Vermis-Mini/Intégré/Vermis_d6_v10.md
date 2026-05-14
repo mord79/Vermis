@@ -144,22 +144,31 @@ Va
 
 | d6  | type       | Attribut            | Expertise                                          |                                                                 | Handicape (Dé rouge)                                                                                              |
 | --- | ---------- | ------------------- | -------------------------------------------------- | --------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| 1   | combattant | VIG 5, FIN 3, ESP 4 | - Premier soins<br>- Maniement des armes<br>       | - Cotte de mailles 2 RD<br>- Hachette 4d<br>- Bandage           | 1. Borgne<br>2. Distrait<br>3. Vertige<br>4. Daltonien<br>5. Dure de la feuille<br>6. Haï des animaux             |
-| 2   | combattant | VIG 5, FIN 4, ESP 3 | - Cuisine de campagne<br>- Maniement des armes<br> | - Cotte de mailles 2 RD<br>- Épée courte 4d<br>- Badge milicien | 1. Sommeil Lourd<br>2. SPT<br>3. Baiguément<br>4. Désorganisé<br>5. Pessimisme contagieux<br>6. Agressif          |
+| 1   | combattant | VIG 5, FIN 3, ESP 4 | - Premier soins<br>- Maniement des armes<br>       | - Cotte de mailles 2 RD<br>- Hachette 4d<br>- Bandage (3)       | 1. Borgne<br>2. Distrait<br>3. Vertige<br>4. Daltonien<br>5. Dure de la feuille<br>6. Haï des animaux             |
+| 2   | combattant | VIG 5, FIN 4, ESP 3 | - Cuisine de campagne<br>- Maniement des armes<br> | - Cotte de mailles 2 RD<br>- Épée courte 4d<br>- kit de cuisine | 1. Sommeil Lourd<br>2. SPT<br>3. Baiguément<br>4. Désorganisé<br>5. Pessimisme contagieux<br>6. Agressif          |
 | 3   | Filou      | VIG 4, FIN 5, ESP 3 | - Poison<br>- Discrétion                           | - Armure de cuir 1 RD <br>- Épée courte 4d <br>- kit de poison  | 1. Nerveux<br>2. Paranoïaque<br>3. Obsession<br>4. Illettré <br>5. Laid<br>6. Suspect                             |
 | 4   | Filou      | VIG 3, FIN 5, ESP 4 | - Chirurgie de fortune<br>- Discrétion             | - Armure de cuir 1 RD <br>- Épée courte 4d <br>- kit de soins   | 1. Rachitisme<br>2. Toux chronique<br>3. Maladif<br>4. Allergie aux Animaux<br>5. Insomnie,<br>6. Asthme,         |
 | 5   | Erudit     | VIG 3, FIN 4, ESP 5 | - Sciences Interdites<br>- Arcanisme               | - Bâton 3d<br>- Sac Accès facile                                | 1. Hallucinations, <br>2. jambe de bois<br>3. Migraines<br>4. Frileux<br>5. Narcolepsie, <br>6. Fragilité osseuse |
 | 6   | Erudit     | VIG 4, FIN 3, ESP 5 | - Sciences Naturelles<br>- Arcanisme               | - Dague 3d<br>- Kit de pharmacopé                               | 1. Bossu<br>2. Maladroit<br>3. TOC<br>4. Daltonien<br>5. Myopie<br>6. Main prothèse                               |
+**Bandage** :
+**Kit de cuisine** : Casserole, épices, ustensiles, huile de cuison
+**Kit de poison** : 
+**Kit de soins** : Aiguille, fil chirurgicale, scie à os, pince, alcool, bandage, sangsue
+**Kit de pharmacopée** : mortier et pilon, fioles, tissu filtrant, petit couteau, anti-douleur
+
+
 ### 2.7.3 Origine D2
 
-| D6  | Origine          | Expertise                    | Malchance (D-Vert)                                  |
-| --- | ---------------- | ---------------------------- | --------------------------------------------------- |
-| 1   | Reclus-Nomade    | - Survie<br>- Signes Nomades | 1-2. Exilé<br>3-4. Oublié<br>5-6. Remplacé          |
-| 2   | Reclus-Paysans   | - Survie<br>- Dressage       | 1-2. Sinistré<br>3-4. Empoisonné<br>5-6. Affamé     |
-| 3   | Citadin-Criminel | - Bricolage<br>- Argot       | 1-2. Appauvri<br>3-4. Dépendence<br>5-6. Condamné   |
-| 2   | Citadin-Artisan  | - Bricolage<br>- Commerce    | 1-2. Hanté<br>3-4. Désabusé<br>5-6. Fraudé          |
-| 5   | Décadent-Artiste | - Humanité<br>- Performance  | 1-2. Chantage<br>3-4. Humilié<br>5-6. Déprimé       |
-| 6   | Décadent-Noble   | - Humanité<br>- Étiquette    | 1-2. Rétrogradé<br>3-4. Déshonoré<br>5-6. Déshérité |
+| D6  | Origine          | Expertise                    | Item                  | Malchance (D-Vert)                                  |
+| --- | ---------------- | ---------------------------- | --------------------- | --------------------------------------------------- |
+| 1   | Reclus-Nomade    | - Survie<br>- Signes Nomades | Kit de survie         | 1-2. Exilé<br>3-4. Oublié<br>5-6. Remplacé          |
+| 2   | Reclus-Paysans   | - Survie<br>- Dressage       | Kit de survie         | 1-2. Sinistré<br>3-4. Empoisonné<br>5-6. Affamé     |
+| 3   | Citadin-Criminel | - Bricolage<br>- Argot       | Kit de réparation     | 1-2. Appauvri<br>3-4. Dépendence<br>5-6. Condamné   |
+| 2   | Citadin-Artisan  | - Bricolage<br>- Commerce    | Kit de réparation     | 1-2. Hanté<br>3-4. Désabusé<br>5-6. Fraudé          |
+| 5   | Décadent-Artiste | - Humanité<br>- Performance  | Instrument de musique | 1-2. Chantage<br>3-4. Humilié<br>5-6. Déprimé       |
+| 6   | Décadent-Noble   | - Humanité<br>- Étiquette    | bague sigilaire       | 1-2. Rétrogradé<br>3-4. Déshonoré<br>5-6. Déshérité |
+**Kit de survie** : Briquet, amadou, couverture roulé, gamelle, sel
+**Kit de réparation** : Fils, éguilles, cire, lime, pince, fil de fer
 ### 2.7.4 Motivation D3
 
 | D6  | Motivation               | Don (D-Bleu)                                                 | Trait distinctif (Choisir entre D2+D-Vert)                                                                        |
@@ -174,24 +183,30 @@ Va
 Item personnalisé* : +1D et -1 place d'inventaire (min 0)
 #### 2.7.5.1 Combattants
 
-| Archétype             | Expertise  | Item personnalisé\*                                | Occupation - Item (Motivation)                                                                                                                                                                                                               |
-| --------------------- | ---------- | -------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Nomade / Guerrier     | Athlétisme | • \*Hache à deux mains                             | 1\. Esclave en fuite — Chaîne<br>2\. Garde de caravane — Lanterne à huile<br>3\. Montagnard — Crampons d'escalade<br>4\. Cavalier nomade — Arc composite<br>5\. Fou de guerre — Champirage (3)<br>6\. Chef de tribu — Collier de dents       |
-| Paysan / Soldat       | Athlétisme | • Lance<br>• *Grand bouclier                       | 1. Cultivateur - Fourche<br>2. Déserteur — Cape tachée de sang<br>3. Berger — gourde de vin<br>4. Fossoyeur — Pelle <br>5. Mineur — Pioche<br>6. Bûcheron — Hache à fendre                                                                   |
-| Artisan / Sapeur      | Armurier   | - * Marteau de guerre deux mains<br>- Explosif (3) | 1\. Boucher — Hachoir<br>2\. Charpentier — Scie<br>3\. Forgeron — Marteau<br>4\. Fossoyeur — Pelle<br>5\. Tailleur de pierre — Ciseau à pierre<br>6\. Maréchal-ferrant — Pinces                                                              |
-| Criminel / Mercenaire | Armurier   | - * épée bâtarde<br>- Bouclier                     | 1.Homme de main — Chaîne <br>2. Pillard — Pelisse de loup<br>3. Tueur à gages — Fiole de poison rapide<br>4. Geôlier — Menottes<br>5. Bandit — Foulard pour masquer le visage<br>6. Nettoyeur — Sac de chaux vive                            |
-| Artiste / Bretteur    | Leadership | - *Rapière<br>- Main-gauche                        | 1\. Vengeur masqué — Masque de fer<br>2\. Corsaire — Perroquet <br>3\. Instructeur d'armes — Épée de bois<br>4\. Escrimeur — Gants de cuir<br>5\. Écuyer — Étendard<br>6\. Officier — Longue-vue                                             |
-| Noble / Chevalier     | Leadership | • \*Épée longue<br>• Bouclier                      | 1. Templier — Relique brisée<br>2. Chevalier errant — Sceau de cire héraldique<br>3. Garde d'élite — Cape de cérémonie<br>4. Maître d'armes — Pierre à aiguiser fine<br>5. Noble exilé — Bague à cachet (or)<br>6. Capitaine — Cor de guerre |
+| Archétype             | Expertise  | Item personnalisé\*                                                    | Occupation - Item (Motivation)                                                                                                                                                                                                               |
+| --------------------- | ---------- | ---------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Nomade / Guerrier     | Athlétisme | • \*Hache à deux mains                                                 | 1\. Esclave en fuite — Chaîne<br>2\. Garde de caravane — Lanterne à huile<br>3\. Montagnard — Crampons d'escalade<br>4\. Cavalier nomade — Arc composite<br>5\. Fou de guerre — Champirage (3)<br>6\. Chef de tribu — Collier de dents       |
+| Paysan / Soldat       | Athlétisme | • Lance<br>• *Grand bouclier                                           | 1. Cultivateur - Fourche<br>2. Déserteur — Cape tachée de sang<br>3. Berger — gourde de vin<br>4. Fossoyeur — Pelle <br>5. Mineur — Pioche<br>6. Bûcheron — Hache à fendre                                                                   |
+| Artisan / Sapeur      | Armurier   | - * Marteau de guerre deux mains<br>- Explosif (3)<br>- Kit d'armurier | 1\. Boucher — Hachoir<br>2\. Charpentier — Scie<br>3\. Forgeron — Marteau<br>4\. Fossoyeur — Pelle<br>5\. Tailleur de pierre — Ciseau à pierre<br>6\. Maréchal-ferrant — Pinces                                                              |
+| Criminel / Mercenaire | Armurier   | - * épée bâtarde<br>- Bouclier<br>- Kit d'armurier                     | 1.Homme de main — Chaîne <br>2. Pillard — Pelisse de loup<br>3. Tueur à gages — Fiole de poison rapide<br>4. Geôlier — Menottes<br>5. Bandit — Foulard pour masquer le visage<br>6. Nettoyeur — Sac de chaux vive                            |
+| Artiste / Bretteur    | Leadership | - *Rapière<br>- Main-gauche                                            | 1\. Vengeur masqué — Masque de fer<br>2\. Corsaire — Perroquet <br>3\. Instructeur d'armes — Épée de bois<br>4\. Escrimeur — Gants de cuir<br>5\. Écuyer — Étendard<br>6\. Officier — Longue-vue                                             |
+| Noble / Chevalier     | Leadership | • \*Épée longue<br>• Bouclier                                          | 1. Templier — Relique brisée<br>2. Chevalier errant — Sceau de cire héraldique<br>3. Garde d'élite — Cape de cérémonie<br>4. Maître d'armes — Pierre à aiguiser fine<br>5. Noble exilé — Bague à cachet (or)<br>6. Capitaine — Cor de guerre |
+- **Kit d'armurier** : Pierre à aiguiser, petit marteau, rivet, poinçon, bandelettes de cuire
 #### 2.7.5.2 Filous
 
-| Archétype                     | Expertise  | Item personnalisé\*                        | Occupation (Motivation)                                                                                                                                                                                                                     |
-| ----------------------------- | ---------- | ------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Nomade / Explorateur          | Vigilance  | • * Lance<br>• Corde & Grappin             | 1. Éclaireur — longue-vue pliable<br>2. Cartographe — Rouleau de parchemin<br>3. Prospecteur - Tamis<br>4. Contrebandier — Peau de bête traitée<br>5. Messager — Sacoche étanche<br>6. Guide - Sifflet de rappel                            |
-| Paysan / Chasseur             | Vigilance  | • \* Arc long<br>• Corde & Grappin         | 1. Trappeur — Appâts olfactifs<br>2. Patrouilleur - Corne de signal<br>3. Guet — Cloche de détresse<br>4. Cueilleur — Panier de récolte<br>5. Braconnier  — Cape de camouflage <br>6. Pêcheur — Filet plombé                                |
-| Artisan / Chasseur de Trésors | Crochetage | • Arbalète légère<br>• \*Kit de crochetage | 1. Horloger — pinces de précision<br>2. Serrurier — Limes diverses<br>3. Orfèvre — Petits Forets <br>4. Couturier — Aiguilles et fils<br>5. Verrier — Cisailles <br>6. Graveur — Petits Étaux                                               |
-| Criminel / Voleur             | Crochetage | • Dague double<br>• \*Kit de crochetage    | 1. Cambrioleur — Scie à bareau<br>2. Monte-en-l'air — Grappin miniature<br>3. Pickpocket — Doigtier de cuir<br>4. Faussaire — Plume et encres diverses<br>5. Receleur — Petite balance de précision<br>6. Saboteur — Fiole d'acide (3)      |
-| Artiste / Barde               | Mascarade  | • Rapière<br>• \*Kit de déguisement        | 1. Troubadour — Luth<br>2. Cracheur de feu — Fiole d'huile <br>3. Marionnettiste — Pantin grotesque<br>4. Peintre — Carnet de croquis<br>5. Saltimbanque — Balles de jonglerie<br>6. Espion - Encre invisible                               |
-| Noble / Excentrique           | Mascarade  | • * Canne-épée<br>•\*Kit de déguisement    | 1. Collectionneur — Bocal de spécimen<br>2. Dandy décadent — Flacon de parfum<br>3. Gambler — Jeu de cartes marqué<br>4. Amateur d'occulte — Encens apaisant<br>5. Naturaliste amateur — Filet à papillons <br>6. Esthète — Miroir d'argent |
+| Archétype                     | Expertise  | Item personnalisé\*                                     | Occupation (Motivation)                                                                                                                                                                                                                     |
+| ----------------------------- | ---------- | ------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Nomade / Explorateur          | Vigilance  | • * Lance<br>• Corde & Grappin<br>- Kit de cartographie | 1. Éclaireur — longue-vue pliable<br>2. Cartographe — Rouleau de parchemin<br>3. Prospecteur - Tamis<br>4. Contrebandier — Peau de bête traitée<br>5. Messager — Sacoche étanche<br>6. Guide - Sifflet de rappel                            |
+| Paysan / Chasseur             | Vigilance  | • \* Arc long<br>• Corde & Grappin<br>- Kit de piège    | 1. Trappeur — Appâts olfactifs<br>2. Patrouilleur - Corne de signal<br>3. Guet — Cloche de détresse<br>4. Cueilleur — Panier de récolte<br>5. Braconnier  — Cape de camouflage <br>6. Pêcheur — Filet plombé                                |
+| Artisan / Chasseur de Trésors | Crochetage | • Arbalète légère<br>• \*Kit de crochetage              | 1. Horloger — pinces de précision<br>2. Serrurier — Limes diverses<br>3. Orfèvre — Petits Forets <br>4. Couturier — Aiguilles et fils<br>5. Verrier — Cisailles <br>6. Graveur — Petits Étaux                                               |
+| Criminel / Voleur             | Crochetage | • Dague double<br>• \*Kit de crochetage                 | 1. Cambrioleur — Scie à bareau<br>2. Monte-en-l'air — Grappin miniature<br>3. Pickpocket — Doigtier de cuir<br>4. Faussaire — Plume et encres diverses<br>5. Receleur — Petite balance de précision<br>6. Saboteur — Fiole d'acide (3)      |
+| Artiste / Barde               | Mascarade  | • Rapière<br>• \*Kit de déguisement                     | 1. Troubadour — Luth<br>2. Cracheur de feu — Fiole d'huile <br>3. Marionnettiste — Pantin grotesque<br>4. Peintre — Carnet de croquis<br>5. Saltimbanque — Balles de jonglerie<br>6. Espion - Encre invisible                               |
+| Noble / Excentrique           | Mascarade  | • * Canne-épée<br>•\*Kit de déguisement                 | 1. Collectionneur — Bocal de spécimen<br>2. Dandy décadent — Flacon de parfum<br>3. Gambler — Jeu de cartes marqué<br>4. Amateur d'occulte — Encens apaisant<br>5. Naturaliste amateur — Filet à papillons <br>6. Esthète — Miroir d'argent |
+- **Kit de cartographie** : carte régionale, boussole, carnet étanche, fusin, compas et règle pliante, rouleaux de parchemin étanche, lunette rudimentaire
+- **Kit de piège** : piège à mâchoire, clochette, câble fin, appât, couteau à dépecer
+- **Kit de crochetage** : crochet fin, fil de cuivre, tiges, poudre de graphite, petit miroir 
+- **Kit de déguisement**t : Maquillage, fausse barbe, pigments, perruque, parfum fort
+
 #### 2.7.5.3 Érudits
 
 | Archétype              | Expertise  | Item personnalisé\*                                                                                | Occupation (Motivation))                                                                                                                                                                                                                  |

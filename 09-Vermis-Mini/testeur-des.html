@@ -177,16 +177,16 @@ td.lc{text-align:left;color:var(--dim)}
   <div class="panel sec">
     <h2>Armes</h2>
     <div class="ilist" id="wpnList"></div>
-    <button class="b-add" onclick="addWpn()">+ Ajouter arme</button>
+    <button type="button" class="b-add" id="btnAddWpn">+ Ajouter arme</button>
   </div>
 
   <div class="panel sec">
     <h2>Armures</h2>
     <div class="ilist" id="armList"></div>
-    <button class="b-add" onclick="addArm()">+ Ajouter armure</button>
+    <button type="button" class="b-add" id="btnAddArm">+ Ajouter armure</button>
   </div>
 
-  <button class="b-rec" onclick="all()">⟳ Recalculer tout</button>
+  <button type="button" class="b-rec" id="btnAll">⟳ Recalculer tout</button>
 </div>
 
 <!-- ============ MAIN ============ -->
@@ -422,13 +422,17 @@ function renderWpn(){
   weapons.forEach((w,i)=>{
     const el=document.createElement('div');
     el.className='irow';
-    el.innerHTML=
-      `<input type="text" class="iname" value="${esc(w.name)}"
-         oninput="weapons[${i}].name=this.value;sync()">
-       <input type="number" value="${w.d}" min="1" max="12" style="width:44px"
-         oninput="weapons[${i}].d=+this.value||1">
-       <span style="font-size:.72em;color:var(--dim)">d6</span>
-       <button class="b-del" onclick="delWpn(${i})">✕</button>`;
+    el.dataset.idx=i;
+    el.dataset.kind='wpn';
+    const ni=document.createElement('input');
+    ni.type='text'; ni.className='iname'; ni.value=w.name;
+    const di=document.createElement('input');
+    di.type='number'; di.value=w.d; di.min=1; di.max=12; di.style.width='44px';
+    const sp=document.createElement('span');
+    sp.style.cssText='font-size:.72em;color:var(--dim)'; sp.textContent='d6';
+    const btn=document.createElement('button');
+    btn.type='button'; btn.className='b-del'; btn.textContent='✕';
+    el.append(ni,di,sp,btn);
     $('wpnList').appendChild(el);
   });
 }
@@ -437,20 +441,20 @@ function renderArm(){
   armors.forEach((a,i)=>{
     const el=document.createElement('div');
     el.className='irow';
-    el.innerHTML=
-      `<input type="text" class="iname" value="${esc(a.name)}"
-         oninput="armors[${i}].name=this.value;sync()">
-       <span style="font-size:.72em;color:var(--dim)">RD</span>
-       <input type="number" value="${a.rd}" min="0" max="30" style="width:44px"
-         oninput="armors[${i}].rd=+this.value||0">
-       <button class="b-del" onclick="delArm(${i})">✕</button>`;
+    el.dataset.idx=i;
+    el.dataset.kind='arm';
+    const ni=document.createElement('input');
+    ni.type='text'; ni.className='iname'; ni.value=a.name;
+    const sp=document.createElement('span');
+    sp.style.cssText='font-size:.72em;color:var(--dim)'; sp.textContent='RD';
+    const ri=document.createElement('input');
+    ri.type='number'; ri.value=a.rd; ri.min=0; ri.max=30; ri.style.width='44px';
+    const btn=document.createElement('button');
+    btn.type='button'; btn.className='b-del'; btn.textContent='✕';
+    el.append(ni,sp,ri,btn);
     $('armList').appendChild(el);
   });
 }
-function addWpn(){weapons.push({name:'Arme',d:2});renderWpn();sync();}
-function delWpn(i){weapons.splice(i,1);renderWpn();sync();}
-function addArm(){armors.push({name:'Armure',rd:1});renderArm();sync();}
-function delArm(i){armors.splice(i,1);renderArm();sync();}
 
 function sync(){
   ['dW','sW'].forEach(id=>{
@@ -631,12 +635,49 @@ function all(){
   renderWpn();renderArm();sync();dist();mat();
 }
 
-// ── INIT — no CDN wait needed ──────────────────────────────
+// ── INIT ───────────────────────────────────────────────────
 (function init(){
   if(document.readyState==='loading'){
     document.addEventListener('DOMContentLoaded',init);return;
   }
   renderWpn();renderArm();sync();dist();mat();
+
+  // Add / delete weapons via event delegation — fiable sur mobile
+  $('wpnList').addEventListener('input',e=>{
+    const row=e.target.closest('[data-idx]'); if(!row)return;
+    const i=+row.dataset.idx;
+    if(e.target.classList.contains('iname')) weapons[i].name=e.target.value;
+    else weapons[i].d=+e.target.value||1;
+    sync();
+  });
+  $('wpnList').addEventListener('click',e=>{
+    const btn=e.target.closest('.b-del'); if(!btn)return;
+    const row=btn.closest('[data-idx]'); if(!row)return;
+    weapons.splice(+row.dataset.idx,1);renderWpn();sync();
+  });
+  $('btnAddWpn').addEventListener('click',()=>{
+    weapons.push({name:'Arme',d:2});renderWpn();sync();
+  });
+
+  // Add / delete armors
+  $('armList').addEventListener('input',e=>{
+    const row=e.target.closest('[data-idx]'); if(!row)return;
+    const i=+row.dataset.idx;
+    if(e.target.classList.contains('iname')) armors[i].name=e.target.value;
+    else armors[i].rd=+e.target.value||0;
+    sync();
+  });
+  $('armList').addEventListener('click',e=>{
+    const btn=e.target.closest('.b-del'); if(!btn)return;
+    const row=btn.closest('[data-idx]'); if(!row)return;
+    armors.splice(+row.dataset.idx,1);renderArm();sync();
+  });
+  $('btnAddArm').addEventListener('click',()=>{
+    armors.push({name:'Armure',rd:1});renderArm();sync();
+  });
+
+  $('btnAll').addEventListener('click',all);
+
   ['g1','gB','gA','g6','dblV','triV'].forEach(id=>$(id).addEventListener('change',all));
   ['dblOn','triOn','triStk'].forEach(id=>$(id).addEventListener('change',all));
 })();

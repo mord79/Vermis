@@ -4,7 +4,7 @@
 
 équivalance
 
-| dé  | vermis-mini   |
+| dé  | CHROMA   |
 | --- | ------------- |
 | d2  | main (3d6)    |
 | d4  | petit (+1d)   |
@@ -19,7 +19,7 @@ Les autres tag fonctionne aussi
 Armure tel quelle
 Bouclier : adapter la mécanique avec l'action bloquer
 ### 1.1.3 Usure des outils et armes
-Les outil dégrade d'un dé par usure dans vermis-mini. à 0d, l'outil/arme ne fonctionne plus mais peu être réparé  
+Les outil dégrade d'un dé par usure dans CHROMA. à 0d, l'outil/arme ne fonctionne plus mais peu être réparé  
 ### 1.1.4 Catégories de Prix à payer
 importer telquel
 ### 1.1.5 Cas particuliers de combat

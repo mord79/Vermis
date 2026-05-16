@@ -4,769 +4,642 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Vermis Mini — Testeur de Probabilités</title>
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <style>
 :root {
-  --bg:     #18150f;
-  --bg2:    #211d15;
-  --bg3:    #2a2520;
-  --bg4:    #332e27;
-  --border: #4d4437;
-  --text:   #d8cdb8;
-  --dim:    #8a7d6a;
-  --gold:   #c4882a;
-  --red:    #a03828;
-  --green:  #4a8040;
-  --blue:   #3878a0;
-  --yellow: #a09030;
+  --bg:   #18150f; --bg2: #211d15; --bg3: #2a2520; --bg4: #332e27;
+  --brd:  #4d4437; --txt: #d8cdb8; --dim: #8a7d6a;
+  --gold: #c4882a; --red: #a03828; --grn: #4a8040;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'Courier New',monospace;background:var(--bg);color:var(--text);
-     font-size:14px;line-height:1.5;padding:12px}
-h1{color:var(--gold);font-size:1.3em;letter-spacing:.12em;border-bottom:1px solid var(--border);
-   padding-bottom:6px;margin-bottom:4px}
-.subtitle{color:var(--dim);font-size:.8em;margin-bottom:14px}
-h2{color:var(--gold);font-size:.85em;text-transform:uppercase;letter-spacing:.15em;margin-bottom:10px}
-h3{color:var(--dim);font-size:.78em;text-transform:uppercase;letter-spacing:.12em;margin-bottom:6px}
+body{font-family:'Courier New',monospace;background:var(--bg);color:var(--txt);
+     font-size:14px;line-height:1.5;padding:10px}
+h1{color:var(--gold);font-size:1.2em;letter-spacing:.1em;
+   border-bottom:1px solid var(--brd);padding-bottom:6px;margin-bottom:4px}
+.sub{color:var(--dim);font-size:.78em;margin-bottom:12px}
+h2{color:var(--gold);font-size:.83em;text-transform:uppercase;
+   letter-spacing:.15em;margin-bottom:8px}
+h3{color:var(--dim);font-size:.76em;text-transform:uppercase;
+   letter-spacing:.12em;margin-bottom:5px}
 
 /* Layout */
-.layout{display:grid;grid-template-columns:290px 1fr;gap:10px;max-width:1500px;margin:0 auto}
-@media(max-width:900px){.layout{grid-template-columns:1fr}}
-.panel{background:var(--bg2);border:1px solid var(--border);border-radius:3px;padding:12px}
-.section{margin-bottom:14px}
-.section:last-child{margin-bottom:0}
-hr{border:none;border-top:1px solid var(--border);margin:10px 0}
+.layout{display:grid;grid-template-columns:285px 1fr;gap:10px;
+        max-width:1400px;margin:0 auto}
+@media(max-width:800px){.layout{grid-template-columns:1fr}}
+.panel{background:var(--bg2);border:1px solid var(--brd);border-radius:3px;padding:12px}
+.sec{margin-bottom:12px}.sec:last-child{margin-bottom:0}
+hr{border:none;border-top:1px solid var(--brd);margin:10px 0}
 
 /* Inputs */
 input[type=number],input[type=text],select{
-  background:var(--bg3);border:1px solid var(--border);color:var(--text);
-  padding:3px 6px;border-radius:2px;font-family:inherit;font-size:.85em}
-input[type=number]:focus,input[type=text]:focus,select:focus{
-  outline:1px solid var(--gold)}
-input[type=number]{width:52px}
-input[type=text]{width:110px}
-input[type=checkbox]{accent-color:var(--gold);width:13px;height:13px;cursor:pointer}
+  background:var(--bg3);border:1px solid var(--brd);color:var(--txt);
+  padding:4px 6px;border-radius:2px;font-family:inherit;font-size:.84em}
+input[type=number]:focus,input[type=text]:focus,select:focus{outline:1px solid var(--gold)}
+input[type=number]{width:54px}
+input[type=text]{width:112px}
+input[type=checkbox]{accent-color:var(--gold);width:15px;height:15px;cursor:pointer}
+select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%238a7d6a'/%3E%3C/svg%3E");
+       background-repeat:no-repeat;background-position:right 6px center;padding-right:22px}
 
 /* Labels / rows */
-label{display:flex;align-items:center;gap:6px;font-size:.84em;cursor:pointer;margin-bottom:5px}
-.row{display:flex;align-items:center;gap:6px;font-size:.84em;margin-bottom:5px}
+label{display:flex;align-items:center;gap:6px;font-size:.84em;cursor:pointer;margin-bottom:6px}
+.row{display:flex;align-items:center;gap:6px;font-size:.84em;margin-bottom:6px}
 .lbl{min-width:80px;color:var(--dim)}
 
-/* Buttons */
-button{background:var(--bg3);border:1px solid var(--border);color:var(--text);
-  padding:3px 10px;border-radius:2px;cursor:pointer;font-family:inherit;font-size:.84em}
-button:hover{background:var(--bg4);border-color:var(--gold)}
-.btn-add{color:var(--green);border-color:var(--green);margin-top:6px;font-size:.78em}
-.btn-del{background:none;border:none;color:var(--red);padding:1px 5px;font-size:.9em}
-.btn-del:hover{color:#e05040;background:none}
-.btn-sim{background:var(--gold);color:var(--bg);border-color:var(--gold);
-  font-weight:bold;padding:5px 18px;font-size:.9em}
-.btn-sim:hover{background:#d4992a}
-.btn-recalc{background:var(--bg4);border-color:var(--gold);color:var(--gold);
-  width:100%;margin-top:8px;padding:6px;font-size:.88em}
+/* Buttons — large touch targets */
+button{background:var(--bg3);border:1px solid var(--brd);color:var(--txt);
+  padding:5px 12px;border-radius:2px;cursor:pointer;font-family:inherit;
+  font-size:.84em;min-height:36px;touch-action:manipulation}
+button:hover,button:active{background:var(--bg4);border-color:var(--gold)}
+.b-add{color:var(--grn);border-color:var(--grn);margin-top:6px;
+       font-size:.78em;min-height:32px}
+.b-del{background:none;border:none;color:var(--red);padding:5px 10px;
+       font-size:1em;min-width:36px;min-height:36px}
+.b-del:hover,.b-del:active{color:#e05040;background:none}
+.b-sim{background:var(--gold);color:var(--bg);border-color:var(--gold);
+       font-weight:bold;padding:6px 18px;font-size:.9em}
+.b-sim:hover,.b-sim:active{background:#d4992a}
+.b-rec{background:var(--bg4);border-color:var(--gold);color:var(--gold);
+       width:100%;margin-top:8px;padding:7px;font-size:.88em}
 
-/* Item rows (weapons/armors) */
-.item-list{display:flex;flex-direction:column;gap:4px}
-.item-row{display:flex;align-items:center;gap:5px;background:var(--bg3);
-  padding:4px 6px;border-radius:2px;border:1px solid var(--border)}
-.item-row .iname{flex:1}
+/* Item rows */
+.ilist{display:flex;flex-direction:column;gap:4px}
+.irow{display:flex;align-items:center;gap:5px;background:var(--bg3);
+      padding:4px 6px;border-radius:2px;border:1px solid var(--brd)}
+.irow .iname{flex:1;min-width:0}
 
 /* Tabs */
-.tabs{display:flex;gap:3px;margin-bottom:12px;border-bottom:1px solid var(--border)}
-.tab{padding:4px 12px;font-size:.84em;cursor:pointer;border:1px solid transparent;
-  border-bottom:none;border-radius:2px 2px 0 0;background:none;color:var(--dim)}
-.tab.active{background:var(--bg2);border-color:var(--border);color:var(--gold)}
-.tab-pane{display:none}
-.tab-pane.active{display:block}
+.tabs{display:flex;gap:3px;margin-bottom:12px;
+      border-bottom:1px solid var(--brd);flex-wrap:wrap}
+.tab{padding:5px 12px;font-size:.83em;cursor:pointer;border:1px solid transparent;
+     border-bottom:none;border-radius:2px 2px 0 0;background:none;
+     color:var(--dim);min-height:34px;touch-action:manipulation}
+.tab.on{background:var(--bg2);border-color:var(--brd);color:var(--gold)}
+.pane{display:none}.pane.on{display:block}
 
 /* Controls bar */
-.cbar{display:flex;flex-wrap:wrap;gap:12px;align-items:flex-end;
-  background:var(--bg3);border:1px solid var(--border);border-radius:3px;
-  padding:8px 10px;margin-bottom:12px}
+.cbar{display:flex;flex-wrap:wrap;gap:10px;align-items:flex-end;
+      background:var(--bg3);border:1px solid var(--brd);
+      border-radius:3px;padding:8px 10px;margin-bottom:12px}
 .cg{display:flex;flex-direction:column;gap:3px}
-.clbl{font-size:.72em;color:var(--dim);text-transform:uppercase;letter-spacing:.1em}
+.cl{font-size:.7em;color:var(--dim);text-transform:uppercase;letter-spacing:.1em}
 
 /* VIG buttons */
-.vig-btns{display:flex;gap:3px}
-.vig-btn{padding:3px 8px;font-size:.82em;color:var(--dim)}
-.vig-btn.active{background:var(--bg4);border-color:var(--gold);color:var(--gold)}
+.vbtns{display:flex;gap:3px}
+.vb{padding:4px 9px;font-size:.82em;color:var(--dim);min-height:32px;
+    touch-action:manipulation}
+.vb.on{background:var(--bg4);border-color:var(--gold);color:var(--gold)}
 
 /* Stat boxes */
-.stats-row{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
-.stat-box{background:var(--bg3);border:1px solid var(--border);border-radius:3px;
-  padding:6px 10px;text-align:center;min-width:90px}
-.stat-val{font-size:1.25em;color:var(--gold)}
-.stat-lbl{font-size:.7em;color:var(--dim);text-transform:uppercase}
+.srow{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:12px}
+.sbox{background:var(--bg3);border:1px solid var(--brd);border-radius:3px;
+      padding:6px 10px;text-align:center;min-width:82px}
+.sv{font-size:1.2em;color:var(--gold)}
+.sl{font-size:.67em;color:var(--dim);text-transform:uppercase;line-height:1.3}
 
-/* Chart */
-.chart-wrap{position:relative;height:180px;margin-bottom:12px}
+/* CSS Bar Chart */
+.chart{margin-bottom:14px}
+.chart-main{display:flex;height:155px}
+.chart-y{display:flex;flex-direction:column;justify-content:space-between;
+          width:36px;padding-right:4px;font-size:.67em;color:var(--dim);
+          text-align:right;padding-bottom:20px;flex-shrink:0}
+.chart-bars{flex:1;display:flex;align-items:flex-end;gap:3px;
+            border-bottom:1px solid var(--brd);border-left:1px solid var(--brd);
+            overflow-x:auto;-webkit-overflow-scrolling:touch;
+            padding-bottom:20px;min-width:0}
+.bg{display:flex;flex-direction:column;align-items:center;
+    justify-content:flex-end;flex:1;min-width:14px;height:100%;position:relative}
+.brow{display:flex;align-items:flex-end;gap:1px;height:calc(100% - 20px);width:100%}
+.b{flex:1;min-width:5px;min-height:0;border-radius:1px 1px 0 0;position:relative}
+.bx{position:absolute;bottom:0;left:50%;transform:translateX(-50%);
+    font-size:.64em;color:var(--dim);white-space:nowrap;line-height:1}
+.legend{display:flex;gap:10px;flex-wrap:wrap;font-size:.78em;margin-top:6px}
+.li{display:flex;align-items:center;gap:4px}
+.ls{display:inline-block;width:10px;height:10px;border-radius:1px}
 
 /* Tables */
-table{width:100%;border-collapse:collapse;font-size:.8em;margin-bottom:10px}
+table{width:100%;border-collapse:collapse;font-size:.79em;margin-bottom:10px}
 th{background:var(--bg3);padding:4px 7px;text-align:center;
-   border:1px solid var(--border);color:var(--gold);font-weight:normal;white-space:nowrap}
-td{padding:3px 7px;border:1px solid var(--border);text-align:center;white-space:nowrap}
+   border:1px solid var(--brd);color:var(--gold);font-weight:normal;white-space:nowrap}
+td{padding:3px 7px;border:1px solid var(--brd);text-align:center;white-space:nowrap}
 tr:hover td{background:var(--bg4)}
 td.lc{text-align:left;color:var(--dim)}
-.hi{color:#6baa6b}.lo{color:#aa6b6b}.mid{color:var(--text)}
-.note{font-size:.75em;color:var(--dim);font-style:italic;margin-top:4px}
-
-/* Prob bar */
-.pbar-wrap{display:inline-block;width:50px;height:8px;background:var(--bg);
-  border-radius:1px;overflow:hidden;vertical-align:middle;margin-left:3px}
-.pbar{height:100%;background:var(--gold);border-radius:1px}
+.hi{color:#6baa6b}.lo{color:#aa6b6b}
+.ox{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.note{font-size:.74em;color:var(--dim);font-style:italic;margin-top:5px}
+.pb{display:inline-block;width:44px;height:7px;background:var(--bg);
+    border-radius:1px;overflow:hidden;vertical-align:middle;margin-left:3px}
+.pf{height:100%;background:var(--gold);border-radius:1px}
 </style>
 </head>
 <body>
 
 <h1>⚔ VERMIS MINI — Testeur de Probabilités</h1>
-<p class="subtitle">D6 pool · Roll-under · Attribut 2–5 · Gains graduels</p>
+<p class="sub">D6 pool · Roll-under · Attribut VIG 2–5 · Gains graduels · Hors-ligne</p>
 
 <div class="layout">
 
-<!-- ========== SIDEBAR ========== -->
+<!-- ============ SIDEBAR ============ -->
 <div>
-  <div class="panel section">
+  <div class="panel sec">
     <h2>Règles de gains</h2>
-    <div class="section">
+    <div class="sec">
       <h3>Valeur par dé</h3>
       <div class="row"><span class="lbl">Résultat 1</span>
-        <input type="number" id="g1" value="3" min="0" max="9"> g
-      </div>
+        <input type="number" id="g1" value="3" min="0" max="9"> g</div>
       <div class="row"><span class="lbl">&lt; seuil</span>
-        <input type="number" id="gB" value="2" min="0" max="9"> g
-      </div>
+        <input type="number" id="gB" value="2" min="0" max="9"> g</div>
       <div class="row"><span class="lbl">≥ seuil</span>
-        <input type="number" id="gA" value="1" min="0" max="9"> g
-      </div>
+        <input type="number" id="gA" value="1" min="0" max="9"> g</div>
       <div class="row"><span class="lbl">Résultat 6</span>
-        <input type="number" id="g6" value="0" min="0" max="9"> g
-      </div>
-      <p class="note">Le seuil = valeur d'attribut VIG (2–5)</p>
+        <input type="number" id="g6" value="0" min="0" max="9"> g</div>
+      <p class="note">Seuil = valeur attribut VIG (2–5)</p>
     </div>
     <hr>
-    <div class="section">
+    <div class="sec">
       <h3>Bonus séries</h3>
       <label>
         <input type="checkbox" id="dblOn"> Double (paire)
         <span style="margin-left:auto;display:flex;align-items:center;gap:4px">
-          +<input type="number" id="dblVal" value="1" min="0" max="6"> g
-        </span>
+          +<input type="number" id="dblV" value="1" min="0" max="6"> g</span>
       </label>
       <label>
         <input type="checkbox" id="triOn"> Triple
         <span style="margin-left:auto;display:flex;align-items:center;gap:4px">
-          +<input type="number" id="triVal" value="2" min="0" max="6"> g
-        </span>
+          +<input type="number" id="triV" value="2" min="0" max="6"> g</span>
       </label>
-      <label style="margin-left:16px;font-size:.78em;color:var(--dim)">
-        <input type="checkbox" id="triStack"> Cumuler double+triple
+      <label style="margin-left:16px;font-size:.76em;color:var(--dim)">
+        <input type="checkbox" id="triStk"> Cumuler double + triple
       </label>
-      <p class="note">Ex: [2,2,5] → +1g · [3,3,3] → +2g</p>
+      <p class="note">Ex: [2,2,5] → +1g &nbsp;·&nbsp; [3,3,3] → +2g</p>
     </div>
   </div>
 
-  <div class="panel section">
+  <div class="panel sec">
     <h2>Armes</h2>
-    <div class="item-list" id="wpnList"></div>
-    <button class="btn-add" onclick="addWeapon()">+ Ajouter arme</button>
+    <div class="ilist" id="wpnList"></div>
+    <button class="b-add" onclick="addWpn()">+ Ajouter arme</button>
   </div>
 
-  <div class="panel section">
+  <div class="panel sec">
     <h2>Armures</h2>
-    <div class="item-list" id="armList"></div>
-    <button class="btn-add" onclick="addArmor()">+ Ajouter armure</button>
+    <div class="ilist" id="armList"></div>
+    <button class="b-add" onclick="addArm()">+ Ajouter armure</button>
   </div>
 
-  <button class="btn-recalc" onclick="updateAll()">⟳ Recalculer tout</button>
+  <button class="b-rec" onclick="all()">⟳ Recalculer tout</button>
 </div>
 
-<!-- ========== MAIN ========== -->
+<!-- ============ MAIN ============ -->
 <div class="panel">
   <div class="tabs">
-    <button class="tab active" onclick="goTab('dist',this)">Distribution</button>
-    <button class="tab" onclick="goTab('matrix',this)">Matrice dégâts</button>
-    <button class="tab" onclick="goTab('sim',this)">Simulation combat</button>
+    <button class="tab on" onclick="goTab('dist',this)">Distribution</button>
+    <button class="tab"    onclick="goTab('mat',this)">Matrice dégâts</button>
+    <button class="tab"    onclick="goTab('sim',this)">Simulation</button>
   </div>
 
-  <!-- ===== TAB: DISTRIBUTION ===== -->
-  <div id="tab-dist" class="tab-pane active">
+  <!-- TAB: DISTRIBUTION -->
+  <div id="tab-dist" class="pane on">
     <div class="cbar">
-      <div class="cg"><span class="clbl">Arme</span>
-        <select id="dWpn" onchange="renderDist()"></select>
-      </div>
-      <div class="cg"><span class="clbl">Armure</span>
-        <select id="dArm" onchange="renderDist()"></select>
-      </div>
-      <div class="cg"><span class="clbl">VIG</span>
-        <div class="vig-btns">
-          <button class="vig-btn" id="dv2" onclick="setDistVig(2)">2</button>
-          <button class="vig-btn active" id="dv3" onclick="setDistVig(3)">3</button>
-          <button class="vig-btn" id="dv4" onclick="setDistVig(4)">4</button>
-          <button class="vig-btn" id="dv5" onclick="setDistVig(5)">5</button>
-        </div>
-      </div>
-      <div class="cg"><span class="clbl">Comparer</span>
-        <label style="margin:0"><input type="checkbox" id="dAllVig" onchange="renderDist()"> Tous VIG</label>
-      </div>
+      <div class="cg"><span class="cl">Arme</span>
+        <select id="dW" onchange="dist()"></select></div>
+      <div class="cg"><span class="cl">Armure</span>
+        <select id="dA" onchange="dist()"></select></div>
+      <div class="cg"><span class="cl">VIG</span>
+        <div class="vbtns">
+          <button class="vb"    id="dv2" onclick="setDV(2)">2</button>
+          <button class="vb on" id="dv3" onclick="setDV(3)">3</button>
+          <button class="vb"    id="dv4" onclick="setDV(4)">4</button>
+          <button class="vb"    id="dv5" onclick="setDV(5)">5</button>
+        </div></div>
+      <div class="cg"><span class="cl">Comparer</span>
+        <label style="margin:0;font-size:.82em">
+          <input type="checkbox" id="dAll" onchange="dist()"> Tous VIG</label></div>
     </div>
-    <div id="dStats" class="stats-row"></div>
-    <div class="chart-wrap"><canvas id="dChart"></canvas></div>
-    <div id="dTable"></div>
+    <div id="dStats" class="srow"></div>
+    <div id="dChart"></div>
+    <div class="ox"><div id="dTable"></div></div>
   </div>
 
-  <!-- ===== TAB: MATRIX ===== -->
-  <div id="tab-matrix" class="tab-pane">
+  <!-- TAB: MATRIX -->
+  <div id="tab-mat" class="pane">
     <div class="cbar">
-      <div class="cg"><span class="clbl">VIG attaquant</span>
-        <div class="vig-btns">
-          <button class="vig-btn" id="mv2" onclick="setMatVig(2)">2</button>
-          <button class="vig-btn active" id="mv3" onclick="setMatVig(3)">3</button>
-          <button class="vig-btn" id="mv4" onclick="setMatVig(4)">4</button>
-          <button class="vig-btn" id="mv5" onclick="setMatVig(5)">5</button>
-        </div>
-      </div>
-      <div class="cg"><span class="clbl">Métrique</span>
-        <select id="matMetric" onchange="renderMatrix()">
+      <div class="cg"><span class="cl">VIG attaquant</span>
+        <div class="vbtns">
+          <button class="vb"    id="mv2" onclick="setMV(2)">2</button>
+          <button class="vb on" id="mv3" onclick="setMV(3)">3</button>
+          <button class="vb"    id="mv4" onclick="setMV(4)">4</button>
+          <button class="vb"    id="mv5" onclick="setMV(5)">5</button>
+        </div></div>
+      <div class="cg"><span class="cl">Métrique 1</span>
+        <select id="m1" onchange="mat()">
           <option value="ev">Espérance dégâts</option>
           <option value="p0">P(0 dégâts)</option>
           <option value="p1">P(≥1 dégât)</option>
           <option value="p2">P(≥2 dégâts)</option>
           <option value="p3">P(≥3 dégâts)</option>
           <option value="p5">P(≥5 dégâts)</option>
-        </select>
-      </div>
-      <div class="cg"><span class="clbl">Tableau secondaire</span>
-        <select id="matMetric2" onchange="renderMatrix()">
-          <option value="none">— aucun —</option>
+        </select></div>
+      <div class="cg"><span class="cl">Métrique 2</span>
+        <select id="m2" onchange="mat()">
+          <option value="none">— aucune —</option>
           <option value="ev">Espérance</option>
           <option value="p0">P(0 dégâts)</option>
           <option value="p1">P(≥1)</option>
           <option value="p3">P(≥3)</option>
-        </select>
-      </div>
+        </select></div>
     </div>
-    <div id="mTable"></div>
-    <div id="mTable2"></div>
+    <div class="ox"><div id="mT1"></div></div>
+    <div class="ox"><div id="mT2"></div></div>
   </div>
 
-  <!-- ===== TAB: SIMULATION ===== -->
-  <div id="tab-sim" class="tab-pane">
+  <!-- TAB: SIMULATION -->
+  <div id="tab-sim" class="pane">
     <div class="cbar">
-      <div class="cg"><span class="clbl">Arme</span>
-        <select id="sWpn"></select>
-      </div>
-      <div class="cg"><span class="clbl">VIG attaquant</span>
-        <select id="sVig">
-          <option value="2">2</option>
-          <option value="3" selected>3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-        </select>
-      </div>
-      <div class="cg"><span class="clbl">Armure défenseur</span>
-        <select id="sArm"></select>
-      </div>
-      <div class="cg"><span class="clbl">END défenseur</span>
-        <input type="number" id="sEnd" value="10" min="1" max="100" style="width:60px">
-      </div>
-      <div class="cg"><span class="clbl">Simulations</span>
+      <div class="cg"><span class="cl">Arme</span>
+        <select id="sW"></select></div>
+      <div class="cg"><span class="cl">VIG attaquant</span>
+        <select id="sV">
+          <option>2</option><option selected>3</option>
+          <option>4</option><option>5</option>
+        </select></div>
+      <div class="cg"><span class="cl">Armure défenseur</span>
+        <select id="sA"></select></div>
+      <div class="cg"><span class="cl">END défenseur</span>
+        <input type="number" id="sE" value="10" min="1" max="100" style="width:58px"></div>
+      <div class="cg"><span class="cl">Simulations</span>
         <select id="sN">
           <option value="1000">1 000</option>
           <option value="5000" selected>5 000</option>
           <option value="10000">10 000</option>
           <option value="50000">50 000</option>
-        </select>
-      </div>
-      <div class="cg"><span class="clbl">&nbsp;</span>
-        <button class="btn-sim" onclick="runSim()">Simuler ⚔</button>
-      </div>
+        </select></div>
+      <div class="cg"><span class="cl">&nbsp;</span>
+        <button class="b-sim" onclick="sim()">Simuler ⚔</button></div>
     </div>
-    <div id="sStats" class="stats-row"></div>
-    <div class="chart-wrap" id="sChartWrap" style="display:none">
-      <canvas id="sChart"></canvas>
-    </div>
-    <div id="sTable"></div>
+    <div id="sStats" class="srow"></div>
+    <div id="sChart"></div>
+    <div class="ox"><div id="sTable"></div></div>
   </div>
 </div>
-</div><!-- end layout -->
+</div><!-- /layout -->
 
 <script>
-// ============================================================
-// STATE
-// ============================================================
-let weapons = [
-  {name:'Aucune',      dice:1},
-  {name:'Petite/Impro',dice:2},
-  {name:'Martiale',    dice:3},
-  {name:'Grande',      dice:4},
+// ── STATE ──────────────────────────────────────────────────
+const weapons = [
+  {name:'Aucune',       d:1},
+  {name:'Petite/Impro', d:2},
+  {name:'Martiale',     d:3},
+  {name:'Grande',       d:4},
 ];
-let armors = [
+const armors = [
   {name:'Aucune',  rd:0},
   {name:'Légère',  rd:1},
   {name:'Moyenne', rd:2},
   {name:'Lourde',  rd:3},
 ];
-let distVig = 3;
-let matVig  = 3;
-let dChartInst = null;
-let sChartInst = null;
+let dVig=3, mVig=3;
+const $=id=>document.getElementById(id);
 
-// ============================================================
-// RULES
-// ============================================================
-function R(){
-  return {
-    g1:   +document.getElementById('g1').value   || 3,
-    gB:   +document.getElementById('gB').value   || 2,
-    gA:   +document.getElementById('gA').value   || 1,
-    g6:   +document.getElementById('g6').value   || 0,
-    dblOn:  document.getElementById('dblOn').checked,
-    dblVal: +document.getElementById('dblVal').value || 1,
-    triOn:  document.getElementById('triOn').checked,
-    triVal: +document.getElementById('triVal').value || 2,
-    triStack: document.getElementById('triStack').checked,
-  };
+// ── RULES ──────────────────────────────────────────────────
+function R(){return{
+  g1:+$('g1').value||3, gB:+$('gB').value||2,
+  gA:+$('gA').value||1, g6:+$('g6').value||0,
+  dbl:$('dblOn').checked, dblV:+$('dblV').value||1,
+  tri:$('triOn').checked, triV:+$('triV').value||2,
+  stk:$('triStk').checked,
+};}
+
+function dg(r,s,ru){
+  if(r===1)return ru.g1; if(r===6)return ru.g6;
+  return r>=s?ru.gA:ru.gB;
 }
-
-function gainsDie(r, seuil, ru){
-  if(r===1) return ru.g1;
-  if(r===6) return ru.g6;
-  return r >= seuil ? ru.gA : ru.gB;
-}
-
-function seriesBonus(rolls, ru){
-  if(!ru.dblOn && !ru.triOn) return 0;
-  const freq={};
-  for(const r of rolls) freq[r]=(freq[r]||0)+1;
-  let bonus=0;
-  for(const c of Object.values(freq)){
-    if(c>=3 && ru.triOn){
-      bonus += ru.triVal;
-      if(ru.triStack && ru.dblOn) bonus += ru.dblVal; // pair embedded in triple
-      // extra pair beyond triple?
-      if(c>=5 && ru.dblOn) bonus += ru.dblVal;        // e.g. 5 of same
-    } else if(c>=2 && ru.dblOn){
-      bonus += Math.floor(c/2) * ru.dblVal;
-    }
+function bonus(rolls,ru){
+  if(!ru.dbl&&!ru.tri)return 0;
+  const f={};
+  for(const r of rolls)f[r]=(f[r]||0)+1;
+  let b=0;
+  for(const c of Object.values(f)){
+    if(c>=3&&ru.tri){
+      b+=ru.triV;
+      if(ru.stk&&ru.dbl)b+=ru.dblV;
+      if(c>=5&&ru.dbl)b+=ru.dblV;
+    }else if(c>=2&&ru.dbl)b+=Math.floor(c/2)*ru.dblV;
   }
-  return bonus;
+  return b;
 }
 
-// ============================================================
-// EXACT DISTRIBUTION (enumeration, ≤7d fast, Monte Carlo fallback)
-// ============================================================
-function computeDist(numDice, seuil, ru){
-  // For no-bonus case with any dice count: convolution (fast)
-  if(!ru.dblOn && !ru.triOn){
-    const single={};
-    for(let r=1;r<=6;r++){
-      const g=gainsDie(r,seuil,ru);
-      single[g]=(single[g]||0)+1/6;
-    }
+// ── EXACT DISTRIBUTION ─────────────────────────────────────
+function prob(nd,s,ru){
+  if(!ru.dbl&&!ru.tri){
+    // convolution — works for any pool size
+    const sg={};
+    for(let r=1;r<=6;r++){const g=dg(r,s,ru);sg[g]=(sg[g]||0)+1/6;}
     let res={0:1};
-    for(let d=0;d<numDice;d++){
-      const nxt={};
-      for(const[g1,p1]of Object.entries(res))
-        for(const[g2,p2]of Object.entries(single)){
-          const k=+g1+ +g2; nxt[k]=(nxt[k]||0)+p1*p2;
+    for(let i=0;i<nd;i++){
+      const nx={};
+      for(const[a,pa]of Object.entries(res))
+        for(const[b,pb]of Object.entries(sg)){
+          const k=+a+ +b;nx[k]=(nx[k]||0)+pa*pb;
         }
-      res=nxt;
+      res=nx;
     }
     return res;
   }
-  // With bonuses: enumerate (practical up to 7d, MC fallback)
-  if(numDice>7){
-    return mcDist(numDice,seuil,ru,60000);
-  }
-  const counts={};
-  const total=Math.pow(6,numDice);
+  if(nd>7)return mc(nd,s,ru,60000);
+  const cnt={};
   function rec(left,rolls,base){
-    if(!left){
-      const k=Math.max(0,base+seriesBonus(rolls,ru));
-      counts[k]=(counts[k]||0)+1;
-      return;
-    }
-    for(let r=1;r<=6;r++) rec(left-1,[...rolls,r],base+gainsDie(r,seuil,ru));
+    if(!left){const k=Math.max(0,base+bonus(rolls,ru));cnt[k]=(cnt[k]||0)+1;return;}
+    for(let r=1;r<=6;r++)rec(left-1,[...rolls,r],base+dg(r,s,ru));
   }
-  rec(numDice,[],0);
-  const dist={};
-  for(const[k,v]of Object.entries(counts)) dist[+k]=v/total;
+  rec(nd,[],0);
+  const T=Math.pow(6,nd),dist={};
+  for(const[k,v]of Object.entries(cnt))dist[+k]=v/T;
   return dist;
 }
-
-function mcDist(numDice,seuil,ru,n){
-  const counts={};
+function mc(nd,s,ru,n){
+  const cnt={};
   for(let i=0;i<n;i++){
-    const rolls=Array.from({length:numDice},()=>1+Math.floor(Math.random()*6));
-    const base=rolls.reduce((s,r)=>s+gainsDie(r,seuil,ru),0);
-    const k=Math.max(0,base+seriesBonus(rolls,ru));
-    counts[k]=(counts[k]||0)+1;
+    const r=Array.from({length:nd},()=>1+Math.floor(Math.random()*6));
+    const k=Math.max(0,r.reduce((t,x)=>t+dg(x,s,ru),0)+bonus(r,ru));
+    cnt[k]=(cnt[k]||0)+1;
   }
   const dist={};
-  for(const[k,v]of Object.entries(counts)) dist[+k]=v/n;
+  for(const[k,v]of Object.entries(cnt))dist[+k]=v/n;
   return dist;
 }
-
-function applyRD(dist,rd){
-  if(rd===0) return dist;
+function rd(dist,red){
+  if(!red)return dist;
   const nd={};
-  for(const[k,p]of Object.entries(dist)){
-    const net=Math.max(0,+k-rd);
-    nd[net]=(nd[net]||0)+p;
-  }
+  for(const[k,p]of Object.entries(dist)){const n=Math.max(0,+k-red);nd[n]=(nd[n]||0)+p;}
   return nd;
 }
+const EV  =d=>Object.entries(d).reduce((s,[k,p])=>s+ +k*p,0);
+const Pge =(d,t)=>Object.entries(d).reduce((s,[k,p])=>+k>=t?s+p:s,0);
+const maxK=d=>Math.max(0,...Object.keys(d).map(Number));
 
-function EV(dist){
-  return Object.entries(dist).reduce((s,[k,p])=>s+ +k*p,0);
-}
-function Pge(dist,thr){
-  return Object.entries(dist).reduce((s,[k,p])=>+k>=thr?s+p:s,0);
-}
-function maxKey(dist){
-  return Math.max(0,...Object.keys(dist).map(Number));
-}
+// ── CSS CHART ──────────────────────────────────────────────
+const VC={2:'#e07878',3:'#d4aa50',4:'#60a8d8',5:'#60c870'};
 
-// ============================================================
-// WEAPON / ARMOR LISTS
-// ============================================================
-function renderWpnList(){
-  const el=document.getElementById('wpnList');
-  el.innerHTML='';
-  weapons.forEach((w,i)=>{
-    const d=document.createElement('div');
-    d.className='item-row';
-    d.innerHTML=`
-      <input type="text" class="iname" value="${esc(w.name)}"
-        oninput="weapons[${i}].name=this.value;syncSelects()">
-      <input type="number" value="${w.dice}" min="1" max="12" style="width:44px"
-        oninput="weapons[${i}].dice=+this.value||1">
-      <span style="font-size:.75em;color:var(--dim)">d6</span>
-      <button class="btn-del" onclick="delWeapon(${i})">✕</button>`;
-    el.appendChild(d);
-  });
-}
-function renderArmList(){
-  const el=document.getElementById('armList');
-  el.innerHTML='';
-  armors.forEach((a,i)=>{
-    const d=document.createElement('div');
-    d.className='item-row';
-    d.innerHTML=`
-      <input type="text" class="iname" value="${esc(a.name)}"
-        oninput="armors[${i}].name=this.value;syncSelects()">
-      <span style="font-size:.75em;color:var(--dim)">RD</span>
-      <input type="number" value="${a.rd}" min="0" max="30" style="width:44px"
-        oninput="armors[${i}].rd=+this.value||0">
-      <button class="btn-del" onclick="delArmor(${i})">✕</button>`;
-    el.appendChild(d);
-  });
-}
-function addWeapon(){
-  weapons.push({name:'Arme',dice:2});
-  renderWpnList(); syncSelects();
-}
-function delWeapon(i){
-  weapons.splice(i,1); renderWpnList(); syncSelects();
-}
-function addArmor(){
-  armors.push({name:'Armure',rd:1});
-  renderArmList(); syncSelects();
-}
-function delArmor(i){
-  armors.splice(i,1); renderArmList(); syncSelects();
-}
-function syncSelects(){
-  ['dWpn','sWpn'].forEach(id=>{
-    const s=document.getElementById(id), v=s.value;
-    s.innerHTML=weapons.map((w,i)=>`<option value="${i}">${esc(w.name)} (${w.dice}d6)</option>`).join('');
-    if(weapons[v]) s.value=v;
-  });
-  ['dArm','sArm'].forEach(id=>{
-    const s=document.getElementById(id), v=s.value;
-    s.innerHTML=armors.map((a,i)=>`<option value="${i}">${esc(a.name)} (RD${a.rd})</option>`).join('');
-    if(armors[v]) s.value=v;
-  });
-}
-function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/"/g,'&quot;')}
-
-// ============================================================
-// TAB SWITCHING
-// ============================================================
-function goTab(name,btn){
-  document.querySelectorAll('.tab-pane').forEach(e=>e.classList.remove('active'));
-  document.querySelectorAll('.tabs .tab').forEach(e=>e.classList.remove('active'));
-  document.getElementById('tab-'+name).classList.add('active');
-  btn.classList.add('active');
-  if(name==='dist')   renderDist();
-  if(name==='matrix') renderMatrix();
-}
-
-// ============================================================
-// VIG BUTTONS
-// ============================================================
-function setDistVig(v){
-  distVig=v;
-  [2,3,4,5].forEach(n=>document.getElementById('dv'+n).classList.toggle('active',n===v));
-  renderDist();
-}
-function setMatVig(v){
-  matVig=v;
-  [2,3,4,5].forEach(n=>document.getElementById('mv'+n).classList.toggle('active',n===v));
-  renderMatrix();
-}
-
-// ============================================================
-// TAB: DISTRIBUTION
-// ============================================================
-const VIG_COLORS={2:'#e07878',3:'#d4aa50',4:'#60a8d8',5:'#60c870'};
-
-function renderDist(){
-  const ru=R();
-  const wi=+document.getElementById('dWpn').value;
-  const ai=+document.getElementById('dArm').value;
-  const all=document.getElementById('dAllVig').checked;
-  if(!weapons[wi]||!armors[ai]) return;
-
-  const wpn=weapons[wi], arm=armors[ai];
-  const vigs=all?[2,3,4,5]:[distVig];
-  const byVig={};
-  let mx=0;
-  for(const v of vigs){
-    const net=applyRD(computeDist(wpn.dice,v,ru),arm.rd);
-    byVig[v]=net; mx=Math.max(mx,maxKey(net));
-  }
-
+function mkChart(series){
+  // series: [{label,color,data:{k:prob}}]
+  const mx=maxK(Object.assign({},...series.map(s=>s.data)));
   const labels=Array.from({length:mx+1},(_,i)=>i);
-  const datasets=vigs.map(v=>({
-    label:`VIG ${v}`,
-    data:labels.map(g=>(byVig[v][g]||0)*100),
-    backgroundColor:VIG_COLORS[v]+'88',
-    borderColor:VIG_COLORS[v],
-    borderWidth:1,
-  }));
+  const maxP=Math.max(0.001,...series.flatMap(s=>labels.map(g=>s.data[g]||0)));
+  const steps=4;
 
-  const ctx=document.getElementById('dChart').getContext('2d');
-  if(dChartInst) dChartInst.destroy();
-  dChartInst=new Chart(ctx,{
-    type:'bar',data:{labels,datasets},
-    options:{responsive:true,maintainAspectRatio:false,
-      plugins:{legend:{labels:{color:'#d8cdb8',font:{family:'Courier New',size:11}}},
-               tooltip:{callbacks:{label:c=>`${c.dataset.label}: ${c.raw.toFixed(1)}%`}}},
-      scales:{
-        x:{ticks:{color:'#8a7d6a'},grid:{color:'#2a2520'},
-           title:{display:true,text:'Dégâts nets',color:'#8a7d6a',font:{size:11}}},
-        y:{ticks:{color:'#8a7d6a',callback:v=>v+'%'},grid:{color:'#2a2520'},
-           title:{display:true,text:'Probabilité',color:'#8a7d6a',font:{size:11}}}
-      }
-    }
-  });
+  let y='<div class="chart-y">';
+  for(let i=steps;i>=0;i--)y+=`<div>${(i/steps*maxP*100).toFixed(0)}%</div>`;
+  y+='</div>';
 
-  // Stats for primary VIG
-  const pv=all?3:distVig;
-  const d=byVig[pv]||byVig[vigs[0]];
-  const ev=EV(d), p0=(d[0]||0)*100, p1=Pge(d,1)*100, p3=Pge(d,3)*100, p5=Pge(d,5)*100;
-  document.getElementById('dStats').innerHTML=`
-    <div class="stat-box"><div class="stat-val">${ev.toFixed(2)}</div><div class="stat-lbl">Espérance</div></div>
-    <div class="stat-box"><div class="stat-val">${p0.toFixed(1)}%</div><div class="stat-lbl">P(0 dégât)</div></div>
-    <div class="stat-box"><div class="stat-val">${p1.toFixed(1)}%</div><div class="stat-lbl">P(≥1)</div></div>
-    <div class="stat-box"><div class="stat-val">${p3.toFixed(1)}%</div><div class="stat-lbl">P(≥3)</div></div>
-    <div class="stat-box"><div class="stat-val">${p5.toFixed(1)}%</div><div class="stat-lbl">P(≥5)</div></div>
-  `;
-
-  // Table
-  let h=`<table><thead><tr><th>Dégâts</th>`;
-  for(const v of vigs) h+=`<th colspan="2" style="color:${VIG_COLORS[v]}">VIG ${v}</th>`;
-  h+=`</tr><tr><th></th>`;
-  for(const v of vigs) h+=`<th>P(=)</th><th>P(≥)</th>`;
-  h+=`</tr></thead><tbody>`;
+  let bars='<div class="chart-bars">';
   for(const g of labels){
-    h+=`<tr><td class="lc">${g} dégâts</td>`;
+    bars+='<div class="bg"><div class="brow">';
+    for(const s of series){
+      const v=s.data[g]||0;
+      const h=(v/maxP*100).toFixed(1);
+      const tip=`${s.label}: ${(v*100).toFixed(1)}%`;
+      bars+=`<div class="b" style="height:${h}%;background:${s.color}" title="${tip}"></div>`;
+    }
+    bars+=`</div><div class="bx">${g}</div></div>`;
+  }
+  bars+='</div>';
+
+  let leg='';
+  if(series.length>1){
+    leg='<div class="legend">';
+    for(const s of series)
+      leg+=`<span class="li"><span class="ls" style="background:${s.color}"></span>${s.label}</span>`;
+    leg+='</div>';
+  }
+  return `<div class="chart"><div class="chart-main">${y}${bars}</div>${leg}</div>`;
+}
+
+// ── WEAPON / ARMOR LISTS ───────────────────────────────────
+const esc=s=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/"/g,'&quot;');
+
+function renderWpn(){
+  $('wpnList').innerHTML='';
+  weapons.forEach((w,i)=>{
+    const el=document.createElement('div');
+    el.className='irow';
+    el.innerHTML=
+      `<input type="text" class="iname" value="${esc(w.name)}"
+         oninput="weapons[${i}].name=this.value;sync()">
+       <input type="number" value="${w.d}" min="1" max="12" style="width:44px"
+         oninput="weapons[${i}].d=+this.value||1">
+       <span style="font-size:.72em;color:var(--dim)">d6</span>
+       <button class="b-del" onclick="delWpn(${i})">✕</button>`;
+    $('wpnList').appendChild(el);
+  });
+}
+function renderArm(){
+  $('armList').innerHTML='';
+  armors.forEach((a,i)=>{
+    const el=document.createElement('div');
+    el.className='irow';
+    el.innerHTML=
+      `<input type="text" class="iname" value="${esc(a.name)}"
+         oninput="armors[${i}].name=this.value;sync()">
+       <span style="font-size:.72em;color:var(--dim)">RD</span>
+       <input type="number" value="${a.rd}" min="0" max="30" style="width:44px"
+         oninput="armors[${i}].rd=+this.value||0">
+       <button class="b-del" onclick="delArm(${i})">✕</button>`;
+    $('armList').appendChild(el);
+  });
+}
+function addWpn(){weapons.push({name:'Arme',d:2});renderWpn();sync();}
+function delWpn(i){weapons.splice(i,1);renderWpn();sync();}
+function addArm(){armors.push({name:'Armure',rd:1});renderArm();sync();}
+function delArm(i){armors.splice(i,1);renderArm();sync();}
+
+function sync(){
+  ['dW','sW'].forEach(id=>{
+    const s=$(id),v=s.value;
+    s.innerHTML=weapons.map((w,i)=>`<option value="${i}">${esc(w.name)} (${w.d}d6)</option>`).join('');
+    if(weapons[v])s.value=v;
+  });
+  ['dA','sA'].forEach(id=>{
+    const s=$(id),v=s.value;
+    s.innerHTML=armors.map((a,i)=>`<option value="${i}">${esc(a.name)} (RD${a.rd})</option>`).join('');
+    if(armors[v])s.value=v;
+  });
+}
+
+// ── TAB / VIG SWITCHING ────────────────────────────────────
+function goTab(name,btn){
+  document.querySelectorAll('.pane').forEach(e=>e.classList.remove('on'));
+  document.querySelectorAll('.tabs .tab').forEach(e=>e.classList.remove('on'));
+  $('tab-'+name).classList.add('on'); btn.classList.add('on');
+  if(name==='dist')dist();
+  if(name==='mat') mat();
+}
+function setDV(v){
+  dVig=v;[2,3,4,5].forEach(n=>$('dv'+n).classList.toggle('on',n===v));dist();
+}
+function setMV(v){
+  mVig=v;[2,3,4,5].forEach(n=>$('mv'+n).classList.toggle('on',n===v));mat();
+}
+
+// ── DISTRIBUTION TAB ───────────────────────────────────────
+function dist(){
+  const ru=R(),wi=+$('dW').value,ai=+$('dA').value;
+  if(!weapons[wi]||!armors[ai])return;
+  const all=$('dAll').checked;
+  const vigs=all?[2,3,4,5]:[dVig];
+  const nets={};
+  for(const v of vigs)nets[v]=rd(prob(weapons[wi].d,v,ru),armors[ai].rd);
+
+  $('dChart').innerHTML=mkChart(vigs.map(v=>({label:'VIG '+v,color:VC[v],data:nets[v]})));
+
+  const pv=all?3:dVig;
+  const D=nets[pv]||nets[vigs[0]];
+  const ev=EV(D);
+  $('dStats').innerHTML=
+    sb(ev.toFixed(2),'Espérance')+
+    sb(((D[0]||0)*100).toFixed(1)+'%','P(0 dégât)')+
+    sb((Pge(D,1)*100).toFixed(1)+'%','P(≥1)')+
+    sb((Pge(D,3)*100).toFixed(1)+'%','P(≥3)')+
+    sb((Pge(D,5)*100).toFixed(1)+'%','P(≥5)');
+
+  const mx=Math.max(...vigs.map(v=>maxK(nets[v])));
+  let h=`<table><thead><tr><th>Dégâts</th>`;
+  for(const v of vigs)h+=`<th colspan="2" style="color:${VC[v]}">VIG ${v}</th>`;
+  h+=`</tr><tr><th></th>`;
+  for(const v of vigs)h+=`<th>P(=)</th><th>P(≥)</th>`;
+  h+=`</tr></thead><tbody>`;
+  for(let g=0;g<=mx;g++){
+    h+=`<tr><td class="lc">${g}</td>`;
     for(const v of vigs){
-      const dist=byVig[v];
-      const pe=((dist[g]||0)*100).toFixed(1)+'%';
-      const pc=(Pge(dist,g)*100).toFixed(1)+'%';
-      h+=`<td>${pe}<span class="pbar-wrap"><span class="pbar" style="width:${Math.min(100,(dist[g]||0)*100)}%"></span></span></td>`;
+      const d=nets[v];
+      const pe=((d[g]||0)*100).toFixed(1)+'%';
+      const pc=(Pge(d,g)*100).toFixed(1)+'%';
+      h+=`<td>${pe}<span class="pb"><span class="pf" style="width:${Math.min(100,(d[g]||0)*100)}%"></span></span></td>`;
       h+=`<td>${pc}</td>`;
     }
     h+=`</tr>`;
   }
   h+=`</tbody></table>`;
-  document.getElementById('dTable').innerHTML=h;
+  $('dTable').innerHTML=h;
 }
+function sb(v,l){return`<div class="sbox"><div class="sv">${v}</div><div class="sl">${l}</div></div>`;}
 
-// ============================================================
-// TAB: MATRIX
-// ============================================================
-function metricVal(dist,m){
-  if(m==='ev') return EV(dist);
-  const t=+m.slice(1);
-  return Pge(dist,t)*100;
+// ── MATRIX TAB ─────────────────────────────────────────────
+function mVal(d,m){return m==='ev'?EV(d):Pge(d,+m.slice(1))*100;}
+function mFmt(v,m){return m==='ev'?v.toFixed(2):v.toFixed(1)+'%';}
+function mCls(v,m){
+  if(m==='ev')return v>=3?'hi':v<=0.5?'lo':'';
+  if(m==='p0')return v<=20?'hi':v>=50?'lo':'';
+  return v>=70?'hi':v<=25?'lo':'';
 }
-function metricFmt(v,m){
-  return m==='ev' ? v.toFixed(2) : v.toFixed(1)+'%';
-}
-function metricClass(v,m){
-  if(m==='ev') return v>=3?'hi':v<=0.5?'lo':'mid';
-  if(m==='p0') return v<=20?'hi':v>=50?'lo':'mid';
-  return v>=70?'hi':v<=25?'lo':'mid';
-}
+const MLBL={ev:'Espérance dégâts',p0:'P(0 dégâts)',p1:'P(≥1 dégât)',
+            p2:'P(≥2 dégâts)',p3:'P(≥3 dégâts)',p5:'P(≥5 dégâts)',none:''};
 
-function renderMatrix(){
-  const ru=R(), vig=matVig;
-  const m1=document.getElementById('matMetric').value;
-  const m2=document.getElementById('matMetric2').value;
-
-  function buildTable(metric){
-    if(metric==='none') return '';
-    const title={ev:'Espérance dégâts',p0:'P(0 dégâts)',p1:'P(≥1 dégât)',p2:'P(≥2 dégâts)',p3:'P(≥3 dégâts)',p5:'P(≥5 dégâts)'}[metric];
-    let h=`<p style="color:var(--dim);font-size:.78em;margin-bottom:4px;text-transform:uppercase;letter-spacing:.1em">${title} — VIG ${vig}</p>`;
-    h+=`<table><thead><tr><th>Arme ↓ / Armure →</th>`;
-    for(const a of armors) h+=`<th>${esc(a.name)}<br><small>RD${a.rd}</small></th>`;
-    h+=`</tr></thead><tbody>`;
-    for(const w of weapons){
-      const raw=computeDist(w.dice,vig,ru);
-      h+=`<tr><td class="lc">${esc(w.name)} (${w.dice}d6)</td>`;
-      for(const a of armors){
-        const net=applyRD(raw,a.rd);
-        const v=metricVal(net,metric);
-        h+=`<td class="${metricClass(v,metric)}">${metricFmt(v,metric)}</td>`;
-      }
-      h+=`</tr>`;
-    }
-    h+=`</tbody></table>`;
-    return h;
-  }
-
-  document.getElementById('mTable').innerHTML=buildTable(m1);
-  document.getElementById('mTable2').innerHTML=buildTable(m2);
-}
-
-// ============================================================
-// TAB: SIMULATION
-// ============================================================
-function rollOnce(numDice,seuil,ru){
-  const rolls=Array.from({length:numDice},()=>1+Math.floor(Math.random()*6));
-  const base=rolls.reduce((s,r)=>s+gainsDie(r,seuil,ru),0);
-  return Math.max(0,base+seriesBonus(rolls,ru));
-}
-
-function runSim(){
+function mkMatrix(metric,vig){
+  if(metric==='none')return'';
   const ru=R();
-  const wi=+document.getElementById('sWpn').value;
-  const ai=+document.getElementById('sArm').value;
-  const vig=+document.getElementById('sVig').value;
-  const endMax=+document.getElementById('sEnd').value;
-  const N=+document.getElementById('sN').value;
-  if(!weapons[wi]||!armors[ai]) return;
+  let h=`<p style="color:var(--dim);font-size:.75em;margin-bottom:4px;
+    text-transform:uppercase;letter-spacing:.1em">${MLBL[metric]} — VIG ${vig}</p>`;
+  h+=`<table><thead><tr><th>Arme ↓ / Armure →</th>`;
+  for(const a of armors)h+=`<th>${esc(a.name)}<br><small>RD${a.rd}</small></th>`;
+  h+=`</tr></thead><tbody>`;
+  for(const w of weapons){
+    const raw=prob(w.d,vig,ru);
+    h+=`<tr><td class="lc">${esc(w.name)} (${w.d}d6)</td>`;
+    for(const a of armors){
+      const v=mVal(rd(raw,a.rd),metric);
+      h+=`<td class="${mCls(v,metric)}">${mFmt(v,metric)}</td>`;
+    }
+    h+=`</tr>`;
+  }
+  h+=`</tbody></table>`;
+  return h;
+}
+function mat(){
+  $('mT1').innerHTML=mkMatrix($('m1').value,mVig);
+  $('mT2').innerHTML=mkMatrix($('m2').value,mVig);
+}
 
-  const wpn=weapons[wi], arm=armors[ai];
-  const MAX_R=300;
-  const rounds=[];
-
+// ── SIMULATION ─────────────────────────────────────────────
+function roll1(nd,s,ru){
+  const r=Array.from({length:nd},()=>1+Math.floor(Math.random()*6));
+  return Math.max(0,r.reduce((t,x)=>t+dg(x,s,ru),0)+bonus(r,ru));
+}
+function sim(){
+  const ru=R(),wi=+$('sW').value,ai=+$('sA').value;
+  const vig=+$('sV').value,end0=+$('sE').value,N=+$('sN').value;
+  if(!weapons[wi]||!armors[ai])return;
+  const wpn=weapons[wi],arm=armors[ai],MAX=300,rs=[];
   for(let s=0;s<N;s++){
-    let hp=endMax, r=0;
-    while(hp>0 && r<MAX_R){
-      hp-=Math.max(0,rollOnce(wpn.dice,vig,ru)-arm.rd);
-      r++;
+    let hp=end0,r=0;
+    while(hp>0&&r<MAX){hp-=Math.max(0,roll1(wpn.d,vig,ru)-arm.rd);r++;}
+    rs.push(r);
+  }
+  rs.sort((a,b)=>a-b);
+  const mean=rs.reduce((a,b)=>a+b,0)/N;
+  const med=rs[Math.floor(N/2)];
+  const p25=rs[Math.floor(N*.25)],p75=rs[Math.floor(N*.75)],p90=rs[Math.floor(N*.9)];
+  const tmout=rs.filter(r=>r>=MAX).length;
+  const f=n=>((n/N)*100).toFixed(1)+'%';
+
+  $('sStats').innerHTML=
+    sb(mean.toFixed(1),'Rounds moy.')+sb(med,'Médiane')+
+    sb(rs[0],'Min')+sb(rs[N-1]>=MAX?rs[N-1]+'*':rs[N-1],'Max')+
+    sb(f(rs.filter(r=>r<=1).length),'1-shot kill')+
+    (tmout?`<div class="sbox"><div class="sv" style="color:var(--red)">${(tmout/N*100).toFixed(1)}%</div><div class="sl">Non-tués</div></div>`:'');
+
+  // histogram
+  const res=rs.filter(r=>r<MAX);
+  if(res.length){
+    const bsz=Math.max(1,Math.ceil(p90*2/40));
+    const bm={};
+    for(const r of res){const b=Math.floor(r/bsz)*bsz;bm[b]=(bm[b]||0)+1;}
+    const bk=Object.keys(bm).map(Number).sort((a,b)=>a-b);
+    const maxV=Math.max(...bk.map(b=>bm[b]/N));
+    const steps=4;
+    let y='<div class="chart-y">';
+    for(let i=steps;i>=0;i--)y+=`<div>${(i/steps*maxV*100).toFixed(0)}%</div>`;
+    y+='</div>';
+    let bars='<div class="chart-bars">';
+    for(const b of bk){
+      const v=bm[b]/N,h=(v/maxV*100).toFixed(1);
+      const lbl=bsz===1?b:`${b}–${b+bsz-1}`;
+      bars+=`<div class="bg"><div class="brow">
+        <div class="b" style="height:${h}%;background:#c4882a"
+          title="${lbl}r : ${(v*100).toFixed(1)}%"></div>
+      </div><div class="bx">${b}</div></div>`;
     }
-    rounds.push(r);
+    bars+='</div>';
+    $('sChart').innerHTML=`<div class="chart"><div class="chart-main">${y}${bars}</div></div>`;
   }
 
-  rounds.sort((a,b)=>a-b);
-  const mean=rounds.reduce((a,b)=>a+b,0)/N;
-  const med=rounds[Math.floor(N/2)];
-  const mn=rounds[0], mx=rounds[N-1];
-  const p25=rounds[Math.floor(N*.25)];
-  const p75=rounds[Math.floor(N*.75)];
-  const p90=rounds[Math.floor(N*.90)];
-  const timeout=rounds.filter(r=>r>=MAX_R).length;
-  const toPct=(v,n)=>((v/n)*100).toFixed(1)+'%';
-
-  // Probability of ≤ X rounds
-  const cum1  = toPct(rounds.filter(r=>r<=1).length, N);
-  const cum3  = toPct(rounds.filter(r=>r<=3).length, N);
-  const cum5  = toPct(rounds.filter(r=>r<=5).length, N);
-  const cum10 = toPct(rounds.filter(r=>r<=10).length, N);
-
-  document.getElementById('sStats').innerHTML=`
-    <div class="stat-box"><div class="stat-val">${mean.toFixed(1)}</div><div class="stat-lbl">Rounds moy.</div></div>
-    <div class="stat-box"><div class="stat-val">${med}</div><div class="stat-lbl">Médiane</div></div>
-    <div class="stat-box"><div class="stat-val">${mn}</div><div class="stat-lbl">Min</div></div>
-    <div class="stat-box"><div class="stat-val">${mx>=MAX_R?mx+'*':mx}</div><div class="stat-lbl">Max</div></div>
-    <div class="stat-box"><div class="stat-val">${cum1}</div><div class="stat-lbl">1-shot kill</div></div>
-    ${timeout>0?`<div class="stat-box"><div class="stat-val" style="color:var(--red)">${(timeout/N*100).toFixed(1)}%</div><div class="stat-lbl">Non-tués (&gt;${MAX_R}r)</div></div>`:''}
-  `;
-
-  // Histogram
-  const resolved=rounds.filter(r=>r<MAX_R);
-  const histMax=p90*2||10;
-  const bins=Math.min(40,Math.ceil(histMax));
-  const bsz=Math.max(1,Math.ceil(histMax/bins));
-  const bMap={};
-  for(const r of resolved){
-    const b=Math.floor(r/bsz)*bsz;
-    bMap[b]=(bMap[b]||0)+1;
-  }
-  const bKeys=Object.keys(bMap).map(Number).sort((a,b)=>a-b);
-  const hLabels=bKeys.map(b=>bsz===1?b:`${b}–${b+bsz-1}`);
-  const hData=bKeys.map(b=>bMap[b]/N*100);
-
-  document.getElementById('sChartWrap').style.display='block';
-  const ctx=document.getElementById('sChart').getContext('2d');
-  if(sChartInst) sChartInst.destroy();
-  sChartInst=new Chart(ctx,{
-    type:'bar',
-    data:{labels:hLabels,datasets:[{
-      label:'% combats',data:hData,
-      backgroundColor:'#c4882a77',borderColor:'#c4882a',borderWidth:1
-    }]},
-    options:{responsive:true,maintainAspectRatio:false,
-      plugins:{legend:{display:false},
-               tooltip:{callbacks:{label:c=>`${c.raw.toFixed(1)}% des combats`}}},
-      scales:{
-        x:{ticks:{color:'#8a7d6a',maxRotation:0},grid:{color:'#2a2520'},
-           title:{display:true,text:'Rounds pour tuer',color:'#8a7d6a',font:{size:11}}},
-        y:{ticks:{color:'#8a7d6a',callback:v=>v+'%'},grid:{color:'#2a2520'},
-           title:{display:true,text:'% des combats',color:'#8a7d6a',font:{size:11}}}
-      }
-    }
-  });
-
-  document.getElementById('sTable').innerHTML=`
+  $('sTable').innerHTML=`
     <table style="width:auto;margin-top:8px">
-      <tr><th>P25</th><th>P50 (méd.)</th><th>P75</th><th>P90</th>
-          <th>Tué en ≤1r</th><th>Tué en ≤3r</th><th>Tué en ≤5r</th><th>Tué en ≤10r</th></tr>
+      <tr><th>P25</th><th>P50</th><th>P75</th><th>P90</th>
+          <th>≤1r</th><th>≤3r</th><th>≤5r</th><th>≤10r</th></tr>
       <tr><td>${p25}r</td><td>${med}r</td><td>${p75}r</td><td>${p90}r</td>
-          <td>${cum1}</td><td>${cum3}</td><td>${cum5}</td><td>${cum10}</td></tr>
+          <td>${f(rs.filter(r=>r<=1).length)}</td>
+          <td>${f(rs.filter(r=>r<=3).length)}</td>
+          <td>${f(rs.filter(r=>r<=5).length)}</td>
+          <td>${f(rs.filter(r=>r<=10).length)}</td></tr>
     </table>
-    ${timeout>0?`<p class="note">* ${timeout} combat(s) non terminés après ${MAX_R} rounds (dégâts attendus ≤ 0).</p>`:''}
+    ${tmout?`<p class="note">* ${tmout} combat(s) non terminés après ${MAX} rounds.</p>`:''}
   `;
 }
 
-// ============================================================
-// GLOBAL UPDATE
-// ============================================================
-function updateAll(){
-  renderWpnList(); renderArmList(); syncSelects();
-  renderDist(); renderMatrix();
+// ── GLOBAL UPDATE ──────────────────────────────────────────
+function all(){
+  renderWpn();renderArm();sync();dist();mat();
 }
 
-// ============================================================
-// INIT
-// ============================================================
-window.addEventListener('load',()=>{
-  renderWpnList(); renderArmList(); syncSelects();
-  renderDist(); renderMatrix();
-  // live update on rule changes
-  ['g1','gB','gA','g6','dblVal','triVal'].forEach(id=>{
-    document.getElementById(id).addEventListener('change',updateAll);
-  });
-  ['dblOn','triOn','triStack'].forEach(id=>{
-    document.getElementById(id).addEventListener('change',updateAll);
-  });
-});
+// ── INIT — no CDN wait needed ──────────────────────────────
+(function init(){
+  if(document.readyState==='loading'){
+    document.addEventListener('DOMContentLoaded',init);return;
+  }
+  renderWpn();renderArm();sync();dist();mat();
+  ['g1','gB','gA','g6','dblV','triV'].forEach(id=>$(id).addEventListener('change',all));
+  ['dblOn','triOn','triStk'].forEach(id=>$(id).addEventListener('change',all));
+})();
 </script>
 </body>
 </html>

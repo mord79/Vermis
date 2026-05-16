@@ -88,7 +88,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 209.5
+    "width": 371.5
   },
   "right": {
     "id": "79b55457e154c67a",
@@ -231,8 +231,9 @@
       "copilot:Open Copilot Chat": false
     }
   },
-  "active": "5f2d8f276f8620fa",
+  "active": "b36bbe4918ab2b98",
   "lastOpenFiles": [
+    "09-Vermis-Mini/Outils/testeur-des.html",
     "09-Vermis-Mini/testeur-des.html",
     "copilot/copilot-custom-prompts/Translate to Chinese.md",
     "copilot/copilot-custom-prompts/Summarize.md",

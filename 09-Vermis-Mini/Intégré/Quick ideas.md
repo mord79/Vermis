@@ -1,3 +1,7 @@
+Si manque de granularité avec les blessure, avec X END/blessure ou qqc comme ça
+
+Problème avec les blessures, puisqu'on donne qu'une seul blessure à ls fois, personne ne peut mourir completement en 1 coup. Il manque un test de VIG quand on reçoit un une blessure pour rester debout, sur un 6 prendre 2 blressure
+
 Bloc
 - Choix tactique, absorbe X dégâts mais prend 1 usure, ou à des pts pour encaisser.
 	- Plus le Shields est gros, plus il peut encaissé

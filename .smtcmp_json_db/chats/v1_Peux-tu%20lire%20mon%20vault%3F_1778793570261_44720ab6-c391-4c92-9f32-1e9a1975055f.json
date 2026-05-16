@@ -1,0 +1,228 @@
+{
+  "id": "44720ab6-c391-4c92-9f32-1e9a1975055f",
+  "title": "Peux-tu lire mon vault?",
+  "messages": [
+    {
+      "role": "user",
+      "content": {
+        "root": {
+          "children": [
+            {
+              "children": [
+                {
+                  "detail": 0,
+                  "format": 0,
+                  "mode": "normal",
+                  "style": "",
+                  "text": "Peux-tu lire mon vault?",
+                  "type": "text",
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "type": "paragraph",
+              "version": 1,
+              "textFormat": 0,
+              "textStyle": ""
+            }
+          ],
+          "direction": "ltr",
+          "format": "",
+          "indent": 0,
+          "type": "root",
+          "version": 1
+        }
+      },
+      "promptContent": [
+        {
+          "type": "text",
+          "text": "\n\nPeux-tu lire mon vault?\n\n"
+        }
+      ],
+      "id": "2a3f9e62-bf51-4493-96e7-de1be50a29fc",
+      "mentionables": [
+        {
+          "type": "current-file",
+          "file": null
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "content": "Non, je n'ai pas accès à votre vault Obsidian. Je ne peux pas lire vos fichiers locaux.\n\nPour que je puisse vous aider, vous devez :\n- **Copier-coller** le contenu des fichiers dans la conversation\n- **Partager** des extraits spécifiques sur lesquels vous avez des questions\n\nQue souhaitez-vous faire ?",
+      "reasoning": "L'utilisateur me demande si je peux lire son vault Obsidian. Je dois être honnête - je n'ai pas accès à ses fichiers locaux ou à son vault Obsidian. Je ne peux pas lire, parcourir ou accéder à des fichiers sur son ordinateur à moins qu'il ne me les partage directement dans la conversation.",
+      "id": "19a3b106-97dc-489d-bbad-7ffc2aa3a615",
+      "metadata": {
+        "model": {
+          "providerType": "anthropic-plan",
+          "providerId": "anthropic-plan",
+          "id": "claude-opus-4.5 (plan)",
+          "model": "claude-opus-4-5",
+          "thinking": {
+            "enabled": true,
+            "budget_tokens": 8192
+          }
+        },
+        "usage": {
+          "prompt_tokens": 511,
+          "completion_tokens": 199,
+          "total_tokens": 710
+        }
+      }
+    },
+    {
+      "role": "user",
+      "content": {
+        "root": {
+          "children": [
+            {
+              "children": [
+                {
+                  "detail": 0,
+                  "format": 0,
+                  "mode": "normal",
+                  "style": "",
+                  "text": "Est-ce qu'il y a un moyen pour tu puisse avoir accès à mon vaut?",
+                  "type": "text",
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "type": "paragraph",
+              "version": 1,
+              "textFormat": 0,
+              "textStyle": ""
+            }
+          ],
+          "direction": "ltr",
+          "format": "",
+          "indent": 0,
+          "type": "root",
+          "version": 1
+        }
+      },
+      "promptContent": [
+        {
+          "type": "text",
+          "text": "\n\nEst-ce qu'il y a un moyen pour tu puisse avoir accès à mon vaut?\n\n"
+        }
+      ],
+      "id": "62b2fb73-8342-4f83-a923-8cce1e80fc1d",
+      "mentionables": [
+        {
+          "type": "current-file",
+          "file": null
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "content": {
+        "root": {
+          "children": [
+            {
+              "children": [
+                {
+                  "detail": 0,
+                  "format": 0,
+                  "mode": "normal",
+                  "style": "",
+                  "text": "Est-ce qu'il y a un moyen pour tu puisse avoir accès à mon vaut?",
+                  "type": "text",
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "type": "paragraph",
+              "version": 1,
+              "textFormat": 0,
+              "textStyle": ""
+            }
+          ],
+          "direction": "ltr",
+          "format": "",
+          "indent": 0,
+          "type": "root",
+          "version": 1
+        }
+      },
+      "promptContent": null,
+      "id": "ba28e2bf-275a-494d-82fb-eced470c58ef",
+      "mentionables": [
+        {
+          "type": "current-file",
+          "file": null
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "content": {
+        "root": {
+          "children": [
+            {
+              "children": [
+                {
+                  "detail": 1,
+                  "format": 0,
+                  "mode": "token",
+                  "style": "",
+                  "text": "@Vermis_d6_v10.md",
+                  "type": "mention",
+                  "version": 1,
+                  "mentionName": "Vermis_d6_v10.md",
+                  "mentionable": {
+                    "type": "file",
+                    "file": "09-Vermis-Mini/Intégré/Vermis_d6_v10.md"
+                  }
+                },
+                {
+                  "detail": 0,
+                  "format": 0,
+                  "mode": "normal",
+                  "style": "",
+                  "text": " Peux-tu lire ce doc?",
+                  "type": "text",
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "type": "paragraph",
+              "version": 1,
+              "textFormat": 0,
+              "textStyle": ""
+            }
+          ],
+          "direction": "ltr",
+          "format": "",
+          "indent": 0,
+          "type": "root",
+          "version": 1
+        }
+      },
+      "promptContent": null,
+      "id": "e467a034-4bc9-4e87-89e6-360ccc62400b",
+      "mentionables": [
+        {
+          "type": "current-file",
+          "file": "09-Vermis-Mini/Intégré/Vermis_d6_v10.md"
+        },
+        {
+          "type": "file",
+          "file": "09-Vermis-Mini/Intégré/Vermis_d6_v10.md"
+        }
+      ]
+    }
+  ],
+  "createdAt": 1778792036666,
+  "updatedAt": 1778793570261,
+  "schemaVersion": 1
+}

@@ -157,14 +157,14 @@ Item personnalisé* : +1D
 | Nomade / Guerrier     | • \*Hache à deux mains             | 1\. Esclave en fuite — Chaîne<br>2\. Garde de caravane — Lanterne à huile<br>3\. Montagnard — Crampons d'escalade<br>4\. Cavalier nomade — Arc composite<br>5\. Fou de guerre — Champirage (3)<br>6\. Chef de tribu — Collier de dents       |
 | Paysan / Soldat       | • Lance<br>• *Grand bouclier       | 1. Cultivateur - Fourche<br>2. Déserteur — Cape tachée de sang<br>3. Berger — gourde de vin<br>4. Fossoyeur — Pelle <br>5. Mineur — Pioche<br>6. Bûcheron — Hache à fendre                                                                   |
 | Artisan / Armurier    | - *Marteau de guerre<br>- Bouclier | 1\. Boucher — Hachoir<br>2\. Charpentier — Scie<br>3\. Forgeron — Marteau<br>4\. Fossoyeur — Pelle<br>5\. Tailleur de pierre — Ciseau à pierre<br>6\. Maréchal-ferrant — Pinces                                                              |
-| Criminel / Mercenaire | - épée bâtarde<br>- *Arbalète      | 1.Homme de main — Chaîne <br>2. Pillard — &&&<br>3. Tueur à gages — Fiole de poison rapide<br>4. Geôlier — Menottes<br>5. Bandit — &&&<br>6. Nettoyeur — Sac de chaux vive                                                                   |
-| Artiste / Bretteur    | - *Rapière<br>- Main-gauche        | 1\. Vengeur masqué — Masque de fer<br>2\. &&& — <br>3\. Instructeur d'armes — Épée de bois<br>4\. Escrimeur — Gants de cuir<br>5\. Écuyer — Étendard<br>6\. Officier — Longue-vue                                                            |
+| Criminel / Mercenaire | - épée bâtarde<br>- *Arbalète      | 1.Homme de main — Chaîne <br>2. Pillard — Pelisse de loup<br>3. Tueur à gages — Fiole de poison rapide<br>4. Geôlier — Menottes<br>5. Bandit — Foulard<br>6. Nettoyeur — Sac de chaux vive                                                   |
+| Artiste / Bretteur    | - *Rapière<br>- Main-gauche        | 1\. Vengeur masqué — Masque de fer<br>2\. Corsaire — Perroquet<br>3\. Instructeur d'armes — Épée de bois<br>4\. Escrimeur — Gants de cuir<br>5\. Écuyer — Étendard<br>6\. Officier — Longue-vue                                              |
 | Noble / Chevalier     | • \*Épée longue<br>• Bouclier      | 1. Templier — Relique brisée<br>2. Chevalier errant — Sceau de cire héraldique<br>3. Garde d'élite — Cape de cérémonie<br>4. Maître d'armes — Pierre à aiguiser fine<br>5. Noble exilé — Bague à cachet (or)<br>6. Capitaine — Cor de guerre |
 #### 2.4.5.2 Filous
 
 | Archétype                     | Item personnalisé\*                          | Occupation (Motivation)                                                                                                                                                                                                                     |
 | ----------------------------- | -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Nomade / Rôdeur               | • \* Arc long<br>• Boussole                  | 1. Éclaireur — &&&<br>2. Cartographe — Rouleau de parchemin et fusain<br>3. &&&<br>4. Contrebandier — Peau de bête traitée<br>5. Messager — Sacoche étanche<br>6. Chasseur — &&&                                                            |
+| Nomade / Explorateur          | • \* Arc long<br>• Boussole                  | 1. Éclaireur — Longue vue pliable<br>2. Cartographe — Rouleau de parchemin<br>3. Prospecteur - tamis<br>4. Contrebandier — Peau de bête traitée<br>5. Messager — Sacoche étanche<br>6. Chasseur — &&&                                       |
 | Paysan / Scout                | • * Fronde<br>• Corde & Grappin              | 1. Trappeur — Appâts olfactifs<br>2. &&&<br>3. Guet — Cloche de détresse<br>4. Cueilleur — Panier de récolte<br>5. Braconnier  — Cape de camouflage <br>6. Pêcheur — Filet plombé                                                           |
 | Artisan / Chasseur de Trésors | • Arbalète de poing<br>• \*Kit de crochetage | 1. Horloger — pinces de précision<br>2. Serrurier — Limes diverses<br>3. Orfèvre — Petits Forets <br>4. Couturier — Aiguilles et fils<br>5. Verrier — Cisailles <br>6. Graveur — Petits Étaux                                               |
 | Criminel / Voleur             | • Dague double<br>• \*Kit de crochetage      | 1. Cambrioleur — &&&<br>2. Monte-en-l'air — Grappin miniature<br>3. Pickpocket — Doigtier de cuir<br>4. Faussaire — Plume et encres diverses<br>5. Receleur — Petite balance de précision<br>6. &&& — &&&                                   |
@@ -191,14 +191,14 @@ Le pool dépend de l'**outil ou l'arme** utilisé. L'attribut détermine la prob
 
 **d6 < attribut courant = 1 gain. ≥ attribut = 0.** *(L'attribut courant peut être réduit par les Blessures, cf. §1.4.1.)*
 
-| Situation | Pool |
-|---|---|
-| Test nu — aucun outil | 1d |
-| Outil basique / arme improvisée | 2d |
-| Outil de qualité / petite arme | 3d |
-| Outil exceptionnel / arme moyenne | 4d |
-| Arme longue | 5d |
-| Arme lourde (deux mains) | 6d |
+| Situation                         | Pool |
+| --------------------------------- | ---- |
+| Test Simple — aucun outil         | 1d   |
+| Outil basique / arme improvisée   | 2d   |
+| Outil de qualité / petite arme    | 3d   |
+| Outil exceptionnel / arme moyenne | 4d   |
+| Arme longue                       | 5d   |
+| Arme lourde (deux mains)          | 6d   |
 
 **Don** applicable : **+1d** au pool *(cf. §1.1.3)*.
 **Expertise** applicable : **+1d**, **−1 difficulté**, ou modification de la nature du test *(au choix, cf. §1.1.4)*.
@@ -219,10 +219,16 @@ Les bonus s'appliquent sur les **gains bruts**, avant la difficulté.
 
 Un **double** (deux dés identiques, tous deux < attribut) ou un **triple** (trois identiques en succès) **ne donne pas de gain automatique**. Il agit comme un **déclencheur d'effet spécial**, à activer si le contexte le permet.
 
-| Déclencheur | Quoi |
-|---|---|
-| **Double** | 1 effet spécial au choix parmi les options disponibles |
-| **Triple** | 1 effet spécial fort, ou 2 effets distincts au choix |
+| Déclencheur | Quoi                                                   |
+| ----------- | ------------------------------------------------------ |
+| **Double**  | 1 effet spécial au choix parmi les options disponibles |
+| **Triple**  | 1 effet spécial fort, ou 2 effets distincts au choix   |
+| **6**       | Sur un test Simple (1 seul d), échec critique          |
+Échec critique : la situation s'empire, au choix du MJ. Possibilité :
+- Usure
+- Perte de END
+- Réaction négative des PNJ
+- Test d'évènement 
 
 **Effets spéciaux disponibles** :
 
@@ -308,6 +314,10 @@ Aucune mécanique. Arbitrage MJ-joueur :
 **Catégories de prix** : bruit/attention, temps perdu, ressource consommée, blessure/usure, trace laissée, dette narrative, moralité.
 
 > *Le prix doit être réel et ressenti. Un prix trivial n'est pas un prix.*
+
+## 3.12 Jet de chance et oracle
+
+
 
 ---
 
@@ -412,7 +422,19 @@ Bouclier ou couverture obligatoire pour bloquer un projectile.
 
 L'arbitrage du type de dégât revient au MJ. En cas d'ambiguïté, choisir le typage le plus narrativement satisfaisant.
 
-## 5.2 Push (Bet pré-déclaré)
+Lorsqu'une créature reçoit une blessure, il doit faire immédiatement un Test Simple de l'attribut blessé avec la nouvelle valeur pour rester debout avec 1d (certains dons peuvent rajouter +1d). Sur un échec, le personnage tombe au sol et est **vulnérable** (+1d de dégât reçu) jusqu'à se qu'il utilise une manœuvre pour se relever. Sur un échec critique (6), il reçoit une blessure de plus
+
+## 5.2 Autres conditons
+
+- **Vulnérable** : Reçoit les dégats avec +1d
+- Exténué
+- Paniqué
+- Aveuglé
+- Sourd
+- Inconscient 
+- Mourant
+
+## 5.3 Push (Bet pré-déclaré)
 
 **Avant le jet**, le joueur peut dépenser des ressources pour ajouter des dés au pool. C'est un **pari** — la dépense est payée d'avance, même en cas d'échec.
 
@@ -423,7 +445,7 @@ L'arbitrage du type de dégât revient au MJ. En cas d'ambiguïté, choisir le t
 
 Voir §1.2.6 pour le détail mécanique.
 
-## 5.3 États critiques et mort
+## 5.4 États critiques et mort
 
 | Attribut | À 1 (état critique) | À 0 |
 |---|---|---|
@@ -437,7 +459,7 @@ L'état critique signifie que tous les jets impliquant cet attribut **échouent 
 
 *Les Blessures sur des attributs différents s'accumulent indépendamment. Un personnage peut avoir VIG 2 et ESP 1 sans être mort, mais il ne peut plus rien faire qui implique ESP.*
 
-## 5.4 Récupération
+## 5.5 Récupération
 
 Le PJ possède **VIG points de récupération (PR)** *(calculés sur la VIG max — valeur de départ — pas affectés par les Blessures à VIG)*. Les PR servent au combat et à la guérison.
 
@@ -698,7 +720,144 @@ Comment évoluent les attributs, dons et expertises. Probablement lié à l'or d
 
 ---
 
-# 14 Principes du MJ
+# 14 Oracle Chromatique 
+
+## 14.1 Manuel étendu
+
+Trois dés colorés — rouge, vert, bleu — roulés ensemble. L'**ordre de lecture** est imposé par la position des dés une fois immobilisés, **de gauche à droite**. Le MJ ne choisit pas — il lit ce que le hasard a disposé.
+
+Chaque dé porte deux informations : sa **face** (D1/D2/D3 selon position) et sa **valeur** (intensité sur le spectre de sa couleur).
+
+Le MJ lit le résultat comme une phrase à interpréter. Garder ce qui résonne. Ignorer ce qui ne s'intègre pas. Laisser les contradictions travailler.
+
+**L'oracle ne remplace jamais les règles.** Outil d'improvisation et de préparation, optionnel par nature.
+
+---
+
+## 14.2 Oracle de base
+
+### 14.2.1 Les couleurs (spectres d'intensité, 1–6)
+
+Chaque couleur est un **spectre tendu entre deux pôles**. La valeur du dé indique où la situation se place sur ce spectre.
+
+| Couleur   | Spectre    | 1 ────────────────── 6  |
+| --------- | ---------- | ----------------------- |
+| **Rouge** | Menace     | inexistante ↔ écrasante |
+| **Vert**  | Lieu       | hospitalier ↔ hostile   |
+| **Bleu**  | Récompense | dérisoire ↔ démesurée   |
+
+### 14.2.2 La table unique
+
+| #   | D1 — Approche            | D2 — Origine                     | D3 — Motivation      |
+| --- | ------------------------ | -------------------------------- | -------------------- |
+| 1   | Corps, force, présence   | Nature dormante (pierre, plante) | Liberté, rupture     |
+| 2   | Endurance, résistance    | Nature vivante (bête, météo)     | Justice, dette       |
+| 3   | Adresse, technique       | Commerce, marché                 | Perfection, maîtrise |
+| 4   | Sens, perception         | Ombre, crime, secrets            | Équilibre, retour    |
+| 5   | Savoir, mémoire          | Art, culte, tradition            | Contrôle, domination |
+| 6   | Parole, lien, réputation | Pouvoir, noblesse                | Gloire, richesse     |
+
+### 14.2.3 L'arc temporel
+
+La position des dés (gauche → centre → droite) impose l'ordre d'apparition des éléments dans la scène.
+
+| Position lue | Sens                                                       |
+| ------------ | ---------------------------------------------------------- |
+| R → V → B    | Menace ouvre. Lieu se révèle. Récompense conclut.          |
+| R → B → V    | Danger et gain ensemble. Le lieu pèse en dernier.          |
+| V → B → R    | Le lieu cadre la scène. Gain apparaît. Menace se referme.  |
+| V → R → B    | Le lieu d'abord. Friction surgit. Reste utile.             |
+| B → V → R    | Trésor s'annonce. Le lieu se manifeste. Menace en dernier. |
+| B → R → V    | Récompense visible. Danger révélé. Le lieu décide.         |
+
+Position = D1 (gauche), D2 (centre), D3 (droite). Les faces se lisent dans cet ordre quelle que soit la couleur qui les porte.
+
+### 14.2.4 Usages
+
+- **Question ouverte** — lancer, lire D1/D2/D3 comme trois mots-clés, modulés en intensité par les couleurs, ordonnés par l'arc.
+- **Événement spontané** — lancer sans question, laisser le résultat proposer une direction.
+- **Solo RPG** — substitut de MJ, une question par scène.
+
+---
+
+## 14.3 Twists
+
+| Twist              | Effet                                                                                                              |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| **Dé manquant**    | Retirer une couleur sans objet dans la scène. Lecture à deux temps, plus tranchée.                                 |
+| **Échos**          | Deux valeurs identiques = thème répété. Trois identiques = présage, bascule.                                       |
+| **Dissonances**    | Valeur d'une couleur en tension avec sa face = matière narrative la plus riche. Ne pas résoudre, jouer.            |
+| **Oracle inversé** | Lire le jet comme une question que le MJ tranche lui-même, pas comme une réponse.                                  |
+| **Évolutif**       | Conserver un jet pour un lieu/PNJ/faction. Le relire à chaque retour. Le sens change selon ce que les PJ ont fait. |
+| **Dés-tâche**      | Remplacer d6 par d4/d6/d8/d10/d12. Taille = échelle de la scène. Valeurs hautes plus rares aux grandes échelles.   |
+| **Relationnel**    | Deux jets pour deux entités. Croiser. Génère une dynamique, pas un événement. Réservé aux moments-clés.            |
+
+---
+
+## 14.4 Variantes contextuelles
+
+L'oracle de base reste identique. Seul le **spectre des couleurs** se recadre selon le contexte — les pôles changent, la mécanique non.
+
+| Variante           | Rouge (spectre)               | Vert (spectre)                                 | Bleu (spectre)                     | Lecture spécifique                                |
+| ------------------ | ----------------------------- | ---------------------------------------------- | ---------------------------------- | ------------------------------------------------- |
+| **Faction**        | Stable ↔ assiégée             | Position consolidée ↔ précaire                 | Sans projet ↔ ambition dévorante   | Arc = cycle de la faction depuis dernière session |
+| **Donjon**         | Inerte ↔ activement hostile   | Architecture lisible ↔ piégeuse                | Vide ↔ richement doté              | D2 = texture/dressing, D3 = trace résiduelle      |
+| **Hex**            | Sûr ↔ mortel                  | Hospitalier ↔ hostile (climat, faune, terrain) | Sans intérêt ↔ irrésistible        | Arc spatial : loin / chemin / caché               |
+| **Ville/Quartier** | Apaisé ↔ sous tension         | Accueillant aux étrangers ↔ fermé              | Pauvre en offres ↔ généreux        | D2 = strate sociale du quartier                   |
+| **Rumeur**         | Anodine ↔ alarmante           | Source fiable ↔ douteuse                       | Promesse vague ↔ trésor annoncé    | Écart rumeur/réalité = outil narratif             |
+| **PNJ**            | Sans peur ↔ terrifié          | Ancré dans son milieu ↔ déplacé                | Sans désir ↔ obsédé                | D1/D2/D3 = Approche/Origine/Motivation            |
+| **Voyage/Étape**   | Trajet aisé ↔ obstacle majeur | Route praticable ↔ traîtresse                  | Rien à voir ↔ découverte précieuse | Arc = matin/midi/soir                             |
+| **Camp/Nuit**      | Calme ↔ trouble profond       | Abri sûr ↔ exposé                              | Nuit muette ↔ révélation forte     | Bleu module qualité du repos                      |
+
+---
+
+## 14.5 Créer sa propre variante
+
+Trois étapes.
+
+**1. Définir trois spectres orthogonaux.** Chaque couleur est un axe tendu entre deux extrêmes qui ne se recoupent pas. Patrons utiles :
+
+- Menace / Lieu / Récompense (générique)
+- Pression / Position / Objectif (faction)
+- Hostilité / Architecture / Trésor (donjon)
+- Tension / Accueil / Offre (lieu social)
+- Crainte / Ancrage / Désir (intériorité)
+
+**2. Garder ou recadrer les tables.** Dans 80 % des cas, les tables D1/D2/D3 fonctionnent telles quelles — il suffit de les _lire_ différemment selon le spectre actif. Créer une table dédiée seulement si la variante l'exige.
+
+**3. Choisir un axe pour l'arc.**
+
+- Temps (passé/présent/futur)
+- Espace (loin/proche/contact)
+- Profondeur (apparence/réalité/caché)
+- Causalité (cause/événement/conséquence)
+
+**Avertissement.** Plus on formalise de variantes, plus on fige l'outil. L'esprit est inverse : un squelette reconfigurable à la volée. Un MJ qui invente sa variante en cours de session n'a pas à demander la permission.
+
+---
+
+## 14.6 Aide-mémoire
+
+```
+SPECTRES (intensité 1 → 6)
+ROUGE  Menace      inexistante  ─────  écrasante
+VERT   Lieu        hospitalier  ─────  hostile
+BLEU   Récompense  dérisoire    ─────  démesurée
+
+POSITION (gauche → droite, imposée par le jet)
+D1 Approche   D2 Origine        D3 Motivation
+1 Corps       1 Pierre/plante   1 Liberté
+2 Endurance   2 Bête/météo      2 Justice
+3 Adresse     3 Commerce        3 Perfection
+4 Sens        4 Ombre           4 Équilibre
+5 Savoir      5 Culte/art       5 Contrôle
+6 Parole      6 Pouvoir         6 Gloire
+
+TWISTS
+Dé manquant · Échos · Dissonances · Inversé
+Évolutif · Dés-tâche · Relationnel
+```
+# 15 Principes du MJ
 
 - Préparer des **situations**, pas des intrigues.
 - Présenter des choix intéressants.
@@ -719,7 +878,7 @@ Comment évoluent les attributs, dons et expertises. Probablement lié à l'or d
 
 ---
 
-# 15 Appendice A - Table des Expertises, Dons et Handicapes
+# 16 Appendice A - Table des Expertises, Dons et Handicapes
 Rappel mécanique :
 
 - **Expertise** → +1d au pool quand applicable (au choix MJ : action possible, +1d, ou nature modifiée).
@@ -728,7 +887,7 @@ Rappel mécanique :
 
 ---
 
-## 15.1 Expertises
+## 16.1 Expertises
 
 Sources : Approche (×2), Origine (×2), Archétype (×1).
 
@@ -764,7 +923,7 @@ Sources : Approche (×2), Origine (×2), Archétype (×1).
 
 ---
 
-## 15.2 Dons
+## 16.2 Dons
 
 Source : table Motivation (D-Bleu). 18 dons, 1 par personnage à la création.
 
@@ -791,7 +950,7 @@ Source : table Motivation (D-Bleu). 18 dons, 1 par personnage à la création.
 
 ---
 
-## 15.3 Handicaps
+## 16.3 Handicaps
 
 Source : table Approche (D-Rouge). Un par personnage à la création.
 
@@ -832,7 +991,7 @@ Source : table Approche (D-Rouge). Un par personnage à la création.
 | **TOC**                   | Compulsion à vérifier, organiser, recommencer — ralentit l'urgence.     |
 | **Toux chronique**        | Discrétion sonore, embuscade, planque.                                  |
 | **Vertige**               | Hauteur, vide, surplomb _(cf. § 15.1)_.                                 |
-# 16 Appendice A — Tables de probabilité
+# 17 Appendice A — Tables de probabilité
 
 *Format : **Succès% / Échec%**. Sans push, sans Blessure. Bonus : **dé rouge en succès = +1 gain**, **+1 par 1 roulé** (cumulable). **Gras** = ligne attribut 4 (référence).*
 

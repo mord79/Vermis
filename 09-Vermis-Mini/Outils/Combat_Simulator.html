@@ -4,34 +4,27 @@
 <meta charset="UTF-8">
 <title>Vermis Mini — Simulateur de Combat</title>
 <style>
-/* ============= THEME GRIMDARK ============= */
 :root{
   --bg:#161412; --bg2:#1f1c19; --bg3:#2a2622; --border:#3a342d;
   --text:#d8cfc2; --muted:#8a7f6f; --accent:#b8412f; --accent2:#c98a3b;
   --good:#5e8a3e; --bad:#a13320; --warn:#c98a3b;
-  --red-die:#c93b2b; --shadow:rgba(0,0,0,.4);
+  --red-die:#c93b2b;
 }
 *{box-sizing:border-box}
-body{
-  margin:0;padding:14px;font:13px/1.5 'Iowan Old Style','Palatino Linotype',serif;
-  background:var(--bg);color:var(--text);min-height:100vh;
-}
+body{margin:0;padding:14px;font:13px/1.5 'Iowan Old Style','Palatino Linotype',serif;background:var(--bg);color:var(--text)}
 h1{font-size:22px;margin:0 0 4px;color:var(--accent2);letter-spacing:.5px}
 h2{font-size:16px;margin:0 0 8px;color:var(--accent2);border-bottom:1px solid var(--border);padding-bottom:4px}
-h3{font-size:14px;margin:8px 0 4px;color:var(--text)}
+h3{font-size:14px;margin:8px 0 4px}
 .subtitle{color:var(--muted);font-size:12px;font-style:italic;margin-bottom:12px}
 .panel{background:var(--bg2);border:1px solid var(--border);border-radius:4px;padding:10px;margin-bottom:10px}
 .grid{display:grid;gap:10px}
 .grid-2{grid-template-columns:1fr 1fr}
 .row{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:6px}
 label{color:var(--muted);font-size:12px}
-input,select,button,textarea{
-  background:var(--bg3);color:var(--text);border:1px solid var(--border);
-  padding:4px 6px;border-radius:3px;font:inherit;font-size:12px;
-}
+input,select,button,textarea{background:var(--bg3);color:var(--text);border:1px solid var(--border);padding:4px 6px;border-radius:3px;font:inherit;font-size:12px}
 input[type="number"]{width:60px}
 input[type="text"]{width:120px}
-button{cursor:pointer;background:var(--bg3);transition:background .15s}
+button{cursor:pointer;transition:background .15s}
 button:hover{background:var(--border)}
 button.primary{background:var(--accent);color:#fff;border-color:var(--accent)}
 button.primary:hover{background:#d04e3a}
@@ -40,10 +33,7 @@ button.small{padding:2px 6px;font-size:11px}
 .team{padding:10px;border:1px solid var(--border);border-radius:4px;background:var(--bg2)}
 .team.a{border-left:3px solid var(--accent)}
 .team.b{border-left:3px solid var(--accent2)}
-.combatant{
-  background:var(--bg3);border:1px solid var(--border);border-radius:3px;
-  padding:6px 8px;margin:4px 0;font-size:12px;
-}
+.combatant{background:var(--bg3);border:1px solid var(--border);border-radius:3px;padding:6px 8px;margin:4px 0;font-size:12px}
 .combatant.dead{opacity:.4;text-decoration:line-through}
 .combatant-header{display:flex;justify-content:space-between;align-items:center;gap:4px;cursor:pointer}
 .combatant-name{flex:1;font-weight:600;color:var(--accent2)}
@@ -53,60 +43,61 @@ button.small{padding:2px 6px;font-size:11px}
 .stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;font-size:11px}
 .stat-grid .row{margin:0}
 .stat-grid label{min-width:32px}
-.actions{display:flex;gap:4px;justify-content:flex-end}
 .results-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:8px}
 .stat-box{background:var(--bg3);padding:6px 8px;border-radius:3px;border:1px solid var(--border)}
 .stat-box .v{font-size:18px;color:var(--accent2);font-weight:600}
 .stat-box .l{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px}
 .bar{height:6px;background:var(--bg3);border-radius:2px;margin-top:2px;overflow:hidden}
-.bar > div{height:100%;background:var(--accent2);transition:width .3s}
+.bar > div{height:100%;background:var(--accent2)}
 .bar.team-a > div{background:var(--accent)}
 .bar.team-b > div{background:var(--accent2)}
-.log{
-  background:#0d0c0b;border:1px solid var(--border);border-radius:3px;
-  padding:8px;max-height:300px;overflow:auto;font:11px/1.4 'Consolas',monospace;
-  white-space:pre-wrap;
-}
+.log{background:#0d0c0b;border:1px solid var(--border);border-radius:3px;padding:8px;max-height:480px;overflow:auto;font:11px/1.4 'Consolas',monospace;white-space:pre-wrap}
 .log .l-attack{color:#c98a3b}
 .log .l-damage{color:#c93b2b}
 .log .l-heal{color:#5e8a3e}
 .log .l-death{color:#a13320;font-weight:bold}
 .log .l-info{color:#8a7f6f}
+.log .l-morale{color:#7a5fc8}
 .log .l-round{color:#d8cfc2;font-weight:bold;border-top:1px solid var(--border);margin-top:4px;padding-top:4px}
+.log .l-summary{color:#6d7a3a;font-style:italic;margin-left:8px}
 .log .l-victory{color:#c98a3b;font-weight:bold;font-size:13px;margin-top:6px}
 table{width:100%;border-collapse:collapse;font-size:11px}
 th,td{padding:4px 6px;text-align:left;border-bottom:1px solid var(--border)}
 th{color:var(--muted);font-weight:normal;text-transform:uppercase;font-size:10px;letter-spacing:.5px}
 tr:hover td{background:var(--bg3)}
-.dice{display:inline-flex;gap:2px;flex-wrap:wrap}
-.die{
-  display:inline-block;width:18px;height:18px;line-height:18px;text-align:center;
-  background:var(--bg3);border:1px solid var(--border);border-radius:2px;font-weight:600;font-size:11px;
-}
+.die{display:inline-block;width:18px;height:18px;line-height:18px;text-align:center;background:var(--bg3);border:1px solid var(--border);border-radius:2px;font-weight:600;font-size:11px}
 .die.red{background:var(--red-die);color:#fff;border-color:var(--red-die)}
 .die.success{outline:1px solid var(--good)}
 .die.one{background:var(--accent2);color:#000}
 .die.red.one{background:var(--accent);color:#fff}
-.flex{display:flex;gap:6px;align-items:center}
-.muted{color:var(--muted)}
-.warn{color:var(--warn)}
 .tag{display:inline-block;padding:1px 5px;background:var(--bg3);border:1px solid var(--border);border-radius:8px;font-size:10px;margin-right:2px}
-hr{border:none;border-top:1px solid var(--border);margin:8px 0}
 details summary{cursor:pointer;color:var(--muted);font-size:12px;padding:4px 0}
 details[open] summary{color:var(--text)}
-.hidden{display:none}
-.tooltip{position:relative;display:inline-block;cursor:help;color:var(--muted);border-bottom:1px dotted var(--muted)}
-.tooltip:hover::after{
-  content:attr(data-tip);position:absolute;bottom:100%;left:0;
-  background:var(--bg);border:1px solid var(--border);padding:6px;border-radius:3px;
-  width:260px;font-size:11px;color:var(--text);z-index:100;font-family:serif;
-}
+.tooltip{position:relative;cursor:help;border-bottom:1px dotted var(--muted)}
+.tooltip:hover::after{content:attr(data-tip);position:absolute;bottom:100%;left:0;background:var(--bg);border:1px solid var(--border);padding:6px;border-radius:3px;width:280px;font-size:11px;color:var(--text);z-index:100;font-family:serif;white-space:normal;line-height:1.4}
+.muted{color:var(--muted)}
+.footer{text-align:center;color:var(--muted);font-size:10px;margin-top:24px;padding-top:8px;border-top:1px solid var(--border)}
+.timeline-wrap{margin-top:8px;background:var(--bg3);padding:6px;border-radius:3px}
+.timeline-row{display:flex;align-items:center;gap:6px;margin:2px 0;font-size:11px}
+.timeline-name{width:120px;color:var(--accent2);font-weight:600;flex-shrink:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.timeline-bar{flex:1;height:14px;background:var(--bg);border-radius:2px;position:relative;overflow:hidden;display:flex}
+.timeline-cell{flex:1;min-width:0;border-right:1px solid var(--bg);text-align:center;font-size:9px;line-height:14px;color:#fff;font-family:'Consolas',monospace}
+.tl-alive{background:#3a6a2a}
+.tl-low{background:#a07020}
+.tl-critical{background:#a13320}
+.tl-dead{background:#1a1a1a;color:#666}
+.tl-wound{background:#6a1a1a}
+.tl-heal{background:#2a5a8a}
+.tl-fled{background:#3a5a8a;color:#cde}
+.event-mark{position:absolute;top:0;bottom:0;width:2px;background:#fff}
+.lever-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:8px}
+.lever-grid > div{background:var(--bg3);padding:6px 8px;border-radius:3px}
 </style>
 </head>
 <body>
 
 <h1>Vermis Mini — Simulateur de Combat</h1>
-<div class="subtitle">v0.1 · Moteur fidèle aux règles canon v10 (pool de dés, dé rouge, bonus sur 1, END/Blessures, Push en Bet, Don/Expertise)</div>
+<div class="subtitle">Moteur fidèle aux règles canon v10 · IA paramétrable · Monte Carlo · Moral · Tuning</div>
 
 <!-- ============= ÉQUIPES ============= -->
 <div class="panel">
@@ -126,11 +117,18 @@ details[open] summary{color:var(--text)}
           <option value="5">5 · Élite</option>
           <option value="6">6 · Boss</option>
         </select>
-        <button onclick="generateTeam('A')">⟳ Générer</button>
-        <button class="small" onclick="clearTeam('A')">∅</button>
+        <button onclick="generateTeam('A')">⟳ Générer (tier)</button>
+      </div>
+      <div class="row">
+        <label>Ou PJ Approche</label>
+        <select id="teamA-pj">
+          <option value="">— choisir —</option>
+        </select>
+        <button class="small" onclick="addPJ('A')">+ PJ</button>
+        <button class="small" onclick="clearTeam('A')">∅ vider</button>
       </div>
       <div id="teamA-list"></div>
-      <button class="small" onclick="addCombatant('A')">+ ajouter combattant</button>
+      <button class="small" onclick="addCombatant('A')">+ ajouter combattant générique</button>
     </div>
     <div class="team b" id="teamB-panel">
       <h3 style="color:var(--accent2)">⚔ Équipe B</h3>
@@ -146,11 +144,18 @@ details[open] summary{color:var(--text)}
           <option value="5">5 · Élite</option>
           <option value="6">6 · Boss</option>
         </select>
-        <button onclick="generateTeam('B')">⟳ Générer</button>
-        <button class="small" onclick="clearTeam('B')">∅</button>
+        <button onclick="generateTeam('B')">⟳ Générer (tier)</button>
+      </div>
+      <div class="row">
+        <label>Ou PJ Approche</label>
+        <select id="teamB-pj">
+          <option value="">— choisir —</option>
+        </select>
+        <button class="small" onclick="addPJ('B')">+ PJ</button>
+        <button class="small" onclick="clearTeam('B')">∅ vider</button>
       </div>
       <div id="teamB-list"></div>
-      <button class="small" onclick="addCombatant('B')">+ ajouter combattant</button>
+      <button class="small" onclick="addCombatant('B')">+ ajouter combattant générique</button>
     </div>
   </div>
 </div>
@@ -161,15 +166,65 @@ details[open] summary{color:var(--text)}
   <div class="row">
     <label>Rounds max</label>
     <input type="number" id="param-maxRounds" value="30" min="1" max="100">
-    <label><input type="checkbox" id="param-shieldsActive"> Boucliers passifs <span class="tooltip" data-tip="Si coché : le bonus de bouclier s'ajoute toujours à la difficulté défensive (comme si Bloquer était auto). Sinon : ignoré (le combattant attaque au lieu de bloquer).">(?)</span></label>
+    <label><input type="checkbox" id="param-shieldsActive"> Boucliers passifs <span class="tooltip" data-tip="Si coché : le bonus de bouclier s'ajoute toujours à la difficulté défensive (comme si Bloquer était auto). Sinon : ignoré.">(?)</span></label>
     <label><input type="checkbox" id="param-surpriseA"> Surprise A</label>
     <label><input type="checkbox" id="param-surpriseB"> Surprise B</label>
     <label>Seed <input type="text" id="param-seed" placeholder="auto" style="width:80px"></label>
   </div>
   <div class="row">
     <label>Nom du scénario</label>
-    <input type="text" id="param-scenario" placeholder="ex: 4 soldats vs 1 boss" style="width:220px">
+    <input type="text" id="param-scenario" placeholder="ex: 4 soldats vs 1 boss" style="width:240px">
   </div>
+
+  <details>
+    <summary>💨 Deuxième souffle (cause #1 des combats longs)</summary>
+    <div class="row" style="margin-top:6px">
+      <label><input type="checkbox" id="param-dsActive" checked> Action activée</label>
+      <label>Max par combat <input type="number" id="param-dsMax" value="6" min="0" max="20"></label>
+      <label>Fatigue préalable <span class="tooltip" data-tip="Simule un combat qui suit un autre événement : chaque combattant démarre avec X PR consommés (aléatoire 0 à N). Représente la 2e/3e rencontre de la journée.">(?)</span>
+        <select id="param-fatigue">
+          <option value="0">Aucune (frais)</option>
+          <option value="1">Légère (0–1 PR usés)</option>
+          <option value="2">Modérée (0–2)</option>
+          <option value="3">Forte (0–3)</option>
+          <option value="5">Sévère (0–5)</option>
+        </select>
+      </label>
+    </div>
+  </details>
+
+  <details>
+    <summary>⚙ Règles maison (tuning rapide)</summary>
+    <div class="lever-grid" style="margin-top:6px">
+      <div>
+        <label><input type="checkbox" id="rule-onesBonus" checked> Bonus +1 par 1 roulé</label><br>
+        <label><input type="checkbox" id="rule-redBonus" checked> Bonus dé rouge en succès</label>
+      </div>
+      <div>
+        <label><input type="checkbox" id="rule-pierceOnDouble"> Pierce sur double <span class="tooltip" data-tip="Si coché : un double dans les succès donne -1 à la difficulté d'armure de l'attaque en cours. Triple = -2.">(?)</span></label><br>
+        <label><input type="checkbox" id="rule-extraOnDouble"> +1 gain sur double <span class="tooltip" data-tip="Si coché : un double dans les succès donne +1 gain bonus. Triple = +2. C'est un test d'hypothèse (le canon dit que les doubles déclenchent des effets spéciaux non chiffrés).">(?)</span>
+      </div>
+      <div>
+        <label>Difficulté Cuir <input type="number" id="rule-diffCuir" value="1" min="0" max="6" step="1" style="width:50px"></label><br>
+        <label>Difficulté Maille <input type="number" id="rule-diffMaille" value="2" min="0" max="6" style="width:50px"></label>
+      </div>
+      <div>
+        <label>Difficulté Plaque <input type="number" id="rule-diffPlaque" value="3" min="0" max="6" style="width:50px"></label><br>
+        <label>Difficulté Full <input type="number" id="rule-diffFull" value="4" min="0" max="6" style="width:50px"></label>
+      </div>
+    </div>
+  </details>
+
+  <details>
+    <summary>🛡 Moral (test ESP sur événements)</summary>
+    <div class="row" style="margin-top:6px">
+      <label><input type="checkbox" id="moral-active" checked> Activer les tests de moral</label>
+      <label><input type="checkbox" id="moral-firstDeath" checked> sur 1ère perte (mort ou KO/critique)</label>
+      <label><input type="checkbox" id="moral-chiefDeath" checked> sur mort du chef (plus haut ESP)</label>
+      <label><input type="checkbox" id="moral-halfTeam" checked> sur 50% pertes</label>
+    </div>
+    <div class="muted" style="font-size:11px">Chaque survivant lance 1d (avec dé rouge) vs ESP. Échec = fuite (retrait du combat, compte comme perte mais pas comme mort).</div>
+  </details>
 </div>
 
 <!-- ============= SIMULATION ============= -->
@@ -191,9 +246,11 @@ details[open] summary{color:var(--text)}
   <div id="results-content"></div>
 </div>
 
-<!-- ============= LOG NARRATIF ============= -->
+<!-- ============= LOG NARRATIF + TIMELINE ============= -->
 <div class="panel" id="log-panel" style="display:none">
   <h2>Journal de combat</h2>
+  <div id="timeline-content"></div>
+  <h3>Détails</h3>
   <div id="log-content" class="log"></div>
 </div>
 
@@ -210,70 +267,124 @@ details[open] summary{color:var(--text)}
   <div id="history-table"></div>
 </div>
 
-<script>
-/* ===========================================================
-   VERMIS MINI — Combat Simulator v0.1
-   Moteur fidèle aux règles canon v10 (Vermis_d6_v10.md)
-   =========================================================== */
+<div class="footer">v0.3 · Vermis Mini Combat Simulator · Archétypes PJ canoniques, IA variée, stats par combattant, fuite (bleu) en timeline</div>
 
-// ---------- RNG seedable (mulberry32) ----------
+<script>
+const VERSION = '0.3';
+
+// ====================== RNG seedable ======================
 let _rng = Math.random;
 function setSeed(s){
-  if(!s) { _rng = Math.random; return; }
+  if(!s){ _rng = Math.random; return; }
   let h = 2166136261;
-  for(let i=0;i<s.length;i++){ h = Math.imul(h ^ s.charCodeAt(i), 16777619); }
+  for(let i=0;i<s.length;i++) h = Math.imul(h ^ s.charCodeAt(i), 16777619);
   let a = h >>> 0;
   _rng = function(){
     a |= 0; a = a + 0x6D2B79F5 | 0;
-    let t = Math.imul(a ^ a >>> 15, 1 | a);
-    t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t;
-    return ((t ^ t >>> 14) >>> 0) / 4294967296;
+    let t = Math.imul(a ^ a>>>15, 1|a);
+    t = t + Math.imul(t ^ t>>>7, 61|t) ^ t;
+    return ((t ^ t>>>14)>>>0)/4294967296;
   };
 }
 function rng(){ return _rng(); }
-function rint(min, max){ return Math.floor(rng()*(max-min+1))+min; }
-function pick(arr){ return arr[Math.floor(rng()*arr.length)]; }
+function rint(a,b){ return Math.floor(rng()*(b-a+1))+a; }
+function pick(a){ return a[Math.floor(rng()*a.length)]; }
 function rollD6(){ return rint(1,6); }
 
-// ---------- ÉQUIPEMENT (référence canon v10) ----------
+// ====================== ÉQUIPEMENT ======================
 const WEAPONS = [
-  {id:'mains',     name:'Mains nues',       dice:1, twohand:false},
-  {id:'improv',    name:'Improvisée',        dice:2, twohand:false},
-  {id:'dague',     name:'Dague (petite)',    dice:3, twohand:false, tags:['rapide']},
-  {id:'matraque',  name:'Matraque (petite)', dice:3, twohand:false},
-  {id:'epee_c',    name:'Épée courte (moy)', dice:4, twohand:false},
-  {id:'hachette',  name:'Hachette (moy)',    dice:4, twohand:false},
-  {id:'masse',     name:'Masse (moy)',       dice:4, twohand:false},
-  {id:'lance',     name:'Lance (martiale)',  dice:5, twohand:false},
-  {id:'epee_l',    name:'Épée longue (martiale)', dice:5, twohand:false},
-  {id:'hache_g',   name:'Hache de guerre (martiale)', dice:5, twohand:false},
-  {id:'sweihander',name:'Sweihander (lourde)', dice:6, twohand:true, tags:['lente']},
-  {id:'hache_2m',  name:'Hache à 2 mains (lourde)', dice:6, twohand:true, tags:['lente']},
-  {id:'halebarde', name:'Hallebarde (lourde)',dice:6, twohand:true, tags:['lente']},
+  {id:'mains',     name:'Mains nues',                 dice:1, twohand:false},
+  {id:'improv',    name:'Improvisée',                  dice:2, twohand:false},
+  {id:'dague',     name:'Dague (petite)',              dice:3, twohand:false, tags:['rapide']},
+  {id:'matraque',  name:'Matraque (petite)',           dice:3, twohand:false},
+  {id:'epee_c',    name:'Épée courte (moy)',           dice:4, twohand:false},
+  {id:'hachette',  name:'Hachette (moy)',              dice:4, twohand:false},
+  {id:'masse',     name:'Masse (moy)',                 dice:4, twohand:false},
+  {id:'lance',     name:'Lance (martiale)',            dice:5, twohand:false},
+  {id:'epee_l',    name:'Épée longue (martiale)',      dice:5, twohand:false},
+  {id:'hache_g',   name:'Hache de guerre (martiale)',  dice:5, twohand:false},
+  {id:'sweihander',name:'Sweihander (lourde)',         dice:6, twohand:true, tags:['lente']},
+  {id:'hache_2m',  name:'Hache à 2 mains (lourde)',    dice:6, twohand:true, tags:['lente']},
+  {id:'halebarde', name:'Hallebarde (lourde)',         dice:6, twohand:true, tags:['lente']},
 ];
 const ARMORS = [
-  {id:'aucune', name:'Aucune',     diff:0},
-  {id:'cuir',   name:'Cuir',       diff:1},
-  {id:'maille', name:'Maille',     diff:2},
-  {id:'plaque', name:'Plaque',     diff:3},
-  {id:'full',   name:'Full plate', diff:4},
+  {id:'aucune', name:'Aucune',    diff:0},
+  {id:'cuir',   name:'Cuir',      diff:1},
+  {id:'maille', name:'Maille',    diff:2},
+  {id:'plaque', name:'Plaque',    diff:3},
+  {id:'full',   name:'Full plate',diff:4},
 ];
 const SHIELDS = [
-  {id:'aucun',   name:'Aucun',         bonus:0},
-  {id:'buckler', name:'Buckler',       bonus:1},
-  {id:'rond',    name:'Bouclier rond', bonus:2},
-  {id:'grand',   name:'Grand bouclier',bonus:3},
+  {id:'aucun',   name:'Aucun',          bonus:0},
+  {id:'buckler', name:'Buckler',        bonus:1},
+  {id:'rond',    name:'Bouclier rond',  bonus:2},
+  {id:'grand',   name:'Grand bouclier', bonus:3},
 ];
 
-// ---------- PROFILS PAR TIER (génération aléatoire) ----------
-// Référence: Appendice B §16, table "Profils types"
+// ====================== APPROCHES PJ (§2.7.2 v10) ======================
+const APPROCHES = [
+  {id:'comb1',   label:'Combattant — Premier soins',           vig:5, fin:3, esp:4, weaponExp:true,  defaultWeapon:'epee_c'},
+  {id:'comb2',   label:'Combattant — Cuisinier',                vig:5, fin:4, esp:3, weaponExp:true,  defaultWeapon:'epee_c'},
+  {id:'filou1',  label:'Filou — Empoisonneur',                  vig:4, fin:5, esp:3, weaponExp:false, defaultWeapon:'dague'},
+  {id:'filou2',  label:'Filou — Chirurgien de fortune',         vig:3, fin:5, esp:4, weaponExp:false, defaultWeapon:'dague'},
+  {id:'erudit1', label:'Érudit — Sciences interdites',          vig:3, fin:4, esp:5, weaponExp:false, defaultWeapon:'matraque'},
+  {id:'erudit2', label:'Érudit — Sciences naturelles',          vig:4, fin:3, esp:5, weaponExp:false, defaultWeapon:'matraque'},
+];
+
+// ====================== ARCHÉTYPES PJ complets (§2.7.5) — pour génération tier 3 ======================
+// Combattants = maille (2 RD), Filous = cuir (1 RD), Érudits = aucune
+const ARCHETYPES = [
+  // ----- Combattants -----
+  {approche:'comb', short:'Guerrier',     vig:5, fin:3, esp:4, weapon:'hache_2m',  armor:'maille', shield:'aucun'},
+  {approche:'comb', short:'Soldat',       vig:5, fin:4, esp:3, weapon:'lance',     armor:'maille', shield:'grand'},
+  {approche:'comb', short:'Sapeur',       vig:5, fin:4, esp:3, weapon:'sweihander',armor:'maille', shield:'aucun'},
+  {approche:'comb', short:'Mercenaire',   vig:5, fin:4, esp:3, weapon:'epee_l',    armor:'maille', shield:'rond'},
+  {approche:'comb', short:'Bretteur',     vig:5, fin:3, esp:4, weapon:'epee_c',    armor:'maille', shield:'aucun'},
+  {approche:'comb', short:'Chevalier',    vig:5, fin:3, esp:4, weapon:'epee_l',    armor:'maille', shield:'rond'},
+  // ----- Filous -----
+  {approche:'filou', short:'Explorateur',  vig:4, fin:5, esp:3, weapon:'lance',    armor:'cuir', shield:'aucun'},
+  {approche:'filou', short:'Chasseur',     vig:4, fin:5, esp:3, weapon:'epee_c',   armor:'cuir', shield:'aucun'},
+  {approche:'filou', short:'Chasseur trésors', vig:3, fin:5, esp:4, weapon:'dague',armor:'cuir', shield:'aucun'},
+  {approche:'filou', short:'Voleur',       vig:3, fin:5, esp:4, weapon:'dague',    armor:'cuir', shield:'aucun'},
+  {approche:'filou', short:'Barde',        vig:4, fin:5, esp:3, weapon:'epee_c',   armor:'cuir', shield:'aucun'},
+  {approche:'filou', short:'Excentrique',  vig:3, fin:5, esp:4, weapon:'epee_c',   armor:'cuir', shield:'aucun'},
+  // ----- Érudits (pas d'armure, pas de Maniement, mais peuvent avoir bâton spécialisé) -----
+  {approche:'erudit', short:'Ermite',      vig:3, fin:4, esp:5, weapon:'matraque', armor:'aucune', shield:'aucun'},
+  {approche:'erudit', short:'Moine',       vig:4, fin:3, esp:5, weapon:'matraque', armor:'aucune', shield:'aucun'},
+  {approche:'erudit', short:'Artifex',     vig:4, fin:3, esp:5, weapon:'matraque', armor:'aucune', shield:'aucun'},
+  {approche:'erudit', short:'Hérétique',   vig:3, fin:4, esp:5, weapon:'dague',    armor:'aucune', shield:'aucun'},
+  {approche:'erudit', short:'Illusioniste',vig:3, fin:4, esp:5, weapon:'matraque', armor:'aucune', shield:'aucun'},
+  {approche:'erudit', short:'Magistère',   vig:4, fin:3, esp:5, weapon:'matraque', armor:'aucune', shield:'aucun'},
+];
+
+function randomArchetypeCombatant(idx, teamLetter){
+  const a = pick(ARCHETYPES);
+  return {
+    name: `${teamLetter}${idx} ${a.short}`,
+    vig:a.vig, fin:a.fin, esp:a.esp,
+    weaponId: a.weapon, armorId: a.armor, shieldId: a.shield,
+    hasDon: true, // PJ a toujours 1 Don
+    hasWeaponExpertise: a.approche === 'comb', // seuls les Combattants ont Maniement
+    weaponSpecialized: true, // tous les archétypes ont une arme * personnalisée
+    aiProfile: pick(['aggressif','prudent','tacticien']), // variation
+  };
+}
+
+// ====================== PROFILS PNJ PAR TIER (génération) ======================
 const TIER_PROFILES = {
-  1: { name:'Vermine',  attrRange:[2,3], weaponDice:[1,2], armorOdds:{aucune:.7, cuir:.3}, shieldOdds:{aucun:.9, buckler:.1}, donChance:0, expertiseChance:0, aiDefault:'aggressif' },
-  2: { name:'Soldat',   attrRange:[3,3], weaponDice:[3,4], armorOdds:{aucune:.2, cuir:.5, maille:.3}, shieldOdds:{aucun:.5, buckler:.3, rond:.2}, donChance:.2, expertiseChance:.1, aiDefault:'prudent' },
-  3: { name:'Égal PJ',  attrRange:[3,4], weaponDice:[3,5], armorOdds:{cuir:.4, maille:.5, plaque:.1}, shieldOdds:{aucun:.4, buckler:.3, rond:.3}, donChance:.5, expertiseChance:.4, aiDefault:'prudent' },
-  4: { name:'Vétéran',  attrRange:[4,5], weaponDice:[4,5], armorOdds:{maille:.5, plaque:.5}, shieldOdds:{aucun:.3, rond:.5, grand:.2}, donChance:.8, expertiseChance:.7, aiDefault:'tacticien' },
-  5: { name:'Élite',    attrRange:[5,5], weaponDice:[5,6], armorOdds:{maille:.2, plaque:.6, full:.2}, shieldOdds:{aucun:.4, rond:.3, grand:.3}, donChance:1.0, expertiseChance:.9, aiDefault:'tacticien' },
-  6: { name:'Boss',     attrRange:[6,6], weaponDice:[6,6], armorOdds:{plaque:.4, full:.6}, shieldOdds:{aucun:.5, grand:.5}, donChance:1.0, expertiseChance:1.0, aiDefault:'tacticien' },
+  1: { name:'Vermine',  attrRange:[2,3], weaponDice:[1,2], armorOdds:{aucune:.7, cuir:.3},                           shieldOdds:{aucun:.9, buckler:.1},                donChance:0,   expChance:0,   persoChance:0,   aiDefault:'aggressif' },
+  2: { name:'Soldat',   attrRange:[3,3], weaponDice:[3,4], armorOdds:{aucune:.2, cuir:.5, maille:.3},                shieldOdds:{aucun:.5, buckler:.3, rond:.2},       donChance:.2, expChance:.5,  persoChance:.1,  aiDefault:'prudent' },
+  3: { name:'Égal PJ',  attrRange:[3,4], weaponDice:[3,5], armorOdds:{cuir:.4, maille:.5, plaque:.1},                shieldOdds:{aucun:.4, buckler:.3, rond:.3},       donChance:.5, expChance:.8,  persoChance:.7,  aiDefault:'prudent' },
+  4: { name:'Vétéran',  attrRange:[4,5], weaponDice:[4,5], armorOdds:{maille:.5, plaque:.5},                         shieldOdds:{aucun:.3, rond:.5, grand:.2},         donChance:.8, expChance:1.0, persoChance:.9,  aiDefault:'tacticien' },
+  5: { name:'Élite',    attrRange:[5,5], weaponDice:[5,6], armorOdds:{maille:.2, plaque:.6, full:.2},                shieldOdds:{aucun:.4, rond:.3, grand:.3},         donChance:1.0, expChance:1.0, persoChance:1.0, aiDefault:'tacticien' },
+  6: { name:'Boss',     attrRange:[6,6], weaponDice:[6,6], armorOdds:{plaque:.4, full:.6},                           shieldOdds:{aucun:.5, grand:.5},                  donChance:1.0, expChance:1.0, persoChance:1.0, aiDefault:'tacticien' },
+};
+
+// ====================== IA — DESCRIPTIONS (hover) ======================
+const AI_DESCRIPTIONS = {
+  aggressif:  "Push 1d à 2d à chaque attaque tant que END > 2. Ne ralentit pas. Pas de Deuxième souffle sauf END=0. Brûle vite ses ressources mais inflige plus de dégâts par round. Suboptimal en mirror match contre Prudent.",
+  prudent:    "Ne push que pour finir une cible (END ≤ 1) ou face à une armure ≥3 si END ≥ 4. Deuxième souffle si END ≤ 1 et PR > 0. Profil sustainable, gagne les longs combats.",
+  tacticien:  "Cible le combattant avec le moins d'END / le plus blessé. Push 1d face à armure ≥ 2. Deuxième souffle proactif (END ≤ 2). ATTENTION : en infériorité numérique, Deuxième souffle gaspille l'action et favorise l'adversaire — désactiver ou monter la limite pour les boss seuls.",
 };
 
 function pickWeighted(odds){
@@ -286,60 +397,85 @@ function pickWeighted(odds){
   return Object.keys(odds)[0];
 }
 
-function randomCombatant(tier, idx){
+function randomCombatant(tier, idx, teamLetter){
+  // Tier 3 (Égal PJ) → utiliser un vrai archétype avec son équipement canonique
+  if(tier === 3) return randomArchetypeCombatant(idx, teamLetter);
   const p = TIER_PROFILES[tier];
   const attr = rint(p.attrRange[0], p.attrRange[1]);
-  // pick weapon by dice range
   const eligibleWeapons = WEAPONS.filter(w => w.dice >= p.weaponDice[0] && w.dice <= p.weaponDice[1]);
   const weapon = pick(eligibleWeapons);
-  // shield: only if not two-hand weapon
   const armorId = pickWeighted(p.armorOdds);
   const shieldId = weapon.twohand ? 'aucun' : pickWeighted(p.shieldOdds);
+  // Variation d'IA même sur les NPCs : 60% profil par défaut, 40% randomisé
+  const ai = rng() < 0.6 ? p.aiDefault : pick(['aggressif','prudent','tacticien']);
   return {
-    name: `${p.name} ${idx}`,
+    name: `${teamLetter}${idx} ${p.name}`,
     vig: attr, fin: attr, esp: attr,
-    end: attr, pr: attr,
-    weaponId: weapon.id,
-    armorId, shieldId,
+    weaponId: weapon.id, armorId, shieldId,
     hasDon: rng() < p.donChance,
-    hasExpertise: rng() < p.expertiseChance,
-    aiProfile: p.aiDefault,
-    blessures: { vig:0, fin:0, esp:0 },
-    status: 'alive', // alive | dead | paralyzed | catatonic
-    pushUsed: 0, // tracking per-fight
+    hasWeaponExpertise: rng() < p.expChance,
+    weaponSpecialized: rng() < p.persoChance,
+    aiProfile: ai,
+  };
+}
+
+function makePJ(approcheId, idx, teamLetter){
+  const a = APPROCHES.find(x => x.id === approcheId);
+  return {
+    name: `${teamLetter||''}${idx} ${a.label.split(' —')[0]}`,
+    vig:a.vig, fin:a.fin, esp:a.esp,
+    weaponId: a.defaultWeapon, armorId:'cuir', shieldId:'aucun',
+    hasDon:true, hasWeaponExpertise:a.weaponExp, weaponSpecialized:true,
+    aiProfile:'prudent',
   };
 }
 
 function newDefaultCombatant(){
   return {
-    name: 'Combattant',
-    vig: 4, fin: 4, esp: 4,
-    end: 4, pr: 4,
-    weaponId: 'epee_c', armorId: 'cuir', shieldId: 'aucun',
-    hasDon: false, hasExpertise: false,
-    aiProfile: 'prudent',
-    blessures: { vig:0, fin:0, esp:0 },
-    status: 'alive',
-    pushUsed: 0,
+    name:'Combattant', vig:4, fin:4, esp:4,
+    weaponId:'epee_c', armorId:'cuir', shieldId:'aucun',
+    hasDon:false, hasWeaponExpertise:false, weaponSpecialized:false,
+    aiProfile:'prudent',
   };
 }
 
-// ---------- DÉRIVATIONS ----------
+// ====================== DÉRIVATIONS ======================
 function getWeapon(c){ return WEAPONS.find(w => w.id === c.weaponId) || WEAPONS[0]; }
 function getArmor(c){  return ARMORS.find(a => a.id === c.armorId) || ARMORS[0]; }
 function getShield(c){ return SHIELDS.find(s => s.id === c.shieldId) || SHIELDS[0]; }
-function currentVig(c){ return Math.max(0, c.vig - c.blessures.vig); }
-function currentFin(c){ return Math.max(0, c.fin - c.blessures.fin); }
-function currentEsp(c){ return Math.max(0, c.esp - c.blessures.esp); }
-function isAlive(c){ return c.status === 'alive' && currentVig(c) > 1; }
-// "ne peut plus agir" inclut état critique (attr=1 sur l'attr offensif)
-function canAct(c){ return isAlive(c) && currentVig(c) >= 2; }
+function curVig(c){ return Math.max(0, c.vig - c.blessures.vig); }
+function curFin(c){ return Math.max(0, c.fin - c.blessures.fin); }
+function curEsp(c){ return Math.max(0, c.esp - c.blessures.esp); }
+function isAlive(c){ return c.status === 'alive'; }
+function canAct(c){ return isAlive(c) && curVig(c) >= 2; }
 
-// ---------- MOTEUR : POOL & GAINS ----------
-/**
- * Roule un pool de N dés avec dé rouge (premier dé) et bonus.
- * @returns {dice, gainsBrut, redDie, hasDouble, hasTriple}
- */
+// ====================== RÈGLES TUNÉES (lues depuis l'UI) ======================
+let ACTIVE_RULES = null;
+function readRules(){
+  return {
+    onesBonus: document.getElementById('rule-onesBonus').checked,
+    redBonus:  document.getElementById('rule-redBonus').checked,
+    pierceOnDouble: document.getElementById('rule-pierceOnDouble').checked,
+    extraOnDouble:  document.getElementById('rule-extraOnDouble').checked,
+    diff: {
+      aucune: 0,
+      cuir:   parseInt(document.getElementById('rule-diffCuir').value)||1,
+      maille: parseInt(document.getElementById('rule-diffMaille').value)||2,
+      plaque: parseInt(document.getElementById('rule-diffPlaque').value)||3,
+      full:   parseInt(document.getElementById('rule-diffFull').value)||4,
+    },
+    dsActive: document.getElementById('param-dsActive').checked,
+    dsMax: parseInt(document.getElementById('param-dsMax').value)||0,
+    fatigueMax: parseInt(document.getElementById('param-fatigue').value)||0,
+    shieldsActive: document.getElementById('param-shieldsActive').checked,
+    moralActive: document.getElementById('moral-active').checked,
+    moralFirstDeath: document.getElementById('moral-firstDeath').checked,
+    moralChiefDeath: document.getElementById('moral-chiefDeath').checked,
+    moralHalfTeam:   document.getElementById('moral-halfTeam').checked,
+  };
+}
+
+// ====================== MOTEUR : POOL & GAINS ======================
 function rollPool(nDice, attr){
   if(nDice < 1) nDice = 1;
   const dice = [];
@@ -350,172 +486,152 @@ function rollPool(nDice, attr){
     const isRed = (i === 0);
     const isOne = (v === 1);
     let gain = 0;
-    if(success) gain += 1;          // gain normal
-    if(isRed && success) gain += 1; // bonus dé rouge
-    if(isOne) gain += 1;            // bonus +1 par 1 (attr toujours >= 2 donc 1 = succès)
+    if(success) gain += 1;
+    if(ACTIVE_RULES.redBonus && isRed && success) gain += 1;
+    if(ACTIVE_RULES.onesBonus && isOne) gain += 1;
     dice.push({ value:v, success, isRed, isOne, gain });
     gainsBrut += gain;
   }
-  // doubles/triples parmi les succès (déclencheurs d'effets, on les détecte mais on n'applique pas auto)
-  const succValues = dice.filter(d => d.success).map(d => d.value);
+  // doubles/triples
+  const succVals = dice.filter(d=>d.success).map(d=>d.value);
   const counts = {};
-  succValues.forEach(v => counts[v] = (counts[v]||0)+1);
+  succVals.forEach(v => counts[v] = (counts[v]||0)+1);
   const maxCount = Math.max(0, ...Object.values(counts));
-  return {
-    dice, gainsBrut,
-    hasDouble: maxCount >= 2,
-    hasTriple: maxCount >= 3,
-  };
+  const hasDouble = maxCount >= 2;
+  const hasTriple = maxCount >= 3;
+  // règles maison : extra on double / pierce
+  if(ACTIVE_RULES.extraOnDouble){
+    if(hasTriple) gainsBrut += 2;
+    else if(hasDouble) gainsBrut += 1;
+  }
+  return { dice, gainsBrut, hasDouble, hasTriple };
 }
 
-/**
- * Construit le pool d'attaque pour un combattant.
- * Inclut dés d'arme + Don (+1d si applicable) + Expertise (+1d si applicable) + push (Bet).
- */
 function buildAttackPool(attacker, push){
   const weapon = getWeapon(attacker);
   let pool = weapon.dice;
-  if(attacker.hasDon) pool += 1;        // hypothèse: Don applicable en combat (situationnel)
-  if(attacker.hasExpertise) pool += 1;  // hypothèse: Expertise applicable (option +1d)
+  if(attacker.hasWeaponExpertise) pool += 1;
+  if(attacker.weaponSpecialized)  pool += 1;
+  if(attacker.hasDon)             pool += 1;
   pool += (push || 0);
   return pool;
 }
 
-/**
- * Difficulté défensive : armure + (bouclier si actif passif) + bonus situationnels.
- */
-function defenseDifficulty(defender, opts){
+function defenseDifficulty(defender){
   const armor = getArmor(defender);
   const shield = getShield(defender);
-  let diff = armor.diff;
-  if(opts && opts.shieldsActive) diff += shield.bonus;
+  let diff = ACTIVE_RULES.diff[armor.id] !== undefined ? ACTIVE_RULES.diff[armor.id] : armor.diff;
+  if(ACTIVE_RULES.shieldsActive) diff += shield.bonus;
   return diff;
 }
 
-/**
- * Applique les dégâts (gains nets) au défenseur.
- * - END > 0 : END -= gains; min 0
- * - END == 0 ET hit successful : 1 Blessure
- * - Blessure réduit attr selon damageType (par défaut: physique → vig)
- * - attr à 0 → mort/paralysé/catatonique
- */
-function applyDamage(defender, netGains, damageType, log){
-  if(netGains <= 0) return { wounded:false, killed:false };
-  let wounded = false;
+function applyDamage(defender, netGains, dmgType, log, round, events){
+  if(netGains <= 0) return {wounded:false, killed:false};
+  defender._dmgReceived += netGains;
   if(defender.end > 0){
     const before = defender.end;
     defender.end = Math.max(0, defender.end - netGains);
     if(log) log.push({t:'damage', msg:` → ${before}→${defender.end} END (−${before-defender.end})`});
-  } else {
-    // END déjà à 0 : une Blessure (peu importe la magnitude, 1 hit = 1 wound)
-    defender.blessures[damageType] += 1;
-    wounded = true;
-    if(log) log.push({t:'damage', msg:` → BLESSURE ${damageType.toUpperCase()} (-1 ${damageType}, total ${defender.blessures[damageType]})`});
-    // vérifier état critique / mort
-    const cur = damageType === 'vig' ? currentVig(defender)
-              : damageType === 'fin' ? currentFin(defender)
-              : currentEsp(defender);
-    if(cur <= 0){
-      defender.status = damageType === 'vig' ? 'dead'
-                       : damageType === 'fin' ? 'paralyzed' : 'catatonic';
-      if(log) log.push({t:'death', msg:` ☠ ${defender.name} : ${defender.status.toUpperCase()}`});
-      return { wounded, killed: true };
+    if(before > 0 && defender.end === 0){
+      defender.firstKORound = round;
+      if(events) events.firstKO = events.firstKO || round;
     }
+    return {wounded:false, killed:false};
   }
-  return { wounded, killed:false };
+  // END=0 : 1 blessure par hit
+  defender.blessures[dmgType] += 1;
+  if(log) log.push({t:'damage', msg:` → BLESSURE ${dmgType.toUpperCase()} (-1 ${dmgType}, total ${defender.blessures[dmgType]})`});
+  const cur = dmgType === 'vig' ? curVig(defender) : dmgType === 'fin' ? curFin(defender) : curEsp(defender);
+  if(cur <= 0){
+    defender.status = dmgType === 'vig' ? 'dead' : dmgType === 'fin' ? 'paralyzed' : 'catatonic';
+    defender.deathRound = round;
+    if(log) log.push({t:'death', msg:` ☠ ${defender.name} : ${defender.status.toUpperCase()}`});
+    if(events) events.firstDeath = events.firstDeath || round;
+    return {wounded:true, killed:true};
+  }
+  return {wounded:true, killed:false};
 }
 
-// ---------- IA : décision tour par tour ----------
-function aiDecide(combatant, allies, enemies, opts){
+// ====================== IA ======================
+function aiDecide(c, allies, enemies){
   const aliveEnemies = enemies.filter(canAct);
-  if(aliveEnemies.length === 0) return { action:'idle' };
+  if(!aliveEnemies.length) return {action:'idle'};
+  const profile = c.aiProfile;
+  const maxPush = curEsp(c);
 
-  const profile = combatant.aiProfile;
-  const maxPush = currentEsp(combatant);
-  const endRatio = combatant.end / Math.max(1, combatant.vig);
-
-  // Deuxième souffle ? Action complète, pas d'attaque ce tour
-  // - Prudent : si END <= 1 et PR > 0
-  // - Tacticien : si END <= 2 et PR > 0 et au moins 1 ennemi à attaquer ensuite
-  if(profile === 'prudent' && combatant.end <= 1 && combatant.pr > 0){
-    return { action:'breath' };
-  }
-  if(profile === 'tacticien' && combatant.end <= 2 && combatant.pr > 0 && aliveEnemies.length > 0){
-    return { action:'breath' };
-  }
-  if(profile === 'aggressif' && combatant.end === 0 && combatant.pr > 0){
-    return { action:'breath' };
+  // Deuxième souffle ?
+  const dsAllowed = ACTIVE_RULES.dsActive && c.dsUsed < ACTIVE_RULES.dsMax && c.pr > 0;
+  if(dsAllowed){
+    if(profile === 'prudent'   && c.end <= 1) return {action:'breath'};
+    if(profile === 'tacticien' && c.end <= 2 && allies.filter(canAct).length >= aliveEnemies.length) return {action:'breath'};
+    if(profile === 'aggressif' && c.end === 0) return {action:'breath'};
   }
 
-  // Choix de cible
+  // Cible
   let target;
   if(profile === 'tacticien'){
-    // cible la plus faible (END le plus bas, puis Blessures le plus haut)
-    target = aliveEnemies.slice().sort((a,b) => {
+    target = aliveEnemies.slice().sort((a,b)=>{
       const ka = a.end + (a.vig - a.blessures.vig)*10;
       const kb = b.end + (b.vig - b.blessures.vig)*10;
       return ka - kb;
     })[0];
-  } else {
-    target = pick(aliveEnemies);
-  }
+  } else target = pick(aliveEnemies);
 
-  // Push : combien de dés ajouter ?
+  // Push
   let push = 0;
-  const targetDiff = defenseDifficulty(target, opts);
-  if(profile === 'aggressif'){
-    // toujours push si END > 2, +2 si target lourd
-    if(combatant.end > 2){
-      push = Math.min(maxPush, targetDiff >= 3 ? 2 : 1);
-      push = Math.min(push, combatant.end - 1);
-    }
+  const tDiff = defenseDifficulty(target);
+  if(profile === 'aggressif' && c.end > 2){
+    push = Math.min(maxPush, tDiff >= 3 ? 2 : 1, c.end - 1);
   } else if(profile === 'prudent'){
-    // push seulement pour finir (target END <= 1) ou face à diff >= 3 si END >= 4
-    if(target.end <= 1 && combatant.end >= 2) push = 1;
-    else if(targetDiff >= 3 && combatant.end >= 4) push = 1;
+    if(target.end <= 1 && c.end >= 2) push = 1;
+    else if(tDiff >= 3 && c.end >= 4) push = 1;
     push = Math.min(push, maxPush);
   } else if(profile === 'tacticien'){
-    // push 1d si target armuré (diff >= 2) et END >= 3 ; +1 si target END <= 1
-    if(targetDiff >= 2 && combatant.end >= 3) push = 1;
-    if(target.end <= 1 && combatant.end >= 2) push = Math.max(push, 1);
+    if(tDiff >= 2 && c.end >= 3) push = 1;
+    if(target.end <= 1 && c.end >= 2) push = Math.max(push, 1);
     push = Math.min(push, maxPush);
   }
-
-  return { action:'attack', target, push };
+  return {action:'attack', target, push};
 }
 
-// ---------- TOUR DE COMBAT ----------
-function takeTurn(combatant, allies, enemies, opts, log){
-  if(!canAct(combatant)){
-    if(log) log.push({t:'info', msg:` ${combatant.name} ne peut pas agir.`});
+// ====================== TOUR ======================
+function takeTurn(c, allies, enemies, log, round, stats, events){
+  if(!canAct(c)){
+    if(log) log.push({t:'info', msg:` ${c.name} ne peut pas agir.`});
     return;
   }
-  const decision = aiDecide(combatant, allies, enemies, opts);
-
+  const decision = aiDecide(c, allies, enemies);
   if(decision.action === 'breath'){
-    combatant.pr -= 1;
+    c.pr -= 1; c.dsUsed += 1;
     const heal = rollD6();
-    const before = combatant.end;
-    combatant.end = Math.min(combatant.vig, combatant.end + heal);
-    if(log) log.push({t:'heal', msg:` ${combatant.name} reprend son souffle (1 PR → +${heal} END : ${before}→${combatant.end})`});
+    const before = c.end;
+    c.end = Math.min(c.vig, c.end + heal);
+    if(log) log.push({t:'heal', msg:` ${c.name} reprend son souffle (1 PR → +${heal} END : ${before}→${c.end}) [DS ${c.dsUsed}/${ACTIVE_RULES.dsMax}]`});
+    stats.actions.breath++;
     return;
   }
-
   if(decision.action !== 'attack') return;
-
   const target = decision.target;
   const push = decision.push;
-  const attackAttr = currentVig(combatant); // mêlée = VIG
-  // payer le push (END dépensée d'avance)
+  const attackAttr = curVig(c);
   if(push > 0){
-    combatant.end = Math.max(0, combatant.end - push);
-    combatant.pushUsed += push;
+    c.end = Math.max(0, c.end - push);
+    c.pushUsed += push;
+    stats.pushUsed += push;
   }
-  const pool = buildAttackPool(combatant, push);
-  const diff = defenseDifficulty(target, opts);
+  const pool = buildAttackPool(c, push);
+  let diff = defenseDifficulty(target);
   const roll = rollPool(pool, attackAttr);
-  const netGains = Math.max(0, roll.gainsBrut - diff);
-
+  let pierceMod = 0;
+  if(ACTIVE_RULES.pierceOnDouble){
+    if(roll.hasTriple) pierceMod = 2;
+    else if(roll.hasDouble) pierceMod = 1;
+  }
+  const effectiveDiff = Math.max(0, diff - pierceMod);
+  const netGains = Math.max(0, roll.gainsBrut - effectiveDiff);
+  stats.attacks++;
+  c._attacksMade++;
+  target._attacksReceived++;
   if(log){
     const diceStr = roll.dice.map(d => {
       const cls = [];
@@ -525,199 +641,366 @@ function takeTurn(combatant, allies, enemies, opts, log){
       return `<span class="die ${cls.join(' ')}">${d.value}</span>`;
     }).join('');
     const pushStr = push > 0 ? ` (push +${push}d, -${push} END)` : '';
-    log.push({t:'attack', msg:` ${combatant.name} (A${attackAttr}, ${pool}d) attaque ${target.name} (diff ${diff})${pushStr} : ${diceStr} = ${roll.gainsBrut} bruts − ${diff} = <b>${netGains}</b>${roll.hasTriple?' [triple!]':roll.hasDouble?' [double]':''}`});
+    const pierceStr = pierceMod > 0 ? ` [pierce −${pierceMod} diff]` : '';
+    const dtStr = roll.hasTriple ? ' [triple!]' : roll.hasDouble ? ' [double]' : '';
+    log.push({t:'attack', msg:` ${c.name} (A${attackAttr}, ${pool}d) attaque ${target.name} (diff ${diff}${pierceStr}) ${pushStr} : ${diceStr} = ${roll.gainsBrut} bruts − ${effectiveDiff} = <b>${netGains}</b>${dtStr}`});
   }
-
   if(netGains > 0){
-    applyDamage(target, netGains, 'vig', log); // mêlée = physique → VIG
+    applyDamage(target, netGains, 'vig', log, round, events);
+    stats.hits++;
+    c._hitsGiven++;
+    c._dmgGiven += netGains;
+    target._hitsReceived++;
   } else {
     if(log) log.push({t:'info', msg:` → aucun dégât.`});
+    stats.misses++;
   }
 }
 
-// ---------- COMBAT COMPLET ----------
-function simulateCombat(teamA, teamB, opts){
-  // Reset état combat (deep copy implicite via init)
-  const A = teamA.map(c => resetCombatant(c));
-  const B = teamB.map(c => resetCombatant(c));
+// ====================== MORAL ======================
+function moralTest(team, log, round, label){
+  if(!ACTIVE_RULES.moralActive) return;
+  const survivors = team.filter(canAct);
+  for(const c of survivors){
+    const r = rollD6();
+    const pass = r < curEsp(c);
+    if(log) log.push({t:'morale', msg:` 🛡 Moral [${label}] · ${c.name} (ESP ${curEsp(c)}) jet=${r} → ${pass?'tient bon':'FUITE'}`});
+    if(!pass){
+      c.status = 'fled';
+      if(log) log.push({t:'morale', msg:`   ${c.name} fuit le combat.`});
+    }
+  }
+}
+
+function checkMoralEvents(team, log, round, deathThisRound, half, chief){
+  if(!ACTIVE_RULES.moralActive) return;
+  if(deathThisRound && !team.firstDeathMoralDone && ACTIVE_RULES.moralFirstDeath){
+    team.firstDeathMoralDone = true;
+    moralTest(team, log, round, '1ère perte');
+  }
+  if(chief && !team.chiefMoralDone && ACTIVE_RULES.moralChiefDeath){
+    team.chiefMoralDone = true;
+    moralTest(team, log, round, 'chef tombé');
+  }
+  if(half && !team.halfMoralDone && ACTIVE_RULES.moralHalfTeam){
+    team.halfMoralDone = true;
+    moralTest(team, log, round, '50% pertes');
+  }
+}
+
+// ====================== INITIALISATION COMBAT ======================
+function resetCombatant(c){
+  const fresh = {
+    ...c,
+    blessures:{vig:0,fin:0,esp:0},
+    status:'alive',
+    pushUsed:0, dsUsed:0,
+    firstKORound:null, deathRound:null,
+    // Stats par combattant
+    _dmgGiven:0, _dmgReceived:0,
+    _attacksMade:0, _attacksReceived:0,
+    _hitsGiven:0, _hitsReceived:0,
+  };
+  fresh.end = c.vig;
+  const fat = ACTIVE_RULES.fatigueMax;
+  const prAvail = c.vig;
+  const fatigueUsed = fat > 0 ? rint(0, Math.min(fat, prAvail)) : 0;
+  fresh.pr = prAvail - fatigueUsed;
+  fresh.fatigueStart = fatigueUsed;
+  return fresh;
+}
+
+// ====================== COMBAT ======================
+function simulateCombat(teamARaw, teamBRaw, opts){
+  const A = teamARaw.map(resetCombatant);
+  const B = teamBRaw.map(resetCombatant);
+  A.team = 'A'; B.team = 'B';
   const log = opts.narrative ? [] : null;
+  const events = {firstKO:null, firstDeath:null, firstDeathTeamA:null, firstDeathTeamB:null};
+  const stats = {
+    attacks:0, hits:0, misses:0, pushUsed:0,
+    missesBy:{}, actions:{breath:0},
+    timeline:{rounds:[], events:[]}, // pour timeline visuelle (combat unique)
+  };
+  // identifier chef (plus haut ESP)
+  const chiefA = A.slice().sort((a,b)=>b.esp - a.esp)[0];
+  const chiefB = B.slice().sort((a,b)=>b.esp - a.esp)[0];
+
   let round = 0;
   const maxRounds = opts.maxRounds || 30;
 
-  // Surprise : un round gratuit pour l'équipe surprenante
+  // capturer état initial pour timeline
+  if(opts.narrative) snapshotTimeline(stats.timeline, 0, A, B);
+
+  // Surprise rounds
   if(opts.surpriseA){
     if(log) log.push({t:'round', msg:`— Round de surprise (Équipe A) —`});
-    for(const c of A) if(canAct(c)) takeTurn(c, A, B, opts, log);
+    for(const c of A) if(canAct(c)) takeTurn(c, A, B, log, 0, stats, events);
   }
   if(opts.surpriseB){
     if(log) log.push({t:'round', msg:`— Round de surprise (Équipe B) —`});
-    for(const c of B) if(canAct(c)) takeTurn(c, B, A, opts, log);
+    for(const c of B) if(canAct(c)) takeTurn(c, B, A, log, 0, stats, events);
   }
 
-  while(round < maxRounds){
+  while(round < maxRounds && A.some(canAct) && B.some(canAct)){
     round++;
     if(log) log.push({t:'round', msg:`\n═══ Round ${round} ═══`});
-    // Ordre d'initiative : interleavé, randomisé par round
     const order = [...A.map((c,i)=>({c,team:'A',i})), ...B.map((c,i)=>({c,team:'B',i}))];
-    // simple shuffle
     for(let i=order.length-1;i>0;i--){
       const j = Math.floor(rng()*(i+1));
-      [order[i], order[j]] = [order[j], order[i]];
+      [order[i],order[j]] = [order[j],order[i]];
     }
+    // Casualty = ne peut plus combattre (mort/paralysé/catatonique/fui OU critique VIG=1)
+    const isOut = c => !canAct(c);
+    const aOutBefore = A.filter(isOut).length;
+    const bOutBefore = B.filter(isOut).length;
     for(const slot of order){
       if(!canAct(slot.c)) continue;
       const allies = slot.team === 'A' ? A : B;
       const enemies = slot.team === 'A' ? B : A;
-      takeTurn(slot.c, allies, enemies, opts, log);
-      // condition de victoire en cours de round ?
+      takeTurn(slot.c, allies, enemies, log, round, stats, events);
       if(!A.some(canAct) || !B.some(canAct)) break;
     }
-    if(!A.some(canAct) || !B.some(canAct)) break;
+    // Tests de moral basés sur les casualties (pas juste morts permanentes)
+    const aOutNow = A.filter(isOut).length;
+    const bOutNow = B.filter(isOut).length;
+    const aDeathThisRound = aOutNow > aOutBefore;
+    const bDeathThisRound = bOutNow > bOutBefore;
+    const aHalf = aOutNow >= A.length/2;
+    const bHalf = bOutNow >= B.length/2;
+    const aChief = chiefA && !canAct(chiefA);
+    const bChief = chiefB && !canAct(chiefB);
+    checkMoralEvents(A, log, round, aDeathThisRound, aHalf, aChief);
+    checkMoralEvents(B, log, round, bDeathThisRound, bHalf, bChief);
+
+    // résumé fin de round dans le log
+    if(log) addRoundSummary(log, A, B);
+    // timeline snapshot
+    if(opts.narrative) snapshotTimeline(stats.timeline, round, A, B);
   }
 
   const aAlive = A.filter(canAct).length;
   const bAlive = B.filter(canAct).length;
   let winner;
-  if(aAlive > 0 && bAlive === 0) winner = 'A';
-  else if(bAlive > 0 && aAlive === 0) winner = 'B';
+  if(aAlive>0 && bAlive===0) winner = 'A';
+  else if(bAlive>0 && aAlive===0) winner = 'B';
   else if(round >= maxRounds) winner = 'timeout';
   else winner = 'draw';
 
   if(log){
-    log.push({t:'victory', msg:`Vainqueur : ${winner === 'timeout' ? 'TIMEOUT' : winner === 'draw' ? 'DRAW' : 'Équipe '+winner} · ${round} rounds · A survivants: ${aAlive} · B survivants: ${bAlive}`});
+    log.push({t:'victory', msg:`Vainqueur : ${winner==='timeout'?'TIMEOUT':winner==='draw'?'DRAW':'Équipe '+winner} · ${round} rounds · A survivants: ${aAlive} · B survivants: ${bAlive}`});
   }
 
   return {
     winner, round, aAlive, bAlive,
     aCasualties: A.length - aAlive,
     bCasualties: B.length - bAlive,
-    aDeaths: A.filter(c => c.status === 'dead').length,
-    bDeaths: B.filter(c => c.status === 'dead').length,
-    aEndLost: A.reduce((s,c) => s + (c.vig - c.end), 0),
-    bEndLost: B.reduce((s,c) => s + (c.vig - c.end), 0),
-    aBlessures: A.reduce((s,c) => s + c.blessures.vig + c.blessures.fin + c.blessures.esp, 0),
-    bBlessures: B.reduce((s,c) => s + c.blessures.vig + c.blessures.fin + c.blessures.esp, 0),
-    aPushUsed: A.reduce((s,c) => s + c.pushUsed, 0),
-    bPushUsed: B.reduce((s,c) => s + c.pushUsed, 0),
+    aDeaths: A.filter(c=>c.status==='dead').length,
+    bDeaths: B.filter(c=>c.status==='dead').length,
+    aFled: A.filter(c=>c.status==='fled').length,
+    bFled: B.filter(c=>c.status==='fled').length,
+    aEndLost: A.reduce((s,c)=>s+(c.vig-c.end),0),
+    bEndLost: B.reduce((s,c)=>s+(c.vig-c.end),0),
+    aBlessures: A.reduce((s,c)=>s+c.blessures.vig+c.blessures.fin+c.blessures.esp,0),
+    bBlessures: B.reduce((s,c)=>s+c.blessures.vig+c.blessures.fin+c.blessures.esp,0),
+    aPushUsed: A.reduce((s,c)=>s+c.pushUsed,0),
+    bPushUsed: B.reduce((s,c)=>s+c.pushUsed,0),
+    aDsUsed: A.reduce((s,c)=>s+c.dsUsed,0),
+    bDsUsed: B.reduce((s,c)=>s+c.dsUsed,0),
+    firstKORound: events.firstKO || null,
+    firstDeathRound: events.firstDeath || null,
+    attacks: stats.attacks,
+    hits: stats.hits,
+    misses: stats.misses,
+    missesBy: stats.missesBy,
     log,
+    timeline: stats.timeline,
     finalA: A, finalB: B,
   };
 }
 
-function resetCombatant(c){
-  return {
-    ...c,
-    end: c.vig,
-    pr: c.vig,
-    blessures: { vig:0, fin:0, esp:0 },
-    status: 'alive',
-    pushUsed: 0,
-  };
+function snapshotTimeline(timeline, round, A, B){
+  timeline.rounds.push({
+    round,
+    A: A.map(c => ({name:c.name, end:c.end, vig:curVig(c), status:c.status})),
+    B: B.map(c => ({name:c.name, end:c.end, vig:curVig(c), status:c.status})),
+  });
 }
 
-// ---------- BATCH MONTE CARLO ----------
+function addRoundSummary(log, A, B){
+  const fmtTeam = team => team.map(c => {
+    const v = curVig(c); const ev = c.vig;
+    const stTag = c.status === 'alive' ? '' : `[${c.status.toUpperCase()}]`;
+    const blStr = (c.blessures.vig+c.blessures.fin+c.blessures.esp) > 0 ? ` ${c.blessures.vig+c.blessures.fin+c.blessures.esp}🩸` : '';
+    return `${c.name}(${c.end}/${c.vig}END · V${v}/${ev}${blStr})${stTag}`;
+  }).join(' · ');
+  log.push({t:'summary', msg:` Récap A → ${fmtTeam(A)}`});
+  log.push({t:'summary', msg:` Récap B → ${fmtTeam(B)}`});
+}
+
+// ====================== BATCH ======================
+function emptyPerChar(team){
+  return team.map((c,i) => ({
+    name:c.name, team:null, idx:i,
+    dmgGiven:0, dmgReceived:0,
+    attacksMade:0, attacksReceived:0,
+    hitsGiven:0, hitsReceived:0,
+    firstKOSum:0, firstKOCount:0,
+    deathSum:0, deathCount:0,
+    fledCount:0,
+    runsAlive:0,
+  }));
+}
 function runBatchSim(teamA, teamB, opts, N){
-  const results = [];
-  for(let i=0;i<N;i++){
-    results.push(simulateCombat(teamA, teamB, { ...opts, narrative:false }));
-  }
-  // agrégats
-  const wins = { A:0, B:0, draw:0, timeout:0 };
+  const wins = {A:0, B:0, draw:0, timeout:0};
   let sumRounds=0, sumAEnd=0, sumBEnd=0, sumABless=0, sumBBless=0;
-  let sumACasualty=0, sumBCasualty=0, sumADeath=0, sumBDeath=0;
-  let sumAPush=0, sumBPush=0;
+  let sumACas=0, sumBCas=0, sumADeath=0, sumBDeath=0, sumAFled=0, sumBFled=0;
+  let sumAPush=0, sumBPush=0, sumADs=0, sumBDs=0;
+  let sumAttacks=0, sumHits=0, sumMisses=0;
+  let sumFirstKO=0, sumFirstDeath=0, cntFirstKO=0, cntFirstDeath=0;
   const roundDist = {};
-  for(const r of results){
+  const perCharA = emptyPerChar(teamA);
+  const perCharB = emptyPerChar(teamB);
+  perCharA.forEach(p => p.team = 'A');
+  perCharB.forEach(p => p.team = 'B');
+
+  for(let i=0;i<N;i++){
+    const r = simulateCombat(teamA, teamB, {...opts, narrative:false});
     wins[r.winner]++;
     sumRounds += r.round;
-    sumAEnd += r.aEndLost;
-    sumBEnd += r.bEndLost;
-    sumABless += r.aBlessures;
-    sumBBless += r.bBlessures;
-    sumACasualty += r.aCasualties;
-    sumBCasualty += r.bCasualties;
-    sumADeath += r.aDeaths;
-    sumBDeath += r.bDeaths;
-    sumAPush += r.aPushUsed;
-    sumBPush += r.bPushUsed;
+    sumAEnd += r.aEndLost; sumBEnd += r.bEndLost;
+    sumABless += r.aBlessures; sumBBless += r.bBlessures;
+    sumACas += r.aCasualties; sumBCas += r.bCasualties;
+    sumADeath += r.aDeaths; sumBDeath += r.bDeaths;
+    sumAFled += r.aFled; sumBFled += r.bFled;
+    sumAPush += r.aPushUsed; sumBPush += r.bPushUsed;
+    sumADs += r.aDsUsed; sumBDs += r.bDsUsed;
+    sumAttacks += r.attacks; sumHits += r.hits; sumMisses += r.misses;
+    if(r.firstKORound){ sumFirstKO += r.firstKORound; cntFirstKO++; }
+    if(r.firstDeathRound){ sumFirstDeath += r.firstDeathRound; cntFirstDeath++; }
     roundDist[r.round] = (roundDist[r.round]||0)+1;
+    // Accumuler stats par combattant
+    accumulatePerChar(perCharA, r.finalA);
+    accumulatePerChar(perCharB, r.finalB);
   }
+  // Finaliser : convertir en moyennes
+  const finalizePerChar = p => ({
+    name:p.name, team:p.team, idx:p.idx,
+    avgDmgGiven: p.dmgGiven/N,
+    avgDmgReceived: p.dmgReceived/N,
+    attacksMade: p.attacksMade/N,
+    attacksReceived: p.attacksReceived/N,
+    missRateGiven:  p.attacksMade ? 1 - p.hitsGiven/p.attacksMade : 0,
+    missRateReceived: p.attacksReceived ? 1 - p.hitsReceived/p.attacksReceived : 0,
+    avgFirstKO: p.firstKOCount ? p.firstKOSum/p.firstKOCount : null,
+    pctFirstKO: p.firstKOCount/N,
+    avgDeath: p.deathCount ? p.deathSum/p.deathCount : null,
+    pctDeath: p.deathCount/N,
+    pctFled: p.fledCount/N,
+    pctAlive: p.runsAlive/N,
+  });
   return {
     N,
-    winRateA: wins.A / N,
-    winRateB: wins.B / N,
-    drawRate: wins.draw / N,
-    timeoutRate: wins.timeout / N,
-    avgRounds: sumRounds / N,
-    avgAEndLost: sumAEnd / N,
-    avgBEndLost: sumBEnd / N,
-    avgABlessures: sumABless / N,
-    avgBBlessures: sumBBless / N,
-    avgACasualties: sumACasualty / N,
-    avgBCasualties: sumBCasualty / N,
-    avgADeaths: sumADeath / N,
-    avgBDeaths: sumBDeath / N,
-    avgAPushUsed: sumAPush / N,
-    avgBPushUsed: sumBPush / N,
+    winRateA: wins.A/N, winRateB: wins.B/N, drawRate: wins.draw/N, timeoutRate: wins.timeout/N,
+    avgRounds: sumRounds/N,
+    avgAEndLost: sumAEnd/N, avgBEndLost: sumBEnd/N,
+    avgABlessures: sumABless/N, avgBBlessures: sumBBless/N,
+    avgACasualties: sumACas/N, avgBCasualties: sumBCas/N,
+    avgADeaths: sumADeath/N, avgBDeaths: sumBDeath/N,
+    avgAFled: sumAFled/N, avgBFled: sumBFled/N,
+    avgAPushUsed: sumAPush/N, avgBPushUsed: sumBPush/N,
+    avgADsUsed: sumADs/N, avgBDsUsed: sumBDs/N,
+    avgFirstKO: cntFirstKO ? sumFirstKO/cntFirstKO : null,
+    avgFirstDeath: cntFirstDeath ? sumFirstDeath/cntFirstDeath : null,
+    pctFirstKO: cntFirstKO/N, pctFirstDeath: cntFirstDeath/N,
+    avgAttacks: sumAttacks/N,
+    hitRate: sumAttacks ? sumHits/sumAttacks : 0,
+    missRate: sumAttacks ? sumMisses/sumAttacks : 0,
+    perCharA: perCharA.map(finalizePerChar),
+    perCharB: perCharB.map(finalizePerChar),
     roundDist,
   };
 }
 
-/* ============================================================
-   UI — État global + rendu
-   ============================================================ */
+function accumulatePerChar(acc, finalTeam){
+  for(let i=0;i<acc.length;i++){
+    const f = finalTeam[i]; if(!f) continue;
+    acc[i].dmgGiven += f._dmgGiven||0;
+    acc[i].dmgReceived += f._dmgReceived||0;
+    acc[i].attacksMade += f._attacksMade||0;
+    acc[i].attacksReceived += f._attacksReceived||0;
+    acc[i].hitsGiven += f._hitsGiven||0;
+    acc[i].hitsReceived += f._hitsReceived||0;
+    if(f.firstKORound){ acc[i].firstKOSum += f.firstKORound; acc[i].firstKOCount++; }
+    if(f.deathRound){ acc[i].deathSum += f.deathRound; acc[i].deathCount++; }
+    if(f.status === 'fled') acc[i].fledCount++;
+    if(f.status === 'alive') acc[i].runsAlive++;
+  }
+}
+
+// ====================== UI STATE ======================
 const state = {
-  teamA: [],
-  teamB: [],
+  teamA: [], teamB: [],
   history: JSON.parse(localStorage.getItem('vermisCombatHistory') || '[]'),
 };
+
+// Migration anciens combattants
+function migrateCombatant(c){
+  if(c.hasExpertise !== undefined && c.hasWeaponExpertise === undefined){ c.hasWeaponExpertise = c.hasExpertise; delete c.hasExpertise; }
+  if(c.weaponPersonalized !== undefined && c.weaponSpecialized === undefined){ c.weaponSpecialized = c.weaponPersonalized; delete c.weaponPersonalized; }
+  if(c.weaponSpecialized === undefined) c.weaponSpecialized = false;
+  if(c.hasWeaponExpertise === undefined) c.hasWeaponExpertise = false;
+  return c;
+}
+state.history.forEach(h => { (h.teamA||[]).forEach(migrateCombatant); (h.teamB||[]).forEach(migrateCombatant); });
 
 function generateTeam(side){
   const size = parseInt(document.getElementById(`team${side}-size`).value);
   const tier = parseInt(document.getElementById(`team${side}-tier`).value);
-  const team = [];
-  for(let i=0;i<size;i++) team.push(randomCombatant(tier, i+1));
-  if(side === 'A') state.teamA = team; else state.teamB = team;
+  state[`team${side}`] = Array.from({length:size}, (_,i) => randomCombatant(tier, i+1, side));
   renderTeam(side);
 }
-function clearTeam(side){
-  if(side === 'A') state.teamA = []; else state.teamB = [];
-  renderTeam(side);
-}
+function clearTeam(side){ state[`team${side}`] = []; renderTeam(side); }
 function addCombatant(side){
   const c = newDefaultCombatant();
-  c.name = (side === 'A' ? 'A' : 'B') + (state['team'+side].length + 1);
-  state['team'+side].push(c);
+  c.name = side + (state[`team${side}`].length+1) + ' Générique';
+  state[`team${side}`].push(c);
   renderTeam(side);
 }
-function removeCombatant(side, idx){
-  state['team'+side].splice(idx, 1);
+function addPJ(side){
+  const id = document.getElementById(`team${side}-pj`).value;
+  if(!id) return;
+  state[`team${side}`].push(makePJ(id, state[`team${side}`].length+1, side));
   renderTeam(side);
 }
+function removeCombatant(side, idx){ state[`team${side}`].splice(idx,1); renderTeam(side); }
 function toggleExpand(side, idx){
   const el = document.querySelectorAll(`#team${side}-list .combatant`)[idx];
   if(el) el.classList.toggle('expanded');
 }
 
 function renderTeam(side){
-  const team = state['team'+side];
-  const list = document.getElementById(`team${side}-list`);
-  list.innerHTML = team.map((c,i) => renderCombatant(c, side, i)).join('');
+  const team = state[`team${side}`];
+  document.getElementById(`team${side}-list`).innerHTML = team.map((c,i) => renderCombatant(c, side, i)).join('');
 }
 
 function renderCombatant(c, side, i){
   const weapon = getWeapon(c);
   const armor = getArmor(c);
   const shield = getShield(c);
+  const totalPool = weapon.dice + (c.hasWeaponExpertise?1:0) + (c.weaponSpecialized?1:0) + (c.hasDon?1:0);
+  const bonuses = [];
+  if(c.hasWeaponExpertise) bonuses.push('+M');
+  if(c.weaponSpecialized)  bonuses.push('+S');
+  if(c.hasDon)             bonuses.push('+Don');
+  const bonusStr = bonuses.length ? ` <span class="muted">(${weapon.dice}${bonuses.join('')})</span>` : '';
   const tags = [];
-  if(c.hasDon) tags.push('<span class="tag">Don</span>');
-  if(c.hasExpertise) tags.push('<span class="tag">Exp</span>');
   if(shield.id !== 'aucun') tags.push(`<span class="tag">${shield.name}</span>`);
   return `
   <div class="combatant" data-idx="${i}">
     <div class="combatant-header" onclick="toggleExpand('${side}',${i})">
       <span class="combatant-name">${c.name}</span>
-      <span class="combatant-summary">A${c.vig} · ${weapon.dice}d ${weapon.name.split(' ')[0]} · ${armor.name} (d${armor.diff}) ${tags.join('')}</span>
+      <span class="combatant-summary">V${c.vig}/F${c.fin}/E${c.esp} · <b>${totalPool}d</b>${bonusStr} ${weapon.name.split(' ')[0]} · ${armor.name} (d${armor.diff}) ${tags.join('')}</span>
       <button class="small danger" onclick="event.stopPropagation();removeCombatant('${side}',${i})">✕</button>
     </div>
     <div class="combatant-detail">
@@ -745,75 +1028,56 @@ function renderCombatant(c, side, i){
           </select>
         </div>
         <div class="row">
-          <label>IA</label>
+          <label class="tooltip" data-tip="${AI_DESCRIPTIONS[c.aiProfile]||''}">IA</label>
           <select onchange="updateC('${side}',${i},'aiProfile',this.value)">
-            <option value="aggressif" ${c.aiProfile==='aggressif'?'selected':''}>Agressif</option>
-            <option value="prudent" ${c.aiProfile==='prudent'?'selected':''}>Prudent</option>
-            <option value="tacticien" ${c.aiProfile==='tacticien'?'selected':''}>Tacticien</option>
+            ${['aggressif','prudent','tacticien'].map(p => `<option value="${p}" ${p===c.aiProfile?'selected':''}>${p[0].toUpperCase()+p.slice(1)}</option>`).join('')}
           </select>
         </div>
-        <div class="row">
-          <label><input type="checkbox" ${c.hasDon?'checked':''} onchange="updateC('${side}',${i},'hasDon',this.checked)"> Don applicable</label>
-        </div>
-        <div class="row">
-          <label><input type="checkbox" ${c.hasExpertise?'checked':''} onchange="updateC('${side}',${i},'hasExpertise',this.checked)"> Expertise</label>
-        </div>
+        <div class="row"><label><input type="checkbox" ${c.hasWeaponExpertise?'checked':''} onchange="updateC('${side}',${i},'hasWeaponExpertise',this.checked)"> Maniement d'Armes (+1d)</label></div>
+        <div class="row"><label><input type="checkbox" ${c.weaponSpecialized?'checked':''} onchange="updateC('${side}',${i},'weaponSpecialized',this.checked)"> Arme spécialisée (+1d)</label></div>
+        <div class="row"><label><input type="checkbox" ${c.hasDon?'checked':''} onchange="updateC('${side}',${i},'hasDon',this.checked)"> Don applicable (+1d)</label></div>
       </div>
     </div>
   </div>`;
 }
 
 function updateC(side, idx, field, value){
-  state['team'+side][idx][field] = value;
-  // ne pas re-rendre tout le détail pour éviter de perdre le focus ; mettre à jour le sommaire
+  state[`team${side}`][idx][field] = value;
   renderTeam(side);
 }
 
-/* ============================================================
-   Runs
-   ============================================================ */
+// ====================== RUNS ======================
 function getOpts(){
   return {
     maxRounds: parseInt(document.getElementById('param-maxRounds').value),
-    shieldsActive: document.getElementById('param-shieldsActive').checked,
     surpriseA: document.getElementById('param-surpriseA').checked,
     surpriseB: document.getElementById('param-surpriseB').checked,
   };
 }
 
 function runSingle(){
-  if(state.teamA.length === 0 || state.teamB.length === 0){
-    alert('Les deux équipes doivent être non vides.'); return;
-  }
+  if(!state.teamA.length || !state.teamB.length){ alert('Les deux équipes doivent être non vides.'); return; }
   setSeed(document.getElementById('param-seed').value);
-  const opts = { ...getOpts(), narrative:true };
-  const result = simulateCombat(state.teamA, state.teamB, opts);
+  ACTIVE_RULES = readRules();
+  const result = simulateCombat(state.teamA, state.teamB, {...getOpts(), narrative:true});
   showSingleResult(result);
 }
 
 function runBatch(){
-  if(state.teamA.length === 0 || state.teamB.length === 0){
-    alert('Les deux équipes doivent être non vides.'); return;
-  }
+  if(!state.teamA.length || !state.teamB.length){ alert('Les deux équipes doivent être non vides.'); return; }
   const N = parseInt(document.getElementById('param-N').value);
   setSeed(document.getElementById('param-seed').value);
+  ACTIVE_RULES = readRules();
   const opts = getOpts();
   const status = document.getElementById('run-status');
   status.textContent = ' · simulation en cours…';
-  // async pour laisser le DOM respirer
-  setTimeout(() => {
+  setTimeout(()=>{
     const t0 = performance.now();
     const agg = runBatchSim(state.teamA, state.teamB, opts, N);
     const t1 = performance.now();
     status.textContent = ` · ${N} runs en ${((t1-t0)/1000).toFixed(2)}s`;
     const scenario = document.getElementById('param-scenario').value || 'Sans nom';
-    const entry = {
-      timestamp: new Date().toISOString(),
-      scenario,
-      teamA: state.teamA, teamB: state.teamB,
-      opts, N,
-      agg,
-    };
+    const entry = {timestamp: new Date().toISOString(), scenario, teamA: state.teamA, teamB: state.teamB, opts, rules: ACTIVE_RULES, N, agg};
     state.history.unshift(entry);
     saveHistory();
     renderHistory();
@@ -824,24 +1088,56 @@ function runBatch(){
 function showSingleResult(result){
   document.getElementById('results-panel').style.display = 'block';
   document.getElementById('log-panel').style.display = 'block';
-  const winnerStr = result.winner === 'timeout' ? '⏱ TIMEOUT' :
-                    result.winner === 'draw' ? '⚖ DRAW' :
-                    result.winner === 'A' ? '⚔ ÉQUIPE A' : '⚔ ÉQUIPE B';
+  const winnerStr = result.winner==='timeout'?'⏱ TIMEOUT':result.winner==='draw'?'⚖ DRAW':result.winner==='A'?'⚔ ÉQUIPE A':'⚔ ÉQUIPE B';
   document.getElementById('results-content').innerHTML = `
     <div class="results-grid">
       <div class="stat-box"><div class="l">Vainqueur</div><div class="v">${winnerStr}</div></div>
       <div class="stat-box"><div class="l">Rounds</div><div class="v">${result.round}</div></div>
       <div class="stat-box"><div class="l">A survivants</div><div class="v">${result.aAlive}/${state.teamA.length}</div></div>
       <div class="stat-box"><div class="l">B survivants</div><div class="v">${result.bAlive}/${state.teamB.length}</div></div>
-      <div class="stat-box"><div class="l">A morts</div><div class="v">${result.aDeaths}</div></div>
-      <div class="stat-box"><div class="l">B morts</div><div class="v">${result.bDeaths}</div></div>
-      <div class="stat-box"><div class="l">END perdue A</div><div class="v">${result.aEndLost}</div></div>
-      <div class="stat-box"><div class="l">END perdue B</div><div class="v">${result.bEndLost}</div></div>
+      <div class="stat-box"><div class="l">A morts/fuites</div><div class="v">${result.aDeaths}/${result.aFled}</div></div>
+      <div class="stat-box"><div class="l">B morts/fuites</div><div class="v">${result.bDeaths}/${result.bFled}</div></div>
+      <div class="stat-box"><div class="l">1er KO</div><div class="v">${result.firstKORound ?? '—'}</div></div>
+      <div class="stat-box"><div class="l">1ère mort</div><div class="v">${result.firstDeathRound ?? '—'}</div></div>
+      <div class="stat-box"><div class="l">Attaques</div><div class="v">${result.attacks}</div></div>
+      <div class="stat-box"><div class="l">Sans dégât</div><div class="v">${result.attacks ? (result.misses/result.attacks*100).toFixed(0) : 0}%</div></div>
     </div>
   `;
-  // log
-  const logEl = document.getElementById('log-content');
-  logEl.innerHTML = result.log.map(l => `<div class="l-${l.t}">${l.msg}</div>`).join('');
+  document.getElementById('log-content').innerHTML = result.log.map(l => `<div class="l-${l.t}">${l.msg}</div>`).join('');
+  renderTimeline(result.timeline);
+}
+
+function renderTimeline(timeline){
+  const el = document.getElementById('timeline-content');
+  if(!timeline || timeline.rounds.length < 2){ el.innerHTML = ''; return; }
+  const rounds = timeline.rounds;
+  const cellWidth = Math.max(20, Math.floor(800 / rounds.length));
+  const renderRow = (name, snapshots) => {
+    const cells = snapshots.map(s => {
+      let cls = 'tl-alive'; let glyph = String(s.end);
+      if(s.status === 'fled') { cls = 'tl-fled'; glyph = '⮕'; }
+      else if(s.status === 'dead' || s.status === 'paralyzed' || s.status === 'catatonic') { cls = 'tl-dead'; glyph = '✖'; }
+      else if(s.vig <= 1) cls = 'tl-critical';
+      else if(s.end === 0) cls = 'tl-wound';
+      else if(s.end <= 2) cls = 'tl-low';
+      return `<div class="timeline-cell ${cls}" title="R${snapshots.indexOf(s)} · ${s.end}END · V${s.vig} · ${s.status}">${glyph}</div>`;
+    }).join('');
+    return `<div class="timeline-row"><span class="timeline-name">${name}</span><div class="timeline-bar">${cells}</div></div>`;
+  };
+  const allCombatants = [];
+  if(rounds[0]) rounds[0].A.forEach((c,i) => allCombatants.push({team:'A', i, name:c.name}));
+  if(rounds[0]) rounds[0].B.forEach((c,i) => allCombatants.push({team:'B', i, name:c.name}));
+  const html = `
+    <div class="timeline-wrap">
+      <div class="muted" style="font-size:11px;margin-bottom:4px">Timeline END par round · vert=normal · orange=END bas · rouge sombre=blessures · rouge vif=critique · <span style="color:#3a5a8a">bleu=fuite</span> · noir=mort</div>
+      <div class="muted" style="font-size:11px;text-align:right">${rounds.length-1} rounds + état initial</div>
+      ${allCombatants.map(c => {
+        const snaps = rounds.map(r => c.team==='A' ? r.A[c.i] : r.B[c.i]);
+        return renderRow(`${c.team}:${c.name}`, snaps);
+      }).join('')}
+    </div>
+  `;
+  el.innerHTML = html;
 }
 
 function showBatchResult(entry){
@@ -852,14 +1148,45 @@ function showBatchResult(entry){
   const pctB = (agg.winRateB*100).toFixed(1);
   const pctD = (agg.drawRate*100).toFixed(1);
   const pctT = (agg.timeoutRate*100).toFixed(1);
-  // distribution rounds
   const rds = Object.keys(agg.roundDist).map(Number).sort((a,b)=>a-b);
-  const maxR = rds.length ? rds[rds.length-1] : 0;
   const maxCount = Math.max(...Object.values(agg.roundDist));
   const distBars = rds.map(r => {
-    const w = (agg.roundDist[r] / maxCount * 100).toFixed(0);
+    const w = (agg.roundDist[r]/maxCount*100).toFixed(0);
     return `<div style="display:flex;gap:4px;align-items:center;margin:1px 0"><span class="muted" style="width:30px;text-align:right">R${r}</span><div style="flex:1;background:var(--bg3);height:10px;border-radius:2px"><div style="width:${w}%;background:var(--accent2);height:100%;border-radius:2px"></div></div><span class="muted" style="width:50px">${agg.roundDist[r]} (${(agg.roundDist[r]/entry.N*100).toFixed(1)}%)</span></div>`;
   }).join('');
+  const fmtPct = v => (v*100).toFixed(1) + '%';
+  const fmtNum = v => v==null ? '—' : v.toFixed(2);
+  const renderPerCharTable = (arr, colorVar) => `
+    <table style="margin-top:6px">
+      <thead><tr>
+        <th>Combattant</th>
+        <th title="Rounds avant END=0">⌀ 1er KO</th>
+        <th title="% des runs où il est tombé KO">%KO</th>
+        <th title="Rounds avant mort">⌀ Mort</th>
+        <th title="% des runs où il est mort">%Mort</th>
+        <th title="% des runs où il a fui">%Fuite</th>
+        <th title="% des runs où il a survécu">%Vie</th>
+        <th title="Dégâts moyens infligés">⌀ Dgt donné</th>
+        <th title="Dégâts moyens reçus">⌀ Dgt reçu</th>
+        <th title="% de ses attaques qui font 0 dégât">%Att raté</th>
+        <th title="% des attaques contre lui qui font 0 dégât">%Att reçu ratée</th>
+      </tr></thead>
+      <tbody>
+      ${arr.map(p => `<tr>
+        <td style="color:${colorVar};font-weight:600">${p.name}</td>
+        <td>${fmtNum(p.avgFirstKO)}</td>
+        <td>${fmtPct(p.pctFirstKO)}</td>
+        <td>${fmtNum(p.avgDeath)}</td>
+        <td style="color:#a13320">${fmtPct(p.pctDeath)}</td>
+        <td style="color:#7a5fc8">${fmtPct(p.pctFled)}</td>
+        <td style="color:#5e8a3e">${fmtPct(p.pctAlive)}</td>
+        <td style="color:#c98a3b">${p.avgDmgGiven.toFixed(2)}</td>
+        <td style="color:#c93b2b">${p.avgDmgReceived.toFixed(2)}</td>
+        <td>${fmtPct(p.missRateGiven)}</td>
+        <td>${fmtPct(p.missRateReceived)}</td>
+      </tr>`).join('')}
+      </tbody>
+    </table>`;
 
   document.getElementById('results-content').innerHTML = `
     <h3>📊 ${entry.scenario} — ${entry.N} runs</h3>
@@ -869,87 +1196,66 @@ function showBatchResult(entry){
       <div class="stat-box"><div class="l">Draw</div><div class="v">${pctD}%</div></div>
       <div class="stat-box"><div class="l">Timeout</div><div class="v">${pctT}%</div></div>
       <div class="stat-box"><div class="l">Rounds moy.</div><div class="v">${agg.avgRounds.toFixed(2)}</div></div>
+      <div class="stat-box"><div class="l">1er KO</div><div class="v">${agg.avgFirstKO?agg.avgFirstKO.toFixed(1):'—'}</div><div class="muted" style="font-size:10px">${(agg.pctFirstKO*100).toFixed(0)}% des runs</div></div>
+      <div class="stat-box"><div class="l">1ère mort</div><div class="v">${agg.avgFirstDeath?agg.avgFirstDeath.toFixed(1):'—'}</div><div class="muted" style="font-size:10px">${(agg.pctFirstDeath*100).toFixed(0)}% des runs</div></div>
+      <div class="stat-box"><div class="l">% attaques sans dégât</div><div class="v">${(agg.missRate*100).toFixed(1)}%</div></div>
     </div>
     <div class="grid grid-2" style="margin-top:10px">
       <div>
         <h3 style="color:var(--accent)">Équipe A · moyennes</h3>
         <div class="results-grid">
           <div class="stat-box"><div class="l">Morts</div><div class="v">${agg.avgADeaths.toFixed(2)}</div></div>
-          <div class="stat-box"><div class="l">Pertes</div><div class="v">${agg.avgACasualties.toFixed(2)}</div></div>
+          <div class="stat-box"><div class="l">Fuites</div><div class="v">${agg.avgAFled.toFixed(2)}</div></div>
           <div class="stat-box"><div class="l">END perdue</div><div class="v">${agg.avgAEndLost.toFixed(1)}</div></div>
           <div class="stat-box"><div class="l">Blessures</div><div class="v">${agg.avgABlessures.toFixed(2)}</div></div>
-          <div class="stat-box"><div class="l">Push utilisé</div><div class="v">${agg.avgAPushUsed.toFixed(2)}</div></div>
+          <div class="stat-box"><div class="l">Push</div><div class="v">${agg.avgAPushUsed.toFixed(2)}</div></div>
+          <div class="stat-box"><div class="l">Souffles</div><div class="v">${agg.avgADsUsed.toFixed(2)}</div></div>
         </div>
       </div>
       <div>
         <h3 style="color:var(--accent2)">Équipe B · moyennes</h3>
         <div class="results-grid">
           <div class="stat-box"><div class="l">Morts</div><div class="v">${agg.avgBDeaths.toFixed(2)}</div></div>
-          <div class="stat-box"><div class="l">Pertes</div><div class="v">${agg.avgBCasualties.toFixed(2)}</div></div>
+          <div class="stat-box"><div class="l">Fuites</div><div class="v">${agg.avgBFled.toFixed(2)}</div></div>
           <div class="stat-box"><div class="l">END perdue</div><div class="v">${agg.avgBEndLost.toFixed(1)}</div></div>
           <div class="stat-box"><div class="l">Blessures</div><div class="v">${agg.avgBBlessures.toFixed(2)}</div></div>
-          <div class="stat-box"><div class="l">Push utilisé</div><div class="v">${agg.avgBPushUsed.toFixed(2)}</div></div>
+          <div class="stat-box"><div class="l">Push</div><div class="v">${agg.avgBPushUsed.toFixed(2)}</div></div>
+          <div class="stat-box"><div class="l">Souffles</div><div class="v">${agg.avgBDsUsed.toFixed(2)}</div></div>
         </div>
       </div>
     </div>
-    <details style="margin-top:10px"><summary>Distribution de la durée des combats</summary>
-      <div style="margin-top:6px">${distBars}</div>
-    </details>
+    <details style="margin-top:10px" open><summary>👤 Stats par combattant — Équipe A</summary>${renderPerCharTable(agg.perCharA, 'var(--accent)')}</details>
+    <details style="margin-top:6px" open><summary>👤 Stats par combattant — Équipe B</summary>${renderPerCharTable(agg.perCharB, 'var(--accent2)')}</details>
+    <details style="margin-top:10px"><summary>📉 Distribution de la durée des combats</summary><div style="margin-top:6px">${distBars}</div></details>
   `;
 }
 
-/* ============================================================
-   Historique : sauvegarde, export CSV/JSON, import
-   ============================================================ */
+// ====================== HISTORIQUE ======================
 function saveHistory(){
-  // localStorage ne supporte pas plus de ~5MB; tronquer si nécessaire
-  try {
-    localStorage.setItem('vermisCombatHistory', JSON.stringify(state.history.slice(0,50)));
-  } catch(e){
-    state.history = state.history.slice(0,20);
-    localStorage.setItem('vermisCombatHistory', JSON.stringify(state.history));
-  }
+  try { localStorage.setItem('vermisCombatHistory', JSON.stringify(state.history.slice(0,50))); }
+  catch(e){ state.history = state.history.slice(0,20); localStorage.setItem('vermisCombatHistory', JSON.stringify(state.history)); }
 }
-function clearHistory(){
-  if(!confirm('Effacer tout l\'historique ?')) return;
-  state.history = [];
-  saveHistory();
-  renderHistory();
-}
+function clearHistory(){ if(!confirm('Effacer tout l\'historique ?')) return; state.history = []; saveHistory(); renderHistory(); }
 function renderHistory(){
   const el = document.getElementById('history-table');
   document.getElementById('history-count').textContent = `${state.history.length} runs`;
-  if(state.history.length === 0){ el.innerHTML = '<div class="muted">aucun historique pour l\'instant</div>'; return; }
-  el.innerHTML = `<table>
-    <thead><tr>
-      <th>Date</th><th>Scénario</th><th>A</th><th>B</th><th>N</th>
-      <th>%A</th><th>%B</th><th>Rounds</th>
-      <th>Actions</th>
-    </tr></thead><tbody>
-    ${state.history.map((h,i) => {
-      const date = new Date(h.timestamp).toLocaleString('fr-CA',{month:'short',day:'numeric',hour:'2-digit',minute:'2-digit'});
-      const ta = h.teamA.length + ' (T'+inferTier(h.teamA)+')';
-      const tb = h.teamB.length + ' (T'+inferTier(h.teamB)+')';
-      return `<tr>
-        <td class="muted">${date}</td>
-        <td>${h.scenario}</td>
-        <td>${ta}</td><td>${tb}</td>
-        <td>${h.N}</td>
-        <td style="color:var(--accent)">${(h.agg.winRateA*100).toFixed(1)}%</td>
-        <td style="color:var(--accent2)">${(h.agg.winRateB*100).toFixed(1)}%</td>
-        <td>${h.agg.avgRounds.toFixed(1)}</td>
-        <td>
-          <button class="small" onclick="loadHistoryEntry(${i})">↺ charger</button>
-          <button class="small" onclick="showBatchResult(state.history[${i}])">👁 voir</button>
-          <button class="small danger" onclick="removeHistoryEntry(${i})">✕</button>
-        </td>
-      </tr>`;
-    }).join('')}
-    </tbody></table>`;
-}
-function inferTier(team){
-  const avgVig = team.reduce((s,c)=>s+c.vig,0)/team.length;
-  return Math.round(avgVig);
+  if(!state.history.length){ el.innerHTML = '<div class="muted">aucun historique pour l\'instant</div>'; return; }
+  el.innerHTML = `<table><thead><tr><th>Date</th><th>Scénario</th><th>A</th><th>B</th><th>N</th><th>%A</th><th>%B</th><th>Rounds</th><th>Actions</th></tr></thead><tbody>
+  ${state.history.map((h,i) => {
+    const date = new Date(h.timestamp).toLocaleString('fr-CA',{month:'short',day:'numeric',hour:'2-digit',minute:'2-digit'});
+    return `<tr>
+      <td class="muted">${date}</td><td>${h.scenario}</td>
+      <td>${h.teamA.length}</td><td>${h.teamB.length}</td><td>${h.N}</td>
+      <td style="color:var(--accent)">${(h.agg.winRateA*100).toFixed(1)}%</td>
+      <td style="color:var(--accent2)">${(h.agg.winRateB*100).toFixed(1)}%</td>
+      <td>${h.agg.avgRounds.toFixed(1)}</td>
+      <td>
+        <button class="small" onclick="loadHistoryEntry(${i})">↺ charger</button>
+        <button class="small" onclick="showBatchResult(state.history[${i}])">👁 voir</button>
+        <button class="small danger" onclick="removeHistoryEntry(${i})">✕</button>
+      </td>
+    </tr>`;
+  }).join('')}</tbody></table>`;
 }
 function loadHistoryEntry(i){
   const h = state.history[i];
@@ -958,82 +1264,73 @@ function loadHistoryEntry(i){
   document.getElementById('param-scenario').value = h.scenario;
   document.getElementById('param-N').value = h.N;
   document.getElementById('param-maxRounds').value = h.opts.maxRounds;
-  document.getElementById('param-shieldsActive').checked = !!h.opts.shieldsActive;
   document.getElementById('param-surpriseA').checked = !!h.opts.surpriseA;
   document.getElementById('param-surpriseB').checked = !!h.opts.surpriseB;
+  if(h.rules){
+    document.getElementById('rule-onesBonus').checked = !!h.rules.onesBonus;
+    document.getElementById('rule-redBonus').checked = !!h.rules.redBonus;
+    document.getElementById('rule-pierceOnDouble').checked = !!h.rules.pierceOnDouble;
+    document.getElementById('rule-extraOnDouble').checked = !!h.rules.extraOnDouble;
+    document.getElementById('param-shieldsActive').checked = !!h.rules.shieldsActive;
+    document.getElementById('param-dsActive').checked = h.rules.dsActive !== false;
+    document.getElementById('param-dsMax').value = h.rules.dsMax;
+    document.getElementById('param-fatigue').value = h.rules.fatigueMax || 0;
+    document.getElementById('moral-active').checked = !!h.rules.moralActive;
+  }
   renderTeam('A'); renderTeam('B');
 }
-function removeHistoryEntry(i){
-  state.history.splice(i,1);
-  saveHistory();
-  renderHistory();
-}
+function removeHistoryEntry(i){ state.history.splice(i,1); saveHistory(); renderHistory(); }
 
 function csvEscape(v){
   if(v == null) return '';
   const s = String(v);
-  if(s.includes(',') || s.includes('"') || s.includes('\n')){
-    return '"' + s.replace(/"/g,'""') + '"';
-  }
+  if(s.includes(',') || s.includes('"') || s.includes('\n')) return '"' + s.replace(/"/g,'""') + '"';
   return s;
 }
 function exportCSV(){
-  if(state.history.length === 0){ alert('Historique vide.'); return; }
-  const headers = [
-    'timestamp','scenario','teamA_size','teamB_size','teamA_tier','teamB_tier',
-    'N','maxRounds','shieldsActive','surpriseA','surpriseB',
-    'winRateA','winRateB','drawRate','timeoutRate','avgRounds',
-    'avgADeaths','avgBDeaths','avgACasualties','avgBCasualties',
-    'avgAEndLost','avgBEndLost','avgABlessures','avgBBlessures',
-    'avgAPushUsed','avgBPushUsed',
-    'scenario_json'
-  ];
+  if(!state.history.length){ alert('Historique vide.'); return; }
+  const headers = ['timestamp','scenario','teamA_size','teamB_size','N','maxRounds','dsActive','dsMax','fatigueMax','moralActive',
+    'winRateA','winRateB','drawRate','timeoutRate','avgRounds','avgFirstKO','avgFirstDeath','missRate',
+    'avgADeaths','avgBDeaths','avgACasualties','avgBCasualties','avgAEndLost','avgBEndLost',
+    'avgABlessures','avgBBlessures','avgAPushUsed','avgBPushUsed','avgADsUsed','avgBDsUsed',
+    'scenario_json'];
   const rows = state.history.map(h => {
-    const json = JSON.stringify({ teamA:h.teamA, teamB:h.teamB, opts:h.opts, agg:h.agg });
-    return [
-      h.timestamp, h.scenario,
-      h.teamA.length, h.teamB.length, inferTier(h.teamA), inferTier(h.teamB),
-      h.N, h.opts.maxRounds, h.opts.shieldsActive?1:0, h.opts.surpriseA?1:0, h.opts.surpriseB?1:0,
-      h.agg.winRateA.toFixed(4), h.agg.winRateB.toFixed(4),
-      h.agg.drawRate.toFixed(4), h.agg.timeoutRate.toFixed(4),
-      h.agg.avgRounds.toFixed(3),
+    const json = JSON.stringify({teamA:h.teamA, teamB:h.teamB, opts:h.opts, rules:h.rules, agg:h.agg});
+    const r = h.rules || {};
+    return [h.timestamp, h.scenario, h.teamA.length, h.teamB.length, h.N, h.opts.maxRounds,
+      r.dsActive?1:0, r.dsMax||0, r.fatigueMax||0, r.moralActive?1:0,
+      h.agg.winRateA.toFixed(4), h.agg.winRateB.toFixed(4), h.agg.drawRate.toFixed(4), h.agg.timeoutRate.toFixed(4),
+      h.agg.avgRounds.toFixed(3), h.agg.avgFirstKO?h.agg.avgFirstKO.toFixed(2):'', h.agg.avgFirstDeath?h.agg.avgFirstDeath.toFixed(2):'',
+      h.agg.missRate.toFixed(4),
       h.agg.avgADeaths.toFixed(3), h.agg.avgBDeaths.toFixed(3),
       h.agg.avgACasualties.toFixed(3), h.agg.avgBCasualties.toFixed(3),
       h.agg.avgAEndLost.toFixed(2), h.agg.avgBEndLost.toFixed(2),
       h.agg.avgABlessures.toFixed(3), h.agg.avgBBlessures.toFixed(3),
       h.agg.avgAPushUsed.toFixed(3), h.agg.avgBPushUsed.toFixed(3),
-      json,
-    ].map(csvEscape).join(',');
+      h.agg.avgADsUsed.toFixed(3), h.agg.avgBDsUsed.toFixed(3),
+      json].map(csvEscape).join(',');
   });
   const csv = headers.join(',') + '\n' + rows.join('\n');
-  const blob = new Blob(['﻿'+csv], {type:'text/csv;charset=utf-8'}); // BOM pour Excel
+  const blob = new Blob(['﻿'+csv], {type:'text/csv;charset=utf-8'});
   const url = URL.createObjectURL(blob);
-  const a = document.createElement('a');
-  a.href = url; a.download = `vermis_combat_${new Date().toISOString().slice(0,10)}.csv`;
-  a.click();
+  const a = document.createElement('a'); a.href = url; a.download = `vermis_combat_${new Date().toISOString().slice(0,10)}.csv`; a.click();
   URL.revokeObjectURL(url);
 }
-
 function parseCSV(text){
-  // Parser simple gérant les guillemets et les virgules dans les champs
-  const rows = [];
-  let cur = []; let field = ''; let inQuotes = false;
+  const rows = []; let cur = []; let field = ''; let inQ = false;
   for(let i=0;i<text.length;i++){
     const c = text[i];
-    if(inQuotes){
-      if(c === '"'){
-        if(text[i+1] === '"'){ field += '"'; i++; }
-        else { inQuotes = false; }
-      } else field += c;
-    } else {
-      if(c === '"') inQuotes = true;
-      else if(c === ','){ cur.push(field); field = ''; }
-      else if(c === '\n'){ cur.push(field); rows.push(cur); cur=[]; field=''; }
-      else if(c === '\r'){ /* skip */ }
+    if(inQ){
+      if(c === '"'){ if(text[i+1] === '"'){ field += '"'; i++; } else inQ = false; }
       else field += c;
+    } else {
+      if(c === '"') inQ = true;
+      else if(c === ','){ cur.push(field); field = ''; }
+      else if(c === '\n'){ cur.push(field); rows.push(cur); cur = []; field = ''; }
+      else if(c !== '\r') field += c;
     }
   }
-  if(field || cur.length) { cur.push(field); rows.push(cur); }
+  if(field || cur.length){ cur.push(field); rows.push(cur); }
   return rows;
 }
 function importCSV(ev){
@@ -1041,40 +1338,186 @@ function importCSV(ev){
   const reader = new FileReader();
   reader.onload = e => {
     let text = e.target.result;
-    if(text.charCodeAt(0) === 0xFEFF) text = text.slice(1); // strip BOM
+    if(text.charCodeAt(0) === 0xFEFF) text = text.slice(1);
     const rows = parseCSV(text);
     if(rows.length < 2){ alert('CSV vide.'); return; }
     const headers = rows[0];
-    const jsonIdx = headers.indexOf('scenario_json');
-    if(jsonIdx === -1){ alert('Colonne scenario_json manquante. Ce CSV ne peut pas être rechargé en entier.'); return; }
+    const jIdx = headers.indexOf('scenario_json');
+    if(jIdx === -1){ alert('Colonne scenario_json manquante.'); return; }
     const newEntries = [];
     for(let r=1;r<rows.length;r++){
       if(rows[r].length < headers.length) continue;
       try {
-        const data = JSON.parse(rows[r][jsonIdx]);
+        const data = JSON.parse(rows[r][jIdx]);
+        (data.teamA||[]).forEach(migrateCombatant);
+        (data.teamB||[]).forEach(migrateCombatant);
         newEntries.push({
           timestamp: rows[r][headers.indexOf('timestamp')] || new Date().toISOString(),
           scenario: rows[r][headers.indexOf('scenario')] || 'Importé',
           N: parseInt(rows[r][headers.indexOf('N')]) || 100,
-          teamA: data.teamA, teamB: data.teamB,
-          opts: data.opts, agg: data.agg,
+          teamA: data.teamA, teamB: data.teamB, opts: data.opts, rules: data.rules, agg: data.agg,
         });
-      } catch(e){ console.warn('Ligne ignorée :', e); }
+      } catch(e){ console.warn(e); }
     }
     state.history = [...newEntries, ...state.history];
-    saveHistory();
-    renderHistory();
+    saveHistory(); renderHistory();
     alert(`${newEntries.length} entrées importées.`);
   };
   reader.readAsText(file);
   ev.target.value = '';
 }
 
-/* ============================================================
-   Init
-   ============================================================ */
+// ====================== INIT ======================
+// Peupler les dropdowns d'approches PJ
+document.getElementById('teamA-pj').innerHTML += APPROCHES.map(a => `<option value="${a.id}">${a.label} · V${a.vig}/F${a.fin}/E${a.esp}</option>`).join('');
+document.getElementById('teamB-pj').innerHTML += APPROCHES.map(a => `<option value="${a.id}">${a.label} · V${a.vig}/F${a.fin}/E${a.esp}</option>`).join('');
 generateTeam('A');
 generateTeam('B');
+renderHistory();
+</script>
+</body>
+</html>
+Date</th><th>Scénario</th><th>A</th><th>B</th><th>N</th><th>%A</th><th>%B</th><th>Rounds</th><th>Actions</th></tr></thead><tbody>
+  ${state.history.map((h,i) => {
+    const date = new Date(h.timestamp).toLocaleString('fr-CA',{month:'short',day:'numeric',hour:'2-digit',minute:'2-digit'});
+    return `<tr>
+      <td class="muted">${date}</td><td>${h.scenario}</td>
+      <td>${h.teamA.length}</td><td>${h.teamB.length}</td><td>${h.N}</td>
+      <td style="color:var(--accent)">${(h.agg.winRateA*100).toFixed(1)}%</td>
+      <td style="color:var(--accent2)">${(h.agg.winRateB*100).toFixed(1)}%</td>
+      <td>${h.agg.avgRounds.toFixed(1)}</td>
+      <td>
+        <button class="small" onclick="loadHistoryEntry(${i})">↺ charger</button>
+        <button class="small" onclick="showBatchResult(state.history[${i}])">👁 voir</button>
+        <button class="small danger" onclick="removeHistoryEntry(${i})">✕</button>
+      </td>
+    </tr>`;
+  }).join('')}</tbody></table>`;
+}
+function loadHistoryEntry(i){
+  const h = state.history[i];
+  state.teamA = JSON.parse(JSON.stringify(h.teamA));
+  state.teamB = JSON.parse(JSON.stringify(h.teamB));
+  document.getElementById('param-scenario').value = h.scenario;
+  document.getElementById('param-N').value = h.N;
+  document.getElementById('param-maxRounds').value = h.opts.maxRounds;
+  document.getElementById('param-surpriseA').checked = !!h.opts.surpriseA;
+  document.getElementById('param-surpriseB').checked = !!h.opts.surpriseB;
+  if(h.rules){
+    document.getElementById('rule-onesBonus').checked = !!h.rules.onesBonus;
+    document.getElementById('rule-redBonus').checked = !!h.rules.redBonus;
+    document.getElementById('rule-pierceOnDouble').checked = !!h.rules.pierceOnDouble;
+    document.getElementById('rule-extraOnDouble').checked = !!h.rules.extraOnDouble;
+    document.getElementById('param-shieldsActive').checked = !!h.rules.shieldsActive;
+    document.getElementById('param-dsActive').checked = h.rules.dsActive !== false;
+    document.getElementById('param-dsMax').value = h.rules.dsMax;
+    document.getElementById('param-fatigue').value = h.rules.fatigueMax || 0;
+    document.getElementById('moral-active').checked = !!h.rules.moralActive;
+  }
+  renderTeam('A'); renderTeam('B');
+}
+function removeHistoryEntry(i){ state.history.splice(i,1); saveHistory(); renderHistory(); }
+
+function csvEscape(v){
+  if(v == null) return '';
+  const s = String(v);
+  if(s.includes(',') || s.includes('"') || s.includes('\n')) return '"' + s.replace(/"/g,'""') + '"';
+  return s;
+}
+function exportCSV(){
+  if(!state.history.length){ alert('Historique vide.'); return; }
+  const headers = ['timestamp','scenario','teamA_size','teamB_size','N','maxRounds','dsActive','dsMax','fatigueMax','moralActive',
+    'winRateA','winRateB','drawRate','timeoutRate','avgRounds','avgFirstKO','avgFirstDeath','missRate',
+    'avgADeaths','avgBDeaths','avgACasualties','avgBCasualties','avgAEndLost','avgBEndLost',
+    'avgABlessures','avgBBlessures','avgAPushUsed','avgBPushUsed','avgADsUsed','avgBDsUsed',
+    'scenario_json'];
+  const rows = state.history.map(h => {
+    const json = JSON.stringify({teamA:h.teamA, teamB:h.teamB, opts:h.opts, rules:h.rules, agg:h.agg});
+    const r = h.rules || {};
+    return [h.timestamp, h.scenario, h.teamA.length, h.teamB.length, h.N, h.opts.maxRounds,
+      r.dsActive?1:0, r.dsMax||0, r.fatigueMax||0, r.moralActive?1:0,
+      h.agg.winRateA.toFixed(4), h.agg.winRateB.toFixed(4), h.agg.drawRate.toFixed(4), h.agg.timeoutRate.toFixed(4),
+      h.agg.avgRounds.toFixed(3), h.agg.avgFirstKO?h.agg.avgFirstKO.toFixed(2):'', h.agg.avgFirstDeath?h.agg.avgFirstDeath.toFixed(2):'',
+      h.agg.missRate.toFixed(4),
+      h.agg.avgADeaths.toFixed(3), h.agg.avgBDeaths.toFixed(3),
+      h.agg.avgACasualties.toFixed(3), h.agg.avgBCasualties.toFixed(3),
+      h.agg.avgAEndLost.toFixed(2), h.agg.avgBEndLost.toFixed(2),
+      h.agg.avgABlessures.toFixed(3), h.agg.avgBBlessures.toFixed(3),
+      h.agg.avgAPushUsed.toFixed(3), h.agg.avgBPushUsed.toFixed(3),
+      h.agg.avgADsUsed.toFixed(3), h.agg.avgBDsUsed.toFixed(3),
+      json].map(csvEscape).join(',');
+  });
+  const csv = headers.join(',') + '\n' + rows.join('\n');
+  const blob = new Blob(['﻿'+csv], {type:'text/csv;charset=utf-8'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a'); a.href = url; a.download = `vermis_combat_${new Date().toISOString().slice(0,10)}.csv`; a.click();
+  URL.revokeObjectURL(url);
+}
+function parseCSV(text){
+  const rows = []; let cur = []; let field = ''; let inQ = false;
+  for(let i=0;i<text.length;i++){
+    const c = text[i];
+    if(inQ){
+      if(c === '"'){ if(text[i+1] === '"'){ field += '"'; i++; } else inQ = false; }
+      else field += c;
+    } else {
+      if(c === '"') inQ = true;
+      else if(c === ','){ cur.push(field); field = ''; }
+      else if(c === '\n'){ cur.push(field); rows.push(cur); cur = []; field = ''; }
+      else if(c !== '\r') field += c;
+    }
+  }
+  if(field || cur.length){ cur.push(field); rows.push(cur); }
+  return rows;
+}
+function importCSV(ev){
+  const file = ev.target.files[0]; if(!file) return;
+  const reader = new FileReader();
+  reader.onload = e => {
+    let text = e.target.result;
+    if(text.charCodeAt(0) === 0xFEFF) text = text.slice(1);
+    const rows = parseCSV(text);
+    if(rows.length < 2){ alert('CSV vide.'); return; }
+    const headers = rows[0];
+    const jIdx = headers.indexOf('scenario_json');
+    if(jIdx === -1){ alert('Colonne scenario_json manquante.'); return; }
+    const newEntries = [];
+    for(let r=1;r<rows.length;r++){
+      if(rows[r].length < headers.length) continue;
+      try {
+        const data = JSON.parse(rows[r][jIdx]);
+        (data.teamA||[]).forEach(migrateCombatant);
+        (data.teamB||[]).forEach(migrateCombatant);
+        newEntries.push({
+          timestamp: rows[r][headers.indexOf('timestamp')] || new Date().toISOString(),
+          scenario: rows[r][headers.indexOf('scenario')] || 'Importé',
+          N: parseInt(rows[r][headers.indexOf('N')]) || 100,
+          teamA: data.teamA, teamB: data.teamB, opts: data.opts, rules: data.rules, agg: data.agg,
+        });
+      } catch(e){ console.warn(e); }
+    }
+    state.history = [...newEntries, ...state.history];
+    saveHistory(); renderHistory();
+    alert(`${newEntries.length} entrées importées.`);
+  };
+  reader.readAsText(file);
+  ev.target.value = '';
+}
+
+// ====================== INIT ======================
+document.getElementById('teamA-pj').innerHTML += APPROCHES.map(a => `<option value="${a.id}">${a.label} · V${a.vig}/F${a.fin}/E${a.esp}</option>`).join('');
+document.getElementById('teamB-pj').innerHTML += APPROCHES.map(a => `<option value="${a.id}">${a.label} · V${a.vig}/F${a.fin}/E${a.esp}</option>`).join('');
+generateTeam('A');
+generateTeam('B');
+renderHistory();
+</script>
+</body>
+</html>
+derHistory();
+</script>
+</body>
+</html>
+ateTeam('B');
 renderHistory();
 </script>
 </body>

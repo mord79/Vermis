@@ -154,6 +154,47 @@
   .die.green { background: linear-gradient(145deg, #5a8a48, #2d4a25); color: #f0f5e0; }
   .die.blue { background: linear-gradient(145deg, #4a7ab0, #1a3a6a); color: #e8f0fa; }
 
+  /* Contrôles interactifs sur dé */
+  .die-lock {
+    position: absolute; top: 4px; left: 6px;
+    width: 16px; height: 16px; padding: 0; line-height: 1;
+    background: transparent; border: none; cursor: pointer;
+    color: inherit; opacity: 0.35; font-size: 12px;
+    transition: opacity .15s, transform .15s;
+  }
+  .die-lock:hover { opacity: 0.9; transform: scale(1.15); }
+  .die-lock.on { opacity: 1; color: #f8e08c; text-shadow: 0 0 4px rgba(248,224,140,0.5); }
+
+  .die-color {
+    position: absolute; top: 5px; right: 6px;
+    width: 14px; height: 14px; border-radius: 50%; padding: 0;
+    cursor: pointer; border: 1px solid rgba(255,255,255,0.5);
+    box-shadow: 0 0 3px rgba(0,0,0,0.5);
+    transition: transform .15s;
+  }
+  .die-color:hover { transform: scale(1.25); }
+  .die-color.red { background: #d04a3c; }
+  .die-color.green { background: #5a8a48; }
+  .die-color.blue { background: #4a7ab0; }
+  .die-color:disabled { cursor: not-allowed; opacity: 0.4; }
+
+  /* Flèches à gauche du dé, stack vertical, en dehors du dé */
+  .die-wrap {
+    display: flex; align-items: center; gap: 4px;
+  }
+  .die-arrows {
+    display: flex; flex-direction: column; gap: 6px;
+  }
+  .die-arrow {
+    background: var(--bg-card-2); border: 1px solid var(--border);
+    cursor: pointer; color: var(--ink); padding: 0;
+    width: 24px; height: 26px; line-height: 22px; text-align: center;
+    font-size: 14px; border-radius: 3px;
+    transition: background .15s, transform .1s;
+  }
+  .die-arrow:hover { background: var(--accent-dim); transform: scale(1.08); }
+  .die-arrow:disabled { cursor: not-allowed; opacity: 0.25; background: var(--bg-card); }
+
   .character {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
@@ -574,6 +615,9 @@
     Réf. § 2.7 et Appendice A (§ 13) — Vermis_d6_v10. Survolez expertises, dons et handicaps
     pour voir leur description. Note : la table Origine du source contient une coquille
     (deux lignes « D6=2 ») ; la 2<sup>e</sup> est traitée comme « D6=4 » (Citadin-Artisan).
+  </p>
+  <p class="footnote" style="text-align:center;opacity:0.5;font-size:0.7rem;margin-top:18px">
+    v1.1 · Vermis-Mini Générateur de personnage · Dés interactifs (▲▼ pour valeur, ● pour couleur, 🔒 pour figer)
   </p>
 </main>
 
@@ -1321,18 +1365,77 @@ function lookupRange(table, value) {
 }
 
 let currentChar = null;
+let currentDice = null; // état éditable des 3 dés : [{pos, color, value, locked}]
+
+function rollDice() {
+  // Roule de nouvelles valeurs, en gardant les couleurs/valeurs des dés verrouillés
+  // Si aucun dé existant : tire ordre aléatoire de couleurs.
+  if (!currentDice) {
+    const positions = shuffle(['red', 'green', 'blue']);
+    currentDice = positions.map((color, i) => ({
+      pos: i + 1, color, value: rollD6(), locked: false
+    }));
+  } else {
+    for (const d of currentDice) {
+      if (!d.locked) d.value = rollD6();
+    }
+  }
+}
+
+function saveEditedName(newText) {
+  if (!currentChar || !newText) return;
+  const cleaned = newText.trim();
+  if (cleaned) currentChar.name.complet = cleaned;
+}
+
+function regenerateName() {
+  if (!currentChar) return;
+  currentChar.name = generateName();
+  render(currentChar);
+}
+
+function handleDieAction(idx, action) {
+  const d = currentDice[idx];
+  if (!d) return;
+  if (action === 'up' && d.value < 6) d.value++;
+  else if (action === 'down' && d.value > 1) d.value--;
+  else if (action === 'lock') d.locked = !d.locked;
+  else if (action === 'color') cycleColor(idx);
+  recomputeChar();
+}
+
+function cycleColor(idx) {
+  const d = currentDice[idx];
+  if (d.locked) return; // un dé verrouillé ne change pas de couleur
+  const ORDER = ['red', 'green', 'blue'];
+  // Couleurs verrouillées par les autres dés : indisponibles pour swap
+  const lockedColors = new Set(
+    currentDice.filter((x, i) => i !== idx && x.locked).map(x => x.color)
+  );
+  // Couleurs disponibles pour ce dé : tout sauf celles verrouillées par d'autres
+  const available = ORDER.filter(c => !lockedColors.has(c));
+  if (available.length < 2) return; // pas de cycle possible
+  // Couleur suivante dans l'ordre, en sautant celles verrouillées
+  const curPos = available.indexOf(d.color);
+  const next = available[(curPos + 1) % available.length];
+  if (next === d.color) return;
+  // Trouver le dé qui a actuellement la couleur "next" et swap
+  const other = currentDice.find((x, i) => i !== idx && x.color === next);
+  if (other) {
+    other.color = d.color;
+  }
+  d.color = next;
+}
 
 function generate() {
-  // 1. Lance les 3 dés colorés
-  const dieValues = { red: rollD6(), green: rollD6(), blue: rollD6() };
+  rollDice();
+  recomputeChar();
+}
 
-  // 2. Place-les dans un ordre aléatoire (D1, D2, D3 = position de gauche à droite)
-  const positions = shuffle(['red', 'green', 'blue']);
-  const dice = positions.map((color, i) => ({
-    pos: i + 1,
-    color,
-    value: dieValues[color]
-  }));
+function recomputeChar() {
+  const dice = currentDice.map(d => ({ pos: d.pos, color: d.color, value: d.value }));
+  const dieValues = { red: 0, green: 0, blue: 0 };
+  for (const d of dice) dieValues[d.color] = d.value;
 
   const D1 = dice[0].value;
   const D2 = dice[1].value;
@@ -1379,17 +1482,34 @@ function generate() {
 }
 
 function render(c) {
-  // Dés
+  // Dés (interactifs : flèches valeur ▲/▼, cycle couleur, cadenas)
   const diceEl = document.getElementById('dice');
-  diceEl.innerHTML = c.dice.map(d => {
-    const labels = { red: 'Rouge', green: 'Vert', blue: 'Bleu' };
-    return `
-      <div class="die ${d.color}">
-        <div class="pos">D${d.pos}</div>
-        <div class="val">${d.value}</div>
-        <div class="label">${labels[d.color]}</div>
-      </div>`;
-  }).join('');
+  const labels = { red: 'Rouge', green: 'Vert', blue: 'Bleu' };
+  diceEl.innerHTML = currentDice.map((d, idx) => `
+      <div class="die-wrap" data-idx="${idx}">
+        <div class="die-arrows">
+          <button class="die-arrow" data-act="up" title="+1" ${d.value >= 6 ? 'disabled' : ''}>▲</button>
+          <button class="die-arrow" data-act="down" title="−1" ${d.value <= 1 ? 'disabled' : ''}>▼</button>
+        </div>
+        <div class="die ${d.color} has-controls">
+          <button class="die-lock ${d.locked ? 'on' : ''}" data-act="lock" title="${d.locked ? 'Déverrouiller la couleur' : 'Verrouiller la couleur'}">${d.locked ? '🔒' : '🔓'}</button>
+          <button class="die-color ${d.color}" data-act="color" title="Cycler la couleur (swap auto)"></button>
+          <div class="pos">D${d.pos}</div>
+          <div class="val">${d.value}</div>
+          <div class="label">${labels[d.color]}</div>
+        </div>
+      </div>`).join('');
+
+  // Wire-up des handlers (sur le wrapper, qui contient les flèches + le dé)
+  diceEl.querySelectorAll('.die-wrap').forEach(el => {
+    const idx = parseInt(el.dataset.idx);
+    el.querySelectorAll('[data-act]').forEach(btn => {
+      btn.addEventListener('click', e => {
+        e.stopPropagation();
+        handleDieAction(idx, btn.dataset.act);
+      });
+    });
+  });
 
   // Personnage
   const charEl = document.getElementById('character');
@@ -1454,7 +1574,13 @@ function render(c) {
     <!-- NOM (haut, pleine largeur) -->
     <div class="name-banner" style="grid-column: 1 / -1;">
       <div class="name-text">
-        ${c.name.complet}<span class="name-arch"> · ${archNom.split('/').pop().trim()}</span>
+        <span id="name-display" contenteditable="true" spellcheck="false"
+              style="outline:none;cursor:text;padding:0 6px;border-bottom:1px dashed transparent"
+              onfocus="this.style.borderBottomColor='var(--accent-dim)'"
+              onblur="this.style.borderBottomColor='transparent';saveEditedName(this.textContent)"
+              title="Cliquer pour éditer">${c.name.complet}</span><span class="name-arch"> · ${archNom.split('/').pop().trim()}</span>
+        <button id="btn-rename" class="secondary" style="margin-left:8px;padding:2px 8px;font-size:0.7rem"
+                onclick="regenerateName()" title="Tirer un nouveau nom aléatoire">⟳</button>
       </div>
       <div class="name-meta">${F ? '♀ Femme' : '♂ Homme'}</div>
     </div>
@@ -1669,6 +1795,58 @@ document.getElementById('btn-print').addEventListener('click', () => {
 });
 
 // Premier perso au chargement
+generate();
+</script>
+
+</body>
+</html>
+ final */ }
+  // Tentative 3 : modale manuelle (toujours fiable)
+  showCopyModal(text);
+  return 'modal';
+}
+
+function showCopyModal(text) {
+  // Crée la modale à la volée
+  const overlay = document.createElement('div');
+  overlay.className = 'modal-overlay';
+  overlay.innerHTML = `
+    <div class="modal-box">
+      <h3>Copie manuelle</h3>
+      <p>La copie automatique a échoué. Le texte est sélectionné ci-dessous — fais <kbd>Ctrl</kbd>+<kbd>C</kbd> puis ferme cette fenêtre.</p>
+      <textarea readonly></textarea>
+      <button class="modal-close">Fermer</button>
+    </div>
+  `;
+  document.body.appendChild(overlay);
+  const ta = overlay.querySelector('textarea');
+  ta.value = text;
+  setTimeout(() => { ta.focus(); ta.select(); }, 50);
+  overlay.querySelector('.modal-close').addEventListener('click', () => overlay.remove());
+  overlay.addEventListener('click', e => { if (e.target === overlay) overlay.remove(); });
+}
+
+document.getElementById('btn-copy').addEventListener('click', async () => {
+  if (!currentChar) return;
+  const md = toMarkdown(currentChar);
+  const method = await copyToClipboard(md);
+  if (method === 'api' || method === 'exec') {
+    flashCopyMsg('Copié !', false);
+  }
+});
+
+document.getElementById('btn-print').addEventListener('click', () => {
+  if (!currentChar) return;
+  window.print();
+});
+
+// Premier perso au chargement
+generate();
+</script>
+
+</body>
+</html>
+so au chargement
 generate();
 </script>
 

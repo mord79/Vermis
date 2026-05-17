@@ -8,14 +8,14 @@ date: 2026-05-17
 
 # CHROMA — Résolution par dés colorés
 
-## Procédure
+## Procédure de base
 
 1. Déterminer **X** (nombre de dés) selon la tâche ou l'outil
 2. Appliquer la **fatigue** : chaque fatigue convertit un dé blanc en **noir**
-3. Appliquer les **bonus** : chaque bonus permet de colorer un dé blanc (ou noir ?)
+3. Appliquer les **bonus** : chaque bonus permet une conversion (voir ci-dessous)
 4. Lancer tous les dés simultanément
 5. Lire chaque dé selon sa couleur (voir table)
-6. Additionner les gains — les **−1** des noirs s'appliquent en premier
+6. Additionner les gains — les **−1** des noirs s'appliquent
 7. Soustraire l'armure ou la difficulté du total *(sauf gains rouges)*
 
 ---
@@ -44,6 +44,41 @@ date: 2026-05-17
 **Bleu** *(bonus)* — plancher relevé : +1 gain sur tout échec (≥ attribut). Optimal quand l'attribut est faible ou la tâche incertaine. Garantit au moins 1 gain même sur un 6.
 
 **Noir** *(fatigue)* — dé dégradé : les succès ne rapportent que 1 gain, les échecs rien, et un **6 inflige −1 gain**. La fatigue peut faire reculer le total.
+
+---
+
+## Utiliser les bonus
+
+Chaque bonus (expertise, don, avantage contextuel) permet **une conversion** dans cet ordre de priorité :
+
+1. **Noir → Blanc** : purger une fatigue. Le dé retrouve son comportement normal.
+2. **Blanc → couleur** : colorer un dé blanc en Rouge, Vert ou Bleu.
+
+Un joueur avec deux bonus peut donc purger un noir *puis* colorer le même dé. Les deux conversions sont indépendantes et peuvent cibler des dés différents.
+
+---
+
+## Pousser le jet
+
+Après avoir lu les résultats, le joueur peut **pousser** : relancer autant de dés qu'il le souhaite parmi ses dés blancs. Chaque dé poussé devient **noir** immédiatement, avant le relancé.
+
+- Les dés noirs existants ne peuvent pas être poussés.
+- Les dés colorés (rouge, vert, bleu) ne peuvent pas être poussés.
+- Pousser est irréversible : la fatigue reste même si le nouveau résultat est pire.
+
+> Pousser représente l'effort au-delà des limites. Le corps ou l'esprit en paye le prix.
+
+---
+
+## Récupération
+
+| Type de repos | Noirs retirés |
+|---------------|---------------|
+| Pause courte *(quelques minutes, hors danger)* | 1 |
+| Soins ou aide d'un allié | 1 par action |
+| Repos long *(nuit complète + repas)* | Tous |
+
+Les dés noirs récupérés redeviennent blancs. Les couleurs éventuelles ne sont pas restaurées automatiquement — elles dépendent des bonus actifs.
 
 ---
 

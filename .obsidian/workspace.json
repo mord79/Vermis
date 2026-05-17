@@ -226,8 +226,9 @@
       "header-adjuster:Adjust headers": false
     }
   },
-  "active": "5f2d8f276f8620fa",
+  "active": "b36bbe4918ab2b98",
   "lastOpenFiles": [
+    "CHROMA/Outils/testeurdes.html",
     "CHROMA/Intégré/Quick ideas.md",
     "CHROMA/Quick ideas.md",
     "09-Vermis-Mini/Intégré/Vermis_d6_v10.md",
@@ -263,7 +264,6 @@
     "copilot/copilot-custom-prompts/Generate glossary.md",
     "copilot/copilot-custom-prompts/Fix grammar and spelling.md",
     "copilot/copilot-custom-prompts/Explain like I am 5.md",
-    "copilot/copilot-custom-prompts/Emojify.md",
     "Sans titre.canvas"
   ]
 }

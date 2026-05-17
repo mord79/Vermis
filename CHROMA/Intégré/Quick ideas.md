@@ -1,3 +1,33 @@
+Kit pour archétype
+
+- Combattant
+	- bandage, kit de cuisine
+- Roublard 
+	- Kit de chirurgie 
+	- Kit de poison
+- Érudit 
+	- Kit d’apothicaire 
+	- Kit ?
+- Sapeur
+	- Kit d’armurier
+	- Kit de destruction
+- Explorateur 
+	- Kit de navigation
+- Chasseur
+	- Kit de trappe
+- Chasseur de trésors / voleur
+	- Kit de crochetage 
+- Barde 
+	- Kit de déguisement
+- Excentrique 
+	- Bague sigillographies
+- Ermite
+- Moine
+- Artifex
+- Hérétique 
+- illusionniste 
+- Magistère 
+
 Si manque de granularité avec les blessure, avec X END/blessure ou qqc comme ça
 
 Problème avec les blessures, puisqu'on donne qu'une seul blessure à ls fois, personne ne peut mourir completement en 1 coup. Il manque un test de VIG quand on reçoit un une blessure pour rester debout, sur un 6 prendre 2 blressure

@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "09-Vermis-Mini/Intégré/Vermis_d6_v10.md",
+                "file": "CHROMA/Intégré/CHROMA.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Vermis_d6_v10"
+              "title": "CHROMA"
             }
           }
         ]
@@ -166,13 +166,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "09-Vermis-Mini/Intégré/Vermis_d6_v10.md",
+                "file": "CHROMA/Intégré/CHROMA.md",
                 "followCursor": false,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Plan de Vermis_d6_v10"
+              "title": "Plan de CHROMA"
             }
           },
           {
@@ -191,8 +191,8 @@
             "state": {
               "type": "smart-connections-view",
               "state": {},
-              "icon": "smart-connections",
-              "title": "Connections"
+              "icon": "lucide-ghost",
+              "title": "smart-connections-view"
             }
           },
           {
@@ -214,7 +214,6 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "smart-connections:Smart Lookup: Open lookup view": false,
       "switcher:Ouvrir le sélecteur rapide": false,
       "graph:Ouvrir la vue graphique": false,
       "canvas:Créer une nouvelle toile": false,
@@ -224,15 +223,32 @@
       "bases:Créer une nouvelle base": false,
       "obsidian-git:Open Git source control": false,
       "omnisearch:Omnisearch": false,
-      "smart-connections:Smart Connections: Open connections view": false,
-      "smart-connections:Toggle Footer Connections": false,
-      "smart-connections:Smart Connections: Open random connection": false,
-      "large-language-models:Ask a question": false,
-      "copilot:Open Copilot Chat": false
+      "header-adjuster:Adjust headers": false
     }
   },
-  "active": "b36bbe4918ab2b98",
+  "active": "5f2d8f276f8620fa",
   "lastOpenFiles": [
+    "CHROMA/Intégré/Quick ideas.md",
+    "CHROMA/Quick ideas.md",
+    "09-Vermis-Mini/Intégré/Vermis_d6_v10.md",
+    "CHROMA/WIP/WIP SmallFolk.md",
+    "CHROMA/WIP/WIP Rule extra light test.md",
+    "CHROMA/WIP/Setting SmallFolk.md",
+    "CHROMA/Outils/testeur-des.html",
+    "CHROMA/Outils/generateur_personnage.html",
+    "CHROMA/Outils/Combat_Simulator.html",
+    "CHROMA/OLD/regles_v08.md",
+    "CHROMA/Intégré/stress_test.md",
+    "CHROMA/OLD/regles_v07.md",
+    "CHROMA/Intégré/plan_de_match.md",
+    "CHROMA/Intégré/Plan d'importation par point.md",
+    "CHROMA/Intégré/import_depuis_vermis.md",
+    "CHROMA/Intégré/CHROMA.md",
+    "CHROMA/WIP",
+    "CHROMA/Outils",
+    "CHROMA/OLD",
+    "CHROMA/Intégré",
+    "CHROMA",
     "09-Vermis-Mini/Outils/testeur-des.html",
     "09-Vermis-Mini/testeur-des.html",
     "copilot/copilot-custom-prompts/Translate to Chinese.md",
@@ -248,27 +264,6 @@
     "copilot/copilot-custom-prompts/Fix grammar and spelling.md",
     "copilot/copilot-custom-prompts/Explain like I am 5.md",
     "copilot/copilot-custom-prompts/Emojify.md",
-    "copilot/copilot-custom-prompts/Clip Web Page.md",
-    "copilot/copilot-custom-prompts/Clip YouTube Transcript.md",
-    "copilot/copilot-custom-prompts",
-    "copilot",
-    "09-Vermis-Mini/Outils/generateur_personnage.html",
-    "09-Vermis-Mini/Outils/Combat_Simulator.html",
-    "09-Vermis-Mini/Outils",
-    "09-Vermis-Mini/Intégré/Quick ideas.md",
-    "09-Vermis-Mini/Intégré/Vermis_d6_v10.md",
-    "Sans titre.canvas",
-    "conflict-files-obsidian-git.md",
-    "01-Règles/Vermis_Rules.md",
-    "09-Vermis-Mini/Todo vermis mini.md",
-    "- Arcanisme.md",
-    "09-Vermis-Mini/Outils/glossaire.md",
-    "09-Vermis-Mini/Outils/generateur_personnage.html.tmp.46612.d8b40109533a",
-    "09-Vermis-Mini/Outils/generateur_personnage.html.tmp.48092.fd205e1cb75f",
-    "09-Vermis-Mini/Outils/generateur_personnage.html.tmp.48092.9cdff1b1d12d",
-    "09-Vermis-Mini/Intégré/Plan d'importation par point.md",
-    "00-MOC/Todo_Vue.md",
-    "09-Vermis-Mini/Intégré/Vermis_d6_v10.md.tmp.41480.1778624954946",
-    "09-Vermis-Mini/Outils/Liste de noms.md"
+    "Sans titre.canvas"
   ]
 }

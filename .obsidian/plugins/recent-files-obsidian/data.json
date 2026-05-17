@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "CHROMA",
+      "path": "CHROMA/Intégré/CHROMA.md"
+    },
+    {
+      "basename": "Quick ideas",
+      "path": "CHROMA/Intégré/Quick ideas.md"
+    },
+    {
       "basename": "Vermis_d6_v10",
       "path": "09-Vermis-Mini/Intégré/Vermis_d6_v10.md"
     },
@@ -191,10 +199,6 @@
     {
       "basename": "design-donjon",
       "path": "06-Wiki/design-donjon.md"
-    },
-    {
-      "basename": "Dungeon Stocking with Markov Processes",
-      "path": "03-Références/Dungeon Stocking with Markov Processes.md"
     }
   ],
   "omittedPaths": [],

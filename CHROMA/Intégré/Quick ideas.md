@@ -1,7 +1,8 @@
 Kit pour archétype
 
 - Combattant
-	- bandage, kit de cuisine
+	- Kit de premier soins
+	- kit de cuisine
 - Roublard 
 	- Kit de chirurgie 
 	- Kit de poison
@@ -27,6 +28,8 @@ Kit pour archétype
 - Hérétique 
 - illusionniste 
 - Magistère 
+
+
 
 Si manque de granularité avec les blessure, avec X END/blessure ou qqc comme ça
 

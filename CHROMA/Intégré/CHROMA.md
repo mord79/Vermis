@@ -487,9 +487,106 @@ Chaque objet = 1 place. Exceptions :
 - Armures : 1 place par catégorie (légère = 1, moyenne = 2, lourde = 3)
 - Boucliers : 1 place (grand bouclier = 2)
 - Grimoire : 1 place
+## 6.1 Kit
+### 6.1.1 Combattant
 
----
+#### 6.1.1.1 Kit de premier soins
+- Bandages de lin
+- Aiguille courbe et fil de suture
+- Alcool fort ou eau-de-vie antiseptique
+- Attelles pliantes
+- Pince à éclats
 
+#### 6.1.1.2 Kit de cuisine
+- Marmite noire cabossée
+- Couteau à dépecer
+- Sachets de sel et d’herbes séchées
+- Cuillère en bois
+- Pierre à feu et amadou
+
+### 6.1.2 Roublard
+
+#### 6.1.2.1 Kit de chirurgie
+- Scalpel fin
+- Scie à os pliante
+- Pinces chirurgicales
+- Sangsues en bocal
+- Rouleau de sutures
+
+#### 6.1.2.2 Kit de poison
+- Fioles teintées
+- Mortier et pilon
+- Gants de cuir huilé
+- Aiguilles creuses
+- Livre de toxines annoté
+
+### 6.1.3 Érudit
+
+#### 6.1.3.1 Kit d’apothicaire
+- Balance de précision
+- Mortier de pierre
+- Sachets de poudres médicinales
+- Fioles d’essences
+- Herbiers séchés
+
+#### 6.1.3.2 Kit d’astrologue
+- Astrolabe de cuivre
+- Cartes célestes roulées
+- Bougies bleues de calcul
+- Compas à pointes fines
+- Carnet d’observations nocturnes
+
+### 6.1.4 Sapeur
+
+#### 6.1.4.1 Kit d’armurier
+- Marteau de forge
+- Rivets et plaques métalliques
+- Pierre à aiguiser
+- Pinces de réparation
+- Huile d’entretien
+
+#### 6.1.4.2 Kit de destruction
+- Coins métalliques
+- Marteau de démolition
+- Poudre explosive instable
+- Mèche lente enroulée
+- Foret manuel
+
+### 6.1.5 Explorateur
+
+#### 6.1.5.1 Kit de navigation
+- Boussole magnétique
+- Cartes annotées
+- Longue-vue de laiton
+- Corde à nœuds de mesure
+- Journal de route étanche
+
+### 6.1.6 Chasseur
+
+#### 6.1.6.1 Kit de trappe
+- Pièges à mâchoires
+- Collets de fil métallique
+- Appâts séchés
+- Hachette légère
+- Trousse de tannage rapide
+
+### 6.1.7 Chasseur de trésors / voleur
+
+#### 6.1.7.1 Kit de crochetage
+- Crochets de différentes tailles
+- Tendeur en acier
+- Petite lime
+- Flacon d’huile silencieuse
+- Miroir télescopique
+
+### 6.1.8 Barde
+
+#### 6.1.8.1 Kit de déguisement
+- Faux sceaux et papiers vierges
+- Nécessaire de maquillage gras
+- Perruque réversible
+- Fiole de teinture rapide
+- Ensemble d’accessoires interchangeables
 # 7 Combat
 
 ## 7.1 Structure du round

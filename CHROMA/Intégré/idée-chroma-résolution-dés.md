@@ -6,9 +6,9 @@ tags: [chroma, résolution, dés, fatigue]
 date: 2026-05-17
 ---
 
-# CHROMA — Résolution par dés colorés
+# 1 CHROMA — Résolution par dés colorés
 
-## Procédure de base
+## 1.1 Procédure de base
 
 1. Déterminer **X** (nombre de dés) selon la tâche ou l'outil
 2. Appliquer la **fatigue** : chaque fatigue convertit un dé blanc en **noir**
@@ -20,7 +20,7 @@ date: 2026-05-17
 
 ---
 
-## Table de lecture
+## 1.2 Table de lecture
 
 | Résultat | Blanc | Rouge | Vert | Bleu | Noir |
 |----------|-------|-------|------|------|------|
@@ -33,7 +33,7 @@ date: 2026-05-17
 
 ---
 
-## Référence rapide — effets des couleurs
+## 1.3 Référence rapide — effets des couleurs
 
 **Blanc** — dé de base, aucun modificateur.
 
@@ -47,7 +47,7 @@ date: 2026-05-17
 
 ---
 
-## Utiliser les bonus
+## 1.4 Utiliser les bonus
 
 Chaque bonus (expertise, don, avantage contextuel) permet **une conversion** dans cet ordre de priorité :
 
@@ -58,7 +58,7 @@ Un joueur avec deux bonus peut donc purger un noir *puis* colorer le même dé. 
 
 ---
 
-## Pousser le jet
+## 1.5 Pousser le jet
 
 Après avoir lu les résultats, le joueur peut **pousser** : relancer autant de dés qu'il le souhaite parmi ses dés blancs. Chaque dé poussé devient **noir** immédiatement, avant le relancé.
 
@@ -70,7 +70,7 @@ Après avoir lu les résultats, le joueur peut **pousser** : relancer autant de 
 
 ---
 
-## Récupération
+## 1.6 Récupération
 
 | Type de repos | Noirs retirés |
 |---------------|---------------|
@@ -82,7 +82,7 @@ Les dés noirs récupérés redeviennent blancs. Les couleurs éventuelles ne so
 
 ---
 
-## Seuil de bascule Bleu / Vert
+## 1.7 Seuil de bascule Bleu / Vert
 
 Le choix entre Bleu et Vert dépend de l'attribut comparé au milieu de la plage du dé :
 

@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "idée-chroma-résolution-dés",
+      "path": "CHROMA/Intégré/idée-chroma-résolution-dés.md"
+    },
+    {
       "basename": "CHROMA",
       "path": "CHROMA/Intégré/CHROMA.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "idée-entities-are-people",
       "path": "02-Banque/idée-entities-are-people.md"
-    },
-    {
-      "basename": "design-donjon",
-      "path": "06-Wiki/design-donjon.md"
     }
   ],
   "omittedPaths": [],

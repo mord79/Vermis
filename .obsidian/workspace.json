@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CHROMA/Intégré/CHROMA.md",
+                "file": "CHROMA/Intégré/idée-chroma-résolution-dés.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "CHROMA"
+              "title": "idée-chroma-résolution-dés"
             }
           }
         ]
@@ -166,13 +166,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CHROMA/Intégré/CHROMA.md",
+                "file": "CHROMA/Intégré/idée-chroma-résolution-dés.md",
                 "followCursor": false,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Plan de CHROMA"
+              "title": "Plan de idée-chroma-résolution-dés"
             }
           },
           {
@@ -228,6 +228,8 @@
   },
   "active": "b36bbe4918ab2b98",
   "lastOpenFiles": [
+    "CHROMA/Intégré/CHROMA.md",
+    "CHROMA/Intégré/idée-chroma-résolution-dés.md",
     "CHROMA/Outils/testeurdes.html",
     "CHROMA/Intégré/Quick ideas.md",
     "CHROMA/Quick ideas.md",
@@ -244,14 +246,12 @@
     "CHROMA/Intégré/plan_de_match.md",
     "CHROMA/Intégré/Plan d'importation par point.md",
     "CHROMA/Intégré/import_depuis_vermis.md",
-    "CHROMA/Intégré/CHROMA.md",
     "CHROMA/WIP",
     "CHROMA/Outils",
     "CHROMA/OLD",
     "CHROMA/Intégré",
     "CHROMA",
     "09-Vermis-Mini/Outils/testeur-des.html",
-    "09-Vermis-Mini/testeur-des.html",
     "copilot/copilot-custom-prompts/Translate to Chinese.md",
     "copilot/copilot-custom-prompts/Summarize.md",
     "copilot/copilot-custom-prompts/Simplify.md",

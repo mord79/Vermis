@@ -40,7 +40,7 @@
 - *Appendice B : diagonale arme/armure recalculée avec profils types.*
 - *Calibration : à attr 4, diagonale donne 50-60% de Succès strict + 25-45% d'Impasse selon le tier — combats de haut niveau moins binaires, plus de marge pour le push.*
 
-*Révision v0.10 — Bloc G : Push en Bet + bonus simplifié :*
+*Révision v0.10 — Bloc G : Push en Bet + bonus simplifié :* *(supercédé par v0.11)*
 - *Push devient un **Bet pré-déclaré** : avant le jet, le joueur dépense X END/Usure → +X dés au pool. END payée d'avance, même en cas d'échec. Risk/reward assumé.*
 - *Push max par jet = **ESP** (volonté), plus VIG.*
 - *Bonus simplifié : **seul le +1 par 1 reste automatique**. Doubles et triples ne donnent plus de gains.*
@@ -49,11 +49,20 @@
 - *Pierce-X (§1.3.1) marqué "à redéfinir Phase 2".*
 - *Appendices A et B recalculés en conséquence (bonus simplifié, sans Impasse).*
 
-*Révision v0.10 — Bloc H : Dé rouge :*
+*Révision v0.10 — Bloc H : Dé rouge :* *(supercédé par v0.11)*
 - *Tout pool contient désormais **un dé rouge** (le premier dé, identifié physiquement par sa couleur).*
 - *Le dé rouge en succès (<attr) donne **+1 gain bonus** en plus du gain normal.*
 - *Le bonus "+1 par 1" reste en place sur **tous** les dés (rouges et standards). Cumulable : un dé rouge montrant 1 donne **3 gains**.*
 - *Impact : boost uniforme de ~10% sur la diagonale (52% → 62% pour 4d/Maille à attr 4), E[net] x1,5 en moyenne. Combats plus dynamiques.*
+
+*Révision v0.11 — Résolution par dés colorés (supercède Blocs G et H) :*
+- *Pool de départ : **dés blancs** (plus de dé rouge automatique en premier dé).*
+- *Fatigue → **dé noir** : succès = 1 gain, échec = 0 gain, 6 = **−1 gain**.*
+- *Bonus → **conversion de couleur** : Noir→Blanc (purge fatigue) ou Blanc→Rouge/Vert/Bleu. Chaque bonus = une conversion.*
+- *Rouge (perce) : gains non réduits par armure/difficulté. Vert : +1 gain sur succès. Bleu : +1 gain sur échec (garantit toujours ≥1).*
+- *Push : **post-jet**, relancer des dés blancs → chaque dé poussé devient noir avant relance. Aucun coût en END. Pas de limite ESP.*
+- *Récupération des noirs : pause courte (1) · aide allié (1/action) · repos long (tous).*
+- *Retiré : bonus «+1 par 1» · dé rouge automatique · Bet pré-déclaré.*
 
 ---
 
@@ -67,13 +76,13 @@ Trois attributs, valeurs **2–6** en jeu normal (1 = état critique, 6 = élite
 |---|---|---|
 | **VIG** Vigueur | Force, endurance, résistance | END, inventaire (10+VIG), PR (récupération) |
 | **FIN** Finesse | Réflexe, précision, perception | Jets de discrétion, tir, manœuvres, esquive |
-| **ESP** Esprit | Volonté, influence, mémoire | Jets sociaux, magie, moral, **push max par jet** |
+| **ESP** Esprit | Volonté, influence, mémoire | Jets sociaux, magie, moral |
 
 **PNJ — Puissance** : stat unique (2–6) qui remplace VIG/FIN/ESP pour tous leurs jets offensifs. Ne détermine pas la résistance aux coups.
 
 ## 2.2 Endurance (END)
 
-Réserve de combat représentant l'élan, l'esquive, la résistance aux chocs. **Sert aussi de ressource de push** (cf. §1.2.4).
+Réserve de combat représentant l'élan, l'esquive, la résistance aux chocs.
 
 - **Valeur de départ** : VIG (au moment de la création — n'évolue pas avec les Blessures à VIG)
 - Quand END = 0 : chaque coup reçu inflige une **Blessure** (cf. §1.4.1)
@@ -259,9 +268,9 @@ Après avoir lu les résultats, le joueur peut **pousser** : relancer autant de 
 
 ## 3.7 Difficulté
 
-La difficulté est un **seuil fixe** que les gains bruts doivent **dépasser strictement** (les gains rouges sont exemptés — ils percent la difficulté).
+La difficulté est un **seuil fixe** soustrait du total — sauf les gains des dés rouges, qui percent et ne sont jamais réduits.
 
-**Gains nets = gains bruts − difficulté (si gains bruts > difficulté, sinon 0).**
+**Gains nets = gains rouges + max(0, gains non-rouges − difficulté)**
 
 | Difficulté | Tâche | Armure |
 |---|---|---|
@@ -330,15 +339,14 @@ Les effets spéciaux **ne s'activent pas automatiquement** — le joueur doit d�
 
 ## 3.12 Séquence complète
 
-1. **Construire le pool** : dés selon outil/arme + Don/Expertise + modificateurs situationnels.
-2. **Appliquer la fatigue** : convertir des dés blancs en noirs selon les fatigues actives.
-3. **Appliquer les bonus** : convertir des dés (Noir→Blanc ou Blanc→couleur) selon §3.5.
-4. **Lancer** tout le pool.
-5. **Lire chaque dé** selon sa couleur (§3.3) et additionner les gains.
-6. **Effets spéciaux** *(optionnel)* : si double ou triple dans les succès, activer un effet (§3.11).
-7. **Pousser** *(optionnel)* : relancer des dés blancs, chaque dé poussé devient noir (§3.6).
-8. **Gains nets** : gains bruts − difficulté (min 0 ; gains rouges exemptés).
-9. **Résultat** : > 0 = Succès, 0 = Échec.
+1. **Déterminer X** : nombre de dés selon la tâche ou l'outil.
+2. **Appliquer la fatigue** : chaque fatigue convertit un dé blanc en **noir**.
+3. **Appliquer les bonus** : chaque bonus = une conversion (Noir→Blanc ou Blanc→Rouge/Vert/Bleu) selon §3.5.
+4. **Lancer** tous les dés simultanément.
+5. **Lire chaque dé** selon sa couleur (§3.3) et additionner les gains — les **−1** des noirs s'appliquent.
+6. **Pousser** *(optionnel)* : relancer des dés blancs, chaque dé poussé devient noir avant relance (§3.6).
+7. **Gains nets** : gains rouges + max(0, gains non-rouges − difficulté).
+8. **Résultat** : > 0 = Succès, 0 = Échec.
 
 ## 3.13 Tâches longues
 

@@ -192,8 +192,6 @@ Item personnalisé* : +1D
 
 Le pool dépend de l'**outil ou l'arme** utilisé. L'attribut détermine la probabilité de gain par dé.
 
-**d6 < attribut courant = 1 gain. ≥ attribut = 0.** *(L'attribut courant peut être réduit par les Blessures, cf. §1.4.1.)*
-
 | Situation                         | Pool |
 | --------------------------------- | ---- |
 | Test Simple — aucun outil         | 1d   |
@@ -203,49 +201,65 @@ Le pool dépend de l'**outil ou l'arme** utilisé. L'attribut détermine la prob
 | Arme longue                       | 5d   |
 | Arme lourde (deux mains)          | 6d   |
 
-**Don** applicable : **+1d** au pool *(cf. §1.1.3)*.
-**Expertise** applicable : **+1d**, **−1 difficulté**, ou modification de la nature du test *(au choix, cf. §1.1.4)*.
+**Don** applicable : **+1d** au pool.
+**Expertise** applicable : **+1d**, **−1 difficulté**, ou modification de la nature du test (au choix).
 Modificateurs situationnels arbitraires : ±1d à l'arbitrage du MJ.
-## 3.2 Bonus standard
 
-Deux sources de gains bonus, **cumulables** :
+## 3.2 Procédure de base
 
-- **Dé rouge** *(premier dé de tout pool, identifié physiquement par sa couleur)* : s'il est en succès (<attribut), il donne **+1 gain bonus** en plus du gain normal.
-- **Tout dé montrant 1** (toujours succès puisque attribut ≥ 2) : **+1 gain bonus** en plus du gain normal.
+1. Déterminer **X** (nombre de dés) selon la tâche ou l'outil
+2. Appliquer la **fatigue** : chaque fatigue convertit un dé blanc en **noir**
+3. Appliquer les **bonus** : chaque bonus permet une conversion (voir §3.5)
+4. Lancer tous les dés simultanément
+5. Lire chaque dé selon sa couleur (voir §3.3)
+6. Additionner les gains — les **−1** des noirs s'appliquent
+7. Soustraire l'armure ou la difficulté du total *(sauf gains rouges)*
 
-*Cumul : un dé rouge montrant 1 donne **3 gains** (1 normal + 1 bonus rouge + 1 bonus sur 1).*
-*Effet sur un pool 1d : le seul dé est le dé rouge. P(succès) à attr 4 = 50%, gain moyen = 1,17.*
+## 3.3 Table de lecture
 
-Les bonus s'appliquent sur les **gains bruts**, avant la difficulté.
+| Résultat | Blanc | Rouge | Vert | Bleu | Noir |
+|----------|-------|-------|------|------|------|
+| **1** | 3 | 3 *(perce)* | 4 | 3 | 1 |
+| **< attribut** | 2 | 2 *(perce)* | 3 | 2 | 1 |
+| **≥ attribut** | 1 | 1 *(perce)* | 1 | 2 | 0 |
+| **6** | 0 | 0 *(perce)* | 0 | 1 | **−1** |
 
-## 3.3 Effets spéciaux — doubles et triples
+> **Perce** : les gains du dé rouge ne sont pas réduits par l'armure ou la difficulté.
 
-Un **double** (deux dés identiques, tous deux < attribut) ou un **triple** (trois identiques en succès) **ne donne pas de gain automatique**. Il agit comme un **déclencheur d'effet spécial**, à activer si le contexte le permet.
+## 3.4 Effets des couleurs
 
-| Déclencheur | Quoi                                                   |
-| ----------- | ------------------------------------------------------ |
-| **Double**  | 1 effet spécial au choix parmi les options disponibles |
-| **Triple**  | 1 effet spécial fort, ou 2 effets distincts au choix   |
-| **6**       | Sur un test Simple (1 seul d), échec critique          |
-Échec critique : la situation s'empire, au choix du MJ. Possibilité :
-- Usure
-- Perte de END
-- Réaction négative des PNJ
-- Test d'évènement 
+**Blanc** — dé de base, aucun modificateur.
 
-**Effets spéciaux disponibles** :
+**Rouge** *(bonus)* — gains garantis : l'armure et la difficulté ne s'appliquent pas à ce dé. Optimal contre les cibles résistantes.
 
-- **Ouverture** *(combat)* — un allié gagne +1d sur son prochain test contre la même cible.
-- **Manœuvre opportune** *(combat)* — déclencher une manœuvre (Pousser, Trébucher, Désarmer, cf. §1.6.4) sans action additionnelle.
-- **Pierce** *(à redéfinir Phase 2)* — ignorer partiellement la difficulté d'armure.
+**Vert** *(bonus)* — plafond levé : +1 gain sur tout succès (< attribut). Optimal quand l'attribut est élevé ou la tâche maîtrisée.
 
-*Hors combat, le MJ peut accorder des bénéfices narratifs équivalents : ouverture sociale, raccourci sur une tâche longue, indice obtenu en plus, etc.*
+**Bleu** *(bonus)* — plancher relevé : +1 gain sur tout échec (≥ attribut). Optimal quand l'attribut est faible ou la tâche incertaine. Garantit au moins 1 gain même sur un 6.
 
-Les effets spéciaux **ne s'activent pas automatiquement** — le joueur doit déclarer lequel utiliser parmi les options du contexte. Sans contexte applicable, le double/triple n'a pas d'effet mécanique.
+**Noir** *(fatigue)* — dé dégradé : les succès ne rapportent que 1 gain, les échecs rien, et un **6 inflige −1 gain**. La fatigue peut faire reculer le total.
 
-## 3.4 Difficulté
+## 3.5 Utiliser les bonus
 
-La difficulté est un **seuil fixe** que les gains bruts doivent **dépasser strictement**.
+Chaque bonus (expertise, don, avantage contextuel) permet **une conversion** dans cet ordre de priorité :
+
+1. **Noir → Blanc** : purger une fatigue. Le dé retrouve son comportement normal.
+2. **Blanc → couleur** : colorer un dé blanc en Rouge, Vert ou Bleu.
+
+Un joueur avec deux bonus peut purger un noir *puis* colorer le même dé. Les deux conversions sont indépendantes et peuvent cibler des dés différents.
+
+## 3.6 Pousser le jet
+
+Après avoir lu les résultats, le joueur peut **pousser** : relancer autant de dés qu'il le souhaite parmi ses dés blancs. Chaque dé poussé devient **noir** immédiatement, avant le relancé.
+
+- Les dés noirs existants ne peuvent pas être poussés.
+- Les dés colorés (rouge, vert, bleu) ne peuvent pas être poussés.
+- Pousser est irréversible : la fatigue reste même si le nouveau résultat est pire.
+
+> Pousser représente l'effort au-delà des limites. Le corps ou l'esprit en paye le prix.
+
+## 3.7 Difficulté
+
+La difficulté est un **seuil fixe** que les gains bruts doivent **dépasser strictement** (les gains rouges sont exemptés — ils percent la difficulté).
 
 **Gains nets = gains bruts − difficulté (si gains bruts > difficulté, sinon 0).**
 
@@ -259,7 +273,7 @@ La difficulté est un **seuil fixe** que les gains bruts doivent **dépasser str
 
 Bouclier sur Bloquer : +1 à la difficulté de l'attaque entrante (cf. §1.3.4).
 
-## 3.5 Tableau de résultat
+## 3.8 Tableau de résultat
 
 | Gains nets | Résultat |
 |---|---|
@@ -268,44 +282,77 @@ Bouclier sur Bloquer : +1 à la difficulté de l'attaque entrante (cf. §1.3.4).
 
 *En combat : gains nets = END perdus par la cible.*
 
-## 3.6 Push — Bet pré-déclaré
+## 3.9 Récupération
 
-**Avant** de lancer, le joueur peut dépenser des ressources pour ajouter des dés au pool. C'est un **pari** : la dépense est payée d'avance, **même en cas d'échec**.
+| Type de repos | Noirs retirés |
+|---------------|---------------|
+| Pause courte *(quelques minutes, hors danger)* | 1 |
+| Soins ou aide d'un allié | 1 par action |
+| Repos long *(nuit complète + repas)* | Tous |
 
-- **1 END dépensée → +1d au pool**
-- **1 Usure d'équipement → +1d au pool** *(cf. §1.3.2)*
-- **Maximum par jet : ESP** *(volonté — capacité à se forcer)*
+Les dés noirs récupérés redeviennent blancs. Les couleurs éventuelles ne sont pas restaurées automatiquement — elles dépendent des bonus actifs.
 
-Le push se déclare **avant** de lancer. Une fois les dés en l'air, le résultat est définitif — pas de second souffle pour sauver un échec.
+## 3.10 Seuil de bascule Bleu / Vert
 
-*Risk/reward : tu paies pour des **chances** supplémentaires (50% de gain par dé à attr 4), pas pour des gains garantis. Le pari peut tomber à l'eau — ou exploser positivement.*
+Le choix entre Bleu et Vert dépend de l'attribut comparé au milieu de la plage du dé :
 
-## 3.7 Séquence complète
+- **Attribut faible** (≤ seuil médian) → Bleu supérieur en espérance
+- **Attribut élevé** (≥ seuil médian) → Vert supérieur en espérance
+- **À égalité** → même espérance, mais Bleu est plus fiable, Vert plus explosif
 
-1. **Push éventuel (Bet)** : déclarer X END/Usure → +X dés au pool (max ESP par jet).
-2. **Construire le pool** : 1 dé rouge + dés selon outil/arme + Don/Expertise + push + modificateurs situationnels.
-3. **Lancer** tout le pool.
-4. **Gains bruts** :
-   - +1 par dé < attribut courant (gain normal).
-   - **+1 si le dé rouge est en succès** (bonus rouge).
-   - **+1 par 1 roulé** (sur n'importe quel dé, rouge ou standard).
-5. **Effets spéciaux** *(optionnel)* : si double ou triple dans les succès, activer un effet (cf. §1.2.3).
-6. **Gains nets** : gains bruts − difficulté (min 0).
-7. **Résultat** : > 0 = Succès, 0 = Échec.
+Rouge est indépendant de l'attribut — sa valeur vient uniquement de la résistance de la cible.
 
-## 3.8 Tâches longues
+## 3.11 Effets spéciaux — doubles et triples
+
+Un **double** (deux dés identiques, tous deux < attribut) ou un **triple** (trois identiques en succès) **ne donne pas de gain automatique**. Il agit comme un **déclencheur d'effet spécial**, à activer si le contexte le permet.
+
+| Déclencheur | Quoi                                                   |
+| ----------- | ------------------------------------------------------ |
+| **Double**  | 1 effet spécial au choix parmi les options disponibles |
+| **Triple**  | 1 effet spécial fort, ou 2 effets distincts au choix   |
+| **6**       | Sur un test Simple (1 seul d), échec critique          |
+
+Échec critique : la situation s'empire, au choix du MJ. Possibilité :
+- Usure
+- Perte de END
+- Réaction négative des PNJ
+- Test d'évènement
+
+**Effets spéciaux disponibles** :
+
+- **Ouverture** *(combat)* — un allié gagne +1d sur son prochain test contre la même cible.
+- **Manœuvre opportune** *(combat)* — déclencher une manœuvre (Pousser, Trébucher, Désarmer, cf. §1.6.4) sans action additionnelle.
+- **Pierce** *(à redéfinir Phase 2)* — ignorer partiellement la difficulté d'armure.
+
+*Hors combat, le MJ peut accorder des bénéfices narratifs équivalents : ouverture sociale, raccourci sur une tâche longue, indice obtenu en plus, etc.*
+
+Les effets spéciaux **ne s'activent pas automatiquement** — le joueur doit déclarer lequel utiliser parmi les options du contexte. Sans contexte applicable, le double/triple n'a pas d'effet mécanique.
+
+## 3.12 Séquence complète
+
+1. **Construire le pool** : dés selon outil/arme + Don/Expertise + modificateurs situationnels.
+2. **Appliquer la fatigue** : convertir des dés blancs en noirs selon les fatigues actives.
+3. **Appliquer les bonus** : convertir des dés (Noir→Blanc ou Blanc→couleur) selon §3.5.
+4. **Lancer** tout le pool.
+5. **Lire chaque dé** selon sa couleur (§3.3) et additionner les gains.
+6. **Effets spéciaux** *(optionnel)* : si double ou triple dans les succès, activer un effet (§3.11).
+7. **Pousser** *(optionnel)* : relancer des dés blancs, chaque dé poussé devient noir (§3.6).
+8. **Gains nets** : gains bruts − difficulté (min 0 ; gains rouges exemptés).
+9. **Résultat** : > 0 = Succès, 0 = Échec.
+
+## 3.13 Tâches longues
 
 Les gains nets s'accumulent tour après tour vers un **total cible** fixé par le MJ. La mécanique de base est identique. Le temps qui passe est le coût principal.
 
-## 3.9 Tests collectifs
+## 3.14 Tests collectifs
 
 Plusieurs personnages contribuent leurs gains nets au même total. La mécanique de base est identique.
 
-## 3.10 Tests VS
+## 3.15 Tests VS
 
 Lorsque deux personnages s'affrontent dans un test, les deux font leur test. Celui qui a le plus de gains nets l'emporte. En cas d'égalité, statu quo (ou arbitrage MJ selon la fiction).
 
-## 3.11 Prix à payer
+## 3.16 Prix à payer
 
 Aucune mécanique. Arbitrage MJ-joueur :
 
@@ -318,7 +365,7 @@ Aucune mécanique. Arbitrage MJ-joueur :
 
 > *Le prix doit être réel et ressenti. Un prix trivial n'est pas un prix.*
 
-## 3.12 Jet de chance et oracle
+## 3.17 Jet de chance et oracle
 
 
 

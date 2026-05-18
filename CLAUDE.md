@@ -2,10 +2,12 @@
 
 ## Systèmes présents
 
-| Système | Dossier    | Résolution de base               | Auteur          |
-|---------|------------|----------------------------------|-----------------|
-| VERMIS  | `VERMIS/`  | D20 roll-under, spectre T-4/T+4  | Dominique Morin |
-| CHROMA  | `CHROMA/`  | Pool D6 roll-under attribut      | Dominique Morin |
+| Système | Dossier       | Résolution de base               | Auteur          |
+|---------|---------------|----------------------------------|-----------------|
+| VERMIS  | `02_VERMIS/`  | D20 roll-under, spectre T-4/T+4  | Dominique Morin |
+| CHROMA  | `01_CHROMA/`  | Pool D6 roll-under attribut      | Dominique Morin |
+
+**Banque partagée** : `00_REF_BANQ/` — fiches `idée-` et `ref-` communes aux deux systèmes.
 
 **Langue de travail : français.**
 
@@ -14,8 +16,9 @@
 ## Identification du système actif
 
 - Si le message mentionne explicitement « Vermis » ou « CHROMA » → travailler dans ce système
-- Si un fichier est dans `VERMIS/` → contexte Vermis par défaut
-- Si un fichier est dans `CHROMA/` → contexte CHROMA par défaut
+- Si un fichier est dans `02_VERMIS/` → contexte Vermis par défaut
+- Si un fichier est dans `01_CHROMA/` → contexte CHROMA par défaut
+- Un fichier dans `00_REF_BANQ/` peut concerner les deux systèmes — préciser lequel si action requise
 - Si ambigu → demander avant d'agir, ne jamais supposer
 - Une mécanique proposée doit préciser à quel système elle s'applique
 
@@ -27,8 +30,8 @@
 JDR grimdark low fantasy, hack d'OSE.
 
 ### Source de vérité
-`VERMIS/01-Règles/Vermis_Rules.md` — **ne jamais modifier sans confirmation explicite.**
-`VERMIS/01-Règles/Cheat_Sheet.md` — doit rester synchrone avec Vermis_Rules, signaler toute divergence.
+`02_VERMIS/01-Règles/Vermis_Rules.md` — **ne jamais modifier sans confirmation explicite.**
+`02_VERMIS/01-Règles/Cheat_Sheet.md` — doit rester synchrone avec Vermis_Rules, signaler toute divergence.
 
 ### Identité mécanique
 - **Résolution** : D20 roll-under, spectre de succès gradué T-4 à T+4
@@ -47,7 +50,7 @@ JDR grimdark low fantasy, hack d'OSE.
 ### Structure du vault Vermis
 
 ```
-VERMIS/
+02_VERMIS/
 ├── 00-MOC/
 │   ├── Index.md
 │   ├── Banque_Vue.md
@@ -57,38 +60,37 @@ VERMIS/
 │   ├── Cheat_Sheet.md
 │   ├── 011-WIP/                 ← sections en développement
 │   └── 012-Intégré/             ← sections validées
-├── 02-Banque/
-│   ├── _README.md
-│   └── [fiches idées et références]
-├── 03-Références/               ← sources brutes externes (immutables)
-├── 04-Todo/
+├── 02-Références/               ← sources brutes externes (immutables)
+├── 03-Todo/
 │   └── Vermis_Todo.md
-├── 05-Archives/
+├── 04-Archives/
 │   └── Idées_rejetées.md
-├── 06-Wiki/                     ← wiki LLM-maintenu (dérivé, jamais source)
+├── 05-Wiki/                     ← wiki LLM-maintenu (dérivé, jamais source)
 │   ├── index.md
 │   ├── log.md
 │   └── [pages thématiques]
-├── 07-Banque de mots/
-└── 08-Setting/
+├── 06-Banque de mots/
+└── 07-Setting/
 ```
+
+**Banque d'idées et références** → `00_REF_BANQ/` (racine du vault, partagée Vermis + CHROMA)
 
 **Flux de connaissance Vermis :**
 ```
-03-Références/ ──→──┐
+02-Références/ ──→──┐
                      │
-01-Règles/     ──→──┤──→  06-Wiki/  ──→  design actif  ──→  01-Règles/
+01-Règles/     ──→──┤──→  05-Wiki/  ──→  design actif  ──→  01-Règles/
                      │
-02-Banque/     ──→──┘
+00_REF_BANQ/   ──→──┘
 ```
 
-**Règle absolue du wiki :** `06-Wiki/` est dérivé en lecture. En cas de conflit avec `Vermis_Rules.md`, c'est toujours la règle qui a raison.
+**Règle absolue du wiki :** `05-Wiki/` est dérivé en lecture. En cas de conflit avec `Vermis_Rules.md`, c'est toujours la règle qui a raison.
 
 ### Conventions de nommage Vermis
 - Règles : `Vermis_Rules.md`, `Cheat_Sheet.md` — noms fixes
-- Banque : préfixe `idée-` ou `ref-`, kebab-case minuscules
+- Banque : préfixe `idée-` ou `ref-`, kebab-case minuscules, dans `00_REF_BANQ/`
 - Todo : cases `- [ ]` avec tag `#urgent` / `#soon` / `#later`
-- Archives : ne pas supprimer, déplacer vers `05-Archives/`
+- Archives : ne pas supprimer, déplacer vers `04-Archives/`
 
 ---
 
@@ -98,7 +100,7 @@ VERMIS/
 JDR partageant certains systèmes avec Vermis (mêmes attributs, mêmes conditions de blessure) mais résolution de base différente.
 
 ### Source de vérité
-`CHROMA/Intégré/CHROMA.md` — **ne jamais modifier sans confirmation explicite.**
+`01_CHROMA/Intégré/CHROMA.md` — **ne jamais modifier sans confirmation explicite.**
 
 ### Identité mécanique
 - **Résolution** : pool de D6 (1d–6d), roll-under attribut — Succès / Échec
@@ -114,7 +116,7 @@ JDR partageant certains systèmes avec Vermis (mêmes attributs, mêmes conditio
 ### Structure du vault CHROMA
 
 ```
-CHROMA/
+01_CHROMA/
 ├── Intégré/                     ← règles actives (source de vérité)
 │   └── CHROMA.md                ← SOURCE DE VÉRITÉ
 ├── WIP/                         ← sections en développement
@@ -123,7 +125,7 @@ CHROMA/
 ```
 
 ### Plan de développement CHROMA
-Consulter `CHROMA/Intégré/plan_de_match.md` pour l'état actuel et les priorités.
+Consulter `01_CHROMA/Intégré/plan_de_match.md` pour l'état actuel et les priorités.
 
 ---
 
@@ -139,12 +141,12 @@ Consulter `CHROMA/Intégré/plan_de_match.md` pour l'état actuel et les priorit
 - Travailler en français
 - Signaler toute contradiction entre documents avant d'agir
 - Proposer la banquification : *« Veux-tu que j'ajoute ça à la banque ? »*
-- Consulter `VERMIS/02-Banque/` avant de proposer une mécanique déjà couverte côté Vermis
+- Consulter `00_REF_BANQ/` avant de proposer une mécanique déjà couverte (Vermis ou CHROMA)
 - Préciser le système dans toute modification de wiki ou de règles
 
 ---
 
-## Banque d'idées — format obligatoire (VERMIS)
+## Banque d'idées — format obligatoire (Vermis + CHROMA, dossier `00_REF_BANQ/`)
 
 ```yaml
 ---
@@ -167,18 +169,18 @@ Sections obligatoires (dans l'ordre) :
 
 ## Wiki Vermis — Workflows
 
-### Ingest (nouvelle source dans `VERMIS/03-Références/`)
+### Ingest (nouvelle source dans `02_VERMIS/02-Références/`)
 1. Lire la source complète
 2. Discuter les points clés avec l'auteur
-3. Créer une fiche `ref-` dans `VERMIS/02-Banque/`
-4. Créer ou mettre à jour la/les page(s) wiki dans `VERMIS/06-Wiki/`
-5. Mettre à jour `VERMIS/06-Wiki/index.md` si nouvelle page
-6. Ajouter une entrée dans `VERMIS/06-Wiki/log.md` : `## [date] ingest | Titre`
+3. Créer une fiche `ref-` dans `00_REF_BANQ/`
+4. Créer ou mettre à jour la/les page(s) wiki dans `02_VERMIS/05-Wiki/`
+5. Mettre à jour `02_VERMIS/05-Wiki/index.md` si nouvelle page
+6. Ajouter une entrée dans `02_VERMIS/05-Wiki/log.md` : `## [date] ingest | Titre`
 
 ### Query (question sur le design ou les règles)
-1. Lire `VERMIS/06-Wiki/index.md` pour identifier les pages pertinentes
+1. Lire `02_VERMIS/05-Wiki/index.md` pour identifier les pages pertinentes
 2. Lire les pages wiki concernées
-3. Consulter `VERMIS/01-Règles/Vermis_Rules.md` si besoin de précision
+3. Consulter `02_VERMIS/01-Règles/Vermis_Rules.md` si besoin de précision
 4. Répondre avec citations des sources
 5. Si la réponse est une synthèse utile → proposer de la filer dans le wiki
 
@@ -186,5 +188,5 @@ Sections obligatoires (dans l'ordre) :
 - Pages wiki orphelines
 - Contradictions entre pages wiki et Vermis_Rules
 - Points ouverts non reflétés dans le wiki
-- Pages `06-Wiki/` dont le frontmatter `màj` est antérieur à une modification récente de Vermis_Rules
-- Fiches `02-Banque/` non intégrées dans les pages wiki pertinentes
+- Pages `05-Wiki/` dont le frontmatter `màj` est antérieur à une modification récente de Vermis_Rules
+- Fiches `00_REF_BANQ/` non intégrées dans les pages wiki pertinentes

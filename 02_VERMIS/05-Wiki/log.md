@@ -16,7 +16,7 @@ date: 2026-04-30
 Création de la structure `06-Wiki/` à partir de [[Vermis_Rules]].
 
 **Pages créées :**
-- [[index]] — catalogue
+- [[02_VERMIS/06-Wiki/index]] — catalogue
 - [[log]] — ce fichier
 - [[règles-résolution]] — §4 complet
 - [[règles-personnage]] — §3 complet

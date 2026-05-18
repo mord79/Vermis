@@ -1,24 +1,40 @@
 {
   "recentFiles": [
     {
-      "basename": "CHROMA",
-      "path": "CHROMA/Intégré/CHROMA.md"
-    },
-    {
       "basename": "idée-chroma-résolution-dés",
-      "path": "CHROMA/Intégré/idée-chroma-résolution-dés.md"
+      "path": "01_CHROMA/Intégré/idée-chroma-résolution-dés.md"
     },
     {
-      "basename": "A Wee Mechanic Stabilising the dying",
-      "path": "02-Banque/A Wee Mechanic Stabilising the dying.md"
+      "basename": "Dungeon Stocking with Markov Processes",
+      "path": "00_REF_BANQ/Dungeon Stocking with Markov Processes.md"
+    },
+    {
+      "basename": "_README",
+      "path": "00_REF_BANQ/_README.md"
+    },
+    {
+      "basename": "ref-want-have-sacrifice",
+      "path": "00_REF_BANQ/ref-want-have-sacrifice.md"
+    },
+    {
+      "basename": "ref-generateurs-monde-souterrain-falsemachine",
+      "path": "00_REF_BANQ/ref-generateurs-monde-souterrain-falsemachine.md"
     },
     {
       "basename": "ref-circuits-rallies-bastionland",
-      "path": "02-Banque/ref-circuits-rallies-bastionland.md"
+      "path": "00_REF_BANQ/ref-circuits-rallies-bastionland.md"
+    },
+    {
+      "basename": "CHROMA",
+      "path": "01_CHROMA/Intégré/CHROMA.md"
+    },
+    {
+      "basename": "A Wee Mechanic Stabilising the dying",
+      "path": "00_REF_BANQ/A Wee Mechanic Stabilising the dying.md"
     },
     {
       "basename": "Quick ideas",
-      "path": "CHROMA/Intégré/Quick ideas.md"
+      "path": "01_CHROMA/Intégré/Quick ideas.md"
     },
     {
       "basename": "Vermis_d6_v10",

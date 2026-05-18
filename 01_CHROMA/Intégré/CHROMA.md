@@ -196,57 +196,54 @@ Item personnalisé* : +1D
 
 Le pool dépend de l'**outil ou l'arme** utilisé. L'attribut détermine la probabilité de gain par dé.
 
-**d6 < attribut courant = 1 gain. ≥ attribut = 0.** *(L'attribut courant peut être réduit par les Blessures, cf. §1.4.1.)*
+| Situation                                 | Pool |
+| ----------------------------------------- | ---- |
+| Test Simple — aucun outil                 | 1d   |
+| Outil basique / arme improvisée ou petite | 2d   |
+| Outil de qualité / arme moyenne           | 3d   |
+| Outil exceptionnel / Arme à deux mains    | 4d   |
+Les **Dons, Expertise, Personnalisation** et autres effets applicable donnent des **Bonus**. Certains effets rares peuvent donner des dés de bases (blanc) supplémentaires.
+## 3.2 Bonus
 
-| Situation                         | Pool |
-| --------------------------------- | ---- |
-| Test Simple — aucun outil         | 1d   |
-| Outil basique / arme improvisée   | 2d   |
-| Outil de qualité / petite arme    | 3d   |
-| Outil exceptionnel / arme moyenne | 4d   |
-| Arme longue                       | 5d   |
-| Arme lourde (deux mains)          | 6d   |
+Utiliser un nombre de dés blancs selon l'arme ou l'outil sélectionné. Selon la source du Bonus, le PJ peut changer ces dés blanc en dé de certaines couleurs
 
-**Don** applicable : **+1d** au pool *(cf. §1.1.3)*.
-**Expertise** applicable : **+1d**, **−1 difficulté**, ou modification de la nature du test *(au choix, cf. §1.1.4)*.
-Modificateurs situationnels arbitraires : ±1d à l'arbitrage du MJ.
-## 3.2 Bonus standard
+| Résultat       | Blanc | Rouge       | Vert | Bleu | Noir   |
+| -------------- | ----- | ----------- | ---- | ---- | ------ |
+| **1**          | 3     | 3 *(perce)* | 4    | 2    | 1      |
+| **< attribut** | 2     | 2 *(perce)* | 3    | 1    | 1      |
+| **≥ attribut** | 1     | 1           | 1    | 2    | 0      |
+| **6**          | 0     | 0           | 0    | 1    | **−1** |
+> **Perce** : les gains du dé rouge ne sont pas réduits par l'armure ou la difficulté.
 
-Deux sources de gains bonus, **cumulables** :
+**Blanc** — dé de base, aucun modificateur.
 
-- **Dé rouge** *(premier dé de tout pool, identifié physiquement par sa couleur)* : s'il est en succès (<attribut), il donne **+1 gain bonus** en plus du gain normal.
-- **Tout dé montrant 1** (toujours succès puisque attribut ≥ 2) : **+1 gain bonus** en plus du gain normal.
+**Rouge** *(bonus)* **Percé** — gains garantis : l'armure et la difficulté ne s'appliquent pas à ce dé. Optimal contre les cibles résistantes.
 
-*Cumul : un dé rouge montrant 1 donne **3 gains** (1 normal + 1 bonus rouge + 1 bonus sur 1).*
-*Effet sur un pool 1d : le seul dé est le dé rouge. P(succès) à attr 4 = 50%, gain moyen = 1,17.*
+**Vert** *(bonus)* **Amélioré** — plafond levé : +1 gain sur tout succès (< attribut). Optimal quand l'attribut est élevé ou la tâche maîtrisée.
 
-Les bonus s'appliquent sur les **gains bruts**, avant la difficulté.
+**Bleu** *(bonus)* **Sécurisé** — plancher relevé : +1 gain sur tout échec (≥ attribut). Optimal quand l'attribut est faible ou la tâche incertaine. Garantit au moins 1 gain même sur un 6.
+
+**Noir** *(fatigue)* **Fatigué** — dé dégradé : les succès ne rapportent que 1 gain, les échecs rien, et un **6 inflige −1 gain**. La fatigue peut faire reculer le total. Voir [[#5.1 Fatigue]]
 
 ## 3.3 Effets spéciaux — doubles et triples
 
-Un **double** (deux dés identiques, tous deux < attribut) ou un **triple** (trois identiques en succès) **ne donne pas de gain automatique**. Il agit comme un **déclencheur d'effet spécial**, à activer si le contexte le permet.
+Un **double** (deux dés identiques, tous deux < attribut ou tous deux >= à l'attribut) ou un **triple** (trois identiques en succès) agit comme un **déclencheur d'effet spécial**, à activer si le contexte le permet.
 
-| Déclencheur | Quoi                                                   |
-| ----------- | ------------------------------------------------------ |
-| **Double**  | 1 effet spécial au choix parmi les options disponibles |
-| **Triple**  | 1 effet spécial fort, ou 2 effets distincts au choix   |
-| **6**       | Sur un test Simple (1 seul d), échec critique          |
-Échec critique : la situation s'empire, au choix du MJ. Possibilité :
+| Déclencheur | Effet Critique Positif < Attribut                                         | Effet Critique  Négatif >= Attribut                                            |
+| ----------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
+| **Double**  | 1 **Effets Critiques Positifs**l au choix parmi les options disponibles   | 1 **Effets Critiques Négatif** au choix du MJ                                  |
+| **Triple**  | 1 **Effets Critiques Positifs** plus fort, ou 2 effets distincts au choix | 1 **Effets Critiques Négatif** plus fort, ou 2 effets distincts au choix du MJ |
+**Effets Critiques Positifs** : la situation s'améliore
+- **Ouverture** *(combat)* — un allié gagne +1d sur son prochain test contre la même cible.
+- **Manœuvre opportune** *(combat)* — déclencher une manœuvre (Pousser, Trébucher, Désarmer, cf. §1.6.4) sans action additionnelle.
+
+**Effets Critiques Négatif** : la situation s'empire, au choix du MJ. Possibilités :
 - Usure
 - Perte de END
 - Réaction négative des PNJ
 - Test d'évènement 
 
-**Effets spéciaux disponibles** :
-
-- **Ouverture** *(combat)* — un allié gagne +1d sur son prochain test contre la même cible.
-- **Manœuvre opportune** *(combat)* — déclencher une manœuvre (Pousser, Trébucher, Désarmer, cf. §1.6.4) sans action additionnelle.
-- **Pierce** *(à redéfinir Phase 2)* — ignorer partiellement la difficulté d'armure.
-
 *Hors combat, le MJ peut accorder des bénéfices narratifs équivalents : ouverture sociale, raccourci sur une tâche longue, indice obtenu en plus, etc.*
-
-Les effets spéciaux **ne s'activent pas automatiquement** — le joueur doit déclarer lequel utiliser parmi les options du contexte. Sans contexte applicable, le double/triple n'a pas d'effet mécanique.
-
 ## 3.4 Difficulté
 
 La difficulté est un **seuil fixe** que les gains bruts doivent **dépasser strictement**.
@@ -276,26 +273,21 @@ Bouclier sur Bloquer : +1 à la difficulté de l'attaque entrante (cf. §1.3.4).
 
 **Avant** de lancer, le joueur peut dépenser des ressources pour ajouter des dés au pool. C'est un **pari** : la dépense est payée d'avance, **même en cas d'échec**.
 
-- **1 END dépensée → +1d au pool**
-- **1 Usure d'équipement → +1d au pool** *(cf. §1.3.2)*
+- **1 Fatigue dépensée → +1 Bonus
+- **1 Usure d'équipement → +1 Bonus
 - **Maximum par jet : ESP** *(volonté — capacité à se forcer)*
 
-Le push se déclare **avant** de lancer. Une fois les dés en l'air, le résultat est définitif — pas de second souffle pour sauver un échec.
-
-*Risk/reward : tu paies pour des **chances** supplémentaires (50% de gain par dé à attr 4), pas pour des gains garantis. Le pari peut tomber à l'eau — ou exploser positivement.*
-
+Le push se déclare **avant** de lancer. Une fois les dés en l'air, le résultat est définitif — pas de second souffle pour sauver un échec. **La fatigue ou l'usure s'applique après le test, qu'il soit réussi ou non**
 ## 3.7 Séquence complète
 
 1. **Push éventuel (Bet)** : déclarer X END/Usure → +X dés au pool (max ESP par jet).
-2. **Construire le pool** : 1 dé rouge + dés selon outil/arme + Don/Expertise + push + modificateurs situationnels.
-3. **Lancer** tout le pool.
-4. **Gains bruts** :
-   - +1 par dé < attribut courant (gain normal).
-   - **+1 si le dé rouge est en succès** (bonus rouge).
-   - **+1 par 1 roulé** (sur n'importe quel dé, rouge ou standard).
-5. **Effets spéciaux** *(optionnel)* : si double ou triple dans les succès, activer un effet (cf. §1.2.3).
-6. **Gains nets** : gains bruts − difficulté (min 0).
-7. **Résultat** : > 0 = Succès, 0 = Échec.
+2. Déterminer **X** (nombre de dés) selon la tâche ou l'outil
+3. Appliquer la **fatigue** : chaque fatigue convertit un dé blanc en **noir**
+4. Appliquer les **bonus** : chaque bonus permet une conversion (voir ci-dessous)
+5. Lancer tous les dés simultanément
+6. Lire chaque dé selon sa couleur (voir table)
+7. Additionner les gains — les **−1** des noirs s'appliquent
+8. Soustraire l'armure ou la difficulté du total *(sauf gains rouges)*
 
 ## 3.8 Tâches longues
 
@@ -417,7 +409,10 @@ Bouclier ou couverture obligatoire pour bloquer un projectile.
 
 # 5 Conditions
 
-## 5.1 Blessure
+## 5.1 Fatigue
+
+Lorsqu'un PJ reçoit une fatigue, il doit la mettre dans on inventaire. Chaque fatigue change un dé blanc d'un test en un dé noir. Le PJ peut utiliser un Bonus pour reconvertir un dé noir en dé blanc, pour ensuite pouvoir changer le dé blanc en dé de couleur avec un autre bonus.
+## 5.2 Blessure
 
 **Source** : coups reçus au combat (END = 0), pièges, chutes, maladies graves, attaques magiques, chocs psychiques.
 
@@ -435,7 +430,7 @@ L'arbitrage du type de dégât revient au MJ. En cas d'ambiguïté, choisir le t
 
 Lorsqu'une créature reçoit une blessure, il doit faire immédiatement un Test Simple de l'attribut blessé avec la nouvelle valeur pour rester debout avec 1d (certains dons peuvent rajouter +1d). Sur un échec, le personnage tombe au sol et est **vulnérable** (+1d de dégât reçu) jusqu'à se qu'il utilise une manœuvre pour se relever. Sur un échec critique (6), il reçoit une blessure de plus
 
-## 5.2 Autres conditons
+## 5.3 Autres conditons
 
 - **Vulnérable** : Reçoit les dégats avec +1d
 - Exténué
@@ -445,7 +440,7 @@ Lorsqu'une créature reçoit une blessure, il doit faire immédiatement un Test 
 - Inconscient 
 - Mourant
 
-## 5.3 Push (Bet pré-déclaré)
+## 5.4 Push (Bet pré-déclaré)
 
 **Avant le jet**, le joueur peut dépenser des ressources pour ajouter des dés au pool. C'est un **pari** — la dépense est payée d'avance, même en cas d'échec.
 
@@ -456,7 +451,7 @@ Lorsqu'une créature reçoit une blessure, il doit faire immédiatement un Test 
 
 Voir §1.2.6 pour le détail mécanique.
 
-## 5.4 États critiques et mort
+## 5.5 États critiques et mort
 
 | Attribut | À 1 (état critique) | À 0 |
 |---|---|---|
@@ -470,7 +465,7 @@ L'état critique signifie que tous les jets impliquant cet attribut **échouent 
 
 *Les Blessures sur des attributs différents s'accumulent indépendamment. Un personnage peut avoir VIG 2 et ESP 1 sans être mort, mais il ne peut plus rien faire qui implique ESP.*
 
-## 5.5 Récupération
+## 5.6 Récupération
 
 Le PJ possède **VIG points de récupération (PR)** *(calculés sur la VIG max — valeur de départ — pas affectés par les Blessures à VIG)*. Les PR servent au combat et à la guérison.
 

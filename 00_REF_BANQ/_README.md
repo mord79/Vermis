@@ -1,6 +1,6 @@
-# Banque d'idées — Conventions
+# Banque d'idées et références — Conventions
 
-*Lire avant de créer une fiche.*
+*Banque partagée Vermis + CHROMA. Lire avant de créer une fiche.*
 
 ---
 
@@ -27,8 +27,8 @@ date: AAAA-MM-JJ
 ### 1. Idée centrale
 2-3 phrases max. Ce qu'on retient si on lit en diagonale.
 
-### 2. Pourquoi intéressant pour Vermis
-Pilier(s) renforcé(s). Problème de design existant que ça pourrait résoudre.
+### 2. Pourquoi intéressant pour Vermis / CHROMA
+Pilier(s) renforcé(s). Problème de design existant que ça pourrait résoudre. Préciser le système si applicable à un seul.
 
 ### 3. Pourquoi pas adopté maintenant
 Friction concrète avec un pilier, redondance, ou « pas la priorité ».
@@ -53,7 +53,7 @@ Idées dérivées générées en conversation, datées.
 
 ```
 banquée → en-analyse → en-développement → active
-                                        → 05-Archives/ (rejet définitif)
+                                        → 02_VERMIS/04-Archives/ ou 01_CHROMA/ (rejet définitif)
 ```
 
 Une idée ne reste pas indéfiniment en `banquée` — si elle n'a pas trouvé

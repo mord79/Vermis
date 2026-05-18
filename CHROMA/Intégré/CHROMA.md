@@ -342,8 +342,7 @@ Aucune mécanique. Arbitrage MJ-joueur :
 
 *La progression au-delà se fait via Don/Expertise (+1d situationnel) ou armes magiques (effets uniques).*
 
-> [!À REVOIR]
-> **Tags d'arme — types de dégâts :**
+> [!Question] **Tags d'arme — types de dégâts :**
 > 
 > - **{pierce-X}** — *à redéfinir Phase 2.* Concept : déclencher un effet spécial "Pierce" via double/triple (cf. §1.2.3) pour ignorer partiellement la difficulté d'armure. Mécanique exacte à finaliser au playtest.
 > - **{bash-X}** — *mécanique à définir.*
@@ -404,6 +403,11 @@ Le bouclier est utilisé conjointement avec l'**Action Bloquer** (cf. §1.6.3). 
 **Mécanique** — quand un PJ utilise l'Action Bloquer pour parer une attaque annoncée, la difficulté du bouclier s'ajoute à celle de l'armure. Exemple : bouclier rond (+2) + maille (diff 2) = **diff 4** pour l'attaque entrante.
 
 Bouclier ou couverture obligatoire pour bloquer un projectile.
+
+
+> [!hint] HP d'armure
+> Les boucliers et armure ont aussi des HP qui diminue à chaque coup, puis s'usent en diminuant leur RD. Ou plus simple, diminué seulement quand les dégats dépassent un certain seuil ou sur un crit;
+
 
 ---
 
@@ -476,6 +480,11 @@ Le PJ possède **VIG points de récupération (PR)** *(calculés sur la VIG max 
 Les PR sont **récupérés au matin** après une nuit de sommeil complète et un repas chaud le soir.
 
 *Le repos court restaure tout l'END mais ne soigne pas de Blessure. Le repos long permet de soigner une Blessure par jour (au choix du joueur — VIG, FIN ou ESP). Plusieurs repos longs successifs pour soigner plusieurs Blessures.*
+
+
+> [!hint] Idée cool pour stabilisation 
+> Article de playfull void [[A Wee Mechanic Stabilising the dying]]
+
 
 ---
 # 6 Inventaire

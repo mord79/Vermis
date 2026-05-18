@@ -1,12 +1,20 @@
 {
   "recentFiles": [
     {
-      "basename": "idée-chroma-résolution-dés",
-      "path": "CHROMA/Intégré/idée-chroma-résolution-dés.md"
-    },
-    {
       "basename": "CHROMA",
       "path": "CHROMA/Intégré/CHROMA.md"
+    },
+    {
+      "basename": "A Wee Mechanic Stabilising the dying",
+      "path": "02-Banque/A Wee Mechanic Stabilising the dying.md"
+    },
+    {
+      "basename": "ref-circuits-rallies-bastionland",
+      "path": "02-Banque/ref-circuits-rallies-bastionland.md"
+    },
+    {
+      "basename": "idée-chroma-résolution-dés",
+      "path": "CHROMA/Intégré/idée-chroma-résolution-dés.md"
     },
     {
       "basename": "Quick ideas",
@@ -21,68 +29,8 @@
       "path": "09-Vermis-Mini/Intégré/Quick ideas.md"
     },
     {
-      "basename": "Todo_Vue",
-      "path": "00-MOC/Todo_Vue.md"
-    },
-    {
-      "basename": "Index",
-      "path": "00-MOC/Index.md"
-    },
-    {
-      "basename": "Banque_Vue",
-      "path": "00-MOC/Banque_Vue.md"
-    },
-    {
-      "basename": "WIP Création_de_personnage",
-      "path": "01-Règles/011-WIP/WIP Création_de_personnage.md"
-    },
-    {
       "basename": "Plan d'importation par point",
       "path": "09-Vermis-Mini/Intégré/Plan d'importation par point.md"
-    },
-    {
-      "basename": "Grille_Événements_Aléatoires",
-      "path": "01-Règles/Grille_Événements_Aléatoires.md"
-    },
-    {
-      "basename": "WIP Exploration",
-      "path": "01-Règles/011-WIP/WIP Exploration.md"
-    },
-    {
-      "basename": "WIP Création_de_personnage V2",
-      "path": "01-Règles/011-WIP/WIP Création_de_personnage V2.md"
-    },
-    {
-      "basename": "WIP Tension",
-      "path": "01-Règles/011-WIP/WIP Tension.md"
-    },
-    {
-      "basename": "WIP Résolution v3",
-      "path": "01-Règles/011-WIP/WIP Résolution v3.md"
-    },
-    {
-      "basename": "WIP Résolution v2",
-      "path": "01-Règles/011-WIP/WIP Résolution v2.md"
-    },
-    {
-      "basename": "WIP Repos et Guérison",
-      "path": "01-Règles/011-WIP/WIP Repos et Guérison.md"
-    },
-    {
-      "basename": "règles-combat",
-      "path": "06-Wiki/règles-combat.md"
-    },
-    {
-      "basename": "ref-declare-actions",
-      "path": "02-Banque/ref-declare-actions.md"
-    },
-    {
-      "basename": "ref-markov-stocking",
-      "path": "02-Banque/ref-markov-stocking.md"
-    },
-    {
-      "basename": "Tables de Loot & Disponibilité",
-      "path": "01-Règles/012-Intégré/Tables de Loot & Disponibilité.md"
     },
     {
       "basename": "regles_v08",
@@ -93,10 +41,6 @@
       "path": "09-Vermis-Mini/Intégré/plan_de_match.md"
     },
     {
-      "basename": "ref-earthmote",
-      "path": "02-Banque/ref-earthmote.md"
-    },
-    {
       "basename": "import_depuis_vermis",
       "path": "09-Vermis-Mini/Intégré/import_depuis_vermis.md"
     },
@@ -105,100 +49,12 @@
       "path": "09-Vermis-Mini/OLD/regles_v07.md"
     },
     {
-      "basename": "Vermis_Rules",
-      "path": "01-Règles/Vermis_Rules.md"
-    },
-    {
-      "basename": "Événements_Aléatoires",
-      "path": "01-Règles/Événements_Aléatoires.md"
-    },
-    {
-      "basename": "ref-common-osr-questions-rancourt",
-      "path": "02-Banque/ref-common-osr-questions-rancourt.md"
-    },
-    {
-      "basename": "Vermis_Todo",
-      "path": "04-Todo/Vermis_Todo.md"
-    },
-    {
       "basename": "WIP SmallFolk",
       "path": "09-Vermis-Mini/WIP/WIP SmallFolk.md"
     },
     {
       "basename": "WIP Rule extra light test",
       "path": "09-Vermis-Mini/WIP/WIP Rule extra light test.md"
-    },
-    {
-      "basename": "ref-mythic-bastionland-notes",
-      "path": "02-Banque/ref-mythic-bastionland-notes.md"
-    },
-    {
-      "basename": "ref-want-have-sacrifice",
-      "path": "02-Banque/ref-want-have-sacrifice.md"
-    },
-    {
-      "basename": "ref-swimming-rules-hmtw",
-      "path": "02-Banque/ref-swimming-rules-hmtw.md"
-    },
-    {
-      "basename": "ref-cinco-conversation-rules",
-      "path": "02-Banque/ref-cinco-conversation-rules.md"
-    },
-    {
-      "basename": "ref-empty-rooms-earthmote",
-      "path": "02-Banque/ref-empty-rooms-earthmote.md"
-    },
-    {
-      "basename": "index",
-      "path": "06-Wiki/index.md"
-    },
-    {
-      "basename": "Caractéristiques_et_Expertise",
-      "path": "01-Règles/Caractéristiques_et_Expertise.md"
-    },
-    {
-      "basename": "idée-evenements-aleatoires-markov",
-      "path": "02-Banque/idée-evenements-aleatoires-markov.md"
-    },
-    {
-      "basename": "concept-tension",
-      "path": "06-Wiki/concept-tension.md"
-    },
-    {
-      "basename": "Magie_Arcanique",
-      "path": "01-Règles/012-Intégré/Magie_Arcanique.md"
-    },
-    {
-      "basename": "Cheat_Sheet",
-      "path": "01-Règles/Cheat_Sheet.md"
-    },
-    {
-      "basename": "Résolutions",
-      "path": "01-Règles/012-Intégré/Résolutions.md"
-    },
-    {
-      "basename": "Hechmen Are Tools",
-      "path": "03-Références/Hechmen Are Tools.md"
-    },
-    {
-      "basename": "WIP Progression",
-      "path": "01-Règles/011-WIP/WIP Progression.md"
-    },
-    {
-      "basename": "WIP Henchman Tool",
-      "path": "01-Règles/011-WIP/WIP Henchman Tool.md"
-    },
-    {
-      "basename": "WIP Outils et kit",
-      "path": "01-Règles/011-WIP/WIP Outils et kit.md"
-    },
-    {
-      "basename": "Vermis_Migration_Todo",
-      "path": "04-Todo/Vermis_Migration_Todo.md"
-    },
-    {
-      "basename": "idée-entities-are-people",
-      "path": "02-Banque/idée-entities-are-people.md"
     }
   ],
   "omittedPaths": [],

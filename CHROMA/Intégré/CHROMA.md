@@ -188,6 +188,10 @@ Item personnalisé* : +1D
 
 # 3 Résolution
 
+
+> [!WARNING] **système chroma**
+> importer et modifier depuis [[idée-chroma-résolution-dés]]
+
 ## 3.1 Pool de dés
 
 Le pool dépend de l'**outil ou l'arme** utilisé. L'attribut détermine la probabilité de gain par dé.

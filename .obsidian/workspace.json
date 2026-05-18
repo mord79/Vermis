@@ -184,26 +184,6 @@
               "icon": "git-pull-request",
               "title": "Source Control"
             }
-          },
-          {
-            "id": "a0cb3e25bc9fba6b",
-            "type": "leaf",
-            "state": {
-              "type": "smart-connections-view",
-              "state": {},
-              "icon": "lucide-ghost",
-              "title": "smart-connections-view"
-            }
-          },
-          {
-            "id": "0c44a9c58be56388",
-            "type": "leaf",
-            "state": {
-              "type": "smart-lookup-view-connections",
-              "state": {},
-              "icon": "lucide-ghost",
-              "title": "smart-lookup-view-connections"
-            }
           }
         ],
         "currentTab": 5
@@ -227,10 +207,11 @@
   },
   "active": "5f2d8f276f8620fa",
   "lastOpenFiles": [
+    "CHROMA/Intégré/idée-chroma-résolution-dés.md",
+    "CHROMA/Intégré/CHROMA.md",
     "02-Banque/A Wee Mechanic Stabilising the dying.md",
     "02-Banque/ref-circuits-rallies-bastionland.md",
     "Clippings",
-    "CHROMA/Intégré/CHROMA.md",
     "VERMIS/01-Règles/012-Intégré/Résolutions.md",
     "VERMIS/08-Setting/081-Idées/Language ancien.md",
     "VERMIS/01-Règles/012-Intégré/Tables de Loot & Disponibilité.md",
@@ -254,7 +235,6 @@
     "VERMIS/06-Wiki/règles-magie.md",
     "VERMIS/06-Wiki/règles-combat.md",
     "VERMIS/06-Wiki/log.md",
-    "VERMIS/06-Wiki/index.md",
     "VERMIS/03-Références/markov_events_2.html",
     "VERMIS/03-Références/markov_events_2 1.html",
     "VERMIS/01-Règles/012-Intégré",
